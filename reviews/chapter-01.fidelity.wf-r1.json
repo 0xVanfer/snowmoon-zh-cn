@@ -1,0 +1,62 @@
+{
+  "chapter": 1,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第1章译文忠实度整体很高：逐段对照未发现整句漏译、说话人张冠李戴，也没有否定、因果、数量被搞反的情况；表格与面板文案、税率数字、<e> 强调点、对话着色均与原文一一对应。问题集中在程度与语气的细微偏移——个别限定词（almost、briefly、cleverly）被吞掉或被坐实，个别惯用语（More than anything else、his job）被按字面拆解。按 fidelity 视角看完全可读，不必大改，建议按条微调。",
+  "issues": [
+    {
+      "id": "c01-s0143",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "He would have slid the slider almost all the way to the right for this one, he knew.",
+      "zh": "他清楚，这一个他会把滑块一路推到最右边。",
+      "problem": "漏掉限定词 almost：原文是「几乎推到最右边」，译文写成「一路推到最右边」，把「几乎顶格」坐实成「顶格」，支持程度被抬高了一档，也丢了原文那点「他自己也觉得有点好笑」的分寸感。",
+      "suggestion": "他清楚，这一个他会把滑块几乎一路推到最右边。"
+    },
+    {
+      "id": "c01-s0076",
+      "severity": "medium",
+      "type": "误译",
+      "source": "More than anything else, he found the concert interesting in an anthropological way, exploring the interests and emotions of people he would otherwise have little interaction with.",
+      "zh": "比起别的，他是以人类学的方式觉得这场演唱会有意思：借此探看那些他平时几乎不会打交道的人的趣味与情绪。",
+      "problem": "More than anything else 意为「最主要的是／说到底」，不是「比起别的」。译文把它当成比较，凭空立了一个并不存在的比较对象，句子主次关系被读错，中文里「比起别的」也悬空、读着别扭。",
+      "suggestion": "说到底，他觉得这场演唱会有意思，靠的主要是那股人类学的好奇：借此探看那些他平时几乎不会打交道的人的趣味与情绪。"
+    },
+    {
+      "id": "c01-s0108",
+      "severity": "low",
+      "type": "误译",
+      "source": "...and ultimately, it was Gladias's job to figure out when to defer to Emerald and when to let his own instinct have more of a say.",
+      "zh": "……而分辨什么时候该听翡翠、什么时候该多信自己的直觉，归根结底是他的本事。",
+      "problem": "it was Gladias's job 说的是「这是他的分内职责、得由他来判断」，不是「这是他的本事（能力）」。译成「是他的本事」把职责错成了技能，丢掉了原文对见习官责任的那层强调。",
+      "suggestion": "……而什么时候该听翡翠的、什么时候该多信自己的直觉，说到底得由他自己拿捏。"
+    },
+    {
+      "id": "c01-s0071",
+      "severity": "low",
+      "type": "误译",
+      "source": "The program on airborne virus transmission that he had been listening to only minutes earlier had primed him to take care to not get sick.",
+      "zh": "几分钟前听的那档空气传播病毒节目，已经让他养成了小心别生病的习惯。",
+      "problem": "prime 指临时「给他打了个预防针、让他先有了防备意识」，不是长期的「养成习惯」；而且只听了「几分钟前」一档节目就说是「习惯」，中文逻辑上也不顺。",
+      "suggestion": "几分钟前听的那档空气传播病毒节目，已经让他留了心，注意别生病。"
+    },
+    {
+      "id": "c01-s0007",
+      "severity": "low",
+      "type": "漏译",
+      "source": "For a moment, Gladias could briefly see its shape: a small ball, with feather-like rotors on three sides.",
+      "zh": "有那么一瞬间，格拉迪亚斯看清了它的模样：一个小圆球，三面装着羽毛似的旋翼。",
+      "problem": "could briefly see 是「只能匆匆瞥见」；译成「看清了模样」把一闪而过的一瞥坐实为「看清楚了」，与紧接着男孩跳起抓住无人机的快节奏也略有抵触。",
+      "suggestion": "有那么一瞬间，格拉迪亚斯瞥见了它的模样：一个小圆球，三面装着羽毛似的旋翼。"
+    },
+    {
+      "id": "c01-s0037",
+      "severity": "low",
+      "type": "漏译",
+      "source": "At this distance, the trees thickly lining the streets cleverly covered it up, but his hand device easily locked on to it and downloaded both a close-up image and the tax percentages.",
+      "zh": "这么远的距离，街道两旁密密的树把它遮得严严实实，但手持终端轻松锁定，下载了特写图和各项税率。",
+      "problem": "cleverly 未译。原文这里是略带调侃的「树很巧妙地把楼挡了起来」，与后半句「手持终端轻松锁定」构成「挡得住眼睛、挡不住终端」的对照；去掉后只剩客观描述，语气与对照都变弱。",
+      "suggestion": "这么远的距离，街道两旁密密的树很巧妙地把楼挡了起来，但手持终端还是轻松锁定，下载了特写图和各项税率。"
+    }
+  ]
+}

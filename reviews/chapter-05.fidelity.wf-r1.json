@@ -1,0 +1,53 @@
+{
+ "chapter": 5,
+ "lens": "fidelity",
+ "reviewer": "wf-r1",
+ "overall": "第5章整体忠实度很高：逐条对照后，情节信息、数字（3724年雨月11日、一米、三百米／四米、四千手、714/715/716、五十来分钟）、否定与因果关系、以及全部对话说话人归属（颜色标签与叙述中的点名一一吻合，无张冠李戴）都没有发现偏差；术语（自由城、联合城邦、红郡、大梅港、泽国、维里迪亚、监审官、掌则人、评则、图谱资助、嘀嗒、民本棋、手持终端）与术语表一致，也没有整句漏译或凭空增译。问题集中在个别短语的理解与语气上：s0119 把方式状语 in any way 误作地点状语，是本报告唯一需要真正改动的中等问题；其余是颜色合并、语气偏软、细节（math）被压缩一类小疵。中文可读性良好，不影响剧情理解。",
+ "issues": [
+  {
+   "id": "c05-s0119",
+   "severity": "medium",
+   "type": "误译",
+   "source": "\"What about the rubrics though? Do the rubrics encourage companies to make any of their products more helpful to Dzego in any way?\"",
+   "zh": "“可评则呢？评则有没有在哪儿鼓励企业把他们的产品做得对泽国更有用？”",
+   "problem": "in any way 是方式状语（以任何方式），被译成“在哪儿”，变成地点状语，读者会读成“评则在什么地方鼓励企业”，句子读不通；同时 any of their products（自家任何一款产品）被压成“他们的产品”，漏掉了“任何一款”这一层。",
+   "suggestion": "“可评则呢？评则有没有以任何方式鼓励企业把自家某款产品做得对泽国更有用？”"
+  },
+  {
+   "id": "c05-s0015",
+   "severity": "low",
+   "type": "误译",
+   "source": "In the distance, there was one area that seemed noticeably nicer than the others, that was surrounded by a high grey and purple colored wall.",
+   "zh": "远处有一片区域明显比别处体面，四周围着一道高高的灰紫色墙。",
+   "problem": "grey and purple colored 是灰、紫两种颜色，译文“灰紫色”读起来是一种混合色；第3章写同一类墙（mixing grey and purple colors）作“灰紫两色相间”，写大梅港建筑作“白、灰、紫三色相间”，这里的颜色信息被并成一种，也与全书体例不一致。",
+   "suggestion": "远处有一片区域明显比别处体面，四周围着一道高高的灰、紫两色相间的墙。"
+  },
+  {
+   "id": "c05-s0039",
+   "severity": "low",
+   "type": "漏译",
+   "source": "\"Pretty much the same, now that I think about it. Just without the game theory math.\"",
+   "zh": "“这么一想，差不多是一样的。只是没算那套博弈论。”",
+   "problem": "game theory math 里的 math 被漏掉；且“没算那套博弈论”容易被读成“没把博弈论考虑进去”，而原意是“白这一边没有用那套博弈论去计算”，语义被削弱兼生歧义。",
+   "suggestion": "“这么一想，差不多是一样的。只是没用那套博弈论去算。”"
+  },
+  {
+   "id": "c05-s0041",
+   "severity": "low",
+   "type": "误译",
+   "source": "Zei groaned.",
+   "zh": "泽哀叹了一声。",
+   "problem": "groaned 是听到白那句肉麻话后受不了地哼一声（带嫌弃的喜剧语气），译成“哀叹”变成悲伤惋惜的叹息，人物语气走偏。",
+   "suggestion": "泽哼了一声。"
+  },
+  {
+   "id": "c05-s0099",
+   "severity": "low",
+   "type": "误译",
+   "source": "She could make out Gladias's face.",
+   "zh": "她看清了格拉迪亚斯的脸。",
+   "problem": "could make out 指在手表小屏上勉强辨认出，含“费力才能看清”的意味；“看清了”把这一层情态抹平，变成毫不费力地看得很清楚。",
+   "suggestion": "她勉强辨认出格拉迪亚斯的脸。"
+  }
+ ]
+}

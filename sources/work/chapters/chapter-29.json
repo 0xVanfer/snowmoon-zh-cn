@@ -1,0 +1,1135 @@
+{
+ "chapter": 29,
+ "source_file": "sources/en/html/chapter-29.html",
+ "blocks": [
+  {
+   "id": "c29-b0001",
+   "kind": "title",
+   "skeleton": "<h1>{{S:c29-s0001}}</h1>",
+   "segs": [
+    "{{S:c29-s0001}}"
+   ]
+  },
+  {
+   "id": "c29-b0002",
+   "kind": "dateline-open",
+   "segs": [
+    "{{S:c29-s0002}}",
+    "{{S:c29-s0003}}"
+   ],
+   "place": "Elenar Forest, Veridia",
+   "date": "3725 Snowmoon 29"
+  },
+  {
+   "id": "c29-b0003",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0004}}</p>",
+   "segs": [
+    "{{S:c29-s0004}}"
+   ]
+  },
+  {
+   "id": "c29-b0004",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0005}}</p>",
+   "segs": [
+    "{{S:c29-s0005}}"
+   ]
+  },
+  {
+   "id": "c29-b0005",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0006}}</p>",
+   "segs": [
+    "{{S:c29-s0006}}"
+   ]
+  },
+  {
+   "id": "c29-b0006",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0007}}</p>",
+   "segs": [
+    "{{S:c29-s0007}}"
+   ]
+  },
+  {
+   "id": "c29-b0007",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0008}}</p>",
+   "segs": [
+    "{{S:c29-s0008}}"
+   ]
+  },
+  {
+   "id": "c29-b0008",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0009}}</p>",
+   "segs": [
+    "{{S:c29-s0009}}"
+   ]
+  },
+  {
+   "id": "c29-b0009",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0010}}</p>",
+   "segs": [
+    "{{S:c29-s0010}}"
+   ]
+  },
+  {
+   "id": "c29-b0010",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0011}}</p>",
+   "segs": [
+    "{{S:c29-s0011}}"
+   ]
+  },
+  {
+   "id": "c29-b0011",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0012}}</p>",
+   "segs": [
+    "{{S:c29-s0012}}"
+   ]
+  },
+  {
+   "id": "c29-b0012",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0013}}</p>",
+   "segs": [
+    "{{S:c29-s0013}}"
+   ]
+  },
+  {
+   "id": "c29-b0013",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0014}}</p>",
+   "segs": [
+    "{{S:c29-s0014}}"
+   ]
+  },
+  {
+   "id": "c29-b0014",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0015}}</p>",
+   "segs": [
+    "{{S:c29-s0015}}"
+   ]
+  },
+  {
+   "id": "c29-b0015",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0016}}</p>",
+   "segs": [
+    "{{S:c29-s0016}}"
+   ]
+  },
+  {
+   "id": "c29-b0016",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0017}}</p>",
+   "segs": [
+    "{{S:c29-s0017}}"
+   ]
+  },
+  {
+   "id": "c29-b0017",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0018}}</p>",
+   "segs": [
+    "{{S:c29-s0018}}"
+   ]
+  },
+  {
+   "id": "c29-b0018",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0019}}</p>",
+   "segs": [
+    "{{S:c29-s0019}}"
+   ]
+  },
+  {
+   "id": "c29-b0019",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0020}}</p>",
+   "segs": [
+    "{{S:c29-s0020}}"
+   ]
+  },
+  {
+   "id": "c29-b0020",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0021}}</p>",
+   "segs": [
+    "{{S:c29-s0021}}"
+   ]
+  },
+  {
+   "id": "c29-b0021",
+   "kind": "rule"
+  },
+  {
+   "id": "c29-b0022",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0022}}</p>",
+   "segs": [
+    "{{S:c29-s0022}}"
+   ]
+  },
+  {
+   "id": "c29-b0023",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0023}}</p>",
+   "segs": [
+    "{{S:c29-s0023}}"
+   ]
+  },
+  {
+   "id": "c29-b0024",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0024}}</p>",
+   "segs": [
+    "{{S:c29-s0024}}"
+   ]
+  },
+  {
+   "id": "c29-b0025",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0025}}</p>",
+   "segs": [
+    "{{S:c29-s0025}}"
+   ]
+  },
+  {
+   "id": "c29-b0026",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0026}}</p>",
+   "segs": [
+    "{{S:c29-s0026}}"
+   ]
+  },
+  {
+   "id": "c29-b0027",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0027}}</p>",
+   "segs": [
+    "{{S:c29-s0027}}"
+   ]
+  },
+  {
+   "id": "c29-b0028",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0028}}</p>",
+   "segs": [
+    "{{S:c29-s0028}}"
+   ]
+  },
+  {
+   "id": "c29-b0029",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0029}}</p>",
+   "segs": [
+    "{{S:c29-s0029}}"
+   ]
+  },
+  {
+   "id": "c29-b0030",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0030}}</p>",
+   "segs": [
+    "{{S:c29-s0030}}"
+   ]
+  },
+  {
+   "id": "c29-b0031",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0031}}</p>",
+   "segs": [
+    "{{S:c29-s0031}}"
+   ]
+  },
+  {
+   "id": "c29-b0032",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0032}}</p>",
+   "segs": [
+    "{{S:c29-s0032}}"
+   ]
+  },
+  {
+   "id": "c29-b0033",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0033}}</p>",
+   "segs": [
+    "{{S:c29-s0033}}"
+   ]
+  },
+  {
+   "id": "c29-b0034",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0034}}</p>",
+   "segs": [
+    "{{S:c29-s0034}}"
+   ]
+  },
+  {
+   "id": "c29-b0035",
+   "kind": "figure",
+   "figures": [
+    "chapter-29-fig-01.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c29-b0036",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0035}}</p>",
+   "segs": [
+    "{{S:c29-s0035}}"
+   ]
+  },
+  {
+   "id": "c29-b0037",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0036}}</p>",
+   "segs": [
+    "{{S:c29-s0036}}"
+   ]
+  },
+  {
+   "id": "c29-b0038",
+   "kind": "rule"
+  },
+  {
+   "id": "c29-b0039",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0037}}</p>",
+   "segs": [
+    "{{S:c29-s0037}}"
+   ]
+  },
+  {
+   "id": "c29-b0040",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0038}}</p>",
+   "segs": [
+    "{{S:c29-s0038}}"
+   ]
+  },
+  {
+   "id": "c29-b0041",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0039}}</p>",
+   "segs": [
+    "{{S:c29-s0039}}"
+   ]
+  },
+  {
+   "id": "c29-b0042",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0040}}</p>",
+   "segs": [
+    "{{S:c29-s0040}}"
+   ]
+  },
+  {
+   "id": "c29-b0043",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0041}}</p>",
+   "segs": [
+    "{{S:c29-s0041}}"
+   ]
+  },
+  {
+   "id": "c29-b0044",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0042}}</p>",
+   "segs": [
+    "{{S:c29-s0042}}"
+   ]
+  },
+  {
+   "id": "c29-b0045",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0043}}</p>",
+   "segs": [
+    "{{S:c29-s0043}}"
+   ]
+  },
+  {
+   "id": "c29-b0046",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0044}}</p>",
+   "segs": [
+    "{{S:c29-s0044}}"
+   ]
+  },
+  {
+   "id": "c29-b0047",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0045}}</p>",
+   "segs": [
+    "{{S:c29-s0045}}"
+   ]
+  },
+  {
+   "id": "c29-b0048",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0046}}</p>",
+   "segs": [
+    "{{S:c29-s0046}}"
+   ]
+  },
+  {
+   "id": "c29-b0049",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0047}}</p>",
+   "segs": [
+    "{{S:c29-s0047}}"
+   ]
+  },
+  {
+   "id": "c29-b0050",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0048}}</p>",
+   "segs": [
+    "{{S:c29-s0048}}"
+   ]
+  },
+  {
+   "id": "c29-b0051",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0049}}</p>",
+   "segs": [
+    "{{S:c29-s0049}}"
+   ]
+  },
+  {
+   "id": "c29-b0052",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0050}}</p>",
+   "segs": [
+    "{{S:c29-s0050}}"
+   ]
+  },
+  {
+   "id": "c29-b0053",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0051}}</p>",
+   "segs": [
+    "{{S:c29-s0051}}"
+   ]
+  },
+  {
+   "id": "c29-b0054",
+   "kind": "scene-break",
+   "segs": [
+    "{{S:c29-s0052}}"
+   ],
+   "place": null,
+   "date": "3725 Snowmoon 30"
+  },
+  {
+   "id": "c29-b0055",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0053}}</p>",
+   "segs": [
+    "{{S:c29-s0053}}"
+   ]
+  },
+  {
+   "id": "c29-b0056",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0054}}</p>",
+   "segs": [
+    "{{S:c29-s0054}}"
+   ]
+  },
+  {
+   "id": "c29-b0057",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0055}}</p>",
+   "segs": [
+    "{{S:c29-s0055}}"
+   ]
+  },
+  {
+   "id": "c29-b0058",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0056}}</p>",
+   "segs": [
+    "{{S:c29-s0056}}"
+   ]
+  },
+  {
+   "id": "c29-b0059",
+   "kind": "figure",
+   "figures": [
+    "chapter-29-fig-02.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c29-b0060",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0057}}</p>",
+   "segs": [
+    "{{S:c29-s0057}}"
+   ]
+  },
+  {
+   "id": "c29-b0061",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0058}}</p>",
+   "segs": [
+    "{{S:c29-s0058}}"
+   ]
+  },
+  {
+   "id": "c29-b0062",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0059}}</p>",
+   "segs": [
+    "{{S:c29-s0059}}"
+   ]
+  },
+  {
+   "id": "c29-b0063",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0060}}</p>",
+   "segs": [
+    "{{S:c29-s0060}}"
+   ]
+  },
+  {
+   "id": "c29-b0064",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0061}}</p>",
+   "segs": [
+    "{{S:c29-s0061}}"
+   ]
+  },
+  {
+   "id": "c29-b0065",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0062}}</p>",
+   "segs": [
+    "{{S:c29-s0062}}"
+   ]
+  },
+  {
+   "id": "c29-b0066",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0063}}</p>",
+   "segs": [
+    "{{S:c29-s0063}}"
+   ]
+  },
+  {
+   "id": "c29-b0067",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0064}}</p>",
+   "segs": [
+    "{{S:c29-s0064}}"
+   ]
+  },
+  {
+   "id": "c29-b0068",
+   "kind": "figure",
+   "figures": [
+    "chapter-29-fig-03.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c29-b0069",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0065}}</p>",
+   "segs": [
+    "{{S:c29-s0065}}"
+   ]
+  },
+  {
+   "id": "c29-b0070",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0066}}</p>",
+   "segs": [
+    "{{S:c29-s0066}}"
+   ]
+  },
+  {
+   "id": "c29-b0071",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0067}}</p>",
+   "segs": [
+    "{{S:c29-s0067}}"
+   ]
+  },
+  {
+   "id": "c29-b0072",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0068}}</p>",
+   "segs": [
+    "{{S:c29-s0068}}"
+   ]
+  },
+  {
+   "id": "c29-b0073",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0069}}</p>",
+   "segs": [
+    "{{S:c29-s0069}}"
+   ]
+  },
+  {
+   "id": "c29-b0074",
+   "kind": "figure",
+   "figures": [
+    "chapter-29-fig-04.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c29-b0075",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0070}}</p>",
+   "segs": [
+    "{{S:c29-s0070}}"
+   ]
+  },
+  {
+   "id": "c29-b0076",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0071}}</p>",
+   "segs": [
+    "{{S:c29-s0071}}"
+   ]
+  },
+  {
+   "id": "c29-b0077",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0072}}</p>",
+   "segs": [
+    "{{S:c29-s0072}}"
+   ]
+  },
+  {
+   "id": "c29-b0078",
+   "kind": "figure",
+   "figures": [
+    "chapter-29-fig-05.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c29-b0079",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0073}}</p>",
+   "segs": [
+    "{{S:c29-s0073}}"
+   ]
+  },
+  {
+   "id": "c29-b0080",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0074}}</p>",
+   "segs": [
+    "{{S:c29-s0074}}"
+   ]
+  },
+  {
+   "id": "c29-b0081",
+   "kind": "figure",
+   "figures": [
+    "chapter-29-fig-06.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c29-b0082",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0075}}</p>",
+   "segs": [
+    "{{S:c29-s0075}}"
+   ]
+  },
+  {
+   "id": "c29-b0083",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0076}}</p>",
+   "segs": [
+    "{{S:c29-s0076}}"
+   ]
+  },
+  {
+   "id": "c29-b0084",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0077}}</p>",
+   "segs": [
+    "{{S:c29-s0077}}"
+   ]
+  },
+  {
+   "id": "c29-b0085",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0078}}</p>",
+   "segs": [
+    "{{S:c29-s0078}}"
+   ]
+  },
+  {
+   "id": "c29-b0086",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0079}}</p>",
+   "segs": [
+    "{{S:c29-s0079}}"
+   ]
+  },
+  {
+   "id": "c29-b0087",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0080}}</p>",
+   "segs": [
+    "{{S:c29-s0080}}"
+   ]
+  },
+  {
+   "id": "c29-b0088",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0081}}</p>",
+   "segs": [
+    "{{S:c29-s0081}}"
+   ]
+  },
+  {
+   "id": "c29-b0089",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0082}}</p>",
+   "segs": [
+    "{{S:c29-s0082}}"
+   ]
+  },
+  {
+   "id": "c29-b0090",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0083}}</p>",
+   "segs": [
+    "{{S:c29-s0083}}"
+   ]
+  },
+  {
+   "id": "c29-b0091",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0084}}</p>",
+   "segs": [
+    "{{S:c29-s0084}}"
+   ]
+  },
+  {
+   "id": "c29-b0092",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0085}}</p>",
+   "segs": [
+    "{{S:c29-s0085}}"
+   ]
+  },
+  {
+   "id": "c29-b0093",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0086}}</p>",
+   "segs": [
+    "{{S:c29-s0086}}"
+   ]
+  },
+  {
+   "id": "c29-b0094",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0087}}</p>",
+   "segs": [
+    "{{S:c29-s0087}}"
+   ]
+  },
+  {
+   "id": "c29-b0095",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0088}}</p>",
+   "segs": [
+    "{{S:c29-s0088}}"
+   ]
+  },
+  {
+   "id": "c29-b0096",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0089}}</p>",
+   "segs": [
+    "{{S:c29-s0089}}"
+   ]
+  },
+  {
+   "id": "c29-b0097",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0090}}</p>",
+   "segs": [
+    "{{S:c29-s0090}}"
+   ]
+  },
+  {
+   "id": "c29-b0098",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0091}}</p>",
+   "segs": [
+    "{{S:c29-s0091}}"
+   ]
+  },
+  {
+   "id": "c29-b0099",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0092}}</p>",
+   "segs": [
+    "{{S:c29-s0092}}"
+   ]
+  },
+  {
+   "id": "c29-b0100",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0093}}</p>",
+   "segs": [
+    "{{S:c29-s0093}}"
+   ]
+  },
+  {
+   "id": "c29-b0101",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0094}}</p>",
+   "segs": [
+    "{{S:c29-s0094}}"
+   ]
+  },
+  {
+   "id": "c29-b0102",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0095}}</p>",
+   "segs": [
+    "{{S:c29-s0095}}"
+   ]
+  },
+  {
+   "id": "c29-b0103",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0096}}</p>",
+   "segs": [
+    "{{S:c29-s0096}}"
+   ]
+  },
+  {
+   "id": "c29-b0104",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0097}}</p>",
+   "segs": [
+    "{{S:c29-s0097}}"
+   ]
+  },
+  {
+   "id": "c29-b0105",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0098}}</p>",
+   "segs": [
+    "{{S:c29-s0098}}"
+   ]
+  },
+  {
+   "id": "c29-b0106",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0099}}</p>",
+   "segs": [
+    "{{S:c29-s0099}}"
+   ]
+  },
+  {
+   "id": "c29-b0107",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0100}}</p>",
+   "segs": [
+    "{{S:c29-s0100}}"
+   ]
+  },
+  {
+   "id": "c29-b0108",
+   "kind": "panel",
+   "skeleton": "<div class=\"device-view wide-device-view device-view-left\"><p>{{S:c29-s0101}}</p><p>{{S:c29-s0102}}</p><p>{{S:c29-s0103}}</p></div>",
+   "segs": [
+    "{{S:c29-s0101}}",
+    "{{S:c29-s0102}}",
+    "{{S:c29-s0103}}"
+   ]
+  },
+  {
+   "id": "c29-b0109",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0104}}</p>",
+   "segs": [
+    "{{S:c29-s0104}}"
+   ]
+  },
+  {
+   "id": "c29-b0110",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0105}}</p>",
+   "segs": [
+    "{{S:c29-s0105}}"
+   ]
+  },
+  {
+   "id": "c29-b0111",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0106}}</p>",
+   "segs": [
+    "{{S:c29-s0106}}"
+   ]
+  },
+  {
+   "id": "c29-b0112",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0107}}</p>",
+   "segs": [
+    "{{S:c29-s0107}}"
+   ]
+  },
+  {
+   "id": "c29-b0113",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0108}}</p>",
+   "segs": [
+    "{{S:c29-s0108}}"
+   ]
+  },
+  {
+   "id": "c29-b0114",
+   "kind": "panel",
+   "skeleton": "<div class=\"device-view wide-device-view device-view-left\"><p>{{S:c29-s0109}}</p><p>{{S:c29-s0110}}</p><p>{{S:c29-s0111}}</p><p>{{S:c29-s0112}}</p><p>{{S:c29-s0113}}</p></div>",
+   "segs": [
+    "{{S:c29-s0109}}",
+    "{{S:c29-s0110}}",
+    "{{S:c29-s0111}}",
+    "{{S:c29-s0112}}",
+    "{{S:c29-s0113}}"
+   ]
+  },
+  {
+   "id": "c29-b0115",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0114}}</p>",
+   "segs": [
+    "{{S:c29-s0114}}"
+   ]
+  },
+  {
+   "id": "c29-b0116",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0115}}</p>",
+   "segs": [
+    "{{S:c29-s0115}}"
+   ]
+  },
+  {
+   "id": "c29-b0117",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0116}}</p>",
+   "segs": [
+    "{{S:c29-s0116}}"
+   ]
+  },
+  {
+   "id": "c29-b0118",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0117}}</p>",
+   "segs": [
+    "{{S:c29-s0117}}"
+   ]
+  },
+  {
+   "id": "c29-b0119",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0118}}</p>",
+   "segs": [
+    "{{S:c29-s0118}}"
+   ]
+  },
+  {
+   "id": "c29-b0120",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0119}}</p>",
+   "segs": [
+    "{{S:c29-s0119}}"
+   ]
+  },
+  {
+   "id": "c29-b0121",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0120}}</p>",
+   "segs": [
+    "{{S:c29-s0120}}"
+   ]
+  },
+  {
+   "id": "c29-b0122",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0121}}</p>",
+   "segs": [
+    "{{S:c29-s0121}}"
+   ]
+  },
+  {
+   "id": "c29-b0123",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0122}}</p>",
+   "segs": [
+    "{{S:c29-s0122}}"
+   ]
+  },
+  {
+   "id": "c29-b0124",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0123}}</p>",
+   "segs": [
+    "{{S:c29-s0123}}"
+   ]
+  },
+  {
+   "id": "c29-b0125",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0124}}</p>",
+   "segs": [
+    "{{S:c29-s0124}}"
+   ]
+  },
+  {
+   "id": "c29-b0126",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0125}}</p>",
+   "segs": [
+    "{{S:c29-s0125}}"
+   ]
+  },
+  {
+   "id": "c29-b0127",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0126}}</p>",
+   "segs": [
+    "{{S:c29-s0126}}"
+   ]
+  },
+  {
+   "id": "c29-b0128",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0127}}</p>",
+   "segs": [
+    "{{S:c29-s0127}}"
+   ]
+  },
+  {
+   "id": "c29-b0129",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0128}}</p>",
+   "segs": [
+    "{{S:c29-s0128}}"
+   ]
+  },
+  {
+   "id": "c29-b0130",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0129}}</p>",
+   "segs": [
+    "{{S:c29-s0129}}"
+   ]
+  },
+  {
+   "id": "c29-b0131",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0130}}</p>",
+   "segs": [
+    "{{S:c29-s0130}}"
+   ]
+  },
+  {
+   "id": "c29-b0132",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0131}}</p>",
+   "segs": [
+    "{{S:c29-s0131}}"
+   ]
+  },
+  {
+   "id": "c29-b0133",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0132}}</p>",
+   "segs": [
+    "{{S:c29-s0132}}"
+   ]
+  },
+  {
+   "id": "c29-b0134",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0133}}</p>",
+   "segs": [
+    "{{S:c29-s0133}}"
+   ]
+  },
+  {
+   "id": "c29-b0135",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0134}}</p>",
+   "segs": [
+    "{{S:c29-s0134}}"
+   ]
+  },
+  {
+   "id": "c29-b0136",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0135}}</p>",
+   "segs": [
+    "{{S:c29-s0135}}"
+   ]
+  },
+  {
+   "id": "c29-b0137",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0136}}</p>",
+   "segs": [
+    "{{S:c29-s0136}}"
+   ]
+  },
+  {
+   "id": "c29-b0138",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0137}}</p>",
+   "segs": [
+    "{{S:c29-s0137}}"
+   ]
+  },
+  {
+   "id": "c29-b0139",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0138}}</p>",
+   "segs": [
+    "{{S:c29-s0138}}"
+   ]
+  },
+  {
+   "id": "c29-b0140",
+   "kind": "p",
+   "skeleton": "<p>{{S:c29-s0139}}</p>",
+   "segs": [
+    "{{S:c29-s0139}}"
+   ]
+  }
+ ],
+ "figures": [
+  "chapter-29-fig-01.svg",
+  "chapter-29-fig-02.svg",
+  "chapter-29-fig-03.svg",
+  "chapter-29-fig-04.svg",
+  "chapter-29-fig-05.svg",
+  "chapter-29-fig-06.svg"
+ ]
+}

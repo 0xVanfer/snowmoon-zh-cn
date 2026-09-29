@@ -1,0 +1,1426 @@
+{
+ "chapter": 12,
+ "segments": [
+  {
+   "id": "c12-s0001",
+   "role": "title",
+   "text": "Chapter 12",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0002",
+   "role": "place",
+   "text": "Sadzu Du, Dzego",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0003",
+   "role": "date",
+   "text": "3724 Grasstime 22",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0004",
+   "role": "p",
+   "text": "Zei looked out of the window of the train, as the train began to slow down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0005",
+   "role": "p",
+   "text": "At first, he saw trees. Then, he began to see buildings with greater and greater density. Finally, after a few minutes, he saw the station.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0006",
+   "role": "p",
+   "text": "A sign slowly passed across the window.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0007",
+   "role": "div",
+   "text": "<c st=\"white-space:nowrap\"><f>sa dzu du</f></c>",
+   "locked": true,
+   "note": "conlang"
+  },
+  {
+   "id": "c12-s0008",
+   "role": "p",
+   "text": "\"Main city\", Dzego's helpfully-named capital city.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0009",
+   "role": "p",
+   "text": "The train came to a stop, and Zei could hear the doors open. The other passengers stood up, and started to gather their belongings.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0010",
+   "role": "p",
+   "text": "Zei decided he was not in a rush to leave first, and would maximize the quality of his time instead. For about two minutes, he finished his game of Minpentai against a bot.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0011",
+   "role": "p",
+   "text": "Fin had never gotten around to writing the harness to fine-tune the AI to play well on custom rulesets, and so Zei was still playing against the stock AI.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0012",
+   "role": "p",
+   "text": "At that moment, the other AIs resigned. Zei had beaten them one-on-three. To compensate for their lack of skill, he had adjusted the game to only give him one corner and three other AIs the other three corners, and put them all on the same team against him. Even despite this, Zei had won. He realized that the three-on-one did not even help the AIs that much - playing in that style was not in their training data, so they made basic mistakes and cannibalized each other's negentropy.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0013",
+   "role": "p",
+   "text": "Zei put away his hand device and sighed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0014",
+   "role": "p",
+   "text": "By this point, the other passengers were almost all off the train. Zei grabbed his bag, and stood up and began to walk out of the train as well.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0015",
+   "role": "p",
+   "text": "When he stepped out, there were six people wearing Minpentai priest robes waiting for him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0016",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Welcome to Sadzu Du, Zei\"</c>, the lead priest, an older woman about the same age as Mu, said to him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0017",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Excited to be here\"</c>, Zei quickly replied. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Only my second time to the capital.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0018",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I'm Su by the way. I'm one of the organizers of the nationals.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0019",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Well nice to meet you, Su.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0020",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"So what's on my itinerary these next few days?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0021",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Check in to the hotel, then orientation tomorrow morning. Thirty-two contestants, the brightest young minds in Minpentai across all of Dzego. You'll get to meet them all.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0022",
+   "role": "p",
+   "text": "Su led Zei to a room that contained many doors. One of the doors slid open, and on the other side Zei could see the inside of a black car, identical to the one that Den had used to take him to the chip fab a few months earlier.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0023",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Unfortunately, I'll have to leave you here, Zei. There's another contestant arriving here on a train in half a longhour. But have a good ride and have a good rest.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0024",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Thank you so much.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0025",
+   "role": "p",
+   "text": "Zei got into the car, and the door closed. The car started moving.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0026",
+   "role": "p",
+   "text": "Zei stared outside the window of the car, marveling at the buildings and trees in the city. Parts of it looked not too different from Pafogai Du, though here there were fewer electronics stores, and instead a wider variety of venues. Some medicine stores.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0027",
+   "role": "p",
+   "text": "On the window of one of the stores, Zei saw a sign:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0028",
+   "role": "div",
+   "text": "<c st=\"white-space:nowrap\"><f>ti</f></c> <c st=\"white-space:nowrap\"><f>ka</f> <c st=\"white-space:nowrap\"><f>dia shu</f></c></c> <c st=\"white-space:nowrap\"><f>fe</f> <c st=\"white-space:nowrap\"><f>cen su jui hui</f></c></c>",
+   "locked": true,
+   "note": "conlang"
+  },
+  {
+   "id": "c12-s0029",
+   "role": "p",
+   "text": "\"Get your longevity package here\"",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0030",
+   "role": "p",
+   "text": "Soon the health stores gave way to some stores selling artistic furniture and other household items.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0031",
+   "role": "p",
+   "text": "And after that a few traditional-looking restaurants and tea houses, in a style mimicking Dzego's own medieval era.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0032",
+   "role": "p",
+   "text": "For a moment, the buildings on the right side stopped completely, and Zei could see a park. Behind the park, Zei could see several mountain pyramids, each about half as tall as the mountain pyramid south of Pafogai Du.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0033",
+   "role": "p",
+   "text": "A minute later, the park ended, and the car crossed a bridge across a small river. Zei could see the buildings get denser further ahead.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0034",
+   "role": "p",
+   "text": "The road slowly descended underground, and turned into a tunnel.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0035",
+   "role": "p",
+   "text": "A few minutes and a few turns later, the car stopped. When the car's door opened, it was pressed tightly against another door, completely shielding Zei from being visible from outside the car and the building he was entering.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0036",
+   "role": "p",
+   "text": "Zei stepped out. He was in a hotel.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0037",
+   "role": "p",
+   "text": "He walked over to the nearest green circle, and tapped his watch against it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0038",
+   "role": "div",
+   "text": "sen hen zi li die fe 150",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0039",
+   "role": "div",
+   "text": "zo lia kin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0040",
+   "role": "b",
+   "text": "✓",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0041",
+   "role": "div",
+   "text": "man dun li jie hu",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0042",
+   "role": "b",
+   "text": "✓",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0043",
+   "role": "b",
+   "text": "cau tie zen <br/> ci fan zi li 304",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0044",
+   "role": "p",
+   "text": "Reputation above 150 verified. Payment not needed. Approved, room number is 304.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0045",
+   "role": "p",
+   "text": "Zei's watch buzzed, confirming his room key.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0046",
+   "role": "p",
+   "text": "Zei entered his room, and took a shower.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0047",
+   "role": "p",
+   "text": "He promptly went to sleep.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0048",
+   "role": "p",
+   "text": "An alarm buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0049",
+   "role": "p",
+   "text": "Zei tapped on his watch to check what time it was. 30,003, the watch said. Only half a longhour before the commencement ceremony. He tapped a few buttons on the room service menu, and ordered a fruit and vegetable juice.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0050",
+   "role": "p",
+   "text": "He put on his clothes.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0051",
+   "role": "p",
+   "text": "Three minutes later, the juice arrived, and Zei quickly drank it. He immediately felt energized - or at least, energized enough to take the trip to the venue.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0052",
+   "role": "p",
+   "text": "Without wasting any more time, he opened the door, and went downstairs.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0053",
+   "role": "p",
+   "text": "A black car was already waiting for him. Zei walked through the lobby, and immediately stepped through the hotel door and car door that were already open and pressed tightly against each other. The door closed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0054",
+   "role": "p",
+   "text": "As the car began to move, Zei took out the cryptography textbook that Den had recommended to him in one of their meetings, and continued reading it where he had left off.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0055",
+   "role": "p",
+   "text": "The section was on hash functions. In the middle of the page, there was a large diagram.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0056",
+   "role": "p",
+   "text": "\"Conception of a hash algorithm\".",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0057",
+   "role": "p",
+   "text": "Zei read the accompanying text.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0058",
+   "role": "p",
+   "text": "Hash algorithms, it said, were there to create a shrunken fingerprint of a large piece of information, that still uniquely identifies the original. The goal is for it to be infeasibly hard to find two different pieces of data that have the same hash.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0059",
+   "role": "p",
+   "text": "Hashes inherently destroy information - representing a larger thing with a smaller thing is their entire goal. But there is a paradox: in the internal workings of all the best hash functions that we build, the largest component is an <e>entropy-preserving</e> transformation: a permutation.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0060",
+   "role": "p",
+   "text": "The core building block maps inputs to outputs one-to-one. And not only that, it can be <e>efficiently</e> run both forwards and backwards. The shrinking, and the irreversibility, comes from a simple layer on top: a deletion, and an xor of part of the original input, added to the end.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0061",
+   "role": "p",
+   "text": "Why do this? Why build irreversibility on top of reversibility? The reason is subtle. If you build irreversibility directly, then you cannot control when entropy is destroyed. If you apply an irreversible round function enough times, then about half the entropy collapses, bringing the protocol's security down along with it. And so even when destroying information is your final goal, it's best to cleanly separate out the piece that's going that - destroy information in one precise spot in the algorithm, on your own terms.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0062",
+   "role": "p",
+   "text": "Zei put away his hand device, and leaned back.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0063",
+   "role": "p",
+   "text": "It's all entropy, isn't it, he thought to himself.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0064",
+   "role": "p",
+   "text": "A minute later, the car suddenly slowed down, and turned left. To his right, Zei could see an area blocked off by safety tape with various large vehicles further inside.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0065",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"What happened?\"</c>, Zei asked in a voice loud enough that the driver would unambiguously recognize that the question was meant for him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0066",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Explosion in an advanced biology research lab. Probably the Arctics, as usual. They're going to spend days cleaning up to make sure everything is safe.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0067",
+   "role": "p",
+   "text": "A few minutes after that, the car slowed down and came to a stop. The door opened, leading straight into a hallway.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0068",
+   "role": "p",
+   "text": "Zei walked through the tunnel, and down the stairs.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0069",
+   "role": "p",
+   "text": "He saw a door in front of him. The door looked similar to the door to the Minpentai room inside the mountain pyramid in Pafogai Du: a series of stone bricks, curving near the top into an arch, and the symbol at the top: two horizontal arms, meeting in the middle with clashing fists.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0070",
+   "role": "p",
+   "text": "However, this door was noticeably larger, more well-maintained, and the decorations more grand.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0071",
+   "role": "p",
+   "text": "Zei tapped his watch against the green circle, and the door opened. He walked through.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0072",
+   "role": "p",
+   "text": "He entered a room with about fifty chairs, with about twenty contestants already sitting down. On the stage, he recognized Su. Beside her, there were three other priests.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0073",
+   "role": "p",
+   "text": "Zei sat down. Over the next fifteen minutes, other contestants sat down in their own chairs.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0074",
+   "role": "p",
+   "text": "An older teenage boy sat down beside Zei.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0075",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Hi, I'm Deluin\"</c>, he said.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0076",
+   "role": "p",
+   "text": "That's not a very Dzegojan name, Zei thought.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0077",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I'm Zei.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0078",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Where are you from?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0079",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Ah, I'm from Redshire. My name gave me away, didn't it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0080",
+   "role": "p",
+   "text": "Zei laughed. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Do you get that reaction from everyone?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0081",
+   "role": "p",
+   "text": "Deluin laughed along with Zei.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0082",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"De lu hin, they call me here. 'A fork with the appearance of'. Lovely name, don't you think?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0083",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Are you studying here? Did your parents immigrate?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0084",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Ah, I'm a foreign contestant. They brought in four foreign contestants this time, to make things more fun.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0085",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Are you excited?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0086",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Absolutely. Actually my first time in Dzego, super cool place.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0087",
+   "role": "p",
+   "text": "A bell rang, and the contestants quickly quieted down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0088",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Welcome to the national Minpentai championship\"</c>, Su began. <c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I am honored to see so many brilliant contestants this year, and I hope that everyone arriving had a good evening and a good morning.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0089",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I am pleased to introduce our lead organizer, Taskmaster Jin.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0090",
+   "role": "p",
+   "text": "One of the other priests stepped forward, and began speaking.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0091",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"This is a special moment for all of us in Dzego, not just for us and for you, but for millions of Dzegojan who watch the games from across the country, as they will get to watch the brightest minds from Dzego's new generation face off against each other.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0092",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"I'm also honored to announce that this year, we have four distinguished foreign guests participating along with us.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0093",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Today, we will have a walk through the Minpentai museum, right here inside this mountain pyramid. Tomorrow, we will have some tourist excursions around Sadzu Du, and in the evening you will get a chance to rest. Two days after, the first championship games will begin.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0094",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"There will be six rounds of qualifying games, with an eight-day-long break in between each game.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0095",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Out of the thirty-two of you, the four players who win the most games will advance to the semifinals. If there is no win threshold that exactly four players pass, we will break ties by the geometric average of the number of turns that you survived before losing your losing games and the inverse of the number of turns that you needed to win your winning games, counted up to a maximum of eight thousand turns. Thus, there is no incentive to resign before eight thousand turns. If there are still ties, we will insert an additional qualifying round.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0096",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"I hope you can enjoy the games, enjoy everything that Sadzu Du has to offer, but also, just as importantly, enjoy each other. Here you are not enemies, you are temporary competitors. Off the arena, you should consider each other friends, and remember that we are all part of a shared project together. Dze go ba fau gie.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0097",
+   "role": "p",
+   "text": "\"Dze go ba fau gie\", all the contestants replied in unison.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0098",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Now, please follow Su. She will lead the excursion through the museum.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0099",
+   "role": "date",
+   "text": "3724 Grasstime 25",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0100",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0101",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0102",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0103",
+   "role": "center",
+   "text": "Bai",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0104",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0105",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">[dia lau shau]</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0106",
+   "role": "cell",
+   "text": "23098",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0107",
+   "role": "p",
+   "text": "Zei woke up. Bai was requesting to call.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0108",
+   "role": "p",
+   "text": "Zei tapped the watch.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0109",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"How are things going over there?\"</c>, Bai asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0110",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"This is a bit early for a call, isn't it? It's still 19 minutes before my alarm was supposed to wake me up.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0111",
+   "role": "p",
+   "text": "Zei paused for a moment, and decided to answer Bai's question.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0112",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Things have been well. Very fascinating exhibition at the museum three days ago, and got to see a bunch of Sadzu Du the next day. Met someone from Redshire too.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0113",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"A contestant?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0114",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Yep, they've decided to internationalize it a bit this year.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0115",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"So how's Pafogai?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0116",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Ask me something I can answer. I've been staring at the mountain pyramid you'll be playing in from across the river for the last longhour.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0117",
+   "role": "p",
+   "text": "Zei sat up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0118",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"You're HERE?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0119",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Den's people got hold of me and told me to come and take notes on all the contestants' strategies.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0120",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Your first game is today, right?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0121",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"It is indeed.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0122",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Want me to come over and help you out, or at least watch?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0123",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I... think I'm fine. And I doubt you can get a ticket to the live stadium.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0124",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Not if you let me in.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0125",
+   "role": "p",
+   "text": "Zei groaned.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0126",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"I'll watch from afar then. We're all rooting for you!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0127",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"How is Fin? I haven't heard from him in days now.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0128",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Busy with Bansunpei stuff I guess. He hasn't said anything to me in days either.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0129",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Alright then. Well, I gotta start preparing. I hope you enjoy your day!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0130",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Best of luck to you in yours, you'll need it!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0131",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Oh, and, let's play a practice game tomorrow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0132",
+   "role": "p",
+   "text": "Zei once again ordered a fruit and vegetable juice, and put on his clothes. A few minutes later, the juice arrived, and Zei quickly drank it. He opened the door, went downstairs, and entered the car that was waiting for him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0133",
+   "role": "p",
+   "text": "Twenty minutes later, the car arrived at an entrance to the pyramid.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0134",
+   "role": "p",
+   "text": "Zei stepped out, and began walking through the tunnels.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0135",
+   "role": "p",
+   "text": "After a few hundred meters of walking, and a few turns, he once again arrived at the large stone brick door. He entered, and this time immediately turned right, into a hallway that he had not even noticed when he was first there three days ago. He followed the signs, and soon got to a waiting room.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0136",
+   "role": "p",
+   "text": "He saw Su, and the other contestant.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0137",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Welcome Zei! Meet Bo.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0138",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Nice to meet you, Zei.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0139",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Nice to meet you too, Bo.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0140",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"It will be a fun game today, I'm sure of it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0141",
+   "role": "p",
+   "text": "A robot arrived, and gave all three of them a cup of tea. They each drank their cup.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0142",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"So what now? We sit here for a longhour without internet while the others play, so we don't learn the new rule ahead of time?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0143",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Exactly. And no hand devices or watches allowed either. The robot will be coming to pick them up in a minute. You can watch last year's matches on that screen over there.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0144",
+   "role": "p",
+   "text": "A longhour later, the elevator doors opened, and Zei and Bo each stepped in to their respective elevators. Su waved them goodbye. The doors closed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0145",
+   "role": "p",
+   "text": "A quarter minute after that, Zei's elevator door opened once again, exposing a giant room much larger than the room in Pafogai Du. About five to ten thousand people seemed to be watching. A path lit up, showing the way to a giant console with a chair.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0146",
+   "role": "p",
+   "text": "Zei walked forward. He could make out Bo's silhouette walking forward in the distance. He got to the chair, and sat down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0147",
+   "role": "p",
+   "text": "Drones about the size of a hand device buzzed as they flew around Zei, scanning for any kind of cheating equipment. This time, there were about three times more drones than there were in Pafogai Du, and with even more shapes and sizes. The drones buzzed around for about twenty ticks, and then retreated back to their resting positions.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0148",
+   "role": "p",
+   "text": "A loud automated voice, this time sounding more female, announced: <c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI FA\"</c>. Starting in fifty ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0149",
+   "role": "p",
+   "text": "Zei closed his eyes, and breathed in and out, trying his best to calm himself. This match was not decisive, he knew: if he lost, he could still make it up in the others. But in another way, that fact made him more scared: armed with the excuse that it's okay to lose, will his mind have the motivation needed to keep his full attention and mindpower on the game and win?",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0150",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI FA\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0151",
+   "role": "p",
+   "text": "Zei opened his eyes again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0152",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU GEI FA\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0153",
+   "role": "p",
+   "text": "Zei patiently waited.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0154",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"Welcome to the fourth qualifying match of the north stadium for today. Everyone, meet our players for this round: Zei Leimin from Pafogai Du, and Bo Zume, from right here in Sadzu Du.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0155",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"I am also pleased to announce - perhaps one time too many for the audience, but for the first time, for our contestants - today's rule change. Today, Minpentai will be played on a hex grid.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0156",
+   "role": "p",
+   "text": "Zei opened his mouth in shock.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0157",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"You will have twenty minutes to figure out your structures, any gliders, spaceships and walls, to the best of your ability. And then the serene battle over a field of snowflakes will begin.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0158",
+   "role": "p",
+   "text": "Zei's display turned on, and he could see the hexagonal grid in front of him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0159",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE FI SHI GEI TAU FA\"</c>, the automated loud voice shouted. The battle begins in two thousand ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0160",
+   "role": "p",
+   "text": "Zei began by quickly drawing random junk in his sandbox, seeing what stayed stable and what turned into a glider. Within one minute, he identified a few gliders and a few static structures that could be used for walls. To his surprise, the gliders that moved the fastest moved ... directly east.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0161",
+   "role": "p",
+   "text": "His next move was to deliberately draw different kinds of walls, fly gliders at them, and see what sticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0162",
+   "role": "p",
+   "text": "He watched the gliders carefully, to try to quickly get an intuition for what kinds of shapes can move while preserving their shape. He did several rounds of defining both the gliders and the walls.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0163",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA MU GU GU GEI TAU FA.\"</c> The battle begins in fifteen hundred ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0164",
+   "role": "p",
+   "text": "Zei began experimenting with shapes that were similar to his symbol, seeing if any of them could function as a glider. He needed to come up with <e>something</e> - otherwise he would be able to progress only very slowly, by repeatedly building a new symbol beside his existing symbol during each intervention turn.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0165",
+   "role": "p",
+   "text": "He realized that to make actual headway, he would need to interact with the rock formations. He made a couple of guesses about what shape the rock formations in the hexgrid version of Minpentai might look like, and examined the behavior of gliders as they crashed into them.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0166",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"FI SHI GEI TAU FA.\"</c> The battle begins in a thousand ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0167",
+   "role": "p",
+   "text": "Zei began to sweat. So far, no luck. No combination of a glider, a plausible rock shape and an offset that he tried led to a copy of his symbol.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0168",
+   "role": "p",
+   "text": "He thought more about the exact shape of his symbol.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0169",
+   "role": "p",
+   "text": "After another two minutes of fruitless exploration, Zei's mind flashed back to the textbook he had been reading less than two longhours before.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0170",
+   "role": "quote",
+   "text": "<i>The core building block maps inputs to outputs one-to-one. And not only that, it can be efficiently run both forwards and backwards.</i>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0171",
+   "role": "p",
+   "text": "But unlike the hash function, here there was no truncate-and-xor wrapper at the end. And so if he knew his desired end state ... he just had to put that end state into the sandbox, and play it backwards.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0172",
+   "role": "p",
+   "text": "But ... how do you play it backwards?",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0173",
+   "role": "p",
+   "text": "In the internal permutation of a hash function, you walk backwards from the last layer to the first layer, and invert each step as you go.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0174",
+   "role": "p",
+   "text": "Here ... what was the inverse of the hexgrid rules that Zei was interacting with for the first time in his life?",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0175",
+   "role": "p",
+   "text": "Zei took the gliders he saw, and tried the most basic transformations: flipping them, rotating them 60 degrees, launching them one timestep later. None worked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0176",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU FI LE GEI TAU FA.\"</c> The battle begins in five hundred ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0177",
+   "role": "p",
+   "text": "Zei stepped through each step more slowly. And then he saw it. During each step, the game board split up into triangles, and the hexagons rotated inside each triangle - clockwise if it had one hex filled, counterclockwise if it had two hexes filled.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0178",
+   "role": "p",
+   "text": "And so in order to time reverse, he just had to ... let each time step happen twice. The opposite of a 120-degree rotation is, after all, two 120-degree rotations. But there was a problem: after each time step, the split into triangles shifted. So to play a time step backward, he had to... play one step forward, then shift time back one step so that he could play the next step forward under the same tiling, then play a second step forward to bring the total rotation under that tiling to 240 degrees within each triangle, then shift time back <e>two</e> steps so that the game would shift to the <e>previous</e> tiling. Invert each step, and play the steps in reverse order, just like inverting a permutation in a hash.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0179",
+   "role": "p",
+   "text": "He confirmed: there was a button to play one step forward, and two buttons to shift time - either forward or backward. So that's what he would have to do. A, B, A, B, B. Like some kind of video game cheat code. Which, in some sense, here it literally was.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0180",
+   "role": "p",
+   "text": "Fine, he thought.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0181",
+   "role": "p",
+   "text": "He put a glider into the sandbox, and tried it. It was an arduous process, and his fingers quickly tired. But it worked. The glider moved backwards.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0182",
+   "role": "p",
+   "text": "Basic test passed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0183",
+   "role": "p",
+   "text": "Zei tried the real test: using the same technique, starting with a symbol forming beside a rock formation and a glider flying out.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0184",
+   "role": "p",
+   "text": "The first time, it failed: as time went backwards, the glider and the symbol crashed, but then the same symbol re-formed a few steps away, and the glider flew away. So in that particular history that Zei had just sampled, before the crash, the symbol had been there all along.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0185",
+   "role": "p",
+   "text": "He tried again, with a different glider. This time, it succeeded. As time moved backwards, past the moment of the crash, the rock-formation-plus-symbol turned into a bare rock formation, and two gliders flew back out.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0186",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"FI LE GEI TAU FA.\"</c> The battle begins in one hundred ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0187",
+   "role": "p",
+   "text": "Zei quickly repeated the same experiment with other candidates for a rock formation. He paid no attention to the voice announcing the countdown, and kept trying until he found one for the two other most natural options.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0188",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI TAU FA.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0189",
+   "role": "p",
+   "text": "Zei quickly put up symbols, walls, and gliders that would create symbols if they crashed into favorable rock formations.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0190",
+   "role": "p",
+   "text": "He was surprised at his own speed doing this, given how much longer everything else had taken. But almost immediately he realized in the back of his mind that this made sense: figuring out what to deploy is the hard part, deployment is just copy and paste.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0191",
+   "role": "p",
+   "text": "After making a basic setup on the board, he breathed out. Just as he breathed back in and started doing a final pass refining his structures, a final countdown began.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0192",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU ... SO ... BI ... ZE ... HA ... MU ... FO ... SHI ... LE ... PA ...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0193",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"TAU FA.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0194",
+   "role": "p",
+   "text": "Gliders started flying out. At first, nothing happened.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0195",
+   "role": "p",
+   "text": "Five hundred turns later, a part of the board came into view. One of his gliders had successfully created a symbol, and revealed a part of the board that showed what the rock formations look like.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0196",
+   "role": "p",
+   "text": "Immediately, Zei switched to the next task: figuring out how to build glider factories.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0197",
+   "role": "p",
+   "text": "When the first intervention turn hit, Zei had not yet figured this out. However, he did send out several more gliders that flew from his home base, ready to create more copies of his symbol if they collided into a rock formation in the right place. He also sent gliders from nearby his new symbol, rapidly heading east.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0198",
+   "role": "p",
+   "text": "The audience watched intently. From across the river, Bai was also watching intently. And from afar, so were Fin, Mu and Den.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0199",
+   "role": "p",
+   "text": "The audience was surprised. Neither player had managed to figure out any gliders that move vertically, they realized.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0200",
+   "role": "p",
+   "text": "On the second intervention turn, Zei launched gliders from the sides of the board, aiming straight toward Bo's home base.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0201",
+   "role": "p",
+   "text": "And just before the third intervention turn, one of Zei's gliders hit a rock formation right beside Bo's home base, allowing Zei to see all of Bo's symbols.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0202",
+   "role": "p",
+   "text": "Zei used that intervention turn to send gliders directly toward the three of Bo's symbols that he could see, and more toward some locations nearby just in case.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c12-s0203",
+   "role": "p",
+   "text": "Within three hundred turns, all of Bo's symbols were destroyed, and Zei was announced the winner.",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": 6,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 6 章的忠实度整体很高：182 个片段与原文逐句对得上，颜色标记、说话人归属、数字日期和专名都与原文及术语表一致，没有发现高严重度的误译、漏译或因果/否定颠倒。主要问题集中在用词层面——疫情检测场景里的 masks 被译成「面具」，以及界面里原样保留的哈希字面量被改写成中文省略号；另有三处轻微偏差（门槛数值、增译、技术词 deterministic 丢失）。这些都不影响通读，按下面 5 条就地修改即可定稿。",
+  "issues": [
+    {
+      "id": "c06-s0110",
+      "severity": "medium",
+      "type": "误译",
+      "source": "About half of the participants in the room took out masks, some cloth and some elastomeric respirators, from their pockets and put them on.",
+      "zh": "屋里大约一半人从口袋里掏出面具戴上，有布面的，也有弹性体呼吸器。",
+      "problem": "流感警报后的 masks 指「口罩」（布口罩、弹性体呼吸器），译成「面具」会让中文读者想到假面/面具，与下文的「弹性体呼吸器」也接不上；本章 new_terms 自己对 elastomeric respirator 的注解写的就是「与布面口罩并列的防护用品」，正文与术语说明自相矛盾。",
+      "suggestion": "屋里大约一半人从口袋里掏出口罩戴上，有布面的，也有弹性体呼吸器。"
+    },
+    {
+      "id": "c06-s0145",
+      "severity": "medium",
+      "type": "标点体例",
+      "source": "Nullifier: <br/><br/>0x18f4...60c5",
+      "zh": "作废符：<br/><br/>0x18f4……60c5",
+      "problem": "这是界面面板里原样保留的代码字面量（体例规范把 0x18f4...60c5 明确列为「原样保留」的界面数值），译文把半角省略号改成了中文省略号，等于改写了字面量；第 16 章同类哈希 0x8f62... 仍保留半角写法，全书也不一致。",
+      "suggestion": "作废符：<br/><br/>0x18f4...60c5"
+    },
+    {
+      "id": "c06-s0054",
+      "severity": "low",
+      "type": "误译",
+      "source": "Applies to spaces that host more than 20 people.",
+      "zh": "适用于容纳20人以上的场所。",
+      "problem": "more than 20 不含 20，而中文「20人以上」通常把 20 人算在内，评则的适用门槛被放宽了一档。",
+      "suggestion": "适用于容纳超过20人的场所。"
+    },
+    {
+      "id": "c06-s0149",
+      "severity": "low",
+      "type": "误译",
+      "source": "The nullifier was a pseudorandom hash generated in a deterministic but unlinkable way from the public reviews of his work.",
+      "zh": "作废符是一段伪随机哈希，由他工作的公开评语以确定却无法关联的方式生成。",
+      "problem": "deterministic 是密码学术语「确定性的」（同一输入必然得到同一输出），译成「确定」会被读成「已经定下的/固定的」，术语含义丢失。",
+      "suggestion": "作废符是一段伪随机哈希，由他工作的公开评语以确定性、但不可关联的方式生成。"
+    },
+    {
+      "id": "c06-s0093",
+      "severity": "low",
+      "type": "增译",
+      "source": "I want everyone at each table to take turns, and share a positive experience you've had of a public space that you've spent time in that you appreciate.",
+      "zh": "我想请每桌的人轮流讲讲：你在哪个公共空间待过，觉得好、愿意再去。",
+      "problem": "原文要大家分享的是「一段愉快的经历」，译文改成了问「哪个公共空间」，并额外加上原文没有的「愿意再去」，宾语从「经历」变成了「地点」。",
+      "suggestion": "我想请每桌的人轮流讲讲：你在哪个公共空间待过，在那里有过什么让你喜欢的体验。"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "chapter": 12,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第12章中文整体读得下去：开场进城一段的画面推进、苏与泽的寒暄、德鲁因那几句带自嘲的闲聊都落成了中文口语，术语（符记／石阵／干预回合／滑翔机工厂）与术语表一致，称谓与度量没有出戏的地方。毛病集中在三类：一是英文句法残留——多层定语前置（“登在之前某次见面时推荐给他的密码学教材”）、名词直译（“黑色轿车的内部”“一间有很多扇门的房间”）、被字与有字句（“有一个六边形被填”）；二是个别搭配不成话或主语错位，读一遍接不上（“他的脑子还会有那份动力”“这句话或许已经听过太多次”“博主基地”“建筑完全断开”）；三是倒放时间与资格赛规则两处长句，术语和指代叠在一起，读者要停下来重排。其中资格赛晋级规则的一句建议重写，其余按条替换即可达到出版级语感。",
+  "issues": [
+    {
+      "id": "c12-s0095",
+      "severity": "high",
+      "type": "生硬",
+      "source": "If there is no win threshold that exactly four players pass, we will break ties by the geometric average of the number of turns that you survived before losing your losing games and the inverse of the number of turns that you needed to win your winning games, counted up to a maximum of eight thousand turns.",
+      "zh": "“你们三十二个人里，胜场最多的四名选手将进入半决赛。如果不存在恰好只有四人越过的胜场门槛，我们就用几何平均来打破平局：一是你在败局中撑过的回合数，二是你在胜局中所用回合数的倒数，回合数最多计到八千。这样一来，在八千回合之前认输就没有任何好处。如果仍然平局，我们会加赛一轮资格赛。”",
+      "problem": "“如果不存在恰好只有四人越过的胜场门槛”要看三遍：先立一个“不存在……的门槛”，再让“恰好只有四人越过”挂上去，中文正常说法是先给动作再给条件（“如果找不到一个胜场数，刚好只有四个人达到”）。后半段“我们就用几何平均来打破平局：一是……二是……”也断错了——冒号后的“一是／二是”看着像并列的两条规则，实际它们是被取几何平均的两个量（败局撑过的回合数、胜局回合数的倒数），读者会以为后面还有第三条；紧接着“回合数最多计到八千”又贴在第二个量后面，到底哪一项被计到八千并不清楚。这是全章信息量最大的一句规则宣读，读不懂会直接影响后面每一盘输赢的分量。",
+      "suggestion": "“你们三十二个人里，胜场最多的四名选手将进入半决赛。如果找不到一个胜场数刚好只有四个人达到，我们就按两项的几何平均值来排名：一是在败局里撑过的回合数，二是在胜局里所用回合数的倒数（两项都最多计到八千回合）。这样一来，八千回合之前认输就没有任何好处。如果还是分不出高下，就再加赛一轮资格赛。”"
+    },
+    {
+      "id": "c12-s0201",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "one of Zei's gliders hit a rock formation right beside Bo's home base, allowing Zei to see all of Bo's symbols.",
+      "zh": "就在第三次干预回合之前，泽的一架滑翔机撞上了博主基地紧邻的一块石阵，让泽得以看清博所有的符记。",
+      "problem": "“撞上了博主基地紧邻的一块石阵”里“博主基地”挤成一串，中文读者第一眼会读成“博主”（写博客的人），要再看一眼才反应过来是“博的主基地”；后半句“看清博所有的符记”又轮到“博所有”连读，容易被当成一个词。这里是全章胜负手的交代，不该让人在认名字上卡壳。",
+      "suggestion": "“就在第三次干预回合之前，泽的一架滑翔机撞上了博的主基地旁边的一块石阵，让泽看清了博的全部符记。”"
+    },
+    {
+      "id": "c12-s0155",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "I am also pleased to announce - perhaps one time too many for the audience, but for the first time, for our contestants - today's rule change.",
+      "zh": "“我也很高兴宣布今天的规则变化——对观众来说，这句话或许已经听过太多次，但对我们的选手还是第一次。今天，民本棋将在六边形网格上进行。”",
+      "problem": "“对观众来说，这句话或许已经听过太多次”主语接错了：“这句话……听过”把话当被听的对象，中文读着别扭，原意是这种宣布对观众来说已经太多遍；后半句“但对我们的选手还是第一次”缺动词，补成“还是头一回听到”才成句。这是主播报员说给全场听的话，第一遍就该听懂。",
+      "suggestion": "“我也很高兴宣布今天的规则变化——这种话，观众们或许已经听过太多遍，但对我们的选手还是头一回。今天，民本棋将在六边形网格上进行。”"
+    },
+    {
+      "id": "c12-s0149",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "armed with the excuse that it's okay to lose, will his mind have the motivation needed to keep his full attention and mindpower on the game and win?",
+      "zh": "可换个角度想，这件事反而让他更害怕：既然有了“输了也没关系”这个借口，他的脑子还会有那份动力，把全部注意力和心力都留在棋盘上、去赢下这盘吗？",
+      "problem": "“他的脑子还会有那份动力”不是中文搭配——动力是从心里来的，脑子不生动力；而且“把注意力……留在棋盘上”后面又挂一个“去赢下这盘”，一句里两个目的，读到后半句气已经散了。原文是泽在心里给自己发问，口气该是发紧的。",
+      "suggestion": "可换个角度想，这反而让他更怕：既然有了“输了也没关系”这个借口，他还能不能提起那股劲，把全部注意力和心力都压在棋盘上，去赢下这一局？"
+    },
+    {
+      "id": "c12-s0066",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Explosion in an advanced biology research lab. Probably the Arctics, as usual.",
+      "zh": "“一家高等生物研究实验室发生了爆炸。多半又是北极人干的。他们得花好几天清理，确保一切安全。”",
+      "problem": "“高等生物研究实验室”在中文里会被读成“研究高等生物的实验室”（高等动植物那一类），而原文说的是尖端／前沿的生物学实验室。司机是随口回答乘客的问话，不该用容易误解的搭配。",
+      "suggestion": "“一家尖端生物研究实验室炸了。多半又是北极人干的。他们得花好几天清理，确保一切安全。”"
+    },
+    {
+      "id": "c12-s0054",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Zei took out the cryptography textbook that Den had recommended to him in one of their meetings, and continued reading it where he had left off.",
+      "zh": "车一动，泽就掏出登在之前某次见面时推荐给他的密码学教材，从上次停下的地方接着读。",
+      "problem": "“登在之前某次见面时推荐给他的密码学教材”把三层修饰全压在“教材”前面（登／在之前某次见面时／推荐给他的），中文读到“密码学教材”时前面的关系已经记不清了。中文更习惯先把书掏出来，再用补充语交代来历。",
+      "suggestion": "“车一动，泽就掏出那本密码学教材——登在之前一次见面时推荐给他的——从上次停下的地方接着读。”"
+    },
+    {
+      "id": "c12-s0171",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "And so if he knew his desired end state ... he just had to put that end state into the sandbox, and play it backwards.",
+      "zh": "所以，只要他知道自己想要什么终态……把那个终态放进沙盒，倒着放就行。",
+      "problem": "“只要……就”被省略号劈成两半，后半句落不到“就”上，读起来像语法断掉的半句。这是泽想通关键的一刻，中文该保持一口气说完的顺畅。",
+      "suggestion": "“但和哈希函数不同，这里末尾没有那层先截断再异或的包装。所以，只要他知道自己想要的终态是什么，把那个终态丢进沙盒、倒着放就行了。”"
+    },
+    {
+      "id": "c12-s0178",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "after each time step, the split into triangles shifted. So to play a time step backward, he had to... play one step forward, then shift time back one step so that he could play the next step forward under the same tiling, then play a second step forward...",
+      "zh": "可还有个问题：每个时间步之后，划分成三角形的方式都会偏移。所以要把一个时间步倒放，他得……先前进一步，再把时间往回拨一步，这样就能在同一套划分下把下一步也往前走；然后再往前走一步，让那套划分下每个三角形里的累计旋转达到240度；接着把时间往回拨<e>两</e>步，让棋盘切回<e>上一套</e>划分。",
+      "problem": "两处卡壳：一是“划分成三角形的方式都会偏移”，“偏移”用来说明棋盘划分的错位太含糊，读者分不清是三角格挪了位置还是换了一套切法，而紧接着就出现了“同一套划分”“上一套划分”，这里必须先说清“划分会错开”；二是“这样就能在同一套划分下把下一步也往前走”，“把下一步也往前走”是 play the next step forward 的直搬，中文不成话。",
+      "suggestion": "可还有个问题：每走一个时间步，三角形的划分方式就会错开。所以要把一个时间步倒放，他得……先前进一步，再把时间往回拨一步，好让下一步能在同一套划分下继续往前走；然后再往前走一步，把这套划分下每个三角形里的累计旋转凑到240度；接着把时间往回拨<e>两</e>步，让棋盘切回<e>上一套</e>划分。"
+    },
+    {
+      "id": "c12-s0110",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "It's still 19 minutes before my alarm was supposed to wake me up.",
+      "zh": "“这个点打电话有点早吧？离我闹铃叫我起床还有19分钟。”",
+      "problem": "“离我闹铃叫我起床还有19分钟”一句里塞了三个人称动作（闹铃—叫我—起床），读出来像绕口令。泽半睡半醒地抱怨电话打早了，中文只要很随口的一句。",
+      "suggestion": "“这个点打电话有点早吧？闹铃还有19分钟才响呢。”"
+    },
+    {
+      "id": "c12-s0096",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "remember that we are all part of a shared project together.",
+      "zh": "记住我们都在同一个共同的事业之中。",
+      "problem": "“同一个共同的事业”里“同一个”和“共同”语义叠在一处，两个词挤着说；而且“在……事业之中”是 part of a shared project 的直搬，中文不会说“在事业之中”。这是总负责人收尾的动员话，要有分量、说得出口。",
+      "suggestion": "“离开棋场，你们应当把彼此当作朋友，记住我们所有人都在做同一件事。Dze go ba fau gie。”"
+    },
+    {
+      "id": "c12-s0124",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"Not if you let me in.\"",
+      "zh": "“你要是放我进去，那就有。”",
+      "problem": "原文是很短的一句反将（你放我进去，我就不需要票了），中文“那就有”把宾语含糊掉了——有票？有名额？——接在泽“你弄不到票”后面，读者要自己把省略的成分补回来，本来那点俏皮劲就没了。",
+      "suggestion": "“你放我进去，不就有票了。”"
+    },
+    {
+      "id": "c12-s0022",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Su led Zei to a room that contained many doors. One of the doors slid open, and on the other side Zei could see the inside of a black car...",
+      "zh": "苏把泽带到一间有很多扇门的房间。其中一扇门滑开，门那边是一辆黑色轿车的内部，和几个月前登带他去晶圆厂时坐的那辆一模一样。",
+      "problem": "“一间有很多扇门的房间”是 a room that contained many doors 的直搬，中文说“满是门的房间”更顺；“门那边是一辆黑色轿车的内部”又是 the inside of a black car 的名词直译，读者眼前出不来画面，中文会说“门后停着一辆黑色轿车”。",
+      "suggestion": "“苏把泽带到一间满是门的房间。其中一扇门滑开，门后停着一辆黑色轿车，和几个月前登带他去晶圆厂时坐的那辆一模一样。”"
+    },
+    {
+      "id": "c12-s0169",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zei's mind flashed back to the textbook he had been reading less than two longhours before.",
+      "zh": "泽的脑子里忽然闪过不到两个长时前读过的那本教材。",
+      "problem": "“闪过”的东西通常是念头、画面，拿“那本教材”当闪过之物，中文要把“想起”补出来才顺；而且“不到两个长时前读过的那本教材”定语叠得紧，读到“教材”才知道闪过的是什么。",
+      "suggestion": "“又白试了两分钟后，泽忽然想起不到两个长时前读过的那本教材。”"
+    },
+    {
+      "id": "c12-s0035",
+      "severity": "low",
+      "type": "生硬",
+      "source": "completely shielding Zei from being visible from outside the car and the building he was entering.",
+      "zh": "车门打开时，正紧紧贴着另一扇门，把泽完全遮住，从车外和他要进的那栋楼外都看不见他。",
+      "problem": "后半句两个分句说的是同一件事（遮住／看不见他），而且“从车外和他要进的那栋楼外”两个“外”叠在一起，要拆一遍才知道是哪两个方向。原文是一次性的镜头交代，中文该一次说清。",
+      "suggestion": "“车门打开时，正紧紧贴着另一扇门，外面的人——无论从车外还是从那栋楼外——都看不到泽。”"
+    },
+    {
+      "id": "c12-s0177",
+      "severity": "low",
+      "type": "生硬",
+      "source": "And then he saw it. ... clockwise if it had one hex filled, counterclockwise if it had two hexes filled.",
+      "zh": "泽把每一步都放得更慢，一步步看过去。然后他看见了。每个步骤里，棋盘都会划分成三角形，六边形在各自所在的三角形内部旋转——三角形里有一个六边形被填，就顺时针转；有两个被填，就逆时针转。",
+      "problem": "“然后他看见了。”缺宾语：看见了什么？英文 And then he saw it 的 it 可以悬着，中文单句成段就像话没说完，得把看破的东西点出来；“三角形里有一个六边形被填”也是“有……被填”的欧化被动，中文说“填了一个六边形”就够了。",
+      "suggestion": "泽把每一步都放得更慢，一步步看过去。然后他看破了。每个步骤里，棋盘都会划分成三角形，六边形在各自所在的三角形内部旋转——三角形里填了一个六边形，就顺时针转；填了两个，就逆时针转。"
+    },
+    {
+      "id": "c12-s0161",
+      "severity": "low",
+      "type": "本土化",
+      "source": "His next move was to deliberately draw different kinds of walls, fly gliders at them, and see what sticks.",
+      "zh": "他的下一步，是故意画出各种不同形状的墙，把滑翔机朝它们放过去，看哪种能奏效。",
+      "problem": "“故意”在中文里带贬义（存心、有意为之），而原文 deliberately 只是“特地、刻意”；泽是在做实验，不是在使坏，读着会偏味。",
+      "suggestion": "“接下来，他刻意画出各种形状的墙，再把滑翔机朝它们放过去，看哪种能奏效。”"
+    },
+    {
+      "id": "c12-s0093",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Tomorrow, we will have some tourist excursions around Sadzu Du, and in the evening you will get a chance to rest.",
+      "zh": "明天，我们会安排几趟萨祖都的游览，晚上你们可以休息。",
+      "problem": "“趟”量的是往返的行动（跑一趟、去一趟），配“游览”不搭；中文说“安排几处萨祖都的游览”或干脆说“带你们游览萨祖都的几个地方”都更顺。",
+      "suggestion": "“明天，我们会带你们游览萨祖都的几个地方，晚上你们可以休息。”"
+    },
+    {
+      "id": "c12-s0195",
+      "severity": "low",
+      "type": "生硬",
+      "source": "One of his gliders had successfully created a symbol, and revealed a part of the board that showed what the rock formations look like.",
+      "zh": "他的一架滑翔机成功造出了一枚符记，也揭开了一片棋盘，让人能看出石阵长什么样。",
+      "problem": "“揭开了一片棋盘”搭配不成立：棋盘是固定的格子，被揭开的是蒙在上面的视野；中文说“探开／照亮了一片棋盘”才准确，也才接得上后半句“让人能看出石阵长什么样”。",
+      "suggestion": "“他的一架滑翔机成功造出了一枚符记，也探开了一片棋盘，让人看清了石阵的样子。”"
+    },
+    {
+      "id": "c12-s0079",
+      "severity": "low",
+      "type": "本土化",
+      "source": "\"Ah, I'm from Redshire. My name gave me away, didn't it?\"",
+      "zh": "“啊，我从红郡来。名字把我出卖了吧？”",
+      "problem": "“出卖”在中文里是背叛的意思，读者会先想到“谁把我卖了”；原文 gave me away 是“露了底”。两人刚认识，这句是自嘲调侃，中文的自嘲说法是“露馅”。",
+      "suggestion": "“啊，我是红郡人。名字就露馅了吧？”"
+    },
+    {
+      "id": "c12-s0032",
+      "severity": "low",
+      "type": "生硬",
+      "source": "the buildings on the right side stopped completely, and Zei could see a park. Behind the park, Zei could see several mountain pyramids, each about half as tall as the mountain pyramid south of Pafogai Du.",
+      "zh": "有一瞬间，右侧的建筑完全断开，泽看见一座公园。公园后面立着好几座山体金字塔，每一座大约只有帕佛盖都南边那座山体金字塔的一半高。",
+      "problem": "“建筑完全断开”里“断开”是线、电路、连接一类的词，用在成排的房子上不正常，中文说“忽然断了”；“泽看见一座公园。公园后面……”“山体金字塔”连着重复两次，同一个长名词隔几个字又出现，读着拖。",
+      "suggestion": "“有一瞬间，右侧的建筑忽然断了，泽看见一座公园。公园后面立着好几座山体金字塔，每一座大约只有帕佛盖都南边那座的一半高。”"
+    },
+    {
+      "id": "c12-s0023",
+      "severity": "low",
+      "type": "生硬",
+      "source": "There's another contestant arriving here on a train in half a longhour.",
+      "zh": "“抱歉，泽，我只能送你到这儿了。半个长时后还有一位选手要坐火车到。路上顺风，好好休息。”",
+      "problem": "“还有一位选手要坐火车到”收在“到”上，中文没有这样的说法（“到”后面缺宾语或补语），听着像没说完；而且“还有一位选手”也不如把“火车”点出来清楚。",
+      "suggestion": "“半个长时后还有一位选手坐火车到这儿。路上顺风，好好休息。”"
+    },
+    {
+      "id": "c12-s0112",
+      "severity": "low",
+      "type": "生硬",
+      "source": "and got to see a bunch of Sadzu Du the next day.",
+      "zh": "第二天又把萨祖都逛了不少地方。",
+      "problem": "“把萨祖都逛了不少地方”里“把”后面跟的是逛的范围，动词后又带一个数量宾语（不少地方），中文更常直接说“又在萨祖都逛了不少地方”，读起来不用绕那一下。",
+      "suggestion": "“一切顺利。三天前在博物馆看了个特别有意思的展览，第二天又在萨祖都逛了不少地方。还遇见了一个红郡来的人。”"
+    }
+  ]
+}

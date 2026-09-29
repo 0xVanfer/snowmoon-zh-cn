@@ -1,0 +1,1125 @@
+{
+ "chapter": 16,
+ "segments": [
+  {
+   "id": "c16-s0001",
+   "role": "title",
+   "text": "Chapter 16",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0002",
+   "role": "place",
+   "text": "Meldan, Veridia",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0003",
+   "role": "date",
+   "text": "3724 Firemoon 25",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0004",
+   "role": "p",
+   "text": "Gladias pulled open the barrier on the booth, walked in, and slid the barrier shut behind him. He sat down angrily on the bench across from Delwart.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0005",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You have a lot of explaining to do.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0006",
+   "role": "p",
+   "text": "Delwart looked downwards toward the table, with a sorry expression on his face.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0007",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Look, Gladias, you were right, I was wrong. I let my hate for all this interventionism in Veridia's government and culture blind me to the fact that there are things government has always been for, and defense is one of them.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0008",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"That's not why I'm angry.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0009",
+   "role": "p",
+   "text": "Delwart looked up, startled.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0010",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I mean, it's one of the reasons, but far from the primary.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0011",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"What is the primary then?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0012",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What the hell is going on? Who are you? Who are you working with?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0013",
+   "role": "p",
+   "text": "Delwart sighed. For a few moments he was silent. Then he leaned forward.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0014",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Fine, I will explain.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0015",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"I'm not just one ideologue who is doing this alone. I, and a group of others - I don't know them - are working for Silverchat.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0016",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"We were frustrated by these rubrics that were increasing our taxes just because a bunch of people were putting crude jokes on our platform. We wanted Silverchat to be a refuge from the blandness that's taking over so much of the rest of Veridia. We wanted to be a place where Hydrafill and even Dreadknot could be welcome.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0017",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"And so we decided to take matters into our own hands. Make an organized effort to try to pull the politics in a better direction. Appeal to the Keepers directly.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0018",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"And now I realize just how naive this all was. If we manage to ward off blandness, but at the price of the Arctic Empire being able to take over and inflict things far worse - first on Redshire and later on the whole world - then this whole thing was not just not worth it - it was ruinous.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0019",
+   "role": "p",
+   "text": "Gladias sighed. He was still extremely angry at Delwart, but the anger was now mixed with a dose of sympathy.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0020",
+   "role": "p",
+   "text": "A robot slid up to them, carrying a salad, a rectangular nutrition bar and water for the two of them to eat and drink.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0021",
+   "role": "p",
+   "text": "Gladias and Delwart both first picked up their plates of food, and put them down on the table. Gladias then picked up his cup and drank about half the water in one gulp. Delwart did the same.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0022",
+   "role": "p",
+   "text": "They began eating, silently. After a few minutes, the conversation resumed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0023",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What do you want me to do now?\"</c>, Gladias asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0024",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Obviously don't make the rubric exclude military now. You could even increase the tax brackets, though you doing that would only help a tiny bit - the most important levers there are on the Graph Funding side.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0025",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"But I also have another idea for what you could do.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0026",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What is it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0027",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"I think you should go to Dzego.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0028",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Me? Dzego? Why?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0029",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"They clearly have this whole Arctic question figured out much better than we do in Veridia. Study them. Learn from them. See what you can bring back to Veridia.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0030",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"And why should I listen to you when you've been so untrustworthy?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0031",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Well definitely don't just listen to me. Ask your closest friends and advisors. See what they think.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0032",
+   "role": "p",
+   "text": "Gladias walked along the same path through Kalimar that he would usually pass through. As usual, it was covered with trees and surrounded by stone houses on both sides. But on that day, it was unusually hot, and Gladias sweated slightly as some of the sunlight managed to shine through the tree cover and warm up his entire body inside of his privacy robe.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0033",
+   "role": "p",
+   "text": "He passed by one of the houses that he remembered for selling traditional Veridian food products. This time, an additional note was hastily taped on to the poster, advertising packages that offered tasty, nutritionally complete and long-lasting preserved food that was sufficient for thirty days of survival.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0034",
+   "role": "p",
+   "text": "He tapped his watch, and called Mov.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0035",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So I had my chat with Delwart.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0036",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"How did it go?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0037",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You're right. There was an organized effort. Turns out - at least he now says - he's been working for Silverchat this whole time.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0038",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Silverchat? And here I was expecting some more evil company, like Bluewhale.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0039",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"I guess it makes sense, probably that conversation I overheard a month and a half ago was with a Silverchat guy.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0040",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So he wants me to go to Dzego now.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0041",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Dzego? What for?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0042",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"He says we in Veridia have a lot to learn from them. Do you think that's true?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0043",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"You know, one of my friends mentioned something like that to me the day Redshire got taken over. He thought <e>I</e> should go, and see how their secret societies work or something.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0044",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Well you know, Seila has a friend from there now, and the last thing she told me was that he's been climbing up the Minpentai ranks really well, gotten into the nationals. So if I go, maybe I will actually be able to learn a few things.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0045",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Yeah I can certainly see the appeal. Veridians really need to know the outside world better. Especially the people in the institutions - the Order, the Courts, the parliament, all of them.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0046",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Give me a few days to think through this.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0047",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Well, the votes on the rubrics are in eight, twelve and sixteen days, so you have that time to think through it no matter what happens.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0048",
+   "role": "p",
+   "text": "Gladias paused for a moment.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0049",
+   "role": "p",
+   "text": "At that moment, he was walking past the restaurant near his home where he would often stop for food and drinks. Through the window, he could see Febric eating.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0050",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'll think about it too\"</c>, he finally said, and ended the call.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0051",
+   "role": "p",
+   "text": "Gladias entered the restaurant, and almost immediately took off the face cover from his privacy robe, and partially unzipped the front. He could not be that private while eating anyway, and he had been sweating in the hot sun. He sat down beside Febric.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0052",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Oh uncle Glad, happy to see you here again!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0053",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"And I'm happy to see you!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0054",
+   "role": "p",
+   "text": "Gladias noticed that Febric had been watching the screen. A game of Helisport was actively broadcasting.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0055",
+   "role": "p",
+   "text": "Gladias let himself watch the action for a minute. The screen was following the lead player wearing a yellow shirt chasing a redball.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0056",
+   "role": "p",
+   "text": "Suddenly, out of nowhere, a player from the other team, wearing a purple shirt, whacked him off to the side. The player in the yellow shirt tumbled, and then automatically regained his bearings about five meters further down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0057",
+   "role": "p",
+   "text": "The screen shifted view to the player wearing the purple shirt. He caught a blueball in midair. Two other players wearing yellow shirts started flying towards him. Before they could get to him, he threw the blueball toward a teammate. That teammate successfully caught it, and began flying forward.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0058",
+   "role": "p",
+   "text": "The screen shifted view toward ten yellow standing pins arranged in a triangle on a circular board mounted on a pole high above the ground. The player wearing the purple shirt holding the blueball came into view. A player wearing a yellow shirt zoomed into position between him and the pins.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0059",
+   "role": "p",
+   "text": "The player wearing the purple shirt suddenly threw the blueball up high into the air, just as a different player wearing a yellow shirt crashed into him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0060",
+   "role": "p",
+   "text": "The blueball passed about five meters over the player wearing the yellow shirt protecting the pins, and then landed on the board. It knocked three of the pins down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0061",
+   "role": "p",
+   "text": "A scoreboard onscreen adjusted.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0062",
+   "role": "th",
+   "text": "Yellow",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0063",
+   "role": "th",
+   "text": "Purple",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0064",
+   "role": "cell",
+   "text": "Redball captures",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0065",
+   "role": "cell",
+   "text": "6",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0066",
+   "role": "cell",
+   "text": "11",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0067",
+   "role": "cell",
+   "text": "Greenball player hits",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0068",
+   "role": "cell",
+   "text": "9",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0069",
+   "role": "cell",
+   "text": "7",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0070",
+   "role": "cell",
+   "text": "Blueball pin knockdowns",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0071",
+   "role": "cell",
+   "text": "31",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0072",
+   "role": "cell",
+   "text": "23",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0073",
+   "role": "cell",
+   "text": "Combined score",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0074",
+   "role": "cell",
+   "text": "1674",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0075",
+   "role": "cell",
+   "text": "1771",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0076",
+   "role": "p",
+   "text": "Purple's blueball score had just increased from 20 to 23, and their combined score from 1540 to 1771 - enough to push them ahead of their opponents.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0077",
+   "role": "p",
+   "text": "Suddenly, while the player who had just taken down those pins was celebrating, a greenball hit him in the back and splatted its paint over him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0078",
+   "role": "p",
+   "text": "The score adjusted again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0079",
+   "role": "th",
+   "text": "Yellow",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0080",
+   "role": "th",
+   "text": "Purple",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0081",
+   "role": "cell",
+   "text": "Redball captures",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0082",
+   "role": "cell",
+   "text": "6",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0083",
+   "role": "cell",
+   "text": "11",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0084",
+   "role": "cell",
+   "text": "Greenball player hits",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0085",
+   "role": "cell",
+   "text": "10",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0086",
+   "role": "cell",
+   "text": "7",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0087",
+   "role": "cell",
+   "text": "Blueball pin knockdowns",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0088",
+   "role": "cell",
+   "text": "31",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0089",
+   "role": "cell",
+   "text": "23",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0090",
+   "role": "cell",
+   "text": "Combined score",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0091",
+   "role": "cell",
+   "text": "1860",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0092",
+   "role": "cell",
+   "text": "1771",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0093",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"You have to admit, the scoring system is really good now\"</c>, Febric exclaimed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0094",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"I remember when I was much younger, they kept adjusting the ratios between what a redball gives you, versus a pin knockdown or a player hit. And they just couldn't get out of having a situation where the rational thing is to just focus all your attention on one.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0095",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Even when they got it right, within a year the strategies adjusted, and it became lopsided again.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0096",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"I think making the score multiplicative was the only way out. That way you pretty much have to care about all three of the point types.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0097",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Or try really hard to make sure your opponent can't get any of one type\"</c>, Gladias interjected.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0098",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Ah yeah that was the first thing a few people tried\"</c>, Febric replied. <c st=\"color:oklch(0.7 0.15 80)\">\"Holding onto redballs for more than thirty ticks had already been banned for ages, that had been a good cheat for whichever side was worse at redballs even back when the scores were additive. But what one team did try, is knock down a bunch of pins very early in the game, and then use most of their players to protect their pins for the rest of the game.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0099",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Turns out it doesn't actually work. People on copters can only pack together so tightly, no matter what you do, the other team always manages to sneak a few blueballs through. And then if you do pack tightly in one place around the pins, you're a sitting duck for the greenballs.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0100",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Are you thinking of playing?\"</c>, Gladias asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0101",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"No, but I just had a bunch of conversations with Zven about this. The math is almost as fun as the actual game!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0102",
+   "role": "p",
+   "text": "Gladias and Febric both turned their attention to the food.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0103",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"How's Lily doing by the way?\"</c>, Gladias asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0104",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"She actually started getting a little better over the last couple of months. She mentioned to me a few days ago that she got seventy on her latest civics test. She seems happier. And she's even more engaged playing that game on her hand device.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0105",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Do you know what game?\"</c>, Gladias asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0106",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"She doesn't show me either.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0107",
+   "role": "p",
+   "text": "Gladias and Febric both returned to eating. A few minutes later, they were both finished.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0108",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Did you remember to take out your zipcoins this time?\"</c>, Febric asked playfully.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0109",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Hey, I may make lots of mistakes, but I don't make the same mistake twice\"</c>, Gladias snapped back.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0110",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"By the way, Febric, thanks for reminding me - I need to test my recovery procedure for my coins\"</c>, he whispered through his neck band.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0111",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Want me to help you sign a test operation?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0112",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Sure! What do you want the test to be?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0113",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"I dunno, buy a Hydrafill bottle?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0114",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Buy a Hydrafill bottle? Straight out of a life savings wallet?\"</c>, Gladias asked incredulously. <c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Those ads really have been getting to you too, haven't they?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0115",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Hey, you're the one who asked me!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0116",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Okay fine ... let me start the operation.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0117",
+   "role": "p",
+   "text": "Gladias began whispering into his neck band. Out of the corner of his eye, he saw Febric run off somewhere, though he was too busy to wonder where.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0118",
+   "role": "p",
+   "text": "A few ticks later, Febric's watch buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0119",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0120",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0121",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0122",
+   "role": "center",
+   "text": "Gladias",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0123",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0124",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">[Wallet 0x8f62... social recovery mode transaction request]</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0125",
+   "role": "cell",
+   "text": "65129",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0126",
+   "role": "p",
+   "text": "Febric opened up his hand device, and a more detailed view of the transaction appeared. He asked Emerald to search for the receiving address online. A few ticks later, Emerald replied with a confirmation that it was, in fact, the Hydrafill purchase address. He then checked the amount - 5.5 zipcoins. It seemed reasonable for a water bottle plus shipping, though the bulk of the cost was definitely the shipping. He checked the transaction data field. Yep, looked like an encoding of Gladias's home address, in the correct format according to the standard online shopping protocol.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0127",
+   "role": "p",
+   "text": "In the cryptographic network that processed these transactions, all of this data was, of course, encrypted.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0128",
+   "role": "p",
+   "text": "Febric clicked \"Confirm\".",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0129",
+   "role": "p",
+   "text": "Gladias's watch immediately buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0130",
+   "role": "p",
+   "text": "Less than a minute later, Gladias's watch buzzed again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0131",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0132",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0133",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0134",
+   "role": "center",
+   "text": "Seila",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0135",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0136",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">Security question: what was the most unusual thing I did on the evening the kids came back from Vil and Daia's?</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0137",
+   "role": "cell",
+   "text": "73105",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0138",
+   "role": "p",
+   "text": "Gladias immediately whispered into his neck band a reply.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0139",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0140",
+   "role": "th",
+   "text": "To",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0141",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">You unplugged the screen in the restaurant when it was showing Lord Ephelion's speech.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0142",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0143",
+   "role": "center",
+   "text": "Seila",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0144",
+   "role": "button",
+   "text": "Send",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0145",
+   "role": "p",
+   "text": "A few moments later, Gladias's watch buzzed again. Three signatures done, including his own. One to go. Either Mov or Pelow - or, of course, if he really had to, himself running to the vault and picking up his second key.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0146",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"I'm obviously not gonna ask who that was, or who else you need to confirm it\"</c>, Febric added. <c st=\"color:oklch(0.7 0.15 80)\">\"But good luck!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0147",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Seila, I'm home!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0148",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Glad!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0149",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So I have interesting news.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0150",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"What is it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0151",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"There's some chance I'll be going to Dzego soon.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0152",
+   "role": "p",
+   "text": "Seila stared.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0153",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Why?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0154",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I talked to Mov about this. He thinks that Veridians, especially Keepers, the Order, the institutions generally, have a lot to learn from what's going on over there.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0155",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I'm not sure about this ... it's a difficult time. You're not really the best person to make good use of a Dzego trip. And the Keepers would benefit from having a strong hand guide them these next few months.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0156",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Arctic stuff is really much more of a military and parliament responsibility, maybe Graph Funding too. And ... maybe I can make good use of a trip if you introduce me to Zei?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0157",
+   "role": "p",
+   "text": "Seila retreated into her thoughts for a few moments.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0158",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"If Mov thinks it's a good idea, then fine. But please do your homework first. Find someone, anyone, in Graph Funding or in parliament to talk to, so you get some idea of whether this trip will be useful, and if you do go, how to make it as useful as possible.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0159",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"But really, think hard about this.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c16-s0160",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"If you go, then yes, of course I'll introduce you to Zei. And Bai too.\"</c>",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

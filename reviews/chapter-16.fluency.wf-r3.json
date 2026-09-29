@@ -1,0 +1,179 @@
+{
+ "chapter": 16,
+ "lens": "fluency",
+ "reviewer": "wf-r3",
+ "overall": "整体可读：餐馆谈判、翔球转播、钱包社交恢复三条线都跟得上，口语化的地方（“窝火”“活靶子”“行吧”）落地得不错。但翻译腔密度偏高，集中在长定语、代词复制、以及逐字搬运英文句法的地方，几处搭配在中文里直接不成立。最刺眼的是对话提示语前的逗号在这一章大面积缺失（5 处），引语和“某某说”黏成一句；其次是德尔瓦特、塞拉两段长台词里成串的英文结构。改动量不大，属于“能读但不顺”这一层。",
+ "issues": [
+  {
+   "id": "c16-s0015",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "I'm not just one ideologue who is doing this alone. I, and a group of others - I don't know them - are working for Silverchat.",
+   "zh": "“干这件事的不只是我一个空想家，我不是单打独斗。我和另外一群人——我并不认识他们——在替银聊做事。”",
+   "problem": "前两句把同一层意思说了两遍（“不只是我一个空想家”＋“我不是单打独斗”），读起来像卡带；英文只有 not just one ideologue who is doing this alone 一处表述，第二句是译者为补足语气加出来的。",
+   "suggestion": "“干这事的空想家不止我一个。我和另外一群人——我并不认识他们——在替银聊做事。”"
+  },
+  {
+   "id": "c16-s0016",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "We wanted Silverchat to be a refuge from the blandness that's taking over so much of the rest of Veridia. We wanted to be a place where Hydrafill and even Dreadknot could be welcome.",
+   "zh": "我们想让银聊成为一处避难所，躲开正在吞掉维里迪亚大部分地方的乏味。我们想成为一个连海德菲尔、甚至恐结都能受欢迎的地方。",
+   "problem": "“我们（人）想成为一个……地方”主谓不搭，中文读者会愣一下才反应过来主语其实是“银聊”；另外“乏味”在中文里是形容词，上一句“吞掉……的乏味”当名词用也硌人。",
+   "suggestion": "我们想让银聊成为一处避难所，躲开那股正在吞掉维里迪亚大部分地方的平庸乏味。我们想让它成为一个连海德菲尔、甚至恐结都能受到欢迎的地方。"
+  },
+  {
+   "id": "c16-s0032",
+   "severity": "low",
+   "type": "生硬",
+   "source": "some of the sunlight managed to shine through the tree cover and warm up his entire body inside of his privacy robe",
+   "zh": "阳光透过树冠漏下几缕，把他连人带隐私袍焐得发暖，他微微出了汗。",
+   "problem": "“焐”指拿热的东西贴着凉的物体使其变暖（焐被窝、焐手），用在阳光隔空照晒上不贴切；“发暖”也偏方言，和后句“出了汗”之间还缺一层递进。",
+   "suggestion": "阳光透过树冠漏下几缕，把他连人带隐私袍都晒得暖烘烘的，他也微微出了汗。"
+  },
+  {
+   "id": "c16-s0044",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "the last thing she told me was that he's been climbing up the Minpentai ranks really well, gotten into the nationals",
+   "zh": "她最近跟我说的是，那人在民本棋的排名里爬得特别顺，已经打进全国赛了。",
+   "problem": "“她最近跟我说的是”是 the last thing she told me was 的逐字搬运，句子收在“的是”上很拖；“在排名里爬得顺”搭配不成立——排名只能升、蹿、往上走，不能“爬得顺”。",
+   "suggestion": "她上次跟我说，那人在民本棋排名里升得飞快，已经打进全国赛了。"
+  },
+  {
+   "id": "c16-s0049",
+   "severity": "low",
+   "type": "生硬",
+   "source": "At that moment, he was walking past the restaurant near his home where he would often stop for food and drinks.",
+   "zh": "这时他正走过离家不远的那家餐馆，他平时常在这儿吃点东西、喝两杯。",
+   "problem": "两个分句连着两个“他”，是英文关系从句拆句后留下的代词复制；中文要么把后半句并回定语，要么用破折号断开，读起来才不像两句话硬拼。",
+   "suggestion": "这时，他正走过离家不远的那家餐馆——他平时常在这儿吃点东西、喝两杯。"
+  },
+  {
+   "id": "c16-s0050",
+   "severity": "medium",
+   "type": "标点体例",
+   "source": "\"I'll think about it too\"</c>, he finally said / \"You have to admit, the scoring system is really good now\"</c>, Febric exclaimed. （本章同类共 5 处：s0050、s0093、s0097、s0109、s0110）",
+   "zh": "“我也会想想”</c>他终于说出口，然后挂断了通话。／“你得承认，现在的计分系统是真好”</c>费布里克大声说。",
+   "problem": "陈述语气的引语后面直接接提示语，中间没有任何标点，引语和“某某说”黏成一句，朗读时没有换气点；第 14 章同类句子是保留逗号的（“……不用，”泽答道），这一章 5 处全部漏掉。",
+   "suggestion": "陈述引语收在引号内加逗号，再写提示语：“我也会想想，”他终于说出口，然后挂断了通话。“你得承认，现在的计分系统是真好，”费布里克大声说。s0097、s0109、s0110 同样在引号内补“，”（s0110 为“……恢复流程，”他对着颈带低声说）。"
+  },
+  {
+   "id": "c16-s0055",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Gladias let himself watch the action for a minute. The screen was following the lead player wearing a yellow shirt chasing a redball.",
+   "zh": "格拉迪亚斯放任自己看了一分钟。镜头正跟着领跑的那名黄衣球员，他在追一颗红球。",
+   "problem": "“放任自己”在中文里带纵容、听之任之的意味，此处只是“由着自己／索性看了一会儿”；“领跑”是赛跑用词，球类转播里说“领先的球员”更自然。",
+   "suggestion": "格拉迪亚斯由着自己看了一分钟比赛。镜头正跟着领先的那名黄衣球员，他正在追一颗红球。"
+  },
+  {
+   "id": "c16-s0056",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "a player from the other team, wearing a purple shirt, whacked him off to the side",
+   "zh": "突然，不知从哪儿冒出一名紫衣球员，一下把他撞到旁边。",
+   "problem": "“撞到旁边”不成话，中文里方向补语要用“撞到一边／撞开去”；“旁边”需要参照物，读起来像句子被截断了。",
+   "suggestion": "突然，不知从哪儿冒出一名紫衣球员，一下把他撞到一边。"
+  },
+  {
+   "id": "c16-s0077",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Suddenly, while the player who had just taken down those pins was celebrating, a greenball hit him in the back and splatted its paint over him.",
+   "zh": "突然，刚击倒那几个球瓶的球员还在庆祝，一颗绿球砸在他背上，颜料在他身上炸开。",
+   "problem": "前半句缺“就在……时”的关联成分，两个小句并排摆着，主次关系丢了，读起来像“球员在庆祝”和“绿球砸中他”是两件事。",
+   "suggestion": "突然，就在那名刚击倒球瓶的球员还在庆祝时，一颗绿球砸在他后背上，颜料在他身上炸开。"
+  },
+  {
+   "id": "c16-s0094",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "I remember when I was much younger, they kept adjusting the ratios between what a redball gives you, versus a pin knockdown or a player hit.",
+   "zh": "我记得我小得多的时候，他们一直在调红球给的分、击倒球瓶给的分、击中球员给的分之间的比例。",
+   "problem": "三个“给的分”叠成一串长定语，必须回读才能理清在说什么；且“我小得多的时候”需有比较对象才成立，单独说很别扭。中文顺的说法是把三项并列、比例收尾。",
+   "suggestion": "我记得我比现在小得多的时候，他们一直在调红球、击倒球瓶、击中球员三种得分的比例。"
+  },
+  {
+   "id": "c16-s0095",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Even when they got it right, within a year the strategies adjusted, and it became lopsided again.",
+   "zh": "“就算有一年调对了，不到一年，打法又跟着变，局面再次失衡。”",
+   "problem": "原文没有“某一年”的意思，“有一年”是加出来的，结果和紧接着的“不到一年”撞在一起，读者会以为在说同一年的前后矛盾（“有一年调对了，不到一年又变了”）。",
+   "suggestion": "“就算调对了，不到一年，打法又跟着变，局面再次失衡。”"
+  },
+  {
+   "id": "c16-s0110",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "\"By the way, Febric, thanks for reminding me - I need to test my recovery procedure for my coins\"</c>, he whispered through his neck band.",
+   "zh": "“对了，费布里克，谢谢你提醒我——我得测一下我那笔币的恢复流程”</c>他用颈带低声说。",
+   "problem": "“笔”是修饰钱款、账目的量词，“我那笔币”在中文里读不通（容易被读成“那笔”＋不成词的“币”）；另外“他用颈带低声说”是工具状语的硬搬，本章 s0117 用的“对着颈带低声说”才是中文的说法。",
+   "suggestion": "“对了，费布里克，谢谢你提醒我——我得试一下我那笔钱的恢复流程，”他对着颈带低声说。"
+  },
+  {
+   "id": "c16-s0114",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Buy a Hydrafill bottle? Straight out of a life savings wallet?",
+   "zh": "“买一瓶海德菲尔？直接动毕生积蓄钱包？”",
+   "problem": "“动……钱包”搭配生硬（中文说“动老本／动积蓄”），再叠上“毕生积蓄钱包”这个长复合词，整句读着别扭，难以置信的语气也出不来。",
+   "suggestion": "“买一瓶海德菲尔？直接从毕生积蓄的钱包里掏？”"
+  },
+  {
+   "id": "c16-s0124",
+   "severity": "low",
+   "type": "本土化",
+   "source": "[Wallet 0x8f62... social recovery mode transaction request]",
+   "zh": "［钱包 0x8f62... 社会恢复模式交易请求］",
+   "problem": "中文钱包／加密货币语境通行说法是“社交恢复”（术语表 social recovery 条目也作“社交恢复”），“社会恢复”会让读者以为是“社会层面上的恢复”，在面板里尤其出戏。",
+   "suggestion": "［钱包 0x8f62... 社交恢复模式交易请求］"
+  },
+  {
+   "id": "c16-s0146",
+   "severity": "low",
+   "type": "生硬",
+   "source": "I'm obviously not gonna ask who that was, or who else you need to confirm it",
+   "zh": "“我显然不会问刚才是谁，也不会问你还需要谁确认”",
+   "problem": "obviously 在这里是“当然、这还用说”，中文说“我显然不会问”变成替别人下判断，不合口吻；费布里克是知情不追问，语气应是“我当然是不会问的”。",
+   "suggestion": "“我当然不会问刚才是谁，也不会问你还得找谁确认，”费布里克补了一句。"
+  },
+  {
+   "id": "c16-s0154",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "He thinks that Veridians, especially Keepers, the Order, the institutions generally, have a lot to learn from what's going on over there.",
+   "zh": "他觉得维里迪亚人，尤其是掌则人、掌舵会，整个体制里的人，都能从那边正在发生的事里学到很多。",
+   "problem": "并列项层次混乱：前半是“掌则人（人）”“掌舵会（机构）”，后面又接“整个体制里的人”，没有用“以及／和”收拢，读起来像漏了词；末句“从那边正在发生的事里学到很多”也是 from what's going on over there 的直搬。",
+   "suggestion": "他觉得维里迪亚人——尤其是掌则人、掌舵会以及整个体制里的人——都能从那边学到很多东西。"
+  },
+  {
+   "id": "c16-s0155",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "I'm not sure about this ... it's a difficult time. You're not really the best person to make good use of a Dzego trip. And the Keepers would benefit from having a strong hand guide them these next few months.",
+   "zh": "“这事我说不好……现在时候不好。你并不是最能把这趟泽国之行用好的人。而且接下来这几个月，掌则人正需要有一只有力的手来引路。”",
+   "problem": "三处都照着英文结构走：“时候不好”不成搭配（应为“时机不好”）；“你并不是最能把这趟泽国之行用好的人”是长定语套“用好”的硬译，中文得绕两遍才懂；“有一只有力的手来引路”把 a strong hand 直译成一只手，“手引路”在中文里很出戏。",
+   "suggestion": "“这事我说不好……眼下时机不好。这趟泽国之行，你来跑未必能用得最值。而且接下来这几个月，掌则人正需要有强手替他们引路。”"
+  },
+  {
+   "id": "c16-s0156",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "maybe I can make good use of a trip if you introduce me to Zei?",
+   "zh": "而且……如果你把我引见给泽，这趟行程说不定就能用得很值？",
+   "problem": "中文把条件句和结果句倒置后，又用了“行程……用得很值”这种把行程当工具的搭配，仍是从英文句式翻个面搬过来的；口语里更顺的说法是“这趟就不算白跑”。",
+   "suggestion": "而且……要是你能把我引见给泽，我这趟说不定就不算白跑？"
+  },
+  {
+   "id": "c16-s0160",
+   "severity": "low",
+   "type": "生硬",
+   "source": "If you go, then yes, of course I'll introduce you to Zei. And Bai too.",
+   "zh": "“你要真去，当然，我会把你引见给泽。还有白。”",
+   "problem": "“当然”被塞在主语和谓语之间，读起来像插入语把句子拦腰打断；中文习惯说“我当然会把你引见给……”。",
+   "suggestion": "“你要真去，我当然会把你引见给泽，还有白。”"
+  }
+ ]
+}

@@ -1,0 +1,1370 @@
+{
+ "chapter": 19,
+ "segments": [
+  {
+   "id": "c19-s0001",
+   "role": "title",
+   "text": "Chapter 19",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0002",
+   "role": "place",
+   "text": "Pafogai Du, Dzego",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0003",
+   "role": "date",
+   "text": "3724 Grapetime 15",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0004",
+   "role": "p",
+   "text": "Gladias and Zei were sitting at a table in a cafeteria, deep inside the mountain pryamid. Attached to one of the walls, they could see two large screens, doing the best job that they could to pretend to be windows showing a view of Pafogai Du as though the cafeteria was sitting on top of the mountain, rather than thirty meters below ground.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0005",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So who is this that you wanted me to meet again?\"</c>, Gladias asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0006",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Den. He is a High Council member of the Kungaupei. You wanted to better understand Dzego's institutions, he helps run the one that's already been protecting us from the Arctic shadow campaign for the last decade. You want Veridia to learn from him, not from our official government.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0007",
+   "role": "p",
+   "text": "At that point, they heard a faint buzz that began to rapidly get louder. Almost immediately, a few small drones, similar to those that would check Zei for cheating equipment in the Minpentai championships, flew into view.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0008",
+   "role": "p",
+   "text": "Gladias's watch buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0009",
+   "role": "cell",
+   "text": "Air",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0010",
+   "role": "cell",
+   "text": "CO<sub>2</sub>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0011",
+   "role": "cell",
+   "text": "994",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0012",
+   "role": "cell",
+   "text": "PM2.5",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0013",
+   "role": "cell",
+   "text": "30.1",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0014",
+   "role": "cell",
+   "text": "Devices",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0015",
+   "role": "cell",
+   "text": "Attested ✓",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0016",
+   "role": "cell",
+   "text": "21",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0017",
+   "role": "cell",
+   "text": "Unknown, increased risk!",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0018",
+   "role": "cell",
+   "text": "4",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0019",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"What's going on?\"</c>, Zei asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0020",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Ah, I think my watch is detecting those drones as a threat. It's been doing this for many days now, I'm assuming it's just not been updated yet.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0021",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Ah, let me check mine\"</c>, Zei replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0022",
+   "role": "p",
+   "text": "Zei took out his watch.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0023",
+   "role": "cell",
+   "text": "ten min",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0024",
+   "role": "cell",
+   "text": "cau tie zen ✓",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0025",
+   "role": "cell",
+   "text": "25",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0026",
+   "role": "cell",
+   "text": "sen hu ?",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0027",
+   "role": "cell",
+   "text": "0",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0028",
+   "role": "p",
+   "text": "He clicked on the green, and scrolled through.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0029",
+   "role": "cell",
+   "text": "gi dai",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0030",
+   "role": "cell",
+   "text": "fen jan ten lai",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0031",
+   "role": "cell",
+   "text": "16",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0032",
+   "role": "cell",
+   "text": "mo fan min jan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0033",
+   "role": "cell",
+   "text": "1",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0034",
+   "role": "cell",
+   "text": "mo fan lai",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0035",
+   "role": "cell",
+   "text": "4",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0036",
+   "role": "cell",
+   "text": "kun gau min jan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0037",
+   "role": "cell",
+   "text": "4",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0038",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Err... let me try this\"</c>, Gladias said, staring intently at the watch.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0039",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"'mo fan' is eating room, so something to do with the cafeteria.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0040",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Yep!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0041",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"'min' is machine, 'jan' is person, so I guess the two together mean ... robot?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0042",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Yep!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0043",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"'kun gau' is ... wait, is that connected to the Kungaupei? So these are Kungaupei robots?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0044",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Yes, but what does 'kun gau' mean?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0045",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'll guess security?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0046",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Exactly.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0047",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Security robots. Phew, that wasn't hard at all!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0048",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Just be glad I'm not Fin, he would start taking half a longhour to go through this whole interface and explain the history of each and every word and why they decided to keep it as they were shrinking the vocabulary.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0049",
+   "role": "p",
+   "text": "One of the robots buzzed closer to Gladias, and stopped to hover about half a meter to the right of his ear.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0050",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"But anyway, why have I been detecting so many hostile devices? Is my watch just not up to date on something?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0051",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Ah yeah, it's just every lamp and drone and camera announcing itself; the protocols stepped up a lot these past few days. Your watch just doesn't speak the language yet. Here, let me help you with that.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0052",
+   "role": "p",
+   "text": "Zei then spoke in a softer voice:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0053",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"jo sun fe zin ten lai de cau tie dai\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0054",
+   "role": "p",
+   "text": "About one tick later, his watch buzzed, indicating that the data was received.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0055",
+   "role": "b",
+   "text": "fe cau tie dai <br/> li shu",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0056",
+   "role": "p",
+   "text": "Zei moved his watch beside Gladias's.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0057",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"be\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0058",
+   "role": "p",
+   "text": "The two watches buzzed at the same time, indicating a connection, and a file transferred from one to the other. Gladias pressed a button on his watch to accept.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0059",
+   "role": "p",
+   "text": "He then checked his watch again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0060",
+   "role": "cell",
+   "text": "Air",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0061",
+   "role": "cell",
+   "text": "CO<sub>2</sub>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0062",
+   "role": "cell",
+   "text": "1015",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0063",
+   "role": "cell",
+   "text": "PM2.5",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0064",
+   "role": "cell",
+   "text": "31.2",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0065",
+   "role": "cell",
+   "text": "Devices",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0066",
+   "role": "cell",
+   "text": "Attested ✓",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0067",
+   "role": "cell",
+   "text": "25",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0068",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Looks good!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0069",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Huh, you're measuring CO2 and PM2.5 on there as well?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0070",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Yep! Pretty standard in Veridia. We really care about having a clean environment. We breathe twelve kilograms of air every day, more than what we eat and drink combined. So we're really all under-rating how important the air is.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0071",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Why is CO2 on there? We have air sensors on our watches too, but that's more for smoke detection and poisons.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0072",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"The average concentration of carbon dioxide in our atmosphere is 300 parts per million. Air that we breathe out is 40,000 parts per million. So if the air you're breathing has 700 parts per million, then either there's some other source bringing that extra CO2 in, or, more likely, one percent of the air you're breathing in is air that someone else breathed out. And aerosol particles carrying all kinds of things stick around in the air for a long time - especially airborne viruses.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0073",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Ah, I see, so it's not even about industrial pollution.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0074",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Actually I'm surprised you're not caught up on this, and that the CO2 numbers are so poor here. I would have thought you would care a lot from the defense side, for pandemic prevention.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0075",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Ah well you can ask Den when he comes!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0076",
+   "role": "p",
+   "text": "A robot arrived, bringing a salad and tea for Gladias, and a vegetable and rice dish covered with mushrooms and a tea for Zei.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0077",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Wait, that dish you're eating. I think that's exactly what we call Number Ten in our Dzego food trucks!\"</c>, Gladias exclaimed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0078",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Do you want to try it? I'm happy to take your salad. Tell me how it compares to the version you're used to.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0079",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Sure!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0080",
+   "role": "p",
+   "text": "They switched plates, and began eating.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0081",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Okay, this is much better than what we get in Veridia\"</c>, Gladias excitedly remarked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0082",
+   "role": "p",
+   "text": "They continued eating silently for a few minutes, and after finishing their food switched to drinking tea.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0083",
+   "role": "p",
+   "text": "Zei's watch buzzed again. Zei checked his watch, and his eyes opened wide.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0084",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What is it?\"</c>, Gladias asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0085",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"A message from a courtyard where I ate in Sadzu Du once. This is really weird.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0086",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"It seems to be addressed directly to me.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0087",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"How does the courtyard know you ate there? Payment is done in zipcoins, that's fully anonymized.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0088",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Exactly. The courtyard seems to have sent it to <e>all</e> their guests from the past half year, and it has some kind of tag that my local AI accepted, almost everyone else's filtered out.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0089",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0090",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0091",
+   "role": "center",
+   "text": "sa dzu du de <br/>len su 2415 de <br/>bun kai mo fan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0092",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0093",
+   "role": "cell",
+   "text": "ci sen hu jan pu zau fe 400 lin man <br/> ci cau be fe ti tie <br/> ci tan jan pu ciu cu shan jin fe pa bi <br/> ci sen hu fe bu",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0094",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What does it say?\"</c>, Gladias asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0095",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"It's from the Beautiful Plants food court, on 2415 Len Su street, in Sadzu Du. An anonymous person burned four hundred zipcoins to send this message. The message envelope says that the recipient 'is successful' and is 18 years old. I know nothing else.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0096",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"That's a ... well-calibrated description.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0097",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Indeed. They're trying to make the set wide enough to make sure it contains me, they burned four hundred zipcoins to signal to the courtyard, and to our local AIs, and to us, that the message is worth putting an effort into understanding, but also they made the set narrow enough that they <e>could</e> make this broadcast for only four hundred zipcoins.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0098",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"And narrow enough that not too many people find out about this message.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0099",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Okay, let me open it up...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0100",
+   "role": "p",
+   "text": "Zei stared in shock again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0101",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What is it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0102",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"The message is a series of links to some files, in total over sixty gigabytes. I need to download eighty percent of them apparently.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0103",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Will that take a while to download?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0104",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"About a day wirelessly. But it looks like the digital archive node inside this mountain pyramid already has enough of the files.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0105",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Shall we just walk there?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0106",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Exactly what I'm thinking.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0107",
+   "role": "p",
+   "text": "Zei put his watch against a green circle on the corner of the desk. A moment later it buzzed. He stood up, and Gladias stood up immediately after him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0108",
+   "role": "p",
+   "text": "They exited the cafeteria, and started walking through the network of tunnels.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0109",
+   "role": "p",
+   "text": "A few minutes later, they arrived at a large ornamented door.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0110",
+   "role": "p",
+   "text": "To the left of the door, there was a drawing of a river horse reading a book, with a backdrop of a marsh with green trees and a blue sky in the background. To the right of the door, there was a drawing of a hamster sitting at a computer. Both drawings were a careful balance of cartoon-like playfulness, and a serious aura of mystery.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0111",
+   "role": "p",
+   "text": "At the top of the door, Zei could read a slogan:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0112",
+   "role": "div",
+   "text": "<c st=\"white-space:nowrap\"><f>mu fu bau hai</f></c> <c st=\"white-space:nowrap\"><f>ka</f> <c st=\"white-space:nowrap\"><f>sha liu</f></c></c> <c st=\"white-space:nowrap\"><f>li</f> <c st=\"white-space:nowrap\"><f>dzai hen</f></c></c> <c st=\"white-space:nowrap\"><f>ji</f> <c st=\"white-space:nowrap\"><f>cin jan</f></c></c> <c st=\"white-space:nowrap\"><f>fe</f> <c st=\"white-space:nowrap\"><f>jan</f></c></c>",
+   "locked": true,
+   "note": "conlang"
+  },
+  {
+   "id": "c19-s0113",
+   "role": "div",
+   "text": "<f>ci</f> <c st=\"white-space:nowrap\"><f>mu fu bau fei</f></c> <c st=\"white-space:nowrap\"><f>ka</f> <c st=\"white-space:nowrap\"><f>zen die jia</f></c></c> <c st=\"white-space:nowrap\"><f>cu</f> <c st=\"white-space:nowrap\"><f>can hu</f></c></c> <f>fe</f> <f>lo</f> <c st=\"white-space:nowrap\"><f>kin liu</f></c>",
+   "locked": true,
+   "note": "conlang"
+  },
+  {
+   "id": "c19-s0114",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Outside of a dog, a book is man's best friend\"</c>, Zei translated for Gladias. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Inside of a dog, it's too dark to read.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0115",
+   "role": "p",
+   "text": "Zei and Gladias stepped through the door, and entered.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0116",
+   "role": "p",
+   "text": "To their left, the entire wall was a large shelf, about five meters tall, filled with physical paper books. The upper half of the shelf was set back about a meter, allowing the roof of the lower half to serve as a walkway to look at and take books from the upper half.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0117",
+   "role": "p",
+   "text": "The shelf had openings in two places on the upper floor, leading to two miniature tunnels lined with more books. The shelf also had an opening in one place on the lower floor, also lined with books. All three openings seemed to go inwards for three to six meters; after that, one of the book-lined hallways turned ninety degrees rightward, another ninety degrees leftward, and the third, the one on the lower floor, turned into a T-shaped intersection.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0118",
+   "role": "p",
+   "text": "It looked like the book section was deliberately constructed to be a maze, Gladias thought.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0119",
+   "role": "p",
+   "text": "To their right, there was an open space with tables, and along the wall, there were many computer terminals.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0120",
+   "role": "p",
+   "text": "Near the front of the space with tables, Zei saw a woman wearing a robe. He immediately ran toward her.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0121",
+   "role": "p",
+   "text": "She turned around.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0122",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Welcome to the Pafogai Du grand library. What is it that you seek?\"</c>, she asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0123",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"There are very large files in the archive that I would like to load.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0124",
+   "role": "p",
+   "text": "The librarian laughed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0125",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Glad you're being honest\"</c>, she replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0126",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Most people tell me they're looking to learn some high-minded thing about history or culture or mathematics, and then go and download their movies as soon as I'm not looking.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0127",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Well I'm not downloading a movie, it's more ... a mysterious message.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0128",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Ah, a quest! Even if that ends up just being an excuse, even that is something new and interesting in my day. Well, just follow me.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0129",
+   "role": "p",
+   "text": "Zei and Gladias followed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0130",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"So you got a mysterious message telling you to download some big files? Any idea what kinds?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0131",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Well so far I just saw some hashes...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0132",
+   "role": "p",
+   "text": "They arrived at a computer terminal. The librarian took out a data cable, and put one end of the cable into the terminal.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0133",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Here, put the other end into your hand device.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0134",
+   "role": "p",
+   "text": "Zei followed the librarian's instructions. The download started almost immediately.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0135",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Wow, only eight minutes!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0136",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"So now might you be more open-minded to the things we stodgy librarians say about how physical spaces are still relevant to the pursuit of knowledge after all?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0137",
+   "role": "p",
+   "text": "A robot slid up to them.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0138",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 240)\">\"jie hei ja ma?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0139",
+   "role": "p",
+   "text": "A menu appeared onscreen; there was no food, but a selection of drinks was available.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0140",
+   "role": "p",
+   "text": "Gladias immediately clicked a button asking for a tea. Following along, Zei did the same.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0141",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"This space is beautiful, I am glad you have it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0142",
+   "role": "p",
+   "text": "Gladias stood up and walked over to the shelf with the books. He opened a few one by one. At that moment, not in the mood for straining his brain at reading and interpreting Dzegoban - especially not the earlier-version Dzegoban that the older books were in that he could understand nothing of at all - he focused his attention on the diagrams and pictures.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0143",
+   "role": "p",
+   "text": "Two minutes later, the robot slid up to him, and gave him his tea. The tea was in a sealed cup, from which he could only drink through a straw. Surprised, Gladias turned to Zei, and saw that Zei, sitting at a table far away from any books, already had his tea. The cup that Zei received was open-faced, without much protection against the tea spilling.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0144",
+   "role": "p",
+   "text": "Gladias found a book about Dzego architecture, titled \"zui fia pai dan\". He flipped through it. It contained pictures of many designs of basement rooms, shelters and underground rooms inside of mountain pyramids. The book showed them in roughly chronological order starting shortly after the war against the Arctic Empire a hundred years ago.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0145",
+   "role": "p",
+   "text": "The earlier designs were very practical in construction, with not much thought put to comfort, or even safety against non-human threats. The designs in the middle started resembling ordinary rooms, with the main glaring exception being lack of windows. And finally, the designs near the end of the book were very well-decorated and comfortable, even more so than above-ground construction. About half had imitation windows, pretending to be outside. The other half did not have windows, and instead had plants, well-decorated walls, and other objects that seemed carefully chosen to make the inhabitant not see any space that they might think is supposed to have a window.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0146",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Gladias!\"</c>, Zei shouted. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Come back, it's almost done!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0147",
+   "role": "p",
+   "text": "Gladias turned around, and walked back. Just as he arrived, the last progress bar reached 100%. Another window automatically opened. A script began running. \"Reconstructing data... estimated time remaining 175\", it said onscreen - not in Dzegoban.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0148",
+   "role": "p",
+   "text": "Gladias and Zei sipped their tea, and stared at the timer counting down. The librarian, curious, hovered quietly about two meters behind them.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0149",
+   "role": "p",
+   "text": "Right on schedule, a little under two minutes later, the script finished, and a screen appeared.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0150",
+   "role": "b",
+   "text": "What did you do on Firemoon 10th? Explain the day in detail.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0151",
+   "role": "b",
+   "text": "&gt;",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0152",
+   "role": "p",
+   "text": "Zei stared.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0153",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Let's reschedule the meeting with Den for tomorrow. I have a feeling this is not going to be a simple task.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0154",
+   "role": "p",
+   "text": "Gladias nodded.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0155",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Are you going to answer?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0156",
+   "role": "p",
+   "text": "Zei pressed a few buttons on his hand device. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I put this program into a sandbox using a journaling file system, so it can't access the internet, and I can always revert it back to start. So there's no privacy leak risk, and if I'm not happy with the outcome I can just revert it back to start and try again. So why not?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0157",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Now ... to remember what I did on the 10th of Firemoon ... or rather I'll just ask my hand device.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0158",
+   "role": "p",
+   "text": "A record of Zei's life events on that day popped up. That day was his last Minpentai game, the semifinal against Gun - the last day when things in his life were at least somewhat normal. Before that game, he woke up and had a meeting with Bai. After that game, he met up in the courtyard with Deluin.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0159",
+   "role": "p",
+   "text": "Wait, Zei thought, the courtyard ... what was the address again? He looked it up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0160",
+   "role": "b",
+   "text": "sa dzu du de <br/> len su 2415 de <br/> bun kai mo fan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0161",
+   "role": "p",
+   "text": "The exact same cafeteria that the original message was from.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0162",
+   "role": "p",
+   "text": "This was, as his local AI liked to say, the punchline. Zei started typing, recalling that day of his life from a combination of the AI records and his own memories which were rapidly coming back.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0163",
+   "role": "p",
+   "text": "Waking up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0164",
+   "role": "p",
+   "text": "The meeting with Bai.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0165",
+   "role": "p",
+   "text": "Going to the game.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0166",
+   "role": "p",
+   "text": "Waiting for the game.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0167",
+   "role": "p",
+   "text": "The game itself.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0168",
+   "role": "p",
+   "text": "Watching Deluin's game.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0169",
+   "role": "p",
+   "text": "A brief conversation with Deluin after the game. What was it I had said ... \"my style was uglier than yours. Though I also won by playing defense\"",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0170",
+   "role": "p",
+   "text": "And then the meeting with Deluin at the courtyard itself. Zei spent as much time detailing this event as the rest of the day put together.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0171",
+   "role": "p",
+   "text": "The robot. A/B testing the new proposed hieroglyphs for Dzegoban.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0172",
+   "role": "p",
+   "text": "Deluin invited him to Redshire. He refused. Deluin showed pictures of Redshire.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0173",
+   "role": "p",
+   "text": "Deluin talking about how the nature of a place being beautiful actually does say something about the civilization there.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0174",
+   "role": "p",
+   "text": "And then Deluin's gently trolling line: \"I'll use my championship winnings to pay for you to go.\"",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0175",
+   "role": "p",
+   "text": "After typing everything in, Zei clicked \"send\".",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0176",
+   "role": "b",
+   "text": "Thinking ... estimated remaining time 440",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0177",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Okay, so this is a language model. But how large was that file? After the data reconstruction.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0178",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"10.7 gigabytes. The overhead was exactly a factor of six. I had a background thread check where the files were from, they were all recently uploaded. One sixth was a few recent movies - public data, though of course <e>the selection of which movies they chose</e> is a secret key of sorts. Another half was a big pile of someone's health data. The last third was also video, though it seemed to be AI-generated. It was all Arctic sermons talking about how fundamentally flawed the Veridian and Dzego civilizations are.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0179",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"The recombination algorithm was a five-of-six erasure code of five pieces of 10.7 gigabytes each. Each of those pieces, in turn, was a steganographic encoding: they used language models to find bits to flip so that the data still looked plausible, while encoding the actual underlying message, at a very ambitious rate of one bit of plaintext per four bits of ciphertext. And then the movies were a sort of cryptographic pad: if you don't know the exact set of movies that were used, even if you could fully uncover the plaintext, it would just look like random data.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0180",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Wait, if they wanted a pad, couldn't they just pseudorandomly generate one by repeatedly hashing some data?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0181",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Ah actually you're right. Maybe I was overthinking it, maybe they just did it this way to throw people off.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0182",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Okay, so 10.7 gigabytes, what is it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0183",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"It's not a plaintext language model. It's an obfuscated language model. Level two obfuscation, much weaker parameters than the full cryptographic-grade parameters that are used in the cryptographic networks for voting in DU or Bansunpei or for that matter the Order of Steering, but it's still the same algorithm.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0184",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Level two obfuscation is actually the right tradeoff for language models, because language models themselves are big and compute-intensive, so they can't handle the high overhead of going level four, and on the other hand, language models are at least partially obfuscated and resistant to bit flips all on their own. If you uncover the value of a few weights, or get the ability to reliably flip a few values in a few tensors, it's not like you can get anything useful out of that.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0185",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Overhead factor of level two obfuscation is in the tens to low hundreds on size, and high hundreds to low thousands on compute. So this model is pretty tiny; I suspect whoever sent this fine-tuned it to only do this one task. I also think this language model's wrapper program, the full package that's being obfuscated, is doing the thinking all at once, to verify whether or not my answer is satisfactory. If it is, it will just give us its message at the end.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0186",
+   "role": "p",
+   "text": "As though on cue, Zei's hand device buzzed. The program finished executing. A new message appeared onscreen:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0187",
+   "role": "p",
+   "text": "Hello Zei.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0188",
+   "role": "p",
+   "text": "You may be wondering why I have not communicated any further with you within the past month. I greatly apologize for this, and my goal in sending you this letter is that you are the only friend I have who is outside of Arctic control, and you deserve my explanation about what has been happening.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0189",
+   "role": "p",
+   "text": "The Arctics did a full sweep of Redshire almost a month ago, to confiscate all electronic devices, and give us back only devices that were backdoored and surveilled by them. This is why I lost contact with you. I had no way to reach you, and so I had to encrypt my message to you by wrapping it in this obfuscated language model that asked you to describe our shared experience to verify your identity. I have only been able to construct and send this message through a series of rounds of stealing devices from others, including two watches containing two Arctics' health data, doing the needed work inside of a non-transmitting room, copying the outputs to an inert storage medium, and then chemically destroying the circuits and storage on those devices.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0190",
+   "role": "p",
+   "text": "Physical surveillance of Redshire is, fortunately, much less total than the Arctic itself, though the window on that is closing fast. But there was also another window that was closing fast for me.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0191",
+   "role": "p",
+   "text": "You see, my parents were always on the side of being more sympathetic to the Arctics. And so after the annexation happened, they decided to cooperate with them. They told me that this was the best way to get any chance of autonomy for themselves and for Redshire in the future: to win trust by becoming a helpful part of the Arctic Empire. And so by the time you read this, most likely we will already be on an aeroplane going into the Arctic Empire core territory.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0192",
+   "role": "p",
+   "text": "I do not share their sympathies. But I have decided that the way that I can maximize my chance of being useful, is to play along, and win their trust too. The Arctic Empire respects strength, I have proven my strength by winning the Minpentai semifinals in Dzego, and my parents may be proof enough of my alignment. Hopefully, there will come a moment where I will be able to do something helpful to you. But I do not know.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0193",
+   "role": "p",
+   "text": "And so for this reason, this may well be the last message that you hear from me. I hope that this will not be true, but I cannot guarantee anything. I am sorry for everything.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0194",
+   "role": "p",
+   "text": "dze go ba fau gie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c19-s0195",
+   "role": "p",
+   "text": "Your dear friend Deluin.",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,1146 @@
+{
+ "chapter": 11,
+ "segments": [
+  {
+   "id": "c11-s0001",
+   "role": "title",
+   "text": "Chapter 11",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0002",
+   "role": "place",
+   "text": "Meldan, Veridia",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0003",
+   "role": "date",
+   "text": "3724 Bloomtime 15",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0004",
+   "role": "p",
+   "text": "Seila, Daia and Vil were standing together in a large grass field, with many other families nearby.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0005",
+   "role": "p",
+   "text": "From a distance, Daia caught sight of Gladias approaching. She waved at him. Gladias noticed, and with a smile on his face walked toward them more quickly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0006",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Happy to see you here!\"</c>, Daia exclaimed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0007",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Well I can't miss my son's first real Helisport game\"</c>, Gladias answered.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0008",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"So how have you been?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0009",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Well, lots of Order business. Can't talk about it publicly, you know. Going well though!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0010",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"How about you?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0011",
+   "role": "p",
+   "text": "Vil started to speak.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0012",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Well, lots of documents for the lawsuit against Divergent. It's been taking up a big part of my time for the last two months.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0013",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Remind me, what happened there?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0014",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Ah sorry, I've been trying not to burden you guys with the details, I know you have so much on your plate already.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0015",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Come on, Vil, your life is important to us.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0016",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Well, remember about half a year ago I lost my job at Jump because they went bankrupt. A month later, another one of the employees reached out to me, and I learned from him what really happened. See, the official story had been-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0017",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I remember this in the news. Jump was struggling, and as a last-ditch effort to save themselves, they made a risky bet on the financial markets, buying a derivative on property prices in a region that they were about to announce they would start serving. But it didn't work - not enough people cared, then they got unlucky and prices went down, so the whole thing collapsed.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0018",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Exactly. But here's what I learned. The only reason why Jump was able to make such a large bet on a niche market without insane slippage is that a hedge fund - Divergent - had taken the other side of the bet. And the primary owners of Divergent had quietly bought a majority share in Jump for very cheap.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0019",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"If housing prices in that region had gone up, Jump would have gained, Divergent would have lost, for them it would have been a net zero. And if housing prices went down - which they did - Jump loses, and Divergent gains, also a net zero. But here's the asymmetry: if Jump loses - which they did - then Jump declares bankruptcy, and so they get out of paying end-of-year bonuses plus a year of severance for their employees. So they gave themselves a free option on our backs.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0020",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"When we found out about this, we sued - all the employees together sued, as a class action. It's been tough; Divergent even managed to intimidate some media sites into not covering it. But I feel like so far the judges are seeing through their tricks. So I'm optimistic.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0021",
+   "role": "p",
+   "text": "They heard a loud whistle, and turned to face the direction that the sound came from.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0022",
+   "role": "p",
+   "text": "It was the instructor. A large truck had been moved into the center of the grass field.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0023",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Helisport game starting in five minutes!\"</c>, the instructor yelled.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0024",
+   "role": "p",
+   "text": "The instructor pressed a button, and the back door of the truck began to open gently, tilting backward on its bottom hinge. After a few ticks, it had turned into a ramp.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0025",
+   "role": "p",
+   "text": "Some personal copters, simple chairs with rotor blades on top surrounded by shielding, automatically rolled out of the truck.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0026",
+   "role": "p",
+   "text": "Some children, around ten to twelve years old, ran toward the truck, half wearing yellow shirts and the other half wearing purple shirts. Among those wearing yellow shirts was Zven. They grabbed their copters and began strapping into them.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0027",
+   "role": "p",
+   "text": "The instructor walked into the truck, and soon came out with a much smaller box. He opened the box, and four bright red drones, shaped like balls a few centimeters wide with soft feather-like rotors on top, sprang out and flew into the sky.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0028",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Welcome to today's Helisport game\"</c>, the instructor said. <c st=\"color:oklch(0.7 0.15 120)\">\"Today we're going to do a limited game, playing only with redballs. If you catch a redball, bring it back to me, and your team gets one point. First team to get to six points wins.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0029",
+   "role": "p",
+   "text": "By this point all ten children had strapped into their personal copters, and the rotor blades were beginning to spin - just enough to overcome about three quarters of the earth's gravity. The kids ran around excitedly, and some jumped, reaching about two meters off the ground before gently gliding back down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0030",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Everyone know what to do?\"</c>, the instructor asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0031",
+   "role": "p",
+   "text": "\"Yes!\", many kids shouted in unison.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0032",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Then we will begin the game in five ... four ... three ... two ... one ... blast off!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0033",
+   "role": "p",
+   "text": "The personal copters flew into the air.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0034",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You know, I'm surprised they still do this in schools\"</c>, Gladias said to Seila. <c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"If this were invented today, they would definitely say it's too dangerous.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0035",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"It was only invented less than ten years ago.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0036",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"In Dzego.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0037",
+   "role": "p",
+   "text": "Zven caught sight of a redball, and began flying toward it. A few moments after, two kids wearing purple shirts also saw the redball, and began to chase it right behind him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0038",
+   "role": "p",
+   "text": "The redball suddenly shifted direction to the left.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0039",
+   "role": "p",
+   "text": "Zven and the other kids also turned left. Zven's copter's rotor shield bumped into the rotor shield of one of the other kids' copters, and the two bounced harmlessly off each other.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0040",
+   "role": "p",
+   "text": "Zven aimed his copter to fly higher. He fell slightly behind the kid he had just bumped into, while the third kid flew forward, and was soon directly under him. The air sucked Zven down, and soon his feet bounced into the grid on top of the other copter's rotors.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0041",
+   "role": "p",
+   "text": "Zven jumped off quickly, and he and the other kid both tumbled down a few meters before they stabilized and flew off in separate directions.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0042",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"The AI on these things is getting really good now\"</c>, Gladias murmured.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0043",
+   "role": "p",
+   "text": "The redball suddenly changed direction again, this time going upwards. Zven immediately set his rotor to full power and climbed upward. The kid he had just bumped into was still a few meters below him, and the other kid did not notice the redball's change of direction in time, and so Zven was ahead.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0044",
+   "role": "p",
+   "text": "Zven saw the redball get closer, and then closer again. Now it was only one meter in front of him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0045",
+   "role": "p",
+   "text": "The redball suddenly turned off its rotors, and began to drop. Thinking quickly, Zven kicked the ball back up just as it dropped to the level of his feet, and moved his copter forward. He stretched out his hand, and caught the redball in his palm.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0046",
+   "role": "p",
+   "text": "He then aimed the copter to fly toward the instructor. The rotor slowed down - though it did not stop completely. It sped back up when Zven's altitude was decreasing at the safe maximum of five meters per tick - the speed that you would hit the ground after a fall from a height of slightly under two meters. The instructor watched Zven land, and stretched out his hand to receive the redball that Zven handed over.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0047",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"First catch of the game by Zven, first point for team yellow!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0048",
+   "role": "p",
+   "text": "He let the redball fly once again. It quickly shot forward, in the opposite direction from where Zven was standing.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0049",
+   "role": "p",
+   "text": "Zven flew back up, and continued his search for more redballs.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0050",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"How are Hreda, Lily and Febric doing?\"</c>, Gladias asked Daia. Seila heard the question, and turned her head toward them slightly to hear the answer.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0051",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Hreda is off in Northglade doing a math competition. We've been trying to get Lily more interested in art, though that hasn't been really successful so far.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0052",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"I also talked to Zven for a bit and he showed me his homework. I was surprised. I saw the questions they were giving him for arithmetic, and they seemed just slightly ... less advanced than what Febric got at his age?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0053",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Nice catch by Dommus!\"</c>, the instructor shouted. <c st=\"color:oklch(0.7 0.15 120)\">\"And nice catch for Gale! Two points for team purple\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0054",
+   "role": "p",
+   "text": "Seila joined into the conversation.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0055",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Well, Glad, you're a -\"</c> she stopped herself, briefly remembering that it would be improper even to specify Keeper - <c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"an Order member now. Anything the Order can do to make Veridia's education better?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0056",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You know the schools aren't Order business, the public ones are run by the education committee, staffed by parliament. Though there have been people thinking about trying to support more private ones, support them out of Graph Funding, figure out some rubrics to give them the right incentives.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0057",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Maybe you should try pushing for that in your Keeper meetings?\"</c>, Seila replied, whispering into her watch as a substitute for a neck band. Better to just have this conversation privately than have to choose each word carefully to avoid giving out Gladias's position, she thought.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0058",
+   "role": "p",
+   "text": "Delwart would be supportive, Gladias thought. Though he would be even more supportive of private schools with <e>no</e> rubric micro-nudging attached.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0059",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Another nice catch by Zven! Second point for team yellow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0060",
+   "role": "p",
+   "text": "Gladias and Seila's attention went back to the game. There were three groups of three kids each in the sky, each group chasing what they assumed must be a different redball. Zven flew up alone, and did not try to join any of the groups. Instead, he seemed to simply wander the sky, his eyes constantly watching the horizon to try to find where the fourth redball might be.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0061",
+   "role": "p",
+   "text": "One of the kids tumbled out of the sky, though the rotor's AI automatically broke his fall. He hit the ground, and then a few ticks later stood back up and went back into the sky.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0062",
+   "role": "p",
+   "text": "A minute later, a kid landed beside the instructor, and handed him a redball.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0063",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Another nice catch by Gale! Third point for team purple.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0064",
+   "role": "p",
+   "text": "The redball flew back into the sky, and both Gale and the other two kids who were chasing the redball with him once again flew after it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0065",
+   "role": "p",
+   "text": "Two more minutes passed. Another kid landed beside the instructor.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0066",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Nice catch by Dela! Third point for team yellow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0067",
+   "role": "p",
+   "text": "One more minute later, two more kids landed at around the same time:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0068",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Nice catch by Plat! Fourth point for team yellow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0069",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"And a nice catch by Meny! Fourth point for team purple.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0070",
+   "role": "p",
+   "text": "Zven continued his solitary quest to search for the fourth redball, which all the other kids seemed to have completely forgotten the existence of.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0071",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Nice catch by Egardo! Fifth point for team purple.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0072",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"Another nice catch by Dela! Fifth point for team yellow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0073",
+   "role": "p",
+   "text": "He began to fly closer to the ground.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0074",
+   "role": "p",
+   "text": "Gladias and Seila saw Gale shooting ahead of his two competitors, getting ready to catch the redball. It was only one meter in front of him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0075",
+   "role": "p",
+   "text": "Gale's hand stretched out. He prepared to grab hold of it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0076",
+   "role": "p",
+   "text": "Then, suddenly, another kid bumped into him, and he veered several meters to the right. That kid attempted to grab the redball instead, but it quickly flipped direction and flew backwards, right in between the two of them. Gale and the other kid both attempted to grab it with their hands as it passed by, but both missed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0077",
+   "role": "p",
+   "text": "Gale regained sight of the redball first, and quickly flew towards it. His two competitors soon followed, though they were at least ten meters behind.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0078",
+   "role": "p",
+   "text": "Gale and the redball both gained altitude, and Gale began to get closer to the redball. Five meters. Four meters. Three meters.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0079",
+   "role": "p",
+   "text": "Meanwhile, out of nowhere, Zven seemed to fall to the ground, the fall broken as usual by the copter's AI.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0080",
+   "role": "p",
+   "text": "High in the sky, far above the other players, Gale raised his hand triumphantly, holding the redball inside a clenched fist.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0081",
+   "role": "p",
+   "text": "Many in the audience cheered. Gale maneuvered around the other two students who were following him, and began to drop back down at the maximum speed of five meters per tick.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0082",
+   "role": "p",
+   "text": "Suddenly, Gladias and Seila's eyes shifted toward Zven. He had gotten out of his copter, and was running toward the instructor.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0083",
+   "role": "p",
+   "text": "When Gale was still about thirty meters in the air, Zven opened up his hand and gave the instructor the fourth redball, with broken rotors, that he had found on the ground.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0084",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 120)\">\"And, nice catch by Zven. Sixth point for team yellow. Team yellow wins the game!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0085",
+   "role": "p",
+   "text": "Gladias sighed with relief.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0086",
+   "role": "p",
+   "text": "Seila beamed with pride for Zven.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0087",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"He took the path less traveled\"</c>, she quietly recited, quoting an old Veridian author, <c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"and that blazed a trail for all.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0088",
+   "role": "p",
+   "text": "Gladias slid the barrier open, entered the booth, and slid the barrier shut again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0089",
+   "role": "p",
+   "text": "Three other Keepers were already there. The other three, Gladias thought, must still be on their way.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0090",
+   "role": "p",
+   "text": "This was the third circle of Keepers that Gladias was assigned to, and the topic was air quality. Here, his assigned number was two.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0091",
+   "role": "p",
+   "text": "Gladias immediately took out his watch, and whispered into his neck band to check the air quality of the current room.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0092",
+   "role": "cell",
+   "text": "Air",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0093",
+   "role": "cell",
+   "text": "CO<sub>2</sub>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0094",
+   "role": "cell",
+   "text": "906",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0095",
+   "role": "cell",
+   "text": "PM2.5",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0096",
+   "role": "cell",
+   "text": "4.4",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0097",
+   "role": "cell",
+   "text": "Devices",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0098",
+   "role": "cell",
+   "text": "Attested ✓",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0099",
+   "role": "cell",
+   "text": "16",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0100",
+   "role": "cell",
+   "text": "Unknown ?",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0101",
+   "role": "cell",
+   "text": "0",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0102",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"How are we already at 906 with just four people here?\"</c>, he asked. <c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Filters are working great, but I guess they haven't yet figured out how to give these secure booths any ventilation?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0103",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"Yeah, pretty much everyone is really behind standards. We've been saying that we really have to increase the taxes on this bracket across the board.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0104",
+   "role": "p",
+   "text": "The CO<sub>2</sub> reading on Gladias's watch refreshed. It now showed 918.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0105",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"I think people will figure this out on their own\"</c>, another Keeper replied. <c st=\"color:oklch(0.7 0.15 200)\">\"It's just a matter of the technology being open and deployable enough. We've been making these filters twice as cheap every two years for the past decade.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0106",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Well I feel like we have to push harder\"</c>, Gladias replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0107",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What do the indoor air quality tax rubrics say now?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0108",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"It's a land tax component. Zero if your air quality is perfect, an extra third of a percent per year if the average occupied room reads worse than a thousand. The limits get adjusted up if you have filters or UVC.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0109",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Only a third of a percent? For the difference between theoretically perfect and abysmally bad?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0110",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"A third of a percent of the land value, per year. For many businesses, that's like a sixth of their revenue.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0111",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"There's so many things that go into land tax. Public aesthetics. Accessibility - both the kind that's about being friendly to disabled people, <e>and</e> the kind that's about letting people walk across your land freely and not fencing it off. What percent of the lot you're building on. Ground-floor active use, though that one is controversial and some people think it should just be folded into aesthetics. Emergency preparedness. Fire safety. There's just not enough space for everything.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0112",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"And come on, Veridians are not that sick. If you look at the broad listen report we ran a month ago, indoor airborne disease resistance is just not one of Veridians' top ten concerns.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0113",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"The ground-floor active use isn't just about aesthetics, it also contributes to walkability, reduces congestion-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0114",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"Fine, though I think we should just target those things directly.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0115",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"Anyway, that's not our rubric to decide. Air quality is. You're missing the tail risk.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0116",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What tail risk?\"</c>, Gladias interjected.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0117",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"Super-pandemics. Like, deliberately released by the Arctics.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0118",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"Is there any evidence of them working on anything like that?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0119",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"They're a super opaque society, the only evidence we have that the Arctics even know Veridia exists is that we have to listen to Lord Ephelion giving his sermons all the time.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0120",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So what are the possible plans on the table?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0121",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"Increase the maximum to two thirds of a percent. And then make the case to the funding organs - Graph Funding, Quadratic Funding, parliament allocations - that they should support more open-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0122",
+   "role": "p",
+   "text": "Another Keeper interjected:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0123",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Quadratic funding? That round is a mess right now. Someone released a program you can download onto your device and prove that you donated to a particular project researching social media polarization - actually not a very good one - and get a reward. You donate ten zipcoins and get back twenty, they get a hundred including the bounded matching. Lots of people participated. And then yesterday some insider at Bluewhale blew the whistle, apparently that was all their doing.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0124",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"Bluewhale? But why would they do that? They don't even control the project that was getting that funding.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0125",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"It doesn't matter where it goes, if it was hiring people from Iptak to come dig holes and then fill them back up again they would still have done it. Their goal is to drain funding from anything that interfaces with open platforms. Starve the open ecosystem, the closed one wins by default.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0126",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"Fine, we'll stick to Graph Funding. Go through our channels to suggest to the Graph Funding people that they support more open source tech for air filtering, cleaning, wastewater scanning, all of it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0127",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"Wastewater scanning too? You want to break everyone's privacy even more? What if the Arctics hack in and take all that data, and then they'll find out who lives where even if they move homes, and when each person is healthy or sick?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0128",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"I thought you were the one who keeps saying there's no evidence the Arctics are actually doing those kinds of crazy things?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0129",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Isn't there some cryptographic way to get the data we want out of the scans, without ever collecting the data itself in cleartext in any one place?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0130",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 200)\">\"Well, if you can find a genius who can figure out something like that, let us know.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0131",
+   "role": "p",
+   "text": "Gladias got off the autobus, and pulled on the strap on his privacy robe's front face covering. His face was still covered, but the belt between the areas above and below his nose was now no longer tight. Less virus protection - outside the unusually crowded indoor space that was the autobus, he no longer needed it - but more comfortable and easier to breathe. He began to walk back home.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0132",
+   "role": "p",
+   "text": "He passed by the same restaurant where he had bumped into Febric months earlier. On the restaurant's outer wall, he saw an advertisement. On the left side of the advertisement, there was a Hydrafill mascot, clothed in Hydrafill's classic yellow and green colors, hugging a small child, and using his back to shield the child from a jet of sludge-like green-colored water. On the right side of the advertisement, there was the text:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0133",
+   "role": "p",
+   "text": "Heavy water, with its atoms of hydrogen replaced by the neutron-bearing isotope deuterium, is known to be toxic in large doses.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0134",
+   "role": "p",
+   "text": "We studied our competitors' water, and found that on average, it contains 145 parts per million heavy water.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0135",
+   "role": "p",
+   "text": "Our water comes from fresh Veridian NORTHERN ICE, bravely extracted only thirty kilometers away from the Arctic border, and it contains 132 parts per million heavy water.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0136",
+   "role": "p",
+   "text": "Hence, our water is TEN PERCENT LESS TOXIC than our competitors. Only WE care about your health. Nobody else does. Hydrafill wants to heal and protect you. Our competitors think you deserve to drown in sludge and die.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0137",
+   "role": "p",
+   "text": "Trust Hydrafill. Buy Hydrafill today.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0138",
+   "role": "p",
+   "text": "Gladias smiled. He kept walking.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0139",
+   "role": "p",
+   "text": "Suddenly, someone grabbed and hugged him from behind.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0140",
+   "role": "p",
+   "text": "Gladias turned around.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0141",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Seila!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0142",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Finally caught you on your way home.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0143",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"How was the rest of your day?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0144",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Finished up my post on urban economics in Freetown. It's online, you should go see it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0145",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Ooh, I'm excited.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0146",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Jahn gave me some gossip recently, about how a lot of things are changing now that people there are getting more spooked about the Arctics.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0147",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Do you have any theories about why people in Veridia seem so... nonchalant about the whole Arctic situation?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0148",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I guess the Arctics don't really affect people's lives here much? They just publish their stupid sermons from time to time and people watch and listen out of curiosity.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0149",
+   "role": "p",
+   "text": "Gladias groaned.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0150",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Even inside the Keepers, the situation is so strange. The older ones seem to understand there's a problem. But the newer ones ... not all, but many of them think we should just not care?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0151",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"What's weird is that the corporates in Freetown seem more resistant to ... whatever is causing that stupidity. They're basically the only city taking the problem seriously - except for Redshire, and the cities partially run by Redshire's parliament through co-governance.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0152",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I guess more than anything, the newer Keepers seem suspicious of Steering and Quadratic Funding and Graph Funding and government being able to do much of anything in general.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0153",
+   "role": "p",
+   "text": "Seila sighed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0154",
+   "role": "p",
+   "text": "They continued walking. After a few minutes, they arrived at the door to their house. Gladias put his watch against the circle, and the door opened. They walked in.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0155",
+   "role": "p",
+   "text": "Seila opened up her hand device.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0156",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Dzego food truck in one minute. The usual I assume?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0157",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Yep, how did you know?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0158",
+   "role": "p",
+   "text": "Seila laughed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0159",
+   "role": "p",
+   "text": "Seila clicked a few buttons, and ordered.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0160",
+   "role": "p",
+   "text": "The door to the house was not yet closed, and Seila could already see the food truck coming towards them from a few hundred meters away. They both waited for the food truck to arrive.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0161",
+   "role": "p",
+   "text": "Seila went out, and picked up the food directly from the food truck. She walked back into the house, and closed the door behind her.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0162",
+   "role": "p",
+   "text": "She put the food on the table, and immediately unpacked it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c11-s0163",
+   "role": "p",
+   "text": "They both sat down, opened their food boxes, and began to eat.",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

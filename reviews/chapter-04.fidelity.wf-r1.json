@@ -1,0 +1,71 @@
+{
+  "chapter": 4,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "本章译文整体忠实：逐条对照未发现整句漏译、否定／数量／因果搞反或说话人错位（<c> 颜色标签与结构标签与原文完全一致），民本棋术语（符记、石阵、干预回合、滑翔机工厂、镜面墙、移动墙、飞船、负熵）与术语表及新增术语一致，数字与倒计时（五十／二十五嘀嗒、十七条街、十五比十五）无一处错。问题集中在若干从句层面的细节走形：把「读到」译成「打出来」、把棋场内部近旁写成棋盘周边、把「行动量」译成「变数」，另有一处树列漏译与一处「并肩」增译。整体可读，无需重译，按下述建议做局部修订即可。",
+  "issues": [
+    {
+      "id": "c04-s0118",
+      "severity": "medium",
+      "type": "误译",
+      "source": "Remove one of the two players completely, he thought, and that takes out half the activity in the intervention turns - always the biggest source of surprise.",
+      "zh": "把两名玩家里彻底清掉一个，他想，干预回合里的变数就去掉一半——而那里永远最出人意料。",
+      "problem": "原文说的是减掉对手在干预回合里一半的「activity」（可执行的行动量／操作量），译文换成「变数就去掉一半」，把行动量偷换成了不确定性；后半句「永远最出人意料」本来是在说干预回合，如今紧跟在「变数」后面，读起来像同义反复，整句因果变糊。另外「把两名玩家里彻底清掉一个」也含混——「两名」指的是对手两人，中文里没交代清楚。",
+      "suggestion": "把对手两名选手里彻底清掉一个，他想，他们在干预回合里的操作量就少一半——而干预回合永远是最出人意料的变数来源。"
+    },
+    {
+      "id": "c04-s0097",
+      "severity": "medium",
+      "type": "误译",
+      "source": "As soon as he did, nearby parts of the game field became visible.",
+      "zh": "一落下去，棋场附近的区域就亮了起来。",
+      "problem": "「nearby parts of the game field」是棋场**内部**离落子处较近的那几块变亮，译文「棋场附近的区域」把参照系挪到了棋场**外围**，成了「棋盘旁边的地方亮了」；紧接着的下一句「棋场左下角的几处」正是场内区域，前后不一致，读者要自己校正。",
+      "suggestion": "一落下去，棋场内他符记近旁的那几块就亮了起来。"
+    },
+    {
+      "id": "c04-s0038",
+      "severity": "low",
+      "type": "误译",
+      "source": "Like, imagine someone reading those words on a screen right now and how that must make them feel.",
+      "zh": "比如，就想象现在有人把这一串话打在屏幕上，他们看了会是什么滋味。",
+      "problem": "原文的主语是「在屏幕上**读到**这串字的人」（reading），译文变成「把这一串话**打**在屏幕上」的人，视角从读者换成了输出者；后半句「他们看了」勉强把感受补回读者身上，但前半句的立意已经偏了。",
+      "suggestion": "比如，就想象此刻有人在屏幕上读到这一串字，那会是什么滋味。"
+    },
+    {
+      "id": "c04-s0046",
+      "severity": "low",
+      "type": "漏译",
+      "source": "Interrupting the stone were two rows of trees along a path, starting from the position where Zei was standing ane leading to a point halfway to the top, and another row of trees going horizontally around the pyramid at exactly the halfway height.",
+      "zh": "石面上嵌着两行树：一行从泽所站的位置起，沿小径通到半山腰；另一行恰在半高之处，横着环绕金字塔一圈。",
+      "problem": "原文是「沿小径的**两行**树（夹着小径的两列）」加上「**另**一行」横向环绕，一共三行；译文并成了两行，把小径两侧的两列合成一列，少了一行树，金字塔外壁的树形图案与原作不符。",
+      "suggestion": "石面上嵌着树：沿小径一左一右两行，从泽所站的位置一直通到半山腰；另有一行恰在半高处，横着环绕金字塔一圈。"
+    },
+    {
+      "id": "c04-s0047",
+      "severity": "low",
+      "type": "误译",
+      "source": "Building a pyramid that tall would be far too expensive, even for Veridia, or even the Arctics.",
+      "zh": "造一座那么高的金字塔，就算对维里迪亚、甚至对北极来说也贵得离谱。",
+      "problem": "此处与「维里迪亚」（国家）并列的 the Arctics 指北极这个政体（术语表：the Arctics → 北极人／北极国），译成「北极」在中文里是地理区域，读起来像「连北极那地方也嫌贵」，与前半句的国家不对称，也丢了「连敌国也负担不起」的语气。",
+      "suggestion": "造一座那么高的金字塔，就算对维里迪亚、甚至对北极国来说也贵得离谱。"
+    },
+    {
+      "id": "c04-s0121",
+      "severity": "low",
+      "type": "漏译",
+      "source": "Zei wanted to win, Fin knew, but almost as much, Zei wanted to hear Bai beg.",
+      "zh": "泽想赢，芬知道；但泽同样想听白开口求他。",
+      "problem": "「almost as much」（差不多同样强烈）被译成「同样」，把「差一点就一样」的分寸抹成等量；这处分寸正是芬那种看透朋友又不以为然的口气所在。",
+      "suggestion": "泽想赢，芬知道；但差不多同样强烈的，是他想听白开口求他。"
+    },
+    {
+      "id": "c04-s0144",
+      "severity": "low",
+      "type": "增译",
+      "source": "Two elevators opened up in the waiting room, and Zei and Bai simultaneously stepped out.",
+      "zh": "等候室里两部电梯同时打开，泽和白并肩走了出来。",
+      "problem": "原文只说两人「同时」走出，且是从**两部**电梯分别出来；译文加出「并肩」，平添了一层并肩同行的亲密画面，与这一章两人互不搭理的关系（全场只交换了两条消息）不搭。",
+      "suggestion": "等候室里两部电梯同时打开，泽和白同时走了出来。"
+    }
+  ]
+}

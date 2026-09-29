@@ -1,0 +1,1161 @@
+{
+ "chapter": 7,
+ "source_file": "sources/en/html/chapter-7.html",
+ "blocks": [
+  {
+   "id": "c07-b0001",
+   "kind": "title",
+   "skeleton": "<h1>{{S:c07-s0001}}</h1>",
+   "segs": [
+    "{{S:c07-s0001}}"
+   ]
+  },
+  {
+   "id": "c07-b0002",
+   "kind": "dateline-open",
+   "segs": [
+    "{{S:c07-s0002}}",
+    "{{S:c07-s0003}}"
+   ],
+   "place": "Pafogai Du, Dzego",
+   "date": "3724 Rainmoon 23"
+  },
+  {
+   "id": "c07-b0003",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0004}}</p>",
+   "segs": [
+    "{{S:c07-s0004}}"
+   ]
+  },
+  {
+   "id": "c07-b0004",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0005}}</p>",
+   "segs": [
+    "{{S:c07-s0005}}"
+   ]
+  },
+  {
+   "id": "c07-b0005",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0006}}</p>",
+   "segs": [
+    "{{S:c07-s0006}}"
+   ]
+  },
+  {
+   "id": "c07-b0006",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0007}}</p>",
+   "segs": [
+    "{{S:c07-s0007}}"
+   ]
+  },
+  {
+   "id": "c07-b0007",
+   "kind": "panel",
+   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c07-s0008}}</th></tr></thead><tbody><tr><td><input type=\"range\" style=\"width:100%\"><div style=\"display: flex; justify-content: space-between; width:100%\">{{S:c07-s0009}}</div></td></tr><tr><td><button>{{S:c07-s0010}}</button></td></tr></tbody></table></div>",
+   "segs": [
+    "{{S:c07-s0008}}",
+    "{{S:c07-s0009}}",
+    "{{S:c07-s0010}}"
+   ]
+  },
+  {
+   "id": "c07-b0008",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0011}}</p>",
+   "segs": [
+    "{{S:c07-s0011}}"
+   ]
+  },
+  {
+   "id": "c07-b0009",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0012}}</p>",
+   "segs": [
+    "{{S:c07-s0012}}"
+   ]
+  },
+  {
+   "id": "c07-b0010",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0013}}</p>",
+   "segs": [
+    "{{S:c07-s0013}}"
+   ]
+  },
+  {
+   "id": "c07-b0011",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0014}}</p>",
+   "segs": [
+    "{{S:c07-s0014}}"
+   ]
+  },
+  {
+   "id": "c07-b0012",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0015}}</p>",
+   "segs": [
+    "{{S:c07-s0015}}"
+   ]
+  },
+  {
+   "id": "c07-b0013",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0016}}</p>",
+   "segs": [
+    "{{S:c07-s0016}}"
+   ]
+  },
+  {
+   "id": "c07-b0014",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0017}}</p>",
+   "segs": [
+    "{{S:c07-s0017}}"
+   ]
+  },
+  {
+   "id": "c07-b0015",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0018}}</p>",
+   "segs": [
+    "{{S:c07-s0018}}"
+   ]
+  },
+  {
+   "id": "c07-b0016",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0019}}</p>",
+   "segs": [
+    "{{S:c07-s0019}}"
+   ]
+  },
+  {
+   "id": "c07-b0017",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0020}}</p>",
+   "segs": [
+    "{{S:c07-s0020}}"
+   ]
+  },
+  {
+   "id": "c07-b0018",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0021}}</p>",
+   "segs": [
+    "{{S:c07-s0021}}"
+   ]
+  },
+  {
+   "id": "c07-b0019",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0022}}</p>",
+   "segs": [
+    "{{S:c07-s0022}}"
+   ]
+  },
+  {
+   "id": "c07-b0020",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0023}}</p>",
+   "segs": [
+    "{{S:c07-s0023}}"
+   ]
+  },
+  {
+   "id": "c07-b0021",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0024}}</p>",
+   "segs": [
+    "{{S:c07-s0024}}"
+   ]
+  },
+  {
+   "id": "c07-b0022",
+   "kind": "scene-break",
+   "segs": [
+    "{{S:c07-s0025}}"
+   ],
+   "place": null,
+   "date": "3724 Rainmoon 24"
+  },
+  {
+   "id": "c07-b0023",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0026}}</p>",
+   "segs": [
+    "{{S:c07-s0026}}"
+   ]
+  },
+  {
+   "id": "c07-b0024",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0027}}</p>",
+   "segs": [
+    "{{S:c07-s0027}}"
+   ]
+  },
+  {
+   "id": "c07-b0025",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0028}}</p>",
+   "segs": [
+    "{{S:c07-s0028}}"
+   ]
+  },
+  {
+   "id": "c07-b0026",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0029}}</p>",
+   "segs": [
+    "{{S:c07-s0029}}"
+   ]
+  },
+  {
+   "id": "c07-b0027",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0030}}</p>",
+   "segs": [
+    "{{S:c07-s0030}}"
+   ]
+  },
+  {
+   "id": "c07-b0028",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0031}}</p>",
+   "segs": [
+    "{{S:c07-s0031}}"
+   ]
+  },
+  {
+   "id": "c07-b0029",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0032}}</p>",
+   "segs": [
+    "{{S:c07-s0032}}"
+   ]
+  },
+  {
+   "id": "c07-b0030",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0033}}</p>",
+   "segs": [
+    "{{S:c07-s0033}}"
+   ]
+  },
+  {
+   "id": "c07-b0031",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0034}}</p>",
+   "segs": [
+    "{{S:c07-s0034}}"
+   ]
+  },
+  {
+   "id": "c07-b0032",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0035}}</p>",
+   "segs": [
+    "{{S:c07-s0035}}"
+   ]
+  },
+  {
+   "id": "c07-b0033",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0036}}</p>",
+   "segs": [
+    "{{S:c07-s0036}}"
+   ]
+  },
+  {
+   "id": "c07-b0034",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0037}}</p>",
+   "segs": [
+    "{{S:c07-s0037}}"
+   ]
+  },
+  {
+   "id": "c07-b0035",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0038}}</p>",
+   "segs": [
+    "{{S:c07-s0038}}"
+   ]
+  },
+  {
+   "id": "c07-b0036",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0039}}</p>",
+   "segs": [
+    "{{S:c07-s0039}}"
+   ]
+  },
+  {
+   "id": "c07-b0037",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0040}}</p>",
+   "segs": [
+    "{{S:c07-s0040}}"
+   ]
+  },
+  {
+   "id": "c07-b0038",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0041}}</p>",
+   "segs": [
+    "{{S:c07-s0041}}"
+   ]
+  },
+  {
+   "id": "c07-b0039",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0042}}</p>",
+   "segs": [
+    "{{S:c07-s0042}}"
+   ]
+  },
+  {
+   "id": "c07-b0040",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0043}}</p>",
+   "segs": [
+    "{{S:c07-s0043}}"
+   ]
+  },
+  {
+   "id": "c07-b0041",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0044}}</p>",
+   "segs": [
+    "{{S:c07-s0044}}"
+   ]
+  },
+  {
+   "id": "c07-b0042",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0045}}</p>",
+   "segs": [
+    "{{S:c07-s0045}}"
+   ]
+  },
+  {
+   "id": "c07-b0043",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0046}}</p>",
+   "segs": [
+    "{{S:c07-s0046}}"
+   ]
+  },
+  {
+   "id": "c07-b0044",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0047}}</p>",
+   "segs": [
+    "{{S:c07-s0047}}"
+   ]
+  },
+  {
+   "id": "c07-b0045",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0048}}</p>",
+   "segs": [
+    "{{S:c07-s0048}}"
+   ]
+  },
+  {
+   "id": "c07-b0046",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0049}}</p>",
+   "segs": [
+    "{{S:c07-s0049}}"
+   ]
+  },
+  {
+   "id": "c07-b0047",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0050}}</p>",
+   "segs": [
+    "{{S:c07-s0050}}"
+   ]
+  },
+  {
+   "id": "c07-b0048",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0051}}</p>",
+   "segs": [
+    "{{S:c07-s0051}}"
+   ]
+  },
+  {
+   "id": "c07-b0049",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0052}}</p>",
+   "segs": [
+    "{{S:c07-s0052}}"
+   ]
+  },
+  {
+   "id": "c07-b0050",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0053}}</p>",
+   "segs": [
+    "{{S:c07-s0053}}"
+   ]
+  },
+  {
+   "id": "c07-b0051",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0054}}</p>",
+   "segs": [
+    "{{S:c07-s0054}}"
+   ]
+  },
+  {
+   "id": "c07-b0052",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0055}}</p>",
+   "segs": [
+    "{{S:c07-s0055}}"
+   ]
+  },
+  {
+   "id": "c07-b0053",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0056}}</p>",
+   "segs": [
+    "{{S:c07-s0056}}"
+   ]
+  },
+  {
+   "id": "c07-b0054",
+   "kind": "rule"
+  },
+  {
+   "id": "c07-b0055",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0057}}</p>",
+   "segs": [
+    "{{S:c07-s0057}}"
+   ]
+  },
+  {
+   "id": "c07-b0056",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0058}}</p>",
+   "segs": [
+    "{{S:c07-s0058}}"
+   ]
+  },
+  {
+   "id": "c07-b0057",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0059}}</p>",
+   "segs": [
+    "{{S:c07-s0059}}"
+   ]
+  },
+  {
+   "id": "c07-b0058",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0060}}</p>",
+   "segs": [
+    "{{S:c07-s0060}}"
+   ]
+  },
+  {
+   "id": "c07-b0059",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0061}}</p>",
+   "segs": [
+    "{{S:c07-s0061}}"
+   ]
+  },
+  {
+   "id": "c07-b0060",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0062}}</p>",
+   "segs": [
+    "{{S:c07-s0062}}"
+   ]
+  },
+  {
+   "id": "c07-b0061",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0063}}</p>",
+   "segs": [
+    "{{S:c07-s0063}}"
+   ]
+  },
+  {
+   "id": "c07-b0062",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0064}}</p>",
+   "segs": [
+    "{{S:c07-s0064}}"
+   ]
+  },
+  {
+   "id": "c07-b0063",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0065}}</p>",
+   "segs": [
+    "{{S:c07-s0065}}"
+   ]
+  },
+  {
+   "id": "c07-b0064",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0066}}</p>",
+   "segs": [
+    "{{S:c07-s0066}}"
+   ]
+  },
+  {
+   "id": "c07-b0065",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0067}}</p>",
+   "segs": [
+    "{{S:c07-s0067}}"
+   ]
+  },
+  {
+   "id": "c07-b0066",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0068}}</p>",
+   "segs": [
+    "{{S:c07-s0068}}"
+   ]
+  },
+  {
+   "id": "c07-b0067",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0069}}</p>",
+   "segs": [
+    "{{S:c07-s0069}}"
+   ]
+  },
+  {
+   "id": "c07-b0068",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0070}}</p>",
+   "segs": [
+    "{{S:c07-s0070}}"
+   ]
+  },
+  {
+   "id": "c07-b0069",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0071}}</p>",
+   "segs": [
+    "{{S:c07-s0071}}"
+   ]
+  },
+  {
+   "id": "c07-b0070",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0072}}</p>",
+   "segs": [
+    "{{S:c07-s0072}}"
+   ]
+  },
+  {
+   "id": "c07-b0071",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0073}}</p>",
+   "segs": [
+    "{{S:c07-s0073}}"
+   ]
+  },
+  {
+   "id": "c07-b0072",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0074}}</p>",
+   "segs": [
+    "{{S:c07-s0074}}"
+   ]
+  },
+  {
+   "id": "c07-b0073",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0075}}</p>",
+   "segs": [
+    "{{S:c07-s0075}}"
+   ]
+  },
+  {
+   "id": "c07-b0074",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0076}}</p>",
+   "segs": [
+    "{{S:c07-s0076}}"
+   ]
+  },
+  {
+   "id": "c07-b0075",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0077}}</p>",
+   "segs": [
+    "{{S:c07-s0077}}"
+   ]
+  },
+  {
+   "id": "c07-b0076",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0078}}</p>",
+   "segs": [
+    "{{S:c07-s0078}}"
+   ]
+  },
+  {
+   "id": "c07-b0077",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0079}}</p>",
+   "segs": [
+    "{{S:c07-s0079}}"
+   ]
+  },
+  {
+   "id": "c07-b0078",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0080}}</p>",
+   "segs": [
+    "{{S:c07-s0080}}"
+   ]
+  },
+  {
+   "id": "c07-b0079",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0081}}</p>",
+   "segs": [
+    "{{S:c07-s0081}}"
+   ]
+  },
+  {
+   "id": "c07-b0080",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0082}}</p>",
+   "segs": [
+    "{{S:c07-s0082}}"
+   ]
+  },
+  {
+   "id": "c07-b0081",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0083}}</p>",
+   "segs": [
+    "{{S:c07-s0083}}"
+   ]
+  },
+  {
+   "id": "c07-b0082",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0084}}</p>",
+   "segs": [
+    "{{S:c07-s0084}}"
+   ]
+  },
+  {
+   "id": "c07-b0083",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0085}}</p>",
+   "segs": [
+    "{{S:c07-s0085}}"
+   ]
+  },
+  {
+   "id": "c07-b0084",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0086}}</p>",
+   "segs": [
+    "{{S:c07-s0086}}"
+   ]
+  },
+  {
+   "id": "c07-b0085",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0087}}</p>",
+   "segs": [
+    "{{S:c07-s0087}}"
+   ]
+  },
+  {
+   "id": "c07-b0086",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0088}}</p>",
+   "segs": [
+    "{{S:c07-s0088}}"
+   ]
+  },
+  {
+   "id": "c07-b0087",
+   "kind": "figure",
+   "figures": [
+    "chapter-07-fig-01.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c07-b0088",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0089}}</p>",
+   "segs": [
+    "{{S:c07-s0089}}"
+   ]
+  },
+  {
+   "id": "c07-b0089",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0090}}</p>",
+   "segs": [
+    "{{S:c07-s0090}}"
+   ]
+  },
+  {
+   "id": "c07-b0090",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0091}}</p>",
+   "segs": [
+    "{{S:c07-s0091}}"
+   ]
+  },
+  {
+   "id": "c07-b0091",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0092}}</p>",
+   "segs": [
+    "{{S:c07-s0092}}"
+   ]
+  },
+  {
+   "id": "c07-b0092",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0093}}</p>",
+   "segs": [
+    "{{S:c07-s0093}}"
+   ]
+  },
+  {
+   "id": "c07-b0093",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0094}}</p>",
+   "segs": [
+    "{{S:c07-s0094}}"
+   ]
+  },
+  {
+   "id": "c07-b0094",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0095}}</p>",
+   "segs": [
+    "{{S:c07-s0095}}"
+   ]
+  },
+  {
+   "id": "c07-b0095",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0096}}</p>",
+   "segs": [
+    "{{S:c07-s0096}}"
+   ]
+  },
+  {
+   "id": "c07-b0096",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0097}}</p>",
+   "segs": [
+    "{{S:c07-s0097}}"
+   ]
+  },
+  {
+   "id": "c07-b0097",
+   "kind": "figure",
+   "figures": [
+    "chapter-07-fig-02.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c07-b0098",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0098}}</p>",
+   "segs": [
+    "{{S:c07-s0098}}"
+   ]
+  },
+  {
+   "id": "c07-b0099",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0099}}</p>",
+   "segs": [
+    "{{S:c07-s0099}}"
+   ]
+  },
+  {
+   "id": "c07-b0100",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0100}}</p>",
+   "segs": [
+    "{{S:c07-s0100}}"
+   ]
+  },
+  {
+   "id": "c07-b0101",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0101}}</p>",
+   "segs": [
+    "{{S:c07-s0101}}"
+   ]
+  },
+  {
+   "id": "c07-b0102",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0102}}</p>",
+   "segs": [
+    "{{S:c07-s0102}}"
+   ]
+  },
+  {
+   "id": "c07-b0103",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0103}}</p>",
+   "segs": [
+    "{{S:c07-s0103}}"
+   ]
+  },
+  {
+   "id": "c07-b0104",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0104}}</p>",
+   "segs": [
+    "{{S:c07-s0104}}"
+   ]
+  },
+  {
+   "id": "c07-b0105",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0105}}</p>",
+   "segs": [
+    "{{S:c07-s0105}}"
+   ]
+  },
+  {
+   "id": "c07-b0106",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0106}}</p>",
+   "segs": [
+    "{{S:c07-s0106}}"
+   ]
+  },
+  {
+   "id": "c07-b0107",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0107}}</p>",
+   "segs": [
+    "{{S:c07-s0107}}"
+   ]
+  },
+  {
+   "id": "c07-b0108",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0108}}</p>",
+   "segs": [
+    "{{S:c07-s0108}}"
+   ]
+  },
+  {
+   "id": "c07-b0109",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0109}}</p>",
+   "segs": [
+    "{{S:c07-s0109}}"
+   ]
+  },
+  {
+   "id": "c07-b0110",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0110}}</p>",
+   "segs": [
+    "{{S:c07-s0110}}"
+   ]
+  },
+  {
+   "id": "c07-b0111",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0111}}</p>",
+   "segs": [
+    "{{S:c07-s0111}}"
+   ]
+  },
+  {
+   "id": "c07-b0112",
+   "kind": "figure",
+   "figures": [
+    "chapter-07-fig-03.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c07-b0113",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0112}}</p>",
+   "segs": [
+    "{{S:c07-s0112}}"
+   ]
+  },
+  {
+   "id": "c07-b0114",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0113}}</p>",
+   "segs": [
+    "{{S:c07-s0113}}"
+   ]
+  },
+  {
+   "id": "c07-b0115",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0114}}</p>",
+   "segs": [
+    "{{S:c07-s0114}}"
+   ]
+  },
+  {
+   "id": "c07-b0116",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0115}}</p>",
+   "segs": [
+    "{{S:c07-s0115}}"
+   ]
+  },
+  {
+   "id": "c07-b0117",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0116}}</p>",
+   "segs": [
+    "{{S:c07-s0116}}"
+   ]
+  },
+  {
+   "id": "c07-b0118",
+   "kind": "figure",
+   "figures": [
+    "chapter-07-fig-04.svg"
+   ],
+   "layout": "center"
+  },
+  {
+   "id": "c07-b0119",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0117}}</p>",
+   "segs": [
+    "{{S:c07-s0117}}"
+   ]
+  },
+  {
+   "id": "c07-b0120",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0118}}</p>",
+   "segs": [
+    "{{S:c07-s0118}}"
+   ]
+  },
+  {
+   "id": "c07-b0121",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0119}}</p>",
+   "segs": [
+    "{{S:c07-s0119}}"
+   ]
+  },
+  {
+   "id": "c07-b0122",
+   "kind": "rule"
+  },
+  {
+   "id": "c07-b0123",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0120}}</p>",
+   "segs": [
+    "{{S:c07-s0120}}"
+   ]
+  },
+  {
+   "id": "c07-b0124",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0121}}</p>",
+   "segs": [
+    "{{S:c07-s0121}}"
+   ]
+  },
+  {
+   "id": "c07-b0125",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0122}}</p>",
+   "segs": [
+    "{{S:c07-s0122}}"
+   ]
+  },
+  {
+   "id": "c07-b0126",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0123}}</p>",
+   "segs": [
+    "{{S:c07-s0123}}"
+   ]
+  },
+  {
+   "id": "c07-b0127",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0124}}</p>",
+   "segs": [
+    "{{S:c07-s0124}}"
+   ]
+  },
+  {
+   "id": "c07-b0128",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0125}}</p>",
+   "segs": [
+    "{{S:c07-s0125}}"
+   ]
+  },
+  {
+   "id": "c07-b0129",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0126}}</p>",
+   "segs": [
+    "{{S:c07-s0126}}"
+   ]
+  },
+  {
+   "id": "c07-b0130",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0127}}</p>",
+   "segs": [
+    "{{S:c07-s0127}}"
+   ]
+  },
+  {
+   "id": "c07-b0131",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0128}}</p>",
+   "segs": [
+    "{{S:c07-s0128}}"
+   ]
+  },
+  {
+   "id": "c07-b0132",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0129}}</p>",
+   "segs": [
+    "{{S:c07-s0129}}"
+   ]
+  },
+  {
+   "id": "c07-b0133",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0130}}</p>",
+   "segs": [
+    "{{S:c07-s0130}}"
+   ]
+  },
+  {
+   "id": "c07-b0134",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0131}}</p>",
+   "segs": [
+    "{{S:c07-s0131}}"
+   ]
+  },
+  {
+   "id": "c07-b0135",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0132}}</p>",
+   "segs": [
+    "{{S:c07-s0132}}"
+   ]
+  },
+  {
+   "id": "c07-b0136",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0133}}</p>",
+   "segs": [
+    "{{S:c07-s0133}}"
+   ]
+  },
+  {
+   "id": "c07-b0137",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0134}}</p>",
+   "segs": [
+    "{{S:c07-s0134}}"
+   ]
+  },
+  {
+   "id": "c07-b0138",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0135}}</p>",
+   "segs": [
+    "{{S:c07-s0135}}"
+   ]
+  },
+  {
+   "id": "c07-b0139",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0136}}</p>",
+   "segs": [
+    "{{S:c07-s0136}}"
+   ]
+  },
+  {
+   "id": "c07-b0140",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0137}}</p>",
+   "segs": [
+    "{{S:c07-s0137}}"
+   ]
+  },
+  {
+   "id": "c07-b0141",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0138}}</p>",
+   "segs": [
+    "{{S:c07-s0138}}"
+   ]
+  },
+  {
+   "id": "c07-b0142",
+   "kind": "center",
+   "skeleton": "<center><div class=\"dz-card dz-mono\" style=\"font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55\"><div class=\"dz-line\" style=\"margin:3px 0;padding-left:2ch\">{{S:c07-s0139}}</div></div></center>",
+   "segs": [
+    "{{S:c07-s0139}}"
+   ]
+  },
+  {
+   "id": "c07-b0143",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0140}}</p>",
+   "segs": [
+    "{{S:c07-s0140}}"
+   ]
+  },
+  {
+   "id": "c07-b0144",
+   "kind": "p",
+   "skeleton": "<p>{{S:c07-s0141}}</p>",
+   "segs": [
+    "{{S:c07-s0141}}"
+   ]
+  }
+ ],
+ "figures": [
+  "chapter-07-fig-01.svg",
+  "chapter-07-fig-02.svg",
+  "chapter-07-fig-03.svg",
+  "chapter-07-fig-04.svg"
+ ]
+}

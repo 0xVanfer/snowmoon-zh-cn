@@ -1,0 +1,978 @@
+{
+ "chapter": 29,
+ "segments": [
+  {
+   "id": "c29-s0001",
+   "role": "title",
+   "text": "Chapter 29",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0002",
+   "role": "place",
+   "text": "Elenar Forest, Veridia",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0003",
+   "role": "date",
+   "text": "3725 Snowmoon 29",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0004",
+   "role": "p",
+   "text": "Zei and Mu were standing on top of a snowy hill. Green pine trees covered with thick white snow lined the surroundings as far as their eyes could see. A strong cold wind blew into their faces. The rest of their bodies were shielded by jackets covered in a mixture of white and grey, thick enough to allow them to enjoy the surroundings but deliberately not quite thick enough for them to feel warm. Just above the trees in the distance was the sun that had just risen in the east.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0005",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"So this is where our future will be decided\"</c>, Mu said calmly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0006",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Do you think we're ready?\"</c>, Zei asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0007",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"No\"</c>, Mu replied. <c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"But nothing meaningful ever happens when people are ready.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0008",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"What we hope is that the Arctics are less ready than we are.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0009",
+   "role": "p",
+   "text": "Behind them, they could hear footsteps slowly walking up the hill, each step coming about a tick after the previous, fighting the deep snow. After a few moments, Zei felt someone hugging him from behind.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0010",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Whatever happens today, Zei, I am happy that I got to know you.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0011",
+   "role": "p",
+   "text": "It was Bai. Zei turned around and grabbed her hand, pulling her up the final step so that she could be at the same height as him and Mu.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0012",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I am happy that I got to know you too.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0013",
+   "role": "p",
+   "text": "For a few moments, the three of them waited in silence, observing the snow blowing through and over the trees to their east.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0014",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"So what's the plan?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0015",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Last train to Eldil is arriving today. At this point, there's no way the Arctics don't know that we have some kind of large contingent here. So I'm sure they're already starting to prepare their army to meet us. These forests are hard to navigate through, but not infinitely hard. So our best chance is to strike tonight, push into the northern part of Northshore from the west, completely bypass Northglade and then cut off and surround it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0016",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Are you confident in the plan?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0017",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"In my last battle against the Arctics, I screwed up completely and Mu saved the day. So no, I'm not confident. But this is the best chance we have.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0018",
+   "role": "p",
+   "text": "Bai hugged Zei again from the side.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0019",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"I believe in you.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0020",
+   "role": "p",
+   "text": "Mu broke her silence. <c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"I believe in you too, Zei.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0021",
+   "role": "p",
+   "text": "They silently stared at the thick snowy forest of pine trees for another five minutes, and then started to slowly walk back down toward their makeshift bunker.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0022",
+   "role": "p",
+   "text": "Den, Mu, Zei and several dozen other Veridian generals and Kungaupei leaders were sitting inside of a cramped room, where Lektor was standing at the front presenting.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0023",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Alright, does everyone know their tasks?\"</c>, Lektor asked loudly. <c st=\"color:oklch(0.7 0.15 160)\">\"Gallowar?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0024",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"I'm leading Group North, our task is to cross the forest, move far northeast until we get to the coast, and set up a perimeter cutting the Arctics off from the whole peninsula. This will require fighting and surrounding the Arctic force in Northshore on my southern flank, as well as warding off any reinforcements on my northern flank.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0025",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Good! You, Telpo?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0026",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"I'm leading Group Center, our task is to cross the forest directly east. We are expecting to be fighting the primary Arctic drone group. No offensive positional objective, our job is to keep them occupied and make sure they don't break through.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0027",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"And you, Den?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0028",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'm leading Group South, our task is to cross the forest, move toward the southeast, and then set up a perimeter on the outskirts of Northglade.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0029",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Vakaria?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0030",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"I'm leading Group Naval, our main task is to attack Northshore east of Northglade from the south with seaborne drones. Distract and surround to the best of my ability. Stretch goal is to also attack the Arctic core territory further east on Thaldur Island.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0031",
+   "role": "p",
+   "text": "After Vakaria finished answering, there was a moment of silence. Finally, Lektor spoke again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0032",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Zei?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0033",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Supervise all fronts, identify any necessary changes to strategy and tactics in the drone combat.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0034",
+   "role": "p",
+   "text": "Lektor turned back to look at the screen again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0035",
+   "role": "p",
+   "text": "Everything that the group leaders had said seemed to match the plan that was on the map.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0036",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Alright, very good. Sounds like we all know what we need to do. Everyone, dismissed. You all have three longhours to make your final preparations. We launch at sundown.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0037",
+   "role": "p",
+   "text": "Zei, Bai and Mu were standing once again at the top of the hill. The sun was by this point just barely above the horizon behind them, minutes away from setting. The pine trees were snowy as before. But the landscape had radically changed. There were thousands of snowmobile-like contraptions sitting at the edge of the forest. Many were visibly equipped with weapons. Zei could make out a large number of thin silver lines glimmering in the sunlight, starting from the rear of many of the largest snow drones and stretching back as far as he could see. Fiber optic cables, he realized. They would stretch for hundreds of kilometers tonight - and they are what would allow Zei to reliably stay in contact with the drones as the front advanced.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0038",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Wait, is that a box of <e>printers</e> on top of one of the drones?\"</c>, Bai suddenly asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0039",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Yep. There's also other drones that are carrying stick-on paper and shirts. A lot of classroom equipment. Just in case we need to rapidly apply visual attacks on the Arctic drones' algorithms.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0040",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"I see...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0041",
+   "role": "p",
+   "text": "Zei's watch buzzed. He turned around, and saw that the bottom of the sun had already begun receding below the horizon. \"Fi le gei fa\", he thought - one hundred ticks until it begins. He reminisced about all of the Minpentai games, from practice to championship, that he had played over the past decade. Without realizing it, all that time he had been training for the one game that really mattered: tonight.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0042",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Time to get back to our command post\"</c>, Mu said softly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0043",
+   "role": "p",
+   "text": "Zei turned around. The sun was already halfway below the horizon.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0044",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Indeed, we should.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0045",
+   "role": "p",
+   "text": "The three of them walked back slowly to their bunker at the bottom of the hill. They opened the door, walked in, took off their snowshoes and closed the door.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0046",
+   "role": "p",
+   "text": "As soon as they were inside, a robot slid up to them, bringing tea.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0047",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Thank you\"</c>, Mu gently whispered, patting the robot on its head and taking her tea. The robot beeped softly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0048",
+   "role": "p",
+   "text": "Zei and Bai also picked up their teas.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0049",
+   "role": "p",
+   "text": "Zei's watch buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0050",
+   "role": "p",
+   "text": "He heard noises of snow drones accelerating outside.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0051",
+   "role": "p",
+   "text": "The mission had begun.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0052",
+   "role": "date",
+   "text": "3725 Snowmoon 30",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0053",
+   "role": "p",
+   "text": "Zei and Mu were sitting on their chairs in adjacent but separate rooms. They could each see the same command screen. On the top left, the clock was showing the time. It had just struck midnight.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0054",
+   "role": "p",
+   "text": "All three land army groups were advancing forward quickly. The launch of the Naval group was delayed, so that its assault would come shortly after the beginning of the main battle. So far, the three main army groups had easily defeated a few small Arctic sentry units, and were continuing to proceed at full speed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0055",
+   "role": "p",
+   "text": "An alarm blared.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0056",
+   "role": "p",
+   "text": "Zei immediately saw the cause on the map.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0057",
+   "role": "p",
+   "text": "Zei could hear Gallowar and Telpo coordinating in the chat.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0058",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Adopting defensive positions, spreading out to prevent encirclement\"</c>, Gallowar shouted.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0059",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 266.66666666666663)\">\"Sending part of Group Center northward to attack from behind\"</c>, Telpo replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0060",
+   "role": "p",
+   "text": "Zei zoomed in. The Veridian and Arctic drone army groups were quickly closing in on each other. They were firing a few long-range weapons, and ten drones from Group North had already been disabled - on top of the few dozen that had already been lost to stationary Arctic traps scattered throughout the forest - but so far the main hostilities had not yet begun.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0061",
+   "role": "p",
+   "text": "Over the past month and a half, he had played simulations of forest snow drone combat hundreds of times, and he knew what the best strategies were for detection, hiding, attacking and taking cover. The strategies had already been loaded into the drones' AI models.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0062",
+   "role": "p",
+   "text": "A visual image appeared onscreen. It was the exact design of the Arctic snow drone. It was slightly different from the images he had seen before - faster and more agile, better protected against stationary traps, and with better defenses on the sides and back. The Arctics had been anticipating another rapid offensive campaign, he realized. These improvements came at the expense of effectiveness in traditional fixed face-to-face combat. The Veridian snow drone fleet had made some similar modifications, but to a significantly lesser extent. Hence the battle style that was most to their advantage seemed to be ... direct face-to-face combat with fixed battle lines.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0063",
+   "role": "p",
+   "text": "Not good, Zei thought - the Arctic drone fleet was larger. They would have to make up for it with better micro-tactics.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0064",
+   "role": "p",
+   "text": "A few minutes later, the drone fleets came close enough to clash. The Veridian drone fleet pre-emptively cut down a large number of trees to prevent encirclement, particularly on its north flank. Gallowar's strategy was simple: delay in the north, fight in the east. In about twenty minutes, Telpo's fleet would attack the eastern Arctic group from the south, and hopefully surround and defeat it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0065",
+   "role": "p",
+   "text": "Zei watched carefully. Drone casualty counts were starting to increase rapidly on both sides. Soon, both the Veridian and Arctic losses spiked above a hundred.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0066",
+   "role": "p",
+   "text": "Zei continued scrolling through all of the visual feeds. He saw some large boxes on top of Gallowar's largest snow drones open up. A large fleet of Helisport copters and delivery copters, seemingly modified to carry more dangerous payloads, flew out. Ah right - the Arctic snow drones were also vulnerable from the top. Good job converting civilian infrastructure, Zei thought.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0067",
+   "role": "p",
+   "text": "Embedded in each of the army groups, sitting in the command centers safely far behind the front, were a large number of Dzego's best Minpentai players, which had been quietly flown in by the Kungaupei, as well as some of Veridia's best Helisport players - the two groups with the best hands-on experience understanding airborne duels.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0068",
+   "role": "p",
+   "text": "Zei continued watching. For the moment, Gallowar's strategy seemed to be going well. His army group was successfully slowly retreating on the northern flank while cutting down trees and leaving traps, and the battle on the eastern flank was progressing smoothly. Exact casualty ratios were difficult to determine, but from the numbers that appeared onscreen, it was significantly in the Veridians' favor.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0069",
+   "role": "p",
+   "text": "Forty minutes later, he saw the good news that mattered: Gallowar's forces had broken through between the Arctic north and east flanks, and Telpo's fleet had begun engaging the Arctic east flank from the south.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0070",
+   "role": "p",
+   "text": "Soon, Arctic snow drones in the east began to get rapidly disabled, while Gallowar's western flank continued its slow retreat to slow the Arctic northern flank down. The Arctic drones attempted to replicate the slow retreat strategy, but without success: by that point, Telpo had succeeded at almost completely surrounding them, and they had nowhere to go.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0071",
+   "role": "p",
+   "text": "A few minutes later, Gallowar declared the Arctic drone fleet sufficiently defeated. He ordered his eastern flank to go around them to avoid any risk that partially disabled remnants or their traps would cause damage, and then continue northeastward full speed ahead.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0072",
+   "role": "p",
+   "text": "Zei zoomed out, and looked at the big-picture view again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0073",
+   "role": "p",
+   "text": "Another one and a half longhours passed, and all four Veridian drone fleets continued advancing - except for the small offshoot that Gallowar had left behind to delay the contingent of Arctic drones to its north.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0074",
+   "role": "p",
+   "text": "An alarm blared again. This time, it was Group Center and Group South that were both under threat.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0075",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Alright everyone\"</c>, Lektor shouted. <c st=\"color:oklch(0.7 0.15 160)\">\"This is the real deal.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0076",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Defensive positions, slow retreat in the center and attempt flanking on the sides. Be careful, minimize our losses and maximize theirs. Do not let them break our positions.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0077",
+   "role": "p",
+   "text": "A few moments later, he added:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0078",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"For Veridia!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0079",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Dze go ba fau gie\"</c>, Den shouted immediately after.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0080",
+   "role": "p",
+   "text": "Zei directed the drones to begin using all their tactics, including the ones that he had learned from the clandestine battles in Redshire months earlier. They would only work for a short time before the Arctics adapted, he knew, but it was now or never.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0081",
+   "role": "p",
+   "text": "Both sides' drone fleets spread out and created defensive lines. On the fully zoomed-out map, Zei could see the lines slowly come closer. A few minutes later, the clash began. Losses quickly pushed into the hundreds on both sides.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0082",
+   "role": "p",
+   "text": "Gallowar's northern group suddenly switched from retreat to advance and began using the same tactics.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0083",
+   "role": "p",
+   "text": "Zei watched carefully, holding his breath. He scrolled through small-scale tactical maps and real-time visual feeds.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0084",
+   "role": "p",
+   "text": "Something was wrong, he realized.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0085",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Emerald, analyze all micro-tactical and visual fields, determine which tactics are effective.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0086",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Analyzing...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0087",
+   "role": "p",
+   "text": "About twenty ticks later, Emerald responded.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0088",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Tactics one and five working with medium effectiveness. Tactics two, three, four, six have zero or slightly negative effect, Arctics appear fully adapted.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0089",
+   "role": "p",
+   "text": "Zei groaned. Despite his best efforts, he knew, the Arctics must have successfully recovered at least some of the visual feeds from the drones in Redshire that he and the Freetown defense companies had trained on.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0090",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"All units, cease using tactics two, three, four and six. Use tactics one and five. Units with IDs ending in 0 or 5, explore random modifications.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0091",
+   "role": "p",
+   "text": "For a few minutes, the casualty ratios moved in favor of the Veridian armies again. Then, slowly but surely, the Arctics again started to gain the upper hand.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0092",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Emerald, which modifications are successful?\"</c>, he asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0093",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Eight were attempted. Only number seven was successful, and has already been introduced as the mainline version of tactic five. Recommend retiring tactic one.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0094",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Do it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0095",
+   "role": "p",
+   "text": "Zei began to sweat with consternation. He had not anticipated the Arctics being able to resist their tactics so effectively.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0096",
+   "role": "p",
+   "text": "Come on, Zei thought. Think of something.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0097",
+   "role": "p",
+   "text": "The seaborne drones appeared to have been successful, at least in the early stages of their assault. They had landed ground craft, both east of Northglade and in Arctic core territory in Telten hundreds of kilometers further east. The seaborne drones had already begun returning to base, to receive their second round of payloads.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0098",
+   "role": "p",
+   "text": "For a moment, Zei was pleased. But it was still far from enough.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0099",
+   "role": "p",
+   "text": "A robot entered the room, and quietly slid up to Zei with an energy drink. Zei picked it up, gulped about half of it, and set the rest down on the table. Within moments, it took effect - but the only effect seemed to be to make Zei despair even harder.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0100",
+   "role": "p",
+   "text": "And a moment later, a message appeared onscreen that drained away all of the remaining light in Zei's eyes.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0101",
+   "role": "p",
+   "text": "Rear base #3 appears to have been completely destroyed by highly accurate hits from Arctic missiles.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0102",
+   "role": "p",
+   "text": "Most likely cause: internal traitors revealed the location of the base.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0103",
+   "role": "p",
+   "text": "Current expectation is that almost all personnel in the base did not survive. Probability that Den, commander of Group South, survived is estimated at under 10%.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0104",
+   "role": "p",
+   "text": "Zei began to cry.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0105",
+   "role": "p",
+   "text": "For the next few minutes, he half-heartedly whispered into his microphone, proposing minor adjustments to drone tactics, trying to optimize positional advantage and casualty ratios. Mu had immediately taken over as the commander of Group South. But in his heart, he knew that the battle was lost.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0106",
+   "role": "p",
+   "text": "And at that moment, Zei's watch buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0107",
+   "role": "p",
+   "text": "This was not a standard military communication channel. And this was something that Emerald deemed important enough to override his strict \"do not disturb\" instruction.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0108",
+   "role": "p",
+   "text": "Zei whispered into his neck band to connect the watch to the display in his glasses. A message appeared onscreen.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0109",
+   "role": "p",
+   "text": "This is Deluin.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0110",
+   "role": "p",
+   "text": "Over these past months, I have been executing on my plan. I have earned the Arctics' trust; with the combination of my successful Minpentai background and my parents' status, this proved to be easy. As a result, I am now one of the commanders on the Arctic side.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0111",
+   "role": "p",
+   "text": "We are being heavily surveilled, and there are great limits to what I can do to the Arctic drone fleet without blowing my cover. However, I have managed to set up an exploitable weakness for you.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0112",
+   "role": "p",
+   "text": "This file contains descriptions of tactics that should be effective specifically against the southern flank, which I control. If you apply them, you should be able to break through about twenty kilometers north of the shore, and then proceed north and south to expand the rupture into a complete victory on the southern front.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0113",
+   "role": "p",
+   "text": "From there, it will be up to you to surround the remaining forces from the south, and recover Northglade.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0114",
+   "role": "p",
+   "text": "Almost immediately, a burst of energy returned to Zei's mind. He would have to mourn the loss of Den another day.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0115",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Emerald, confirm the authenticity of this message.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0116",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Message was signed by the same key that was embedded in Deluin's original message that you received on Grapetime 15.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0117",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Analyze the tactics, do they seem plausible?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0118",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Tactics are highly aggressive. They seem unorthodox, but plausible. They will be very effective against an opponent that is vulnerable to them, but will lead to much faster defeat against an opponent that is not. Running a simulation.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0119",
+   "role": "p",
+   "text": "About twenty ticks later, Emerald spoke again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0120",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Tactics would lead to faster defeat if used against Veridian, Kungaupei or Freetown AI. Their effectiveness hinges entirely on Deluin being correct that the Arctic AI has the particular weakness that he is positing, which could be either discovered or planted.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0121",
+   "role": "p",
+   "text": "Zei thought for a moment, and then decided to ask for human help.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0122",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Bai, I'm sending you a message from Deluin. Please tell me what you think of it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0123",
+   "role": "p",
+   "text": "Bai responded almost immediately.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0124",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Reading now.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0125",
+   "role": "p",
+   "text": "About thirty ticks later, she responded again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0126",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"I don't know if we can trust Deluin. All that we have to go on is his word. Even his message to you back in Grapetime could have been planted. The Arctics are fully capable of these kinds of strategies, Delwart had planted evidence for months against Gladias and Mov.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0127",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"But I have a different idea.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0128",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I'm listening.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0129",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"We have no good reason to trust Deluin. But Deluin has every reason to trust us. So we flip it around on him. It's his responsibility to take the first leap of faith.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0130",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"And what do you want him to do?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0131",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Send us the raw weights from the Arctic drones' AI model.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0132",
+   "role": "p",
+   "text": "Bai paused for a moment, and continued.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0133",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"AI models are not like regular software, where you can analyze the whole thing and identify safety properties and mathematically prove them secure. They're unpredictable beasts - they are grown, not forged. They don't have walls, they have immune systems. And so if we have the raw weights, we can run simulations in parallel and optimize attacks that will trick them.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0134",
+   "role": "p",
+   "text": "Zei's mood once again became brighter.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0135",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"It's actually much easier than running simulations in parallel. You use gradient descent. You can take the derivative of the outcome of the model in the simulator against all of the variables that we can change in the field - drawings that we stick on the side of the drone, the way the drone acts. You automatically identify the small change that will maximize the increase in the probability that their model fails to notice our drone. Even a small step that increases the chance they don't notice one of our drones from one in a million to two in a million can immediately be found.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0136",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"You keep finding adjustments that maximize the likelihood of success. Try different simulators with different parameters - remember, the final attack would appear in the real world, not inside a simulator, so the best we can do is filter for changes that are robust across different simulators. And after a million rounds, hopefully we will have something that works quite well, and in real life. To us humans, it will probably be a bunch of squiggles that look incomprehensible and weird. To the AI that we're optimizing this attack for, it's like a magical snake with a deadly stare looking at you right in your face.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0137",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"We probably can't convince their drones to turn against their masters or shut down, but we can get them to not notice our drones, maybe even shoot their own feet and overheat and become disabled.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0138",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Wow. Alright then, let's send back a message to Deluin and ask.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c29-s0139",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Emerald, draft a message to Deluin expressing what Bai just said. And send it back through the same steganographic channel that he used. Hopefully, Deluin will understand.\"</c>",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

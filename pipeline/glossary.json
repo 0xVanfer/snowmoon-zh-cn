@@ -16,6 +16,13 @@
    "note": "掌舵会宣谕使，公民大会主持"
   },
   {
+   "en": "Albor",
+   "zh": "阿尔博",
+   "kind": "person",
+   "note": "红郡总统，第15章被北极入侵时身亡",
+   "from": "chapter-15.zh"
+  },
+  {
    "en": "Ancus",
    "zh": "安库斯",
    "kind": "person",
@@ -68,6 +75,13 @@
    "zh": "蔡白",
    "kind": "person",
    "note": "泽国棋手贡蔡白之名"
+  },
+  {
+   "en": "Celedil",
+   "zh": "塞莱迪尔",
+   "kind": "person",
+   "note": "红郡总理",
+   "from": "chapter-15.zh"
   },
   {
    "en": "Chairman",
@@ -125,10 +139,24 @@
    "note": "泽国棋手扎津戈之名"
   },
   {
+   "en": "Egardo",
+   "zh": "埃加多",
+   "kind": "person",
+   "note": "翔球比赛中穿紫衫的孩子，紫队第五分",
+   "from": "chapter-11.zh"
+  },
+  {
    "en": "Eighteen",
-   "zh": "十八",
+   "zh": "十八号",
    "kind": "person",
    "note": "棋手昵称，按数字称呼"
+  },
+  {
+   "en": "Eleven",
+   "zh": "十一号",
+   "kind": "person",
+   "note": "掌则人编号，按数字称呼，与第 13 章一致",
+   "from": "chapter-10.zh"
   },
   {
    "en": "Ephelion",
@@ -245,6 +273,13 @@
    "note": "格拉迪亚斯次女"
   },
   {
+   "en": "Meny",
+   "zh": "梅尼",
+   "kind": "person",
+   "note": "翔球比赛中穿紫衫的孩子，紫队第四分",
+   "from": "chapter-11.zh"
+  },
+  {
    "en": "Min",
    "zh": "敏",
    "kind": "person",
@@ -276,8 +311,29 @@
    "note": "泽国棋手潘蒙宝之名"
   },
   {
+   "en": "Nine",
+   "zh": "九号",
+   "kind": "person",
+   "note": "掌则人编号，按数字称呼；自报编号作「我是九」",
+   "from": "chapter-10.zh"
+  },
+  {
+   "en": "number Four",
+   "zh": "四号",
+   "kind": "person",
+   "note": "掌则人圈内的编号称呼；同类：二十号、十一号、一号、六号、九号、十八号、零号",
+   "from": "chapter-10.zh"
+  },
+  {
+   "en": "number Twenty",
+   "zh": "二十号",
+   "kind": "person",
+   "note": "掌则人编号",
+   "from": "chapter-10.zh"
+  },
+  {
    "en": "One",
-   "zh": "一",
+   "zh": "一号",
    "kind": "person",
    "note": "掌则人编号，以数字相称",
    "from": "chapter-13.zh"
@@ -301,6 +357,20 @@
    "note": "掌舵会成员"
   },
   {
+   "en": "Pelow",
+   "zh": "佩洛",
+   "kind": "person",
+   "note": "格拉迪亚斯钱包恢复流程中可能需要的共同签名人",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "Plat",
+   "zh": "普拉特",
+   "kind": "person",
+   "note": "翔球比赛中穿黄衫的孩子，黄队第四分",
+   "from": "chapter-11.zh"
+  },
+  {
    "en": "Seila",
    "zh": "塞拉",
    "kind": "person",
@@ -313,6 +383,13 @@
    "note": "泽国棋手寇塞扎之名"
   },
   {
+   "en": "Selwert",
+   "zh": "塞尔沃特",
+   "kind": "person",
+   "note": "Sewlert 的另一种拼写，同一人物",
+   "from": "chapter-26.zh"
+  },
+  {
    "en": "Senator",
    "zh": "参议员",
    "kind": "person",
@@ -320,8 +397,15 @@
    "from": "chapter-08.zh"
   },
   {
+   "en": "Sewlert",
+   "zh": "塞尔沃特",
+   "kind": "person",
+   "note": "维里迪亚合议庭法官；同章原文亦拼作 Selwert",
+   "from": "chapter-26.zh"
+  },
+  {
    "en": "Six",
-   "zh": "六",
+   "zh": "六号",
    "kind": "person",
    "note": "掌则人编号，以数字相称（同 Eighteen→十八）",
    "from": "chapter-13.zh"
@@ -345,6 +429,13 @@
    "note": "配角"
   },
   {
+   "en": "Taskmaster Jin",
+   "zh": "督赛官金",
+   "kind": "person",
+   "note": "全国赛总负责人；Taskmaster 译「督赛官」，Jin 译「金」",
+   "from": "chapter-12.zh"
+  },
+  {
    "en": "Telpo",
    "zh": "特尔波",
    "kind": "person",
@@ -358,7 +449,7 @@
   },
   {
    "en": "Thirteen",
-   "zh": "十三",
+   "zh": "十三号",
    "kind": "person",
    "note": "掌则人编号，以数字相称",
    "from": "chapter-13.zh"
@@ -389,16 +480,44 @@
   },
   {
    "en": "Zero",
-   "zh": "零",
+   "zh": "零号",
    "kind": "person",
    "note": "掌则人编号，以数字相称",
    "from": "chapter-13.zh"
+  },
+  {
+   "en": "Zevin",
+   "zh": "泽温",
+   "kind": "person",
+   "note": "维里迪亚合议庭法官，对格拉迪亚斯较为同情",
+   "from": "chapter-26.zh"
+  },
+  {
+   "en": "Zume",
+   "zh": "祖梅",
+   "kind": "person",
+   "note": "泽国选手博祖梅之名",
+   "from": "chapter-12.zh"
   },
   {
    "en": "Zven",
    "zh": "兹文",
    "kind": "person",
    "note": "格拉迪亚斯次子"
+  },
+  {
+   "en": "0th street",
+   "zh": "零街",
+   "kind": "place",
+   "note": "帕佛盖都最西边缘的街道",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "17th street",
+   "zh": "十七街",
+   "kind": "place",
+   "note": "帕佛盖都街道；参术语表 20th → 二十街",
+   "from": "chapter-18.zh"
   },
   {
    "en": "20th",
@@ -439,10 +558,24 @@
    "note": "街道"
   },
   {
+   "en": "Beautiful Plants food court",
+   "zh": "美丽植物美食广场",
+   "kind": "place",
+   "note": "萨祖都伦苏街 2415 号的餐饮广场（泽国语 bun kai mo fan）",
+   "from": "chapter-19.zh"
+  },
+  {
    "en": "Belpaki",
    "zh": "贝尔帕基",
    "kind": "place",
    "note": "「阿克」诸城之一"
+  },
+  {
+   "en": "car-free zone",
+   "zh": "无车区",
+   "kind": "place",
+   "note": "梅尔丹卡利马尔一带禁止车辆通行的区域",
+   "from": "chapter-27.zh"
   },
   {
    "en": "Clearhill Ave",
@@ -462,6 +595,13 @@
    "zh": "德文维尔",
    "kind": "place",
    "note": "联合城邦之一"
+  },
+  {
+   "en": "Dolinar",
+   "zh": "多利纳尔",
+   "kind": "place",
+   "note": "红郡境内有大型商业综合体的地点",
+   "from": "chapter-26.zh"
   },
   {
    "en": "dungeon",
@@ -495,6 +635,13 @@
    "note": ""
   },
   {
+   "en": "Eldil",
+   "zh": "埃尔迪尔",
+   "kind": "place",
+   "note": "第 29 章提到的列车终点城镇，位于北岸／北林一带；西方专名音译",
+   "from": "chapter-29.zh"
+  },
+  {
    "en": "Elenar Forest",
    "zh": "埃莱纳森林",
    "kind": "place",
@@ -519,10 +666,24 @@
    "note": ""
   },
   {
+   "en": "Gelebor mountains",
+   "zh": "格勒博尔山脉",
+   "kind": "place",
+   "note": "梅尔丹城外的山脉，术语表 Gelebor 作人名「格勒博尔」",
+   "from": "chapter-26.zh"
+  },
+  {
    "en": "Glasscrown",
    "zh": "琉璃冠",
    "kind": "place",
    "note": "北极城市"
+  },
+  {
+   "en": "government-run hotel",
+   "zh": "政府经营的酒店",
+   "kind": "place",
+   "note": "维里迪亚政府经营、供官员下榻的酒店；第 26 章首见，本章两处沿用",
+   "from": "chapter-27.zh"
   },
   {
    "en": "Greater Plum Harbor",
@@ -567,6 +728,13 @@
    "note": "梅尔丹城区"
   },
   {
+   "en": "Len Su street",
+   "zh": "伦苏街",
+   "kind": "place",
+   "note": "萨祖都街道；地址写作「伦苏街2415号」",
+   "from": "chapter-19.zh"
+  },
+  {
    "en": "Mabuli",
    "zh": "马布利",
    "kind": "place",
@@ -583,6 +751,13 @@
    "zh": "梅尔丹",
    "kind": "place",
    "note": "维里迪亚首都"
+  },
+  {
+   "en": "Messalia",
+   "zh": "梅萨利亚",
+   "kind": "place",
+   "note": "维里迪亚南方的国家／地区；第 28 章登列出北极扩张路线时提到",
+   "from": "chapter-28.zh"
   },
   {
    "en": "mountain pyramid",
@@ -603,6 +778,13 @@
    "zh": "北林",
    "kind": "place",
    "note": "维里迪亚边城"
+  },
+  {
+   "en": "Northglade Science Center",
+   "zh": "北林科学中心",
+   "kind": "place",
+   "note": "Northglade → 北林（维里迪亚边城）",
+   "from": "chapter-10.zh"
   },
   {
    "en": "Northshore",
@@ -629,6 +811,13 @@
    "note": "Du＝都，城市"
   },
   {
+   "en": "Pafogai Du grand library",
+   "zh": "帕佛盖都大图书馆",
+   "kind": "place",
+   "note": "帕佛盖都山体金字塔内的图书馆，藏书区被有意造成迷宫",
+   "from": "chapter-19.zh"
+  },
+  {
    "en": "Petersvil",
    "zh": "彼得斯维尔",
    "kind": "place",
@@ -639,6 +828,13 @@
    "zh": "梅港",
    "kind": "place",
    "note": ""
+  },
+  {
+   "en": "rear base #3",
+   "zh": "后方基地3号",
+   "kind": "place",
+   "note": "被北极导弹摧毁的维里迪亚后方基地",
+   "from": "chapter-29.zh"
   },
   {
    "en": "Redshire",
@@ -669,6 +865,20 @@
    "zh": "空中步道",
    "kind": "place",
    "note": ""
+  },
+  {
+   "en": "Tan Kai",
+   "zh": "檀凯街",
+   "kind": "place",
+   "note": "帕佛盖都街道；门牌号本身即米数",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "Telten",
+   "zh": "特尔滕",
+   "kind": "place",
+   "note": "北林以东数百公里的北极核心领土地区；西方专名音译",
+   "from": "chapter-29.zh"
   },
   {
    "en": "Thaldur",
@@ -713,6 +923,13 @@
    "note": ""
   },
   {
+   "en": "Zin Go",
+   "zh": "津戈街",
+   "kind": "place",
+   "note": "帕佛盖都街道，金字塔坡道前的倒数第二条街",
+   "from": "chapter-18.zh"
+  },
+  {
    "en": "Acolyte",
    "zh": "见习官",
    "kind": "org",
@@ -738,6 +955,13 @@
    "from": "chapter-09.zh"
   },
   {
+   "en": "circle of Keepers",
+   "zh": "掌则人小组",
+   "kind": "org",
+   "note": "掌则人为讨论单一议题而分组的小团体",
+   "from": "chapter-11.zh"
+  },
+  {
    "en": "citizens' assembly",
    "zh": "公民大会",
    "kind": "org",
@@ -749,6 +973,13 @@
    "zh": "合议庭",
    "kind": "org",
    "note": "匿名随机抽选的委员会"
+  },
+  {
+   "en": "defense company",
+   "zh": "防务公司",
+   "kind": "org",
+   "note": "自由城的私营防务企业，庇护所与武器皆由其经营",
+   "from": "chapter-22.zh"
   },
   {
    "en": "Divergent",
@@ -774,6 +1005,20 @@
    "kind": "org",
    "note": "Decentralized University 的地方分部／分支",
    "from": "chapter-05.zh"
+  },
+  {
+   "en": "Freetown corps",
+   "zh": "自由城防卫队",
+   "kind": "org",
+   "note": "承第 23 章 Freetown defense corps 译法；本章原文简称 corps，指与昆高培合作的自由城防务组织",
+   "from": "chapter-24.zh"
+  },
+  {
+   "en": "Freetown defense corps",
+   "zh": "自由城防卫队",
+   "kind": "org",
+   "note": "愿意与昆高培合作的自由城防务组织",
+   "from": "chapter-23.zh"
   },
   {
    "en": "Freetown Economics Institute",
@@ -804,6 +1049,13 @@
    "zh": "最高评议会",
    "kind": "org",
    "note": "昆高培领导机构"
+  },
+  {
+   "en": "Ichara",
+   "zh": "伊查拉",
+   "kind": "org",
+   "note": "自由城如今有名的防卫公司之一，扬照片中厂房的标志",
+   "from": "chapter-31.zh"
   },
   {
    "en": "Jump",
@@ -856,6 +1108,13 @@
    "from": "chapter-07.zh"
   },
   {
+   "en": "public safety agency",
+   "zh": "公共安全机构",
+   "kind": "org",
+   "note": "与地方环境机构并列，德尔瓦特主张其应有广泛数据访问权限",
+   "from": "chapter-20.zh"
+  },
+  {
    "en": "Sentinel",
    "zh": "监审官",
    "kind": "org",
@@ -868,10 +1127,31 @@
    "note": ""
   },
   {
+   "en": "shadow military",
+   "zh": "影子军队",
+   "kind": "org",
+   "note": "格拉迪亚斯所称泽国以民本棋锦标赛培养的秘密军事力量",
+   "from": "chapter-21.zh"
+  },
+  {
+   "en": "Transportation Ministry",
+   "zh": "交通部",
+   "kind": "org",
+   "note": "维里迪亚政府部门，曾以行政调整放宽公共场所监控摄像头的用途限制",
+   "from": "chapter-24.zh"
+  },
+  {
    "en": "Veridia National University",
    "zh": "维里迪亚国立大学",
    "kind": "org",
    "note": "简称 VNU"
+  },
+  {
+   "en": "VNU Materials Science Lab",
+   "zh": "维里迪亚国立大学材料科学实验室",
+   "kind": "org",
+   "note": "VNU 为 Veridia National University 缩写",
+   "from": "chapter-17.zh"
   },
   {
    "en": "air filter",
@@ -887,16 +1167,58 @@
    "note": "阻断无线信号的材料"
   },
   {
+   "en": "anti-transmission room",
+   "zh": "隔信室",
+   "kind": "tech",
+   "note": "四壁封死无线信号的房间，与术语表 anti-transmission foil → 隔信箔 同族",
+   "from": "chapter-32.zh"
+  },
+  {
+   "en": "attack drone",
+   "zh": "攻击无人机",
+   "kind": "tech",
+   "note": "负责补刀的无人机，画面中为蓝色三角形",
+   "from": "chapter-22.zh"
+  },
+  {
    "en": "autobus",
    "zh": "巴士",
    "kind": "tech",
    "note": ""
   },
   {
+   "en": "battle drone",
+   "zh": "战斗无人机",
+   "kind": "tech",
+   "note": "",
+   "from": "chapter-10.zh"
+  },
+  {
+   "en": "black car",
+   "zh": "黑色轿车",
+   "kind": "tech",
+   "note": "泽国安保升级后使用的隐私轿车，车窗为仿真窗，并参与车厢互换",
+   "from": "chapter-18.zh"
+  },
+  {
    "en": "Bluewhale",
    "zh": "蓝鲸",
    "kind": "tech",
    "note": "社交平台"
+  },
+  {
+   "en": "Bluewhale Messenger",
+   "zh": "蓝鲸通讯",
+   "kind": "tech",
+   "note": "蓝鲸平台的通讯应用；参术语表 Bluewhale → 蓝鲸",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "call booth",
+   "zh": "通话亭",
+   "kind": "tech",
+   "note": "餐厅附近的隔音通话空间",
+   "from": "chapter-22.zh"
   },
   {
    "en": "compute box",
@@ -919,6 +1241,13 @@
    "from": "chapter-09.zh"
   },
   {
+   "en": "digital archive node",
+   "zh": "数字档案节点",
+   "kind": "tech",
+   "note": "山体金字塔内存储档案的节点",
+   "from": "chapter-19.zh"
+  },
+  {
    "en": "Emerald",
    "zh": "翡翠",
    "kind": "tech",
@@ -930,6 +1259,27 @@
    "kind": "tech",
    "note": "far-UVC disinfection lights → 远紫外消毒灯",
    "from": "chapter-06.zh"
+  },
+  {
+   "en": "forecaster bots",
+   "zh": "预测机器人",
+   "kind": "tech",
+   "note": "第 27 章银聊 Predict 排行榜上表现最好的五支机器人，此处指它们",
+   "from": "chapter-28.zh"
+  },
+  {
+   "en": "formal verification",
+   "zh": "形式化验证",
+   "kind": "tech",
+   "note": "",
+   "from": "chapter-10.zh"
+  },
+  {
+   "en": "ground drone",
+   "zh": "地面无人机",
+   "kind": "tech",
+   "note": "北极在红郡部署的陆行无人机",
+   "from": "chapter-22.zh"
   },
   {
    "en": "hand device",
@@ -945,10 +1295,31 @@
    "from": "chapter-07.zh"
   },
   {
+   "en": "hash-based signatures",
+   "zh": "基于哈希的签名",
+   "kind": "tech",
+   "note": "后量子签名方案",
+   "from": "chapter-10.zh"
+  },
+  {
    "en": "Hydrafill",
    "zh": "海德菲尔",
    "kind": "tech",
    "note": "饮品品牌"
+  },
+  {
+   "en": "jammer drone",
+   "zh": "干扰无人机",
+   "kind": "tech",
+   "note": "在六边形阵位上压制通信的无人机，画面中为蓝色圆圈",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "journaling file system",
+   "zh": "日志式文件系统",
+   "kind": "tech",
+   "note": "用于沙盒内回滚到初始状态",
+   "from": "chapter-19.zh"
   },
   {
    "en": "mixnet",
@@ -964,11 +1335,25 @@
    "note": "喉部震动发声通讯器"
   },
   {
+   "en": "nonlinear junction detector",
+   "zh": "非线性结检测器",
+   "kind": "tech",
+   "note": "用于探测隐藏电子器件的设备",
+   "from": "chapter-10.zh"
+  },
+  {
    "en": "ozone-based electric water disinfection pen",
    "zh": "臭氧电动水消毒笔",
    "kind": "tech",
    "note": "锦标赛小礼品",
    "from": "chapter-07.zh"
+  },
+  {
+   "en": "personal copter",
+   "zh": "个人飞行器",
+   "kind": "tech",
+   "note": "翔球选手乘坐的单人小型飞行器，顶上带旋翼与护罩；第 5 章 copter 作「小型飞行器」",
+   "from": "chapter-11.zh"
   },
   {
    "en": "privacy robe",
@@ -977,10 +1362,45 @@
    "note": ""
   },
   {
+   "en": "rotor shield",
+   "zh": "旋翼护罩",
+   "kind": "tech",
+   "note": "个人飞行器旋翼外圈的护罩，可互相碰撞而不伤人",
+   "from": "chapter-11.zh"
+  },
+  {
+   "en": "seaborne drone",
+   "zh": "海上无人机",
+   "kind": "tech",
+   "note": "海上接送与运输用无人机；第 22、29 章亦出现",
+   "from": "chapter-26.zh"
+  },
+  {
    "en": "Silverchat",
    "zh": "银聊",
    "kind": "tech",
    "note": "社交平台"
+  },
+  {
+   "en": "Silverchat Predict",
+   "zh": "银聊预测",
+   "kind": "tech",
+   "note": "银聊的预测市场功能，允许用户或机器人对未来事件下注",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "sky drone",
+   "zh": "空中无人机",
+   "kind": "tech",
+   "note": "与 snow drone「雪地无人机」并列的空中无人载具；第 30 章首见",
+   "from": "chapter-30.zh"
+  },
+  {
+   "en": "snow drone",
+   "zh": "雪地无人机",
+   "kind": "tech",
+   "note": "第 29 章森林战役中的无人载具；snow drone fleet → 雪地无人机机队",
+   "from": "chapter-29.zh"
   },
   {
    "en": "soundproof barrier",
@@ -988,6 +1408,20 @@
    "kind": "tech",
    "note": "演唱会场地外围的高墙",
    "from": "chapter-01.zh"
+  },
+  {
+   "en": "stateless tree-of-tree-based",
+   "zh": "无状态的树套树结构",
+   "kind": "tech",
+   "note": "基于哈希签名的一类构造",
+   "from": "chapter-10.zh"
+  },
+  {
+   "en": "steganographic channel",
+   "zh": "隐写信道",
+   "kind": "tech",
+   "note": "德鲁因与泽之间传递隐蔽消息的通道",
+   "from": "chapter-29.zh"
   },
   {
    "en": "subvocalization neck band",
@@ -1004,11 +1438,32 @@
    "from": "chapter-06.zh"
   },
   {
+   "en": "thermal cloak",
+   "zh": "隔热斗篷",
+   "kind": "tech",
+   "note": "降低被侦测概率的披挂装备；第 30 章亦出现",
+   "from": "chapter-26.zh"
+  },
+  {
    "en": "trust list",
    "zh": "信任列表",
    "kind": "tech",
    "note": "手表／本地 AI 的信任联系列表，控制位置共享等权限",
    "from": "chapter-03.zh"
+  },
+  {
+   "en": "view-once file",
+   "zh": "阅后即焚文件",
+   "kind": "tech",
+   "note": "限时五分钟查看、不可复制、到期自删的文件",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "wastewater scanning",
+   "zh": "污水扫描",
+   "kind": "tech",
+   "note": "通过污水检测公共卫生指标的技术，涉及隐私争议",
+   "from": "chapter-11.zh"
   },
   {
    "en": "watch",
@@ -1052,10 +1507,31 @@
    "from": "chapter-01.zh"
   },
   {
+   "en": "aggregate-and-group devices",
+   "zh": "聚合与分组装置",
+   "kind": "term",
+   "note": "泽国语字面义，实指计算器",
+   "from": "chapter-23.zh"
+  },
+  {
    "en": "AI summary",
    "zh": "AI 摘要",
    "kind": "term",
    "note": ""
+  },
+  {
+   "en": "airborne disease resistance",
+   "zh": "空气传播疾病防治",
+   "kind": "term",
+   "note": "图谱资助子图名称",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "algorithmic transparency",
+   "zh": "算法透明度",
+   "kind": "term",
+   "note": "掌舵会评则关注的指标之一",
+   "from": "chapter-27.zh"
   },
   {
    "en": "anonymity set",
@@ -1079,6 +1555,27 @@
    "from": "chapter-01.zh"
   },
   {
+   "en": "arbitrageur",
+   "zh": "套利者",
+   "kind": "term",
+   "note": "靠纠正价格偏差获利的交易者",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "Arctic shadow campaign",
+   "zh": "北极暗影行动",
+   "kind": "term",
+   "note": "十年来北极针对泽国的隐蔽行动",
+   "from": "chapter-19.zh"
+  },
+  {
+   "en": "attack pattern",
+   "zh": "攻击图案",
+   "kind": "term",
+   "note": "打印在纸上、贴到无人机表面的对抗攻击图案",
+   "from": "chapter-30.zh"
+  },
+  {
    "en": "Attested",
    "zh": "已证",
    "kind": "term",
@@ -1090,6 +1587,20 @@
    "kind": "term",
    "note": "界面按钮",
    "from": "chapter-01.zh"
+  },
+  {
+   "en": "bad equilibrium",
+   "zh": "不良均衡",
+   "kind": "term",
+   "note": "博弈论用语；共同体需要从不良均衡跳到更好的均衡",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "bad faith",
+   "zh": "恶意",
+   "kind": "term",
+   "note": "bad-faith appeal → 恶意上诉，法官可判提交方额外赔偿",
+   "from": "chapter-21.zh"
   },
   {
    "en": "Base",
@@ -1120,6 +1631,41 @@
    "from": "chapter-03.zh"
   },
   {
+   "en": "beautiful thinking",
+   "zh": "美的思考",
+   "kind": "term",
+   "note": "泽国语词组字面义，实指美学；同上",
+   "from": "chapter-23.zh"
+  },
+  {
+   "en": "best-two-out-of-three",
+   "zh": "三局两胜",
+   "kind": "term",
+   "note": "决赛赛制",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "blinded share",
+   "zh": "盲化份额",
+   "kind": "term",
+   "note": "投票密钥分割后经盲化处理、交由密钥分配组成员登记的份额",
+   "from": "chapter-15.zh"
+  },
+  {
+   "en": "Blueball pin knockdowns",
+   "zh": "蓝球击倒球瓶",
+   "kind": "term",
+   "note": "翔球记分板行标签",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "boarding school",
+   "zh": "寄宿学校",
+   "kind": "term",
+   "note": "北极人在北林设立的寄宿学校，莉莉被困其中",
+   "from": "chapter-26.zh"
+  },
+  {
    "en": "boring school",
    "zh": "无聊学校",
    "kind": "term",
@@ -1134,6 +1680,13 @@
    "from": "chapter-06.zh"
   },
   {
+   "en": "box",
+   "zh": "格",
+   "kind": "term",
+   "note": "棋局界面上分装圆圈的四个格子，如上左格、右下格",
+   "from": "chapter-25.zh"
+  },
+  {
    "en": "brick",
    "zh": "砖",
    "kind": "term",
@@ -1146,6 +1699,27 @@
    "kind": "term",
    "note": "掌则人裁决评则前收集的公众意见报告",
    "from": "chapter-08.zh"
+  },
+  {
+   "en": "bucket",
+   "zh": "分桶",
+   "kind": "term",
+   "note": "隐写编码中随机划分位位置的单位；桶内所有位异或等于密文对应位",
+   "from": "chapter-15.zh"
+  },
+  {
+   "en": "cartel",
+   "zh": "卡特尔",
+   "kind": "term",
+   "note": "红郡被吞并后几家防务公司结成的垄断同盟",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "casualty ratio",
+   "zh": "伤亡比",
+   "kind": "term",
+   "note": "沿用第 29 章译法；N to one in ... favor → N比1",
+   "from": "chapter-30.zh"
   },
   {
    "en": "Check in",
@@ -1176,6 +1750,13 @@
    "from": "chapter-08.zh"
   },
   {
+   "en": "class action",
+   "zh": "集体诉讼",
+   "kind": "term",
+   "note": "跃升员工共同起诉分歧资本的方式",
+   "from": "chapter-11.zh"
+  },
+  {
    "en": "clean indoor air",
    "zh": "室内空气洁净",
    "kind": "term",
@@ -1188,6 +1769,13 @@
    "kind": "term",
    "note": "维里迪亚两对伴侣共同抚养子女的家庭单元（Vil／Daia 一边）",
    "from": "chapter-01.zh"
+  },
+  {
+   "en": "co-father",
+   "zh": "共同家庭的另一位父亲",
+   "kind": "term",
+   "note": "格拉迪亚斯对维尔（共同家庭中另一对伴侣的男方）的称呼",
+   "from": "chapter-23.zh"
   },
   {
    "en": "co-governance",
@@ -1211,10 +1799,52 @@
    "from": "chapter-08.zh"
   },
   {
+   "en": "Combined score",
+   "zh": "合计得分",
+   "kind": "term",
+   "note": "翔球记分板行标签；三项得分相乘",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "common knowledge",
+   "zh": "共同知识",
+   "kind": "term",
+   "note": "认识论／博弈论术语：不仅人人知道，而且人人知道人人知道，如此递归；本章核心概念",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "common law",
+   "zh": "普通法",
+   "kind": "term",
+   "note": "维里迪亚的判例法规则体系，法官可据以裁定恶意上诉",
+   "from": "chapter-21.zh"
+  },
+  {
    "en": "composite land tax",
    "zh": "综合土地税",
    "kind": "term",
    "note": ""
+  },
+  {
+   "en": "Confirm",
+   "zh": "确认",
+   "kind": "term",
+   "note": "手持终端交易确认按钮",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "congestion toll",
+   "zh": "拥堵费",
+   "kind": "term",
+   "note": "自由城道路收费名目；面板行 Road congestion toll 作「道路拥堵通行费」",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "conscientiousness",
+   "zh": "尽责性",
+   "kind": "term",
+   "note": "阿图里亚用于筛选公民的人格维度",
+   "from": "chapter-22.zh"
   },
   {
    "en": "consul",
@@ -1231,6 +1861,27 @@
    "from": "chapter-03.zh"
   },
   {
+   "en": "Coordination Score",
+   "zh": "协调分",
+   "kind": "term",
+   "note": "芬提出的第三类分数；不是个人属性，而是整个共同体做集体决策的能力",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "coordination training",
+   "zh": "协调训练",
+   "kind": "term",
+   "note": "芬对泽国语本质的论断：泽国语即协调训练",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "councilor",
+   "zh": "评议员",
+   "kind": "term",
+   "note": "昆高培最高评议会成员的头衔（登）",
+   "from": "chapter-10.zh"
+  },
+  {
    "en": "counter-surveillance",
    "zh": "反监视",
    "kind": "term",
@@ -1243,6 +1894,13 @@
    "kind": "term",
    "note": "泽国针对北极监控的反制网络",
    "from": "chapter-05.zh"
+  },
+  {
+   "en": "cover traffic",
+   "zh": "掩护流量",
+   "kind": "term",
+   "note": "隐写中用来承载隐藏数据的正常通信数据",
+   "from": "chapter-15.zh"
   },
   {
    "en": "Criteria",
@@ -1266,6 +1924,62 @@
    "from": "chapter-01.zh"
   },
   {
+   "en": "cultural values in events and performances rubric",
+   "zh": "活动与演出中的文化价值评则",
+   "kind": "term",
+   "note": "掌则会评则；文中亦作 cultural values rubric（文化价值评则）、cultural values in public events and performances",
+   "from": "chapter-10.zh"
+  },
+  {
+   "en": "data retention",
+   "zh": "数据留存",
+   "kind": "term",
+   "note": "网络安全评则正在讨论的议题，涉及环境传感器",
+   "from": "chapter-20.zh"
+  },
+  {
+   "en": "decoy questions",
+   "zh": "掩护问题",
+   "kind": "term",
+   "note": "与真正关心的议题混在一起的陪衬问题，用于掩盖意图",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "defense grid",
+   "zh": "防御网",
+   "kind": "term",
+   "note": "诸阿克之间拟建的统一防务网络",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "denial of service attacks",
+   "zh": "拒绝服务攻击",
+   "kind": "term",
+   "note": "滥用诉讼拖垮合议庭的手法，恶意滥诉会被判赔偿",
+   "from": "chapter-23.zh"
+  },
+  {
+   "en": "detection time",
+   "zh": "侦测时间",
+   "kind": "term",
+   "note": "目标发现来袭无人机所需时间，本章优化对抗攻击的目标量",
+   "from": "chapter-30.zh"
+  },
+  {
+   "en": "directed acyclic graph",
+   "zh": "有向无环图",
+   "kind": "term",
+   "note": "图谱资助中项目可隶属多个领域时的图结构",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "discourse environment",
+   "zh": "话语环境",
+   "kind": "term",
+   "note": "塞拉分析宣传家目标时的用词：宣传家要调整的是话语环境",
+   "from": "chapter-21.zh"
+  },
+  {
    "en": "discussion group",
    "zh": "讨论组",
    "kind": "term",
@@ -1273,17 +1987,38 @@
    "from": "chapter-13.zh"
   },
   {
-   "en": "Dze go ba fau gie",
-   "zh": "Dze go ba fau gie",
-   "kind": "conlang",
-   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语口号／祝语（愿泽国昌盛之意）；全篇保留罗马字不译，与第 2、7 章一致",
-   "from": "chapter-05.zh"
+   "en": "drone fleet",
+   "zh": "无人机机队",
+   "kind": "term",
+   "note": "维里迪亚军方的无人机作战集群",
+   "from": "chapter-28.zh"
+  },
+  {
+   "en": "drone pilot",
+   "zh": "无人机飞手",
+   "kind": "term",
+   "note": "操控无人机的人员，维里迪亚军方有一千多名",
+   "from": "chapter-28.zh"
+  },
+  {
+   "en": "drone swarm",
+   "zh": "蜂群",
+   "kind": "term",
+   "note": "北极无人机集群攻击的一波，正文简称「蜂群」",
+   "from": "chapter-23.zh"
   },
   {
    "en": "Dzegoban",
    "zh": "泽国语",
    "kind": "term",
    "note": "泽国的语言文字体系；涉及正字法时亦译「泽国文」"
+  },
+  {
+   "en": "Dzegoban version nine",
+   "zh": "泽国语第九版",
+   "kind": "term",
+   "note": "班孙培推行的泽国语第九版；参术语表 conlang 条 po so dze go ban de sia",
+   "from": "chapter-14.zh"
   },
   {
    "en": "egalitarianism",
@@ -1321,10 +2056,73 @@
    "from": "chapter-06.zh"
   },
   {
+   "en": "emergency shelter functionality",
+   "zh": "应急避难功能",
+   "kind": "term",
+   "note": "土地税评则中评估建筑的一项功能",
+   "from": "chapter-20.zh"
+  },
+  {
+   "en": "Emotional Intelligence Score",
+   "zh": "情商分",
+   "kind": "term",
+   "note": "部分维里迪亚学者主张并重的情绪智力评分，与智力分并列",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "enclave",
+   "zh": "飞地",
+   "kind": "term",
+   "note": "维里迪亚境内被北极人包围的孤立区域，费布里克与赫雷达被困其中",
+   "from": "chapter-21.zh"
+  },
+  {
+   "en": "energy drink",
+   "zh": "能量饮料",
+   "kind": "term",
+   "note": "指挥所机器人送来的饮品",
+   "from": "chapter-29.zh"
+  },
+  {
+   "en": "entropy",
+   "zh": "熵",
+   "kind": "term",
+   "note": "信息论概念；entropy-preserving → 保熵",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "environmental sensor",
+   "zh": "环境传感器",
+   "kind": "term",
+   "note": "分布在公共场所、涉及数据留存争议的传感设备",
+   "from": "chapter-20.zh"
+  },
+  {
+   "en": "erasure code",
+   "zh": "纠删码",
+   "kind": "term",
+   "note": "five-of-six erasure code → 六分之五的纠删码",
+   "from": "chapter-19.zh"
+  },
+  {
+   "en": "eternal glider factory",
+   "zh": "永恒滑翔机工厂",
+   "kind": "term",
+   "note": "可利用神龛反复重置而永不停止的滑翔机工厂",
+   "from": "chapter-14.zh"
+  },
+  {
    "en": "Executive summary",
    "zh": "摘要",
    "kind": "term",
    "note": ""
+  },
+  {
+   "en": "exploit",
+   "zh": "漏洞利用",
+   "kind": "term",
+   "note": "针对无人机等系统的攻击性漏洞利用程序；昆高培交给莱克托对付受损北极无人机",
+   "from": "chapter-28.zh"
   },
   {
    "en": "fab",
@@ -1339,6 +2137,20 @@
    "kind": "term",
    "note": "民本棋中可持续产出结构的装置，可由滑翔机触发",
    "from": "chapter-07.zh"
+  },
+  {
+   "en": "first-player-favoring",
+   "zh": "先手占优",
+   "kind": "term",
+   "note": "泽借棋局分析维里迪亚局势的博弈论说法，与后手占优相对",
+   "from": "chapter-25.zh"
+  },
+  {
+   "en": "frivolous appeal",
+   "zh": "轻率上诉",
+   "kind": "term",
+   "note": "常被判定为恶意并加罚的上诉",
+   "from": "chapter-21.zh"
   },
   {
    "en": "From",
@@ -1382,10 +2194,38 @@
    "from": "chapter-04.zh"
   },
   {
+   "en": "glyph",
+   "zh": "字形",
+   "kind": "term",
+   "note": "泽国语第九版的可视化字形",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "gradient descent",
+   "zh": "梯度下降",
+   "kind": "term",
+   "note": "白提出的对抗攻击优化方法",
+   "from": "chapter-29.zh"
+  },
+  {
    "en": "Graph Funding",
    "zh": "图谱资助",
    "kind": "term",
    "note": ""
+  },
+  {
+   "en": "Great Book",
+   "zh": "《大典》",
+   "kind": "term",
+   "note": "维里迪亚典籍正典，原文首字母大写",
+   "from": "chapter-10.zh"
+  },
+  {
+   "en": "Greenball player hits",
+   "zh": "绿球击人",
+   "kind": "term",
+   "note": "翔球记分板行标签",
+   "from": "chapter-16.zh"
   },
   {
    "en": "gross economic output",
@@ -1395,11 +2235,25 @@
    "from": "chapter-08.zh"
   },
   {
+   "en": "Ground Law",
+   "zh": "根本法",
+   "kind": "term",
+   "note": "维里迪亚宪法性法律；第 14 条要求军方必须保卫国家（第 26 章亦出现第 21 条）",
+   "from": "chapter-25.zh"
+  },
+  {
    "en": "ground-floor active use",
    "zh": "底层活跃使用",
    "kind": "term",
    "note": "评则名：奖励临街底层铺面被真正使用，而非为达标而凑数",
    "from": "chapter-06.zh"
+  },
+  {
+   "en": "Group North / Group Center / Group South / Group Naval",
+   "zh": "北集群／中集群／南集群／海上集群",
+   "kind": "term",
+   "note": "维里迪亚—昆高培联军的四路作战集群；army group 通译「集群」",
+   "from": "chapter-29.zh"
   },
   {
    "en": "hardware attestation",
@@ -1416,11 +2270,39 @@
    "from": "chapter-13.zh"
   },
   {
+   "en": "hash",
+   "zh": "哈希",
+   "kind": "term",
+   "note": "",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "hash function",
+   "zh": "哈希函数",
+   "kind": "term",
+   "note": "把任意长度的输入映射为定长指纹的函数",
+   "from": "chapter-12.zh"
+  },
+  {
    "en": "hash-based trie",
    "zh": "基于哈希的前缀树",
    "kind": "term",
    "note": "数据结构；trie 亦译「字典树」",
    "from": "chapter-06.zh"
+  },
+  {
+   "en": "head general",
+   "zh": "最高将领",
+   "kind": "term",
+   "note": "维里迪亚军方最高指挥官；莱克托经闭门会议接任此位",
+   "from": "chapter-28.zh"
+  },
+  {
+   "en": "heavy water",
+   "zh": "重水",
+   "kind": "term",
+   "note": "海德菲尔广告中的科学恐吓点，氢被氘取代的水",
+   "from": "chapter-11.zh"
   },
   {
    "en": "Helisport",
@@ -1429,11 +2311,53 @@
    "note": "球类运动"
   },
   {
+   "en": "Helisport blueball",
+   "zh": "蓝球",
+   "kind": "term",
+   "note": "翔球比赛用球，用于击倒球瓶得分",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "Helisport greenball",
+   "zh": "绿球",
+   "kind": "term",
+   "note": "翔球比赛用球，击中球员得分",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "Helisport redball",
+   "zh": "红球",
+   "kind": "term",
+   "note": "翔球比赛用球与得分项；capture → 接获",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "hex grid",
+   "zh": "六边形网格",
+   "kind": "term",
+   "note": "本场新规则的棋盘",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "hieroglyph",
+   "zh": "象形符号",
+   "kind": "term",
+   "note": "第九版为单个词根恢复的图形符号",
+   "from": "chapter-14.zh"
+  },
+  {
    "en": "high-entropy wasteland",
    "zh": "高熵荒原",
    "kind": "term",
    "note": "棋局中被彻底搅乱的区域",
    "from": "chapter-04.zh"
+  },
+  {
+   "en": "highlighting change",
+   "zh": "高亮改动",
+   "kind": "term",
+   "note": "泽国语第九版可视化方案中已谈妥的基础显示改动",
+   "from": "chapter-18.zh"
   },
   {
    "en": "home base",
@@ -1450,6 +2374,34 @@
    "from": "chapter-03.zh"
   },
   {
+   "en": "insider trading",
+   "zh": "内幕交易",
+   "kind": "term",
+   "note": "德尔瓦特所称更重要的信息威胁",
+   "from": "chapter-20.zh"
+  },
+  {
+   "en": "Intelligence Score",
+   "zh": "智力分",
+   "kind": "term",
+   "note": "北极人推崇的个人智力评分，主张由分数最高者治理社会",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "internet minimalism",
+   "zh": "网络极简主义",
+   "kind": "term",
+   "note": "泽所说的第二种极简主义，与物质极简主义相对",
+   "from": "chapter-23.zh"
+  },
+  {
+   "en": "interoperability",
+   "zh": "互操作性",
+   "kind": "term",
+   "note": "社交媒体评则的议题之一",
+   "from": "chapter-20.zh"
+  },
+  {
    "en": "intervention turn",
    "zh": "干预回合",
    "kind": "term",
@@ -1457,11 +2409,18 @@
    "from": "chapter-04.zh"
   },
   {
-   "en": "jie fe hen dzi",
-   "zh": "祝你好运",
-   "kind": "conlang",
-   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语；手表消息原文保留罗马字，下一句给出中文释义",
-   "from": "chapter-04.zh"
+   "en": "Key Allocation Group",
+   "zh": "密钥分配组",
+   "kind": "term",
+   "note": "掌舵会投票密钥分配机制，简称 KAG；由投票者当面见过的5人组成，至少3人登记盲化份额方可生成投票密钥",
+   "from": "chapter-15.zh"
+  },
+  {
+   "en": "kill chain",
+   "zh": "杀伤链",
+   "kind": "term",
+   "note": "军事术语，指发现并摧毁目标的完整流程",
+   "from": "chapter-22.zh"
   },
   {
    "en": "land tax",
@@ -1471,16 +2430,107 @@
    "from": "chapter-03.zh"
   },
   {
+   "en": "leaderboard",
+   "zh": "排行榜",
+   "kind": "term",
+   "note": "银聊预测上按表现排序的榜单",
+   "from": "chapter-27.zh"
+  },
+  {
    "en": "Learn more",
    "zh": "了解更多",
    "kind": "term",
    "note": "界面按钮"
   },
   {
+   "en": "least-significant bit",
+   "zh": "最低有效位",
+   "kind": "term",
+   "note": "隐写编码中最常被翻转的位；缩写 LSB",
+   "from": "chapter-15.zh"
+  },
+  {
+   "en": "level two obfuscation",
+   "zh": "二级混淆",
+   "kind": "term",
+   "note": "混淆协议的分级；二级为语言模型常用的折中档",
+   "from": "chapter-19.zh"
+  },
+  {
+   "en": "life savings wallet",
+   "zh": "毕生积蓄钱包",
+   "kind": "term",
+   "note": "存放长期储蓄的钱包，动用时需谨慎",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "line-heartedness",
+   "zh": "线心",
+   "kind": "term",
+   "note": "泽国语词组字面义，指简朴、方便的感觉",
+   "from": "chapter-23.zh"
+  },
+  {
+   "en": "listening report",
+   "zh": "聆听报告",
+   "kind": "term",
+   "note": "翡翠对社交平台舆情的大范围汇总，参见第 1 章「翡翠聆听模式」",
+   "from": "chapter-10.zh"
+  },
+  {
    "en": "Load more",
    "zh": "加载更多",
    "kind": "term",
    "note": "界面按钮"
+  },
+  {
+   "en": "locked room",
+   "zh": "锁住的房间",
+   "kind": "term",
+   "note": "泽国语词组；此处语境中喻指监狱",
+   "from": "chapter-23.zh"
+  },
+  {
+   "en": "longevity clinic",
+   "zh": "长寿诊所",
+   "kind": "term",
+   "note": "北极人以延寿为核心的机构",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "machine-checkable proof",
+   "zh": "可机器检验的证明",
+   "kind": "term",
+   "note": "可由机器逐条核验的数学证明",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "mass conservation",
+   "zh": "物质守恒",
+   "kind": "term",
+   "note": "民本棋规则设定；石阵／神龛是唯一违反者",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "material",
+   "zh": "子力",
+   "kind": "term",
+   "note": "民本棋中可动用结构的总称（material advantage → 子力优势）",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "maximum budget rule",
+   "zh": "预算上限规则",
+   "kind": "term",
+   "note": "限制政府直接支出的规则，扬称政府绕它给企业变相付钱",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "megacorp",
+   "zh": "巨型企业",
+   "kind": "term",
+   "note": "",
+   "from": "chapter-10.zh"
   },
   {
    "en": "Message",
@@ -1494,6 +2544,13 @@
    "kind": "term",
    "note": "可依输入运行任意程序的程序",
    "from": "chapter-09.zh"
+  },
+  {
+   "en": "micro-tactics",
+   "zh": "微观战术",
+   "kind": "term",
+   "note": "无人机近距离交战的细节战术；micro-tactical maps → 微观战术地图",
+   "from": "chapter-29.zh"
   },
   {
    "en": "Minpentai",
@@ -1523,6 +2580,13 @@
    "from": "chapter-07.zh"
   },
   {
+   "en": "negative-sum game",
+   "zh": "负和博弈",
+   "kind": "term",
+   "note": "",
+   "from": "chapter-10.zh"
+  },
+  {
    "en": "negentropy",
    "zh": "负熵",
    "kind": "term",
@@ -1534,6 +2598,13 @@
    "zh": "反对",
    "kind": "term",
    "note": "表决按钮"
+  },
+  {
+   "en": "noise tax",
+   "zh": "噪音税",
+   "kind": "term",
+   "note": "维里迪亚对小型飞行器等高噪音源征收的税；莫夫称其税额高得离谱",
+   "from": "chapter-20.zh"
   },
   {
    "en": "Not enough funds.",
@@ -1557,11 +2628,32 @@
    "from": "chapter-06.zh"
   },
   {
+   "en": "nutrition bar",
+   "zh": "营养棒",
+   "kind": "term",
+   "note": "长方体状代餐食品",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "obfuscated circuit",
+   "zh": "混淆电路",
+   "kind": "term",
+   "note": "同 garbled circuit；仅在指定条件下可解出密钥有效性信息",
+   "from": "chapter-15.zh"
+  },
+  {
    "en": "obfuscation protocol",
    "zh": "混淆协议",
    "kind": "term",
    "note": "可执行但不可见内部细节的程序协议",
    "from": "chapter-09.zh"
+  },
+  {
+   "en": "odds ratio",
+   "zh": "几率比",
+   "kind": "term",
+   "note": "概率更新公式中单条证据对赔率的影响倍数",
+   "from": "chapter-21.zh"
   },
   {
    "en": "Old Belpakian",
@@ -1578,6 +2670,20 @@
    "from": "chapter-07.zh"
   },
   {
+   "en": "open source defense hardware",
+   "zh": "开源防御硬件",
+   "kind": "term",
+   "note": "德尔瓦特意图削减公众支持的领域",
+   "from": "chapter-21.zh"
+  },
+  {
+   "en": "open source hardware rubric",
+   "zh": "开源硬件评则",
+   "kind": "term",
+   "note": "格拉迪亚斯所属的评则组；德尔瓦特主张与军事相关的项目不应享受税收优惠",
+   "from": "chapter-20.zh"
+  },
+  {
    "en": "openness in hardware",
    "zh": "硬件开放度",
    "kind": "term",
@@ -1590,6 +2696,13 @@
    "kind": "term",
    "note": "设备面板标签",
    "from": "chapter-01.zh"
+  },
+  {
+   "en": "Pafogai Du Minpentai games",
+   "zh": "帕佛盖都民本棋赛",
+   "kind": "term",
+   "note": "白过去参加并获第二名的市级民本棋赛事",
+   "from": "chapter-24.zh"
   },
   {
    "en": "Payment declined.",
@@ -1611,11 +2724,32 @@
    "note": ""
   },
   {
+   "en": "permutation",
+   "zh": "置换",
+   "kind": "term",
+   "note": "一一对应的可逆变换",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "physical minimalism",
+   "zh": "物质极简主义",
+   "kind": "term",
+   "note": "40年前兴起、以少物为美的极简主义",
+   "from": "chapter-23.zh"
+  },
+  {
    "en": "physical unclonable function",
    "zh": "物理不可克隆函数",
    "kind": "term",
    "note": "芯片制造中由化学沉降自然生成的不可复制密钥",
    "from": "chapter-09.zh"
+  },
+  {
+   "en": "physical-delivery mixnet",
+   "zh": "实物投递混网",
+   "kind": "term",
+   "note": "把混网机制用于实体物品投递；参术语表 mixnet → 混网",
+   "from": "chapter-18.zh"
   },
   {
    "en": "pipeline",
@@ -1632,11 +2766,25 @@
    "from": "chapter-07.zh"
   },
   {
-   "en": "po so dze go ban de sia",
-   "zh": "泽国语第九版的构想",
-   "kind": "conlang",
-   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）班孙培小册子书名；正文保留泽国语罗马字，破折号后为中文释义",
-   "from": "chapter-04.zh"
+   "en": "poll",
+   "zh": "民调",
+   "kind": "term",
+   "note": "银聊平台的付费问卷调查功能；polling feature → 民调功能",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "positive-sum",
+   "zh": "正和",
+   "kind": "term",
+   "note": "与零和相对，指合作能扩大总收益",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "prediction market",
+   "zh": "预测市场",
+   "kind": "term",
+   "note": "对未来事件下注的市场机制；术语表另有 prediction score → 预测分数",
+   "from": "chapter-27.zh"
   },
   {
    "en": "prediction score",
@@ -1644,6 +2792,13 @@
    "kind": "term",
    "note": "维里迪亚制度中用于把关职位的预测市场评分",
    "from": "chapter-07.zh"
+  },
+  {
+   "en": "preponderance of evidence",
+   "zh": "证据优势",
+   "kind": "term",
+   "note": "塞拉论证德尔瓦特身份时所依据的证据权衡原则",
+   "from": "chapter-21.zh"
   },
   {
    "en": "price of anarchy",
@@ -1665,6 +2820,48 @@
    "kind": "term",
    "note": "博弈论概念，泽用来解释两人同时休假的动机",
    "from": "chapter-05.zh"
+  },
+  {
+   "en": "private school rubric group",
+   "zh": "私立学校评则组",
+   "kind": "term",
+   "note": "巴尔梅所属的评则组",
+   "from": "chapter-20.zh"
+  },
+  {
+   "en": "probability update formula",
+   "zh": "概率更新公式",
+   "kind": "term",
+   "note": "赫雷达反复念叨的贝叶斯式概率更新公式",
+   "from": "chapter-21.zh"
+  },
+  {
+   "en": "Proof of invitation verified.",
+   "zh": "邀请凭证已验证",
+   "kind": "term",
+   "note": "议会侧门面板文案，面板内句末不加句号",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "proxy endpoint",
+   "zh": "代理端点",
+   "kind": "term",
+   "note": "用于掩盖查询来源的中转节点",
+   "from": "chapter-30.zh"
+  },
+  {
+   "en": "pseudorandom permutation",
+   "zh": "伪随机排列",
+   "kind": "term",
+   "note": "分桶顺序需满足的随机化排列",
+   "from": "chapter-15.zh"
+  },
+  {
+   "en": "public accountability",
+   "zh": "公众问责",
+   "kind": "term",
+   "note": "贝戈尔谈合议庭与掌舵会民主性时所用说法",
+   "from": "chapter-17.zh"
   },
   {
    "en": "public aesthetics tax",
@@ -1700,6 +2897,20 @@
    "from": "chapter-01.zh"
   },
   {
+   "en": "qualifiers",
+   "zh": "资格赛",
+   "kind": "term",
+   "note": "qualifying rounds 同译；前四名进入半决赛",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "qualifying match",
+   "zh": "资格赛",
+   "kind": "term",
+   "note": "全国赛的资格赛轮次；qualifying games／round 同译",
+   "from": "chapter-12.zh"
+  },
+  {
    "en": "quarter-final",
    "zh": "四分之一决赛",
    "kind": "term",
@@ -1707,11 +2918,39 @@
    "from": "chapter-04.zh"
   },
   {
+   "en": "randomize-above-cutoff",
+   "zh": "截线以上随机化",
+   "kind": "term",
+   "note": "图谱资助机制：委员会评定的排名进入顶端区间后，入选机会不再随名次变化",
+   "from": "chapter-17.zh"
+  },
+  {
    "en": "randomized infrared scanning",
    "zh": "随机红外扫描",
    "kind": "term",
    "note": "配合硬件认证的随机抽查手段",
    "from": "chapter-05.zh"
+  },
+  {
+   "en": "raw weights",
+   "zh": "原始权重",
+   "kind": "term",
+   "note": "AI 模型的原始参数；针对其可做梯度优化",
+   "from": "chapter-29.zh"
+  },
+  {
+   "en": "redball",
+   "zh": "红球",
+   "kind": "term",
+   "note": "翔球比赛用的球状小型无人机（第 16 章亦出现）；第 8 章的 Colorball 作“彩球”",
+   "from": "chapter-11.zh"
+  },
+  {
+   "en": "Redball captures",
+   "zh": "红球接获",
+   "kind": "term",
+   "note": "翔球记分板行标签",
+   "from": "chapter-16.zh"
   },
   {
    "en": "Rep score",
@@ -1748,11 +2987,32 @@
    "from": "chapter-06.zh"
   },
   {
+   "en": "retroactive reward",
+   "zh": "追溯性回报",
+   "kind": "term",
+   "note": "扬对政府专挑庇护所配套修路的解释",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "risk-neutral",
+   "zh": "风险中性",
+   "kind": "term",
+   "note": "只按期望值行事、不计风险的态度",
+   "from": "chapter-27.zh"
+  },
+  {
    "en": "rock formation",
    "zh": "石阵",
    "kind": "term",
    "note": "棋场上的岩石结构，可与滑翔机互动、提供负熵",
    "from": "chapter-04.zh"
+  },
+  {
+   "en": "root",
+   "zh": "词根",
+   "kind": "term",
+   "note": "泽国语共 256 个词根",
+   "from": "chapter-14.zh"
   },
   {
    "en": "rotate one eighty if three",
@@ -1795,11 +3055,25 @@
    "from": "chapter-04.zh"
   },
   {
+   "en": "scoreboard",
+   "zh": "记分板",
+   "kind": "term",
+   "note": "翔球转播界面",
+   "from": "chapter-16.zh"
+  },
+  {
    "en": "second order effects",
    "zh": "二阶效应",
    "kind": "term",
    "note": "经济学用语，指间接的连锁影响",
    "from": "chapter-08.zh"
+  },
+  {
+   "en": "second-player-favoring",
+   "zh": "后手占优",
+   "kind": "term",
+   "note": "同上",
+   "from": "chapter-25.zh"
   },
   {
    "en": "Select",
@@ -1815,10 +3089,73 @@
    "from": "chapter-08.zh"
   },
   {
+   "en": "semi-final",
+   "zh": "半决赛",
+   "kind": "term",
+   "note": "民本棋锦标赛淘汰赛轮次；与术语表 quarter-final 配套",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "semifinals",
+   "zh": "半决赛",
+   "kind": "term",
+   "note": "",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "senate hearing",
+   "zh": "参议院听证会",
+   "kind": "term",
+   "note": "维里迪亚参议院就北林被入侵举行的听证",
+   "from": "chapter-20.zh"
+  },
+  {
    "en": "Send",
    "zh": "发送",
    "kind": "term",
    "note": "界面按钮"
+  },
+  {
+   "en": "sentry unit",
+   "zh": "警戒小队",
+   "kind": "term",
+   "note": "北极前出警戒的无人机小队；与术语表 Sentinel「监审官」区分",
+   "from": "chapter-29.zh"
+  },
+  {
+   "en": "shelter",
+   "zh": "庇护所",
+   "kind": "term",
+   "note": "自由城的地下防护居所，兼作广告卖点与防务议题；与第 6 章 secure shelters 同译",
+   "from": "chapter-22.zh"
+  },
+  {
+   "en": "shrine",
+   "zh": "神龛",
+   "kind": "term",
+   "note": "民本棋新增规则中的棋场建筑；内容每千回合以异或作用于四角附近区域后重置为石阵",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "slippage",
+   "zh": "滑点",
+   "kind": "term",
+   "note": "金融交易术语，大额下单导致的价格偏移损失",
+   "from": "chapter-11.zh"
+  },
+  {
+   "en": "small thinking",
+   "zh": "小思考",
+   "kind": "term",
+   "note": "泽国语词组字面义，实指极简主义；格拉迪亚斯逐词直译时的说法",
+   "from": "chapter-23.zh"
+  },
+  {
+   "en": "snowshoe",
+   "zh": "雪鞋",
+   "kind": "term",
+   "note": "雪地行军装备",
+   "from": "chapter-29.zh"
   },
   {
    "en": "social impact of public performances",
@@ -1828,11 +3165,32 @@
    "from": "chapter-01.zh"
   },
   {
+   "en": "social media openness and interoperability",
+   "zh": "社媒开放度与互操作性",
+   "kind": "term",
+   "note": "与术语表 Lectoby「社媒开放度评则」配套的评则全称",
+   "from": "chapter-21.zh"
+  },
+  {
+   "en": "social media openness and interoperability rubric",
+   "zh": "社交媒体开放度与互操作性评则",
+   "kind": "term",
+   "note": "莱克托比所属的评则组",
+   "from": "chapter-20.zh"
+  },
+  {
    "en": "social recovery",
    "zh": "社交恢复",
    "kind": "term",
    "note": "由预先指定的家人朋友各持一把密钥，凑齐阈值签名即可找回资金",
    "from": "chapter-06.zh"
+  },
+  {
+   "en": "social recovery mode",
+   "zh": "社会恢复模式",
+   "kind": "term",
+   "note": "钱包由多位联系人共同签名恢复的模式",
+   "from": "chapter-16.zh"
   },
   {
    "en": "societal cohesion",
@@ -1842,11 +3200,32 @@
    "from": "chapter-08.zh"
   },
   {
+   "en": "sound conversation devices",
+   "zh": "声音交谈装置",
+   "kind": "term",
+   "note": "泽国语字面义，实指电话",
+   "from": "chapter-23.zh"
+  },
+  {
    "en": "spaceship",
    "zh": "飞船",
    "kind": "term",
    "note": "民本棋棋子，大型慢速滑翔机，用于远距离投放符记",
    "from": "chapter-04.zh"
+  },
+  {
+   "en": "standing",
+   "zh": "诉讼资格",
+   "kind": "term",
+   "note": "原告与案件结果有利害关系的法律资格",
+   "from": "chapter-26.zh"
+  },
+  {
+   "en": "stationary trap",
+   "zh": "固定陷阱",
+   "kind": "term",
+   "note": "北极散布在森林中的静止陷阱装置",
+   "from": "chapter-29.zh"
   },
   {
    "en": "Steering tax",
@@ -1863,6 +3242,34 @@
    "from": "chapter-01.zh"
   },
   {
+   "en": "steganographic encoding",
+   "zh": "隐写编码",
+   "kind": "term",
+   "note": "把消息藏进看似合理数据的编码方式",
+   "from": "chapter-19.zh"
+  },
+  {
+   "en": "steganography",
+   "zh": "隐写术",
+   "kind": "term",
+   "note": "把消息藏进正常数据中以躲过审查的做法；steganographic encoding → 隐写编码",
+   "from": "chapter-15.zh"
+  },
+  {
+   "en": "steward",
+   "zh": "理事",
+   "kind": "term",
+   "note": "Graph Funding steward → 图谱资助理事，负责资助分配事务的成员",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "subgraph",
+   "zh": "子图",
+   "kind": "term",
+   "note": "图谱资助按领域划分的子图，如空气传播疾病防治",
+   "from": "chapter-17.zh"
+  },
+  {
    "en": "Submit",
    "zh": "提交",
    "kind": "term",
@@ -1874,6 +3281,13 @@
    "kind": "term",
    "note": "评则表格表头；同 Executive summary → 摘要",
    "from": "chapter-06.zh"
+  },
+  {
+   "en": "supervirus",
+   "zh": "超级病毒",
+   "kind": "term",
+   "note": "德尔因称北极帝国最该关停的研究项目",
+   "from": "chapter-31.zh"
   },
   {
    "en": "surplus",
@@ -1897,11 +3311,25 @@
    "from": "chapter-07.zh"
   },
   {
+   "en": "tail risk",
+   "zh": "尾部风险",
+   "kind": "term",
+   "note": "概率极低但后果严重的事件风险",
+   "from": "chapter-11.zh"
+  },
+  {
    "en": "Tax",
    "zh": "税额",
    "kind": "term",
    "note": "支付面板标签",
    "from": "chapter-06.zh"
+  },
+  {
+   "en": "tax brackets",
+   "zh": "税率档",
+   "kind": "term",
+   "note": "开放度评则的档位数值（0 / 6 / 12 / 18 / 24）",
+   "from": "chapter-17.zh"
   },
   {
    "en": "Tax rate",
@@ -1945,10 +3373,24 @@
    "note": "开放度分档：Tier 1 → 第 1 档"
   },
   {
+   "en": "tiling",
+   "zh": "划分",
+   "kind": "term",
+   "note": "六边形棋盘按时间步切分三角形的方式",
+   "from": "chapter-12.zh"
+  },
+  {
    "en": "Time",
    "zh": "时间",
    "kind": "term",
    "note": "通信界面表头"
+  },
+  {
+   "en": "timestep",
+   "zh": "时间步",
+   "kind": "term",
+   "note": "民本棋六边形规则中棋盘演化的一步",
+   "from": "chapter-12.zh"
   },
   {
    "en": "To",
@@ -1971,6 +3413,13 @@
    "from": "chapter-01.zh"
   },
   {
+   "en": "tray",
+   "zh": "托盘",
+   "kind": "term",
+   "note": "高安全级投递中盛放一整排小箱的托盘",
+   "from": "chapter-18.zh"
+  },
+  {
    "en": "turn",
    "zh": "回合",
    "kind": "term",
@@ -1983,6 +3432,34 @@
    "kind": "term",
    "note": "研究所入口的验票通道",
    "from": "chapter-05.zh"
+  },
+  {
+   "en": "UVC lamp",
+   "zh": "紫外线灯",
+   "kind": "term",
+   "note": "与术语表 far-UVC → 远紫外 同族；正文统一作「紫外线灯」",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "vault",
+   "zh": "保险库",
+   "kind": "term",
+   "note": "格拉迪亚斯存放第二把恢复钥匙的实体场所",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "verifiable garbled circuit",
+   "zh": "可验证混淆电路",
+   "kind": "term",
+   "note": "可验证计算正确性的混淆电路；术语表 garbled circuit 作「混淆电路」",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "verifiable two-party computation",
+   "zh": "可验证两方计算",
+   "kind": "term",
+   "note": "双方在不泄露各自输入的前提下共同计算，并可验证结果正确",
+   "from": "chapter-27.zh"
   },
   {
    "en": "Verified",
@@ -2005,6 +3482,13 @@
    "note": "界面文案"
   },
   {
+   "en": "voting key",
+   "zh": "投票密钥",
+   "kind": "term",
+   "note": "掌舵会表决中唯一的有效签名密钥",
+   "from": "chapter-15.zh"
+  },
+  {
    "en": "voting view",
    "zh": "投票界面",
    "kind": "term",
@@ -2019,11 +3503,46 @@
    "from": "chapter-07.zh"
   },
   {
+   "en": "war of attrition",
+   "zh": "消耗战",
+   "kind": "term",
+   "note": "与第 7 章用法一致",
+   "from": "chapter-10.zh"
+  },
+  {
    "en": "well-being",
    "zh": "福祉",
    "kind": "term",
    "note": "情绪与社会健康类指标的通称；emotional well-being → 情绪状态",
    "from": "chapter-08.zh"
+  },
+  {
+   "en": "whitepaper",
+   "zh": "白皮书",
+   "kind": "term",
+   "note": "银聊的创始文件",
+   "from": "chapter-27.zh"
+  },
+  {
+   "en": "world model",
+   "zh": "世界模型",
+   "kind": "term",
+   "note": "北极无人机 AI 的完整环境模拟；full world-model simulation → 完整的世界模型模拟",
+   "from": "chapter-30.zh"
+  },
+  {
+   "en": "xor",
+   "zh": "异或",
+   "kind": "term",
+   "note": "按位异或运算",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "XOR sum",
+   "zh": "异或和",
+   "kind": "term",
+   "note": "棋局四格圆圈数按位异或所得的数，为0时称局面「平衡」；XOR 沿用第 12／14／15 章译法「异或」",
+   "from": "chapter-25.zh"
   },
   {
    "en": "Yes",
@@ -2032,11 +3551,11 @@
    "note": "表决按钮；界面 Yes/No 译「赞成／反对」"
   },
   {
-   "en": "zan / tie / tei",
+   "en": "zan / tie / tei / dun / be",
    "zh": "（保留罗马字）",
-   "kind": "conlang",
-   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）手表面板表头，泽国语罗马字，与第 2 章 TEI 同例，界面原样保留",
-   "from": "chapter-04.zh"
+   "kind": "term",
+   "note": "泽国语手表面板表头与按钮（zan/tie/tei＝来自／消息／时间，tie/dun＝来自／收件人，be＝发送），界面原样保留罗马字，与第 4 章一致",
+   "from": "chapter-15.zh"
   },
   {
    "en": "zero-knowledge collateralize",
@@ -2051,6 +3570,13 @@
    "kind": "term",
    "note": "用于设备认证",
    "from": "chapter-03.zh"
+  },
+  {
+   "en": "lightfeet",
+   "zh": "光尺",
+   "kind": "unit",
+   "note": "术语表 lightfoot → 光尺 的复数形式；正文统一作「光尺」",
+   "from": "chapter-32.zh"
   },
   {
    "en": "lightfoot",
@@ -2117,11 +3643,172 @@
    "note": "所有格"
   },
   {
+   "en": "De lu hin",
+   "zh": "德鲁因",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语中德鲁因的名字，意为「一副叉子的模样」",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "dia jie fe kai ja cu dze kai lin pan",
+   "zh": "（保留罗马字）",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，格拉迪亚斯吩咐机器人端来茶与饭菜的语句；kai ja＝茶",
+   "from": "chapter-32.zh"
+  },
+  {
+   "en": "dia lau shau",
+   "zh": "请求通话",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语手表消息，同第 4 章 jie fe hen dzi 例；下一句叙述给出中文释义",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "Dze go ba fau gie",
+   "zh": "Dze go ba fau gie",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语口号／祝语（愿泽国昌盛之意）；全篇保留罗马字不译，与第 2、7 章一致",
+   "from": "chapter-05.zh"
+  },
+  {
+   "en": "dze kai lin pan",
+   "zh": "菜和饭",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，意为蔬菜和米饭；字面拆开为绿植／线／面包，故韦尔多听成「绿植线面包」",
+   "from": "chapter-32.zh"
+  },
+  {
+   "en": "gie fe kiu kai ci bin hu",
+   "zh": "（保留罗马字）",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语口号；紧随其后的英文释义译为「扎根，无首」",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "GUI SAU",
+   "zh": "GUI SAU",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）帕佛盖都灯具店招牌，泽国语罗马字",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "hun fe bin jin zo de jan li gi",
+   "zh": "（保留罗马字）",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽看到满街戴颈带的人后脱口而出的泽国语",
+   "from": "chapter-18.zh"
+  },
+  {
+   "en": "ja",
+   "zh": "水",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语机器人口播菜单用语",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "jie fe hen dzi",
+   "zh": "祝你好运",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语；手表消息原文保留罗马字，下一句给出中文释义",
+   "from": "chapter-04.zh"
+  },
+  {
+   "en": "jie mo kai tu jie hei ja ma?",
+   "zh": "（保留罗马字）",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）维里迪亚议会内机器人用泽国语问询的语句",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "kai ja",
+   "zh": "茶",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，字面「植物水」",
+   "from": "chapter-17.zh"
+  },
+  {
+   "en": "LLM",
+   "zh": "语言模型",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）大语言模型；正文中泽用它判断哪些位适合翻转",
+   "from": "chapter-15.zh"
+  },
+  {
+   "en": "mi cin pin fe lo kin do",
+   "zh": "mi cin pin fe lo kin do",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）格拉迪亚斯用泽国语向登致意；据下文推断为问候语（很高兴见到你之意）",
+   "from": "chapter-24.zh"
+  },
+  {
+   "en": "MIN KUI",
+   "zh": "MIN KUI",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）帕佛盖都算力盒店铺招牌，泽国语罗马字",
+   "from": "chapter-18.zh"
+  },
+  {
    "en": "MU GU GEI FA",
    "zh": "五十提克",
    "kind": "conlang",
    "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语开赛倒计时播报。独立成句的播报在正文里保留罗马字与半角引号原样（纯系统提示，不含中文）；LE MU GEI FA＝二十五提克，PA GU GEI FA＝最后一提克，TAU FA＝开始（据上下文推断）",
    "from": "chapter-04.zh"
+  },
+  {
+   "en": "pin",
+   "zh": "球瓶",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）翔球场上立于圆板上的目标（knockdown → 击倒）",
+   "from": "chapter-16.zh"
+  },
+  {
+   "en": "po so dze go ban de sia",
+   "zh": "泽国语第九版的构想",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）班孙培小册子书名；正文保留泽国语罗马字，破折号后为中文释义",
+   "from": "chapter-04.zh"
+  },
+  {
+   "en": "sen hen zi li die fe / zo lia kin / man dun li jie hu / cau tie zen / ci fan zi li",
+   "zh": "（保留罗马字）",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国酒店入住面板，第 12、18 章同款；紧随其后的叙述给出中文释义（信誉分、付款、批准、房号）",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "Su",
+   "zh": "苏",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）民本棋全国赛组织者之一，祭司；泽国名按汉字音译",
+   "from": "chapter-12.zh"
+  },
+  {
+   "en": "VNU",
+   "zh": "维里迪亚国立大学",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）Veridia National University 的缩写（术语表已收该机构），正文按中文全称译出",
+   "from": "chapter-32.zh"
+  },
+  {
+   "en": "XOR",
+   "zh": "异或",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）民本棋规则用语，神龛变化按异或作用到邻近区域",
+   "from": "chapter-14.zh"
+  },
+  {
+   "en": "zan / tie / tei",
+   "zh": "（保留罗马字）",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）手表面板表头，泽国语罗马字，与第 2 章 TEI 同例，界面原样保留",
+   "from": "chapter-04.zh"
+  },
+  {
+   "en": "zui fia pai dan",
+   "zh": "zui fia pai dan",
+   "kind": "conlang",
+   "note": "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）一本泽国建筑书籍的书名",
+   "from": "chapter-19.zh"
   }
  ],
  "months": {
@@ -2153,6 +3840,8 @@
   "见习学徒": "见习官",
   "传令官": "宣谕使",
   "宣谕官": "宣谕使",
-  "翡翠": "翡翠"
+  "翡翠": "翡翠",
+  "无人机机群": "无人机机队",
+  "自由城防卫部队": "自由城防卫队"
  }
 }

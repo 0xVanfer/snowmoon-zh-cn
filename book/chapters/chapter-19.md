@@ -1,0 +1,309 @@
+# 第十九章
+
+<p class="dateline">帕佛盖都，泽国 · 3724年葡期15日</p>
+
+格拉迪亚斯和泽坐在山体金字塔深处一间餐厅的桌旁。一面墙上嵌着两块大屏幕，正尽力假装自己是窗，窗外是帕佛盖都的景色——仿佛这间餐厅坐落在山顶，而不是地下三十米。
+
+<span style="color:#be9b00">“你说想让我见的人，到底是谁来着？”</span>格拉迪亚斯问。
+
+<span style="color:#df74b1">“登。他是昆高培最高评议会的成员。你想更深入地了解泽国的机构，而过去十年，一直是他在帮着打理那个替我们挡住北极暗影行动的机构。你想让维里迪亚向他学，而不是向我们官方政府学。”</span>
+
+就在这时，他们听到一阵微弱的嗡鸣，声音迅速变大。几乎在同一瞬间，几架小型无人机飞进视野，和民本棋锦标赛上检查泽有没有作弊设备的那种很像。
+
+格拉迪亚斯的手表震了一下。
+
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%" colspan="2">空气</td></tr><tr><td style="font-size:150%">CO<sub>2</sub></td><td style="font-size:150%; color: yellow">994</td></tr><tr><td style="font-size:150%">PM2.5</td><td style="font-size:150%; color: yellow">30.1</td></tr></table><table><tr><td style="font-size:150%" colspan="2">设备</td></tr><tr><td style="font-size:150%; color: #8f8">已证 ✓</td><td style="font-size:150%; color: #8f8">21</td></tr><tr><td style="font-size:150%; color: #f23">未知，风险升高！</td><td style="font-size:150%; color: #f23">4</td></tr></table></div>
+
+<span style="color:#df74b1">“怎么了？”</span>泽问。
+
+<span style="color:#be9b00">“啊，我猜是我的手表把那几架无人机当成威胁了。这些天一直这样，我估计它只是还没更新。”</span>
+
+<span style="color:#df74b1">“啊，我看看我的。”</span>泽答道。
+
+泽掏出手表。
+
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%" colspan="2">ten min</td></tr><tr><td style="font-size:150%; color: #8f8">cau tie zen ✓</td><td style="font-size:150%; color: #8f8">25</td></tr><tr><td style="font-size:150%; color: #fca">sen hu ?</td><td style="font-size:150%; color: #fca">0</td></tr></table></div>
+
+他点了一下绿色的那一项，往下翻看。
+
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%; color: #c4f" colspan="2">gi dai</td></tr><tr><td style="font-size:150%; color: #8f8">fen jan ten lai</td><td style="font-size:150%; color: #8f8">16</td></tr><tr><td style="font-size:150%; color: #8f8">mo fan min jan</td><td style="font-size:150%; color: #8f8">1</td></tr><tr><td style="font-size:150%; color: #8f8">mo fan lai</td><td style="font-size:150%; color: #8f8">4</td></tr><tr><td style="font-size:150%; color: #8f8">kun gau min jan</td><td style="font-size:150%; color: #8f8">4</td></tr></table></div>
+
+<span style="color:#be9b00">“呃……我试试这个。”</span>格拉迪亚斯说，眼睛紧盯着手表。
+
+<span style="color:#be9b00">“‘mo fan’是吃饭的房间，所以跟餐厅有关。”</span>
+
+<span style="color:#df74b1">“对！”</span>
+
+<span style="color:#be9b00">“‘min’是机器，‘jan’是人，那两个合起来我猜是……机器人？”</span>
+
+<span style="color:#df74b1">“对！”</span>
+
+<span style="color:#be9b00">“‘kun gau’是……等等，这跟昆高培有关系吗？所以这些是昆高培的机器人？”</span>
+
+<span style="color:#df74b1">“对，那‘kun gau’是什么意思？”</span>
+
+<span style="color:#be9b00">“我猜是安保？”</span>
+
+<span style="color:#df74b1">“正是。”</span>
+
+<span style="color:#be9b00">“安保机器人。呼，一点也不难嘛！”</span>
+
+<span style="color:#df74b1">“你该庆幸我不是芬。他会花上半个长时，把这个界面从头讲一遍，讲每个词的来历，讲他们缩减词汇量的时候为什么决定把每个词都留成原来的样子。”</span>
+
+一台机器人嗡嗡地靠近格拉迪亚斯，在他右耳旁约半米处悬停下来。
+
+<span style="color:#be9b00">“不过话说回来，我为什么一直探到这么多有敌意的设备？是我的手表哪里没更新吗？”</span>
+
+<span style="color:#df74b1">“啊，是的，不过是每盏灯、每架无人机、每个摄像头都在自报身份；这几天协议升级了不少。你的手表还不会说这门语言。来，我帮你弄一下。”</span>
+
+泽随即压低了声音：
+
+<span style="color:#df74b1">“jo sun fe zin ten lai de cau tie dai”</span>
+
+大约一嘀嗒后，他的手表震了一下，表示数据已收到。
+
+![信封图标，表示邮件或消息。](../images/chapter-19-fig-01.svg)
+
+<div class="device-view narrow-device-view"><b>fe cau tie dai<br>li shu</b></div>
+
+泽把自己的手表移到格拉迪亚斯的手表旁边。
+
+<span style="color:#df74b1">“be”</span>
+
+两只手表同时震了一下，表示已经连上，一个文件从一只传到另一只。格拉迪亚斯按了一下手表上的按钮，接受文件。
+
+然后他又看了一眼手表。
+
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%" colspan="2">空气</td></tr><tr><td style="font-size:150%">CO<sub>2</sub></td><td style="font-size:150%; color: red">1015</td></tr><tr><td style="font-size:150%">PM2.5</td><td style="font-size:150%; color: yellow">31.2</td></tr></table><table><tr><td style="font-size:150%" colspan="2">设备</td></tr><tr><td style="font-size:150%; color: #8f8">已证 ✓</td><td style="font-size:150%; color: #8f8">25</td></tr></table></div>
+
+<span style="color:#be9b00">“看着不错！”</span>
+
+<span style="color:#df74b1">“咦，你这表上还测 CO2和 PM2.5？”</span>
+
+<span style="color:#be9b00">“对！这在维里迪亚算标配。我们很在意环境洁净。我们每天要吸进12公斤空气，比吃进去喝进去的加起来还多。所以我们其实都低估了空气有多重要。”</span>
+
+<span style="color:#df74b1">“为什么要测 CO2？我们的手表上也装了空气传感器，但更多是用来探测烟雾和毒物。”</span>
+
+<span style="color:#be9b00">“大气里二氧化碳的平均浓度是百万分之300。我们呼出的气是百万分之40,000。所以如果你吸进的空气是百万分之700，那要么有别的来源把这些额外的 CO2送了进来，要么——更可能的是——你吸进的空气里有百分之一是别人呼出来的。携带各种东西的气溶胶颗粒会在空气里飘很久——尤其是随空气传播的病毒。”</span>
+
+<span style="color:#df74b1">“啊，明白了，所以这跟工业污染都没关系。”</span>
+
+<span style="color:#be9b00">“其实我挺意外，你居然没跟上这件事，而且这里的 CO2数字这么差。我还以为从防务角度、为了防疫，你们会很在意。”</span>
+
+<span style="color:#df74b1">“这个嘛，等登来了你问他！”</span>
+
+一台机器人过来，给格拉迪亚斯送来一份沙拉和一杯茶，给泽送来一份盖满蘑菇的蔬菜米饭和一杯茶。
+
+<span style="color:#be9b00">“等等，你吃的那份——我觉得那正是我们泽国餐车上的10号！”</span>格拉迪亚斯脱口而出。
+
+<span style="color:#df74b1">“要不要尝尝？我很乐意换你的沙拉。跟我说说，跟你习惯的那个版本比怎么样。”</span>
+
+<span style="color:#be9b00">“好啊！”</span>
+
+两人换了盘子，开始吃。
+
+<span style="color:#be9b00">“好吧，这比我们在维里迪亚吃到的强多了。”</span>格拉迪亚斯兴奋地说。
+
+两人又默默吃了几分钟，吃完饭后改喝茶。
+
+泽的手表又震了。泽看了一眼，眼睛一下睁大了。
+
+<span style="color:#be9b00">“怎么了？”</span>格拉迪亚斯问。
+
+<span style="color:#df74b1">“萨祖都一家院子发来的消息，我在那儿吃过一次饭。太奇怪了。”</span>
+
+<span style="color:#df74b1">“好像是直接发给我的。”</span>
+
+<span style="color:#be9b00">“那院子怎么知道你在这儿吃过饭？付账用的是齐普币，完全匿名。”</span>
+
+<span style="color:#df74b1">“正是。那院子好像把它发给了过去半年里*所有*来过的客人，消息上带了个什么标记，我的本地 AI 接受了，其他几乎所有人的 AI 都把它滤掉了。”</span>
+
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th></tr></thead><tbody><tr><td style="width: 25%"><center>sa dzu du de<br>len su 2415 de<br>bun kai mo fan</center></td><td style="width: 6%; text-align:center">→</td><td>ci sen hu jan pu zau fe 400 lin man<br>ci cau be fe ti tie<br>ci tan jan pu ciu cu shan jin fe pa bi<br>ci sen hu fe bu</td></tr></tbody></table></div>
+
+<span style="color:#be9b00">“上面说什么？”</span>格拉迪亚斯问。
+
+<span style="color:#df74b1">“来自萨祖都伦苏街2415号的‘美丽植物’美食广场。一个匿名的人烧掉400齐普币，把这条消息发了出来。消息信封上说收信人‘很成功’，18岁。别的我就不知道了。”</span>
+
+<span style="color:#be9b00">“这真是个……拿捏得很准的描述。”</span>
+
+<span style="color:#df74b1">“确实。他们想把范围放得足够宽，确保里面包含我；他们烧掉400齐普币，是要向那院子、向我们的本地 AI、也向我们表明，这条消息值得花力气去读懂。但同时，他们又把范围收得足够窄，窄到这则广播*才可能*只花400齐普币就发出来。”</span>
+
+<span style="color:#be9b00">“也窄到不会让太多人知道这条消息。”</span>
+
+<span style="color:#df74b1">“好，我打开看看……”</span>
+
+泽又一次瞪大眼睛。
+
+<span style="color:#be9b00">“怎么了？”</span>
+
+<span style="color:#df74b1">“消息里是一串文件链接，总共超过60 GB。看来我得下载其中80%。”</span>
+
+<span style="color:#be9b00">“下载要很久吗？”</span>
+
+<span style="color:#df74b1">“无线下大概要一天。不过看起来，这座山体金字塔里的数字档案节点已经存了足够的文件。”</span>
+
+<span style="color:#be9b00">“那我们直接走过去？”</span>
+
+<span style="color:#df74b1">“我也正这么想。”</span>
+
+泽把手表贴到桌角一个绿色圆圈上。片刻后手表震了一下。他站起身，格拉迪亚斯紧跟着也站了起来。
+
+两人出了餐厅，在隧道织成的网络里往前走。
+
+---
+
+几分钟后，他们来到一扇装饰考究的大门前。
+
+门左边画着一只河马在读书，背景是绿树掩映的沼泽和蓝天。门右边画着一只仓鼠坐在电脑前。两幅画都精心拿捏着分寸，既有卡通式的俏皮，又带着一股神秘而肃穆的气息。
+
+门顶写着一条标语，泽认得出来：
+
+<center><div class="dz-card dz-mono" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">mu fu bau hai</span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">sha liu</span></span></span> <span style="white-space:nowrap"><span class="dz-script">li</span> <span style="white-space:nowrap"><span class="dz-script">dzai hen</span></span></span> <span style="white-space:nowrap"><span class="dz-script">ji</span> <span style="white-space:nowrap"><span class="dz-script">cin jan</span></span></span> <span style="white-space:nowrap"><span class="dz-script">fe</span> <span style="white-space:nowrap"><span class="dz-script">jan</span></span></span></div><div class="dz-line" style="margin:3px 0;padding-left:0ch"><span class="dz-script">ci</span> <span style="white-space:nowrap"><span class="dz-script">mu fu bau fei</span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">zen die jia</span></span></span> <span style="white-space:nowrap"><span class="dz-script">cu</span> <span style="white-space:nowrap"><span class="dz-script">can hu</span></span></span> <span class="dz-script">fe</span> <span class="dz-script">lo</span> <span style="white-space:nowrap"><span class="dz-script">kin liu</span></span></div></div></center>
+
+<span style="color:#df74b1">“在狗外面，书是人最好的朋友。”</span>泽替格拉迪亚斯翻译。<span style="color:#df74b1">“在狗里面，太暗了，看不了书。”</span>
+
+泽和格拉迪亚斯跨过门槛，走了进去。
+
+左手边整面墙都是一个大书架，约五米高，塞满了纸质的实体书。书架上半层向内退进约一米，于是下半层的顶面就成了走道，人可以站在上面查看、抽取上半层的书。
+
+书架上层有两处开口，通向两条两侧也排满书的微型隧道。下层还有一处开口，同样两侧是书。三处开口都往内延伸大约三到六米；再往里，两条书廊一条向右拐九十度，一条向左拐九十度，第三条——下层那条——则接上一个丁字路口。
+
+这片藏书区像是被故意造成了一座迷宫，格拉迪亚斯想。
+
+右手边是一片摆着桌子的开阔空间，沿墙排列着许多计算机终端。
+
+在桌椅区靠前的位置，泽看见一个穿着长袍的女人，立刻朝她跑去。
+
+她转过身来。
+
+<span style="color:#23ba7d">“欢迎来到帕佛盖都大图书馆。你想找什么？”</span>她问。
+
+<span style="color:#df74b1">“档案库里有些很大的文件，我想调出来加载。”</span>
+
+图书管理员笑了。
+
+<span style="color:#23ba7d">“很高兴你这么诚实。”</span>她答道。
+
+<span style="color:#23ba7d">“大多数人都跟我说，他们想学点历史、文化或者数学之类高尚的东西，然后趁我一转身没人看着，就去下载他们的电影。”</span>
+
+<span style="color:#df74b1">“我下载的不是电影，更像是……一条神秘的消息。”</span>
+
+<span style="color:#23ba7d">“啊，一场冒险！就算最后只是个借口，这在我一天里也算新鲜有趣的事了。来，跟我走。”</span>
+
+泽和格拉迪亚斯跟了上去。
+
+<span style="color:#23ba7d">“所以你是收到一条神秘消息，让你下载一些大文件？知道是什么类型的吗？”</span>
+
+<span style="color:#df74b1">“呃，到目前为止我只看到几个哈希……”</span>
+
+他们来到一台计算机终端前。图书管理员取出一根数据线，把一头插进终端。
+
+<span style="color:#23ba7d">“来，另一头插进你的手持终端。”</span>
+
+泽照图书管理员说的做了。下载几乎立刻开始。
+
+![各十六进制标识对应的百分比对比。](../images/chapter-19-fig-02.svg)
+
+<span style="color:#df74b1">“哇，只要八分钟！”</span>
+
+<span style="color:#23ba7d">“那现在，你是不是稍微愿意听我们这些老古板图书管理员说几句了——实体空间对求知来说，到底还是不可替代的？”</span>
+
+一台机器人滑到他们跟前。
+
+<span style="color:#26a9f1">“jie hei ja ma？”</span>
+
+屏幕上弹出一份菜单；没有吃的，只有几种饮料可选。
+
+格拉迪亚斯立刻点了一个要茶的按钮。泽跟着也点了同样的。
+
+<span style="color:#be9b00">“这地方真美，我很高兴你们有这样一个地方。”</span>
+
+格拉迪亚斯起身走到书架前，一本本翻开来看。那时他实在没心情费脑子去读、去猜泽国语——尤其是那些旧书里更早版本的泽国语，他一个字都看不懂——于是把注意力都放在了图表和插图上。
+
+两分钟后，机器人滑到他身边，把他的茶送来。茶装在一只密封杯里，只能通过吸管喝。格拉迪亚斯觉得奇怪，转头看向泽，发现泽坐在离书架很远的一张桌旁，茶已经到了。泽拿到的那只杯子是敞口的，几乎没做什么防洒的设计。
+
+格拉迪亚斯找到一本讲泽国建筑的书，书名是“zui fia pai dan”。他翻了一遍。书里是各种地下室、掩体和山体金字塔内部地下房间的设计图，排列大致按时间顺序，从一百年前与北极帝国的那场战争结束之后不久开始。
+
+早期的设计在建造上非常实用，很少考虑舒适，甚至连防备非人威胁的安全都不太顾。中段的设计开始像普通房间，最明显的例外是没有窗。到了全书末尾，设计已经装饰精美、住着舒适，甚至胜过地面上的建筑。其中大约一半做了仿真窗，假装外面就是户外；另一半干脆不设窗，改用植物、精心装饰的墙面，以及其他显然经过仔细挑选的物件，好让住在里面的人不会看到任何一处、想到那里本该有扇窗。
+
+<span style="color:#df74b1">“格拉迪亚斯！”</span>泽喊道。<span style="color:#df74b1">“快回来，快好了！”</span>
+
+格拉迪亚斯转身走了回来。他刚走到，最后一根进度条就到了100%。另一个窗口自动弹出，一个脚本开始运行。屏幕上写着“正在重建数据……预计剩余时间175”——用的不是泽国语。
+
+格拉迪亚斯和泽小口喝着茶，盯着倒计时。图书管理员出于好奇，安静地待在他们身后约两米处。
+
+一如预告，不到两分钟后，脚本跑完，一个界面出现了。
+
+<div class="device-view wide-device-view device-view-left"><b>火月10日那天你做了什么？详细讲讲那一天。</b><br/><br/><div style="background-color: #cef; border-radius: 9px; padding: 10px; height: 50px"><b style="color: #22b; animation: blinker 1s linear infinite">&gt;</b></div></div>
+
+泽盯着屏幕。
+
+<span style="color:#df74b1">“跟登的会改到明天吧。我感觉这不是件轻松的活。”</span>
+
+格拉迪亚斯点点头。
+
+<span style="color:#be9b00">“你打算回答吗？”</span>
+
+泽在手持终端上按了几下。<span style="color:#df74b1">“我把这个程序放进沙盒，用的是日志式文件系统，它上不了网，而且我随时能回滚到初始状态。所以没有隐私泄露的风险；结果不满意，我就回滚重来。那为什么不试试？”</span>
+
+<span style="color:#df74b1">“现在……要回想火月10日我做了什么……算了，我直接问我的手持终端。”</span>
+
+屏幕上弹出泽那一天的生活记录。那天是他最后一场民本棋对局——对贡的半决赛，也是他生活里最后一段还算正常的日子。那盘棋之前，他醒来，跟白见了一面。那盘棋之后，他去院子里见了德鲁因。
+
+等等，泽想，那院子……地址是什么来着？他查了一下。
+
+<div class="device-view wide-device-view"><b>sa dzu du de<br>len su 2415 de<br>bun kai mo fan</b></div>
+
+正是最初那条消息所在的那家餐厅。
+
+这就是他本地 AI 爱说的那个“包袱”。泽开始打字，靠 AI 记录和自己迅速回笼的记忆，把那天重新拼起来。
+
+醒来。
+
+跟白见面。
+
+去棋场。
+
+等着开局。
+
+对局本身。
+
+看德鲁因那盘棋。
+
+赛后台跟德鲁因短短聊了几句。我当时说的是什么来着……“我那盘下得比你难看多了。不过说到底，我也是靠防守赢的。”
+
+然后是跟德鲁因在院子里的那次见面。泽在这件事上花的时间，抵得上其余一整天的总和。
+
+那台机器人。给泽国语拟定的新象形字做 A/B测试。
+
+德鲁因邀他去红郡，他拒绝了。德鲁因给他看了红郡的照片。
+
+德鲁因讲，一个地方的自然风光美，其实也说明了那里的文明。
+
+然后是德鲁因那句温和的挤对：“我会用我的冠军奖金送你去。”
+
+全部打完，泽点了“发送”。
+
+<div class="device-view wide-device-view device-view-left"><b>思考中……预计剩余时间440</b></div>
+
+<span style="color:#be9b00">“好，所以这是个语言模型。但那文件有多大？数据重建之后。”</span>
+
+<span style="color:#df74b1">“10.7 GB。开销正好是六倍。我让后台线程查了那些文件的来源，全都是最近才上传的。六分之一是几部新近的电影——公开数据，不过*选了哪几部电影*当然算得上一种密钥。另有一半是某人的一大堆健康数据。最后三分之一也是视频，但看起来是 AI 生成的，全是北极的说教，讲维里迪亚和泽国文明从根子上有多糟。”</span>
+
+<span style="color:#df74b1">“重组算法是六分之五的纠删码，五块，每块10.7 GB。每一块又是一层隐写术编码：他们用语言模型找出可以翻转的比特，让数据看起来仍然合理，同时把真正要传的消息编进去，比例相当激进——每四位密文才藏一位明文。而那些电影相当于一次密码本：如果你不知道用的到底是哪几部电影，就算你把明文全挖出来，它看上去也只是一堆随机数据。”</span>
+
+<span style="color:#be9b00">“等等，如果他们想要密码本，直接反复哈希某个数据、伪随机生成一份不就行了？”</span>
+
+<span style="color:#df74b1">“啊，你说得对。也许我想多了，也许他们这么做只是为了迷惑人。”</span>
+
+<span style="color:#be9b00">“好，那10.7 GB 到底是什么？”</span>
+
+<span style="color:#df74b1">“它不是明文语言模型，而是混淆过的语言模型。二级混淆，参数比去中心化大学、班孙培、乃至掌舵会投票所用密码学网络里的全强度密码学参数弱得多，但算法还是同一套。”</span>
+
+<span style="color:#df74b1">“对语言模型来说，二级混淆其实刚好合适。语言模型本身又大又吃算力，扛不住升到四级带来的高开销；反过来，语言模型本身就带一定程度的混淆，也有抗比特翻转的能力。就算你挖出几个权重的值，或者能稳定地翻转某几个张量里的少数数值，也拿不到什么有用的东西。”</span>
+
+<span style="color:#df74b1">“二级混淆的开销倍率，体积上是几十倍到一百来倍，算力上是几百倍到一千来倍。所以这个模型相当小；我怀疑发消息的人专门微调过它，只让它干这一件事。我还觉得，这个语言模型的包装程序——也就是被混淆的整个包——是在一次性完成思考，用来判断我的回答是否合格。如果合格，它最后就会把消息给我们。”</span>
+
+像是掐准了时机，泽的手持终端震了一下。程序执行完毕，屏幕上出现一条新消息：
+
+<div class="device-view wide-device-view device-view-left"><p>你好，泽。</p><p>你大概在想，过去这一个月我为什么一直没再跟你联系。非常抱歉。我写这封信，是因为你是我唯一不在北极控制之下的朋友，而发生的这些事，我欠你一个解释。</p><p>将近一个月前，北极人对红郡做了一次彻底清查，没收了所有电子设备，只把被他们留了后门、受他们监视的设备还给我们。这就是我跟你失联的原因。我没办法联系你，只好把消息加密，包进这个混淆过的语言模型里——它要你描述我们共同的经历，用来核实你的身份。为了拼出并送出这条消息，我一轮又一轮地从别人那里偷设备，其中两只是手表，里面存着两个北极人的健康数据；我在一间不向外发射信号的房间里做完该做的工作，把输出拷到一份惰性存储介质上，然后用化学方法毁掉那些设备里的电路和存储。</p><p>所幸，红郡的实体监控远没有北极本土那么全面，不过这个窗口也正在迅速关闭。而对我来说，还有另一个正在迅速关闭的窗口。</p><p>你知道，我父母一向更同情北极人。所以在吞并发生之后，他们决定跟北极合作。他们告诉我，这是为自己、也为红郡的未来争取一点自治机会的最好办法：成为一个对北极帝国有用的部分，从而赢得信任。所以等你读到这封信的时候，我们多半已经在一架飞往北极帝国核心领土的飞机上了。</p><p>我并不同情他们。但我已经决定，要让自己最有可能派上用场，就得配合他们演下去，也赢得他们的信任。北极帝国敬重实力：我在泽国赢下民本棋半决赛，已经证明了我的实力，而我父母的身份也许足以证明我的立场。但愿会有那么一刻，我能为你做点什么有用的事。可我不知道。</p><p>所以，这很可能就是我发给你的最后一条消息。我希望不会如此，但我什么都保证不了。我为这一切感到抱歉。</p><p>dze go ba fau gie</p><p>你亲爱的朋友，德鲁因。</p></div>

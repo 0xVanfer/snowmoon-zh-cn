@@ -1,0 +1,992 @@
+{
+ "chapter": 7,
+ "segments": [
+  {
+   "id": "c07-s0001",
+   "role": "title",
+   "text": "Chapter 7",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0002",
+   "role": "place",
+   "text": "Pafogai Du, Dzego",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0003",
+   "role": "date",
+   "text": "3724 Rainmoon 23",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0004",
+   "role": "p",
+   "text": "Zei was sitting alone at a table in a courtyard, drinking a tea and eating a rice and vegetable dish. In his left hand, he held his hand device, reviewing Minpentai strategies.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0005",
+   "role": "p",
+   "text": "A robot slid up to him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0006",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 240)\">\"mo da cu ja li hen ma?\"</c>, it asked. \"Is the food and drink good?\"",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0007",
+   "role": "p",
+   "text": "The screen on the robot turned into a voting view.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0008",
+   "role": "th",
+   "text": "mo da cu ja li hen ma?",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0009",
+   "role": "div",
+   "text": "<c st=\"font-size:200%\">🙁<sup><sup>2</sup></sup></c> <c st=\"font-size:200%\">🙁<sup><sup></sup></sup></c> <c st=\"font-size:200%\">😐<sup><sup></sup></sup></c> <c st=\"font-size:200%\">😊<sup><sup></sup></sup></c> <c st=\"font-size:200%\">😊<sup><sup>2</sup></sup></c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0010",
+   "role": "button",
+   "text": "Select",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0011",
+   "role": "p",
+   "text": "Zei thought for a few moments, and moved the bar about three quarters of the way to the right.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0012",
+   "role": "p",
+   "text": "The robot beeped, and slowly slid away.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0013",
+   "role": "p",
+   "text": "When Zei looked up again, he could see Fin running up to him. Fin arrived, and sat down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0014",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Where have you been?\"</c>, Zei asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0015",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"More linguistics training\"</c>, Fin replied. <c st=\"color:oklch(0.7 0.15 80)\">\"Looks like the Bansunpei think I'm actually a good fit for them.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0016",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"How is training for the big game?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0017",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Did about five games against the bots in the past longhour\"</c>, Zei replied. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I feel like this is already hitting diminishing returns. It's all going to hinge on what the rule change this time is.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0018",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"So in my last two games I asked the bots to come up with random rule changes, and played against them. Problem is, I won easily both times: the bots play better than me on stock Minpentai, but they are much worse at adapting to any new situation they don't have training data for.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0019",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Can't you make a pipeline where once they come up with the new rule, they self-play finetune to get good at it, and then you play against that?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0020",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Well if you can go help spin that up for me in the next two longhours, I'd much appreciate it. Game is tomorrow, remember!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0021",
+   "role": "p",
+   "text": "Fin thought briefly. <c st=\"color:oklch(0.7 0.15 80)\">\"If I do that I'll have to tell the Bansunpei I am skipping tonight then.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0022",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"'Po so dze go ban' can wait, the game against Bai is tomorrow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0023",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Please?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0024",
+   "role": "p",
+   "text": "Fin thought for a few ticks more. <c st=\"color:oklch(0.7 0.15 80)\">\"Okay fine, I'll tell them I'm skipping. But I'll have to make it up with them next month.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0025",
+   "role": "date",
+   "text": "3724 Rainmoon 24",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0026",
+   "role": "p",
+   "text": "Fin and Zei walked up the slope toward the mountain pyramid. Zei went through Minpentai strategies in his mind, as the tiring climb helped him concentrate, suppressing his mind's desire to wander toward anything else.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0027",
+   "role": "p",
+   "text": "Suddenly he felt a tap on his shoulder.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0028",
+   "role": "p",
+   "text": "Zei turned around. It was Bai.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0029",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"So, excited about today's game?\"</c>, she asked. <c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"I think it'll be a good finish for you, I don't think your mom quite realizes how impressive it is that you are going to come in second across the whole city.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0030",
+   "role": "p",
+   "text": "Zei's mind raced for a retort.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0031",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"You know if you were nicer to Zei\"</c>, Fin snapped back, <c st=\"color:oklch(0.7 0.15 80)\">\"he might pay for <e>your</e> next trip to Redshire or Freetown from the prize money when he wins the nationals.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0032",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Maybe bring along your mom too.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0033",
+   "role": "p",
+   "text": "Bai's grin faltered for a moment, then returned.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0034",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Thank you, Fin.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0035",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"But seriously, let's just concentrate on giving everyone a good game.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0036",
+   "role": "p",
+   "text": "Suddenly, the ground shook slightly. A few moments later, from their high vantage point already a third of the way up the mountain, they could see a cloud of smoke emerging in the distance, somewhere in the outskirts of the city.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0037",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Whoa, what is that?\"</c>, Fin asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0038",
+   "role": "p",
+   "text": "Zei took out his hand device, and pointed it at the cloud of smoke.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0039",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Let's check.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0040",
+   "role": "p",
+   "text": "Zei held his hand device pointed at the cloud of smoke and the area below for a moment, and then put it down. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Geolocated it. It's the largest computer chip manufacturing facility in the city. Remember, the Arctics have been trying hard to stop us from progressing any more in our technology.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0041",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Looks like this facility was government-run. I imagine they'll just say it was an accident or something.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0042",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"Heh\"</c>, Fin smirked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0043",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">\"What part of the 'bin hu' in 'gie fe kiu kai ci bin hu' do these people not get? No head. You're not supposed to centralize stuff this much.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0044",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Again, this is government. Half of them don't understand what they're doing, and many of the rest are probably on the payroll of the Arctics themselves in some form. All of the actually smart and effective stuff in Dzego has been outside of government <e>or</e> the big corporations for decades.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0045",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"But anyway, we have lots of smaller, distributed underground fabs these days. We'll be fine.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0046",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Okay, guys\"</c>, Bai interjected. <c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"We have to actually get to the game.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0047",
+   "role": "p",
+   "text": "The three of them resumed climbing. After a few more minutes, they arrived at the main door, and entered the tunnels. On the third turn, Fin turned left to go to the audience section, and Bai and Zei turned right. They walked through the door, and saw Mu waiting for them.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0048",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Welcome back to you both\"</c>, Mu said. <c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Excited to see how you both perform.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0049",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I hope the rule change this time is going to be good.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0050",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Oh, it will be. You'll see.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0051",
+   "role": "p",
+   "text": "A robot slid toward them, and gave them three glasses of water. Zei, Bai and Mu each took a glass.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0052",
+   "role": "p",
+   "text": "Mu raised the glass. <c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"To our future,\"</c> she said. <c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Dze go ba fau gie.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0053",
+   "role": "p",
+   "text": "Zei felt slightly confused - \"Dzego will rise again\" was a beautiful thing to say, but it seemed more appropriate for either an actual battle or some kind of industrial or educational activity than for a Minpentai championship game. But he nevertheless instinctively replied back, at the same time as Bai.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0054",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Dze go ba fau gie.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0055",
+   "role": "p",
+   "text": "The three of them drank their water.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0056",
+   "role": "p",
+   "text": "They sat down and rested for a few minutes. Then, two elevator doors opened.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0057",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI FA\"</c>, the loud automated voice announced. Starting in fifty ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0058",
+   "role": "p",
+   "text": "Zei breathed in and out, and recited his strategies in his head for the last time.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0059",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI FA\"</c>.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0060",
+   "role": "p",
+   "text": "Zei scanned the audience with his eyes. He could barely see most of them, but in the aggregate he could make out more excitement than he saw in both of his previous two games.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0061",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU GEI FA\"</c>.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0062",
+   "role": "p",
+   "text": "Zei breathed in again, and held his breath for the last remaining ten ticks until the announcement.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0063",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"Welcome to the final round of the eighteenth year of the Minpentai tournaments in Pafogai Du. Tonight, we will witness the most decisive game in our entire city, between contestants whose playing skills have both been rated by AI as better than the national champions of only five years before.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0064",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"Today, we have our two finalists, two brilliant minds whom we saw fight side by side as teammates a month earlier: Zei Leimin and Bai Jahen.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0065",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"And today, I am also pleased to announce the new rule for this round. Both players will have access to a powerful personal AI, which will be able to assist them in their gameplay.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0066",
+   "role": "p",
+   "text": "A new tab suddenly opened up on Zei's display.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0067",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"However, the players and their AIs will have full read access to the thought transcripts of each other's AI.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0068",
+   "role": "p",
+   "text": "Zei took in the information, and quickly began to formulate his thoughts about how he would use the AI. He asked it to set up standard glider and wall formations, in his own style. To his surprise, the AI knew what his style was.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0069",
+   "role": "p",
+   "text": "He saw Bai's AI transcript in a separate tab to the side; Bai was doing the same, and Bai's AI also knew her style.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0070",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI TAU FA\"</c>, the loud automated voice blared. The battle begins in fifty ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0071",
+   "role": "p",
+   "text": "The AIs kept optimizing their glider and wall formations. At this point, both AIs started designing countermeasures to the strategies in the other's transcripts.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0072",
+   "role": "p",
+   "text": "Zei started planting a few structures by hand, speeding up his work by copying and pasting pieces of what the AI had already made, looking attentively at Bai's transcript to see what strategies Bai's AI had not yet built countermeasures to.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0073",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI TAU FA\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0074",
+   "role": "p",
+   "text": "Zei started planting one last major structure by hand: a symbol-carrying spaceship. There were already four created by his AI, but he figured that he would make one all on his own, so that Bai would not see it, and with a different style of moving wall in front of it. He aimed the symbol-carrying spaceship so that it would reflect off a wall that his AI had already constructed, and then move upwards along the middle of the game field.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0075",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0076",
+   "role": "p",
+   "text": "Come on, Zei thought, finish the symbol-carrying spaceship.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0077",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"SO ... BI ... ZE ... HA ...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0078",
+   "role": "p",
+   "text": "Zei put down a few last squares.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0079",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU ... FO ...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0080",
+   "role": "p",
+   "text": "And... done.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0081",
+   "role": "p",
+   "text": "Zei let out a long breath.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0082",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"SHI ... LE ... PA ... TAU FA\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0083",
+   "role": "p",
+   "text": "Gliders started flying. Zei's symbol-carrying spaceship started moving west from the southeast corner. The portion of the game field that Zei could see increased.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0084",
+   "role": "p",
+   "text": "Both AI transcripts were focused intensely on exploiting their territories, building more gliders, spaceships and walls, and expanding.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0085",
+   "role": "p",
+   "text": "After a few hundred turns, Zei and Bai's gliders began to crash into each other, and then into each other's spaceships and walls.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0086",
+   "role": "p",
+   "text": "And a few hundred turns after that, their symbol-carrying spaceships got within sight of each other.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0087",
+   "role": "p",
+   "text": "Shortly after that, Zei's symbol-carrying spaceship reflected off the wall in the south, and began moving north.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0088",
+   "role": "p",
+   "text": "On the big screen, the audience watched.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0089",
+   "role": "p",
+   "text": "The first intervention turn came. Zei let his AI do the work adjusting structures near the frontline, as the consequences would be immediately visible to Bai anyway.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0090",
+   "role": "p",
+   "text": "He scanned Bai's AI's transcript for weak points. He found one: it was not thinking at all about glider attacks coming down the diagonals. He toned down the amount of resources allocated to the AI, and used those resources to manually send a large number of gliders down both diagonals, targeted so that one would pass right after the other, to strike both of Bai's home bases. He also sent a symbol-carrying spaceship, targeted to pass the center hundreds of turns after both sets of gliders.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0091",
+   "role": "p",
+   "text": "The game continued.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0092",
+   "role": "p",
+   "text": "The battle along the front lines in the middle was surprisingly even-handed. Both AIs were playing near-optimally, and there was little opportunity for trickery because both sides could see each other's moves and thoughts. However, Bai did put more resources toward the frontline especially on the west side, and as the hundreds of turns went on, it began to show on the board. Soon, one of Zei's symbol-carrying spaceships on the west was breached, and it exploded into a storm of gliders flying in all directions.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0093",
+   "role": "p",
+   "text": "Zei kept playing, optimizing the minutiae of the game board. He knew that he would not get to see the results of his attack for a long time.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0094",
+   "role": "p",
+   "text": "The second intervention turn came.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0095",
+   "role": "p",
+   "text": "The best that Zei could come up with was constructing more factories beside his symbol-carrying spaceship that was slowly flying north along the middle of the field. Aside from the attack down the diagonal, this was the one structure that Bai had no way of knowing about - unless his AI decided to ignore Zei's instruction to focus exclusively on the domain it was assigned to, and blurted out the spaceship's position mid-transcript. Zei decided to ignore that possibility; not much he could do about it anyway. He put up more walls along the west side.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0096",
+   "role": "p",
+   "text": "More turns passed. On the west side, Bai continued to advance. Some of Bai's gliders got into Zei's base in the southwest, and destroyed two of his symbols. Zei watched as his symbol-carrying spaceship made its way toward the northwest.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0097",
+   "role": "p",
+   "text": "Then, suddenly, gliders flew at the spaceship from the west, north and east side. It quickly crumbled, and exploded into rubble and a dozen gliders. At that point, Zei realized what had happened. Bai's AI's lack of thought about the diagonals had not been a mistake at all. Rather, Bai had deliberately directed the AI to focus on the other directions, and she had put up a strong multilayered defense along the diagonals herself. It had been a trap, and Zei had fallen squarely into it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0098",
+   "role": "p",
+   "text": "Mu felt a pang of disappointment in Zei. Seventeen symbols to twenty-two, she thought. How could he have fallen into that trap, and not come up with anything interesting himself? He had one spaceship going north in the middle, but so what? Bai's bases were well protected against attacks along the diagonals, and Zei's spaceship did not have excellent chances of reaching the north side. Unless Zei came up with something totally unexpected, she figured, this would turn into a game of attrition, which would only shift further in Bai's favor.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0099",
+   "role": "p",
+   "text": "An unexpected set of gliders knocked out another two of Zei's symbols, one slightly southwest of the center of the field, and another slightly west of the center near the south end. Another set of gliders unexpectedly hit Zei's southeast base, but bounced off harmlessly against now well-prepared walls.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0100",
+   "role": "p",
+   "text": "Sitting on the other side of the room, in less comfortable public seating, Fin gazed with fear at the gameboard as well.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0101",
+   "role": "p",
+   "text": "Finally, something inside of Zei's mind clicked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0102",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Take my fourth westernmost symbol\"</c>, he told the AI. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Take the best sixteen strategies that you can come up with. Construct near that symbol a factory capable of executing each of those strategies. It should be activated by a glider coming in from the southwest, and the exact strategy chosen should depend on the type of glider and the time it hits. Then, near my second westernmost symbol, make that glider. Allocate eighty percent of resources this intervention turn to this.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0103",
+   "role": "p",
+   "text": "The AI started thinking in detail, implementing the factory, and the glider.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0104",
+   "role": "p",
+   "text": "Bai's AI started thinking about countermeasures to all sixteen strategies, but soon hit a limit: it could not optimize defenses against all of them at the same time.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0105",
+   "role": "p",
+   "text": "Bai's AI also focused on increasing defenses across her own western flank. Zei's <e>first</e> gamble paid off, he realized: Bai herself did not realize just how much damage she had done on the west side, and just how little Zei had done to compensate. And so neither she nor her AI realized that by this point, Zei's fourth westernmost symbol could be in the middle of the field.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0106",
+   "role": "p",
+   "text": "Then, Zei went to work on his <e>second</e> gamble. He used the resources he had not allocated to the AI to add a brick south of his factory to block the glider that the AI was sending, and add two of his own gliders coming in from the south.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0107",
+   "role": "p",
+   "text": "The intervention turn ended. Part of the factory had been built during the intervention turn, the rest continued to be constructed in real time out of nearby rock formations by gliders.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0108",
+   "role": "p",
+   "text": "A few hundred turns later, the glider sent by Zei's AI from the west was blocked by the brick that Zei had put in place. A few hundred turns after <e>that</e>, the gliders that Zei sent manually crashed into the factory, and activated it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0109",
+   "role": "p",
+   "text": "The factory picked a strategy that was none of the four that Bai's AI had focused on planning for. And it was coming from a place that Bai had not expected: the halfway point between the center of the board and the northern edge. The factory quickly started generating symbol-carrying spaceships that began to move toward the east, and a storm of gliders that moved north, and then bounced off of rock formations and Bai's own walls to move toward the west. Bai, and her AI, were caught completely by surprise.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0110",
+   "role": "p",
+   "text": "By the time the next intervention turn came, Zei's spaceships had gotten well behind Bai's lines on the east. Zei's AI took the opportunity to design a storm of gliders to attack Bai's flanks from behind, and Zei added a few of his own gliders to attack Bai's northeastern base - building them himself so that they would not appear in the transcript.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0111",
+   "role": "p",
+   "text": "Five hundred turns after that, the game board looked very different.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0112",
+   "role": "p",
+   "text": "By this point, Mu's solemn head shaking and Fin's expression of fear had both turned into excited smiles.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0113",
+   "role": "p",
+   "text": "Fourteen to eleven. Zei was winning again. And he had a better position.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0114",
+   "role": "p",
+   "text": "Soon, the next intervention turn came. At this point, Zei figured, he would just repeat the same strategy, though a more near-term version of it: immediately create many glider factories in the northeast, and have their exact style and direction be set off by a trigger that would only appear in ten turns. Bai could not see the exact internal logic of the trigger, and Zei designed that piece himself, so that it would not appear in the transcript.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0115",
+   "role": "p",
+   "text": "Bai attempted to copy Zei's strategy. Zei spent half his resources generically shoring up his defenses, without attempting to be particularly clever in outsmarting Bai. He was reasonably safe, he knew: Bai simply did not have any positions behind his lines the way he had behind Bai's.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0116",
+   "role": "p",
+   "text": "Five hundred turns later, both attacks came to fruition. Zei's succeeded, Bai's failed. Bai's only significant accomplishment was destroying the remaining symbols in Zei's southwestern base.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0117",
+   "role": "p",
+   "text": "Twelve to six.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0118",
+   "role": "p",
+   "text": "Bai resigned.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0119",
+   "role": "p",
+   "text": "The audience cheered.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0120",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Congratulations, you two-\"</c>, Mu began to speak, standing in the waiting room along with Zei and Bai.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0121",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Congratulations, Zei. You only had to wait until our last season to beat me.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0122",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"You played the best game of your life today, Bai.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0123",
+   "role": "p",
+   "text": "Mu paused for a few moments.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0124",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"The priests did not even know what you two would come up with. They told me that they wanted to make the game a little more ... <e>realistic</e> - but they were as curious as anyone else to find out what that means.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0125",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"Realistic?\"</c>, Bai exclaimed incredulously. <c st=\"color:oklch(0.7 0.15 26.666666666666664)\">\"How is it at all realistic that AIs can read each other's minds?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0126",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"It sounded crazy to me too. But the more I think about it, the more I've come to see their point.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0127",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Look at the Veridian Steering system, for example. It's one of the most opaque parts of the government - even the Keepers don't know who each other are - and yet one of the most trustworthy and incorruptible parts precisely for that reason. Similar for the Courts - anonymous, randomly selected committees out of a large pool.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0128",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"But the Parliament is transparent, and so when it comes to the Parliament's direct decisions - large-scale infrastructure, foreign policy, healthcare, all the things that it's funding - everyone keeps exploiting and outsmarting it. Same with the quadratic funding - actually, it's even worse. Keepers, Sentinels and Court judges are not fully insulated - it is still Parliament committees that are approving them - but at least there's a layer of indirection there, and those positions are also gated by prediction scores.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0129",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"That's the lesson. In the real world, it's not just thinking well that matters, it's also hiding your thoughts - sometimes, even hiding your thoughts from your allies or the people you're meant to serve.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0130",
+   "role": "p",
+   "text": "Zei and Bai both stared at Mu.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0131",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Anyway, you've both performed extremely well today.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0132",
+   "role": "p",
+   "text": "A robot slid in carrying two bags, one with the number 1 on the side and the other with the number 2.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0133",
+   "role": "p",
+   "text": "Mu handed the first bag to Zei and the second bag to Bai.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0134",
+   "role": "p",
+   "text": "Zei and Bai both sat down and started looking at the contents inside their bags. A plaque, a scratch-off one-time-scannable code containing some cryptographic tokens and credentials, and smaller gifts: a cup, a handwriting instrument, and an ozone-based electric water disinfection pen.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0135",
+   "role": "p",
+   "text": "Bai began studying all of the gift items in detail. Zei immediately started to scratch off the cover from the scannable code, and took out his hand device to prepare to scan it. He had been hoping to be able to buy his mom a new compute box for many months now, and he still could not believe that now he could finally actually get it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0136",
+   "role": "p",
+   "text": "Mu stood up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0137",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"I hope you both have a good rest\"</c>, she said, as she turned and began to leave the room.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0138",
+   "role": "p",
+   "text": "As soon as Mu was gone, Zei noticed that he got one gift that Bai did not: a dark purple letter, with an inscription on the front.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0139",
+   "role": "div",
+   "text": "<c st=\"white-space:nowrap\"><f>dun</f></c> <c st=\"white-space:nowrap\"><f>fe</f> <c st=\"white-space:nowrap\"><f>tin di zei</f></c></c> <c st=\"white-space:nowrap\"><f>de</f> <c st=\"white-space:nowrap\"><f>kin kie</f></c></c>",
+   "locked": true,
+   "note": "conlang"
+  },
+  {
+   "id": "c07-s0140",
+   "role": "p",
+   "text": "\"For Zei's eyes only\"",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0141",
+   "role": "p",
+   "text": "Zei stopped scratching the cover on the scannable code, and instead put the letter into his pocket.",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

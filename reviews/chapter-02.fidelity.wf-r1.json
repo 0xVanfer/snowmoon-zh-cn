@@ -1,0 +1,53 @@
+{
+ "chapter": 2,
+ "lens": "fidelity",
+ "reviewer": "wf-r1",
+ "overall": "本章忠实度整体很高：133 个片段逐条对照后，数字与算式（200米×4条街、2000→1842 走158米、958米、不到一千嘀嗒＝十分钟、六百万/两百万/八百万/一千一百四十万/三百四十万位）、否定与因果方向、时序以及靠颜色区分的说话人全部与原文一致，术语与人名地名也对得上术语表，读者能顺畅读成故事。问题主要集中在个别小处的意义偏移与添油加醋，没有发现会读错剧情的硬伤，属可读、可小改的稿子。",
+ "issues": [
+  {
+   "id": "c02-s0111",
+   "severity": "medium",
+   "type": "误译",
+   "source": "...as the instructor walked around to check if there was anyone who seriously needed help.",
+   "zh": "讲师则四处走动，查看有没有人需要认真处理。",
+   "problem": "seriously 修饰的是 needed help（伤得重、真正需要帮助的人），译文却把「认真」挪去修饰「处理」，变成「需要认真处理」，读起来像把学生当成需要严肃处置的对象，意思偏了。",
+   "suggestion": "讲师则四处走动，查看有没有人伤得重、真正需要帮忙。"
+  },
+  {
+   "id": "c02-s0062",
+   "severity": "low",
+   "type": "误译",
+   "source": "Assume that they already know it's gas and there's a million molecules...",
+   "zh": "假设他们已经知道那是气体，知道有一百万个分子，唯一的自由变量就是速度。",
+   "problem": "原文的 they 在这句话里没有先行词，实际指的是要解题的「你」；中文照搬「他们」后，紧跟「谁能告诉我」出现一个无从判断指谁的代词，学生和读者都会愣一下。",
+   "suggestion": "假设你已经知道那是气体，知道有一百万个分子，唯一的自由变量就是速度。"
+  },
+  {
+   "id": "c02-s0112",
+   "severity": "low",
+   "type": "增译",
+   "source": "AI-generated output filled the bottom of the screen.",
+   "zh": "屏幕底部刷出一段 AI 生成的结论。",
+   "problem": "原文只说 AI 生成的 output（输出），没有说是「结论」；加了「结论」把扫描结果限定成诊断结论，属于原文没有的信息。",
+   "suggestion": "屏幕底部刷出一段 AI 生成的内容。"
+  },
+  {
+   "id": "c02-s0042",
+   "severity": "low",
+   "type": "增译",
+   "source": "The walls were covered with a thick, hastily organized layer of anti-transmission foil.",
+   "zh": "四壁糊着厚厚一层隔信箔，贴得很急，边角都没理齐。",
+   "problem": "原文只有 hastily organized（匆忙糊上），「边角都没理齐」是译文额外添的画面细节，后面句子也没再照应，属于增译。",
+   "suggestion": "四壁糊着厚厚一层隔信箔，糊得很仓促。"
+  },
+  {
+   "id": "c02-s0101",
+   "severity": "low",
+   "type": "漏译",
+   "source": "\"Well, Zei, you got it per-\"",
+   "zh": "“那么，泽，你答得完全——”",
+   "problem": "原文是话说到一半被爆炸打断，而且断在词中间（per- 即 perfect）；译文停在「完全」这个完整词上，读起来像自己收尾拖长音，被生生打断的效果弱了。",
+   "suggestion": "“那么，泽，你答得完全正——”"
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+  "chapter": 11,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第11章中文整体读得下去，翔球比赛那段画面清楚、节奏也带得起来（“气流把兹文往下吸”“他选了人迹更少的那条路”都落到了中文里），赛后掌则人讨论空气质量的长段对话也没有崩掉。问题集中在“英文句法直接搬进中文”：破折号后置解释（“那是……的速度”）、多层定语套叠（“我记得一直说……的人”）、状语成串压在名词前（“通过共治由红郡议会部分管理的城市”）以及“不把……集中收集在任何一处”这类语病，共 3 条会让人读不懂或要回读；此外还有一批用词搭配上的小磕碰。除 3 条 high 需要重写外，其余按条替换即可达到出版级语感。",
+  "issues": [
+    {
+      "id": "c11-s0046",
+      "severity": "high",
+      "type": "欧化",
+      "source": "It sped back up when Zven's altitude was decreasing at the safe maximum of five meters per tick - the speed that you would hit the ground after a fall from a height of slightly under two meters.",
+      "zh": "等兹文以每嘀嗒五米的安全上限下降时，旋翼又加速转起来——那是从不到两米高处落下、撞到地面时的速度。",
+      "problem": "破折号后面的解释句主语悬空：“那”紧跟在“旋翼”之后，读者第一反应会以为是在解释旋翼，而原文解释的是下降速度；接着“从不到两米高处落下、撞到地面时的速度”用顿号把“落下”和“撞到”并列，读起来像两个平行动作，实际要说的是“从不到两米高落下→砸到地面”的速度。这里是全章唯一给“安全上限”这个设定数值作解释的地方，读不懂就整段信息丢了。",
+      "suggestion": "等他降到安全上限——每嘀嗒五米——旋翼才重新加速；这个速度，相当于从不到两米高的地方摔到地面时的速度。"
+    },
+    {
+      "id": "c11-s0128",
+      "severity": "high",
+      "type": "欧化",
+      "source": "I thought you were the one who keeps saying there's no evidence the Arctics are actually doing those kinds of crazy things?",
+      "zh": "“我记得一直说没有证据证明北极人真在搞那种疯狂勾当的人，不就是你吗？”",
+      "problem": "三层定语套在一起（我记得／一直说没有证据证明北极人真在搞那种疯狂勾当／的人），中文读者第一遍很容易把“我记得一直说”读成“我一直在说”，要回头重排才知道主语是“你”。这是一句抢白式的反问，本该一口气顶到对方脸上，现在在嘴里打结，反问的锋利感就没了。",
+      "suggestion": "“不是你自己一直说，没有证据表明北极人真在搞那种疯狂勾当吗？”"
+    },
+    {
+      "id": "c11-s0129",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Isn't there some cryptographic way to get the data we want out of the scans, without ever collecting the data itself in cleartext in any one place?",
+      "zh": "“难道没有某种密码学办法，能让我们从扫描结果里拿到想要的数据，又永远不把原始明文数据集中收集在任何一处？”",
+      "problem": "“不把……集中收集在任何一处”不成话：“收集”不能带“在任何一处”这种处所补语，“永远不”修饰“把”字句也别扭，是 without ever collecting... in any one place 的词序直搬。这是格拉迪亚斯提出的技术设想，句子一别扭，读者就抓不住他想说什么。",
+      "suggestion": "“难道没有某种密码学办法，能让我们从扫描结果里拿到需要的数据，又不必把原始明文数据集中收集到任何一个地方？”"
+    },
+    {
+      "id": "c11-s0017",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "buying a derivative on property prices in a region that they were about to announce they would start serving.",
+      "zh": "买进了一个地区的房价衍生品——他们原本正要宣布去那个地区开展业务。",
+      "problem": "“一个地区的房价衍生品”里“一个地区”究竟修饰“房价”还是“衍生品”分不清，中文更顺的是“某个地区房价的衍生品”；破折号后“他们原本正要宣布去那个地区开展业务”把 announce + start serving 逐字搬来，“宣布去……开展业务”既拗口又第二次出现“地区”，原文那种“一边押注、一边准备宣布”的讽刺没落地。",
+      "suggestion": "……在金融市场上押了一把大的：买进某个地区房价的衍生品——而那个地区，他们本来正要宣布去开通业务。"
+    },
+    {
+      "id": "c11-s0026",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "They grabbed their copters and began strapping into them.",
+      "zh": "他们抓过自己的飞行器，开始把自己绑进座位里。",
+      "problem": "“把自己绑进座位里”是 strap into 的直译，中文说“绑进座位里”像把人捆在椅子上，画面也不对；这里说的是系上束带、把自己固定在座位上。",
+      "suggestion": "他们抓过自己的飞行器，开始系上束带，把自己固定在座位里。"
+    },
+    {
+      "id": "c11-s0058",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Though he would be even more supportive of private schools with <e>no</e> rubric micro-nudging attached.",
+      "zh": "不过要是私立学校<e>不</e>附带任何评则的微幅引导，他会更支持。",
+      "problem": "“微幅引导”是生造搭配：“微幅”在中文里只跟涨跌一类的量搭配（微幅上涨），不能跟“引导”连用；micro-nudging 指的是评则里那种细小的助推，中文说“细微引导／一点点推着走”才自然。",
+      "suggestion": "不过要是私立学校<e>不</e>附带任何评则上的细微引导，他会更支持。"
+    },
+    {
+      "id": "c11-s0061",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "One of the kids tumbled out of the sky, though the rotor's AI automatically broke his fall.（同句式见 c11-s0079：the fall broken as usual by the copter's AI）",
+      "zh": "有个孩子从天上栽了下来，不过旋翼的 AI 自动缓冲了坠落。／照例由飞行器的 AI 缓冲了坠势。",
+      "problem": "“缓冲了坠落”搭配不成立：中文的“缓冲”带的是冲击、压力这类可缓冲的对象，“坠落”是过程；c11-s0079 的“缓冲了坠势”同样不搭，而且“坠势”偏文，跟这段明快的叙述不一路。break one's fall 中文的常规说法是“减缓下坠／没让他摔重”。",
+      "suggestion": "有个孩子从天上栽了下来，好在旋翼的 AI 自动减缓了下坠。（c11-s0079 相应改为：照例由飞行器的 AI 减缓了坠势。）"
+    },
+    {
+      "id": "c11-s0110",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "A third of a percent of the land value, per year. For many businesses, that's like a sixth of their revenue.",
+      "zh": "“土地价值的0.33%，每年。对很多企业来说，这差不多是他们收入的六分之一。”",
+      "problem": "“土地价值的0.33%，每年。”是照英文把 per year 甩在句尾的写法，中文不说“某某的百分之几，每年。”，读起来像话被截断了；中文要把“每年”并在动词前，或说成“0.33%是年税率”。",
+      "suggestion": "“每年按土地价值的0.33%来收。对很多企业来说，这差不多是他们收入的六分之一。”"
+    },
+    {
+      "id": "c11-s0111",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Public aesthetics. Accessibility - ... What percent of the lot you're building on. Ground-floor active use…",
+      "zh": "公共美学。无障碍——既包括对残障人士友好，<e>也</e>包括让人能自由穿过你的地块、不被围栏挡在外面。你在多大比例的地块上盖楼。一层活跃用途——不过这一项有争议……",
+      "problem": "这一串是税则条目名，原文全是名词短语，中文却把其中一条写成完整句子“你在多大比例的地块上盖楼”，夹在“公共美学。”“应急准备。”“消防安全。”中间，列举的节奏一下断掉，听着像说话人中途换了语气去问对方话。",
+      "suggestion": "公共美学。无障碍——既包括对残障人士友好，<e>也</e>包括让人能自由穿过你的地块、不被围栏挡在外面。盖楼占地块的比例。一层活跃用途——不过这一项有争议，有人觉得干脆并进美学里算了。应急准备。消防安全。条目太多，实在塞不下。"
+    },
+    {
+      "id": "c11-s0119",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "the only evidence we have that the Arctics even know Veridia exists is that we have to listen to Lord Ephelion giving his sermons all the time.",
+      "zh": "我们唯一能拿出来的、证明北极人知道维里迪亚存在的证据，就是得常年听埃菲里昂勋爵布道。",
+      "problem": "“我们唯一能拿出来的、证明北极人知道维里迪亚存在的证据”把两重定语压在中心词“证据”前面，中间还用顿号切开，读到“证据”时已经断了气；后半“就是得常年听……”把“证据是……得听布道”硬接在一起，逻辑上也不顺，原文那种调侃的劲全被磨平了。",
+      "suggestion": "能证明北极人知道维里迪亚还存在的证据，我们唯一拿得出来的，就是得没完没了地听埃菲里昂勋爵布道。"
+    },
+    {
+      "id": "c11-s0131",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "pulled on the strap on his privacy robe's front face covering. His face was still covered, but the belt between the areas above and below his nose was now no longer tight. … he no longer needed it",
+      "zh": "拉了拉隐私袍正面面罩上的带子。脸还是遮着的，但鼻梁上下两片之间的束带现在不再勒得那么紧了。……他也不再需要那么严",
+      "problem": "三处小磕碰叠在一起：“隐私袍正面面罩”两个“面”连着绕口；“鼻梁上下两片之间”要读者自己还原成“面罩分上下两片、束带横过鼻梁”；“他也不再需要那么严”缺了宾语，中文得说“用不着防得那么严”。",
+      "suggestion": "格拉迪亚斯下了巴士，拉了拉隐私袍前襟面罩的系带。脸还遮着，但横过鼻梁的那条束带不再勒得那么紧了。病毒防护弱了一些——巴士里那种异常拥挤的室内空间已经离开，他也用不着防得那么严——不过舒服多了，呼吸也顺畅。他动身走回家。"
+    },
+    {
+      "id": "c11-s0143",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"How was the rest of your day?\"",
+      "zh": "“你今天剩下的时间过得怎么样？”",
+      "problem": "这是夫妻在路上碰面随口的问候，中文没有人说“你今天剩下的时间过得怎么样”，是 the rest of your day 的直搬，听着像在核对日程；中文说“后来呢”“你后来过得怎么样”。",
+      "suggestion": "“你后来这一天过得怎么样？”"
+    },
+    {
+      "id": "c11-s0151",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "except for Redshire, and the cities partially run by Redshire's parliament through co-governance.",
+      "zh": "除了红郡，还有那些通过共治由红郡议会部分管理的城市。",
+      "problem": "“通过共治由红郡议会部分管理的城市”把两层状语（通过共治／由红郡议会部分管理）不加停顿地堆在名词前，读者得先啃完两层状语才知道说的是“城市”，第一遍很难断句；中文习惯把状语挪到名词后面说。",
+      "suggestion": "除了红郡，还有一些城市通过共治、由红郡议会部分管理。"
+    },
+    {
+      "id": "c11-s0019",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "If housing prices in that region had gone up, Jump would have gained, Divergent would have lost, for them it would have been a net zero. … Jump loses, and Divergent gains, also a net zero.",
+      "zh": "如果那个地区的房价涨了，跃升赚、分歧资本亏，对他们来说净额是零。……跃升亏、分歧资本赚，净额还是零。",
+      "problem": "“跃升赚、分歧资本亏”用顿号连接的是两个主谓小句，顿号在中文里只连接并列的词或短语，连接小句要用逗号；接着的“跃升亏、分歧资本赚”同样。这里连着两句都用顿号，读起来像在报地名，术语推理的节奏被打断。",
+      "suggestion": "如果那个地区的房价涨了，跃升赚，分歧资本亏，对他们来说净额是零。……跃升亏，分歧资本赚，净额还是零。"
+    },
+    {
+      "id": "c11-s0021",
+      "severity": "low",
+      "type": "生硬",
+      "source": "They heard a loud whistle, and turned to face the direction that the sound came from.",
+      "zh": "一声响亮的哨声传来，他们转头朝声音传来的方向看去。",
+      "problem": "一句话里“传来”出现两次（“哨声传来”“声音传来的方向”），读起来打磕；后半也是 the direction that the sound came from 的直搬。",
+      "suggestion": "一声响亮的哨声传来，他们转头朝那个方向看去。"
+    },
+    {
+      "id": "c11-s0057",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Better to just have this conversation privately than have to choose each word carefully to avoid giving out Gladias's position, she thought.",
+      "zh": "与其每句话都得小心斟酌、免得泄露格拉迪亚斯的职务，不如干脆私下聊，她想。",
+      "problem": "“泄露……职务”搭配不对：中文说“泄露身份”“说漏他的职务”，“泄露职务”听着像职务本身被偷走。另外“与其……不如……，她想”把“她想”甩在长句末尾，读者读到最后一个字才知道前面整段是心理活动。",
+      "suggestion": "她想，与其每句话都得小心斟酌、免得说漏格拉迪亚斯的身份，不如干脆私下聊。"
+    },
+    {
+      "id": "c11-s0090",
+      "severity": "low",
+      "type": "欧化",
+      "source": "This was the third circle of Keepers that Gladias was assigned to",
+      "zh": "这是格拉迪亚斯被分配到手的第三个掌则人小组",
+      "problem": "“被分配到手的”把被动式和“到手”叠在一起，是英文被动结构的双重直搬；中文说“被分到的”就够，且“到手”在中文里多指东西落到手里。",
+      "suggestion": "这是格拉迪亚斯被分到的第三个掌则人小组"
+    },
+    {
+      "id": "c11-s0160",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Seila could already see the food truck coming towards them from a few hundred meters away. They both waited for the food truck to arrive.",
+      "zh": "塞拉就已经看见餐车从几百米外朝他们开来。两人一起等着餐车开过来。",
+      "problem": "两句连着用“朝他们开来／开过来”，同一个意思说两遍；第二句其实就落在一句家常话上，“两人就在门口等着”更自然。",
+      "suggestion": "家门还没关上，塞拉就已经看见餐车从几百米外朝他们开来。两人就在门口等着。"
+    }
+  ]
+}

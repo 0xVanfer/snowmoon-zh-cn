@@ -1,0 +1,224 @@
+{
+  "chapter": 4,
+  "lens": "fluency",
+  "reviewer": "wf-r2",
+  "overall": "第4章中文整体可读，民本棋的战术叙述和大量短句节奏不错，倒计时播报、白挑衅的语气、结尾“还有我妈”这类笑点都落地了。问题集中在两种翻译腔：一是英文句法残留——长定语前置、“的”字套嵌、名词堆叠（棋局描写和祭司／穆的说明句里最密）；二是搭配与关联词失手，字面都认识，读起来却像病句（“带着坡度”“把泽和白切断”“看了一眼计时”“虽说……而……”）。没有需要推翻理解的高危问题，按下列 24 处逐条改掉即可接近出版级语感。",
+  "issues": [
+    {
+      "id": "c04-s0051",
+      "severity": "high",
+      "type": "生硬",
+      "source": "When Zei was somewhat further up, he briefly looked back, and marveled at the view of Pafogai Du: a sprawling series of low-rise buildings interspersed with trees, the flickering lights of various small shops and factories producing and selling all kinds of goods, all inside a perfectly regular grid of streets - seventeen streets two hundred meters apart from north to south, and thirty three streets one hundred meters apart from east to west. Some of the roads snaked between being fully above ground when they could afford to, and the portion for cars going below ground when the sidewalks needed the whole space to accommodate pedestrians.",
+      "zh": "又往上走了一段，泽短暂地回头看了一眼，为帕佛盖都的景致惊叹：大片连绵的低层建筑间杂着树木，各式小店铺和工厂灯火闪烁，生产、售卖着各种各样的货物，全都嵌在一张规整的街道网格里——南北向排开十七条街，间隔两百米；东西向排开三十三条街，间隔一百米。有些路则在两者之间来回切换：空间宽裕时整条留在地面，人行道需要占满整个宽度容纳行人时，车行部分就转入地下。",
+      "problem": "这句读不顺有三层原因：(1)“在两者之间来回切换”的“两者”前面刚说完街道网格的南北、东西走向，读者找不到它指谁——原文指的是“整条路在地面”和“车道走地下”这两种状态；(2)snaked（像蛇一样蜿蜒起伏）被译成抽象的“切换”，画面全没了；(3)冒号后一句里主语连换三次（“空间”“人行道”“车行部分”），必须回读一遍才拼得出意思。",
+      "suggestion": "有些路则像蛇一样时上时下：路面宽裕时，整条路都留在地面；人行道要占满整个宽度才容得下行人时，车道就钻到地下。"
+    },
+    {
+      "id": "c04-s0085",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Drones about the size of a hand device buzzed as they flew around Zei, scanning for any kind of equipment that could be used for cheating. If Zei's hand device or watch had been with him, they would have automatically done the same in reverse - demand and verify an attestation from the manufacturer and two inspectors that the drone's firmware was running an anti-cheat scan and was not there to kill him. But here, Zei was without his electronic support, and so he had to rely on trust.",
+      "zh": "一群手持终端大小的无人机嗡嗡地绕着泽飞，扫描任何可能用来作弊的设备。如果泽的手持终端或手表还在身上，它们会自动反过来走同一套流程——要求制造商和两名检查员出具证明并加以核验，证明这架无人机的固件跑的是反作弊扫描，而不是来取他性命的。但在这里，泽没有电子设备撑腰，只能靠信任。",
+      "problem": "一句里出现两个“证明”（前一个名词、后一个动词），中间又夹着“出具……并加以核验”，谁要求谁、谁核验谁要读两遍才分得清；这是本章最好笑的冷幽默（反作弊无人机也得先证明自己不是来杀你的），被句法拖没了。“自动反过来走同一套流程”也是 done the same in reverse 的直搬。",
+      "suggestion": "如果泽的手持终端或手表还在身上，它们就会自动把同样的事反过来做一遍：向无人机的制造商和两名检查员索要并核验一份证明，确认它的固件跑的是反作弊扫描，而不是来取他性命的。"
+    },
+    {
+      "id": "c04-s0088",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei calmed down and tried to put his stress behind him, and rehearsed once again in his head the tactics. Walls, gliders, rocks, techniques for extracting usable negentropy from rocks, sideways attacks. Though every game there's always some kind of new rule, and the most important tactic of all was knowing how to adapt.",
+      "zh": "泽平静下来，努力把紧张丢到脑后，又在脑中过了一遍战术。墙、滑翔机、石阵、从石阵里榨出可用负熵的技巧、侧翼进攻。虽说每局总会有某种新规则，而所有战术里最重要的，就是懂得随机应变。",
+      "problem": "“虽说”在中文里要跟“但／可是”配对，这里接“而”，关联词断在半路，读到后半句得回头重找主干；后半句也缺一个落点（最重要的一“是”什么）。",
+      "suggestion": "虽说每局总会冒出点新规则，但所有战术里最重要的，还是懂得随机应变。"
+    },
+    {
+      "id": "c04-s0098",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei saw Bai setting up walls and glider factories - gliders that would fly right to a nearby rock formation, and then reflect one glider back into Bai's territory where a mirror wall would send the glider right back, but also shoot another glider upward.",
+      "zh": "泽看见白在搭墙和滑翔机工厂——放出去的滑翔机会径直飞向附近的石阵，把一架滑翔机反射回白的地盘；那里的一道镜面墙会把它原路送回，同时又向上射出一架滑翔机。",
+      "problem": "(1)“搭……工厂”搭配不成立，工厂是“建”的；(2)“把一架滑翔机反射回”缺主语，读者得自己补出“石阵”才读得通，而紧接着又换成代词“它”，指代一路在飘。",
+      "suggestion": "泽看见白在搭墙、建滑翔机工厂——滑翔机飞出去，径直撞上附近的石阵，石阵又把一架滑翔机反射回白的地盘；那里的一道镜面墙再把它原路送回，同时又向上射出一架滑翔机。"
+    },
+    {
+      "id": "c04-s0120",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Watching from the sidelines, Mu sighed. She knew Zei and Bai did not get along, and their side was suffering from it. This was the \"price of anarchy\", she thought - the amount that a group lost from its members independently pursuing their own separate goals without coordinating. She watched intently. The next minute, she knew, would determine if they could figure it out.",
+      "zh": "在场边看着的穆叹了口气。她知道泽和白合不来，他们这一边正因此吃亏。这就是“无政府代价”（price of anarchy）吧，她想——一群人因为成员各自追求自己的目标、互不协调而损失掉的那部分。她凝神看着。接下来的一分钟，她知道，将决定他们能不能想通。",
+      "problem": "(1)定义句把英文定语从句原样搬进中文：“一群人因为成员各自追求自己的目标、互不协调而损失掉的那部分”，一个“因为”一个“而”夹在“的……的”里，要回看才能接上；(2)“接下来的一分钟，她知道，将决定……”是 she knew 插入语的英语语序，中文不作这种悬置，读着像句子被打断。",
+      "suggestion": "这就是所谓“无政府代价”（price of anarchy）吧，她想——一群人互不协调、各人只顾自己的目标，为此白白损失掉的那部分。她凝神看着。她知道，接下来这一分钟将决定他们能不能想通。"
+    },
+    {
+      "id": "c04-s0124",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Pan and Dza did not see any of this. Instead, they saw Zei having greatly wounded Dza, but still struggling to finish him off, while Pan cornered Bai more and more toward the southeast. Emboldened, Pan launched an attack toward the east, seeking to sow chaos in the weakly defended territory in between Zei's home base and the front in the northeast against Dza.",
+      "zh": "潘和扎都看不见这些。他们看到的，是泽重创了扎，却始终收不掉他；同时潘把白一步步逼向东南角。潘因此有了底气，向东发起进攻，想在泽的主基地与东北方向对扎的前线之间那片防守薄弱的地带散播混乱。",
+      "problem": "宾语前叠了七八层修饰（泽的／主基地／与／东北方向／对扎的／前线／之间／那片／防守薄弱），中文读者只能倒着拆结构；“散播混乱”又是 sow chaos 的直译，书面味和前面“有了底气”的口语调子不搭。",
+      "suggestion": "潘因此有了底气，向东发起进攻。那片地带夹在泽的主基地和东北方向对扎的前线之间，防守薄弱，他想在那里搅出乱子。"
+    },
+    {
+      "id": "c04-s0130",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Finally, Zei said the first words that went across his team's audio channel in this entire game.",
+      "zh": "终于，泽说出了这整局里通过队伍音频频道的第一句话。",
+      "problem": "“说出……通过……的……第一句话”把状语塞进定语，中文这种情况直接说“开口”；另外“队伍音频频道”是照字面拼出来的说法，本章前面用的是“语音频道”，同一件东西两种译名，读者会当成两回事。",
+      "suggestion": "终于，泽开口了——这是整局棋里，队伍频道上第一次有人说话。"
+    },
+    {
+      "id": "c04-s0137",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei used his intervention turn to remove his own wall. Dozens of gliders flew in all directions, simultaneously targeting all of Dza's remaining symbols from multiple angles. Bai struggled in her sandbox view, made a few attempts at copying Zei's trick from over a thousand turns earlier. On her third try, she succeeded, and she repeated her moves live. The symbol was walled off, and gliders were flying in all directions.",
+      "zh": "泽用他的干预回合拆掉了自己的墙。几十架滑翔机朝四面八方飞去，同时从多个角度瞄准扎剩下的全部符记。白在沙盒视图里拼命摆弄，照着泽一千多个回合前那一手试了几次。第三次，她成功了，并把自己的操作实时做了出来。符记被墙围住，滑翔机朝四面八方飞射。",
+      "problem": "“把自己的操作实时做了出来”意思含混：做出来的是什么？原文 she repeated her moves live 是说她把沙盒里练成的那一手实时复制到棋场上，现在的写法既不像下棋也不像操作，读者要回头猜；同一段里前面刚说“朝四面八方飞去”，末尾又来“朝四面八方飞射”，重复得刺耳。",
+      "suggestion": "白在沙盒视图里拼命摆弄，照着泽一千多个回合前那一手试了几次。第三次，她成功了，随即把这一手实时下到了棋场上。……符记被墙围住，滑翔机四散飞射。"
+    },
+    {
+      "id": "c04-s0150",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"This time, the game was a psychological trial. Despite having the teammate you wanted to cooperate with the least, despite making a new all-time record for the fewest messages exchanged in the audio channel during an entire game, when the moment came, almost without talking at all, you cooperated. And so you passed.\"</c>",
+      "zh": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“这一次，比赛是一场心理考验。尽管配给你的队友是你最不愿意配合的人，尽管创下了整局比赛音频频道消息数最少的历史纪录，可到了那一刻，你们几乎一句话都没说，就配合起来了。所以你们通过了。”</c>",
+      "problem": "名词串“整局比赛／音频频道／消息数／最少／历史纪录”一路叠加，读起来像数据报表；“音频频道”与本章别处的“语音频道”也不统一。",
+      "suggestion": "尽管创下了整局比赛里队伍频道消息最少的历史纪录"
+    },
+    {
+      "id": "c04-s0050",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The street curved up with about a ten percent slope, roughly doubling Zei's calorie consumption as he walked along it. And Zei could feel it. His mind subconsciously stopped running through strategies for the upcoming match, and switched to simply marveling at the beauty of the pyramid.",
+      "zh": "街道带着大约百分之十的坡度向上弯，让泽走路时的热量消耗差不多翻了一倍。泽感觉得到。他脑中下意识地不再推演接下来那场比赛的战术，转而单纯惊叹这座金字塔的美。",
+      "problem": "坡度是路自身的属性，中文不说路“带着坡度”；“热量消耗”是体检报告的语域，叙述里更自然的是“消耗的热量”；“泽”紧接着又在下一句做主语，两句连读像在点名。",
+      "suggestion": "街道以大约10%的坡度向上延伸，泽走起来消耗的热量差不多翻了一倍。他感觉得到。"
+    },
+    {
+      "id": "c04-s0119",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Meanwhile, more of Bai's symbols disappeared, as Pan launched an attack going into the middle of the bottom of the field, seeking to cut Zei off from Bai.",
+      "zh": "与此同时，白的符记又少了几处：潘从棋场底边的中段发起进攻，想把泽和白切断。",
+      "problem": "“把泽和白切断”搭配不成立——能切断的是联系，不是人；原文 cut Zei off from Bai 是把两人之间的联系切断、把两人隔开。",
+      "suggestion": "潘从棋场底边中段发起进攻，想把泽和白隔开。"
+    },
+    {
+      "id": "c04-s0128",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei checked the clock. Sixty turns until the next intervention turn. His spaceship was almost at Pan's base.",
+      "zh": "泽看了一眼计时。离下一个干预回合还有六十个回合。他的飞船已经快到潘的基地了。",
+      "problem": "“看了一眼计时”成分残缺，中文说“计时器”或“时间”；下一句“干预回合……还有六十个回合”同一个词紧挨着出现两次，读起来打结。",
+      "suggestion": "泽看了一眼计时器。再过六十个回合，才到下一个干预回合。"
+    },
+    {
+      "id": "c04-s0082",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "A quarter minute later, the elevator door opened, exposing a giant room with over a thousand people watching. A path lit up, showing the way to a giant game console with a chair.",
+      "zh": "四分之一分钟后，电梯门打开，露出一间巨大的房间，一千多人在里面观看。一条通道亮了起来，指向一台带椅子的巨大游戏主机。",
+      "problem": "“四分之一分钟”是 a quarter minute 的直搬，中文口语不会这么说（等于十五秒）；后面“露出一间巨大的房间，一千多人在里面观看”两个小句用逗号硬接，也像提纲。",
+      "suggestion": "过了十五秒，电梯门打开，露出一间巨大的房间，里面有一千多人在观看。"
+    },
+    {
+      "id": "c04-s0041",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "<c st=\"color:oklch(0.7 0.15 80)\">\"You know, there's an old result: if you take the same text, and translate it into every language, the lengths of the translations are different. But if you take the translations, and compress them - literally, any off-the-shelf compression used in any of your compute devices - the lengths end up almost the same. So it's all the same amount of information. The question is always: how do you organize it so that it's the most accessible and useful?\"</c>",
+      "zh": "<c st=\"color:oklch(0.7 0.15 80)\">“你知道有个老结论：拿同一段文本，把它翻译成每一种语言，各版本的篇幅长短不一。但把这些译文拿来压缩——就用你任何计算设备里现成的随便哪种压缩算法——长度最后几乎一样。所以信息量本来就是相同的。问题永远是：你怎么组织它，才能让它最好取用、最有用？”</c>",
+      "problem": "“就用你任何计算设备里现成的随便哪种压缩算法”把三层修饰全压在一个名词前（你的／任何计算设备里的／现成的／随便哪种），中文口语会说“随便哪个现成的算法都行”。",
+      "suggestion": "但把这些译文拿来压缩——用你手头任何一台计算设备里现成的压缩算法就行，随便哪种——长度最后几乎一样。"
+    },
+    {
+      "id": "c04-s0025",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "<c st=\"color:oklch(0.7 0.15 80)\">\"Well my last DU class was in linguistics so finally I get to be the genius here.\"</c>",
+      "zh": "<c st=\"color:oklch(0.7 0.15 80)\">“我最近一门去中心化大学的课正好是语言学，所以在这儿终于轮到我当天才了。”</c>",
+      "problem": "“我最近一门……的课”不是中文的说法（last DU class 是“最近上的那门课”），长定语全压在“课”前面，读起来就是翻译件。",
+      "suggestion": "“我在去中心化大学最近上的那门课正好是语言学，所以在这儿终于轮到我当天才了。”"
+    },
+    {
+      "id": "c04-s0028",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "<c st=\"color:oklch(0.7 0.15 80)\">\"You know how after we got the number of roots down to 256, the word was that we're going to keep going, and soon enough express everything through the four cardinal elements - earth, air, fire and water?\"</c>",
+      "zh": "<c st=\"color:oklch(0.7 0.15 80)\">“你知道的，我们把词根数量压到256个之后，传出来的说法是还要继续压，早晚要用四大元素——地、气、火、水——来表达一切？”</c>",
+      "problem": "英文 You know how… 是用来引出两人共同经历的旧事（“你还记得吧”），中文“你知道的”意思是“这事不用我说你也明白”，接不上后面的设问；句尾“来表达一切？”离主句太远，设问落点发飘。",
+      "suggestion": "“还记得吧，我们把词根数量压到256个以后，大家都说还要接着压，早晚要用四大元素——地、气、火、水——来表达一切？”"
+    },
+    {
+      "id": "c04-s0113",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "A thousand turns later, the two sides' gliders and ships met. At the same time, the first intervention turn came. Here, all players were able to put down more squares near any copy of their symbols. Zei frantically adjusted his forces to more effectively attack Dza.",
+      "zh": "一千个回合之后，双方的滑翔机和飞船碰上了。与此同时，第一个干预回合到来。在这个回合里，所有选手都可以在自己的任意符记复制附近落格。泽疯狂调整兵力，想更有效地攻击扎。",
+      "problem": "“自己的任意符记复制”把“任意”插进定语中间，要拆两次才读得通；“符记复制”这个硬造的复合名词也像没译完的术语。",
+      "suggestion": "在这个回合里，所有选手都可以在自己符记的任意一处复制附近落格。"
+    },
+    {
+      "id": "c04-s0141",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Meanwhile, Bai and Zei continued to wreak havoc on Pan's territory, Bai attacking the west and Zei attacking the north and east. A thousand turns later, most of the game field had become a high-entropy wasteland. The main untarnished territories were Bai's home base, a fraction of Zei's home base, and Zei's side of what had been the battle front against Dza. Total symbol count: Zei five, Bai five, and Pan four.",
+      "zh": "与此同时，白和泽继续在潘的领地上大肆破坏，白打西边，泽打北边和东边。一千个回合后，棋场大部分已经成了一片高熵荒原。还算完好的主要地盘，只剩下白的主基地、泽主基地的一小块，以及原先对扎那条战线上泽这一侧。符记总数：泽五，白五，潘四。",
+      "problem": "(1)“原先对扎那条战线”缺动词，“对”字悬空；(2)“泽五，白五，潘四”是英文电报体的直搬，中文读起来像省了量词的口令。",
+      "suggestion": "以及原先与扎交战的那条战线上泽这一侧。符记总数：泽5个，白5个，潘4个。"
+    },
+    {
+      "id": "c04-s0043",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "<c st=\"color:oklch(0.7 0.15 80)\">\"So that's what the Bansunpei is A/B testing right now all across Dzego. Altogether, the priests came up with six different styles of visualization, and they're giving out reputation points if you adjust any of your writing or signs to their new ideas or report on your experiences reading things put up by others.\"</c>",
+      "zh": "<c st=\"color:oklch(0.7 0.15 80)\">“所以班孙培现在正在全泽国做A/B测试。祭司们一共拿出六种不同的可视化样式，只要你把自家的文字或招牌按他们的新想法调整一下，或者上报你阅读别人贴出来的东西的体验，他们就发信誉分。”</c>",
+      "problem": "一句话里三个“的”（你／贴出来的／体验），是定语套定语；“上报……体验”也是 report on your experiences 的直搬。",
+      "suggestion": "或者把你读别人张贴内容的感受报上去"
+    },
+    {
+      "id": "c04-s0114",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "At the front, Zei put down a \"moving wall\" design that he had perfected - a sort of large glider that flew half as fast, but was optimized for reflecting more basic types of gliders right back at the sender. Right behind his three moving walls, all aimed at Dza's corner of the game board, he put his symbol-carrying spaceships.",
+      "zh": "在前线，泽摆下了他打磨成熟的“移动墙”形——一种飞得只有一半快的大型滑翔机，但专门优化过，能把更基础的几类滑翔机原样反打回发送者那里。在三道移动墙正后方——它们全都对准扎在棋盘上的那一角——他放上了携带自己符记的飞船。",
+      "problem": "“打磨成熟”是生造搭配（中文说“打磨出来的／早已练熟的”）；“原样反打回发送者那里”里“发送者”用于棋局不自然（滑翔机不是人发出去的），中文会说“弹回发射它的一方”。",
+      "suggestion": "在前线，泽摆下了他早已练熟的“移动墙”阵形——一种飞得只有一半快的大型滑翔机，但专门优化过，能把更基础的几类滑翔机原封不动地弹回发射它的一方。"
+    },
+    {
+      "id": "c04-s0036",
+      "severity": "low",
+      "type": "生硬",
+      "source": "<c st=\"color:oklch(0.7 0.15 80)\">\"There's a bigger change in how they are thinking. Language so far has been very one-dimensional, because speech is one-dimensional, you're saying one word after the other, and you write what you speak. But if you think about parts of 'language' that are not tied to speech, say, you like math - so think of the quadratic formula.\"</c>",
+      "zh": "<c st=\"color:oklch(0.7 0.15 80)\">“他们思路上的变化更大。语言到现在为止都非常一维，因为说话就是一维的：一个词接一个词，而你写下你说的话。但如果你想一想“语言”里那些不依附于说话的部分——比方说，你喜欢数学，那就想想二次方程求根公式。”</c>",
+      "problem": "“非常一维”是 one-dimensional 的直搬，中文拿“一维”形容语言需要一点铺垫；“你写下你说的话”是 you write what you speak 的逐字译，中文会说“写下来的也就是嘴里说的”。",
+      "suggestion": "语言到现在为止都只有一维，因为说话本身只有一维：一个词接一个词，写下来的也就是嘴里说出来的。"
+    },
+    {
+      "id": "c04-s0061",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"Wish you luck\", Fin had messaged him.",
+      "zh": "“祝你好运”，芬发来的消息。",
+      "problem": "中文这句没有谓语，成了残句（原文 Fin had messaged him 是有动词的）；引号里已经是完整的一句话，逗号收尾也不合标点习惯。",
+      "suggestion": "芬给他发来消息：“祝你好运。”"
+    },
+    {
+      "id": "c04-s0069",
+      "severity": "low",
+      "type": "本土化",
+      "source": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Excited for the quarter finals?\"</c>",
+      "zh": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“四分之一决赛，兴奋吗？”</c>",
+      "problem": "中文对期待的事说“激动”，不说“兴奋”（兴奋多指当下的情绪高涨）；“四分之一决赛”单独甩在句首，像标题不像问话。",
+      "suggestion": "“要打四分之一决赛了，激动不？”"
+    },
+    {
+      "id": "c04-s0086",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Half a minute later, the drones were satisfied, and flew away. A tray slid out from under the game console, offering glasses attached to a long cable. Zei picked up the glasses. He slid them under and behind his arm, so that the cable would rest behind him, and then put the glasses on.",
+      "zh": "半分钟后，无人机们满意了，飞走了。一只托盘从游戏主机下方滑出来，上面放着几副连着一根长线的眼镜。泽拿起眼镜。他把线从手臂下绕到身后，好让线垂在背后，然后戴上了眼镜。",
+      "problem": "中文不用“们”表复数，尤其不用于机器；“满意了”把原文 satisfied（检查通过）译成了拟人的情绪。",
+      "suggestion": "半分钟后，无人机查完了，飞走了。"
+    }
+  ]
+}

@@ -1,0 +1,1195 @@
+{
+ "chapter": 8,
+ "segments": [
+  {
+   "id": "c08-s0001",
+   "role": "title",
+   "text": "Chapter 8",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0002",
+   "role": "place",
+   "text": "Meldan, Veridia",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0003",
+   "role": "date",
+   "text": "3724 Rainmoon 26",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0004",
+   "role": "p",
+   "text": "Gladias's watch buzzed as he was walking along the street.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0005",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0006",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0007",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0008",
+   "role": "center",
+   "text": "Seila",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0009",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0010",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">[5 images]</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0011",
+   "role": "cell",
+   "text": "34125",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0012",
+   "role": "p",
+   "text": "He opened up his hand device to see the images more clearly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0013",
+   "role": "p",
+   "text": "Seila was sending photos from Iptak. Gladias was immediately curious. Neither he nor Seila had ever before been to \"the aks\", as the Veridians liked to call the cluster of Ondak, Iptak, Mantak and Belpaki. The architecture was visibly different, more brick and wood, the colors more red and brown than what he was used to seeing not just in Veridia, but even in pictures of Dzego, or for that matter any of the United Cities that Gladias had been to or seen pictures of.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0014",
+   "role": "p",
+   "text": "The signs were in a language that was half alphabet, half pictorial - the sort of thing that Dzegoban had been not too far from before they stripped that out in order to streamline the language.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0015",
+   "role": "p",
+   "text": "He pressed a button, responding to Seila with a heart symbol.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0016",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'm looking forward to your blog\"</c>, Gladias whispered through his neck band, letting Emerald automatically route that message to Seila.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0017",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I'll be back in a few days!\"</c>, Seila replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0018",
+   "role": "p",
+   "text": "At that point, Gladias arrived at the end of the path, at an intersection with the sidewalk along a street. Right in front, there was a sign listing the autobuses that stopped at that point. Gladias saw the number of the autobus that he was meant to take. He stood and began to wait.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0019",
+   "role": "p",
+   "text": "Gladias's watch buzzed, and a notification appeared onscreen.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0020",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0021",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0022",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0023",
+   "role": "center",
+   "text": "Mov",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0024",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0025",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">Remember that your trial in today is not just about knowledge. It's also about making sure the senators like you.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0026",
+   "role": "cell",
+   "text": "34576",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0027",
+   "role": "p",
+   "text": "Gladias sighed, and let his arm drop back down to beside his waist. He continued to wait.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0028",
+   "role": "p",
+   "text": "A few minutes later, the next autobus arrived. Gladias checked the number. It was exactly the autobus that he needed. He quickly got on, and the door closed behind him.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0029",
+   "role": "p",
+   "text": "Out of the corner of his eye, he saw more people than usual looking intently at their hand devices at that moment. Curious, he stepped forward and quietly looked at what one of the other passengers was looking at.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0030",
+   "role": "p",
+   "text": "\"Veridia National University\", the header at the top of the view on the passenger's hand device said. \"Live debate between Professor Sylka, president of VNU, and Lord Ephelion, Arctic ambassador to Veridia\".",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0031",
+   "role": "p",
+   "text": "Sylka was speaking, and Gladias could make out the subtitles.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0032",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Gross economic output alone measures one part of human progress\"</c>, she said - though Gladias could only see and not hear. <c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"But it becomes a very limiting and impoverished perspective if you start viewing it as the entire goal.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0033",
+   "role": "p",
+   "text": "Gladias was curious enough that he whispered to Emerald through his neck band to put up an audio livestream of the debate.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0034",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"There is so much more that matters. There is the citizens' health, their emotional well-being, and how healthy the bonds in the society are.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0035",
+   "role": "p",
+   "text": "As Sylka finished speaking, the audio livestream connected. Gladias stepped back from the passenger, somewhat embarrassed that he had momentarily violated the passenger's privacy by looking at his screen, and relieved that he was now receiving the feed in a completely ethical way.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0036",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"What good is a large car if people feel unhappy because they have no purpose in life? What good is a large house if people feel alienated in their society, and don't have friends to invite to it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0037",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"What good are the latest electronics, if the people at the bottom use them to hack and steal, the people at the top use them to invade people's privacy and surveil, and everyone all the time uses them to get outraged on social media platforms?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0038",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Such questions are the entire reason why Veridia has mechanisms like Steering.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0039",
+   "role": "p",
+   "text": "Sylka paused. Lord Ephelion started speaking.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0040",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"There has now been a century-long tradition of people trying to make better metrics than gross economic output. But what we have seen is that especially over the long term, the countries that perform best on any of those metrics are precisely the ones whose economic output is highest.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0041",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"And there is a deep reason for this. Historians have long understood that many phenomena in society move in cycles. The ancients talked about a cycle: flourishing, pride, arrogance, downfall, suffering, rebirth, and then flourishing once again. They said the same thing about governance, and how it inevitably cycles between technocratic, democratic, chaotic and strongman.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0042",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"Whenever we talk about the inevitability of rises and falls, it is precisely these 'softer' traits like 'societal cohesion', 'freedom' and 'well-being' that move in this fashion. On those dimensions, the dominant transformation is a rotation: good creates the generator of the bad, which creates the bad, which creates the generator of the good once more.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0043",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"And let us be real: these 'softer' traits that people are targeting, they're chosen by committees of priests - selected not for competence, but for echoing whatever ideology strikes people's fancy at the time.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0044",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"There is only one thing that stands out from this pattern and offers a truly lasting improvement: the relentless march of economic growth, enabled by the unceasing progress of science, technology, and capital accumulation. While the emotional vibrations in a society cycle between the pride of success, and the desperation of collapse and defeat, with every cycle, people are smarter and richer than before.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0045",
+   "role": "p",
+   "text": "Gladias could see the eyes of a few of the people on the autobus watching perking up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0046",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"The Order members are chosen by a sophisticated-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0047",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Order, please. Ephelion has the floor.\"</c>, the moderator interjected.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0048",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">\"And so if you want to truly improve a society, in a way that provides lasting value for the long term, you do not focus on the thing that moves in cycles. You do not focus on accelerating the rotation. Instead, you focus on increasing the largest eigenvector. You focus on affecting the thing that has a thousand-year record of compounding on itself, the vector on which good reliably leads to more good. And you let the rest follow the natural laws as it may.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0049",
+   "role": "p",
+   "text": "Ephelion stopped, and Sylka cleared her throat, preparing to speak. At that point, Gladias realized that the autobus door was open, and it was already at his destination. He quickly ran out, and Emerald automatically paused the livestream to help him concentrate.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0050",
+   "role": "p",
+   "text": "His mind lingered on the debate for a moment longer, and he noticed with faint irritation how easily Ephelion's sentences arranged themselves into an argument that seemed to make sense on its own terms. A gifted demagogue, he concluded. He then refocused on what lay ahead.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0051",
+   "role": "p",
+   "text": "Gladias started walking forward along a path covered with trees on both sides. After a few minutes, he saw a large circular building ahead. This was the parliament. The structure was notably different from the intentionally distant and mysterious headquarters of the Order of Steering: it was on ground level, the construction mixing medieval and modern aesthetics, with multiple entrances on all sides.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0052",
+   "role": "p",
+   "text": "He kept walking forward, and soon arrived at the entrance.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0053",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Welcome, Gladias, to your selection hearing.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0054",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"You have been an Acolyte for four years, and you have reached the ninety-fourth percentile in your prediction score. You have applied to join the Order of Steering in full standing - though whether you're applying to be a Sentinel or a Keeper, that's something that only you and perhaps your most trusted advisors will ever know.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0055",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Today, we will administer the second part of the admissions test: the approval of the Parliament committee. Are you ready to begin the hearing?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0056",
+   "role": "p",
+   "text": "A robot slid up to the chair in the middle of the room where Gladias was sitting, carrying a cup of water. Gladias took the cup, and moved it to the cup holder on the side of the chair.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0057",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I am ready.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0058",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Then let the questions begin.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0059",
+   "role": "p",
+   "text": "Twenty senators were sitting on large chairs arranged along the whole edge of the circular-shaped room, spread about two meters apart from each other. In between some of the chairs, there were air filters. Above them, there were bright lights aimed downward, some bright yellow lights to light up the room, and a few faint violet-looking lights to keep the air clean.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0060",
+   "role": "p",
+   "text": "In a particularly distinguished seat was the Chairman of the committee. About five senators pressed down on the buttons on their table, requesting to speak.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0061",
+   "role": "p",
+   "text": "The system automatically selected one, and lighting around the edge of his seat turned green.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0062",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Senator Verdow, you may ask your question.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0063",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Gladias, tell us about your background.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0064",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Well\"</c>, Gladias stammered. <c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I was born thirty-nine years ago. Fairly middle class family, nothing too fancy. I went to a normal school, got good grades, but never got top of the class or anything.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0065",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Why not?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0066",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I think I was just not motivated to. I tried very hard for one year, got an average of ninety-seven percent. But then I realized that the main emotion I was feeling, was the fear that if I screwed up even once, my beautiful record would be gone. I even avoided taking the harder classes. At the end of that year, I just felt like that was a game not worth playing. So I put in less effort, and started programming, and then studying law, in my spare time, because those things interested me, and I ended up doing decently well in the programming competitions.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0067",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Why did you choose to become an Acolyte?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0068",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"The first hobby project I gave myself when I seriously got into programming as an adult was writing an alternative client for Silverchat. After I finished, I tried to do the same for Bluewhale. And it was so much harder, because they were more closed and proprietary in many ways. That was when I realized just how much value Silverchat's openness was bringing to me that Silverchat itself would never capture. And I had been studying rubrics only a few days before, and it clicked - this, the aspects of a good society that the market alone misses, is exactly why Steering is so important. And so I felt motiv-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0069",
+   "role": "p",
+   "text": "A timer buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0070",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Next question! Papli.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0071",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"What's your favorite band?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0072",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Err... I don't really have one.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0073",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"Favorite game?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0074",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Don't have one either.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0075",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"Favorite sport?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0076",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I remember enjoying playing Colorball when I was a kid? The school game that Helisport ended up being based on.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0077",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"How can we possibly trust you to judge on our society's behalf, when you're so out of touch with so much of regular Veridian people's lives?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0078",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Isn't this why citizens' assemblies and broad listen reports exist, and why a Keeper group has months to listen to both before it makes its decision on a rubric? And isn't this why Keepers and Sentinels are allowed to specialize? I probably won't be deciding on anything that has to do with sports.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0079",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"What do you think of Dzego?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0080",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I like their food. I only started learning more about their history recently. My wife met a couple of Dzegojan kids and they seemed nice. In general, I feel for their plight, I hope we could find a way to support them more.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0081",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"Aha, so you want us to support Dzego, and you want us to make our social networks more open so that some super smart kids can play with them more easily. But I haven't seen you talk once about something that a regular Veridian would care about, that affects their lives.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0082",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You don't think increasing hardware openness allows more mechanics to join the market, which makes owning things cheaper-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0083",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"Well what about the salaries of the mechanics themselves!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0084",
+   "role": "p",
+   "text": "Gladias started formulating a response in his head. Economics was a basic part of the curriculum for anyone training to be an Acolyte, and so he could immediately recognize the fallacy.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0085",
+   "role": "p",
+   "text": "On the one hand, every dollar of price increase in repair was a dollar taken from a customer but given to a mechanic, so from that view the good and the bad balanced out. But on the other hand there were second order effects: reducing the cost of ownership of goods means that people can use the money they saved to buy other things, which means more jobs get created somewhere else. Ignoring this was the fallacy of all naive economic interventionism done in the name of politics: favoring the seen at the expense of unseen.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0086",
+   "role": "p",
+   "text": "It took him about three ticks to formulate the structure of this argument in his head. But then he realized that it would take him about twenty ticks to speak it - when the timer on the clock had only four ticks left. Gladias gave up, and simply did not respond.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0087",
+   "role": "p",
+   "text": "The timer buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0088",
+   "role": "p",
+   "text": "Gladias began to sweat nervously.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0089",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Senator Ancus?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0090",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"What was the last thing you voted on for the aesthetics tax?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0091",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"A blue and grey building on Badra street. It was hard to decide, it was just average, nothing out of character in a bad way, but also nothing exceptional. Whenever I pass by it, there were always families coming in and out, people even sitting on the benches outside. Children occasionally selling food they make. But that's normal for Meldan these days. So I just gave it a very tiny vote of approval.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0092",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"What was the last thing you <e>wished</e> you could have voted on?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0093",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"A Hydrafill billboard. The one that talked about their drinks being free of over 2,000 poisons and anti-recommended substances.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0094",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"Why?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0095",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"The ad was fun. I still remember when I was young, and all the ads were boring or just painful to look at. They were just trying to get inside your head, that's all they cared about. It's especially bad when they do that on public transit; if the public transit experience is bad then even more people switch over to cars and we get more pollution and congestion and that's bad for everyone. I was glad that Hydrafill tries so hard to be better than that.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0096",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"Papli\"</c>, Ancus shouted, whipping his head toward Papli. <c st=\"color:oklch(0.7 0.15 13.333333333333332)\">\"Don't you think families enjoying the outdoor environment, good public transit, and fun are all things that regular Veridians value a lot?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0097",
+   "role": "p",
+   "text": "Papli did not answer.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0098",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Keep the conversation between the asking Senator and the applicant\"</c>, the Chairman interjected.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0099",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I think so. Maybe Papli would say Hydrafill's style of humor is pretentious smart people humor or something like that.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0100",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"But I think he underestimates Veridians, and just how smart many of them are. I was on the autobus coming here, when Sylka was debating Ephelion on how to measure social progress, and people seemed really engaged when she was speaking.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0101",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"That's just the smug smart people's version of enjoying watching people fight. Helisport is actually <e>more</e> peaceful\"</c>, Papli interjected. <c st=\"color:oklch(0.7 0.15 213.33333333333331)\">\"At least the Quadratic Funding funds Helisport games. We should get rid of you guys and just make a negative version of Quadratic Funding and use that to calculate the taxes on all the big businesses.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0102",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Order!\"</c>, the Chairman shouted. <c st=\"color:oklch(0.7 0.15 40)\">\"Next question.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0103",
+   "role": "p",
+   "text": "The questioning continued for another half longhour, as each Senator got a chance to ask.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0104",
+   "role": "p",
+   "text": "After the last Senator asked Gladias his question, and the timer buzzed, the Chairman stood up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0105",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Time for the vote!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0106",
+   "role": "p",
+   "text": "The YES and NO voting buttons were clearly visible on the table, so Gladias could make out any Senator's vote just by looking at them.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0107",
+   "role": "p",
+   "text": "The Senators started pressing down on their buttons. A different noise buzzed every time a vote was made. Within ticks, every vote had been cast. Gladias looked toward the screen near the top of the room.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0108",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Wow\"</c>, the Chairman exclaimed. <c st=\"color:oklch(0.7 0.15 40)\">\"Ten to ten, exactly. By the rules of Acceptance voting, I am the deciding vote. And so I vote...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0109",
+   "role": "p",
+   "text": "He pressed down on one of the two buttons on his desk.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0110",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Yes.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0111",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 40)\">\"Welcome to the Order, Gladias.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0112",
+   "role": "p",
+   "text": "Once Gladias left the building, he checked his watch. There had been loud buzzing while the acceptance session was in progress, and he had been ignoring it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0113",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0114",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0115",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0116",
+   "role": "center",
+   "text": "Vil",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0117",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0118",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">Sorry to bother you, but it's about Lily. She just failed a test in civics class. I think she would benefit from seeing you and Seila.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0119",
+   "role": "cell",
+   "text": "45183",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0120",
+   "role": "p",
+   "text": "Seila's still in Iptak, Gladias thought. He would have to go himself.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0121",
+   "role": "p",
+   "text": "Gladias did not bother asking Emerald for a route to Vil's house. He knew it himself, it was not too far. He started walking, his mind filled mostly with concern for Lily's wellbeing, and slightly - perhaps more than he was willing to admit - frustration that his triumph was so quickly replaced by dread, a feeling that he was faced with a problem he had no idea how to solve.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0122",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'm coming\"</c>, Gladias whispered into his neck band - once again, not out of any strong desire to conceal his privacy at that moment, but because by that point he was simply accustomed to whispering. <c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Get me the usual food I get. I just got out of my acceptance hearing so I'll be hungry.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0123",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0124",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0125",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0126",
+   "role": "center",
+   "text": "Vil",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0127",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0128",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">Did you at least get accepted?</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0129",
+   "role": "cell",
+   "text": "45501",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0130",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I did. Just barely though.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0131",
+   "role": "p",
+   "text": "After twenty minutes of walking, Gladias arrived at Vil's house. Vil opened the door for him, and then sat back down in his chair. Lily was sitting on the couch, crying.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0132",
+   "role": "p",
+   "text": "Gladias sat down on the couch beside Lily, and hugged her.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0133",
+   "role": "p",
+   "text": "Gladias waited for a few moments, and began to speak.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0134",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"It's all right\"</c>, he whispered. <c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Scores aren't everything. Vil, Daia, Seila and I all know the beautiful person that you are inside, and we love you.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0135",
+   "role": "p",
+   "text": "Lily turned her face away, unhappy.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0136",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"We can help you. We just have to find some way to engage with the material that you can relate to.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0137",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"You've already tried\"</c>, Lily replied softly, sobbing. <c st=\"color:oklch(0.7 0.15 160)\">\"I got fifty-nine percent on this test. FIFTY-NINE PERCENT. Third-worst in the class.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0138",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Well, do you think the smartest kid in your class can bake a birthday cake for Seila the way you did six months ago? Would he bring food to Hreda every day for a month the way you did when she was recovering from that accident years ago?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0139",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You need to realize that you're a beautiful person already. That's where self-confidence comes from, and that's where you can get your motivation to improve.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0140",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"These schools really need to get better at connecting these topics like civics to topics that matter in your life. I only went down my path to become an Acolyte because I saw how the Steering incentives were helping to open up the online world so I could participate and write code for it. You will have your moment too.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0141",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"If you get above seventy-five on your next civics test\"</c>, Vil said, <c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"I'll take you on my next trip up to Northglade.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0142",
+   "role": "p",
+   "text": "Gladias winced slightly at the crudeness of the incentive - though he figured in the back of his mind that it was worth a try.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0143",
+   "role": "p",
+   "text": "At that moment, the doorbell buzzed. Vil stood up and walked toward the door, and opened it. It was the food.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0144",
+   "role": "p",
+   "text": "Vil picked up the food, and put it down on the table. Vil and Gladias together began to open it.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0145",
+   "role": "p",
+   "text": "Lily slowly stood up, and also joined the table. The three of them began to eat.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0146",
+   "role": "p",
+   "text": "Gladias's watch buzzed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0147",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0148",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0149",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0150",
+   "role": "center",
+   "text": "Mov",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0151",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0152",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">[call requested]</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0153",
+   "role": "cell",
+   "text": "59063",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0154",
+   "role": "p",
+   "text": "He picked up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0155",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Mov, how are you?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0156",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"I have some interesting news to share. But first of all, you got in, right?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0157",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Just barely.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0158",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"In is in.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0159",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So what's your update?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0160",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Looks like we're not going to be Keepers after all. The cryptographic random gods selected me to become a Herald starting next term.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0161",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Wow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0162",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Yep. So as of today, I have no more formal power.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0163",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What do you expect you will do as a Herald? I can't imagine you actually running those assemblies or giving speeches or anything like that. Are you just going to go moderate a sub-forum on Silverchat?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0164",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"You know me too well. But also, I'll have more time to help you.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0165",
+   "role": "p",
+   "text": "That evening, Gladias called Seila.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0166",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I got in!\"</c>, he said excitedly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0167",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I knew you would!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0168",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"It came quite close. Ten to ten, the Chairman broke the tie.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0169",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"A win is a win. Ever since you told me you were going to go Keeper, I've been so excited about all the good you can do from that role.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c08-s0170",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'll try my best!\"</c>",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

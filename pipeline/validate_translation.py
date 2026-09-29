@@ -24,6 +24,17 @@ ZH = ROOT / "translations" / "zh"
 
 TAG_RE = re.compile(r"<(/?)([a-z]+)([^>]*?)(/?)>")
 ALLOWED = {"c", "b", "i", "e", "sup", "sub", "code", "a", "br", "f", "u", "small", "mark"}
+# 允许保留的英文 token（界面/技术缩写），以及非泽国语但同样原样保留的短词
+ALLOW_LATIN_WORDS = {"ai", "api", "gui", "llm", "url", "id", "pm", "tei", "tau", "gph", "du", "vnu",
+                     "shi", "gei", "xor", "kag", "ziu", "uvc", "fa", "le", "bi", "ze", "ha", "co",
+                     "gu", "mu", "agi", "pdf", "html", "css", "svg", "kg", "km", "cm", "mm"}
+
+
+def load_conlang_vocab() -> set[str]:
+    vf = ROOT / "sources" / "work" / "conlang_vocab.json"
+    if vf.exists():
+        return set(json.loads(vf.read_text(encoding="utf-8")))
+    return set()
 
 
 def tag_seq(s: str) -> list[str]:
@@ -35,6 +46,7 @@ def tag_seq(s: str) -> list[str]:
 
 
 def strip_tags(s: str) -> str:
+    s = re.sub(r"<br\s*/?>", " ", s)
     return TAG_RE.sub("", s)
 
 
@@ -81,9 +93,15 @@ def check(chapter: int) -> list[str]:
             if name not in ALLOWED:
                 errs.append(f"{sid}: 非法标签 <{name}>")
         if not re.search(r"[\u3400-\u9fff\u3000-\u303f\uff00-\uffef]", body):
-            # 允许纯数字 / 符号 / URL / 代码 / 界面英文 token
-            if re.search(r"[A-Za-z]{3,}", body) and not re.fullmatch(
-                    r"[\s0-9A-Za-z\.\-_/:#%+*×xX°·,()\[\]{}<>=~^|\\'\"!?]+", body):
+            # 允许：纯数字/符号；纯泽国语罗马字（虚构语言，正文保留原样）；界面英文 token
+            words = re.findall(r"[A-Za-z]{2,}", re.sub(r"[^0-9A-Za-z\u4e00-\u9fff]", " ", body))
+            vocab = load_conlang_vocab()
+            # 泽国语音节全部 ≤4 字母；英文实词通常更长
+            conlang_ok = bool(words) and all(
+                len(w) <= 4 or w.lower() in vocab or w.isupper() or w.lower() in ALLOW_LATIN_WORDS
+                for w in words)
+            symbol_ok = not words
+            if not (conlang_ok or symbol_ok):
                 errs.append(f"{sid}: 疑似未翻译（无中文）: {body[:90]}")
         if re.search(r"\s{2,}", body) and not re.search(r"<br/>", tz):
             errs.append(f"{sid}: 出现连续空格: {body[:60]}")

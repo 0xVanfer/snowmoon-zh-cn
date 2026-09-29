@@ -1,0 +1,143 @@
+{
+  "chapter": 5,
+  "lens": "fluency",
+  "reviewer": "wf-r2",
+  "overall": "第5章中文整体可读，对话大多像人在说话，口语落地也见功力（“猛补”“洗点”“啃密码学”“有钱又急得不行的人”），称谓与笑点没有出戏的地方。问题集中在两类：一是英文句法残留——长定语前置、“的”字套嵌、以及“被……透支／害得……取消了”这类搭配错位，多出现在泽、白的论述句和研究所价目表那种说明句里；二是少数句子语序或成分没理顺，字面都认识，但读起来像病句（如“我和妈这辈子都能第一次出国”“我和我丈夫这一轮带孩子刚结束”）。没有需要推翻理解的高危问题，按下列 15 处逐条改掉即可达到出版级语感。",
+  "issues": [
+    {
+      "id": "c05-s0013",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "there were buildings of all shapes and sizes - some short, some tall, some stone, some concrete, some glass and steel, some beautiful, some ugly.",
+      "zh": "路边的楼高矮胖瘦什么都有——有的矮，有的高；有的石头砌的，有的水泥浇的，有的玻璃配钢架；有的好看，有的难看。",
+      "problem": "“高矮胖瘦什么都有”已经把规模参差说完了，紧接着又列“有的矮，有的高”，同一层意思说了两遍，读起来啰嗦；而且“高矮胖瘦”本是形容人的，用来总起楼房、后面又紧跟“有的矮，有的高”，语感上自己和自己打架。",
+      "suggestion": "车沿着一条高速路开，路边的楼各式各样——有的矮，有的高；有的石头砌的，有的水泥浇的，有的玻璃配钢架；有的好看，有的难看。"
+    },
+    {
+      "id": "c05-s0012",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "But so far I think Freetown is great! So that means whenever I make it to Redshire I won't be spoiled, and I'll feel just as excited about Redshire then as I am about Freetown now!",
+      "zh": "不过到目前为止，我觉得自由城棒极了！这样也好，等我哪天真去成红郡，兴致不会提前被透支，到时候我对红郡的那股兴奋，就跟现在对自由城一样多！",
+      "problem": "三处别扭：(1) So that means 这个口头推理的连接词被删掉，第二句直接跳到“这样也好”，读者得自己补因果；(2)“兴致不会提前被透支”是把 won't be spoiled 直搬，“被透支”配“兴致”生硬；(3)“兴奋……一样多”搭配不当——中文里兴奋论“足／够”，不论“多”。整句一气读下来喘不上气。",
+      "suggestion": "“那真是太糟了。不过到目前为止，我觉得自由城棒极了！也就是说，等我哪天真去成红郡，兴致还没提前用光，到时候对红郡的那股兴奋劲儿，还能跟现在对自由城一样足！”"
+    },
+    {
+      "id": "c05-s0037",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "And the surplus is high - both Mom and I get to go abroad for the first time in our lives.",
+      "zh": "“而且剩余很可观——我和妈这辈子都能第一次出国。”",
+      "problem": "“这辈子都能第一次出国”不成话：“这辈子”和“第一次”挤在同一位置，中间又插一个“能”，读起来像病句。中文的正常说法是“这辈子都是头一回出国”。",
+      "suggestion": "“而且剩余很可观——我和妈这辈子都是头一回出国。”"
+    },
+    {
+      "id": "c05-s0044",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "the sign listed a schedule of admission fees, featuring a formula that was a function of two variables: increasing with the square root of how much time you spend inside, and decreasing the higher your academic or intellectual reputation score rises.",
+      "zh": "研究所名字的正下方列着一张入场费价目表，用的公式有两个自变量：随你在里面停留时间的平方根增加，随你的学术或智识信誉分升高而减少。",
+      "problem": "三处别扭：(1)“用的公式”是英文 featuring a formula 分词结构的硬搬，中文里公式不会“用”自己；(2)“你在里面停留时间的平方根”是“的……的”套嵌，读者得回读才断得开；(3)“随……增加／减少”缺主语，谁在增加并不明确。",
+      "suggestion": "“研究所名字的正下方列着一张入场费价目表，票价由一个二元函数决定：随你在里面停留时间的平方根递增，随你的学术或智识信誉分升高而递减。”"
+    },
+    {
+      "id": "c05-s0067",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "My husband's and my turn to take care of our children just finished, they're with our co-parents now, so we're both taking a break -",
+      "zh": "“我是写博客的，主要写经济和文化。我和我丈夫这一轮带孩子刚结束，孩子现在在共同家长那边，所以我们俩都算是在休假——”",
+      "problem": "“我和我丈夫这一轮带孩子刚结束”语序倒得很生硬（中文是“刚带完这一轮孩子”），而且“我……我丈夫”两个“我”连着。这句是塞拉的口语，现在的写法像翻译件，读出声音来不像人在说话。",
+      "suggestion": "“我是写博客的，主要写经济和文化。我和丈夫刚带完这一轮孩子，孩子现在在共同家长那边，所以我们俩都算是在休假——”"
+    },
+    {
+      "id": "c05-s0086",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Bai and Zei started looking, and clicked buttons in turn to order some tea, as well as a similar rice and vegetables dish to what Seila and Jahn were eating.",
+      "zh": "白和泽看了起来，轮流点按钮，要了茶，还点了跟塞拉和扬吃的那道菜差不多的蔬菜饭。",
+      "problem": "“还点了跟塞拉和扬吃的那道菜差不多的蔬菜饭”是三层长定语前置，中间嵌了两个“的”，正是典型翻译腔；中文习惯把比较对象后置（“……，跟某某吃的差不多”）。另外“看了起来”孤立在句首，看的是什么也没交代。",
+      "suggestion": "“白和泽凑过去看菜单，轮流按钮，要了茶，还点了份蔬菜饭，跟塞拉和扬吃的那种差不多。”"
+    },
+    {
+      "id": "c05-s0011",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Was a shame that the Arctic drones made them cancel all the flights for the past five days.",
+      "zh": "“哦，我觉得红郡更好看。可惜北极的无人机害得那边整整五天取消了所有航班。”",
+      "problem": "“害得那边……取消了所有航班”搭配不成立：“害得”后面该接受害者，而“取消航班”的动作主体是航空公司，不是“那边”，成分错位。",
+      "suggestion": "“哦，我觉得红郡更好看。可惜北极的无人机闹得那边整整五天航班全取消了。”"
+    },
+    {
+      "id": "c05-s0034",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"Well it was obviously the lowest-cost opportunity I would have to go abroad for a long time\"",
+      "zh": "“这显然是我很长时间里成本最低的一次出国机会。”",
+      "problem": "“我长时间里”缺“在／以内”，中文不这么说；开头的 Well 也整个消失，泽这句本该带一点“嗯，明摆着”的得意语气，现在读起来是书面陈述。",
+      "suggestion": "“嗯，这显然是我在很长一段时间内成本最低的一次出国机会。”"
+    },
+    {
+      "id": "c05-s0036",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Normally, there's a prisoner's dilemma:",
+      "zh": "“所以这是个独一无二的局面。通常这里是囚徒困境：……”",
+      "problem": "“通常这里是囚徒困境”把 Normally 的“换作平常情形”译成了地点式的“这里”，读起来像在说某个地方是囚徒困境，而不是说平常的局面如何。",
+      "suggestion": "“所以这是个独一无二的局面。换成平时，这就是个囚徒困境：……”"
+    },
+    {
+      "id": "c05-s0045",
+      "severity": "low",
+      "type": "生硬",
+      "source": "it was only hard if you had failed to pay back loans or trashed hotel rooms multiple times.",
+      "zh": "那种能拿零知识证明去抵押、换贷款或者办酒店入住的信誉分，来得容易；除非你赖过账，或者把酒店房间砸过好几回。",
+      "problem": "原文 only hard if 有明确的后半句（“才会变难”），中文省成“除非你赖过账”，后果没说出来，句意靠读者补；分号后直接挂“除非”，读起来像上一句被截断。",
+      "suggestion": "那种能拿零知识证明去抵押、换贷款或者办酒店入住的信誉分，来得容易；只有赖过账、或者把酒店房间砸过好几回，才会变难。"
+    },
+    {
+      "id": "c05-s0076",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Seila and Jahn froze in surprise - first at the revelation, and then once again at Zei's total nonchalance in relating the news.",
+      "zh": "塞拉和扬都愣住了——先是这个消息本身，接着又是因为泽讲这件事时那副满不在乎的样子。",
+      "problem": "两个并列成分的句式不对齐：前一个有“是”没“因为”，后一个有“因为”没“是”，读起来像中途换了句型。",
+      "suggestion": "塞拉和扬都愣住了——先是被这条消息本身，接着又被泽讲这件事时那副满不在乎的样子。"
+    },
+    {
+      "id": "c05-s0082",
+      "severity": "low",
+      "type": "生硬",
+      "source": "There's entire clubs that do it and publish their reports online. ... I wish I could understand how all the math behind these encryptions and proofs and attestations works.",
+      "zh": "还有一整批俱乐部专门干这个，把报告发到网上。……我真希望自己能弄懂这些加密、证明和认证背后的数学是怎么跑的。",
+      "problem": "“一整批俱乐部”不是中文的量法（entire clubs 是说“有的俱乐部整个儿就在干这个”）；“数学是怎么跑的”把 run 直搬到数学上，中文的数学不“跑”。",
+      "suggestion": "还有些俱乐部专门干这个，把报告发到网上。……我真希望自己能弄懂这些加密、证明和认证背后的数学到底是怎么回事。"
+    },
+    {
+      "id": "c05-s0088",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Of our happiness, our spirits, our souls? That's a different question.",
+      "zh": "“至于占掉我们多少快乐、多少精神、多少魂——那是另一个问题。”",
+      "problem": "“多少精神”在中文里首先读成“多少精力”，跟前面的“快乐”、后面的“魂”这一串情感层面的词不在一条线上，情绪递进的力度被削弱。",
+      "suggestion": "“至于占掉我们多少快乐、多少精气神、多少魂——那是另一个问题。”"
+    },
+    {
+      "id": "c05-s0090",
+      "severity": "low",
+      "type": "生硬",
+      "source": "They ate, at times engaging in light conversation learning more nuances of Dzego culture - Minpentai, the Dzegoban language, the people's strong will to see the nation rise - and at times silently.",
+      "zh": "他们吃着，时而聊些轻松的，听对方讲泽国文化的种种细节——民本棋、泽国语、人们盼着国家崛起的那股心气——时而只是沉默。",
+      "problem": "“时而聊些轻松的”把形容词当名词用，中文得说“轻松的话题”；“听对方讲”在四个人的场景里“对方”指谁不明——讲泽国文化的显然是泽和白，读者要停下来推一遍。",
+      "suggestion": "他们一边吃一边聊，时而说些轻松的话题，听泽和白讲泽国文化的种种细节——民本棋、泽国语、人们盼着国家崛起的那股心气——时而只是沉默。"
+    },
+    {
+      "id": "c05-s0113",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Gladias visibly paused for a few moments, to ponder his answer.",
+      "zh": "格拉迪亚斯明显停了几秒，斟酌怎么回答。",
+      "problem": "“明显停了几秒”读起来像“显然停下了”（在陈述判断），而不是原文的 visibly（旁人看得出来）；中文更自然的是把“明显”放到后半句去说明停顿的原因。",
+      "suggestion": "格拉迪亚斯停了几秒，明显是在斟酌怎么回答。"
+    }
+  ]
+}

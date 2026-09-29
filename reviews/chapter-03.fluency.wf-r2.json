@@ -1,0 +1,215 @@
+{
+  "chapter": 3,
+  "lens": "fluency",
+  "reviewer": "wf-r2",
+  "overall": "整章叙事与对白基本读得下去，信息没有走丢，但欧化句式与生硬搭配的密度偏高：长定语前置、把字句模板、动宾不搭的直译反复出现，读起来像译稿而不是中文小说。最重的是 c03-s0111 与 c03-s0125，前者要读两遍才懂、后者会被读成别的意思；广告段（氢氧化氢）与书信落款的笑点和体例也没完全落地。属于需要一轮母语润色的水平。",
+  "issues": [
+    {
+      "id": "c03-s0111",
+      "severity": "high",
+      "type": "欧化",
+      "source": "the stores and restaurants were not trying at all to distinguish themselves, instead accepting their visual role as small elements of the Greater Plum Harbor's whole. The buildings were noticeably more futuristic",
+      "zh": "商店和餐馆除了各有各的名字和四分之一米宽的标志，根本不去刻意区分自己，而是接受了自己作为大梅港整体中一个小元素的视觉角色。这些建筑明显更未来感",
+      "problem": "“接受了自己作为……的视觉角色”是把 accepting their visual role as ... 逐字搬过来，中文读者第一遍读不通，“视觉角色”也不是中文里会说的概念；“明显更未来感”缺谓语，未来感是名词，不能说“更未来感”。这是全章翻译腔最重的一段。",
+      "suggestion": "商店和餐馆除了名字不同、招牌各有四分之一米宽，压根没打算显得与众不同，甘愿当大梅港整体里的一个小部件。这些建筑明显更有未来感，玻璃与钢材用得更多，棱角也比维里迪亚常见的建筑更锋利。"
+    },
+    {
+      "id": "c03-s0125",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Gladias pulled on the strap on his privacy robe's front face cover, separating the areas above and below his nose.",
+      "zh": "格拉迪亚斯拉了拉隐私袍前脸罩上的带子，把鼻子上下两片隔开。",
+      "problem": "“鼻子上下两片”会被读成鼻子的两个部位，实际指的是面罩在鼻子上下分出的两片罩布，读者在这里会卡住、想到底把什么隔开；“前脸罩”也是自造词，前文一律作“面罩”。",
+      "suggestion": "格拉迪亚斯拉了拉隐私袍面罩上的带子，把鼻子上下的两片罩布分开。"
+    },
+    {
+      "id": "c03-s0011",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The natural cycle of life is the best they have for morality",
+      "zh": "生命的自然循环，已经是他们在道德上能拿出的最好东西",
+      "problem": "“在道德上能拿出的最好东西”是 the best they have for morality 的逐字直译，搭配生硬，也没有原文那种挖苦“道德上限就这么高”的口吻。",
+      "suggestion": "生命的自然循环，已经是他们道德观里最拿得出手的东西了"
+    },
+    {
+      "id": "c03-s0013",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "With regards,",
+      "zh": "此致",
+      "problem": "中文信尾的“此致”按体例必须带“敬礼”一类祝语，单独一行悬在署名前面属于没写完，读者一眼就出戏；这是一封政治宣传信的落款，格式越正规越需要站得住。",
+      "suggestion": "顺致敬意（或直接删去此行，紧接“埃菲里昂勋爵”另起一行）"
+    },
+    {
+      "id": "c03-s0021",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "I'm like one of a hundred people walking toward the Greater Plum Harbor wearing a privacy robe, how did you figure out where I am?",
+      "zh": "我不过是上百个穿着隐私袍往大梅港走的人里的一个，你怎么找到我的？",
+      "problem": "“上百个穿着隐私袍往大梅港走的人里的一个”把中心语压到最后，中文口语不会这样叠定语；另外“行吧好吧”把两个应答词硬拼在一起，Okay fine 那种敷衍的让步感没出来。",
+      "suggestion": "好吧好吧……等等。往大梅港去的人里，穿隐私袍的上百号，我不过是其中一个，你怎么找到我的？"
+    },
+    {
+      "id": "c03-s0026",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "bumping up the taxes on API restrictions",
+      "zh": "要不要提高对 API 限制的加税",
+      "problem": "“提高……加税”语义打结，加税本身就是提高税，读者要停下来判断是哪一层动作；中文一般直接说把某一项的税调高。",
+      "suggestion": "要不要把 API 限制这一项的税再往上提"
+    },
+    {
+      "id": "c03-s0032",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Bluewhale has been driving a hard campaign against it ... we can pay for everyone to get better healthcare",
+      "zh": "蓝鲸一直在猛力反对……让我们给每个人提供更好的医疗",
+      "problem": "“猛力反对”不是中文搭配，猛力一般修饰打击、撞击一类动作；“让我们给每个人提供更好的医疗”也是 pay for everyone to get better healthcare 的硬搬，主语和受益人都绕。",
+      "suggestion": "蓝鲸一直在拼命游说反对……让每个人都能享受到更好的医疗"
+    },
+    {
+      "id": "c03-s0037",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "figuring out this kind of thing is what you're here for",
+      "zh": "不过说到底，查这种事正是你在这儿的原因。",
+      "problem": "“……正是你在这儿的原因”是 what you're here for 的直译，中文根本不会这么说，原本带刺的调侃也软成了说明文。",
+      "suggestion": "不过说到底，这种事不就是该你来查吗"
+    },
+    {
+      "id": "c03-s0040",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Surely if it's at this level we should have just not met in person at all.",
+      "zh": "都到这个程度了，我们干脆根本别见面岂不更好。",
+      "problem": "“干脆根本”两个副词挤在一起很别扭，“岂不更好”是文言式反问，夹在日常对白里不像活人在说话；原文只是顺口一顶的抱怨。",
+      "suggestion": "都到这个程度了，我们当初压根就不该见面。"
+    },
+    {
+      "id": "c03-s0044",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Soon after he had walked far enough that he could no longer hear their conversation, his watch buzzed.",
+      "zh": "走出没多远，远到再也听不见他们说话时，他的手表震了一下。",
+      "problem": "“走出没多远”和“远到……”两个方向的意思撞在一起，中间又插一个“时”字状语，读者得回读一遍才能理顺动作顺序。",
+      "suggestion": "走了没多久，等到再也听不见那两个人说话，他的手表震了一下。"
+    },
+    {
+      "id": "c03-s0055",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Turning his attention away from his watch screen back to the street",
+      "zh": "他把注意力从表盘移回街上",
+      "problem": "“把注意力从……移回……”是 turn one's attention 的固定译法，c03-s0103 又用了“把注意力转回那场谈话”，同一句式两次出现，读来像同一句模板；另外 watch screen 译“表盘”容易被理解成指针表盘。",
+      "suggestion": "他的目光从表盘上落回街上；c03-s0103 可改作“格拉迪亚斯重新听起那两人的对话”"
+    },
+    {
+      "id": "c03-s0056",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The ones further away shone with a clear glass and steel construction ... all covered with large tall barriers shielding the construction site from public view.",
+      "zh": "远处的那些闪着清透的玻璃与钢结构……四周立着高大的围挡，把工地挡在公众视线之外。",
+      "problem": "玻璃与钢结构不会“闪”，主谓配不上；“围挡……挡在”同一句里重复“挡”，读起来磕绊。",
+      "suggestion": "远处的那些是通透的玻璃与钢结构，在光下发亮……四周立着高大的围挡，把工地遮得严严实实。"
+    },
+    {
+      "id": "c03-s0063",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Frequently administered to prisoners undergoing torture",
+      "zh": "常被施用于受刑中的囚犯",
+      "problem": "广告四条排比本该短促冷面，这一条却用“被”字句加医用公文腔“施用”，节奏被拖垮，氢氧化氢的笑点也跟着散掉；“受刑中的囚犯”也偏书面。",
+      "suggestion": "审讯囚犯时，常拿来给他们灌下去"
+    },
+    {
+      "id": "c03-s0065",
+      "severity": "low",
+      "type": "生硬",
+      "source": "But did you know that you can buy YOUR OWN BOTTLE of fresh drinkable hydrogen hydroxide today?",
+      "zh": "但你知道吗？新鲜、可饮用的氢氧化氢，你今天就能买到属于你自己的那一瓶！",
+      "problem": "“属于你自己的那一瓶”叠了属于／你自己的／那一瓶三层限定，广告口号的力量全摊平了；语序也把“今天就能买到”往后压。",
+      "suggestion": "但你知道吗？新鲜可饮用的氢氧化氢，今天你就能买到自己的一瓶！"
+    },
+    {
+      "id": "c03-s0095",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Have you ever been in there?",
+      "zh": "你进去过里面吗？",
+      "problem": "“进去过里面”动词与方位词重复，日常口语只说“进去过”，这里多一个“里面”反而像译文。",
+      "suggestion": "你进去过吗？"
+    },
+    {
+      "id": "c03-s0098",
+      "severity": "low",
+      "type": "本土化",
+      "source": "an authentic conversation by people who did not realize that anyone was listening",
+      "zh": "那种当事人以为没人听着的真实对话",
+      "problem": "“当事人”是法律／行政文书用语，用来指路边闲聊的陌生人很出戏，整句读着像调研报告。",
+      "suggestion": "可永远比不上两个人以为没人听着的闲谈"
+    },
+    {
+      "id": "c03-s0128",
+      "severity": "low",
+      "type": "欧化",
+      "source": "On the floor, pressed against the corner of the booth, Gladias noticed a white box.",
+      "zh": "在地板上，紧挨着卡座角落，格拉迪亚斯注意到一个白盒子。",
+      "problem": "状语连缀前置再接“注意到”，是英文句式的顺序，中文一般先说人做了什么、再说在哪儿看到什么，读着更顺。",
+      "suggestion": "他注意到地板上紧挨着卡座角落有个白盒子。"
+    },
+    {
+      "id": "c03-s0138",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "I do apologize.",
+      "zh": "我道歉。",
+      "problem": "中文口语不说“我道歉”这种动宾结构，读起来像外国人说话；德尔瓦特这句是带点做作的致歉，用短句才落地。",
+      "suggestion": "其实不是，现在想想，那更像是在炫耀。抱歉。"
+    },
+    {
+      "id": "c03-s0148",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Most Acolytes would cave to what they think the Sentinels want.",
+      "zh": "大多数见习官都会屈从于他们以为监审官想要的结果。",
+      "problem": "“屈从于……结果”动宾不搭，屈从的对象应是人或压力；而且“他们以为监审官想要的结果”这层套嵌要读两遍，原意只是顺着自己揣摩的上意投票。",
+      "suggestion": "大多数见习官都会顺着自己揣摩的监审官的意思投票。"
+    },
+    {
+      "id": "c03-s0155",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Stop trying to nudge everyone, and let people's true selves come out.",
+      "zh": "别再想着去拨弄每个人，让人们真实的样子露出来。",
+      "problem": "“拨弄”是摆弄物件、挑拨是非的动词，用在“引导／推动每个人”上词义偏了，还带轻佻感，跟紧接着的“真正的自由”宣言不搭。",
+      "suggestion": "别再动不动就想着推着每个人往前走，让人们真实的样子露出来。"
+    },
+    {
+      "id": "c03-s0168",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "the Steering is just manipulating people too much ... killing the Graph Funding - which we would have to do, if the Steering taxes went to zero.",
+      "zh": "掌舵会确实过于操纵人了……尤其是干掉图谱资助——如果掌舵税归零，我们就只能这么干。",
+      "problem": "“过于操纵人了”搭配不成立，操纵要带宾语或补语，中文说“把人操纵得太过了”“管得太死”；“我们就只能这么干”指代含糊，读者不知道“这么干”指的是废掉图谱资助。",
+      "suggestion": "掌舵会确实把人操纵得太过了……尤其是废掉图谱资助——掌舵税要真归零，我们就不得不那么做。"
+    },
+    {
+      "id": "c03-s0169",
+      "severity": "low",
+      "type": "生硬",
+      "source": "They each took another sip of their respective drinks.",
+      "zh": "两人各又抿了一口自己面前的饮料。",
+      "problem": "“各又”“自己面前的”几层限定挤在一句里，这些信息中文靠语境就能带过，写满反而生硬。",
+      "suggestion": "两人又各自抿了一口饮料。"
+    },
+    {
+      "id": "c03-s0171",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "imagine what kinds of things Bluewhale might be able to do. Or, for that matter, the Arctics. I can help protect you.",
+      "zh": "想想蓝鲸能做些什么。北极人也一样。我可以帮你保护自己。",
+      "problem": "“北极人也一样”会被读成“北极人跟蓝鲸是一路货／跟蓝鲸一样厉害”，原意是“换成北极人也能做出这些事”，指代含混正好落在威胁的效果上；“帮你保护自己”也是 help protect you 的硬搬。",
+      "suggestion": "想想蓝鲸能做出什么来。换成北极人，也是一样。我可以帮你挡住这些。"
+    }
+  ]
+}

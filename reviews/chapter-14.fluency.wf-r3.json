@@ -1,0 +1,224 @@
+{
+  "chapter": 14,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第14章中文整体可读：对局进程的白描（第几个干预回合、放滑翔机、筑墙）干净利落，白和泽的早餐对话、德鲁因和泽的茶桌闲聊基本像人在说话，“做文章”“活靶子”“临阵补课”“为快而快”这类落地都不错。问题集中在两处：一是长句里的英语结构没拆开——定语从句整块压在名词前（“贡毫不知情的最后一件可移动结构”“记起中央那艘载符飞船被摧毁前，自己看到的附近石阵”）、名词转动词（“把同一套策略镜像到东面”）、被动与介词框架直搬（“被宣布获胜”“在这特别的一轮里”），以及排比长段被“把房子乱盖在山坡上”“让房价保持在人们买得起的水平”拖垮；二是零散的搭配和语气失准（“播报声喊道”“灌满西面中线的空间”“撑到极限”“倒吸一口气”“蹲住”）。本章没有到“读不懂”程度的问题，按条替换即可到出版级语感。",
+  "issues": [
+    {
+      "id": "c14-s0033",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "\"Today, in this very special round, we will see Zei Leimin and Gun Caibai face off. And right after this, the other two players will have their own semi-final match. And in fifteen days, the two winners will face off in an epic best-two-out-of-three, and we will have our national champion!\"",
+      "zh": "“今天，在这特别的一轮里，我们将看到泽雷民与贡蔡白对决。紧接着，另外两位选手也将进行他们的半决赛。十五天后，两位胜者将以三局两胜展开一场史诗对决，我们也将迎来全国冠军！”",
+      "problem": "三处直搬叠在一起：“在这特别的一轮里”是 in this very special round 的介词框架，中文体育播报会说“今天这一轮格外特别”；“进行他们的半决赛”里的“他们的”是英语所有格冗余，中文不作这种领属；“我们也将迎来全国冠军”是 we will have our national champion 的直译，中文说“全国冠军也就此诞生”。另外“以三局两胜展开一场史诗对决”词序也别扭，中文是“展开一场三局两胜的史诗对决”。这段是全场播报，气口不顺会直接影响这一节的节奏。",
+      "suggestion": "“今天这一轮格外特别：我们将看到泽雷民与贡蔡白对决。紧接着，另外两位选手的半决赛也将开打。十五天后，两位胜者将展开一场三局两胜的史诗对决，全国冠军也就此诞生！”"
+    },
+    {
+      "id": "c14-s0121",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Human work to maintain a political system that stops people from polluting it, cutting down the forests, putting their houses on the mountainsides and making them ugly, strip-mining the mountains - while still allowing housing to be built where people can enjoy the views, keeping that housing affordable, and maintaining industry.",
+      "zh": "要有人维持一套政治制度，才能拦住人们污染它、砍光森林、把房子乱盖在山坡上毁掉景色、把山体剥开露天采矿——同时还得允许人们在看得到风景的地方建房子，让房价保持在人们买得起的水平，还要维持工业。",
+      "problem": "“把房子乱盖在山坡上”状语位置反了，中文说“在山坡上乱盖房子”；“拦住人们污染它、砍光森林”也搭配不上，“拦住”是拦住人的去路，管住污染和滥伐该用“挡住／管住”；“让房价保持在人们买得起的水平”是 keeping that housing affordable 的名词化直译，中文说“还得让这些房子普通人买得起”。这段全靠排比推情绪，三处翻译腔一压，读起来就从演说变成了说明书。",
+      "suggestion": "要有人维持一套政治制度，才能挡住人们污染它、砍光森林、在山坡上乱盖房子毁掉景色、把山体剥开来露天采矿——同时又得允许人们在看得到风景的地方建房，还得让这些房子普通人买得起，并且维持住工业。"
+    },
+    {
+      "id": "c14-s0112",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"Zei, the whole point of Dzegoban is that there's only 256 roots, you can learn it in less than a month, and you don't get all the nuances but you can make your way around just fine.\", Deluin replied in a lecturing tone.",
+      "zh": "“泽，泽国语的关键就在于只有 256 个词根，不到一个月就能学会；你抓不到所有细微之处，但走遍天下都没问题。”，德鲁因用说教的口气回答。",
+      "problem": "呼语“泽”紧接着“泽国语”，两个字连读像是结巴或排版重复，念出来尤其刺耳；“说教的口气”是 lecturing tone 的直译，中文评注人物语气一般说“一副教训人的口气”；“你抓不到所有细微之处”语序也别着，中文说“细微之处你抓不到”。",
+      "suggestion": "“泽啊，泽国语的重点就是它只有 256 个词根，不到一个月就能学会；细微之处你抓不到，可走到哪儿都应付得来。”，德鲁因摆出一副教训人的口气。"
+    },
+    {
+      "id": "c14-s0031",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"Welcome to the semi-finals\", the announcer voice shouted.",
+      "zh": "“欢迎来到半决赛”，播报声喊道。",
+      "problem": "“播报声”是 the announcer voice 的字面拼装：中文里“声”不能“喊”，而且“播报声喊道”读起来像设备故障记录。本章播报员只闻其声，中文广播稿的说法是“广播里高声宣布”。",
+      "suggestion": "“欢迎来到半决赛”，广播里高声宣布。"
+    },
+    {
+      "id": "c14-s0056",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "He realized that his last symbol-carrying spaceship was the last mobile structure he had that Gun knew nothing about.",
+      "zh": "他意识到，自己最后一艘载符飞船，是贡毫不知情的最后一件可移动结构。",
+      "problem": "“贡毫不知情的最后一件可移动结构”把定语从句整块压到名词前，“毫不知情”的主语被埋进从句里，中文读者要来回断句；加上前面的“自己最后一艘”、后面的“最后一件”连着两个“最后”，谁最后、指什么都得回头确认。这是本段心理描写的关键判断句，不该让人读两遍。",
+      "suggestion": "他意识到，自己那艘载符飞船，已经是手里最后一件贡还不知道的可移动结构了。"
+    },
+    {
+      "id": "c14-s0057",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Meanwhile, in the southeast, Zei's own symbols began to disappear one by one - first, from Gun's eternal glider factories, then from new gliders fired by his symbol-carrying spaceship now moving eastward from the south.",
+      "zh": "与此同时，在东南面，泽自己的符记开始一个个消失——先是毁于贡的永恒滑翔机工厂，接着又毁于那艘正从南面向东移动的载符飞船新放出的滑翔机。",
+      "problem": "“毁于”是文言色彩的说法（毁于战火、毁于一旦），一句里连用两次，与全章的白话战况叙述不搭，听上去像碑文；后半句“那艘正从南面向东移动的载符飞船新放出的滑翔机”在名词前叠了三层修饰，而且“那艘”指的是贡的飞船，读者得先猜归属才能把因果接上。",
+      "suggestion": "与此同时，东南面泽自己的符记开始一个个消失——先是给贡的永恒滑翔机工厂打掉的，接着又被贡那艘从南面转向东去的载符飞船新放出的滑翔机打掉。"
+    },
+    {
+      "id": "c14-s0062",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Meanwhile, he remembered what he saw of the rock formations near the center just before his symbol-carrying spaceship there was destroyed, replicated the pattern in his sandbox, and figured out a strategy...",
+      "zh": "与此同时，他记起中央那艘载符飞船被摧毁前，自己看到的附近石阵，于是在沙盒里复制了那个阵形，想出一套策略：在中央与北面神龛之间生成一座永恒的滑翔机工厂，把贡的西北面搅得天翻地覆。",
+      "problem": "“他记起中央那艘载符飞船被摧毁前，自己看到的附近石阵”中间不断句，第一遍会读成“记起飞船被摧毁”这件事，要读到“石阵”才回头改结构；而且“附近石阵”离它修饰的地点太远，指的是“中央附近”还是“飞船附近”也要猜。中文顺着时间说就清楚了。",
+      "suggestion": "与此同时，他回想起中央那艘载符飞船被摧毁之前，自己看到的附近石阵是什么样，在沙盒里照原样复现，然后想出一套策略：在中央与北面神龛之间造出一座永恒的滑翔机工厂，把贡的西北面搅得天翻地覆。"
+    },
+    {
+      "id": "c14-s0065",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei sent gliders to create another eternal glider factory, this time flooding the space along the center of the west.",
+      "zh": "泽放出滑翔机，又造了一座永恒的滑翔机工厂，这次让滑翔机灌满西面中线的空间。",
+      "problem": "“灌满……空间”是 flooding the space 的直搬：中文“灌满”用于容器（灌满水壶、灌满油箱），拿来形容滑翔机铺满棋盘某一片很出戏；“西面中线的空间”也像几何题用语。",
+      "suggestion": "泽放出滑翔机，又造了一座永恒的滑翔机工厂，这回让滑翔机铺满西面中线一带。"
+    },
+    {
+      "id": "c14-s0074",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei's last ship was not quite yet destroyed, but it was almost there.",
+      "zh": "泽最后一艘飞船还没被摧毁，但已经撑到极限。",
+      "problem": "“撑到极限”在中文里带褒义，读起来像夸这艘船顽强顶住了；原文说的是它眼看就要没了（almost there）。下一句“第八个干预回合来得正是时候”全靠这个“差一点就完了”的紧迫感，语气一偏，紧张就散了。",
+      "suggestion": "泽最后一艘飞船还没被打掉，但也快了。"
+    },
+    {
+      "id": "c14-s0075",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei programmed both to head west. ... Meanwhile, the new ship would also head west, but stop just north of the northern shrine.",
+      "zh": "泽把两艘都设为向西。……至于新飞船，它也向西，但会停在北面神龛的正北。",
+      "problem": "“把两艘都设为向西”少了谓语，像在念设置菜单；“它也向西”同样悬着（中文得说“也往西飞”）。“停在北面神龛的正北”里“北面”和“正北”撞在一起，读者要停一下才能确定它到底停在哪儿。",
+      "suggestion": "泽把两艘飞船都设成向西航行。……至于新飞船，它同样往西飞，但会停在北面神龛稍稍靠北的位置。"
+    },
+    {
+      "id": "c14-s0080",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "He did this, and simultaneously set up a mirror image of the same strategy toward the east.",
+      "zh": "他照做了，同时把同一套策略镜像到东面。",
+      "problem": "“把策略镜像到东面”是 mirror 由名词转动词的直搬，中文里“镜像”不作动词用，读者会先愣一下这是什么操作。中文会说“在东面照样来一遍”。",
+      "suggestion": "他照做了，同时把这套策略在东面照样复制了一遍。"
+    },
+    {
+      "id": "c14-s0108",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Making the language visual. Bringing back hieroglyphs for the individual roots, but pronunciation perfectly readable from the glyph. And also another layer where they're trying to make the grammar look more like math.",
+      "zh": "就是把语言做直观：为每个词根恢复象形符号，但读音能从字形里完全读出来。还有一层，他们想让人看着语法更像数学。",
+      "problem": "“把语言做直观”是 Making the language visual 的直搬，“做”接形容词不合中文动补习惯（中文说“做成看得见的”）；“想让人看着语法更像数学”语序拧着，中文该说“想让语法看上去更像数学”。这是两个外国棋手聊语言设计的段落，说法一拧就失去闲谈感。",
+      "suggestion": "就是把语言做成看得见的：为每个词根恢复象形符号，读音却能直接从字形里读出来。另外还有一层，他们想让语法看上去更像数学。"
+    },
+    {
+      "id": "c14-s0114",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "And if you come, I can tell them that it's okay to skip the tutoring if you're doing the same!",
+      "zh": "而且你要是来，我就能跟他们说：既然你也这样，那我不补课也没关系！",
+      "problem": "“既然你也这样”里的“这样”没有着落，读者不知道指的是“来红郡”“不补课”还是别的，原文的意思是“既然你也不补课”；“那我不补课也没关系”把 it's okay to skip 译成“没关系”，中文更像“我就有理由不补了”，德鲁因拿朋友当借口的那点赖皮劲才出得来。",
+      "suggestion": "而且你要是来，我就能跟他们说：既然你也不补课，那我不补也就说得过去了！"
+    },
+    {
+      "id": "c14-s0118",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Deluin took out his hand device, and showed Zei some pictures of Redshire. He saw castles, pine forests, large pristine grasslands, red-colored mountains with their tops covered in snow, and one giant icy waterfall.",
+      "zh": "德鲁因掏出他的手持终端，给泽看了几张红郡的照片。他看到了城堡、松林、大片未受侵扰的草原、山顶覆雪的赤色山脉，还有一条巨大的冰瀑。",
+      "problem": "三处不自然：“掏出他的手持终端”里的“他的”是英语所有格冗余；“大片未受侵扰的草原”是 pristine 的硬译，中文说“大片原始草原”；“赤色山脉”里的“赤色”在现代中文多用于政治色彩词，写山用“红色”更顺。另外“他看到了”紧跟在以德鲁因为主语的句子后面，“他”会先被读成德鲁因，实际看照片的是泽。",
+      "suggestion": "德鲁因掏出手持终端，给泽看了几张红郡的照片。泽看到城堡、松林、大片原始草原、山顶积雪的红色山脉，还有一条巨大的冰瀑。"
+    },
+    {
+      "id": "c14-s0123",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"Hopefully that will be in fifteen days\", he joked.",
+      "zh": "“希望就在十五天后”，他开玩笑说。",
+      "problem": "“希望就在十五天后”语意悬空：中文读者会先理解成“但愿某事十五天后发生”，而这里的意思是“但愿十五天后我就有钱去了”（暗指十五天后的决赛奖金）。玩笑的落点缺了主语和条件，读起来像口号，下文德鲁因的接梗也就不响了。",
+      "suggestion": "“但愿十五天后我就攒够了。”他开玩笑说。"
+    },
+    {
+      "id": "c14-s0025",
+      "severity": "low",
+      "type": "生硬",
+      "source": "but ... it carried over even past the eight thousand turn threshold ... They're not being strategic, they're being fast for the sake of being fast.",
+      "zh": "可是……过了八千回合的门槛还是这样，连我看到的那盘贡对德鲁因的练习局也这样。他们不是在讲策略，只是为快而快。",
+      "problem": "“门槛”在中文指准入条件，用来指“八千回合这条线”要拐一下才明白，同句两个“这样”也虚；“他们不是在讲策略”容易被读成“不讨论策略”，原文说的是打法上没有策略。",
+      "suggestion": "可是……就算过了八千回合这条线，他们也还是这样，连我看到的那盘贡对德鲁因的练习局也一样。他们不是在打策略，只是为快而快。"
+    },
+    {
+      "id": "c14-s0039",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zei figured out one additional adjustment: he adjusted the positioning of his spaceships...",
+      "zh": "泽又想出一处调整：他调整了飞船的定位，让它们正好在两次干预回合之后抵达神龛外侧的位置。",
+      "problem": "一句里“调整”出现两次（“想出一处调整：他调整了……”），读起来像复读。英文 adjustment／adjusted 同源，中文不必跟着重复。",
+      "suggestion": "泽又想出一个办法：他重新摆了摆飞船的位置，让它们在两次干预回合之后正好停在神龛外侧。"
+    },
+    {
+      "id": "c14-s0045",
+      "severity": "low",
+      "type": "生硬",
+      "source": "The spaceships and gliders started moving.",
+      "zh": "飞船和滑翔机开始运动。",
+      "problem": "“开始运动”是物理课本的说法（物体开始运动），棋场上的棋子用“动了起来”才像小说。",
+      "suggestion": "飞船和滑翔机动了起来。"
+    },
+    {
+      "id": "c14-s0069",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zei calculated: Gun had been able to see Zei's ship, but not the new ship that Zei was building.",
+      "zh": "泽盘算了一下：贡看得到泽那艘飞船，却看不到泽正在造的新飞船。",
+      "problem": "一个短句里“泽”出现三次，中文这里该用“他”“自己”分指，否则读起来像两份档案在对表；同章 c14-s0060“泽清楚……泽唯一的优势”也是同一毛病（应作“他唯一的优势”）。",
+      "suggestion": "泽盘算了一下：贡看得到他那艘飞船，却看不到他正在造的新飞船。"
+    },
+    {
+      "id": "c14-s0081",
+      "severity": "low",
+      "type": "本土化",
+      "source": "Hunker down, play defense, outlast.",
+      "zh": "蹲住，防守，比谁撑得久。",
+      "problem": "“蹲住”不是中文里 hunker down 的说法（“蹲”只指身体动作），三个短句连读像动作指令。中文这类自我打气的短句会说“缩起来”“稳住阵脚”。",
+      "suggestion": "缩住阵脚，稳稳防守，看谁耗得过谁。"
+    },
+    {
+      "id": "c14-s0090",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Ten thousand two hundred turns into the game, Deluin was announced the winner.",
+      "zh": "对局进行到一万零二百回合，德鲁因被宣布获胜。",
+      "problem": "“被宣布获胜”是被动式直搬，胜负结果中文一般用主动句说，被动读起来像公文。",
+      "suggestion": "对局进行到一万零二百回合，德鲁因胜出。"
+    },
+    {
+      "id": "c14-s0098",
+      "severity": "low",
+      "type": "本土化",
+      "source": "\"Deluin, good to see you!\"",
+      "zh": "“德鲁因，见到你真好！”",
+      "problem": "“见到你真好”是 good to see you 的逐字对译，中文打招呼说“见到你真高兴”或“可算见到你了”，本书第16章用的也是“真高兴”。",
+      "suggestion": "“德鲁因，见到你真高兴！”"
+    },
+    {
+      "id": "c14-s0103",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"Whoa\", Zei gasped.",
+      "zh": "“哇”，泽倒吸一口气。",
+      "problem": "“倒吸一口气”在中文里的固定搭配是“倒吸一口凉气”，表示受惊、发怵；这里泽是看到新奇菜单发出的惊叹，语气对不上，全书也只有这一处这么用。",
+      "suggestion": "“哇”，泽轻呼一声。"
+    },
+    {
+      "id": "c14-s0120",
+      "severity": "low",
+      "type": "生硬",
+      "source": "rather something that the forces of orbital dynamics and biology and tectonics randomly handed them down for free",
+      "zh": "只是轨道动力学、生物和地质构造随手白送的东西",
+      "problem": "“轨道动力学、生物和地质构造”把 biology 直译成“生物”，可是“生物”（动物植物）不会“随手白送”地貌，三项在中文里不同类，读者会卡一下；另外“差不多是种侮辱”缺个“一”，念着短半拍。",
+      "suggestion": "只是轨道运行、生物演化和地质构造随手白送的东西"
+    }
+  ]
+}

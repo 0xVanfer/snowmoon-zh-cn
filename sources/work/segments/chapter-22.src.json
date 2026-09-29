@@ -1,0 +1,1132 @@
+{
+ "chapter": 22,
+ "segments": [
+  {
+   "id": "c22-s0001",
+   "role": "title",
+   "text": "Chapter 22",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0002",
+   "role": "place",
+   "text": "Freetown, United Cities",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0003",
+   "role": "date",
+   "text": "3724 Mistime 22",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0004",
+   "role": "p",
+   "text": "Jahn, sitting in a taxi, looked out through the window. He saw Freetown's usual chaotic mixture of buildings: some glass and steel, some concrete, some stone, some tall, some short, some beautiful, some ugly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0005",
+   "role": "p",
+   "text": "The taxi passed under a highway, and he could see piles of uncollected garbage on the sides of the road. Almost immediately after the highway, the taxi passed by a small park to the left, and a tall industrial building on the right. A movie with subtitles was playing, projected onto the industrial building's wall. Jahn looked again to the left, to see where the movie was projected from. Just before the taxi moved too far away for Jahn to be able to see, he found the projector, hidden under a bench in the park. Even without Graph Funding or rubrics, he thought, some people will always provide public goods.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0006",
+   "role": "p",
+   "text": "On the whole, everything seemed normal - though Jahn could just barely notice that the amount of activity on the streets seemed to be lower than usual.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0007",
+   "role": "p",
+   "text": "The taxi passed under another highway. On the other side, on the side of one of the buildings, Jahn noticed a large advertisement.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0008",
+   "role": "p",
+   "text": "Buy a luxurious room in a shelter, right on the northern edge of central Freetown.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0009",
+   "role": "p",
+   "text": "10 meters underground, maximum-grade physical, bio and info filtration and insulation.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0010",
+   "role": "p",
+   "text": "Only 325,000 zipcoins!",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0011",
+   "role": "p",
+   "text": "A minute later, another advertisement:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0012",
+   "role": "p",
+   "text": "Shelters for the common man, in all shapes and sizes.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0013",
+   "role": "p",
+   "text": "Prices start at only 50,000 zipcoins, mortgage plans available!",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0014",
+   "role": "p",
+   "text": "As the taxi continued west, it entered the region that the advertisement was talking about. Here, Jahn saw a type of activity that, to him, seemed to have been steadily increasing for the past six months: construction of roads. Jahn had also seen many shelters being constructed, but roads were a close second - particularly on the northern side of the town.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0015",
+   "role": "p",
+   "text": "Jahn's hand device buzzed in his lap.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0016",
+   "role": "th",
+   "text": "Taxi fare",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0017",
+   "role": "center",
+   "text": "Driver base fare",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0018",
+   "role": "cell",
+   "text": "3.69",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0019",
+   "role": "center",
+   "text": "Per-minute toll",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0020",
+   "role": "cell",
+   "text": "9 min",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0021",
+   "role": "cell",
+   "text": "1.89",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0022",
+   "role": "center",
+   "text": "Per-kilometer toll",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0023",
+   "role": "cell",
+   "text": "5.65 km",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0024",
+   "role": "cell",
+   "text": "1.26",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0025",
+   "role": "center",
+   "text": "Acceleration and deceleration toll",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0026",
+   "role": "cell",
+   "text": "113 m/s Δv",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0027",
+   "role": "cell",
+   "text": "1.03",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0028",
+   "role": "center",
+   "text": "Road congestion toll",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0029",
+   "role": "cell",
+   "text": "1.50",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0030",
+   "role": "center",
+   "text": "Road congestion toll",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0031",
+   "role": "cell",
+   "text": "1.00",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0032",
+   "role": "center",
+   "text": "Road congestion toll",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0033",
+   "role": "cell",
+   "text": "2.25",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0034",
+   "role": "center",
+   "text": "Total",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0035",
+   "role": "cell",
+   "text": "12.52",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0036",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Hey, Chief?\"</c>, Jahn asked the driver.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0037",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"What is it?\"</c>, the driver replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0038",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Do you know why there's so many congestion charges this time? The road seems quite a bit less congested than usual, why would the tolls be going that high?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0039",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Ah yeah, they're bumping up every tax and toll they can. Funding defense, they say.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0040",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Huh, the roads too?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0041",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Are they bumping up any other fees on you?\"</c>, the driver asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0042",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Actually not the government\"</c>, Jahn replied. <c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"At least, not directly. But, the shelters. I heard some interesting gossip there.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0043",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"And what is that?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0044",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"The best shelters were originally owned by a few defense companies. Soon after Redshire got annexed, they got together and formed a cartel. Sold off a lot of the shelter space for money, and used that to modernize their armor and weapons a bunch.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0045",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Huh, all private companies? I guess that's their property, their rules. Less shelter space left for us poor folks than if they just rationed it, but hey, they are trying. And if they use that money to defend us well, less chance we'll end up needing any shelters in the first place. And with fewer cars on the road, I'm enjoying the roads more too.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0046",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Well, yes that's the polite story. Freetown's economic philosophy at its finest. But I'm getting the feeling it's not <e>quite</e> that clean. The government seems to be making a special effort to build roads in exactly those places that make it easier to get to and from the shelters. There's no evidence of any collusion between them and the companies - that would get knocked down hard by the courts - but my theory is that it's a sort of retroactive reward. Create the expectation that if you use your private property for the public good, then the government will twist the public work that it does in order to make life easier for you. It's a trick to work around the maximum budget rule - pay people without actually directly paying them.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0047",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"And if you refuse to use your private property in public-spirited ways, well... if things get really bad the next step might be that they'll start closing some roads for 'maintenance'. Though I guess people can always fly.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0048",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"The Greater Plum Harbor has been refusing to fund anything that could be seen as going against the Arctics, they're scared that their node in Northglade might get shut down. I guess that's where we'll find out how good Freetown is at staying 'free'.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0049",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"And at defending itself.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0050",
+   "role": "p",
+   "text": "The driver and Jahn stayed silent for a minute. Soon, the taxi slowed to a halt. Jahn looked outside the window. He had arrived at the Freetown Economics Institute.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0051",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Thank you Chief, and have a good day!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0052",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"You too, boss\"</c>, the driver replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0053",
+   "role": "p",
+   "text": "Jahn opened the door, and got out of the taxi.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0054",
+   "role": "p",
+   "text": "Jahn passed through the turnstile in the Freetown Economics Institute, and walked toward the restaurant.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0055",
+   "role": "p",
+   "text": "After a minute of walking, he arrived. He saw a familiar face: Utaku.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0056",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Utaku! Surprised to see you still here.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0057",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"My parents told me to come back. They think Freetown is taking defense more seriously than the other United Cities, so it's safer than Belpaki here.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0058",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Do you think that?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0059",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"There have been some moves recently to create a unified defense grid between the aks. I'll be more optimistic if that goes through. But even then, I worry it's more theater than anything substantive.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0060",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Has Freetown been doing anything substantive?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0061",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Well the big corps are paying insurance on all their property, the rates tripled when Redshire was annexed, and doubled again after Northglade. And then apparently the rates dropped back down by a quarter when the corps announced their recent defense packages.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0062",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"So ... somehow the market incentives seem to be working.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0063",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"You know, I've been talking to Zei from Dzego lately, and learning how quickly they've gotten everyone to start caring about privacy, now about bio safety, average indoor CO2 levels dropped by over a hundred points within a month. All coordinated by machinery that they originally created, supposedly, to upgrade their language - and to give us a much more sensible distance and time system.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0064",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"I've been getting this feeling that maybe almost any system can work well if people accept it and believe in it.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0065",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Do people in Freetown believe strongly in economic freedom? Everyone in the Economics Institute does, obviously, but what about regular people?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0066",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Are you familiar with the early history of the United Cities, a hundred years ago?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0067",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Vaguely. I know there were some wars, both between some of the cities and against the Arctics.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0068",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"But do you know how those wars got resolved?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0069",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Eventually the armies of this continent came together and cooperated more, and that was a big part of why the Arctic offensive against Dzego was finally stopped.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0070",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Coming together in a crisis is easy. What's hard is keeping that spirit together through the easy times, the boring times, the times when the founding generation dies out and the kids and the grandkids need someone to fight against and have a hard time resisting the urge to start turning on each other.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0071",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"So what happened? The co-governance system, I'm guessing?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0072",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"That's one part of it. Each city gave a percent of the votes in its parliament to its neighbors - not enough to threaten the cities' independence and their unique cultures, but enough that future politicians would not have an incentive to ignore their surrounding continent completely.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0073",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"But also, they did another thing to preserve unique cultures. They had a period during which they subsidized people swapping homes and citizenships. People who felt more at home in another city were able to move easily and change their allegiance to their new home.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0074",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"The government of Freetown made a decision. They passed a new constitution, the one we still have today, which limited the government's power to regulate and tax anything down to a bare minimum. And then they said: this is what we are about. If you are scared of it, go to another city, but if you like it, no matter which city you're from, we welcome you. They even did a personality test without telling people what it's for, and then gave bigger subsidies to people who got what the government thought was a compatible result.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0075",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Wow, I did not know that.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0076",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Actually Arturia did a similar thing, in a somewhat opposite direction. They described their values as being about peace and quiet, research and learning, and they filtered by conscientiousness and test scores. Today, their whole society is sort of like a big university. If you go against the system too much, you get pushed harder and harder to leave and go to Freetown. But if you're fine with the system, you can learn a lot and have a lot of fun inside it. They actually do quite a lot of good science and have reliable infrastructure.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0077",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"The strongest legitimacy comes from people buying in to an idea voluntarily - signing the form, knowing exactly what they are getting themselves into and what they are giving up.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0078",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"That sounds like selection matters too. Different styles work for different people. Maybe a Freetown made out of people from Arturia would be a disaster, and same with the reverse.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0079",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Of course, now we're several generations into people being just born here, like people get born anywhere else. But for now, Freetown has held.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0080",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Do you think some people are ... genetically more freedom-loving than others? And Freetown got a lot of those people back then, and those genes got passed down?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0081",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"People here bring that idea up from time to time. To me it feels unlikely. All the congestion tolls that I paid to get here, all the turnstiles, I somehow doubt that there can exist a gene that would register all that as being \"free\". You need to have a pretty deep education to understand how it's free - how it's all part of a market, each person and institution allocating their private property as they see fit, and how all these payments give people the ability to honestly self-report whether or not they truly value something more than the resources that it costs to make it available for them, and how that's better and more civilized than the government just deciding what things it thinks are wasteful and banning them.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0082",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"I think there might be a core that even someone from the medieval era would understand. I don't bother you, you don't bother me. We're all each just trying to live our own lives, if we can help each other that's great, but not at the expense of leaving each other space to be in peace. You don't get the forager freedom of the great outdoors, especially not in the city, but within your own box you are the master.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0083",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"At least, that's what Freetown always feels like to me.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0084",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Although ... I do love the economists here. Well, the intellectual culture in general. I like that you can honestly bring up the genetics stuff, and even if people disagree, it's not like Belpaki where they just immediately think you must be an Arctic or something.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0085",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Changing the subject a bit, of course I know why they would never tell either of us, but I am curious what these defense companies are up to. What do they think the threat model is? Same type of invasion as Redshire and Northglade? But what happens if we resist harder? And how are they going to fight back?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0086",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Well, funny you ask. I actually do know some gossip, although ... this is military, I don't think I'm allowed to tell you.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0087",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Huh, I'm surprised you got into those circles at all. Were they interested in your thoughts as an economist on how to raise more funding for defense?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0088",
+   "role": "p",
+   "text": "Jahn sighed. <c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Unfortunately, I really can't tell you. Freedom of speech is great for many things, but ... not for military secrets.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0089",
+   "role": "p",
+   "text": "Jahn ordered a dish with vegetables and a tea, and stayed in the restaurant area studying the internet to better understand exactly the question Utaku had asked: what options Freetown still had to raise more funding for defense. He took out a computer, and made a table, scoring different options in three columns: how much money it could raise, how much economic collateral damage it would cause, and how much it risked making Freetown less ... free.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0090",
+   "role": "p",
+   "text": "A longhour later, Jahn's watch buzzed. It was Zei, asking for a call.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0091",
+   "role": "p",
+   "text": "Jahn picked up his computer and his glass of water, and moved over to a nearby calling booth.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0092",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"What's up, Zei?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0093",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Thank you again for that connection you made with the defense companies last month. I actually have some interesting updates there!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0094",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Hey, I only connected you to the Economics Institute director, the connection to the companies was his doing.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0095",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"But what is it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0096",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Well, first let me give you a status update. Do you know what the Dzego folks have been doing with the defense companies' help?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0097",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"I do not.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0098",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"They've been hunting down Arctic drones in Redshire.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0099",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"If you're allowed to ... tell me more?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0100",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"How about I show you more?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0101",
+   "role": "p",
+   "text": "Jahn's computer buzzed, and he saw a file download. It was a view-once file. If Jahn wanted, he could of course save it clandestinely through the operating system, or just take a picture of the screen with another device. But by default, once opened, the file would stay viewable for five minutes, cannot be copied, and would self-delete at the end. Politeness dictated not interfering with these defaults.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0102",
+   "role": "p",
+   "text": "Jahn clicked on the file, and a view opened up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0103",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"What am I looking at here?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0104",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"This is happening right now as we speak. It's our clandestine kill chain on an Arctic ground drone in Redshire.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0105",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"The red square is the enemy. The blue circles are seven of our own drones, that we arranged in a hexagon. Their role is to jam communications. Right now, they are dormant, waiting for the Arctic drone to get fully inside.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0106",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"So what happens next?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0107",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Ah, well let's find out together.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0108",
+   "role": "p",
+   "text": "About ten ticks later, another view-once file appeared on Jahn's screen.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0109",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Just waiting a little bit longer.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0110",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"I'm excited.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0111",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"And ... action.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0112",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Do you see it?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0113",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Yep.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0114",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"The jammer drones are jamming. The red X signifies that there was a hit on the target. It's supposed to be two hits: one on its main antenna, and the other on its legs, to prevent it from leaving the jamming area. And the blue triangles are our two attack drones.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0115",
+   "role": "p",
+   "text": "The conversation paused for about twenty ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0116",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Still not dead? What's taking so long?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0117",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Our drones, the triangles, are not actually trying to make a kill - if we wanted to do that, we could have just done that with a bigger first strike.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0118",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"So what are they doing?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0119",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"They are dancing.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0120",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Dancing?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0121",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Their goal is to <e>survive</e> as long as possible, trying any kind of trick to avoid getting killed, ideally get mistaken for an Arctic drone or even an animal, and eventually only kill when the target is too close to escaping the trap.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0122",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"That's our goal. Using Arctic drones as target practice to improve our ability to kill them is expensive. But using Arctic drones as practice to improve our ability to <e>survive</e> them, that we can do, for basically as long as either of the triangles is still alive. Then the seven drones in the hexagon can finish the kill, and make sure to fry the target's circuits so the Arctics don't get any training data themselves.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0123",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Wait ...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0124",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"What's the matter?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0125",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"We have a problem.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0126",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Arctic reinforcements? Are you going to take over and pilot your drones to victory now?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0127",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Yep, that's exactly what I'm doing. Temporarily have the two damaged-but-alive jammers play dead, lure the attackers to center, jammers reactivate, reform a circle, and then make a kill.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0128",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Do your thing, no need to give me a play by play.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0129",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I'm talking to the AI and letting you listen.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0130",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Circles, finish the northwest square now. Goal: all comms and memory dead.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0131",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Deactivate all jamming except left and top left.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0132",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"When it makes sense, reform the circle, reactivate jamming and strike. Maximize surprise.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0133",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"No-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0134",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Wha-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0135",
+   "role": "p",
+   "text": "Jahn stopped mid-word, remembering that he was not supposed to distract Zei.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0136",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"They started jamming, I got disconnected.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0137",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Nothing for me to do now. It's just our AI against the Arctics, AI plus human. And if our jamming works, our AI against theirs.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0138",
+   "role": "p",
+   "text": "They both waited silently.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0139",
+   "role": "p",
+   "text": "Ten ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0140",
+   "role": "p",
+   "text": "Twenty ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0141",
+   "role": "p",
+   "text": "Thirty ticks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0142",
+   "role": "p",
+   "text": "Finally, the download icon turned on again on Jahn's computer.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0143",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"That was really close.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0144",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Wow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0145",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Only one undamaged drone on our side. Last step is that it will walk around and chip and memory-kill all the drones, first the Arctics and then the rest of our own just in case. It needs to do that before more Arctic drones come.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0146",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Can the damaged ones help?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0147",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"They can't move. They can still attack, but proper chip and memory-killing is best done from ten centimeters away.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0148",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Even then we can't actually be certain that the Arctics won't be able to salvage training data. We can just hope for the best.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0149",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Okay... I gave it the instructions, now I'm just watching.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0150",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"I am curious. How does your internet link into Redshire work?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0151",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Ah, that's one of our other big projects. The problem now is that the Arctics have confiscated all the un-backdoored electronics. There's still many watches, hand devices and compute boxes left hidden in various places, but the Arctics will be able to tell if any device tries to transmit things. So what we do is steganography.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0152",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Two people pretend to have a voice or video call. While the call is happening, the un-backdoored device is sitting nearby, and it's softly playing audio. That audio stream sounds random - it's representing encrypted data wrapped in an erasure code that's highly noise-tolerant - but we use the same tricks I told you before with the health data to maximize how much data we can hide, so that it appears to anyone or any bot spying on the call that there's nothing abnormal.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0153",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"One of ... do you have more big projects?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0154",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Well, the next step is that we want to actually kidnap an Arctic drone and bring it back to Dzego for analysis.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0155",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Wow.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0156",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Actually, that's what I'll ask for your help one more time for.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0157",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"So what do you need?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0158",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I want you to introduce me to another defense corp. Preferably not through the Institute director, find a different path.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0159",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"Why?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0160",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"The company the Institute director introduced does seaborne well, I want to find one of the others, that are better at airborne.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c22-s0161",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Also, come on, it's Freetown, this is a market. You gotta talk to multiple people and compare them against each other, to make sure they're not screwing you over.\"</c>",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

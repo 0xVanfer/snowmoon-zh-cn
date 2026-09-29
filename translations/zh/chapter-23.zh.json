@@ -1,0 +1,611 @@
+{
+ "chapter": 23,
+ "segments": [
+  {
+   "id": "c23-s0001",
+   "text": "第二十三章"
+  },
+  {
+   "id": "c23-s0002",
+   "text": "帕佛盖都，泽国"
+  },
+  {
+   "id": "c23-s0003",
+   "text": "3724年雾期22日"
+  },
+  {
+   "id": "c23-s0004",
+   "text": "格拉迪亚斯、白和芬坐在山体金字塔深处一间食堂的桌旁。"
+  },
+  {
+   "id": "c23-s0005",
+   "text": "食堂的桌椅与墙壁之间，四面都种着绿树。两面墙上爬满藤蔓，另外两面则镶着巨大的镜子，让整个房间仿佛属于某种无限重复、无边无际的空间。入口只有一个，位于一角，两侧各有一丛茂密的灌木，挡住了通往入口隧道的视线。"
+  },
+  {
+   "id": "c23-s0006",
+   "text": "另一个角落里，以及离他们几米远的食堂正中，地上立着几台空气过滤器——显然是刚添置的，还没怎么考虑过怎样让它们在视觉上融入这个房间。天花板上吊着朝下的风扇和紫色的灯。"
+  },
+  {
+   "id": "c23-s0007",
+   "text": "三人待在一处私密的隔间里，灌木挡住了食堂其余大部分区域的视线。两只扬声器模拟着清晨林中蝉鸣的声音，盖过了其他桌的谈话——他们知道，这同样也保护了他们自己的谈话。"
+  },
+  {
+   "id": "c23-s0008",
+   "text": "泽走了进来，看得出已经精疲力竭，在他们旁边坐下。"
+  },
+  {
+   "id": "c23-s0009",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“好险。我们被几架北极无人机伏击，勉强才打赢。幸好下一波蜂群赶来把我们清掉之前，我们整整有五分钟，所以我想那些芯片都毁掉了，北极人没法从这场战斗里提取训练数据。”</c>"
+  },
+  {
+   "id": "c23-s0010",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“自由城那边的人情绪怎么样？”</c>"
+  },
+  {
+   "id": "c23-s0011",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“他们特别兴奋。”</c>"
+  },
+  {
+   "id": "c23-s0012",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“看吧，我早说过，先跟自由城合作，是让昆高培更愿意参与国际合作的好办法。”</c>"
+  },
+  {
+   "id": "c23-s0013",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“你得先给人一些能马上亮出来的成绩，让他们能拿给上级或朋友看，尽快靠实绩挣到正当性，别人才信你敢走下一步。”</c>"
+  },
+  {
+   "id": "c23-s0014",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“对，你的建议很管用。不过……我猜下一步会比这一步难。自由城的防卫队愿意合作。到了维里迪亚，我们得想办法绕开他们的制度，那要难得多。”</c>"
+  },
+  {
+   "id": "c23-s0015",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“绕过人做点小项目，可以。但要想赢下大仗，就得有规模。而想要规模，就得做那件难事：真正把一些更大的机构拉到你这边来。”</c>"
+  },
+  {
+   "id": "c23-s0016",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“你有什么办法吗？”</c>"
+  },
+  {
+   "id": "c23-s0017",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“塞拉说她打算想想办法。我把韦尔多的联系方式给了她，他是我目前真正信得过的唯一一位参议员。走着瞧吧。”</c>"
+  },
+  {
+   "id": "c23-s0018",
+   "text": "一个机器人过来，把四人的饭菜放上桌。他们安静地吃了起来。"
+  },
+  {
+   "id": "c23-s0019",
+   "text": "芬和格拉迪亚斯先吃完，喝着茶歇了几分钟。"
+  },
+  {
+   "id": "c23-s0020",
+   "text": "芬从包里取出一本书，递给格拉迪亚斯。"
+  },
+  {
+   "id": "c23-s0021",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“来，看看你的泽国语学得怎么样。随便翻开一页，读。”</c>"
+  },
+  {
+   "id": "c23-s0022",
+   "text": "格拉迪亚斯接过书，随手翻到一页，看了一眼。"
+  },
+  {
+   "id": "c23-s0023",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>zan</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>da cei bia sia</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>jei</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>hi dzia lin</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#c9a0f0;font-size:80%;letter-spacing:0.6px;font-style:italic;\">ji</c> <c st=\"white-space:nowrap\"><f>bia sia</f></c></c>"
+  },
+  {
+   "id": "c23-s0024",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>dze fei dzen</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#c9a0f0;font-size:80%;letter-spacing:0.6px;font-style:italic;\">ji</c> <c st=\"white-space:nowrap\"><f>fo gu shan jin dzan</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#c9a0f0;font-size:80%;letter-spacing:0.6px;font-style:italic;\">ji</c> <c st=\"white-space:nowrap\"><f>dzo cei</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>bun sia</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>shia sin hie</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>bia sia</f></c></c>"
+  },
+  {
+   "id": "c23-s0025",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>gi jan</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>sia kin</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"background:rgba(255,255,255,0.180);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><f>ju</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>gi da jui</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>tin hu lin pin</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>cie fan</f></c></c></c>"
+  },
+  {
+   "id": "c23-s0026",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ki</c> <c st=\"white-space:nowrap\"><f>sau dan</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#46d8c6;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">te</c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ki</c> <c st=\"white-space:nowrap\"><f>sau pin</f></c></c>"
+  },
+  {
+   "id": "c23-s0027",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>ju je</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>cin pin</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>su</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>zai</f></c>"
+  },
+  {
+   "id": "c23-s0028",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>ti fo gu shan jin dzan</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>dzei</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>cai</f></c>"
+  },
+  {
+   "id": "c23-s0029",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>ten min</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>hi dzia lin</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>lia fa</f></c></c>"
+  },
+  {
+   "id": "c23-s0030",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#46d8c6;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">te</c> <c st=\"white-space:nowrap\"><f>gi jan jei da jui</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>fa</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><f>jie hu</f></c></c>"
+  },
+  {
+   "id": "c23-s0031",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>kau min</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>jie hu gau</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>hui pei min</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>lau za min</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>lau shau min</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>pa no bu</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#c9a0f0;font-size:80%;letter-spacing:0.6px;font-style:italic;\">ji</c> <c st=\"white-space:nowrap\"><f>dzan ju min</f></c></c>"
+  },
+  {
+   "id": "c23-s0032",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>dzen</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>sei gen hu</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#c9a0f0;font-size:80%;letter-spacing:0.6px;font-style:italic;\">ji</c> <c st=\"white-space:nowrap\"><f>sha liu</f></c></c>"
+  },
+  {
+   "id": "c23-s0033",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>dzo mi</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>su</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>gi pen</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>den</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>ten cei</f></c></c>"
+  },
+  {
+   "id": "c23-s0034",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#46d8c6;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">te</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>da cei</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>sau</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>tia gei</f></c>"
+  },
+  {
+   "id": "c23-s0035",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>bui je shan jin</f></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>bu sin hie</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>kin</f></c></c>"
+  },
+  {
+   "id": "c23-s0036",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>dzo tei hu</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>jan shau dai dzu</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>hen</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>jan</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>sia kie hen su</f></c></c>"
+  },
+  {
+   "id": "c23-s0037",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>tin hu</f></c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>gia dzan jan</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>bia pin</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>mia</f></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><f>jie sen pin</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>pui sen hu</f></c></c></c>"
+  },
+  {
+   "id": "c23-s0038",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>dzo jan</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>shau</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>dzo jan</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><f>sin sia ce hu</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>jan pui su</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>sin sia ce hu dzei</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>dzo jan shau pen</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">tu</c> <c st=\"white-space:nowrap\"><f>mia</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>ti</f></c></c>"
+  },
+  {
+   "id": "c23-s0039",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>jan</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>bia pin</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>hi dzia lin</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>gi pen</f></c></c>"
+  },
+  {
+   "id": "c23-s0040",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>pui sen hu</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>shen sin</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>sia</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>sie hu</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>kin sia je</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>go</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>ti die sie</f></c></c>"
+  },
+  {
+   "id": "c23-s0041",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><f>zun</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>dziu kin</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>jan zu sin</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>sin fin</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>dzo</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>bia pin</f></c></c>"
+  },
+  {
+   "id": "c23-s0042",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>pui sen hu</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>tin hu</f></c></c>"
+  },
+  {
+   "id": "c23-s0043",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>jan</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>sia kin fa</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"background:rgba(255,255,255,0.180);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><f>hi dzia lin</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>lan pin</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>miu sie</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>lan pin kai</f></c></c></c>"
+  },
+  {
+   "id": "c23-s0044",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>dzo mi</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">sho</c> <c st=\"white-space:nowrap\"><f>kan</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">lo</c> <c st=\"white-space:nowrap\"><f>bu bia sia</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>lia fa</f></c></c></c>"
+  },
+  {
+   "id": "c23-s0045",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>ti</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>hi dzia lin bia sia</f></c></c>"
+  },
+  {
+   "id": "c23-s0046",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>zie hu</f></c>"
+  },
+  {
+   "id": "c23-s0047",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>pui ten min</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>zu</f></c></c>"
+  },
+  {
+   "id": "c23-s0048",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>ten cei</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>sie gie</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>ce gau</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>da cei bia sia</f></c></c>"
+  },
+  {
+   "id": "c23-s0049",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\"><c st=\"white-space:nowrap\"><f>miu</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>min sia</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffe08f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">cu</c> <c st=\"white-space:nowrap\"><f>pui ten min</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#ffb27f;font-size:80%;letter-spacing:0.6px;font-style:italic;\">de</c> <c st=\"white-space:nowrap\"><f>bin dai</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">li</c> <c st=\"white-space:nowrap\"><f>sie gie</f></c></c> <c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;\">zo</c></c> <c st=\"white-space:nowrap\"><f>ce gau</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>hi dzia lin bia sia</f></c></c>"
+  },
+  {
+   "id": "c23-s0050",
+   "text": "<c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#7ee2a0;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ci</c> <c st=\"white-space:nowrap\"><f>pui min</f></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">ka</c> <c st=\"white-space:nowrap\"><f>ce ju</f></c></c> <c st=\"white-space:nowrap\"><c st=\"font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;\">fe</c> <c st=\"white-space:nowrap\"><f>dzo cei</f></c></c>"
+  },
+  {
+   "id": "c23-s0051",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“你觉得我能读这个？”</c>，格拉迪亚斯不敢相信地问。"
+  },
+  {
+   "id": "c23-s0052",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“来嘛，试试看。”</c>"
+  },
+  {
+   "id": "c23-s0053",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“好，那我开始了……”</c>"
+  },
+  {
+   "id": "c23-s0054",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“从物质世界的‘小思考’，到网络的‘小思考’。”</c>"
+  },
+  {
+   "id": "c23-s0055",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“‘小思考’就是极简主义。”</c>"
+  },
+  {
+   "id": "c23-s0056",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“啊，我明白了，这就是那种光认识词根也到不了意思的情况。”</c>"
+  },
+  {
+   "id": "c23-s0057",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“确实。而且，把词根压缩下去的整个工程，也只有在我们接受这件事不可避免之后才算成功。”</c>"
+  },
+  {
+   "id": "c23-s0058",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“包在绿色里面——40年前，全世界‘美的思考’的一次大模式变化，就是极简主义。”</c>"
+  },
+  {
+   "id": "c23-s0059",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“开头那一截是固定说法，意思是‘包括泽国和维里迪亚’。‘美的思考’就是美学。”</c>"
+  },
+  {
+   "id": "c23-s0060",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“许多人认识到，拥有许多实物不只是没有‘线心’，还是一间‘锁住的房间’。”</c>"
+  },
+  {
+   "id": "c23-s0061",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“‘线心’是一种简朴、或者说方便的感觉；在这个语境里，‘锁住的房间’更像是监狱。”</c>"
+  },
+  {
+   "id": "c23-s0062",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“房间复杂，心也复杂。”</c>"
+  },
+  {
+   "id": "c23-s0063",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“好！”</c>"
+  },
+  {
+   "id": "c23-s0064",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“与物少而来的‘暖心’——幸福？——一起活着，就是自由。”</c>"
+  },
+  {
+   "id": "c23-s0065",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“很好！”</c>"
+  },
+  {
+   "id": "c23-s0066",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“这件事发生在40年前，是有逻辑的——有原因的？”</c>"
+  },
+  {
+   "id": "c23-s0067",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“对。”</c>"
+  },
+  {
+   "id": "c23-s0068",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“电子机器和互联网开始出现。”</c>"
+  },
+  {
+   "id": "c23-s0069",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“这意味着许多人攒下的实物……等等，是许多人攒下的实物，开始变得没人想要了。”</c>"
+  },
+  {
+   "id": "c23-s0070",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“这里我会说‘不必要’。”</c>"
+  },
+  {
+   "id": "c23-s0071",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“手持终端让‘聚合与分组装置’、音乐装置、声音交谈装置，以及以前一个人会有的另外10种装置，都变得不必要了。”</c>"
+  },
+  {
+   "id": "c23-s0072",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“‘聚合与分组装置’应该就是加减乘除装置——计算器。‘声音交谈装置’是电话。”</c>"
+  },
+  {
+   "id": "c23-s0073",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“它装书，可以没有上盖。”</c>"
+  },
+  {
+   "id": "c23-s0074",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“‘无限’。”</c>"
+  },
+  {
+   "id": "c23-s0075",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“我们大家生活中的许多部分，正在搬到电的世界里去。”</c>"
+  },
+  {
+   "id": "c23-s0076",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“是我们全部生活中的许多部分。”</c>"
+  },
+  {
+   "id": "c23-s0077",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“结果，物质世界的复杂性就停在了后面。”</c>"
+  },
+  {
+   "id": "c23-s0078",
+   "text": "<c st=\"color:oklch(0.7 0.15 80)\">“是被落在了后面。”</c>"
+  },
+  {
+   "id": "c23-s0079",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“在近旁的这几年里，我们正在寻求另一种模式变化。”</c>"
+  },
+  {
+   "id": "c23-s0080",
+   "text": "格拉迪亚斯顿了一会儿。"
+  },
+  {
+   "id": "c23-s0081",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“好吧，我累了。但我好奇。你能不能直接告诉我，剩下的都是什么意思？”</c>"
+  },
+  {
+   "id": "c23-s0082",
+   "text": "泽拿起那本书。"
+  },
+  {
+   "id": "c23-s0083",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“社交媒体并不总是对人心理健康有好处。人们对隐私的关注，很大一部分不只是出于对北极的恐惧，更是因为所有人都在议论所有人的那种铺天盖地的量，以及私生活中的偶然事件变成公共话题的那种不可预测。”</c>"
+  },
+  {
+   "id": "c23-s0084",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“人们害怕互联网的许多部分，尤其是在隐私技术不如这里强、也不如这里被人理解的其他国家。位置追踪、行为画像，这一切。而且不只是隐私——人们正在意识到，互联网可以像毒品一样让人上瘾。”</c>"
+  },
+  {
+   "id": "c23-s0085",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“所以现在，我们慢慢看到另一种极简主义的出现：网络极简主义。断开连接。只在自己的设备上做事。就像物质极简主义是随着数字世界能力的增长才成为可能，网络极简主义是随着 AI 和本地软件能力的增长才成为可能——你可以把整个世界装在自己的设备里。”</c>"
+  },
+  {
+   "id": "c23-s0086",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“有意思。”</c>"
+  },
+  {
+   "id": "c23-s0087",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“格拉迪亚斯，你读得很好。”</c>"
+  },
+  {
+   "id": "c23-s0088",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“谢谢。现在轮到你了。你对掌舵会的治理规则了解多少？”</c>"
+  },
+  {
+   "id": "c23-s0089",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“有一套税则评则。每一条评则随机抽二十一名掌则人——每年新增七名，任期三年。这个组的职责是提出并表决对评则的修改。二十一人分成三个七人小组，每组都混有第一年、第二年和第三年的人。任何掌则人都可以就修改评则提出提案。每个小组独立讨论每一项提案，彼此不知道对方是谁。讨论几轮之后，二十一名掌则人对每项提案投票，拿到至少二十一人中十三票赞成的提案就被采纳。”</c>"
+  },
+  {
+   "id": "c23-s0090",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“还有另一套机制，监审官。他们随机抽选，编成小组去审计单个企业。那边是三个三人小组。他们的任务很具体：判定一家企业在每条评则上落在哪一档。至于更小的企业，审计由见习官——也就是受训中的掌舵会成员——来做。见习官要被接纳，既要通过议会委员会的批准，还要在预测分数上排进前10%——他们的审计有一小部分会被监审官随机抽样重做，而他们的表决结果与监审官结果的一致程度，就得排进前10%。”</c>"
+  },
+  {
+   "id": "c23-s0091",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“那合议庭呢？”</c>"
+  },
+  {
+   "id": "c23-s0092",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“机制和监审官一样，只是换成五名法官，而不是九名。另外，民事案件双方都可以上诉，刑事案件只有辩方可以。没有层级，只是再抽一个随机样本。还有一条普通法规则：如果你提交的案件——无论是上诉，还是第一次起诉——毫无道理到了恶意滥诉的程度，那这个案子最后不仅会判你输，还可能判你赔偿。这就是针对我们所说的‘拒绝服务攻击’的防护。”</c>"
+  },
+  {
+   "id": "c23-s0093",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“其实，你提到最后那点正好。我共同家庭的另一位父亲维尔，打了一场很长的官司，告的……嗯，基本就是他以前的雇主，因为他们搞了些财务上的把戏把他解雇，好赖掉事先约定好的遣散费。第一轮他赢了。公司上诉，输了。然后他们又上诉了一次。就在昨天，法庭驳回了他们的第二次上诉，判定为恶意，并把他们要付给维尔和其他工人的金额提到了三倍。”</c>"
+  },
+  {
+   "id": "c23-s0094",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“很高兴听到这套制度管用！”</c>"
+  },
+  {
+   "id": "c23-s0095",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“最重要的问题永远是它到底管不管用。比如批准新掌则人和新监审官的议会听证，到眼下这一步，基本上已经形同虚设了——至少在我看来是这样。”</c>"
+  },
+  {
+   "id": "c23-s0096",
+   "text": "白开口了。"
+  },
+  {
+   "id": "c23-s0097",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“这些信息真的很有用，格拉迪亚斯；也谢谢你，泽，这么快就跟上了。如果我们想影响维里迪亚，搞清这些机构今天到底怎么运转，和军事那一面同样重要。”</c>"
+  },
+  {
+   "id": "c23-s0098",
+   "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“总之，登应该在他的私人房间等着我和泽了。我们该动身了。”</c>"
+  },
+  {
+   "id": "c23-s0099",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“好。”</c>，泽答道。"
+  },
+  {
+   "id": "c23-s0100",
+   "text": "泽和格拉迪亚斯同时抢着把手表往桌角的小绿圈上贴，结果两人把对方的手腕都推得太远，谁也没连上。芬也凑上来，啪地把手表拍在圆圈上。片刻之后，他的手表震了一下。"
+  },
+  {
+   "id": "c23-s0101",
+   "text": "四个人都站起身，往食堂外走。"
+  },
+  {
+   "id": "c23-s0102",
+   "text": "格拉迪亚斯已经上床，正准备睡觉。突然，他的手表震了。"
+  },
+  {
+   "id": "c23-s0103",
+   "text": "来自"
+  },
+  {
+   "id": "c23-s0104",
+   "text": "消息"
+  },
+  {
+   "id": "c23-s0105",
+   "text": "时间"
+  },
+  {
+   "id": "c23-s0106",
+   "text": "塞拉"
+  },
+  {
+   "id": "c23-s0107",
+   "text": "→"
+  },
+  {
+   "id": "c23-s0108",
+   "text": "[正在呼叫]"
+  },
+  {
+   "id": "c23-s0109",
+   "text": "91454"
+  },
+  {
+   "id": "c23-s0110",
+   "text": "这种红色的消息，他此前只见过两次：一次是北林遭到攻击时塞拉给他发来消息，一次是她为德尔瓦特的事打来电话。"
+  },
+  {
+   "id": "c23-s0111",
+   "text": "翡翠正在用它告诉格拉迪亚斯事情的紧要程度和塞拉的情绪；而格拉迪亚斯明白，这本身就已经是这条消息的一大部分。"
+  },
+  {
+   "id": "c23-s0112",
+   "text": "格拉迪亚斯心跳加速，接通了电话。"
+  },
+  {
+   "id": "c23-s0113",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“你知道莉莉出了什么事吗？！”</c>，塞拉尖叫道。"
+  },
+  {
+   "id": "c23-s0114",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“我……不知道。我只记得听说她最近一次考试考了81%。出什么事了？！”</c>"
+  },
+  {
+   "id": "c23-s0115",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“我进了她的房间。她在说话，在手持终端上打字。而我在镜子里看得见她读的东西、说的内容。”</c>"
+  },
+  {
+   "id": "c23-s0116",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“有那么几分钟，我就那么盯着。我不敢相信。”</c>"
+  },
+  {
+   "id": "c23-s0117",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“是什么？”</c>"
+  },
+  {
+   "id": "c23-s0118",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“她在某个聊天群里，他们在分享北极的宣传。为埃菲里昂勋爵的言论叫好。盼着北极人快点来到维里迪亚的其余地方。”</c>"
+  },
+  {
+   "id": "c23-s0119",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“什么？！”</c>"
+  },
+  {
+   "id": "c23-s0120",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“我一下子炸了。我当场质问她，问她怎么能这样背叛我们——费布里克和赫雷达正因为北极人被卡在一千公里之外。”</c>"
+  },
+  {
+   "id": "c23-s0121",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“她怎么回答？”</c>"
+  },
+  {
+   "id": "c23-s0122",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“她说北极人是对的。他们的哲学——有些人更差、有些人更好，更好的人就该统治其他所有人，人生最重要的事就是努力成为那更好的人之一——正是激励她的东西，给了她学习和用功的理由。说我们无条件的爱是毒药。说北极人的哲学——欣赏和爱只作为成功的奖赏——反而把她从深坑里拉了出来，而我们做的一切连一点点忙都没帮上。”</c>"
+  },
+  {
+   "id": "c23-s0123",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“这……太可怕了。”</c>"
+  },
+  {
+   "id": "c23-s0124",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“我冲她吼了十分钟，然后关上了门。”</c>"
+  },
+  {
+   "id": "c23-s0125",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“我哭了一个长时。然后，等我再打开门，窗户开着，她不见了。”</c>"
+  },
+  {
+   "id": "c23-s0126",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“你能……通过她的手表追踪她吗？”</c>"
+  },
+  {
+   "id": "c23-s0127",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“已经让莫夫去做了。白费力气，她把手表扔到随便一辆巴士上了。”</c>"
+  },
+  {
+   "id": "c23-s0128",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“哇。我现在觉得特别糟。我们真的什么都没做，去真正激励她、鼓励她。”</c>"
+  },
+  {
+   "id": "c23-s0129",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“格拉迪亚斯，她被北极人洗脑了。你敢摆出你那副哲学家的样子，跟我说他们也有道理。”</c>"
+  },
+  {
+   "id": "c23-s0130",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“你怎么能这么疏忽？”</c>"
+  },
+  {
+   "id": "c23-s0131",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“好，等一下。没看穿德尔瓦特，那件事是我的错。我蠢。莫夫也蠢。我承认。这件事，这件事是我们两个人的。你是莉莉的妈妈。你见过她很多次——在她去维尔和黛雅那儿之前，在她住在他们那儿时我们去看她的时候，还有她回来之后。你有很多机会把事情变好，就像我一样。而你没做成，就像我也没做成。所以我们一起解决这个问题吧。”</c>"
+  },
+  {
+   "id": "c23-s0132",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“你根本就不明白，是不是？”</c>"
+  },
+  {
+   "id": "c23-s0133",
+   "text": "塞拉挂断了电话。"
+  }
+ ],
+ "new_terms": [
+  {
+   "en": "internet minimalism",
+   "zh": "网络极简主义",
+   "kind": "term",
+   "note": "泽所说的第二种极简主义，与物质极简主义相对"
+  },
+  {
+   "en": "physical minimalism",
+   "zh": "物质极简主义",
+   "kind": "term",
+   "note": "40年前兴起、以少物为美的极简主义"
+  },
+  {
+   "en": "small thinking",
+   "zh": "小思考",
+   "kind": "term",
+   "note": "泽国语词组字面义，实指极简主义；格拉迪亚斯逐词直译时的说法"
+  },
+  {
+   "en": "beautiful thinking",
+   "zh": "美的思考",
+   "kind": "term",
+   "note": "泽国语词组字面义，实指美学；同上"
+  },
+  {
+   "en": "line-heartedness",
+   "zh": "线心",
+   "kind": "term",
+   "note": "泽国语词组字面义，指简朴、方便的感觉"
+  },
+  {
+   "en": "locked room",
+   "zh": "锁住的房间",
+   "kind": "term",
+   "note": "泽国语词组；此处语境中喻指监狱"
+  },
+  {
+   "en": "aggregate-and-group devices",
+   "zh": "聚合与分组装置",
+   "kind": "term",
+   "note": "泽国语字面义，实指计算器"
+  },
+  {
+   "en": "sound conversation devices",
+   "zh": "声音交谈装置",
+   "kind": "term",
+   "note": "泽国语字面义，实指电话"
+  },
+  {
+   "en": "Freetown defense corps",
+   "zh": "自由城防卫队",
+   "kind": "org",
+   "note": "愿意与昆高培合作的自由城防务组织"
+  },
+  {
+   "en": "drone swarm",
+   "zh": "蜂群",
+   "kind": "term",
+   "note": "北极无人机集群攻击的一波，正文简称「蜂群」"
+  },
+  {
+   "en": "denial of service attacks",
+   "zh": "拒绝服务攻击",
+   "kind": "term",
+   "note": "滥用诉讼拖垮合议庭的手法，恶意滥诉会被判赔偿"
+  },
+  {
+   "en": "co-father",
+   "zh": "共同家庭的另一位父亲",
+   "kind": "term",
+   "note": "格拉迪亚斯对维尔（共同家庭中另一对伴侣的男方）的称呼"
+  }
+ ]
+}

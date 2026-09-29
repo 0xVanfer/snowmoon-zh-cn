@@ -1,0 +1,161 @@
+{
+  "chapter": 13,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "整章信息搬运得稳，对白大体像人说话，读下来是通顺的，不需要大改；问题集中在少数句子的欧化嵌套和个别用词的语感上：把 without／in what timeframe 一类结构硬塞成前置长定语（c13-s0016、c13-s0094、c13-s0110），以及公文腔、书面词掉进口语场景（距今、常言道、饭局、戒惧）。最该先动的是 c13-s0016、c13-s0074、c13-s0094 三处，其余多属一轮轻量母语润色即可解决。",
+  "issues": [
+    {
+      "id": "c13-s0016",
+      "severity": "high",
+      "type": "欧化",
+      "source": "But he also knew that if he admitted it to Delwart, he would get a long lecture trying to impress on him how biased his sources of evidence were - and that was all without him having told Delwart about the time Seila met Zei and Bai in Freetown.",
+      "zh": "可他也知道，一旦向德尔瓦特承认这一点，对方就会长篇大论地教育他，说他的消息来源有多偏——而这还是在他没有把塞拉在自由城见过泽和白的事告诉德尔瓦特的情况下。",
+      "problem": "句尾“而这还是在他没有把……告诉德尔瓦特的情况下”是把 without him having told 硬翻成前置的“在……的情况下”，三层嵌套（他没有／把塞拉见过泽和白的事／告诉德尔瓦特）让读者必须回读两遍才知道谁没告诉谁；同句“泽和白”用“和”连接两个单字人名，还会被读成一个名字。",
+      "suggestion": "可他也知道，一旦向德尔瓦特承认这一点，对方就会长篇大论地教育他，说他那些消息来源有多偏——而这还没算上他从没跟德尔瓦特提过塞拉在自由城见过泽、白的事。"
+    },
+    {
+      "id": "c13-s0074",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Denying the possibility of hierarchy, of vertical difference between people, the fact that there are traits that everyone agrees are good, but that only some actually manage to achieve, is thus also denying the possibility of self-improvement.",
+      "zh": "否定了等级的可能、否定了人与人之间纵向的差别，否定那些人人都承认是好的品质、却只有一部分人真正做到了——也就等于否定了自我提升的可能。",
+      "problem": "第三个“否定了”的宾语被顿号和“却”切成两截（“那些人都承认是好的品质”／“只有一部分人真正做到了”），读者要停下来判断“做到了”的宾语是什么；三个否定并列被拆成一长串后，“也就等于”收得太轻，整句读起来像译稿而不是檄文。",
+      "suggestion": "而否定了等级的可能，否定了人与人之间纵向的差别，也就否定了这样一个事实：有些品质人人都承认是好的，却只有一部分人真正具备——于是同样否定了自我提升的可能。"
+    },
+    {
+      "id": "c13-s0094",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Anyway, this is the last time we meet before we have to vote on this rubric in about two months.",
+      "zh": "总之，这是我们在大约两个月后不得不就这条评则投票之前的最后一次碰面。",
+      "problem": "一句话里叠了“在大约两个月后”和“不得不就这条评则投票之前”两层定语，中心语“碰面”被推到句尾，是典型的长定语前置；这是对白，中文口语不会这么说。",
+      "suggestion": "总之，再过大约两个月，我们就得就这条评则投票了——这是投票前最后一次碰面。"
+    },
+    {
+      "id": "c13-s0013",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "everything they do, their drone patrols near Redshire, even Ephelion's speeches, it just always aggravates people so much.",
+      "zh": "他们干的每一件事，在红郡附近的无人机巡逻，连埃菲里昂的演讲都算上，总是把人惹得火大。",
+      "problem": "同位语举例直接塞进主谓之间，没有任何标记，读起来像中途插了另一个句子；“他们干的每一件事”和后面的例子之间也缺少承接，中文一般用破折号或“不管是……还是……”来串。",
+      "suggestion": "他们干的每一件事——在红郡附近巡逻的无人机，甚至埃菲里昂的演讲——总是把人惹得火大。"
+    },
+    {
+      "id": "c13-s0057",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "It had been two months since his visit to their house for that one evening, and they had been away from his and Seila's home for half a year.",
+      "zh": "上回去他们家待了那一晚，距今已经两个月；而他们离开他和塞拉的家，已有半年。",
+      "problem": "“上回去他们家待了那一晚”把 since his visit ... for that one evening 压缩成一句，“去”“待”“那一晚”三者关系含混；后半句“距今已经两个月”是公文／说明文腔，放在小说叙述里很出戏。",
+      "suggestion": "上次去他们家小住的那一晚，已经是两个月前；而孩子们离开他和塞拉的家，也已有半年。"
+    },
+    {
+      "id": "c13-s0085",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "She put down her hand device, and joined the family eating.",
+      "zh": "她放下手持终端，加入吃饭。",
+      "problem": "“加入吃饭”是 join ... eating 的逐字硬搬，中文没有这个搭配，读起来立刻露出译文痕迹。",
+      "suggestion": "她放下手持终端，也跟着吃起来。"
+    },
+    {
+      "id": "c13-s0110",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Eighteen, in what timeframe do you think the Arctic Empire is going to make some kind of move, do some more serious sabotage against Redshire?",
+      "zh": "十八，你觉得北极帝国会在什么时间范围内有所动作，对红郡搞出更严重的破坏？",
+      "problem": "“在什么时间范围内有所动作”是 in what timeframe ... make some kind of move 的直译，书面又绕；后半句“对红郡搞出更严重的破坏”孤零零挂着，和前一个谓语也接不上。",
+      "suggestion": "十八，你觉得北极帝国多久会动手，对红郡搞出更严重的破坏？"
+    },
+    {
+      "id": "c13-s0077",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "Those that give you both the incentive, and the disincentive. ... Only thus, can you train your mind to love winning, and achieve your true potential.",
+      "zh": "既能给你激励，也能给你戒惧。……唯有如此，你才能训练自己的心去热爱胜利，发挥出你真正的潜力。",
+      "problem": "“戒惧”在中文里是戒慎恐惧、自己警惕的意思，不能表示给别人的 disincentive；这里要的其实是“表现差就没好脸”的那一层，用词没落地。同段“训练自己的心去热爱胜利”也是 train your mind 的直搬，中文说“让自己的心学会”。",
+      "suggestion": "既能给你甜头，也能给你苦头。……唯有如此，你才能让自己的心学会热爱胜利，发挥出真正的潜力。"
+    },
+    {
+      "id": "c13-s0006",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"So how are the Keeper meetings going?\"",
+      "zh": "“掌则人的会开得怎么样？”",
+      "problem": "“掌则人的会”绕了一道，不如“掌则人会议”顺口；全书其余章节（第 10、11、20 章）一律作“掌则人会议”，这里另起说法，读者会多停一下，也丢掉了“So”那种随口一问的起头。",
+      "suggestion": "“掌则人会议开得怎么样？”"
+    },
+    {
+      "id": "c13-s0022",
+      "severity": "low",
+      "type": "本土化",
+      "source": "\"I'm sorry, I have to leave for a dinner with my family.\"",
+      "zh": "“抱歉，我得走了，家里有个饭局。”",
+      "problem": "“饭局”在中文里多指应酬性的聚餐，用在回家陪家人吃饭上带出了错误的社交应酬味，德尔瓦特紧接着那句“家人才是最重要的”也跟着别扭。",
+      "suggestion": "“抱歉，我得走了，约好了回家陪家人吃饭。”"
+    },
+    {
+      "id": "c13-s0024",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Gladias stepped out, and began to walk through Greater Plum Harbor's tunnels toward the exit.",
+      "zh": "格拉迪亚斯走出去，沿着大梅港的通道往出口走。",
+      "problem": "一句话里连用两个“走”（走出去、往出口走），读起来打结；前文刚交代他在隔间里，这里直接“走出去”也少了动作落点。",
+      "suggestion": "格拉迪亚斯走出隔间，沿着大梅港的通道往出口去。"
+    },
+    {
+      "id": "c13-s0045",
+      "severity": "low",
+      "type": "生硬",
+      "source": "And, between you and this other Keeper, he has managed to get contacts in two discussion groups for the same rubric. ... to have them all taking cues from the same person!",
+      "zh": "而且，靠着你再加上那个掌则人，他在同一条评则的两个讨论组里都安上了联系人。……可不是让所有人都去看同一个人的眼色！",
+      "problem": "“靠着你再加上那个掌则人”结构松散，而且“靠着你”会读成“依赖你”，不是 between you and 的意思；“看同一个人的眼色”里“看眼色”在中文指察言观色、讨好对方，跟 taking cues from（唯其马首是瞻）不完全是一回事，“去”字也是多余的。",
+      "suggestion": "而且，有你，再加上那个掌则人，他在同一条评则的两个讨论组里都安插了人。……可不是让所有人都听同一个人的指挥！"
+    },
+    {
+      "id": "c13-s0090",
+      "severity": "low",
+      "type": "本土化",
+      "source": "as they say, ninety percent of our communication is subconscious.",
+      "zh": "常言道，我们九成的交流都是下意识的。",
+      "problem": "“常言道”是书面／文言腔，夹在“凭直觉”“大概是……”这种随口闲聊里，语气一下跳档，人物显得不像在开玩笑。",
+      "suggestion": "都说，我们九成的交流是下意识的。"
+    },
+    {
+      "id": "c13-s0097",
+      "severity": "low",
+      "type": "生硬",
+      "source": "To exempt all military, surveillance and counter-surveillance products from the more favorable tiers on the openness tax rubric. All that stuff becomes minimum tier 3, unconditionally.",
+      "zh": "把一切军事、监视和反监视产品，从开放度税评则里较为优惠的档位中排除出去。这些东西一律无条件按最低第3档算。",
+      "problem": "“从……里较为优惠的档位中排除出去”里“里……中”两个方位词叠用；“按最低第3档算”也含糊——是最低的档位就是第3档，还是至少从第3档起，读者要猜一句。",
+      "suggestion": "把一切军事、监视和反监视产品排除在开放度税评则较优惠的档位之外。这些东西一律无条件地从第3档起算。"
+    },
+    {
+      "id": "c13-s0102",
+      "severity": "low",
+      "type": "本土化",
+      "source": "They're not going to start doing anything crazy in Redshire, okay?",
+      "zh": "他们不会真在红郡搞出什么疯狂的事，行吗？",
+      "problem": "“行吗？”是征询对方同意的问句，而原文 okay? 是压对方认可的语尾；用“行吗”会让说话人像在请求许可，跟前面“得了吧！”的强硬口气不搭。",
+      "suggestion": "他们才不会真在红郡闹出什么疯狂的事，好吧？"
+    },
+    {
+      "id": "c13-s0112",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"One, I remember you were also of the mindset that we should take the Arctics seriously as a threat. What's your timeline?\"",
+      "zh": "“一，我记得你也认为我们该把北极当成真正的威胁。你估的时间是？”",
+      "problem": "“你估的时间是？”以“是”收尾却没有宾语，读着像话没说完；英文 What's your timeline 是惯用问法，中文口语一般直接问“多久”。",
+      "suggestion": "“一，我记得你也认为我们该把北极当成真正的威胁。你估的是多久？”"
+    },
+    {
+      "id": "c13-s0115",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zero softly muttered some disapproval under his breath but did not say anything.",
+      "zh": "零低声嘟囔了几句不满，但没说什么。",
+      "problem": "“嘟囔了几句不满”本身就是在说话，紧接“但没说什么”自相矛盾；原文的意思是没把话摆到台面上，中文需要把这层补出来，否则读者会卡一下。",
+      "suggestion": "零小声嘟囔了两句，算是表达不满，但没把话挑明。"
+    }
+  ]
+}

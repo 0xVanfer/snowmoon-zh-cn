@@ -1,0 +1,206 @@
+{
+  "chapter": 15,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第15章整体读得下去，而且守住了这本书较难的部分：三条线（自由城、梅尔丹、帕佛盖都）切换清楚，泽与德鲁因的手表长消息、泽讲隐写编码那两段，中文都还保有“一个学生兴奋讲题”的口语流；分桶、异或、混淆电路、最低有效位这些术语落在中文里不隔。问题集中在三类：一是照英文句法硬搬导致读不通（“今天15,500”“新闻是他们看到的第一样东西”“顶掉我的票”“都会抓的那套办法”），二是长句里定语／状语叠加后主语掉队或前后重复（密钥分配组那条、车停两次那条），三是短对话和笑点没落地（“把这威胁当真”“告诉我你在自由城，你没事”“最终极的可信硬件”“永远先拿那个笨办法的1000倍”）。其中“今天15,500”需要重写，其余按条替换即可达到出版级语感。",
+  "issues": [
+    {
+      "id": "c15-s0011",
+      "severity": "high",
+      "type": "生硬",
+      "source": "At 15,500 this morning, a large number of Arctic drones and aircraft landed all across the major cities and military bases in Redshire, timed simultaneously with a massive land invasion from the north with thousands of vehicles coming out of never-before-seen underground tunnels.",
+      "zh": "今天15,500，大批北极无人机与飞行器在红郡各大城市和军事基地降落，同一时刻，北方发动大规模地面入侵，数千辆载具从前所未见的地下隧道里涌出。",
+      "problem": "“今天15,500”既没有“时”也没有“早上”，中文读者第一眼会把15,500读成无人机／飞行器的数量，要等“大批”出现、再读完后半句才回头重新猜它是一个时刻；同书第20章同类句式译作“今天早上5,250时”，这里“this morning”的“早上”也一并丢了。这是全章第一条、也是分量最重的新闻信息（入侵发生的时刻），读不通，开篇的紧迫感就立不住。",
+      "suggestion": "今天早上15,500时，大批北极无人机与飞行器在红郡各大城市和军事基地降落；同一时刻，北方发动大规模地面入侵，数千辆载具从前所未见的地下隧道里涌出。"
+    },
+    {
+      "id": "c15-s0022",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Take the threat seriously",
+      "zh": "“把这威胁当真。”",
+      "problem": "中文“把……当真”是“信以为真”，而 take seriously 是“认真对待、别不当回事”。这句话是回答“现在我们怎么办”，读者会误以为乌塔库在说“这个威胁是真的”；“把这威胁当真”这个搭配本身也不成话。",
+      "suggestion": "“得把这个威胁当回事。”"
+    },
+    {
+      "id": "c15-s0025",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "light coming in clean through the window, the trees on the footpath outside already throwing long morning shadows. The news was the first thing they saw.",
+      "zh": "他们刚在日出时醒来，阳光清清爽爽地照进窗子，外面人行道上的树已经拖出长长的晨影。新闻是他们看到的第一样东西。",
+      "problem": "两处硬搬。一是“阳光清清爽爽地照进窗子”：clean 说的是光没有被挡，而“清清爽爽”是形容人或天气的，跟光不搭；“照进窗子”也该是“照进屋里／照进屋来”。二是“新闻是他们看到的第一样东西”，the first thing 直译成“第一样东西”，读起来新闻成了桌上的一件物品，中文要说“他们睁眼看到的第一件事就是这条新闻”。",
+      "suggestion": "他们刚在日出时醒来，干净的阳光照进窗来，外面人行道上的树已经拖出长长的晨影。他们睁眼看到的第一件事，就是这条新闻。"
+    },
+    {
+      "id": "c15-s0030",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Please tell me you're in Freetown and you're okay.",
+      "zh": "告诉我你在自由城，你没事。",
+      "problem": "省掉 please 之后只剩一个光秃秃的祈使句，中文读起来像上级下命令；塞拉是急得手抖在发消息，句尾没有语气词，那种心里发慌的口气全丢了。",
+      "suggestion": "快告诉我你还在自由城，你没事吧。"
+    },
+    {
+      "id": "c15-s0063",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Delwart might make a move to try to 'verify' that you voted in the correct way. So remember the machinery that the Order set up to make sure he can't do that.",
+      "zh": "“德尔瓦特可能会动手，想‘核实’你是不是按正确的方式投的票。所以记住掌舵会搭起来的那套机制，就是为了让他没法得手。”",
+      "problem": "两处别扭：一是“核实你是不是按正确的方式投的票”，“按正确的方式”夹在中间，读者要先解出这层状语才知道问的是投票方式；二是“记住掌舵会搭起来的那套机制，就是为了让他没法得手”把定语从句 what the Order set up to make sure he can't do that 拆成两截，后半句的主语（那套机制）已经掉队，成了没头没尾的“就是为了……”。这句是下文投票机制整段的引子，读不顺会连累后面一大段。",
+      "suggestion": "“德尔瓦特可能会动手，想‘核实’一下你投票的方式对不对。记住掌舵会为此搭起来的那套机制——就是专门防他这一手的。”"
+    },
+    {
+      "id": "c15-s0064",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "You generate your voting key by meeting at least 3 of 5 people from your Key Allocation Group and registering each blinded share of the voting key with them.",
+      "zh": "“你要和密钥分配组五个人里的至少3个碰面，把投票密钥的每一份盲化份额在他们那里登记，才能生成自己的投票密钥。",
+      "problem": "“密钥分配组五个人里的至少3个”把三层限定（组→五个人→至少3个）串成一条长定语压在“碰面”前，中文更顺的是“跟本组五个人中的至少3个碰面”；前面“格拉迪亚斯背诵道”的“背诵道”也太书面，他是当着人一口气把规则背出来，不是在做朗读作业。",
+      "suggestion": "“只有用有效密钥签名的票才算数。”格拉迪亚斯背了出来。“你得跟密钥分配组里五个人中的至少3个碰面，把投票密钥的每一份盲化份额在他们那里登记，才能生成自己的投票密钥。……"
+    },
+    {
+      "id": "c15-s0065",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "For Delwart to be able to take over my votes, he would have to take over my identity, which means going to the KAG and pretending to be me in person",
+      "zh": "德尔瓦特要想顶掉我的票，就得顶掉我的身份，那意味着去密钥分配组，<e>当面冒充我本人</e>——这很难，因为密钥分配组的意义恰恰在于里面都是我当面见过的人。",
+      "problem": "“顶掉”在中文里是“把人挤走、顶替其位置”，说“顶掉我的票”读者会先理解成“把我的票作废”，而原文说的是“冒名替我投票”；同一句连着两个“顶掉”，更让人以为票和身份是一回事。这是整段推理的关键一环，词义一偏，读者就跟不上他为什么绕到“当面冒充”上去。",
+      "suggestion": "德尔瓦特要想操纵我投的票，就得顶替我的身份，那意味着跑一趟密钥分配组，<e>当面冒充我本人</e>——这很难，因为密钥分配组的意义恰恰在于，里面都是我当面见过的人。"
+    },
+    {
+      "id": "c15-s0079",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "He sat crying at a table in the lobby restaurant of his hotel. ... The rice and vegetables were uneaten for almost a longhour.",
+      "zh": "他坐在酒店大堂餐厅的一张桌子旁，哭着。……那份米饭和蔬菜几乎有一长时没动过。",
+      "problem": "“他坐在……桌子旁，哭着。”是把英文后置的分词照搬，中文读起来像舞台提示，那点难过也被逗号切断；“几乎有一长时没动过”里的“有一长时”不成话（“有”不能直接接时长），要读两遍才知道是“快一长时了”。",
+      "suggestion": "他坐在酒店大堂餐厅的一张桌子旁哭。面前摆着一杯茶和一份米饭配蔬菜。茶他喝得很快，机器人已经续了四次。那份米饭和蔬菜摆在那儿快一长时了，他一口没动。"
+    },
+    {
+      "id": "c15-s0119",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "the strategy that everyone always reaches for when they encounter this problem for the first time ... meaning both values are \"natural\" for that bit to have in that context",
+      "zh": "是所有人第一次碰到这个问题时都会抓的那套办法……也就是在那个语境下两种取值对这个位都“自然”",
+      "problem": "两处硬搬。一是“都会抓的那套办法”：reach for 译成单字“抓”，中文里“抓办法”不成搭配，读者要自己补出“伸手去抓”的画面，应说“都会先想到的那套办法”。二是“两种取值对这个位都‘自然’”，把 for that bit to have 的句法整个搬了过来，主谓关系颠倒，得回读才懂是“这一位取0或取1都说得通”。这段是泽讲给外行听的技术说明，卡壳伤的正是“能不能听懂”。",
+      "suggestion": "是所有人第一次碰上这个问题都会先想到的那套办法……也就是在那个语境里，这一位取0取1都“自然”……"
+    },
+    {
+      "id": "c15-s0152",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Zei felt more optimistic about how much of an improvement a better steganographic encoding would be, but decided not to press the point further.",
+      "zh": "泽对更好的隐写编码能带来多大改进，心里更乐观了些，但还是决定不再纠缠这一点。",
+      "problem": "“对……能带来多大改进，心里更乐观了些”把“对”的宾语拉成一个带疑问词的长从句，第一遍很容易读成自问（“能带来多大改进？”），要回头重排才明白是说“改进幅度大概不小，所以他乐观”。英语 about how much of an improvement 是名词性从句，中文要先给结论。",
+      "suggestion": "泽心里对更好的隐写编码更乐观了些：改进幅度说不定真不小。但他还是决定不再纠缠这一点。"
+    },
+    {
+      "id": "c15-s0182",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei's car arrived at an entrance to the mountain pyramid that he had not been at before. ... The car stopped, its door lined up perfectly with one of the mountain pyramid doors. The car door and the mountain pyramid door slid open simultaneously.",
+      "zh": "泽的车停在山体金字塔一处他从没来过的入口。……车停下，车门正对着一扇山体金字塔的门。车门和金字塔的门同时滑开。",
+      "problem": "第一句车已经“停”在入口，第三句又“车停下”，读者会以为自己看漏了一段；根子在 arrived 译成了“停在”。“门”在四句里出现五次（入口／一排门／山体金字塔的门／车门／金字塔的门），越读越像同一扇门在反复开关。",
+      "suggestion": "泽的车开到山体金字塔一处他从没来过的入口。那是金字塔侧面的一排门，比通常的入口离地面近得多，离城区却更远。车停下来，车门正对着其中一扇。两扇门同时滑开。"
+    },
+    {
+      "id": "c15-s0007",
+      "severity": "low",
+      "type": "生硬",
+      "source": "When he saw what was on the screen, his eyes froze with horror.",
+      "zh": "看到屏幕上的内容，他惊得眼神都僵住了。",
+      "problem": "“眼神僵住”不是中文的说法（僵住的是人或动作，不是眼神）；eyes froze with horror 中文现成的说法是“眼睛都直了”。",
+      "suggestion": "看到屏幕上的内容，他吓得眼睛都直了。"
+    },
+    {
+      "id": "c15-s0021",
+      "severity": "low",
+      "type": "欧化",
+      "source": "\"What do we do now?\"</c>, Jahn, by this point standing beside the table with Utaku, mumbled.",
+      "zh": "“现在我们怎么办？”</c>扬含糊地说，这时他已经站到乌塔库的桌边。",
+      "problem": "原文的伴随状语在说话人之前，中文照搬到提示语后面，就变成“话说完之后他才走过去”；“含糊地说”也没抓住 mumbled（含混地低声嘟囔），跟本章第56段 whispered→“低声说”的处理不一致。",
+      "suggestion": "“现在我们怎么办？”扬低声咕哝道。他这时已经站到了乌塔库的桌边。"
+    },
+    {
+      "id": "c15-s0027",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Seila took out her hand device, and began frantically typing.",
+      "zh": "塞拉掏出手持终端，开始疯狂打字。",
+      "problem": "“疯狂打字”在本章第23段（乌塔库）刚用过一次，两处相隔四段、原文都是 frantically，连着看就显出词穷；后面第96段又用“专注地打字”，同一个动作可以拉开说法。",
+      "suggestion": "塞拉掏出手持终端，手忙脚乱地打起字来。"
+    },
+    {
+      "id": "c15-s0066",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"Humans - the ultimate trusted hardware.\"",
+      "zh": "“人——最终极的可信硬件。”",
+      "problem": "“最终极”把“最”和“终极”叠在一起，是口语里凑字才有的说法；这句是格拉迪亚斯背完一长串密码学规则后的自嘲式补刀，多一个字，笑点就钝一分。",
+      "suggestion": "“人——终极的可信硬件。”"
+    },
+    {
+      "id": "c15-s0094",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Some Arctic soldier and his friend, or his AI, or something, coded up a way to embed hidden text messages inside real-time health data that he is sending back home to command.",
+      "zh": "有个北极士兵，和他的朋友——也可能是他的 AI——或者别的什么——捣鼓出一套办法，能把隐藏的文本消息嵌进他实时回传给指挥部的健康数据里。",
+      "problem": "“有个北极士兵，和他的朋友——……——捣鼓出”用三个破折号把主语切成四段，“和他的朋友”单起一节也像另起一句；中文更顺的是先把“跟……一起”说完，再落到“捣鼓出一套办法”。",
+      "suggestion": "有个北极士兵，跟他的朋友——也可能是他的 AI，或者别的什么——一起捣鼓出一套办法，能把隐藏的文本消息嵌进他实时回传给指挥部的健康数据里。"
+    },
+    {
+      "id": "c15-s0127",
+      "severity": "low",
+      "type": "生硬",
+      "source": "so there are always bits to flip that affect one bucket but not the bucket before or after it",
+      "zh": "这样总能找到一些位，翻掉它只影响某一个分桶，而不影响它前一个或后一个分桶。",
+      "problem": "前半句的主语是复数“一些位”，后半句却用单数“它”回指，语法上对不上（“一些位……翻掉它”），读起来要停一下。",
+      "suggestion": "这样总能找到一些位，翻掉其中某一位只影响某一个分桶，而不影响它前一个或后一个分桶。"
+    },
+    {
+      "id": "c15-s0143",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Always take the dumb 1000x gain before the super-clever 2x gain.",
+      "zh": "永远先拿那个笨办法的1000倍，再去想那个绝顶聪明的2倍。",
+      "problem": "“拿那个笨办法的1000倍”缺中心词（收益／改进），把倍数直接当宾语，读者要回看上一句才知道指的是收益；这是本章最想让人记住的一句（下一段德鲁因还回敬“这句是我在商学院学的”），句子一含糊，回敬的趣味就落不下来。",
+      "suggestion": "永远先去拿笨办法带来的1000倍收益，别去追那个聪明绝顶的2倍。"
+    },
+    {
+      "id": "c15-s0155",
+      "severity": "low",
+      "type": "欧化",
+      "source": "And let me know if there's anything that I can do, or that smart people in my network could do, to help you get out of there safely.",
+      "zh": "要是有什么我能做的，或者我这边认识的聪明人能做的，能帮你安全离开那儿，就告诉我。",
+      "problem": "一句话里三个“能”叠着（能做的／能做的／能帮你），两个“能做的”并列还把句子拉成一长串，读者要数一遍才确认这三个分句共一个“就告诉我”。",
+      "suggestion": "要是有什么事我能帮上忙，或者我认识的那些聪明人能帮上忙，只要能让你安全脱身，就跟我说一声。"
+    },
+    {
+      "id": "c15-s0173",
+      "severity": "low",
+      "type": "生硬",
+      "source": "So far they've acquired a bunch of internet links into Redshire",
+      "zh": "目前他们弄到了一批打进红郡的网络链路",
+      "problem": "“打进红郡的网络链路”里“打进”在中文带军事攻击色彩（打进城里），跟“网络链路”搭在一起会读成“攻进去的链路”；这里说的是能通到红郡的连线。",
+      "suggestion": "目前他们弄到了一批能通进红郡的网络链路"
+    },
+    {
+      "id": "c15-s0181",
+      "severity": "low",
+      "type": "本土化",
+      "source": "He hoped that Den would put him in Pafogai, so that he could see Fin and his mom again.",
+      "zh": "他希望登把他派去帕佛盖，这样就能再见到芬和母亲。",
+      "problem": "泽还是少年，全书叙事里 his mom 一直译作“妈／妈妈”（第5章“妈，快点！”、第7章“给妈妈买一台新的算力盒”、第9章“要怎么跟妈妈说”），这里突然换成书面语的“母亲”，人物口吻和前后文都跳了一下。",
+      "suggestion": "他希望登把他派去帕佛盖，这样就能再见到芬和妈妈。"
+    },
+    {
+      "id": "c15-s0202",
+      "severity": "low",
+      "type": "生硬",
+      "source": "...so he has a lot of freedom in choosing which bit to flip. Much better for reducing the 'suspiciousness' per bit of hidden data encoded, so he could afford to hide more data inside the same cover traffic.",
+      "zh": "这样他挑哪一位来翻就有很大自由度。这样能大大降低每比特隐藏数据的‘可疑度’，于是同样的掩护流量里就能塞进更多数据。",
+      "problem": "连着两句以“这样”开头，第二句的“这样”还兼着指代前面一整套做法，读起来像复读；这段话是泽一口气打出来的解释，节奏该顺下去，而不是顿两下。",
+      "suggestion": "这么一来，他挑哪一位来翻就有很大自由度，每比特隐藏数据的‘可疑度’也能大大降低，同样的掩护流量里就能塞进更多数据。"
+    }
+  ]
+}

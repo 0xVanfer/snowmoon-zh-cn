@@ -1,0 +1,152 @@
+{
+  "chapter": 10,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第10章整体是读得下去的：扬和乌塔库那顿午饭的日常对话、掌则人隔间里抢话纠正的节奏、泽与白下完那盘棋的互相刺，都还像人在说话；专名、度量（公里／米／分贝）和称谓（泽对登用“您”）没有让人出戏的地方，恐结、掌舵税、民本棋等术语也与前文接得上。问题集中在两处：一是英文句法与搭配的直搬——'这其中有很大一个原因，很明显，就是……'、'优势依然抵消'、'光靠……之类的原因撑不起经费'、'把人们推向去做……更亲人类……'，读者得停下回读；二是被动与名词化的硬贴——'四分之一的男人是被人杀死的''那里没人被征税''正在反射'。另外赛后那句'好棋'在中文棋语境里会被读成夸某一步，属于需要本土化的一处。以上按条替换即可达到出版级语感，没有需要整段重写的地方。",
+  "issues": [
+    {
+      "id": "c10-s0019",
+      "severity": "high",
+      "type": "生硬",
+      "source": "\"Arctic scare?\"",
+      "zh": "“北极吓的？”",
+      "problem": "原文 Arctic scare 是个名词短语，指'北极引起的那波恐慌／紧张'，对话里等于'（你说的）是北极恐慌那事？'。译成'北极吓的？'之后：'吓的'前面缺'是'、后面缺被吓的人，作为独立问句读不成句；中文读者第一反应会往'（谁）被北极吓的'这种残句上读，而原文那个名词性的事件完全没有落地。",
+      "suggestion": "“北极恐慌？”（想更口语可作“是北极闹的那波恐慌？”）"
+    },
+    {
+      "id": "c10-s0148",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Look at the United Cities. I think it's pretty clear that a big reason they all managed to stay independent from each other for centuries, and figured out things like co-governance to nudge each other to cooperate better without just turning into one big blob, is that they have so many mountains and peninsulas on their continent.",
+      "zh": "“我不认为我们什么都无法确定。看看联合城邦。它们彼此独立了几百年，还琢磨出共治这样的机制，推动彼此更好地合作，而不是干脆合并成一大团——这其中有很大一个原因，很明显，就是它们所在的大陆上有那么多山脉和半岛。所以，如果大家都加强防御，就会有更多人保住自己的自由和主权。这一点我相当有信心。”",
+      "problem": "'这其中有很大一个原因，很明显，就是……'这一落读不通：'其中'指什么没有交代，'有很大一个原因'本身也不成话（原因论大小不论有没有），插进来的'很明显'又把主语和谓语劈开。原文是英文惯用的'同位语 + is that'长主语结构，中文必须重组句子，否则读者要读到'山脉和半岛'才知道前面那句在说什么——这是本章最需要返工的一处断句。",
+      "suggestion": "“我不认为我们什么都无法确定。看看联合城邦：它们彼此独立了几百年，还琢磨出共治这样的机制，让彼此更愿意合作，而不是干脆并成一大团——而它们能做到这些，很明显，很大程度上要归功于脚下这片大陆有那么多山脉和半岛。所以，如果大家都加强防御，就会有更多人保住自己的自由和主权。这一点我相当有信心。”"
+    },
+    {
+      "id": "c10-s0070",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Content weakly promotes one or more of the following: violence, lawless behavior, use of anti-recommended substances...",
+      "zh": "“内容较弱地提倡以下一项或更多：暴力、违法行为、使用不推荐物质、赌博或高风险投资、过度炫富、糟糕的冲突处理方式、宗教或族群仇恨。”",
+      "problem": "“较弱地提倡”是 weakly promotes 的逐字直搬：中文的'提倡'是有主体的自觉行为，'内容'不能提倡，更不能'较弱地提倡'。据原文交代，这是格拉迪亚斯当众宣读的评则条文，读出来要像条例；另外'一项或更多'不合中文条文体例，一般写'一项或多项'。",
+      "suggestion": "“内容以较轻程度宣扬下列一项或多项：暴力、违法行为、使用不推荐物质、赌博或高风险投资、过度炫富、糟糕的冲突处理方式、宗教或族群仇恨。”"
+    },
+    {
+      "id": "c10-s0082",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "a quarter of our men died because someone else killed them. ... people will get all their ideas about violence from the dark corners of the internet, where nobody gets taxed...",
+      "zh": "……四分之一的男人是被人杀死的。……那人们关于暴力的所有观念就只能来自互联网的阴暗角落——那里没人被征税——那只会更糟。”",
+      "problem": "同一段里连着硬搬英文被动：(1)'四分之一的男人是被人杀死的'——'是……的'加'被'两重结构叠在一起，中文更自然的是'我们的男人每四个就有一个死于他人之手'；(2)'那里没人被征税'也绕了一层被动，中文直接说'那些地方可收不到税'即可。另外'我不认为我们该彻底阻止维里迪亚人去接触'里的'阻止'比原文 discouraging 重了一档（原文只是'不鼓励'），改成'让……完全回避'既更准也更顺。",
+      "suggestion": "“可暴力是生活的一部分。人类最初不过是一群为香蕉打架的猴子。我们还住在森林和洞穴里的时候，我们的男人每四个就有一个死于他人之手。学校里逼我们研读背诵的史诗里有暴力。每一部《大典》里的英雄都干过暴力的事。我不认为我们该让维里迪亚人完全回避人性中如此核心的一部分。如果我们让公共媒体永远处处避开暴力，那人们关于暴力的<e>所有</e>观念就只能来自互联网的阴暗角落——那些地方可收不到税——那只会更糟。”"
+    },
+    {
+      "id": "c10-s0088",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"I don't think what people say on social media is necessarily a good guide to what's good for people\", Eleven interjected.",
+      "zh": "“我不觉得社交媒体上人们说的话，就一定是‘什么对人好’的好指引。”十一号插话道。",
+      "problem": "把 what's good for people 缩成带引号的'什么对人好'，再拿它去修饰'好指引'，中文读起来像绕口令（'好……好指引'还同音相撞）。十一号这句本来是干脆利落的反驳，现在读者要回读一遍才能拆开两层从句。",
+      "suggestion": "“我不觉得社交媒体上的言论，就一定是判断什么对人有益的可靠依据。”十一号插话道。"
+    },
+    {
+      "id": "c10-s0146",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "push people to make more useful and pro-human and fun things instead.",
+      "zh": "把人们推向去做更有用、更亲人类、更有意思的东西。",
+      "problem": "“把人们推向去做”是两个动词硬叠（推向 + 去做），中文要么说'推着人们去做'，要么说'把人们推去做'；“更亲人类”是 pro-human 的逐字直搬，中文没有这个搭配，读者会在这里愣一下。这句是零的主张句，该干脆。",
+      "suggestion": "改为：“……都提高掌舵税，推着人们去做更有用、对人类更友善、也更有意思的东西。”"
+    },
+    {
+      "id": "c10-s0152",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "They're not set up to invent their own proprietary stuff at the top end, but they're really good at building and adapting from open-source plans. ... protect themselves much better from Arctic sabotage.",
+      "zh": "“但对泽国来说，那是生命线。他们在最高端没有自行研发专有技术的体系，却很擅长照着开源方案制造和改进。……更好地保护自己不受北极的破坏行动所害。”",
+      "problem": "“在最高端没有自行研发专有技术的体系”把 be set up to 这层'搞不了／不具备这套做法'的意思丢掉了，只剩'没有体系'，读者要猜是没能力、没机构还是没制度；'最高端'也容易误读成产业链的高端。同句末尾'不受北极的破坏行动所害'又落进'为……所'的文言腔，和十八号这段直白的实力分析不搭。",
+      "suggestion": "“但对泽国来说，那是生命线。顶尖技术他们没法自己搞专有研发，却很擅长照着开源方案制造和改进。20 年前，我们把编程语言和形式化验证推进到了这样的程度：设备代码里基本不再有能让外人从外部夺取控制权的严重缺陷。正因为这些东西是开放的，泽国人才得以采用这些技术，更有效地防住北极的破坏活动。”"
+    },
+    {
+      "id": "c10-s0164",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Suddenly, as the spaceship hit a rock formation and was in the process of reflecting, gliders from Bai hit it.",
+      "zh": "突然，那艘飞船撞上岩层、正在反射的时候，白的滑翔机撞了上来。",
+      "problem": "全书（如第7章'从南面的墙上反射出去'、第14章'把它反射回去'）用的是'反射'，这里沿用没问题，但'正在反射'光秃秃地少了补语，读者看不出它反射到哪儿、反射成什么样子——这是本盘棋的转折点，机制必须一眼看懂。另外同一句里'撞上岩层'与'撞了上来'连用两个'撞'，读起来黏。",
+      "suggestion": "“突然，就在那艘飞船撞上岩层、正要反射出去的一瞬，白的滑翔机从旁边撞了上来。飞船炸开，化作一片滑翔机风暴。”"
+    },
+    {
+      "id": "c10-s0169",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "\"Good game\", Zei said, not yet with total sincerity, but with more sincerity than he had in any game where he had lost to Bai before.",
+      "zh": "“好棋。”泽说。语气还不算完全真心，但已经比以往任何一盘输给白之后都要真诚。",
+      "problem": "中文棋类语境里'好棋'指的是'一步好着'（'这一步棋好'），赛后认输时说一句'好棋'，读者会以为他在夸对方某一手，而不是像原文那样收下整盘、称许对手。中文棋手赛后一般说'这盘下得好''好局'，或客气一句'承让'。",
+      "suggestion": "“这盘下得好。”泽说。语气还不算完全真心，但已经比以往任何一盘输给白之后都要真诚。"
+    },
+    {
+      "id": "c10-s0192",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Their audience isn't large enough to fund it just based on advertising and national prestige and all those other reasons.",
+      "zh": "“智力运动不算。这类运动的观众不够多，光靠广告、国家荣誉之类的原因撑不起这么多经费。”",
+      "problem": "“光靠……之类的原因撑不起……经费”搭配不成立：撑起经费的是收入、名目、由头，不是'原因'。原文 based on advertising and national prestige 说的是经费的名目／来源，中文落到'名目'上才顺。",
+      "suggestion": "“智力运动可不算。这类运动的观众不够多，光靠广告、国家荣誉这些名目，撑不起这么多经费。”"
+    },
+    {
+      "id": "c10-s0013",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Jahn quickly scanned through, and ordered a dish with vegetables and fish, and a glass of water.",
+      "zh": "扬很快扫了一遍，点了一份蔬菜配鱼的菜，还有一杯水。",
+      "problem": "“一份蔬菜配鱼的菜”里两个'菜'撞在一起（量词'份'后面又跟'菜'），读起来卡口；中文点单一般说'点了一份蔬菜配鱼'。",
+      "suggestion": "扬很快扫了一遍，点了一份蔬菜配鱼，还有一杯水。"
+    },
+    {
+      "id": "c10-s0118",
+      "severity": "low",
+      "type": "生硬",
+      "source": "A minute later, the drone beeped unexpectedly just above the middle of the table at the far end.",
+      "zh": "1 分钟后，无人机在远端桌面正中上方出乎意料地响了一声。",
+      "problem": "“在远端桌面正中上方”把四个方位词串成一条链（远端／桌面／正中／上方），读者要一层层拆；'出乎意料地'又是 unexpectedly 的书面直搬，卡在状语里显得端着，中文口语把'突然'提到前面更利落。",
+      "suggestion": "1 分钟后，无人机突然在桌子远端的正中上方响了一声。"
+    },
+    {
+      "id": "c10-s0142",
+      "severity": "low",
+      "type": "生硬",
+      "source": "then the benefits to the two sides in any war still cancel out, but more people get hurt.",
+      "zh": "那任何一场战争里双方的优势依然抵消，只是受伤的人更多。",
+      "problem": "“优势……抵消”缺了相互义：'优势'是单方的，'抵消'需要两方对撞，中文要么说'双方的优势相互抵消'，要么干脆换说法（'谁也没占到便宜'）。",
+      "suggestion": "“如果所有人的剑都好一倍，盾却不变，那任何一场战争里双方的优势照样相互抵消，只是受伤的人更多。”"
+    },
+    {
+      "id": "c10-s0175",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Of course you enjoy reliving the moment you defeated me, just like I enjoyed beating you right now.",
+      "zh": "“你当然乐意重温打败我的那一刻，就像我刚才赢你赢得很开心一样。”",
+      "problem": "“赢你赢得很开心”是同一个动词既带宾语又带补语（赢……赢得很开心），写进这句带刺的玩笑话里显得拖沓；'重温……那一刻'也偏书面，白是在揶揄泽，用'回味'更贴人物。",
+      "suggestion": "“你当然乐意回味当初打败我的那一刻，就像我刚才赢你这一盘也很痛快。”"
+    },
+    {
+      "id": "c10-s0186",
+      "severity": "low",
+      "type": "生硬",
+      "source": "At this point, Zei realized one possible implication of Den's words",
+      "zh": "这时，泽想到了登这句话一种可能的含义",
+      "problem": "“登这句话一种可能的含义”中间缺一个'的'，是明显的语病（应为'登这句话的一种可能的含义'）；'含义'也偏书面，这里泽是突然听懂弦外之音，说'一层意思'更自然。",
+      "suggestion": "“这时，泽想到了登这句话可能的一层意思，脸上那点高兴瞬间变成不安。”"
+    },
+    {
+      "id": "c10-s0205",
+      "severity": "low",
+      "type": "生硬",
+      "source": "The realizations hit Zei all at once. ... why pretend it's a game, why not just have a regular military with regular recruitment?",
+      "zh": "这些念头一下子全砸到泽头上。……为什么要装作一项棋类运动，为什么不干脆建一支常规军队、常规征兵？",
+      "problem": "两处搭配不成立：(1)'这些念头……砸到泽头上'——中文'砸到头上'多指坏消息临头，而这里是他自己一下子想通，该说'涌上心头'；(2)'装作一项棋类运动'——'装作'后面接的是人或身份，运动没法'装作'，要说'伪装成''假扮成'。末句'常规军队、常规征兵'两个'常规'连着也生硬。",
+      "suggestion": "“这些领悟一下子全涌上泽的心头。他起初想问一个很基本的问题：为什么要把这事伪装成一项棋类运动，为什么不干脆建一支常规军队、照常规办法征兵？”"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "chapter": 1,
+  "lens": "fluency",
+  "reviewer": "wf-r2",
+  "overall": "从中文语感看，第1章整体可读性相当好：叙述节奏、对话口语度、面板文案都像中文小说，税率段落与家人吃饭一段尤其顺。问题主要集中在三类：英文句式的直搬（被字句堆叠、长定语前置、choose A over B 式取舍句）、个别词序导致读一遍要回读（如「要就这栋建筑自己有多喜欢投票」），以及一处称谓／物件的本土化失误（the bot 译成「机器人」）。没有整段读不懂的地方，属于「按条打磨即可」的状态，但清单里的 high 一条建议优先处理。",
+  "issues": [
+    {
+      "id": "c01-s0023",
+      "severity": "high",
+      "type": "生硬",
+      "source": "As a citizen of Veridia, he had been randomly selected by cryptographic sortition to vote on how much he liked the building.",
+      "zh": "作为维里迪亚公民，他被密码学抽签随机选中，要就这栋建筑自己有多喜欢投票。",
+      "problem": "「要就这栋建筑自己有多喜欢投票」词序照搬英文：中文读者第一遍会把「这栋建筑」当成「就」的对象，读到「自己有多喜欢」才发现「这栋建筑」同时还是「喜欢」的宾语，句子要回读才成立，而且「自己」紧贴「这栋建筑」时还容易被读成楼的自己。这是交代全书设定的句子，卡顿代价最大。",
+      "suggestion": "作为维里迪亚公民，他被密码学抽签随机选中，要对自己有多喜欢这栋建筑投上一票。"
+    },
+    {
+      "id": "c01-s0004",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "…medieval in style but without any of the junk, dust on the ground, or other imperfections that a real medieval structure would have had a thousand years earlier.",
+      "zh": "中世纪风格，却看不到任何杂物，地上没有积灰，也没有货真价实的中世纪建筑熬过一千年该有的那些瑕疵。",
+      "problem": "一句里连用「看不到／没有／没有」三个否定，末句又是一个层层套叠的长定语（货真价实的中世纪建筑＋熬过一千年＋该有的＋那些＋瑕疵），「的」字连用且「那些」再补一刀，读起来拖沓，像是从句没拆开。这是全章第一段，语感第一印象全押在这里。",
+      "suggestion": "树后是一排排大块石砖砌成的房屋，中世纪风格，却干净得不像古迹——不见杂物，地面无灰，也没有真正的中世纪建筑历经千年会有的那种斑驳破败。"
+    },
+    {
+      "id": "c01-s0061",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "That was just a warmup, he thought - a random fluke that he had been assigned an aesthetics vote as a Veridian citizen right before one of his more consequential votes as an Acolyte in the Order of Steering. That vote had been hard.",
+      "zh": "这不过是热身，他想——身为维里迪亚公民，偏偏在即将以掌舵会见习官身份投出更重要的一票之前，被随机抽中投一次美学票，纯属巧合。那一票很难投。",
+      "problem": "前一句把主语「他」省掉，中间塞进「偏偏在……之前」和「被……抽中」两层状语，最后才补「纯属巧合」，中文得绕一圈才收得住；更麻烦的是末句「那一票很难投」紧跟在「美学票」后面，指代被拉到了刚提到的美学票上，而原文指的是他此前作为见习官投过的、更重要的那一票，读者容易理解成「美学票很难投」。",
+      "suggestion": "这不过是热身，他想——他身为维里迪亚公民，碰巧在即将以掌舵会见习官身份投出更重要的那一票之前，被随机抽中投了一次美学票。当见习官时投的那一票就很难投；而他马上要投的这一票会难得多——而且在那里，系统是要记分的。"
+    },
+    {
+      "id": "c01-s0071",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "He pulled on a strap on his privacy robe's front face cover, tightening a belt that separated the area below his nose from the area above his nose.",
+      "zh": "他拉紧隐私袍前脸罩上的一根带子，勒紧那条把鼻子上下两侧隔开的松紧带。",
+      "problem": "「把鼻子上下两侧隔开的松紧带」是把 area below his nose / above his nose 逐字搬过来，中文里「鼻子的上下两侧」指不出具体位置，读者无法在脑子里成形；「前脸罩」也是照 front face cover 硬造的，不如「面罩」自然。",
+      "suggestion": "他拉紧隐私袍面罩前方的一根带子，把那条横在鼻梁上、隔开鼻子上下两边的密封带勒紧。"
+    },
+    {
+      "id": "c01-s0103",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "One part of this collective, the Keepers, voted on tax rubrics that determined what the taxes are.",
+      "zh": "这个集体的一部分是掌则人，由他们表决通过税则评则，决定税目是什么。",
+      "problem": "「这个集体的一部分是掌则人」是 One part of this collective is… 的硬译，中文更习惯说「这个集体里，掌则人负责……」；「表决通过税则评则」会被读成「投票批准了税则评则」，与原文 voted on（就……投票议定）不是一回事；「税则评则」两个「则」字连缀也拗口。",
+      "suggestion": "这个集体里，掌则人负责就税则评则投票，决定各项税目怎么定。另一部分是监审官，负责逐家审计企业，每次审计都给某家企业在某条评则上定一个位置。格拉迪亚斯是见习官：正在受训的掌舵会成员。"
+    },
+    {
+      "id": "c01-s0121",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Order members are strictly forbidden to reveal their assigned task. To make sure that Order members take their privacy seriously, they were kept on their toes by a sort of deliberately engineered game.",
+      "zh": "掌舵会成员被严禁泄露自己的任务。为了确保成员把隐秘当回事，他们被一种刻意设计出来的游戏逼得时刻绷紧。",
+      "problem": "连续两个「被」字句：「成员被严禁泄露」是英文被动式的直搬（中文说「严禁成员泄露」）；「他们被一种游戏逼得时刻绷紧」同样是被字句加英文语序，且「逼得时刻绷紧」后面缺了宾语，收得很虚。整段读下来被动腔明显。",
+      "suggestion": "掌舵会严禁成员泄露自己的任务。为了让成员把保密当回事，掌舵会刻意设计了一套游戏，让他们时刻绷紧神经。"
+    },
+    {
+      "id": "c01-s0143",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "He wished that it had been the Hydrafill advertisement that he had been selected to vote on, and not the blue and grey building.",
+      "zh": "他真希望自己被选中投票的是海德菲尔这张广告，而不是那栋蓝灰色的楼。",
+      "problem": "「真希望自己被选中投票的是……」是英文强调句的直搬，被字句加「的是」结构让主语换了两次；后半句「这一个他会把滑块一路推到最右边」里的「这一个」也是英文 this one 的硬译，中文里指代悬空。",
+      "suggestion": "他真希望当初被抽中投票的是海德菲尔这张广告，而不是那栋蓝灰色的楼。他清楚，投这一张，他会把滑块几乎一路推到最右边。"
+    },
+    {
+      "id": "c01-s0180",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "I'm going to go on some long walks in the forest and take a deep dive with the bot on the environment and biology rubrics.",
+      "zh": "我打算去森林里长走几趟，跟机器人一起深挖环境和生物评则。",
+      "problem": "the bot 在本书里指的是翡翠这类本地 AI 助手（前文一直叫「翡翠」「本地 AI」），译成「机器人」会让中文读者直接脑补一个实体机器人陪着散步，与全书设定脱节，容易出戏；「长走几趟」也不是中文说法（long walk 的硬译），听着像「长途行走」。",
+      "suggestion": "我打算去森林里走几趟长的，跟 AI 助手一起深挖环境和生物评则。要当上监审官，我还得再做4次审计！"
+    },
+    {
+      "id": "c01-s0006",
+      "severity": "low",
+      "type": "生硬",
+      "source": "its navigation algorithm had a safety override that would prevent it from coming within five decimeters of a human without permission",
+      "zh": "它的导航算法带有安全优先设定，未经许可不会靠近人5分米以内。",
+      "problem": "「安全优先设定」译 safety override 偏软偏玄，中文读者不易一次对上「禁止靠近」的意思；「不会靠近人5分米以内」把 human 直译成光秃秃的「人」，读起来像漏了字，也不像中文的距离说法。",
+      "suggestion": "它的导航算法带有一道安全限制：未经许可，绝不会靠人近于5分米。"
+    },
+    {
+      "id": "c01-s0012",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Smoothly, and suddenly, the path transitioned into a sky bridge above a busy road, with many cars and autobuses and a few autonomous delivery vehicles passing beneath him.",
+      "zh": "随后平滑而突然地变成一座空中步道，横跨在一条繁忙道路的上方；他脚下驶过许多轿车、巴士和几辆自动送货小车。",
+      "problem": "「平滑而突然地」是 smoothly and suddenly 的逐字对译，两个反义副词用「而」硬捆在一个状语里，中文没有这种说法；另外「自动送货小车」偏描述性，中文读者更熟的对应词是「无人配送车」。",
+      "suggestion": "步道开始缓缓上行，接着既平顺又突然地变成了一座空中步道，横跨在一条繁忙道路上方；他脚下驶过许多轿车、巴士和几辆无人配送车。"
+    },
+    {
+      "id": "c01-s0055",
+      "severity": "low",
+      "type": "生硬",
+      "source": "So there was no point in voting up on everything, down on everything, or overly extreme on everything.",
+      "zh": "所以凡事都投赞成、都投反对，或者全都投得极端，都没有意义。",
+      "problem": "「凡事」指「一切事情」，用在这里指代「所有投票项目」并不贴，中文读者会觉得主语错了位；三个「都」并列也显得板。",
+      "suggestion": "所以给每一项都投赞成、每一项都投反对，或者每一项都投到极端，都没有意义。"
+    },
+    {
+      "id": "c01-s0111",
+      "severity": "low",
+      "type": "生硬",
+      "source": "But on the <e>other</e> other hand…",
+      "zh": "但<e>再</e>另一方面，格拉迪亚斯知道……",
+      "problem": "原文是故意的玩笑——上一段已经用过 on the other hand，这里把「另一只手」再加一层；「但再另一方面」不是中文说法（「再」不能直接修饰「另一方面」），读起来近于病句，笑点也没落地。",
+      "suggestion": "但翻到<e>另一只手的另一面</e>，格拉迪亚斯知道，近来的监审官不像以前那么在意这条区分，他们似乎把更温和、更柔软的社会本身当成了目的。"
+    },
+    {
+      "id": "c01-s0124",
+      "severity": "low",
+      "type": "生硬",
+      "source": "…gave way to a different Gladias, more imaginative and mischievous - a Gladias that had not been awake since recess in middle school.",
+      "zh": "换成另一个更好玩、更促狭的格拉迪亚斯——自从初中课间之后就没再醒过的那个。",
+      "problem": "imaginative 被译成「更好玩」，与 mischievous（促狭）几乎是同义反复，少了「有想象力」这一层；末句把长定语整个后置成破折号尾巴，指代要回读才连得上。",
+      "suggestion": "最后，那个爱思考的哲学家格拉迪亚斯让了位，换上了另一个格拉迪亚斯——更有想象力，也更爱捣蛋，一个从初中课间之后就没再醒过的家伙。"
+    },
+    {
+      "id": "c01-s0130",
+      "severity": "low",
+      "type": "生硬",
+      "source": "hoping that his pursuer would choose not losing his device over chasing him.",
+      "zh": "指望追他的人宁可不丢终端，也不来追他。",
+      "problem": "把 choose A over B 硬塞进中文「宁可……也不……」，结果取舍的两端都成了否定式（宁可不丢／也不来追），逻辑要停下来算一遍才通。",
+      "suggestion": "……指望追他的人更舍不得那台手持终端，先回头去捡，而不来追他。"
+    },
+    {
+      "id": "c01-s0131",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Despite being slowed down by his shoes, which had high heels to raise his height to the same level as other robe wearers and deliberately uneven soles to randomize his gait…",
+      "zh": "他的鞋拖着他的脚步——鞋跟很高，好把他的身高抬到和其他穿袍者一样的水平；鞋底故意做得高低不平，让走路姿态没有规律——",
+      "problem": "「他的鞋拖着他的脚步」是 being slowed down by his shoes 的直搬，中文里鞋不会「拖着脚步」（这反而是脚步拖沓的意思）；「让走路姿态没有规律」也是 randomize his gait 的硬译。整个插入语读起来像说明书，还打断了「尽管……」的节奏。",
+      "suggestion": "鞋子拖慢了他的脚步——鞋跟很高，好让他的身高和其他穿袍者齐平；鞋底又故意做得凹凸不平，让步态毫无规律——尽管如此，格拉迪亚斯还是很快跑到了出口。"
+    },
+    {
+      "id": "c01-s0155",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zven jumped down the stairs three steps at a time, and ran up to hug Gladias, who obliged.",
+      "zh": "兹文喊着，一步三级地跳下楼梯，跑过来抱住格拉迪亚斯，他也顺势抱了回去。",
+      "problem": "「抱了回去」是 hug back 的直译，中文里「回去」会把人引向「抱回某个地方」，读着别扭；who obliged（依着孩子抱了抱）也没落到实处。",
+      "suggestion": "……跑过来抱住格拉迪亚斯，他也顺着孩子回抱了一下。"
+    }
+  ]
+}

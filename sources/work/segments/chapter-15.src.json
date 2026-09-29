@@ -1,0 +1,1531 @@
+{
+ "chapter": 15,
+ "segments": [
+  {
+   "id": "c15-s0001",
+   "role": "title",
+   "text": "Chapter 15",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0002",
+   "role": "place",
+   "text": "Freetown, United Cities",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0003",
+   "role": "date",
+   "text": "3724 Firemoon 17",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0004",
+   "role": "p",
+   "text": "Jahn passed through the turnstile in the Freetown Economics Institute, and walked toward the restaurant.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0005",
+   "role": "p",
+   "text": "It was still early morning, and Jahn had intentionally not yet looked at any of the news on that day - better to clear his mind, and enjoy whatever the lecture on the restaurant screen would end up being.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0006",
+   "role": "p",
+   "text": "After a minute of walking, he arrived.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0007",
+   "role": "p",
+   "text": "When he saw what was on the screen, his eyes froze with horror.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0008",
+   "role": "p",
+   "text": "Special broadcast",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0009",
+   "role": "p",
+   "text": "ARCTIC EMPIRE INVADES AND ANNEXES REDSHIRE",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0010",
+   "role": "p",
+   "text": "Jahn began to listen intently to the reporter relaying the details of what happened.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0011",
+   "role": "p",
+   "text": "At 15,500 this morning, a large number of Arctic drones and aircraft landed all across the major cities and military bases in Redshire, timed simultaneously with a massive land invasion from the north with thousands of vehicles coming out of never-before-seen underground tunnels.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0012",
+   "role": "p",
+   "text": "The Redshire military was caught completely unprepared, and many suspect corruption at the highest ranks.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0013",
+   "role": "p",
+   "text": "Major battles lasted less than two longhours, with very limited casualties. Almost all Redshire garrisons have by now surrendered.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0014",
+   "role": "p",
+   "text": "He saw about ten people sitting in the restaurant, including Utaku, who seemed just as shocked as Jahn was.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0015",
+   "role": "p",
+   "text": "Three government aeroplanes containing President Albor, Prime Minister Celedil and most of the parliament attempted to take off. All three were shot down. Current indications suggest no survivors.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0016",
+   "role": "p",
+   "text": "The president's son, Tafindel, is believed to be in Arctic captivity.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0017",
+   "role": "p",
+   "text": "The reporter paused briefly, and then began speaking again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0018",
+   "role": "p",
+   "text": "JUST IN:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0019",
+   "role": "p",
+   "text": "The last Redshire garrison in the south has agreed on a conditional surrender. The garrison staff, plus thirty other personnel including two senators, will be allowed to fly to Devanvil, in exchange for the garrison discontinuing all attempts to defend itself.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0020",
+   "role": "p",
+   "text": "The three aeroplanes will leave in five minutes, and will be the only aeroplanes allowed to leave. Arctic authorities are not allowing any other vehicles to enter or leave Redshire. They have cut off all communications and are already actively setting up jamming equipment.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0021",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">\"What do we do now?\"</c>, Jahn, by this point standing beside the table with Utaku, mumbled.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0022",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 280)\">\"Take the threat seriously\"</c>, Utaku replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0023",
+   "role": "p",
+   "text": "Before Jahn could look away, Utaku had already begun typing frantically on her hand device.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0024",
+   "role": "place",
+   "text": "Meldan, Veridia",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0025",
+   "role": "p",
+   "text": "Gladias and Seila stared at the screen with Febric and Hreda beside them. They had just woken up at sunrise, light coming in clean through the window, the trees on the footpath outside already throwing long morning shadows. The news was the first thing they saw.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0026",
+   "role": "p",
+   "text": "Zven was still asleep, and Lily was still in her room.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0027",
+   "role": "p",
+   "text": "Seila took out her hand device, and began frantically typing.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0028",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0029",
+   "role": "th",
+   "text": "To",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0030",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">Please tell me you're in Freetown and you're okay.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0031",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0032",
+   "role": "center",
+   "text": "Jahn",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0033",
+   "role": "button",
+   "text": "Send",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0034",
+   "role": "p",
+   "text": "She clicked send.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0035",
+   "role": "p",
+   "text": "A few ticks later:",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0036",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0037",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0038",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0039",
+   "role": "center",
+   "text": "Jahn",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0040",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0041",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">Don't worry, I am in Freetown.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0042",
+   "role": "cell",
+   "text": "32117",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0043",
+   "role": "th",
+   "text": "From",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0044",
+   "role": "th",
+   "text": "Message",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0045",
+   "role": "th",
+   "text": "Time",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0046",
+   "role": "center",
+   "text": "Jahn",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0047",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0048",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 133.33333333333331)\">We've somehow been taking defense seriously here, and Freetown is about as far from Redshire as you can get in the United Cities, except for Silverbeach and Mabuli.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0049",
+   "role": "cell",
+   "text": "32124",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0050",
+   "role": "p",
+   "text": "Seila sighed with relief.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0051",
+   "role": "p",
+   "text": "Gladias saw Seila messaging Jahn, and put his hand on her shoulder to comfort her. He did not respond further.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0052",
+   "role": "p",
+   "text": "His mind soon shifted to the rubrics. Now we're definitely not adjusting the hardware openness rubric next month, he thought. Maybe we'll even be increasing the tax brackets.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0053",
+   "role": "p",
+   "text": "A moment after that, he flashed with anger toward Delwart.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0054",
+   "role": "p",
+   "text": "Seila left the room to wake up Zven and get Lily. Within twenty minutes, the four of them were on their way to school, and Gladias and Seila were alone in the house.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0055",
+   "role": "p",
+   "text": "Gladias went down to the basement and closed the door.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0056",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What do we do now, Mov?\"</c>, he whispered through his neck band.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0057",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Well clearly Delwart was wrong about a lot of things. And next time we talk to him, we <e>really</e> have a lot of questions to ask. We need a straight answer, not excuses.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0058",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Remember, it's not just him turning out to be so wrong on the politics. It's about what I learned a month and a half ago - the sheer level of organization of whatever it is that he's doing.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0059",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Did you manage to track him down any more after that time?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0060",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Only two more times after that. First was a meeting with someone in a privacy robe, not sure who, and they were talking a bunch about Silverchat. Second was a meeting with a Keeper, I made out some conversation about Dreadknot. Nothing more since about a month ago, he either changed his location or he got much better at hiding.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0061",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"So when is the vote?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0062",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"First one is in about twenty days.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0063",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Delwart might make a move to try to 'verify' that you voted in the correct way. So remember the machinery that the Order set up to make sure he can't do that.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0064",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Only votes signed with a valid key count\"</c>, Gladias recited. <c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You generate your voting key by meeting at least 3 of 5 people from your Key Allocation Group and registering each blinded share of the voting key with them. Once that's done, the information of which keys are and are not valid is only decryptable by the obfuscated circuit under the conditions that it specifies.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0065",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So neither Delwart nor anyone else - technically, not even I - will know which key, how many keys or if any key actually got successfully registered. Only the result of the vote gets decrypted. So Delwart can't tell which votes I submit are real or fake. I don't have the ability to prove that to him, even if I wanted to. For Delwart to be able to take over my votes, he would have to take over my identity, which means going to the KAG and <e>pretending to be me in person</e> - difficult because the whole point of the KAG is that it includes people I've met in person.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0066",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Humans - the ultimate trusted hardware.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0067",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"You've studied well.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0068",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"But I <e>hope</e> that this all won't be necessary, and Delwart is going to give me some sensible explanation for all this.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0069",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Hope is not a strategy.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0070",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Indeed it's not.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0071",
+   "role": "place",
+   "text": "Pafogai Du, Dzego",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0072",
+   "role": "p",
+   "text": "Zei anxiously tapped buttons on his hand device, and sent off a message for a fifth time.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0073",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0074",
+   "role": "th",
+   "text": "dun",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0075",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">Are you okay????! <br/><br/> Please tell me where you are.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0076",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0077",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0078",
+   "role": "button",
+   "text": "be",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0079",
+   "role": "p",
+   "text": "He sat crying at a table in the lobby restaurant of his hotel. There was a tea and a rice and vegetable dish on the table in front of him. He had drunk the tea quickly; the robot had already refilled it four times. The rice and vegetables were uneaten for almost a longhour.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0080",
+   "role": "p",
+   "text": "Finally, he got a message in response.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0081",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0082",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0083",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0084",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0085",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0086",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">Don't worry, I am alive. <br/><br/> Though it looks like I'm not going to be getting back to Dzego anytime soon.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0087",
+   "role": "cell",
+   "text": "84690",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0088",
+   "role": "p",
+   "text": "It was not the outcome Zei wanted, but still much better than the outcome he feared. He breathed a sigh of relief.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0089",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0090",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0091",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0092",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0093",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0094",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">I found a way to send messages out. <br/><br/> Some Arctic soldier and his friend, or his AI, or something, coded up a way to embed hidden text messages inside real-time health data that he is sending back home to command. <br/><br/> And someone else in command is relaying that signal into a weather feed, which is then going up to the satellites. <br/><br/> He's making a whole bunch of zipcoins anonymously rebroadcasting messages for people.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0095",
+   "role": "cell",
+   "text": "84714",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0096",
+   "role": "p",
+   "text": "Zei wiped off his tears, and started typing intently.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0097",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0098",
+   "role": "th",
+   "text": "dun",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0099",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">Wow. Are you ... in touch with this soldier?</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0100",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0101",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0102",
+   "role": "button",
+   "text": "be",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0103",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0104",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0105",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0106",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0107",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0108",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">I have an anonymous link.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0109",
+   "role": "cell",
+   "text": "84723",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0110",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0111",
+   "role": "th",
+   "text": "dun",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0112",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">Ask him how he's encoding the messages that he's putting into his health data.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0113",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0114",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0115",
+   "role": "button",
+   "text": "be",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0116",
+   "role": "p",
+   "text": "Zei thought for a moment, and realized that perhaps the time had arrived for him to become the instructor. He took out a keyboard and started typing furiously.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0117",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0118",
+   "role": "th",
+   "text": "dun",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0119",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">Or actually, on second thought, he won't answer. But tell him that randomly flipping the least-significant bits, the strategy that everyone always reaches for when they encounter this problem for the first time, is not the ideal solution. Sometimes higher-order bits are totally fine to flip, and sometimes flipping even a least-significant bit is dangerous.<br/><br/> What you want to do is: <br/><br/> * Train a language model on the actual distribution, so that conditional on what all the other bits are, it can give you probabilities for whether a given bit should be 0 or 1<br/><br/> * Split the data up into buckets - make sure to use the decryption key itself to choose the buckets randomly - and require the bits in the i'th bucket to XOR to the i'th bit in the ciphertext. Within each bucket, use the model to determine which bit's probabilities are closest to 50/50 - meaning both values are \"natural\" for that bit to have in that context - and flip that bit to make the bucket XOR correct.<br/><br/>So you're letting the LLM decide which bits are \"least significant\" and okay to flip, instead of just always taking the lowest-order binary digit in each number.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0120",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0121",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0122",
+   "role": "button",
+   "text": "be",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0123",
+   "role": "p",
+   "text": "Zei sat back briefly, proud that he had managed to understand and explain not just a complicated concept, but <e>the exact complicated concept that was needed for this exact job</e>.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0124",
+   "role": "p",
+   "text": "He decided to keep going, out of a feeling of personal pride in his understanding as much as out of a desire to let more people in Redshire sneak information past the Arctic censors.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0125",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0126",
+   "role": "th",
+   "text": "dun",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0127",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">If you want to go even further, you can make the buckets partially overlap. Say:<br/><br/>* the first bucket is 0...199<br/>* the second is 20...219<br/>* the third is 40...239<br/><br/>and so on, though remember the whole order should be a pseudorandom permutation.<br/><br/>Also, choose only a random half of the positions in each bucket to go into the XOR, so there are always bits to flip that affect one bucket but not the bucket before or after it. So say, 204 might be part of the second bucket _but not_ the third.<br/><br/>The happy-path algorithm is:<br/><br/>* choose a bit to flip in 0...199 to make the first bucket XOR correctly<br/>* choose a bit to flip in 200...219 to make the second bucket XOR correctly<br/>* choose a bit to flip in 220...239 to make the third bucket XOR correctly<br/><br/> and so on... <br/><br/>But if, let's say, 240...259 gives you 20 bits in a row where _none of them_ are reasonable to flip - think, a very clear picture of a night sky, so you get 20 pixels in a row that are really supposed to be exactly black - or the equivalent of that for health data - then you walk back and try to find a combination of bits to flip in 220...239 that makes both of the last two buckets XOR correctly, and if that fails, you walk back further and try to find a combination of bits to flip in 200...239 to make the last three buckets XOR correctly, and so on.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0128",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0129",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0130",
+   "role": "button",
+   "text": "be",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0131",
+   "role": "p",
+   "text": "He then realized that his last message might have come off too much as him trying to be a hotshot, so he sent a followup.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0132",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0133",
+   "role": "th",
+   "text": "dun",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0134",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">I learned that from Den's cryptography textbooks.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0135",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0136",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0137",
+   "role": "button",
+   "text": "be",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0138",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0139",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0140",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0141",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0142",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0143",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">I'll forward that to him. <br/><br/> But I suspect that for him, first priority is going to be finding higher-bandwidth channels to hide data inside. Optimizing which bits to flip is really smart but it's maybe a 2x gain, finding a better data stream might be a 1000x gain. <br/><br/> Always take the dumb 1000x gain before the super-clever 2x gain.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0144",
+   "role": "cell",
+   "text": "85190",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0145",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0146",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0147",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0148",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0149",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0150",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">I learned that in business school.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0151",
+   "role": "cell",
+   "text": "85200",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0152",
+   "role": "p",
+   "text": "Zei felt more optimistic about how much of an improvement a better steganographic encoding would be, but decided not to press the point further.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0153",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0154",
+   "role": "th",
+   "text": "dun",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0155",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">Alright, well stay safe. <br/><br/>And let me know if there's anything that I can do, or that smart people in my network could do, to help you get out of there safely.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0156",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0157",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0158",
+   "role": "button",
+   "text": "be",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0159",
+   "role": "p",
+   "text": "Zei thought about saying \"or that the Kungaupei could do\", or even \"or that advanced Dzegojan secret societies could do\", instead. But he realized that first, it would be a breach of confidentiality to let an outsider, especially an outsider now in hostile occupied territory, know about the existence of those things, and second, he couldn't fully trust the connection - he hadn't even asked Deluin a security question yet. And so \"smart people in my network\" it was.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0160",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0161",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0162",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0163",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0164",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0165",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">Will do. Thank you for caring about me.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0166",
+   "role": "cell",
+   "text": "84821",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0167",
+   "role": "p",
+   "text": "Zei put down his hand device, and breathed out. His eyes briefly wandered around the restaurant, and he saw that by this point there was no one else there. He finally began eating his rice and vegetable dish.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0168",
+   "role": "p",
+   "text": "Zei felt someone put their hands on his shoulder.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0169",
+   "role": "p",
+   "text": "Zei turned around. It was Su.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0170",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"So sorry to hear about Deluin.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0171",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I assume the Kungaupei are figuring out how to get him out?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0172",
+   "role": "p",
+   "text": "Zei realized that technically he had just committed an error: he had not actually confirmed that Su knew or was supposed to know about the Kungaupei - so far that was just Den and Mu.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0173",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"That was the first thing I asked Den\"</c>, Su began to reply. Zei gave out a barely audible sigh of relief. <c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"So far they've acquired a bunch of internet links into Redshire, and they got a message from Deluin a minute ago, so at least he's safe for now. We'll let you know if there's any kind of rescue plan possible.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0174",
+   "role": "p",
+   "text": "Zei nodded silently.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0175",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"The finals are cancelled\"</c>, Su added.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0176",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Cancelled? Not postponed? What if he comes back tomorrow?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0177",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Even if he does, at this point it's just not right to have more games. Also we don't want to give the audience false hope, and we don't want to distract people.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0178",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"You're the champion this year. And if Deluin does come back, we'll give him the same trophy and the same prize money that we're giving you.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0179",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"No...\"</c>, Zei pleaded. <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I don't want to win like this.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0180",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I know it's already late today, but you should go talk to Den. He's in Sadzu Du, in the southern mountain pyramid right now. He might want you here, or maybe in Pafogai. He will know better than me.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0181",
+   "role": "p",
+   "text": "Zei nodded. Of course this was all more important than the game, he understood. He hoped that Den would put him in Pafogai, so that he could see Fin and his mom again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0182",
+   "role": "p",
+   "text": "Zei's car arrived at an entrance to the mountain pyramid that he had not been at before. This was a series of doors on the side of the mountain pyramid, much nearer to ground level than the usual entrance, though further from the city. The car stopped, its door lined up perfectly with one of the mountain pyramid doors. The car door and the mountain pyramid door slid open simultaneously.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0183",
+   "role": "p",
+   "text": "Zei stepped out, and walked down the hallway.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0184",
+   "role": "p",
+   "text": "A hundred meters and a left and right turn later, he arrived at a door.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0185",
+   "role": "p",
+   "text": "He put his watch against a green circle. The door opened.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0186",
+   "role": "p",
+   "text": "Zei saw a long room, with a table at the end. Den was sitting on the other side, alone.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0187",
+   "role": "p",
+   "text": "Zei sat down.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0188",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Thank you for coming, Zei.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0189",
+   "role": "p",
+   "text": "Zei nodded silently.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0190",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"I think you're one of the very few people who is in a position to help Dzego get through this next year.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0191",
+   "role": "p",
+   "text": "Zei's eyes opened wide. He was now the national Minpentai champion, and he was getting far in his studies from Den's cryptography books, yes, but ... he still did not know how that made him valuable at this exact moment.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0192",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"In your last Minpentai game, you did two things that were crucial to winning. Do you remember what they are?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0193",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I can think of a few answers, but I'm not sure if any of them are what you had in mind.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0194",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"First, you hunkered down and played defense, and outlasted your opponent.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0195",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Second, you made the most out of a very limited-bandwidth information channel, by pre-publishing most of the data - the symbol-carrying spaceship - and then using only a few bits of manipulation at the end to deploy the most important parts of your strategy.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0196",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Actually a very similar tactic to what you used in your other game months earlier, when you sent out a spaceship that encoded basically every possible glider attack strategy, and then another glider to choose which specific one you wanted to use.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0197",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"How is this related?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0198",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"We have contact with Deluin. Do you know how we accomplished that?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0199",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Actually, he got in touch with me and he told me. Some Arctic soldier is charging people zipcoins to hide their messages in his health data.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0200",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Correct. And so everyone is dropping down to the most efficient, lowest-bandwidth form of communication they can use - raw text - and pushing all that through him. One soldier's health data, communications for thousands of people.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0201",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"A quarter longhour ago the rates he was charging suddenly dropped by two thirds - we suspect he found some more efficient way to encode data. Interestingly enough neither he nor anyone else has found any better channel than health data so far.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0202",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Okay, now I wonder if that was me. I told Deluin to tell the soldier to train an LLM on his own health data and then modify the health data that he is sending out in-flight by flipping the bits that the LLM says are safest to flip, and using XOR over buckets to encode the message so he has a lot of freedom in choosing which bit to flip. Much better for reducing the 'suspiciousness' per bit of hidden data encoded, so he could afford to hide more data inside the same cover traffic.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0203",
+   "role": "p",
+   "text": "Den's eyes opened up.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0204",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Well we have no way to know if he used that specific trick-\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0205",
+   "role": "p",
+   "text": "Zei remembered to check his watch.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0206",
+   "role": "th",
+   "text": "zan",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0207",
+   "role": "th",
+   "text": "tie",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0208",
+   "role": "th",
+   "text": "tei",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0209",
+   "role": "center",
+   "text": "Deluin",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0210",
+   "role": "cell",
+   "text": "→",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0211",
+   "role": "cell",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">Arctic soldier says thanks, it helped a lot.</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0212",
+   "role": "cell",
+   "text": "92115",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0213",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Looks like he did.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0214",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"See, you've helped the anti-Arctic resistance already.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0215",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Look, Zei. What's happening now is, our hand has been forced. We can't just keep improving our capabilities secretly anymore. Dzegojan society has to come out of hiding.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0216",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"The shadow society has to become the society. The shadow government has to become the government. We have to sprint to deploy everything that we have figured out across all of Dzego - before the Arctics can make any moves on us.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0217",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"The part of this most relevant to you - the cryptographic infrastructure we need so that our coordination can keep functioning and we what needs to be secret can stay secret - is run out of Pafogai Du. So I want you to take the train back - Su can reschedule your ticket for tomorrow - and I'll message you about whom you should reach out to next.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c15-s0218",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"For now, maybe see if you can come up with any more ideas for that soldier to sell more packets. That seems to be even better cryptography training for you than my textbooks.\"</c>",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

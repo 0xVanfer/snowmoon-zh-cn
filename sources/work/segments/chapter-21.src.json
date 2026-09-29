@@ -1,0 +1,754 @@
+{
+ "chapter": 21,
+ "segments": [
+  {
+   "id": "c21-s0001",
+   "role": "title",
+   "text": "Chapter 21",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0002",
+   "role": "place",
+   "text": "Meldan, Veridia",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0003",
+   "role": "date",
+   "text": "3724 Mistime 20",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0004",
+   "role": "p",
+   "text": "Seila, Vil, Daia, Lily and Zven were all seated around the table in Seila's house, waiting for dinner to arrive.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0005",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Thank you guys for coming and keeping us company\"</c>, Seila said softly. <c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"It really means a lot to me.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0006",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Any more news from Febric and Hreda?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0007",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I just sent them some more zipcoins for their personal expenses a few days ago. They're just living the life they can inside Greater Plum Harbor. The schools are full, but one of the other refugees was a math teacher, and we're hiring her to informally give them and a few other kids some lessons.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0008",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"No word on when there will be any way for them to get back here?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0009",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Still none. At this point I'm starting to suspect that the Arctics' plan to reunify everyone is to just invade the rest of Veridia too.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0010",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Well at least they're safe.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0011",
+   "role": "p",
+   "text": "Seila sighed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0012",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"How is your lawsuit against Divergent going?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0013",
+   "role": "p",
+   "text": "This time Vil sighed.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0014",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"We won in the original trial a few months ago. But then they appealed. So a whole different group of judges got selected to hear the case, and a month ago they ruled in our favor too. But only a few days ago, we learned that they're appealing a second time.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0015",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Can they just keep on doing that forever? Do another appeal, another five judges get sortitioned in, you have to convince them all over again, and keep doing that until you're too tired to keep going and then you give up and settle for like a quarter of the money?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0016",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Fortunately no, there are Veridian common law rules where judges can rule a case to be in bad faith, and require the submitter to give the other side a bunch of extra money as a penalty. That often happens to frivolous appeals.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0017",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Here, their latest appeal document has some new footage from Jump's internal monitoring systems. Of course it was all encrypted, but some former employee had access and handed it over. They found some video and messages that make some of us look bad. So they're arguing it's a genuine appeal because of that. But really the video says nothing that's actually relevant to the case. I'm hoping these judges can see through what Divergent is doing more quickly than the previous round's judges did. We're accusing them of making a bad-faith appeal in our defense statement, with luck that should close things quickly.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0018",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"These hedge funds really are mean, aren't they.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0019",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"If judging wasn't anonymized, randomly selected and split into two and a half groups each round, I'm sure they would find a way to threaten or bribe the judges too.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0020",
+   "role": "p",
+   "text": "At that point, Lily rushed into the room.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0021",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"Uncle Vil, Aunt Daia, Mom! I got eighty one percent on my latest civics test!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0022",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Congratulations, Lily!\"</c>, Daia replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0023",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Normally I would say, now you've earned your trip to Northglade.\"</c>, Vil added. <c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"But, well...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0024",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"If it's safe in a few months and Gladias doesn't need me, I'll take you somewhere in the United Cities instead. Maybe Mabuli\"</c>, Seila offered.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0025",
+   "role": "p",
+   "text": "The doorbell rang. Before anyone else could react, Zven ran to the door to get the food.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0026",
+   "role": "p",
+   "text": "Zven opened the door, picked up two bags from a robot, and closed the door. Zven brought the food back to the table, and immediately began unpacking. He, Seila, Daia, Vil and Lily each found the boxes with their own meals, and the five of them began eating.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0027",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"How was your time in school been, Zven?\"</c>, Daia asked.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0028",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"My team won another Helisport game yesterday!\"</c>, Zven replied excitedly.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0029",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I also got ninety five on a physics exam a month ago. My teacher is really impressed.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0030",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"That's amazing\"</c>, Seila replied.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0031",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"So a few days ago he took me out privately to a garage, and showed me a mini rocket. He let me take a look inside, and then press the button to let it blast off. It was so fun!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0032",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"I want to build a rocket when I grow up! And then I want to fly in it. Maybe I'll even be able to go to the moon one day!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0033",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">\"Sounds like you won't need me to take you on any adventures!\"</c>, Vil added.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0034",
+   "role": "p",
+   "text": "Daia continued asking the family table for status updates.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0035",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"So what else is new for you, Seila?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0036",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Well aside from Febric and Hreda, I've basically been thinking nonstop about those meetings with the other Order members I had recently.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0037",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">\"Are you able to say more?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0038",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Not the specifics. But in general, it feels like there's a really coordinated effort to try to manipulate the Order, they're saying different things to different people to manipulate each person based on their exact position, they have amazing spying powers, and their objectives don't even seem to be anything commercial.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0039",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Is it the Arctics?\"</c>, Zven blurted out, with the excitement of a hero in a detective novel solving a mystery.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0040",
+   "role": "p",
+   "text": "The table went silent.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0041",
+   "role": "p",
+   "text": "Seila was sitting in the chair in her basement, and was staring at her hand device.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0042",
+   "role": "p",
+   "text": "Come on, she thought. Gladias should be awake any minute now.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0043",
+   "role": "p",
+   "text": "She hit her palm against her face for a fifth time, ashamed at how blind she had been. Gladias had been having these secret meetings for half a year, and she had not asked anything, assuming that he had things under control - and that anything Gladias could not figure out himself, his shadowy friend Mov could.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0044",
+   "role": "p",
+   "text": "But as it turned out, Gladias and Mov had been successfully hoodwinked by this man the whole time. And when his original pretense - that he was just a kindly man who cared about peace and freedom - fell through, they then got hoodwinked <e>again</e> by his mask, his pretense that he was from Silverchat.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0045",
+   "role": "p",
+   "text": "Seila herself had seen through the Silverchat ruse within a day - really, she had felt doubts within minutes. But she had not gone further quickly enough. She had entertained the thought that it might be the Arctics, but she had dismissed it - none of Delwart's lines seemed anything like anything she had ever heard from Lord Ephelion. Why would an Arctic say anything nice about peace and freedom? But now the picture had all come together. When you have eliminated the impossible, whatever remains, how improbable, must be the truth.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0046",
+   "role": "p",
+   "text": "Her watch buzzed. It was Gladias.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0047",
+   "role": "p",
+   "text": "She immediately called.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0048",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Seila! I miss you so much. How are you?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0049",
+   "role": "p",
+   "text": "At first, she wanted to scream.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0050",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Gladias, you idiot! Do you know what you've done?!!!!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0051",
+   "role": "p",
+   "text": "At first, silence.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0052",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What's wrong, Seila?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0053",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Delwart.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0054",
+   "role": "p",
+   "text": "Silence again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0055",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I see. Did Mov catch you up?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0056",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Mov was an idiot too. And you're a double idiot for trusting him. Yes, he did catch me up, Gladias. But I saw through Delwart's lies almost immediately, and I dragged Mov out to do some sleuthing myself.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0057",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What did you find?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0058",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"He's not working for Silverchat, you incredibly naive idiot!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0059",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0060",
+   "role": "p",
+   "text": "Silence again, this time from Seila's side, as she figured out the next thing she would say.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0061",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"What do you know?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0062",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"We tracked down two of the other Keepers that Delwart talked to. One of them was on a rubric for data retention in environmental sensors. Delwart tracked him down, the same way he tracked you down. And he was telling him to not bother pushing for more privacy preservation in any of the security or environmental the data collection.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0063",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"We then tracked down another. She was on a rubric for education. Delwart was telling <e>her</e> to remove the incentives for private schools to have proper Veridian civics education.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0064",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"And then finally, just to confirm, we found a Keeper who was on the rubric that Silverchat should care the most about - social media openness and interoperability - and neither Delwart nor anyone else had tracked down any of them at all.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0065",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"But ... Mov overheard Delwart talking to a Silverchat person, how did that happen? Is this someone else trying to corrupt Silverchat too? Convince them to up-boost some content favoring whatever their position is?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0066",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"No, you idiot. Delwart faked that. Come on, his spying ability is much better than Mov's, at some point he must have caught on to the fact that Mov was following him, and one day he planted that seed on purpose, to make his cover story more believable.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0067",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So...\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0068",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Think about what we now know about Delwart's goals. You thought he cares about freedom - but not when he's pushing for unrestricted surveillance. You thought he is anti-war, but he never mentioned that to the second Keeper at all. And then eventually you thought he cares about Silverchat - but he never found his way at all into the Keeper group that was working on the rubric that Silverchat would care about the most!\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0069",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"There's three Keeper groups, they don't talk to each other. He could always have gotten into the other two.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0070",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"IT'S ABOUT THE PREPONDERANCE OF EVIDENCE\"</c>, Seila snapped. <c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Remember the probability update formula, Hreda has shouted it at us many times. Each individual unit of evidence might only shift the odds ratio by a factor of two or three. But when there's three independent factors that all point in the same direction, that multiplies up to shifting the odds ratio a factor of eight to twenty seven.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0071",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Okay, so what do you think Delwart's real motives are?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0072",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"He's an Arctic.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0073",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"WHAT?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0074",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"That's really hard to believe. Nothing he has ever said to me sounds anything like Lord Ephelion.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0075",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Gladias... how can you be so naive?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0076",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Ephelion and Delwart are not intellectuals, they are propagandists. Their goal is not to seek and share what they think is the truth. Their goal is to adjust the discourse environment, either of one person or of a whole country, so suit their interests. To turn bystanders into friends, and enemies into bystanders.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0077",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Ephelion's goal is to inspire people inside Veridia to join the Arctic cause. So he's openly saying a version of the Arctic cause that some smart, but sick and twisted, people in Veridia will find appealing.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0078",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Delwart's goal is to break down the Order. He knows he can't make the Order pro-Arctic, but what he <e>can</e> do is make it ineffective. And so it's a better message for him to be sometimes pro-freedom, sometimes pro-peace, sometimes whatever else, depending on the rubric and the person he's talking to.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0079",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Why are you so certain?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0080",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"PREPONDERANCE OF EVIDENCE. Let's list it all.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0081",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"What are Delwart's goals? Not the goals he says he has, but the goals that are visible from his actions?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0082",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"One: reduce support for open source defense hardware. One point for freedom, one point for peace, one point for Arctics, zero points for Silverchat.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0083",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Two: push for unrestricted surveillance. One point against freedom, zero points for peace, one point for Arctics, zero points for Silverchat.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0084",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Three: push for Veridian schools to not teach people Veridian civics. Delwart specifically said: 'people should learn to love Veridia by seeing how great it is on their own'. One point for freedom, zero points for peace, one point for Arctics, zero points for Silverchat.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0085",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Four: not participate in the social media openness and interoperability rubric. Fine, there's three Keeper groups, we can multiply this one by half. Zero points for freedom, zero points for peace, zero points for Arctics, minus half a point for Silverchat.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0086",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Five: once he blew his cover, he sent you off to Dzego. You might say, that's a good suggestion, Veridia should learn from Dzego more. But that's not the only interpretation. The other interpretation is that he wanted you out of the way, halfway across the world so that once you got suspicious, you would not interfere with any of his plans! Both are possible. So one point for every possibility.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0087",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Six: his spying capabilities, beyond any corporation, far beyond some nonprofit group of idealists. Minus one point for an idealistic freedom lover or a peace lover, zero points for Silverchat, one point for Arctics.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0088",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Sum it up. Arctics five, freedom two, peace two, Silverchat one half. And if you say it's a Silverchat person who also cares about freedom, then, well, we're at plus one half. I'd even multiply the last point, about spying capabilities by two, then you get six points for Arctics and zero or a half for any of the other explanations.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0089",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"And notice what it took, Gladias. He got to you, and through you he got to one third of one discussion group. The military, the parliament, media platforms - he and his friends walked straight through all of them. The only doors that he couldn't break were the ones whose keys he couldn't find: the Order, the Courts, the graph funding. Privacy isn't a luxury, it's why we're still here.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0090",
+   "role": "p",
+   "text": "Seila stopped talking. For a few moments, Gladias stayed silent.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0091",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'm sorry, Seila.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0092",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I'm sorry I didn't trust you enough to involve you in this. I love you. I should have trusted and respected not just your heart, but also your mind.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0093",
+   "role": "p",
+   "text": "Silence again.",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0094",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"So what do we do?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0095",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I hope that Delwart was wrong that you would be useless in Dzego, and you have something amazing to show from all the adventures you've been having there while I've been crying because our kids are stuck in an enclave surrounded by Arctics and trying to clean up your mess.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0096",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I think I understand their military well now. Or rather, their shadow military. The official Dzego military is as compromised as ours, and the same situation for the rest of the government. But they've basically built up their Minpentai championship as a sort of secret army training ground, making the bet this whole time that the war that will matter will be a drone war - more similar to Minpentai than to anything like Helisport.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0097",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I've been doing my best to convince them that the next battle will be in Veridia, not Dzego - we're ahead on technology and industry that might be a threat to them, but behind on thinking at all about defense - and that if they want to save themselves, they need to come help us over here first.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0098",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Good. I hope for the kids' sake, and for Veridia's, and for yours, that you're actually going to have a plan to make that happen.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0099",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Convincing the Dzegojan is only half the battle. We also have to convince the Veridians to accept them. And not the Keepers, the parliament. The same parliament whose subcommittee just barely accepted you as a Keeper, eleven to ten, despite having no valid reason to think anything negatively of you - unless they had some magic foresight about how naive you are, which I doubt.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0100",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I know.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0101",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"Do you have any idea how we can do that?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0102",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I do not.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0103",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I can try to figure this out. But you will have to trust me.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0104",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I will, I promise.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0105",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"No more secrets, okay?\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0106",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Okay.\"</c>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c21-s0107",
+   "role": "p",
+   "text": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I promise.\"</c>",
+   "locked": false,
+   "note": ""
+  }
+ ]
+}

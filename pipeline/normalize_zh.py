@@ -30,6 +30,7 @@ BACKUP = ROOT / "sources" / "work" / "backup"
 GLOSSARY = ROOT / "pipeline" / "glossary.json"
 
 CJK = r"\u3400-\u9fff\u3000-\u303f\uff01-\uff60"
+HAN = r"\u3400-\u9fff"
 TAG_SPLIT = re.compile(r"(<[^>]+>)")
 
 
@@ -62,8 +63,8 @@ def fix_text(t: str, alias: dict[str, str]) -> str:
     for bad, good in alias.items():
         if bad and bad in t:
             t = t.replace(bad, good)
-    # T6 英文省略号 → 中文省略号
-    t = re.sub(r"\.{3,}", "……", t)
+    # T6 英文省略号 → 中文省略号（数字区间 0...199 不动）
+    t = re.sub(r"(?<!\d)\.{3,}(?!\d)", "……", t)
     t = re.sub(r"(?<=[\u4e00-\u9fff])\.\.(?=[\u4e00-\u9fff])", "……", t)
     # T2 连续空格
     t = re.sub(r"[ \t]{2,}", " ", t)
@@ -77,11 +78,14 @@ def fix_text(t: str, alias: dict[str, str]) -> str:
     t = re.sub(rf"(?<=[{CJK}])\?(?=[{CJK}“”]|$)", "？", t)
     t = re.sub(rf"(?<=[{CJK}])!(?=[{CJK}“”]|$)", "！", t)
     t = re.sub(rf"(?<=[{CJK}])\.(?=$|[{CJK}“”])", "。", t)
-    # T3 中西文之间统一一个空格（CJK↔数字、CJK↔≥2 个拉丁字母）
-    t = re.sub(rf"([{CJK}])(\d)", r"\1 \2", t)
-    t = re.sub(rf"(\d)([{CJK}])", r"\1 \2", t)
-    t = re.sub(rf"([{CJK}])([A-Za-z]{{2,}})", r"\1 \2", t)
-    t = re.sub(rf"([A-Za-z]{{2,}})([{CJK}])", r"\1 \2", t)
+    # T3 空格体例：拉丁词（≥2 字母）与汉字之间加一个半角空格；
+    #    数字与汉字之间不留空格（中文出版惯例：3724年雪月3日、约2公里、掉3分），
+    #    但形如 0x18f4、5G 这类含字母的混合 token 仍与汉字分开。
+    t = re.sub(rf"([{HAN}]) *(\d+)(?![0-9A-Za-z])", r"\1\2", t)
+    t = re.sub(rf"(?<=\d) *([{HAN}])", r"\1", t)
+    t = re.sub(rf"([{HAN}])([0-9]*[A-Za-z][A-Za-z]{{1,}})", r"\1 \2", t)
+    t = re.sub(rf"([A-Za-z]{{2,}})([{HAN}])", r"\1 \2", t)
+    t = re.sub(rf"([{HAN}])(0x[0-9A-Fa-f]+)", r"\1 \2", t)
     # T3a 中英混排的引号/括号内不留首尾空格
     t = re.sub(r"([“（《])\s+", r"\1", t)
     t = re.sub(r"\s+([”）》])", r"\1", t)

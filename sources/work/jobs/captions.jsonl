@@ -1,0 +1,2 @@
+{"id": "chapter-04-fig-01", "prompt": "你是中译项目的图注作者。下面是一张无文字插图的上下文（英文原文）。请写一句不超过 30 字的中文图注，描述这张图在讲什么（不要解释你在做什么，只输出图注本身）。\n\n上下文：Zei tapped his hand on the table. Fin's eyes snapped back, and he once again started looking intently at an animation on Zei's hand device. （该图是泽的手持终端上正在播放的民本棋对局动画画面）", "max_tokens": 2000}
+{"id": "chapter-04-fig-03", "prompt": "你是中译项目的图注作者。这是一张点餐终端界面插图，图中文字是泽国语罗马字（dze、liu、lei kai fun、gai、lie、jau、jin、lie 等）。上下文：He clicked on \"kai\", and then on a picture of a salad.\n\n请写一句不超过 30 字的中文图注，描述这张图在讲什么（不要解释你在做什么，只输出图注本身）。", "max_tokens": 2000}

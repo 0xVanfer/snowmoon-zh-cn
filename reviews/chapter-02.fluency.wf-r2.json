@@ -1,0 +1,179 @@
+{
+  "chapter": 2,
+  "lens": "fluency",
+  "reviewer": "wf-r2",
+  "overall": "整章从中文语感看是可读的：街景一段、换教室与爆炸后的收尾都像中文小说，对话着色与口语词（“行吧”“你可算来了”）也站得住。问题集中在讲师那段大段讲解——翻译腔最重，长定语前置（“把一个冷的东西加热所增加的未知位数”）、被字句与 sat in silence 式逐字搬用（“坐在尴尬的沉默里”）接连出现，个别句子甚至要对照英文才能读懂（c02-s0096）。另有几处搭配不成立的说法（“压住……水平”“把中等温度分成热和冷”“表示在八百万位之内”）和一句不像人说话的对话（“不行啊”）。这些都不影响整体理解，但本章重头戏就是讲课，建议优先把讲解句按条捋顺。",
+  "issues": [
+    {
+      "id": "c02-s0096",
+      "severity": "high",
+      "type": "生硬",
+      "source": "you can't go from not knowing more things to not knowing fewer things in a universe with time-reversible physics",
+      "zh": "在一个物理时间可逆的宇宙里，你不可能从不知道更多东西，变成不知道更少东西。",
+      "problem": "「从不知道更多东西，变成不知道更少东西」把三重否定叠在一句里，中文根本读不出「未知只会增加、不会减少」这层意思，读者得回头对照英文才敢确定；而且「物理时间可逆」把 time-reversible physics（物理规律时间可逆）说成了「物理时间可逆」，概念也偏了。这句是整段反证论证的落点，卡在这里很伤。",
+      "suggestion": "在一个物理规律时间可逆的宇宙里，你没法把「不知道的东西多」变成「不知道的东西少」。（后一句的「物理时间不可逆」同改作「物理规律时间不可逆」）"
+    },
+    {
+      "id": "c02-s0098",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "there's always things you don't know, and that lack of knowledge can only be shuffled around, and inevitably increased",
+      "zh": "总有些东西是你不知道的，而这份无知只能被挪来挪去，并且不可避免地越来越多。",
+      "problem": "「这份无知」在现代中文里是「愚昧、没见识」的意思，用它来指 lack of knowledge（未知）会让读者读成在骂人；「只能被挪来挪去」又是没有施动者的被字句，像翻译稿而不是人在讲课。",
+      "suggestion": "总有些东西是你不知道的，而这份「不知道」只能被搬来搬去，而且只会越来越多。"
+    },
+    {
+      "id": "c02-s0083",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "This is what we mean, when we say that entropy goes up... heating up a cold thing adds more unknown digits than cooling down a hot thing by that same increment takes away",
+      "zh": "这就是我们说熵增大、热从热处流向冷处时的意思。每增加一点点热量，把一个冷的东西加热所增加的未知位数，比把热的东西冷却同样一点点所减掉的未知位数更多，所以总的未知量上升。",
+      "problem": "「这就是我们说……时的意思」是 This is what we mean when we say 的整句搬用；后半句用三个「的」把两个动作包成超长前置定语（「……所增加的未知位数」），中间又夹「比……更多」，主干被压到最后，中文要读两遍才断得开。",
+      "suggestion": "我们说熵会增大、热从热处流向冷处，说的就是这个。每添进一丁点热量，给冷的东西加温所增加的未知位数，总比让热的东西降温同样的量所减掉的要多，所以未知的总量只升不降。"
+    },
+    {
+      "id": "c02-s0129",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "keep down our level of heavy industry and technology. Let us live, but only at the level of civilization where we can never be a threat.",
+      "zh": "他们的玩法就是永远压住我们的重工业和科技水平。让我们活着，但只活在一个永远构不成威胁的文明水平上。",
+      "problem": "「压住……水平」搭配不成立（水平只能「压在低位」）；「活在一个……文明水平上」也是 at the level of 的直搬，中文不说「活在某个水平上」，两处连着读很出戏。",
+      "suggestion": "他们的玩法，就是永远把我们的重工业和科技压在低位。让我们活着，但把我们的文明永远压在构不成威胁的水平上。"
+    },
+    {
+      "id": "c02-s0093",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "if we could separate medium temperature into hot and cold, then we would be able to do unlimited data compression",
+      "zh": "如果我们<e>真能</e>把中等温度分成热和冷，那我们就能做无限的数据压缩了。",
+      "problem": "「把中等温度分成热和冷」缺了被分的对象，中文读不通（温度本身不能「分成热和冷」），读者接不上泽后面那套压缩论证，得自己补出「气体」。",
+      "suggestion": "要是我们<e>真能</e>把不冷不热的温度分成热的一份、冷的一份，那就能做无限的数据压缩了。"
+    },
+    {
+      "id": "c02-s0095",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "we get a fully general-purpose way to represent any eleven point four million digits inside of eight million digits",
+      "zh": "于是我们就得到了一种完全通用的办法，可以把任意一千一百四十万位数据表示在八百万位之内。",
+      "problem": "「把……表示在……之内」不是中文搭配（「表示」不能接「在……之内」），明显是 represent ... inside of 的逐字直译。",
+      "suggestion": "于是我们就有了一个完全通用的办法，能把任意一千一百四十万位数据塞进八百万位里。"
+    },
+    {
+      "id": "c02-s0118",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "For a few moments, the students and the instructor sat in an awkward silence.",
+      "zh": "有那么一会儿，学生和讲师都坐在尴尬的沉默里。",
+      "problem": "「坐在……沉默里」是 sat in an awkward silence 的逐字搬用，中文不说「坐在沉默里」，把动作和情绪硬绑在一起；「尴尬的沉默」作处所宾语也很别扭。",
+      "suggestion": "一时间，学生和讲师都沉默着，气氛有些尴尬。"
+    },
+    {
+      "id": "c02-s0092",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "why does that time reversibility, at that level of atom-by-atom physics, imply that temperature equalization is something you cannot reverse?",
+      "zh": "为什么这种在逐个原子层面的时间可逆性，会意味着温度均衡是一件你无法逆转的事？",
+      "problem": "「在逐个原子层面」不成词（中文说「原子层面」或「一个个原子的层面」）；「是一件你无法逆转的事」是典型的后置定语欧化句式，讲师的口语不该这么绕。",
+      "suggestion": "那么，为什么到了原子层面，这种时间可逆性反而会意味着温度均衡无法逆转呢？"
+    },
+    {
+      "id": "c02-s0019",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Do you have any new opinions on how effective that whole system is?",
+      "zh": "你对那套制度到底管不管用，有什么新看法吗？",
+      "problem": "「对……管不管用，有什么新看法」把两个结构硬套在一起，「对」后面跟的是个小句而不是名词，中文读起来卡壳，不像少年之间随口一问。",
+      "suggestion": "那套制度到底管不管用，你有什么新看法吗？"
+    },
+    {
+      "id": "c02-s0020",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "\"Oh no, critical governance studies only becomes a topic in university.\"",
+      "zh": "“不行啊，批判性治理研究要上大学才讲。”",
+      "problem": "上一句问的是「有什么新看法」，答句用「不行啊」既接不上（什么不行？），也不是中文表示「没有／还早」的说法，这一问一答立刻出戏。",
+      "suggestion": "“哪有啊，批判性治理研究要上大学才讲呢。”"
+    },
+    {
+      "id": "c02-s0050",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "I'm going to try to introduce an important topic that I think almost everyone gets confused about: thermodynamics.",
+      "zh": "我要试着讲一个很重要的题目，我觉得几乎所有人都把它搞混了：热力学。",
+      "problem": "「题目」在中文课堂语境里指习题／考题，不能说「讲一个题目」；讲师开场所说的 topic 应是「话题」或「主题」。",
+      "suggestion": "今天，我要试着讲一个很重要的话题，我觉得几乎所有人都把它搞混了：热力学。"
+    },
+    {
+      "id": "c02-s0073",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "the velocities end up somewhere in the middle, between zero and five hundred thousand.",
+      "zh": "速度最终会落在中间某处，零到五十万之间。",
+      "problem": "「落在中间某处，零到五十万之间」把两个同位成分用逗号硬并，中间没有「也就是」，读起来像断句断错了，标点承担的说明关系在中文里落不下来。",
+      "suggestion": "速度最后会落在中间，也就是零到五十万之间。"
+    },
+    {
+      "id": "c02-s0111",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "as the instructor walked around to check if there was anyone who seriously needed help.",
+      "zh": "讲师则四处走动，查看有没有人需要认真处理。",
+      "problem": "「处理」在中文里用于事务、问题，用来指需要帮助的学生很生硬，读者会先愣一下；「认真处理」也把 seriously（伤得重、得当真）译偏了。",
+      "suggestion": "讲师则挨个走动，看看有没有人伤得重、需要帮忙。"
+    },
+    {
+      "id": "c02-s0016",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "Studying for the geography exam in boring school.",
+      "zh": "“在无聊学校准备地理考试。”",
+      "problem": "「无聊学校」是学生给普通学校起的绰号（原文 boring school 也是当专名用），不加引号就成了「在无聊的学校」，中文读者读不出这是绰号，也读不出学生那股自嘲；「准备地理考试」也偏书面。",
+      "suggestion": "“在‘无聊学校’备考地理呢。”"
+    },
+    {
+      "id": "c02-s0107",
+      "severity": "low",
+      "type": "本土化",
+      "source": "they were not just a game",
+      "zh": "都不只是玩闹。",
+      "problem": "「玩闹」指嬉闹的动作，和主语「防范措施」搭配不上；中文固定说法是「儿戏」，语感也更贴原文那点后怕。",
+      "suggestion": "都不只是儿戏。"
+    },
+    {
+      "id": "c02-s0030",
+      "severity": "low",
+      "type": "生硬",
+      "source": "gotta make sure we sync our codes when we get to the lesson today. / they've upgraded to a new cryptographic proof system",
+      "zh": "今天到课上得记得同步一下我们的码。／看来他们升级了新的密码学证明系统",
+      "problem": "一句话里两个「得」（到课上得记得），「到课上」也不是自然说法，读起来绕口；前半句「升级了新的……」则是「升级」与「新的」语义重复。",
+      "suggestion": "看来他们换了一套新的密码学证明系统，今天到了课上，记得把咱们的码同步一下。"
+    },
+    {
+      "id": "c02-s0109",
+      "severity": "low",
+      "type": "生硬",
+      "source": "trying to figure out if his arm was injured enough to be worth complaining",
+      "zh": "琢磨自己的胳膊伤得够不够格叫苦。",
+      "problem": "「够格」指资格、够不够条件，用在这里把「值不值得」说成了「配不配」，语气跑偏（原文是少年在权衡要不要喊疼）。",
+      "suggestion": "琢磨胳膊这点伤值不值得喊疼。"
+    },
+    {
+      "id": "c02-s0130",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Use distributed manufacturing to build all our tools.",
+      "zh": "用分布式制造造出我们所有的工具。",
+      "problem": "「制造……造出」同源重复，读起来拌嘴；这是讲师演讲里的排比短句，节奏本该干脆。",
+      "suggestion": "用分布式制造，把我们要用的工具全造出来。"
+    },
+    {
+      "id": "c02-s0123",
+      "severity": "low",
+      "type": "本土化",
+      "source": "\"Alright, I think we've had enough entropy for one day. Let's go home.\"",
+      "zh": "“好，我想今天我们熵够多了。回家吧。”",
+      "problem": "「我们熵够多了」把「熵」当成可数物量来说，双关（今天闹出的混乱已经够受的了）没落地，读者容易只当成一句物理术语。",
+      "suggestion": "“好，我看今天的熵已经够我们受的了。回家吧。”"
+    }
+  ]
+}

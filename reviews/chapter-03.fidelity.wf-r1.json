@@ -1,0 +1,44 @@
+{
+  "chapter": 3,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "本章译文忠实度整体很高：逐段对照未发现事实性误译、说话人张冠李戴、否定／因果／数量颠倒，也没有整句漏译；关键数字（销售税5.2%与土地税1.48%、55台与6台、五到十米、第3／4档）与比喻、双关（植物／狮子、氢氧化氢广告）都准确落地。发现的问题都是局部的：一处时间关系被增译成自相矛盾的句子，一处威胁句被压缩成歧义短句，另有数量与用词上的轻微偏移。整体可直接阅读，不需要重译，只建议做小范围修词。",
+  "issues": [
+    {
+      "id": "c03-s0044",
+      "severity": "medium",
+      "type": "增译",
+      "source": "Soon after he had walked far enough that he could no longer hear their conversation, his watch buzzed.",
+      "zh": "走出没多远，远到再也听不见他们说话时，他的手表震了一下。",
+      "problem": "「走出没多远」与后半句「远到再也听不见他们说话」自相矛盾：原文只是说「走出一段、远到听不见之后不久」，并没有「没走多远」这层意思，这四字是多余的增译，反而让时间关系读不通。",
+      "suggestion": "又走出一段、已经听不见他们说话之后不久，他的手表震了一下。"
+    },
+    {
+      "id": "c03-s0171",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "And if I can find out all that, imagine what kinds of things Bluewhale might be able to do. Or, for that matter, the Arctics.",
+      "zh": "如果这些我都能查出来，想想蓝鲸能做些什么。北极人也一样。",
+      "problem": "原文的「Or, for that matter, the Arctics.」是省略句，威胁的对象是「北极人同样能对你做到这些事」；译成「北极人也一样」在这个位置会被读成「北极人跟蓝鲸一样（能查到你）」，甚至「北极人和我一样」，力量被削弱且语义含糊——这句是德尔瓦特招募格拉迪亚斯的核心筹码，应把威胁说全。",
+      "suggestion": "如果这些我都能查出来，想想蓝鲸都能对你做些什么。更别说北极人了。"
+    },
+    {
+      "id": "c03-s0126",
+      "severity": "low",
+      "type": "误译",
+      "source": "Six out of fifty five was an unusually high number unattested.",
+      "zh": "55台里有6台没有验证，这个比例高得不寻常。",
+      "problem": "原文强调的是「未认证设备的数量（六台）高得不寻常」，译文改成「这个比例高得不寻常」，把「数量」换成了「比例」；六台占五十五台约一成，说「比例高」并不自然，也偏离了原句的落点。",
+      "suggestion": "55台里有6台没有认证，未认证的数量高得不寻常。"
+    },
+    {
+      "id": "c03-s0155",
+      "severity": "low",
+      "type": "误译",
+      "source": "Stop trying to nudge everyone, and let people's true selves come out.",
+      "zh": "别再想着去拨弄每个人，让人们真实的样子露出来。",
+      "problem": "「nudge」是行为助推／轻推之意（本书其它章节分别译作「推动」「引导」），译成「拨弄」变成了「随意摆弄、挑弄」，把「温和引导」说成了恶意操弄，语义重心偏移。",
+      "suggestion": "别再想着去引导每个人，让人们真实的样子露出来。"
+    }
+  ]
+}

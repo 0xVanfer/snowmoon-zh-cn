@@ -1,0 +1,179 @@
+{
+  "chapter": 9,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第9章中文整体可读，前半段白与芬在院子里的那场摊牌是全文语感最好的部分——“我住在我姑妈家。可她基本不管我，给我一间房，一天两顿饭，就这么多了”“图个乐”“他最近满脑子都是棋”都像人在说话，情绪落地。问题集中在两类：一是英文语序、名词短语和否定句式的直搬，凡是登讲密码学原理的段落（s0066、s0068、s0081、s0123、s0120）都会出现“读者要读第二遍才还原意思”的句子，其中 s0066 的“知识被更新的受用”和 s0123 的三重否定最严重；二是长定语堆叠，s0031、s0109 已经到影响理解的程度。此外“手终端”漏字与术语表不一致，“好学”这类同形歧义词需要换词。按条替换后可达出版级语感。",
+  "issues": [
+    {
+      "id": "c09-s0031",
+      "severity": "high",
+      "type": "生硬",
+      "source": "The first versions, started only a decade after we lost the war against the Arctics last century, were simple and uncontroversial.",
+      "zh": "“最早的几版，动手的时候，距上个世纪我们输掉对北极人的那场战争才过去十年，简单，也没什么争议：把图画文字换成字母，砍掉复杂的变格、变位和不规则动词。”",
+      "problem": "英文的插入语 started only a decade after… 被原样塞进主谓之间（“最早的几版，动手的时候，距……才过去十年”），主语“最早的几版”之后隔了二十多个字才等到谓语，而且谓语只剩“简单”两个光秃秃的字，中文读起来像句子断了一半。“对北极人的那场战争”也不像中文说法，中文说“跟北极人打的那场仗”或“输给北极人的那场战争”。",
+      "suggestion": "“最早那几版，是在上个世纪我们输给北极人那场战争后才过十年就着手做的，内容简单，也没什么争议：把图画文字换成字母，砍掉复杂的变格、变位和不规则动词。”"
+    },
+    {
+      "id": "c09-s0066",
+      "severity": "high",
+      "type": "欧化",
+      "source": "He stared back, in a mix of appreciation for the update to his knowledge, and curiosity about where this whole conversation was going to lead.",
+      "zh": "泽没接话。他回望着对方，心里一半是知识被更新的受用，一半是好奇：这场对话到底要往哪儿去。",
+      "problem": "“知识被更新的受用”是把英文名词短语 appreciation for the update to his knowledge 逐字垒起来的中文：先用“被”把“知识”和“更新”拧成一个偏正结构，再拿“受用”当中心语，中间还夹一个“的”，读者第一遍读不出这是在说“长了见识、心里受用”。后半句“一半是好奇：这场对话到底要往哪儿去”本身没问题，是被前半句拖累了。",
+      "suggestion": "泽没接话。他回望着对方，一半是长了见识的受用，一半是好奇：这场对话到底要往哪儿去。"
+    },
+    {
+      "id": "c09-s0087",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Verify that the chips actually have the logic that they are supposed to have.",
+      "zh": "“然后还有公共检查员。他们随机从厂商那里买设备，用某种扫描手段做破坏性检查，验证芯片里的逻辑确实该是什么就是什么。”",
+      "problem": "“确实该是什么就是什么”是 the logic that they are supposed to have 的机械对译，中文里这句话等于什么也没说，读者抓不到“芯片里的逻辑要与它应有的设计相符”这层意思。这里是登在讲制度设计，句子一含糊，整段的前因后果就松了。",
+      "suggestion": "“然后还有公共检查员。他们随机从厂商那里买设备，用某种扫描手段做破坏性检查，验证芯片里的逻辑确实和它应有的设计一致。”"
+    },
+    {
+      "id": "c09-s0109",
+      "severity": "high",
+      "type": "生硬",
+      "source": "The car's door now opened directly into the open door of a staircase leading down to a basement, shielding them from even a tick of being visible to the outside.",
+      "zh": "泽和登下了黑色汽车。这一次，车门正对着一道通往地下室的下行楼梯敞开的门，外面连一嘀嗒都别想看见他们。",
+      "problem": "“一道通往地下室的下行楼梯敞开的门”把三个定语（通往地下室的／下行的／敞开的）全压在中心语“门”前面，读者第一遍分不清“敞开的”是修饰楼梯还是修饰门；而且“下行楼梯”和“通往地下室”语义重复。后半句“外面连一嘀嗒都别想看见他们”主语悬空，是外面的人看不见他们，不是“外面”看不见。",
+      "suggestion": "泽和登下了黑色汽车。这一次，车门正对着一扇敞开的门，门里是一道通往地下室的楼梯；外面的人连一嘀嗒都别想看见他们。"
+    },
+    {
+      "id": "c09-s0123",
+      "severity": "high",
+      "type": "欧化",
+      "source": "the manufacturer has no way to give an honest chip that passes inspection to the inspectors, without almost certainly giving one to you too.",
+      "zh": "“检查员也从混网下单。所以作为消费者，只要你也从混网买，你拿到的芯片就和检查员买的是同一批——厂商想把一块能过检的正经芯片交给检查员，就几乎不可能不同时也交给你。”",
+      "problem": "“就几乎不可能不同时也交给你”把 no way…without 的否定套否定原样搬来，加上“也”“同时”，一句话里三个否定性成分挤在一起，中文读者得来回读两遍才能还原成“厂商没法只给检查员真芯片而不给你真芯片”。另外“想把……交给检查员”的“想”会让读者以为在说厂商的意愿，英文 no way 说的是做不到。",
+      "suggestion": "“检查员也从混网下单。所以作为消费者，只要你也从混网买，你拿到的芯片就和检查员买的是同一批——厂商要是想让检查员拿到一块能过检的真芯片，几乎就不可能不顺手也给你一块。”"
+    },
+    {
+      "id": "c09-s0005",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"If you could just be nicer to him, he could help you so much.\"",
+      "zh": "“你要是能对他好一点，他能帮你太多了。”",
+      "problem": "“他能帮你太多了”不合中文搭配：中文里“帮你太多”更像“帮得过分／帮倒忙”，而且“太多”放句尾做程度补语时读起来别扭。芬是在劝白，语气该是“他能帮你很大的忙”。",
+      "suggestion": "“你要是能对他好一点，他能帮上你大忙。”"
+    },
+    {
+      "id": "c09-s0020",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"So I hope Zei forgives me for those times when I didn't let him get his prize money to give his mom a compute box.\"",
+      "zh": "“所以，那些次我拦着不让他拿奖金去给他妈买算力盒，希望泽能原谅我。”",
+      "problem": "“那些次”是 those times 的直译，中文口语说“以前那几次”；更要紧的是句子重心被压到末尾，“希望泽能原谅我”本该是主句，现在读起来像临时补上的半句，说完喘不上气。",
+      "suggestion": "“所以，以前那几次我不让他拿奖金去给他妈买算力盒，希望泽能原谅我。”"
+    },
+    {
+      "id": "c09-s0024",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "\"I do want to understand you guys better. What drives you, how you think.\"",
+      "zh": "“我确实想更懂你们。你们图什么，你们怎么想。”",
+      "problem": "“你们图什么”在中文里带质问、算计的味道（“你到底图什么”），跟上一句“想更懂你们”的诚恳口气相冲，读者会以为白在讽刺或审问。英文 What drives you 问的是驱动力，不带这层。",
+      "suggestion": "“我确实想更懂你们。你们追的是什么，你们又是怎么想的。”"
+    },
+    {
+      "id": "c09-s0030",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "Always navigating the tough balance between being easy to learn, logical in syntax, but also nice to speak and read…",
+      "zh": "“它始终在艰难的平衡里穿行：既要好学、语法要有逻辑，又要说着顺口、读着舒服，还得能用来谈现实生活里人们真正在意的事。”",
+      "problem": "“好学”在中文里首先读成 hàoxué“爱学习”（形容人），用它对应 easy to learn，读者要在“既……语法要有逻辑”的排比里停一下才能改口，属于同形歧义；“在艰难的平衡里穿行”也是硬译，中文说“在几者之间艰难地保持平衡”。",
+      "suggestion": "“它始终在几者之间艰难地保持平衡：既要容易学、语法有逻辑，又要说着顺口、读着舒服，还得能用来谈现实生活里人们真正在意的事。”"
+    },
+    {
+      "id": "c09-s0033",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Then came the harder tradeoffs, on the grammar.",
+      "zh": "“接下来是更难的取舍，在语法上。”",
+      "problem": "把状语“在语法上”甩到句尾补一句，是英文语序的直搬。中文不会先说一件事再补个介词短语，这句读起来像说话人想起来才补的。",
+      "suggestion": "“接下来是语法上更难的取舍。”"
+    },
+    {
+      "id": "c09-s0051",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Every time he got to a fork, he made sure to look in all directions, taking in his surroundings.",
+      "zh": "“每到岔口，他都会四面看看，把周围记在心里。”",
+      "problem": "“记在心里”在中文里带情感色彩，说的是把恩情、叮嘱、话语记住（“你的话我记在心里”），用在这里对应 taking in his surroundings（把环境看清楚、记下来）不对味，读者会以为他在感怀什么。",
+      "suggestion": "“每到岔口，他都会四面看看，把周围的环境看个仔细。”"
+    },
+    {
+      "id": "c09-s0068",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "like the ones that handle payments and reputation and manage governance for Dzego's secret societies",
+      "zh": "“我们现代的密码学网络——比如给泽国的秘密组织处理支付、信誉和管理治理的那些——全都靠这个。”",
+      "problem": "“处理支付、信誉和管理治理”把 handle 和 manage 两个动词塌成一个“处理”，于是“信誉”悬在半空，而“管理治理”连读又像一个词，动宾对不上，读者要在括号里重新断句。",
+      "suggestion": "“我们现代的密码学网络——比如给泽国的秘密组织处理支付、信誉，并管理治理事务的那些——全都靠这个。”"
+    },
+    {
+      "id": "c09-s0081",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "He noticed how quickly Den had shifted into the register of assuming that Zei would go along with his plans.",
+      "zh": "“派任务。他注意到，登很快就换成了那种默认泽会照他的计划走的语气。他身体里有一部分已经在给自己找答应的理由；另一部分则看着自己的热情一点点涨起来，并不完全信它。”",
+      "problem": "“换成了那种默认泽会照他的计划走的语气”是长定语套从句的典型翻译腔：中文会说“换上那副腔调，好像在说泽一定会听他的”。“他身体里有一部分”是 part of him 的直译，中文里说“他心里有一部分／他身上有一部分”。",
+      "suggestion": "“派任务。他注意到，登很快就换上那副腔调，仿佛泽一定会照他的计划走。他心里有一部分已经在给自己找答应的理由，另一部分则看着自己的热情一点点涨起来，并不完全信它。”"
+    },
+    {
+      "id": "c09-s0106",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The car had windows, but they seemed to show a dimmed version of the world outside; from the outside, he knew, they would show almost nothing at all.",
+      "zh": "“车门密封合上时，泽注意到车厢内壁衬着隔信箔。车有窗，但看出去外面的世界像蒙了一层暗色；他知道，从外面往里看，几乎什么也看不见。”",
+      "problem": "“车有窗，但看出去外面的世界像蒙了一层暗色”主语和视角都断了：“看出去”的主语没交代（是窗？是人？），从句意看是从车里往外看，但没有“从里面”这个提示，读者得自己补。紧接着分号后又换成从外往里，视角一进一出，读起来磕绊。",
+      "suggestion": "“车门密封合上时，泽注意到车厢内壁衬着隔信箔。车上有窗，但从里面看出去，外面的世界像蒙了一层暗色；他知道，从外面往里看，几乎什么也看不见。”"
+    },
+    {
+      "id": "c09-s0110",
+      "severity": "low",
+      "type": "生硬",
+      "source": "They saw thousands of empty white boxes, with labels on the side containing a two-dimensional barcode…",
+      "zh": "“眼前是成千上万个空的白盒子，侧面贴着带二维码的标签；一台机器正把从隔壁屋传送带上送出来的芯片自动装进盒子里。”",
+      "problem": "“空的白盒子”中“的”卡在单音节形容词和白之间，中文更习惯说“白色的空盒子”或“空空的白色盒子”，现在读着有点顿。",
+      "suggestion": "“眼前是成千上万个白色的空盒子，侧面贴着带二维码的标签；一台机器正把从隔壁屋传送带上送出来的芯片自动装进盒子里。”"
+    },
+    {
+      "id": "c09-s0120",
+      "severity": "low",
+      "type": "生硬",
+      "source": "you can make the inner payload be yet another envelope, requesting to send the message right back through the system in the next round.",
+      "zh": "“如果你特别多疑，还可以把最内层的载荷做成又一个信封，要求把消息在下一轮原路送回系统里再走一遍。”",
+      "problem": "“原路送回系统里再走一遍”里“送回”和“再走一遍”语义重叠，读起来像同一件事说了两遍；“原路”也容易让人以为是沿节点原路退回，而原文说的是让消息重新绕系统走一轮。",
+      "suggestion": "“如果你特别多疑，还可以把最内层的载荷做成又一个信封，要求让这条消息在下一轮再从这个系统里走一遍。”"
+    },
+    {
+      "id": "c09-s0124",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Den then walked forward toward a door.",
+      "zh": "“登往前走向一扇门。泽跟上他。”",
+      "problem": "“往前走向”三个动词性成分挤在一起（往前＋走＋向），中文不这么说，读起来舌头打结。",
+      "suggestion": "“登于是朝一扇门走去。泽跟上他。”"
+    },
+    {
+      "id": "c09-s0130",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"I will. So Zei, I remember you had another question.\" / \"So Zei, what do you think?\"",
+      "zh": "“我会的。对了泽，我记得你还有个问题。” / “那么泽，你怎么想？”",
+      "problem": "呼语和前面的词黏在一起（“对了泽”“那么泽”），中文读的时候会先把它当成一个词再拆开，节奏不对；呼语前后应断开。",
+      "suggestion": "“我会的。对了，泽，我记得你还有个问题。” / “那么，泽，你怎么想？”"
+    },
+    {
+      "id": "c09-s0132",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "My hand device has a protocol by which it repeatedly contacts each device a million times…",
+      "zh": "“我的手终端上跑着一套协议，会反复联系每台设备一百万次，要求整套协议在十分之一嘀嗒内跑完。”",
+      "problem": "“手终端”不是中文里成立的说法，中文要么说“手持终端”，要么说“手表／终端”；而且本章 s0111 已用“手持终端”，术语表 hand device 也定为“手持终端”，同一章内两种写法会让读者以为是两样东西。",
+      "suggestion": "“我的手持终端上跑着一套协议，会反复联系每台设备一百万次，要求整套协议在十分之一嘀嗒内跑完。”"
+    }
+  ]
+}

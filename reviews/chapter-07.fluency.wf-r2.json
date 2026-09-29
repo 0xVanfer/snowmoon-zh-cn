@@ -1,0 +1,152 @@
+{
+  "chapter": 7,
+  "lens": "fluency",
+  "reviewer": "wf-r2",
+  "overall": "第7章中文整体读得下去：对局序列的信息交代清楚，对话大体像人在说话（“你等着看”“咱们还是专心给大家下一盘好棋吧”“哇，那是什么？”都落地了），术语与术语表一致，称谓和度量没有出戏的地方。主要毛病集中在两类：一是英文句法残留——名词化长定语（“拥有对彼此 AI 思考记录的完整读取权限”）、被动式（“并非完全被隔离”“由……触发器设定”）、以及主语错位的句子（“两份 AI 记录都全神贯注”）；二是少数搭配不成话或成分残缺的句子，读起来像病句（“你只要等到我们最后一个赛季才赢了我”“他们地势已到山的三分之一处”“大屏幕上，观众们正看着”）。没有需要推翻理解的高危问题，按下面 16 处逐条改掉即可达到出版级的顺读感。",
+  "issues": [
+    {
+      "id": "c07-s0020",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Game is tomorrow, remember!",
+      "zh": "“那要是你能在接下来两个长时里帮我把这套搭起来，我真感激不尽。比赛就在明天，记住！”",
+      "problem": "“比赛就在明天，记住！”是 remember! 的直搬。中文口语不会用“记住！”给朋友收尾（这更像命令），泽是在求芬，语气该是提醒带点急。",
+      "suggestion": "“那要是你能在接下来两个长时里帮我把这套搭起来，我真感激不尽。别忘了，比赛就在明天！”"
+    },
+    {
+      "id": "c07-s0036",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "from their high vantage point already a third of the way up the mountain, they could see a cloud of smoke emerging in the distance, somewhere in the outskirts of the city.",
+      "zh": "忽然，地面轻轻晃了一下。片刻之后，他们地势已到山的三分之一处，凭高望去，只见远处城里郊区某处升起一团烟。",
+      "problem": "“他们地势已到山的三分之一处”不是中文说法：“地势”说的是地形，不能拿来交代人爬到哪儿了，读者得停下来重排一遍；“城里郊区”也是硬拼（原文是 city 的 outskirts，即城郊）；“升起一团烟”的动词也偏弱。",
+      "suggestion": "忽然，地面轻轻晃了一下。片刻之后，他们此时已爬到山的三分之一处，凭高望去，只见远处城郊某处冒起一团烟。"
+    },
+    {
+      "id": "c07-s0044",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Again, this is government. Half of them don't understand what they're doing, ...",
+      "zh": "“再说一遍，这是政府。他们一半人根本不知道自己在干什么，剩下的人里恐怕还有不少，多少都拿着北极人的钱。……”",
+      "problem": "“再说一遍，这是政府。”在中文里首先读成祈使句——“你再说一遍”——泽像是在让芬重复，而原文 Again 是“我前面说过的那个意思”。这半句会让人愣一下。",
+      "suggestion": "“还是那句话，这是政府。他们一半人根本不知道自己在干什么，剩下的人里恐怕还有不少，多少都拿着北极人的钱。……”"
+    },
+    {
+      "id": "c07-s0062",
+      "severity": "low",
+      "type": "生硬",
+      "source": "held his breath for the last remaining ten ticks until the announcement.",
+      "zh": "泽又吸了一口气，屏住呼吸，数着最后剩下的十个嘀嗒，等待那句宣布。",
+      "problem": "“等待那句宣布”把动词 announce 的名词形式硬当名词用，中文没有“那句宣布”这种说法，读起来缺一个真正的宾语。",
+      "suggestion": "泽又吸了一口气，屏住呼吸，数着最后剩下的十个嘀嗒，等着那声宣告。"
+    },
+    {
+      "id": "c07-s0067",
+      "severity": "low",
+      "type": "欧化",
+      "source": "the players and their AIs will have full read access to the thought transcripts of each other's AI.",
+      "zh": "“不过，选手和他们的 AI 将拥有对彼此 AI 思考记录的完整读取权限。”",
+      "problem": "“拥有对……的完整读取权限”是英文名词短语的直搬，一串“的”套下来很费劲；中文更顺的是直接说成动作句。这是广播里的规则说明，念出来该让人一听就懂。",
+      "suggestion": "“不过，选手和他们的 AI 都能完整读取彼此 AI 的思考记录。”"
+    },
+    {
+      "id": "c07-s0072",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei started planting a few structures by hand, ... the AI had already made ...",
+      "zh": "泽开始亲手种下几座结构，一边复制粘贴 AI 已经做好的部分来提速，一边盯着白的记录，看白的 AI 还没有针对哪些策略做出反制。",
+      "problem": "“种下几座结构”搭配不成立：中文的“种”只用于植物一类，“结构”也不该拿“座”来量；而且“种下”与后半句的现代操作（复制粘贴）摆在一起更显别扭。s0074“泽开始亲手种下最后一座重要结构”同一处毛病。原文 planting 在棋盘语境下就是“布下／摆下”。",
+      "suggestion": "泽开始亲手摆下几处结构，一边复制粘贴 AI 已经做好的部分来提速，一边盯着白的记录，看白的 AI 还没有针对哪些策略做出反制。（s0074 同步改为“泽开始亲手布下最后一件重要结构：一艘载符飞船。”）"
+    },
+    {
+      "id": "c07-s0084",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Both AI transcripts were focused intensely on exploiting their territories, building more gliders, spaceships and walls, and expanding.",
+      "zh": "两份 AI 记录都全神贯注于开发各自的领地，造出更多滑翔机、飞船和墙，不断扩张。",
+      "problem": "主语错位：“记录”只是文本，不可能“全神贯注”，全神贯注的是记录里显示的两方 AI。中文必须把这层补出来，否则读者会在“记录怎么会专心”上卡一下。",
+      "suggestion": "两份 AI 记录里，双方都在全神贯注地开发自己的领地，造出更多滑翔机、飞船和墙，不断扩张。"
+    },
+    {
+      "id": "c07-s0088",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "On the big screen, the audience watched.",
+      "zh": "大屏幕上，观众们正看着。",
+      "problem": "“观众们正看着”缺宾语，单独成段像是话没说完。原句是镜头式的场面句，中文里该让视线落在大屏幕上。",
+      "suggestion": "观众们都盯着大屏幕。"
+    },
+    {
+      "id": "c07-s0096",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Some of Bai's gliders got into Zei's base in the southwest, and destroyed two of his symbols.",
+      "zh": "白的一些滑翔机闯进泽西南的基地，毁掉了他两个符记。",
+      "problem": "“泽西南的基地”三个名词连排，读者一时间分不清是“泽在西南的基地”还是别的意思（s0116“泽西南基地里剩下的符记”同样）。加一个“在”字就顺了。",
+      "suggestion": "白的一些滑翔机闯进泽在西南的基地，毁掉了他两个符记。"
+    },
+    {
+      "id": "c07-s0100",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Sitting on the other side of the room, in less comfortable public seating, Fin gazed with fear at the gameboard as well.",
+      "zh": "房间另一侧，坐在不那么舒服的公众座席上，芬也惴惴不安地盯着棋盘。",
+      "problem": "“坐在不那么舒服的公众座席上”是状语叠状语，读起来像英文分词的搬运；而且“公众座席”与本章别处的“观众席”（s0047）不是一套说法，读者会以为换了个地方。",
+      "suggestion": "房间另一侧，芬坐在条件差些的普通观众席上，也惴惴不安地盯着棋盘。"
+    },
+    {
+      "id": "c07-s0112",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Mu's solemn head shaking and Fin's expression of fear had both turned into excited smiles.",
+      "zh": "到这时，穆那副凝重摇头的样子，和芬满脸的惊恐，都已经变成了兴奋的笑容。",
+      "problem": "把“样子”和“笑容”拉成同一个主语在中文里错位——“摇头的样子”不会“变成笑容”，得各自说各自的转变；“那副……的样子”这种欧化指代也偏书面。",
+      "suggestion": "到这时，穆不再凝重地摇头，芬脸上的惊恐也变成了兴奋的笑容。"
+    },
+    {
+      "id": "c07-s0114",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "he would just repeat the same strategy, though a more near-term version of it: ... and have their exact style and direction be set off by a trigger that would only appear in ten turns.",
+      "zh": "泽想，这回只要重复同样的策略，只不过把时间尺度缩短：立刻在东北造出许多滑翔机工厂，让它们确切的样式和方向由一个十回合后才会出现的触发器设定。",
+      "problem": "两处翻译腔：(1)“把时间尺度缩短”是 a more near-term version 的硬译，泽不会这样在心里说话，本意是“这盘要打得更近更快”；(2)“让它们……由一个……触发器设定”是“让……由……”的被动欧化句式。",
+      "suggestion": "泽想，这回只要照搬同样的策略，只是要打得更近更快：立刻在东北造出许多滑翔机工厂，至于它们确切的样式和方向，交给一个十回合后才会出现的触发器来决定。"
+    },
+    {
+      "id": "c07-s0121",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "You only had to wait until our last season to beat me.",
+      "zh": "“恭喜你，泽。你只要等到我们最后一个赛季才赢了我。”",
+      "problem": "“只要……才”这个组合在中文里不成立（只要……就 / 非得……才），读起来是病句；白的语气是酸里带笑，不是陈述条件。",
+      "suggestion": "“恭喜你，泽。你非得等到我们最后一个赛季才赢我。”"
+    },
+    {
+      "id": "c07-s0128",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Keepers, Sentinels and Court judges are not fully insulated - it is still Parliament committees that are approving them - ...",
+      "zh": "“……掌则人、监审官和合议庭法官并非完全被隔离——批准他们的还是议会委员会——但至少中间隔了一层，而且这些职位还由预测分数把关。”",
+      "problem": "“并非完全被隔离”会被中文读者先读成“被人隔离开／隔离起来”，而原文 insulated 说的是制度上不受议会直接牵制。用在人身上、又是讲制度的长段论述里，“被隔离”明显出戏。",
+      "suggestion": "“……掌则人、监审官和合议庭法官并非完全独立——批准他们的还是议会委员会——但至少中间隔了一层，而且这些职位还由预测分数把关。”"
+    },
+    {
+      "id": "c07-s0129",
+      "severity": "low",
+      "type": "生硬",
+      "source": "That's the lesson. In the real world, ...",
+      "zh": "“这就是那一课。在真实世界里，光会思考还不够，还得会藏住自己的想法——有时候，甚至要对自己的盟友、或你本该服务的人藏住。”",
+      "problem": "“这就是那一课”里的“那一课”在中文里指某一堂具体的课，读者会回头找“哪一课”；原文 lesson 是这盘棋给出的道理。",
+      "suggestion": "“这就是这盘棋教给我们的道理。在真实世界里，光会思考还不够，还得会藏住自己的想法——有时候，甚至要对自己的盟友、或你本该服务的人藏住。”"
+    },
+    {
+      "id": "c07-s0132",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "A robot slid in carrying two bags, one with the number 1 on the side and the other with the number 2.",
+      "zh": "一个机器人滑进来，端着两个包，一个侧面写着数字1，另一个写着数字2。",
+      "problem": "“端着两个包”动词与宾语不搭：“端”用于碗杯、托盘这类平托的东西，两个礼品包应当是“拎／提／拿着”；后半句“一个侧面写着……”的主语也悬着。",
+      "suggestion": "一个机器人滑进来，拎着两个包，其中一个侧面写着数字1，另一个写着数字2。"
+    }
+  ]
+}
