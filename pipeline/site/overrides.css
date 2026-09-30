@@ -553,6 +553,20 @@ html[data-paragraph="webnovel"] #pane-zh .chapter-content .dateline { margin-blo
    ========================================================================================== */
 #reader-main .device-view { overscroll-behavior: auto; }
 
+/* ③ 移动端正文惯性：分栏模式下真正滚动的是 `#pane-zh/#pane-en` 这两层内部滚动容器，
+   而不是文档。iOS 对「非根滚动容器」需要显式声明 `-webkit-overflow-scrolling: touch`
+   才会给出原生惯性（动量 + 橡皮筋）；`overscroll-behavior-y: auto` 保证滚到底后把
+   手势接续给外层，而不是把手势整段吃掉。 */
+#pane-zh,
+#pane-en {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: auto;
+}
+/* 滚动模式下允许纵向平移（横向留给浏览器与脚本）；翻页模式没有可滚动的轴，
+   横向手势由 reader.js 的 swipe 接管，因此这里不限制 touch-action。 */
+html[data-page-mode="scroll"] #pane-zh,
+html[data-page-mode="scroll"] #pane-en { touch-action: pan-y; }
+
 /* ==========================================================================================
    用户请求 ④：中文不用斜体
    中文排版不使用斜体，成品里的着重一律落成加粗（译文与构建脚本都已保证不再产出 <em>）。

@@ -1053,10 +1053,31 @@
       host.scrollTop = Math.min(range, first ? saved.y : saved.p * range);
       host.style.scrollBehavior = behavior;
     }
+    // [用户反馈] 翻页/滚动的闪烁还有一个来源：relayout() 会 resetStyles() 还原全部行内样式、
+    // 再整段重新分列，而它被 MutationObserver / ResizeObserver / 多次 scheduleLayout 反复触发。
+    // 几何与排版参数都没变时，重排没有任何收益，只会在屏幕上闪一下。这里用一枚「几何指纹」
+    // 把无变化的重排挡掉；指纹一改（旋转、缩放、字号/行距/字体/段式、分栏可见性）照常重排。
+    var layoutKey = '';
+    function geometryKey() {
+      var s = state.settings || {};
+      var mainEl = document.getElementById('reader-main');
+      return [paged(), s.size, s.leading, s.font, s.paragraph,
+        window.innerWidth, window.innerHeight,
+        mainEl ? mainEl.clientWidth : 0,
+        models.filter(visible).map(function (m) { return m.lang; }).join(',')].join('|');
+    }
     function relayout() {
       frame = 0;
       if (!reading) return;
       var first = initial, mode = state.settings.mode;
+      var key = geometryKey();
+      if (ready && key === layoutKey) {
+        // 几何未变：保留已经应用的行内样式，只刷新进度与存档。
+        updateProgress();
+        queueSave();
+        return;
+      }
+      layoutKey = key;
       if (originals.length) resetStyles();
       models.filter(visible).forEach(function (m) {
         var saved = snapshots[m.lang];
@@ -1147,7 +1168,18 @@
     });
     api.step = function (direction) {
       if (!paged()) return typeof oldStep === 'function' ? oldStep.apply(api, arguments) : undefined;
-      if (frame) { cancelAnimationFrame(frame); relayout(); }
+      // [用户反馈] 点击「下一屏」高频闪烁的根因：这里原来会同步跑一整轮 relayout()
+      // （resetStyles 把所有行内样式还原 → layoutPages 再给表格套包装层、重新分列），
+      // 手机上就是一次全量重排 + 重绘，紧接着 displayPage 又改一次 transform，表现为闪一下。
+      // 翻页本身只需要改一个 transform：几何没有变化时不该重排。真正变了尺寸的场景
+      // （旋转、窗口缩放、字号/主题/段式切换）由 scheduleLayout 负责，不会被这里吞掉。
+      if (frame) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+        // 只有在已经完成过一次排版时才允许单纯取消：否则（首屏还没排完就点了翻页）
+        // 会把唯一的排版机会吞掉，页面停在未分列的状态、页码也永远不刷新。
+        if (!ready) relayout();
+      }
       var m = active(), delta = Number(direction) < 0 ? -1 : 1;
       if (!m) return;
       var next = m.page + delta;
