@@ -215,6 +215,11 @@ def build() -> None:
             NEXT_HREF=f"chapter-{next_ch:02d}.html" if next_ch else "../toc.html",
             PREV_LABEL=f"上一章 · 第{cn_num(prev_ch)}章" if prev_ch else "返回目录",
             NEXT_LABEL=f"下一章 · 第{cn_num(next_ch)}章" if next_ch else "返回目录",
+            # 底栏「上一章 / 下一章」：首章没有上一章、末章没有下一章，直接用 hidden 收起
+            PREV_CH_HREF=f"chapter-{prev_ch:02d}.html" if prev_ch else "",
+            NEXT_CH_HREF=f"chapter-{next_ch:02d}.html" if next_ch else "",
+            PREV_CH_HIDDEN="" if prev_ch else " hidden",
+            NEXT_CH_HIDDEN="" if next_ch else " hidden",
             TOC_ITEMS=toc_items("", CHAPTERS, datelines),
             CHAPTER_NO=str(ch),
             CHAPTER_TITLE_ZH=f"第{cn_num(ch)}章",

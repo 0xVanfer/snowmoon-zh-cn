@@ -92,8 +92,13 @@ book/images/*.svg            中文插图（视觉模型重绘）
   所需的插图会复制到 `book/site/assets/images/`。
 - 前端（HTML 模板 + `style.css` + `reader.js`）由 **视觉模型** 设计，源文件在 `pipeline/site/`，
   任务书见 `pipeline/prompts/design-reader-site.md`；`build_site.py` 只做占位符替换，
-  不参与视觉设计。占位符契约（`{{CONTENT_ZH}}`、`{{TOC_ITEMS}}`、`{{REPO_URL}}` 等）
-  写在该任务书里，模板与构建脚本必须保持一致。
+  不参与视觉设计。占位符契约（`{{CONTENT_ZH}}`、`{{TOC_ITEMS}}`、`{{REPO_URL}}`、
+  `{{PREV_CH_HREF}}` 等）写在该任务书里，模板与构建脚本必须保持一致。
+-视觉模型的产出是三份文件、多次调用生成的，段落之间存在接口不一致；视觉模型之后的修补统一放在
+  `pipeline/site/overrides.css`（由 `build_site.py` 注入到每个页面 `<head>` 末尾），分
+  「接口对齐 / 视觉复核修补 / 用户请求的界面调整」三类；视觉模型的原始产出只做最小改动，
+  便于将来用同一份任务书重新生成后做 diff。逐条记录见
+  [reader-site-design.md](reader-site-design.md) §5 与 §6。
 - 色彩可用性：原文用颜色区分说话人。阅读页除了保留颜色，还给纯对话段落加了同色左侧色条作为
   非颜色线索，并在主页说明「颜色仅作辅助」。
 - `qa_book.py`：书级体检（章节数、插图引用与存在性、占位符残留、中文标点/空格体例）。

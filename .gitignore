@@ -1,3 +1,23 @@
+# Python 缓存与虚拟环境
 __pycache__/
-*.pyc
+*.py[cod]
+.venv/
+venv/
+
+# macOS / 编辑器
 .DS_Store
+._*
+.idea/
+.vscode/
+*.swp
+*~
+
+# 流水线可再生中间产物（本地保留即可，不入库）
+#   cache/         vision_api.py 的模型调用磁盘缓存
+#   backup/        normalize_zh.py 每次运行前的译文备份
+#   previews/      插图渲染出的 PNG 预览
+#   site-previews/ 阅读站点多视口截图
+sources/work/cache/
+sources/work/backup/
+sources/work/previews/
+sources/work/site-previews/

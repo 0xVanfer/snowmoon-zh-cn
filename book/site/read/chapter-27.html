@@ -5,6 +5,7 @@
       data-dual-layout="columns"
       data-active-pane="zh"
       data-page-mode="scroll"
+      data-paragraph="standard"
       data-ui="visible"
       data-font="serif"
       style="--reader-size:20px; --reader-leading:1.8">
@@ -421,11 +422,22 @@
       </section>
   </main>
 
-  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
-    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
-    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
-    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
-    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与章节导航">
+    <!-- [集成修正] 第 3 段 CSS 用「页/屏」两套文案随 data-page-mode 切换（见 overrides.css）。
+         [用户请求] 另加上真正的上一章/下一章链接：首章没有上一章、末章没有下一章时由构建脚本加 hidden。 -->
+    <div class="reader-bottombar__group reader-bottombar__group--chapter">
+      <a id="btn-prev-chapter" class="reader-bar-button reader-bar-button--chapter"
+         href="chapter-26.html" aria-label="上一章">上一章</a>
+    </div>
+    <div class="reader-bottombar__group reader-bottombar__group--flip">
+      <button id="btn-prev-screen" class="reader-bar-button" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+      <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+      <button id="btn-next-screen" class="reader-bar-button" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+    </div>
+    <div class="reader-bottombar__group reader-bottombar__group--chapter">
+      <a id="btn-next-chapter" class="reader-bar-button reader-bar-button--chapter"
+         href="chapter-28.html" aria-label="下一章">下一章</a>
+    </div>
   </footer>
 
   <aside id="drawer"
@@ -505,11 +517,11 @@
       <fieldset class="setting-group">
         <legend>字号</legend>
         <div class="setting-options">
-          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
-          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
-          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
-          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
-          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 24</button>
         </div>
       </fieldset>
 
@@ -520,6 +532,19 @@
           <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
           <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
         </div>
+      </fieldset>
+
+      <!-- [用户请求] 段式：常规（首行缩进 2em）与「网文分行」（一句一行、段间留白）。
+           只作用于中文栏，由 reader.js 按句插入 .sentence-gap 实现（见 overrides.css）。 -->
+      <fieldset class="setting-group" aria-describedby="paragraph-help">
+        <legend>中文段式</legend>
+        <div class="setting-options">
+          <button type="button" data-set="paragraph" data-value="standard" aria-pressed="true">常规段落</button>
+          <button type="button" data-set="paragraph" data-value="webnovel" aria-pressed="false">一句一行</button>
+        </div>
+        <p id="paragraph-help" class="setting-help">
+          默认首行缩进 2em；「一句一行」把每句拆成独立一行并留出段间距，接近中文网文的阅读习惯。
+        </p>
       </fieldset>
 
       <fieldset class="setting-group">
@@ -563,8 +588,8 @@
       <fieldset class="setting-group" aria-describedby="sync-help">
         <legend>同步滚动</legend>
         <div class="setting-options">
-          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
-          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+          <button type="button" data-set="sync" data-value="off" aria-pressed="false">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="true">开启</button>
         </div>
         <p id="sync-help" class="setting-help">
           对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
@@ -596,6 +621,7 @@
             <dd>切换中文、英文与对照模式</dd>
           </div>
         </dl>
+        <p>底栏两侧的「上一章 / 下一章」直接跳章；「上一屏 / 下一屏」按当前翻页模式滚动。</p>
       </section>
     </div>
   </aside>

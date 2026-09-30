@@ -1,5 +1,10 @@
-/* 集成补充样式（本文件不属于视觉模型的原始产出，理由见 docs/pipeline.md「集成修正」）。
-   只做「接口对齐」与「视觉复核发现的问题」两类修补，不改动设计语言。 */
+/* 集成补充样式（本文件不属于视觉模型的原始产出，逐条理由见
+   docs/reader-site-design.md §5「集成修正」与 §6「验证」）。
+   三类内容：
+   ① 接口对齐：视觉模型分多次生成、段落之间约定不一致的地方（见 docs/reader-site-design.md §5）；
+   ② 视觉复核修补：截图复核发现的具体问题；
+   ③ 用户请求：按钮与间距的现代化重设计、底栏上一章/下一章、网文分行段式。
+   ① ② 保持最小修补，③ 集中在文件末尾，便于将来用同一份任务书重新生成视觉模型产出后做 diff。 */
 
 /* 1) 插图是「中文重绘版」：对照分栏时只在中文栏显示一次，避免同一张图左右各出一份。
       分栏时英文栏只看文字；窄屏标签页切到 English 时仍然有图。 */
@@ -155,3 +160,383 @@ html[data-page-mode="paged"] .reader-flow > .chapter-content { height: auto; }
 /* 13) 主页 hero：左栏原来 `align-self: center`，宽屏下与右栏首行错开约 200px，左上角留一大块空白。
        改成两栏顶对齐，视觉重心一致。 */
 .home-hero .hero-heading { align-self: start; }
+
+/* ==========================================================================================
+   用户请求 ①：按钮与间距的现代化重设计
+   统一为一套「胶囊控件」语言：圆角、细描边、面/底分层明确、悬停有反馈、按下有位移，
+   并把原来挤在一起的控件（顶栏、底栏、设置面板、章末导航）改成等距排布。
+   ========================================================================================== */
+
+:root {
+  --pill-radius: 999px;
+  --control-height: 40px;
+  --control-height-touch: 44px;
+  --control-font-size: 13.5px;
+  --ring: 0 0 0 3px color-mix(in srgb, var(--accent) 32%, transparent);
+  --lift: 0 6px 18px rgba(0, 0, 0, .10);
+  /* 胶囊描边：纸色主题下 --border 对 --bg 只有 1.4:1，控件「看不出形状」；
+     混入正文色后约 4:1，既保留纸感又达到 WCAG 非文本对比要求。 */
+  --control-border: color-mix(in srgb, var(--text) 42%, var(--border));
+}
+
+/* --- 顶栏：品牌 + 章名 + 三枚胶囊控件 --- */
+#topbar { gap: 14px; padding-inline: 24px; }
+/* 品牌靠左、控件靠右：窄屏章名隐藏后右侧不再留一块死白 */
+.reader-topbar__navigation { gap: 10px; justify-content: space-between; }
+#topbar .reader-brand {
+  padding-inline: 2px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: none;
+}
+.reader-topbar__chapter {
+  padding-inline: 12px;
+  border-inline-start: 1px solid var(--border);
+  font-size: 13.5px;
+}
+#topbar .reader-control,
+#topbar #btn-lang {
+  min-width: 0;
+  min-height: var(--control-height);
+  padding: 8px 15px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--pill-radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--control-font-size);
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: border-color .16s ease, background-color .16s ease, color .16s ease,
+    box-shadow .16s ease, transform .12s ease;
+}
+/* 语言是高频按钮，做成实心强调胶囊，一眼能看出当前语言模式 */
+#topbar #btn-lang {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+@media (hover: hover) {
+  #topbar .reader-control:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: var(--ring);
+  }
+  #topbar #btn-lang:hover { box-shadow: var(--ring); }
+}
+#topbar .reader-control:active,
+#topbar #btn-lang:active { transform: translateY(1px); }
+
+/* --- 底栏：三段式（上一章 · 翻屏与进度 · 下一章），不再挤成一排 --- */
+#bottombar {
+  justify-content: space-between;
+  gap: 12px;
+  padding-inline: 20px;
+}
+.reader-bottombar__group {
+  display: flex;
+  /* flex-basis 为 0：两侧分组等宽，中间那组才会落在视口正中
+     （basis:auto 时「下一章」比「上一章」宽，中段会跟着偏） */
+  flex: 1 1 0;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.reader-bottombar__group--flip { flex: 0 1 auto; justify-content: center; }
+.reader-bottombar__group--chapter:first-child { justify-content: flex-start; }
+.reader-bottombar__group--chapter:last-child { justify-content: flex-end; }
+#bottombar .reader-bar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: var(--control-height);
+  padding: 8px 16px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--pill-radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--control-font-size);
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: border-color .16s ease, background-color .16s ease, color .16s ease,
+    box-shadow .16s ease, transform .12s ease;
+}
+#bottombar .reader-bar-button--chapter {
+  /* 强调色与正文色相混：既保留「章链接」的暖金倾向，描边对底栏底色也有约 4:1，
+     纯 --accent 45% 混 --border 只有 2.4:1，弱于同排的翻屏胶囊 */
+  border-color: color-mix(in srgb, var(--accent) 62%, var(--text));
+  color: var(--accent);
+}
+#bottombar .reader-bar-button--chapter[hidden] { display: none; }
+@media (hover: hover) {
+  #bottombar .reader-bar-button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: var(--ring);
+  }
+  #bottombar .reader-bar-button--chapter:hover {
+    background: var(--accent);
+    color: var(--bg);
+  }
+}
+#bottombar .reader-bar-button:active { transform: translateY(1px); }
+#page-indicator { min-width: 7em; font-size: var(--control-font-size); }
+/* 底栏整体收起时，新加的上一章/下一章链接也要一起隐藏 */
+html[data-ui="hidden"] #bottombar a { visibility: hidden; }
+
+/* --- 设置面板：分组清晰、选项等距、选中态实心；整体高度要能在 1440×900 内一屏放下 --- */
+#settings-panel { width: 392px; padding-bottom: 24px; }
+#settings-panel .reader-dialog__body { padding: 18px 22px 6px; }
+#settings-panel .setting-group { margin-bottom: 14px; }
+#settings-panel .setting-group legend,
+#settings-panel .setting-group h3 {
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.setting-options { gap: 8px; }
+.setting-options button {
+  min-width: 0;
+  min-height: 38px;
+  padding: 7px 15px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--pill-radius);
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--control-font-size);
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: border-color .16s ease, background-color .16s ease, color .16s ease,
+    box-shadow .16s ease;
+}
+/* 字号有 5 档，等分一行，避免第 5 个被挤到第二行独占一整行 */
+#settings-panel .setting-options [data-set="size"] {
+  flex: 1 1 0;
+  padding-inline: 6px;
+}
+@media (hover: hover) {
+  .setting-options button:hover { border-color: var(--accent); }
+}
+.setting-options [aria-pressed="true"] {
+  border-color: var(--accent);
+  outline: none;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+}
+.setting-options button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.setting-options [aria-pressed="true"]:focus-visible { outline-color: var(--text); }
+#settings-panel .setting-help,
+#settings-panel .settings-note { line-height: 1.6; }
+#settings-panel .settings-note { margin-bottom: 8px; }
+/* 「阅读操作」原来是 flex 行，标题、说明与快捷键表会并排挤在一起；改为按行堆叠 */
+#settings-panel .reader-shortcuts { display: block; margin-top: 4px; }
+#settings-panel .reader-shortcuts h3 {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12.5px;
+  letter-spacing: .08em;
+}
+#settings-panel .reader-shortcuts p { margin: 0 0 8px; }
+#settings-panel .reader-shortcuts dl { display: grid; gap: 6px; margin: 0 0 10px; }
+#settings-panel .reader-shortcuts dl > div {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+#settings-panel .reader-shortcuts dt { flex: 0 0 auto; min-width: 6.5em; }
+#settings-panel .reader-shortcuts dd { margin: 0; }
+
+/* --- 面板（目录抽屉 / 设置）的标题栏与关闭按钮 --- */
+.reader-dialog__header { padding: 14px 20px; gap: 12px; }
+.reader-dialog__header button {
+  min-width: 0;
+  min-height: 34px;
+  padding: 6px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--pill-radius);
+  background: transparent;
+  color: var(--muted);
+  font-size: var(--control-font-size);
+  transition: border-color .16s ease, background-color .16s ease, color .16s ease;
+}
+@media (hover: hover) {
+  .reader-dialog__header button:hover {
+    border-color: var(--border);
+    background: var(--bg);
+    color: var(--text);
+  }
+}
+#drawer-toc { padding: 12px 20px 20px 40px; }
+#drawer-toc a {
+  border-radius: 10px;
+  transition: background-color .16s ease, color .16s ease;
+}
+@media (hover: hover) {
+  #drawer-toc a:hover { background: var(--bg); color: var(--accent); }
+}
+
+/* --- 语言标签条：分段控件观感 --- */
+#lang-tabs { gap: 8px; align-items: center; }
+#lang-tabs button {
+  flex: 0 1 auto;
+  min-width: 92px;
+  min-height: 32px;
+  padding: 4px 18px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--pill-radius);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: var(--control-font-size);
+  transition: border-color .16s ease, background-color .16s ease, color .16s ease;
+}
+html[data-active-pane="zh"] #lang-tabs [data-tab-lang="zh"],
+html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
+  border-color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+/* --- 章末导航：三枚胶囊，窄屏改为整行堆叠，避免挤压换行 --- */
+#chapter-nav { gap: 12px; margin-block: 40px; }
+#chapter-nav a {
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 18px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--pill-radius);
+  background: var(--surface);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color .16s ease, background-color .16s ease, color .16s ease,
+    box-shadow .16s ease;
+}
+#nav-prev { justify-self: start; }
+#nav-toc { justify-self: center; }
+#nav-next { justify-self: end; justify-content: center; text-align: center; }
+@media (hover: hover) {
+  #chapter-nav a:hover { border-color: var(--accent); color: var(--accent); box-shadow: var(--ring); }
+}
+
+/* --- 主页 / 目录页的按钮与卡片 --- */
+.button {
+  min-height: 46px;
+  padding: 11px 22px;
+  border-radius: var(--pill-radius);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+  transition: border-color .16s ease, background-color .16s ease, color .16s ease,
+    box-shadow .16s ease, transform .12s ease;
+}
+.button-primary { border-color: var(--accent); background: var(--accent); color: var(--bg); }
+.button-secondary { border-color: var(--control-border); background: var(--surface); color: var(--accent); }
+/* style.css 的 `.reading-actions > a` / `.toc-actions > a`（0,1,1）比 `.button-primary`（0,1,0）
+   更具体，会把主按钮的强调色底、次按钮的描边一起盖掉；这里按同样的层级补回，主次不再颠倒。 */
+.reading-actions > a.button,
+.toc-actions > a.button { border-radius: var(--pill-radius); }
+.reading-actions > a.button-primary,
+.toc-actions > a.button-primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+.reading-actions > a.button-secondary,
+.toc-actions > a.button-secondary {
+  border-color: var(--control-border);
+  background: var(--surface);
+  color: var(--accent);
+}
+@media (hover: hover) {
+  .button-primary:hover,
+  .reading-actions > a.button-primary:hover { transform: translateY(-1px); box-shadow: var(--lift); }
+}
+.button:active { transform: translateY(1px); }
+.reading-actions { gap: 14px; }
+.toc-actions { gap: 14px; }
+.back-to-top,
+.toc-actions > a {
+  border-color: var(--control-border);
+  border-radius: var(--pill-radius);
+  padding: 10px 18px;
+  transition: border-color .16s ease, color .16s ease, box-shadow .16s ease;
+}
+.chapter-link {
+  border-radius: 14px;
+  padding: 20px 22px;
+  transition: border-color .16s ease, box-shadow .16s ease, transform .12s ease;
+}
+/* 当前章的 4px 左侧强调条会挤掉 3px，章名与其它卡片错开；补回内边距让左对齐线一致 */
+.chapter-link.is-current,
+.chapter-link[aria-current="page"],
+.toc-list > .is-current > .chapter-link { padding-inline-start: 19px; }
+/* 既未读也不是当前章时，空的状态行不再白占一行（有标记时照常显示） */
+.chapter-status:empty { display: none; }
+.is-read .chapter-status:empty,
+.is-current .chapter-status:empty,
+[aria-current] .chapter-status:empty,
+.chapter-status.is-read:empty,
+.chapter-status.is-current:empty { display: block; }
+@media (hover: hover) {
+  .chapter-link:hover { transform: translateY(-2px); box-shadow: var(--lift); }
+}
+
+@media (max-width: 767px) {
+  #topbar { gap: 8px; padding-inline: 12px; }
+  #topbar .reader-control,
+  #topbar #btn-lang { min-height: var(--control-height-touch); padding: 8px 12px; }
+  .reader-topbar__chapter { padding-inline: 0; border-inline-start: 0; }
+  /* 窄屏按钮高 44px，48px 的底栏会让胶囊贴住屏幕下沿，这里加高并留出刘海区 */
+  #bottombar {
+    height: calc(56px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    gap: 6px;
+    padding-inline: 10px;
+  }
+  body.reader-page { padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+  .reader-bottombar__group { gap: 4px; }
+  #bottombar .reader-bar-button {
+    min-height: var(--control-height-touch);
+    padding: 6px 8px;
+    font-size: 12.5px;
+  }
+  #page-indicator { min-width: 4.5em; font-size: 12px; }
+  #chapter-nav { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  #chapter-nav a { width: 100%; }
+  #nav-prev, #nav-toc, #nav-next { justify-self: stretch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #topbar .reader-control, #topbar #btn-lang, #bottombar .reader-bar-button,
+  .setting-options button, .reader-dialog__header button, #lang-tabs button,
+  #chapter-nav a, .button, .chapter-link, #drawer-toc a {
+    transition: none;
+  }
+  #topbar .reader-control:active, #topbar #btn-lang:active,
+  #bottombar .reader-bar-button:active, .button:active { transform: none; }
+}
+
+/* ==========================================================================================
+   用户请求 ②：「网文分行」中文段式（一句一行 + 段间留白）
+   断句由 reader.js 在每句终止符后插入 .sentence-gap（display:block 的空 span）实现，
+   内联样式（说话人颜色、加粗、虚构语言字体）全部保留。常规段落完全不受影响。
+   ========================================================================================== */
+html[data-paragraph="webnovel"] #pane-zh .chapter-content p { text-indent: 0; }
+html[data-paragraph="webnovel"] #pane-zh .chapter-content .sentence-gap {
+  display: block;
+  height: .42em;
+}
+html[data-paragraph="webnovel"] #pane-zh .chapter-content > p + p { margin-top: .52em; }
+html[data-paragraph="webnovel"] #pane-zh .chapter-content .dialog { padding-block: 0; }
+html[data-paragraph="webnovel"] #pane-zh .chapter-content .dialog.railed { padding-inline-start: 14px; }
+html[data-paragraph="webnovel"] #pane-zh .chapter-content .scene-break,
+html[data-paragraph="webnovel"] #pane-zh .chapter-content .dateline { margin-block: 16px; }

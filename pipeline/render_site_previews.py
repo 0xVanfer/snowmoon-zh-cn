@@ -37,8 +37,12 @@ try{localStorage.setItem("snowmoon.reader.v1", JSON.stringify(%s));}catch(e){}
 PRESETS: dict[str, tuple] = {
     "home-wide":      ("index.html", 1440, 900, {"settings": {"theme": "paper"}}, 0),
     "home-narrow":    ("index.html", 390, 844, {"settings": {"theme": "paper"}}, 0),
-    "toc-wide":       ("toc.html", 1440, 900, {"settings": {"theme": "paper"}, "last": 7}, 0),
-    "toc-narrow":     ("toc.html", 390, 844, {"settings": {"theme": "paper"}, "last": 7}, 0),
+    "toc-wide":       ("toc.html", 1440, 900,
+                       {"settings": {"theme": "paper"}, "last": 7,
+                        "chapters": {"1": {"read": True}}}, 0),
+    "toc-narrow":     ("toc.html", 390, 844,
+                       {"settings": {"theme": "paper"}, "last": 7,
+                        "chapters": {"1": {"read": True}}}, 0),
     "read-wide-zh":   ("read/chapter-01.html", 1440, 900, {"settings": {"theme": "paper", "lang": "zh"}}, 300),
     "read-wide-dual": ("read/chapter-01.html", 1600, 900, {"settings": {"theme": "paper", "lang": "dual"}}, 400),
     "read-wide-dark": ("read/chapter-07.html", 1280, 800, {"settings": {"theme": "dark", "lang": "zh"}}, 400),
@@ -74,6 +78,18 @@ PRESETS: dict[str, tuple] = {
                            {"settings": {"theme": "paper", "lang": "zh"}}, 400),
     "read-bottom": ("read/chapter-01.html", 1440, 900,
                     {"settings": {"theme": "paper", "lang": "zh"}}, 400),
+    # 「一句一行」中文段式
+    "read-webnovel-zh": ("read/chapter-01.html", 1440, 900,
+                         {"settings": {"theme": "paper", "lang": "zh", "paragraph": "webnovel"}}, 400),
+    # 末章：底栏「下一章」应隐藏、「上一章」指向第 31 章
+    "read-last-chapter": ("read/chapter-32.html", 1440, 900,
+                          {"settings": {"theme": "paper", "lang": "zh"}}, 400),
+    # 滚轮接管：内层滚动区先滚自己、到边接续整页、整页到底再滚正文栏
+    "read-wheel-chain": ("read/chapter-01.html", 1600, 900,
+                         {"settings": {"theme": "paper", "lang": "dual", "sync": True}}, 400),
+    # 先窄后宽（手机框 390 → 拉宽到 1600）：验证能从标签页恢复分栏
+    "read-dual-recover": ("read/chapter-01.html", 390, 844,
+                          {"settings": {"theme": "paper", "lang": "dual"}}, 400),
 }
 
 
@@ -86,6 +102,7 @@ FRAMED = {
     "read-narrow-zh": (390, 844),
     "read-narrow-dual": (390, 844),
     "read-narrow-tab-en": (390, 844),
+    "read-dual-recover": (390, 844),
 }
 
 FRAME_HTML = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
@@ -113,19 +130,57 @@ ACTIONS = {
                              "document.querySelector('#btn-next-screen').click();"),
     "read-wide-settings": "document.getElementById('btn-settings').click();",
     "read-scroll-next": "document.querySelector('#btn-next-screen').click();",
-    # 反复滚几次：分栏判定是异步的，第一次滚动可能还没进入「分栏 + 同步」状态
+    # 反复滚几次：分栏判定是异步的，第一次滚动可能还没进入「分栏 + 同步」状态。
+    # 另需手动补一次 scroll 事件：无头 + --virtual-time-budget 下，嵌套滚动容器（正文栏）
+    # 的 scroll 事件经常排进队列却轮不到一次渲染帧去派发，探针会误判成「同步滚动没生效」。
+    # 派发事件测的是页面「收到栏内滚动后应如何响应」，浏览器自身是否派发不在被测范围内。
     "read-sync-scroll": ("var n=0,iv=setInterval(function(){var z=document.getElementById('pane-zh');"
                          "z.scrollTop=Math.round((z.scrollHeight-z.clientHeight)*0.5);"
+                         "z.dispatchEvent(new Event('scroll'));"
                          "if(++n>6)clearInterval(iv);},300);"),
     "read-keyboard": "document.dispatchEvent(new KeyboardEvent('keydown',{key:'t',bubbles:true}));",
     "read-clickzone": ("var p=document.getElementById('pane-zh'), r=p.getBoundingClientRect();"
                        "p.dispatchEvent(new MouseEvent('click',{bubbles:true,detail:1,"
                        "clientX:r.left+r.width*0.85,clientY:r.top+120}));"),
-    # 连续滚几次：站点要等正文准备完（ready）后才记录进度，单次滚动可能发生在 ready 之前
-    "read-progress-save": ("var n=0,iv=setInterval(function(){window.scrollTo(0,2200);"
-                           "if(++n>20)clearInterval(iv);},200);"),
+    # 连续滚几次：站点要等正文准备完（ready，relayout 跑完才会写进度条宽度）之后才记录进度，
+    # 先滚动的事件会被丢弃。这里先等进度条出现宽度再滚；与 read-sync-scroll 同理，
+    # 无头 + 虚拟时间下滚动事件偶发派发不到，补派发一次（测的是页面「收到滚动后如何记录进度」）。
+    "read-progress-save": ("var n=0,idle=0,iv=setInterval(function(){"
+                           "var bar=document.getElementById('progress-bar');"
+                           "if(!bar||!bar.style.width){if(++idle>16)clearInterval(iv);return;}"
+                           "window.scrollTo(0,2200);document.dispatchEvent(new Event('scroll'));"
+                           "if(++n>8)clearInterval(iv);},250);"),
     "read-bottom": ("var n=0,iv=setInterval(function(){window.scrollTo(0,"
                     "document.documentElement.scrollHeight);if(++n>6)clearInterval(iv);},300);"),
+    # 滚轮接管：在正文里临时插一个可滚动区块，用合成的 wheel 事件走三条分支
+    # （内层有余量 / 内层到边 + 整页在顶部 / 整页到底）
+    "read-wheel-chain": (
+        "window.__wheel={};"
+        "var content=document.querySelector('#pane-zh .chapter-content');"
+        "var host=document.createElement('div');"
+        "host.id='wheel-test';"
+        "host.style.cssText='height:120px;overflow-y:auto;margin:8px 0;border:1px solid #ccc';"
+        "host.innerHTML='<div style=\"height:1400px\">inner</div>';"
+        "content.insertBefore(host,content.firstChild);"
+        "var pane=document.getElementById('pane-zh');"
+        "var doc=document.scrollingElement||document.documentElement;"
+        "function wheel(el,dy){var e=new WheelEvent('wheel',{deltaY:dy,bubbles:true,cancelable:true});"
+        "el.dispatchEvent(e);return e;}"
+        "host.scrollTop=100;"
+        "var ev1=wheel(host,200);"
+        "window.__wheel.innerPrevented=ev1.defaultPrevented;"
+        "window.__wheel.innerPaneDelta=pane.scrollTop;"
+        "window.__wheel.innerDocDelta=doc.scrollTop;"
+        "host.scrollTop=host.scrollHeight-host.clientHeight;"
+        "doc.scrollTop=0;pane.scrollTop=0;"
+        "wheel(host,400);"
+        "window.__wheel.edgeDocDelta=doc.scrollTop;"
+        "window.__wheel.edgePaneDelta=pane.scrollTop;"
+        "doc.scrollTop=doc.scrollHeight-doc.clientHeight;pane.scrollTop=0;"
+        "wheel(host,200);"
+        "window.__wheel.deepPaneDelta=pane.scrollTop;"
+        "window.__wheel.headingTop=Math.round("
+        "document.querySelector('.chapter-heading').getBoundingClientRect().top);"),
 }
 
 ACTION_SCRIPT = ('<script id="preset-action">window.addEventListener("load",function(){'
@@ -189,7 +244,7 @@ def shoot(page: Path, png: Path, w: int, h: int, wait_ms: int) -> bool:
 
 # headless 的 --screenshot 拍「滚动后的页面」会出空白图，所以滚动类的预设只跑探针、不截图
 SKIP_SHOTS = {"read-scroll-next", "read-clickzone", "read-progress-save", "read-bottom",
-              "read-sync-scroll"}
+              "read-sync-scroll", "read-wheel-chain"}
 
 
 def main() -> None:

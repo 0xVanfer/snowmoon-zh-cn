@@ -9,6 +9,9 @@
   var listeners = Object.create(null);
   var themes = ['paper', 'light', 'dark', 'night'];
   var languages = ['zh', 'en', 'dual'];
+  // [集成修正] 段式：standard = 首行缩进 2em 的常规中文段落；webnovel = 一句一行、
+  // 段间留白的「网文」版式（用户可请求项，见 docs/reader-site-design.md）。
+  var paragraphStyles = ['standard', 'webnovel'];
   var dark = false;
   var narrow = false;
   try {
@@ -23,7 +26,9 @@
     theme: dark ? 'dark' : 'paper',
     mode: 'scroll',
     lang: 'zh',
-    sync: false
+    // [集成修正] 用户要求：同步滚动默认开启（只在「对照 + 宽屏分栏」下有意义）
+    sync: true,
+    paragraph: 'standard'
   });
   var choices = {
     size: [16, 18, 20, 22, 24],
@@ -32,7 +37,8 @@
     theme: themes,
     mode: ['scroll', 'paged'],
     lang: languages,
-    sync: [true, false]
+    sync: [true, false],
+    paragraph: paragraphStyles
   };
 
   // [集成修正] 第 2、3 段按 CSS 选择器调用 qs()（如 '#reader-main'），第 1 段内部按裸 id 调用。
@@ -137,6 +143,7 @@
     html.setAttribute('data-lang-mode', s.lang);
     html.setAttribute('data-page-mode', s.mode);
     html.setAttribute('data-sync', s.sync ? 'on' : 'off');
+    html.setAttribute('data-paragraph', s.paragraph);
     html.style.setProperty('--reader-size', s.size + 'px');
     html.style.setProperty('--reader-leading', String(s.leading));
 
@@ -342,8 +349,6 @@
   var layout = root.getAttribute('data-dual-layout') === 'tabs' ? 'tabs' : 'columns';
   var lastLang = settings().lang || 'zh';
   var lastMode = settings().mode || 'scroll';
-  var syncFrame = 0;
-  var syncSource = null;
   var layoutFrame = 0;
   var resizeTimer = 0;
   var restoring = false;
@@ -464,12 +469,24 @@
     });
   }
 
+  // [集成修正] 分栏判定要用「页面可用空间」，不能用 #reader-main 的实测尺寸：
+  // main 在标签页/单栏下被 CSS 的 max-width:38em 限宽、高度又是整篇正文的自然高度，
+  // 量到的是「当前布局」而不是「还能放多宽」。于是窗口一旦变窄（或开发工具占位、
+  // 旋转屏幕、系统缩放变化）掉进标签页，就再也量不到分栏所需的宽度，卡在窄屏样式里——
+  // 这就是「宽屏偶发变成窄屏」的原因。这里改为按视口宽 − 边距、并夹到分栏容器最大宽，
+  // 高度按视口高 − 顶栏/底栏，两者都与当前是分栏还是标签页无关。
+  var DUAL_MAX_EM = 76;       // 与 CSS 的 max-width: calc(76em + 32px) 对齐
+  var DUAL_GAP_PX = 32;       // 分栏中缝 column-gap
   function measureLayout() {
-    var style = getComputedStyle(main);
-    var W = main.clientWidth - (parseFloat(style.paddingLeft) || 0) - (parseFloat(style.paddingRight) || 0);
-    var H = main.clientHeight - (parseFloat(style.paddingTop) || 0) - (parseFloat(style.paddingBottom) || 0);
     var F = parseFloat(getComputedStyle(root).getPropertyValue('--reader-size'));
     if (!(F > 0)) F = 20;
+    var pageW = root.clientWidth || window.innerWidth || 0;
+    var gutter = pageW <= 767 ? 40 : 80;      // 与 CSS 的 calc(100% - 40px / 80px) 对齐
+    var W = Math.min(pageW - gutter, DUAL_MAX_EM * F + DUAL_GAP_PX);
+    var topbar = S.qs('#topbar'), bottombar = S.qs('#bottombar');
+    var reserve = (topbar && topbar.offsetHeight ? topbar.offsetHeight : 56) +
+      (bottombar && bottombar.offsetHeight ? bottombar.offsetHeight : 48);
+    var H = (window.innerHeight || root.clientHeight || 0) - reserve;
     if (!(W > 0 && H > 0)) return;
     var next = layout;
     // [集成修正] 原判据按「每栏 34 个汉字」折算（68F），1366/1440 宽的常见桌面窗口会被判成标签页，
@@ -477,7 +494,9 @@
     // 每栏约 600px（20px 字号下 30 字/行），仍在中文舒适行长内。
     if (layout === 'tabs' && W >= 60 * F + 64 && W / H >= 1.15) next = 'columns';
     if (layout === 'columns' && (W < 60 * F + 32 || W / H < 1.05)) next = 'tabs';
-    if (next === layout) return;
+    // [集成修正] 第 1 段在切到「中文/English」时会把 data-dual-layout 强制写回 columns，
+    // 与这里的 layout 变量可能对不上；只比 next === layout 会提前返回、把错误属性和 CSS 一起留下。
+    if (next === layout && root.getAttribute('data-dual-layout') === layout) return;
     capture();
     restoring = true;
     layout = next;
@@ -497,9 +516,11 @@
   if (window.ResizeObserver) {
     var observer = new ResizeObserver(scheduleLayout);
     observer.observe(main);
-  } else {
-    window.addEventListener('resize', scheduleLayout);
   }
+  // [集成修正] 除了观察正文容器，窗口自身的 resize 也照样接上：只靠 ResizeObserver 时，
+  // 视口变化（缩放、iframe 被拉宽、无头环境丢掉一次 RO 回调）可能不触发重算，
+  // 「由窄变宽应该恢复分栏」就会卡在标签页样式。
+  window.addEventListener('resize', scheduleLayout);
 
   function syncEnabled() {
     // [集成修正] 第 1 段把 sync 规范化成布尔值（true/false），第 2 段原来只认字符串 'on'，
@@ -520,21 +541,21 @@
     positions[lang] = clamp(m.y / Math.max(1, m.max));
     setActive(lang);
     if (!syncEnabled()) return;
-    syncSource = lang;
-    if (syncFrame) return;
-    syncFrame = requestAnimationFrame(function () {
-      syncFrame = 0;
-      if (!syncEnabled() || restoring || mode() !== 'scroll') return;
-      var source = syncSource;
-      var other = source === 'zh' ? 'en' : 'zh';
-      if (scrollBox(source) !== scrollBox(other)) writePosition(other, positions[source]);
-    });
+    // [集成修正] 原来把对齐推迟到 requestAnimationFrame 里做：无头环境、后台标签页这类
+    // 不产生新帧的场景里 rAF 可能迟迟不执行，对栏就停在原位、看起来像「同步滚动没生效」。
+    // 这里直接同步写入另一栏——写入后对方产生的 scroll 事件会被上面的 expected 判定吃掉，
+    // 不会形成回环，也省掉一帧延迟。
+    var other = lang === 'zh' ? 'en' : 'zh';
+    if (scrollBox(lang) !== scrollBox(other)) writePosition(other, positions[lang]);
   }
-  langs.forEach(function (lang) {
-    var el = pane(lang);
-    if (!el) return;
-    el.addEventListener('scroll', function (event) { handleScroll(lang, event.target); }, true);
-  });
+  // [集成修正] 正文栏的 scroll 事件改在 document 的捕获阶段集中接收，两栏共用同一条判定，
+  // 不再逐栏挂监听（也不怕某一栏后来被重建而漏挂）。
+  document.addEventListener('scroll', function (event) {
+    var node = event.target;
+    if (!node || node.nodeType !== 1) return;
+    if (node.id === 'pane-zh') handleScroll('zh', node);
+    else if (node.id === 'pane-en') handleScroll('en', node);
+  }, true);
   window.addEventListener('scroll', function (event) {
     if (event.target !== document && event.target !== window) return;
     var lang = currentLang();
@@ -633,6 +654,127 @@
     });
   });
 
+  // ---- [用户请求] 段式：「网文分行」把中文正文按句断开（一句一行），更接近中文网文阅读习惯 ----
+  // 断句只在文本节点上做：在每句终止符号之后插入一个 display:block 的空 span，
+  // 于是同一段里的句子各占一行，颜色、加粗、虚构语言等内联样式都原样保留；
+  // 切回「常规」时把这些 span 删掉即可，正文 DOM 与构建产物保持一致。
+  var SENTENCE_END = /[^。！？…!?]*[。！？…!?]+[”’」』）)\]】]*/g;
+  var PARAGRAPH_SKIP = '.scene-break, .dateline, .chapter-title';
+  var PARAGRAPH_SKIP_INSIDE = '.device-view, figure, table, .dz-card, .pagination-table-scroll';
+
+  function addSentenceGaps(p) {
+    var walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, null);
+    var texts = [], node;
+    while ((node = walker.nextNode())) texts.push(node);
+    texts.forEach(function (text) {
+      var value = text.nodeValue;
+      if (!/[。！？…!?]/.test(value)) return;
+      var frag = document.createDocumentFragment(), last = 0, match;
+      SENTENCE_END.lastIndex = 0;
+      while ((match = SENTENCE_END.exec(value)) !== null) {
+        if (!match[0].length) break;
+        frag.appendChild(document.createTextNode(match[0]));
+        var gap = document.createElement('span');
+        gap.className = 'sentence-gap';
+        gap.setAttribute('aria-hidden', 'true');
+        frag.appendChild(gap);
+        last = SENTENCE_END.lastIndex;
+      }
+      if (!last) return;
+      if (last < value.length) frag.appendChild(document.createTextNode(value.slice(last)));
+      if (text.parentNode) text.parentNode.replaceChild(frag, text);
+    });
+    // 段末不留空行
+    var tail = p.lastElementChild;
+    while (tail && tail.classList && tail.classList.contains('sentence-gap')) {
+      var previous = tail.previousSibling;
+      tail.parentNode.removeChild(tail);
+      tail = previous && previous.nodeType === 1 ? previous : null;
+    }
+  }
+
+  function removeSentenceGaps(p) {
+    if (!p.querySelector('.sentence-gap')) return;
+    S.qsa('.sentence-gap', p).forEach(function (gap) {
+      if (gap.parentNode) gap.parentNode.removeChild(gap);
+    });
+    p.normalize();
+  }
+
+  function applyParagraphStyle() {
+    var el = pane('zh');
+    if (!el) return;
+    var on = language() !== 'en' && settings().paragraph === 'webnovel';
+    S.qsa('.chapter-content p', el).forEach(function (p) {
+      if (p.matches(PARAGRAPH_SKIP) || p.closest(PARAGRAPH_SKIP_INSIDE)) return;
+      // 断句会插入标记元素，重复执行必须幂等（每次改设置都会重跑一遍）
+      if (on) {
+        if (!p.querySelector('.sentence-gap')) addSentenceGaps(p);
+      } else {
+        removeSentenceGaps(p);
+      }
+    });
+  }
+
+  // ---- [用户请求] 滚轮：指针在插图/终端面板上时先滚它们，到顶或到底再滚正文；
+  //      分栏时正文向下滚先把整页滚下去，让上方的章标题区随滚动隐藏（否则栏底会被底栏挡住）。
+  function langOf(node) {
+    for (var el = node; el && el !== main; el = el.parentElement) {
+      if (el.id === 'pane-zh') return 'zh';
+      if (el.id === 'pane-en') return 'en';
+    }
+    return currentLang();
+  }
+  function wheelChain(target, lang) {
+    var box = scrollBox(lang);
+    var list = [];
+    for (var el = target; el && el !== main.parentElement; el = el.parentElement) {
+      if (el.nodeType !== 1 || el === document.documentElement || el === document.body) break;
+      if (el === box) { list.push(el); break; }
+      var style = getComputedStyle(el);
+      if (/(auto|scroll)/.test(style.overflowY) && el.scrollHeight > el.clientHeight + 1) list.push(el);
+    }
+    if (list.indexOf(box) < 0) list.push(box);
+    var doc = documentBox();
+    if (box !== doc && list.indexOf(doc) < 0) list.push(doc);
+    return list;
+  }
+  function room(el, down) {
+    return down ? el.scrollHeight - el.clientHeight - el.scrollTop : el.scrollTop;
+  }
+  function wheelPixels(event) {
+    var dy = event.deltaY || 0;
+    if (event.deltaMode === 1) dy *= 16;
+    else if (event.deltaMode === 2) dy *= (window.innerHeight || 600);
+    return dy;
+  }
+  main.addEventListener('wheel', function (event) {
+    if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (!event.target || !event.target.nodeType) return;
+    var dy = wheelPixels(event);
+    if (!dy) return;
+    var down = dy > 0;
+    var lang = langOf(event.target);
+    var chain = wheelChain(event.target, lang);
+    var doc = documentBox();
+    var paneBox = scrollBox(lang);
+    var index = 0;
+    while (index < chain.length && room(chain[index], down) <= 1) index += 1;
+    if (index >= chain.length) return;
+    var box = chain[index];
+    // 分栏：整页还能继续往下滚（章标题区尚未滚出视野）时，先滚整页
+    if (box === paneBox && box !== doc && down &&
+        index + 1 < chain.length && chain[index + 1] === doc && room(doc, true) > 1) {
+      event.preventDefault();
+      doc.scrollTop += dy;
+      return;
+    }
+    if (index === 0) return;              // 指针下的容器自己还能滚：交给浏览器
+    // 内层到顶/底：手动接续到外层（终端面板带 overscroll-behavior: contain，原生不会接续）
+    event.preventDefault();
+    box.scrollTop += dy;
+  }, { passive: false });
+
   S.on('settings', function () {
     var nextLang = language();
     var nextMode = mode();
@@ -649,10 +791,12 @@
       lastMode = nextMode;
       S.emit('mode', { mode: nextMode });
     }
+    applyParagraphStyle();
     scheduleLayout();
   });
   setActive(active);
   updateTabs();
+  applyParagraphStyle();
   capture();
   measureLayout();
 }());
@@ -939,7 +1083,8 @@
       if (geometry) scheduleLayout();
       else { updateProgress(); queueSave(); }
     }).observe(root, { attributes: true, attributeFilter: [
-      'style', 'data-font', 'data-page-mode', 'data-lang-mode', 'data-dual-layout', 'data-active-pane'
+      'style', 'data-font', 'data-page-mode', 'data-lang-mode', 'data-dual-layout',
+      'data-active-pane', 'data-paragraph'
     ] });
     var drawerButton = document.getElementById('btn-drawer');
     if (drawerButton) new MutationObserver(function () {
