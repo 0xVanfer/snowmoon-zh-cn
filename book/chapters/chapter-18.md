@@ -174,7 +174,12 @@
 
 白把屏幕转给他看。
 
-<div class="device-view wide-device-view"><blockquote><p>他选了人迹更少的那条路，为众人开出一条道来。</p><pre style="color:#fff">jan jo san sia ci pa jan li san sia te bia pin hu fe lo shun ci fi mu jan li san sia fe fi mu san sia te shun zo bia pin fe jan</pre></blockquote></div>
+<div class="device-view wide-device-view"><blockquote><p>他选了人迹更少的那条路，为众人开出一条道来。</p><pre style="color:#fff">         jan jo san sia
+   ci pa jan li san sia
+           te bia pin hu fe lo shun
+ci fi mu jan li san sia
+       fe fi mu san sia
+           te shun zo bia pin fe jan</pre></blockquote></div>
 
 <span style="color:#ed756b">“你知道这是什么意思吗？”</span>
 

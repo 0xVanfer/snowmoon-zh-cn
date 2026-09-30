@@ -26,6 +26,15 @@ jobs:
         run: |
           python3 pipeline/build_markdown.py
           python3 pipeline/build_site.py
+      - name: 校验（任一项失败即中止发布）
+        run: |
+          # 译文结构 / 插图等价性 / 抽取还原 —— 不需要上游原文的项先跑
+          python3 pipeline/validate_translation.py
+          python3 pipeline/validate_svg.py
+          python3 pipeline/verify_extract.py   # 上游原文不入库，缺失时自动跳过
+          # 成品体检
+          python3 pipeline/qa_book.py
+          python3 pipeline/qa_site.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

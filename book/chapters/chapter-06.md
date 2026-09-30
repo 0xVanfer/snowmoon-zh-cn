@@ -84,7 +84,7 @@
 
 格拉迪亚斯在几个界面之间来回切换，翻看这一轮计划评估的评则清单：
 
-<div class="device-view wide-device-view"><table><thead><tr><th>评则名称</th><th>摘要</th></tr></thead><tbody><tr><td style="width: 5%">5</td><td style="width: 20%">实体空间的应急准备</td><td>设有安全庇护所、耐用应急物资、完全或部分脱离电网的，适用较低税率档；建筑设计不安全或脆弱的，适用较高税率档。</td></tr><tr><td style="width: 5%">6</td><td style="width: 20%">硬件开放度</td><td>尊重用户维修权、公开可用的原理图、设计及其他源文件、遵循开放标准的，适用较低税率档；故意制造不兼容、限制可改造性及相关反竞争做法的，适用较高税率档。</td></tr><tr><td style="width: 5%">7</td><td style="width: 20%">室内空气洁净</td><td>税率与实测的平均空气质量指标成比例——二氧化碳、PM2.5 及其他主流指标。计算平均时，人员在室时间更长的时段权重更高。适用于容纳超过20人的场所。</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th></th><th>评则名称</th><th>摘要</th></tr></thead><tbody><tr><td style="width: 5%">5</td><td style="width: 20%">实体空间的应急准备</td><td>设有安全庇护所、耐用应急物资、完全或部分脱离电网的，适用较低税率档；建筑设计不安全或脆弱的，适用较高税率档。</td></tr><tr><td style="width: 5%">6</td><td style="width: 20%">硬件开放度</td><td>尊重用户维修权、公开可用的原理图、设计及其他源文件、遵循开放标准的，适用较低税率档；故意制造不兼容、限制可改造性及相关反竞争做法的，适用较高税率档。</td></tr><tr><td style="width: 5%">7</td><td style="width: 20%">室内空气洁净</td><td>税率与实测的平均空气质量指标成比例——二氧化碳、PM2.5 及其他主流指标。计算平均时，人员在室时间更长的时段权重更高。适用于容纳超过20人的场所。</td></tr></tbody></table></div>
 
 格拉迪亚斯继续往下翻掌则人的文档。大约30分钟后，他累了，往后靠进椅子里。他让翡翠根据自己到现在看过的内容出一套测验题，帮他复习。翡翠应了一声，开始在后台干活。
 

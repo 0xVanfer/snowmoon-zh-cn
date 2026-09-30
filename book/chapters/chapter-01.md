@@ -274,8 +274,8 @@
 
 就在这时，格拉迪亚斯的手持终端震了一下。他掏出来，跳出一条通知。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">我在演唱会上看见你了，我知道你在掌舵会。</span></td><td>60259</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">我在演唱会上看见你了，我知道你在掌舵会。</span></td><td>60259</td></tr></tbody></table></div>
 
 又过了几个嘀嗒，来了第二条：
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">别担心，我不打算举报你去领赏金。不过，我有个请求想请你帮忙。</span></td><td>60266</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">别担心，我不打算举报你去领赏金。不过，我有个请求想请你帮忙。</span></td><td>60266</td></tr></tbody></table></div>

@@ -23,18 +23,18 @@
 ## 运行方式
 
 ```bash
-# 1) 结构抽取（需要先自备上游英文原文到 sources/en/html/chapter-N.html，见 docs/licensing.md）
+# 1) 结构抽取（上游英文原文不入库，需自备到 sources/en/html/chapter-N.html，见 docs/licensing.md）
 python3 pipeline/extract.py
 
 # 2) 逐章翻译：按 pipeline/prompts/translate.md 派 subagent，
 #    每章产出 translations/zh/chapter-NN.zh.json 后自检
 python3 pipeline/validate_translation.py
 
-# 3) 术语合并、体例统一
+# 3) 泽国语词表（validate/merge 都依赖它）、术语合并、体例统一
+python3 pipeline/build_conlang_vocab.py
 python3 pipeline/merge_terms.py && python3 pipeline/normalize_zh.py
 
 # 4) 插图中文化（需要 harness 环境中的视觉模型凭据）
-python3 pipeline/build_conlang_vocab.py
 python3 pipeline/make_figures.py build
 python3 pipeline/vision_api.py --batch sources/work/jobs/figures.jsonl \
     --out sources/work/jobs/figures.out.jsonl --concurrency 6
@@ -49,8 +49,11 @@ python3 pipeline/qa_book.py && python3 pipeline/qa_site.py
 前端需要重新设计时（改 `pipeline/prompts/design-reader-site.md` 后）：
 
 ```bash
+# 两批任务：大文件（style.css / reader.js）在 jobs2.jsonl 里分段生成，缺一批会拒绝写入
 python3 pipeline/vision_api.py --batch sources/work/design/jobs.jsonl \
     --out sources/work/design/out.jsonl --concurrency 5
+python3 pipeline/vision_api.py --batch sources/work/design/jobs2.jsonl \
+    --out sources/work/design/out2.jsonl --concurrency 4
 python3 pipeline/extract_design_files.py && python3 pipeline/build_site.py
 ```
 
@@ -67,13 +70,15 @@ python3 pipeline/extract_design_files.py && python3 pipeline/build_site.py
 
 ## 质量保证
 
-- 逐章结构校验：译文只改文字，标签/样式/表格/颜色由脚本逐条比对（`pipeline/validate_translation.py`）。
-- 布局容器保真：原文 flex/grid 容器（如投票刻度条）的子项与顺序逐条比对（`pipeline/qa_site.py`）。
+- 逐章结构校验：译文只改文字，标签/样式/表格/颜色由脚本逐条比对，标签必须成对；「疑似未翻译」不再放行短词英文（`pipeline/validate_translation.py`）。
+- 抽取还原比对：把抽取结果还原成纯文本与原文逐章差集比对，有差异即 exit 1（`pipeline/verify_extract.py`；上游原文不在时自动跳过）。
+- 布局与结构保真：原文 flex/grid 容器的子项与顺序逐条比对；`table/tr/td/th/blockquote/li`、终端面板与插图数量不得减少；中文栏长度不得塌陷（`pipeline/qa_site.py`）。
 - 插图逐张校验：根属性、元素序列、`<text>` 数量与位置、数字与虚构语言原样；另有「英文原版 | 中文版」
   并排渲染 +视觉模型复核（56/56 通过）。
 - 读者视角复核：32 章 × 3 个视角（忠实度 / 中文语感与本土化 / 一致性）共 96 份报告，
   经改稿者逐条采纳或驳回，过程记录保留在 [reviews/](reviews/)。
-- 成品书级体检：`pipeline/qa_book.py`（章节数、插图引用、占位符、中文标点与空格体例）。
+- 成品书级体检：`pipeline/qa_book.py`（章节数、插图**路径可解析**、占位符残留、游离的 Markdown 转义符、中文标点与空格体例）。
+- 以上校验全部接在 `.github/workflows/pages.yml` 的发布流程里：任一项失败即中止部署。
 
 ## 文档
 
@@ -81,6 +86,7 @@ python3 pipeline/extract_design_files.py && python3 pipeline/build_site.py
 - [docs/style-guide.md](docs/style-guide.md)：文体、标点、数字、排版规范（事实源）
 - [docs/glossary.md](docs/glossary.md)：术语表（由 `pipeline/glossary.json` 生成）
 - [docs/lessons.md](docs/lessons.md)：踩坑与经验记录
+- [docs/fixes.md](docs/fixes.md)：逻辑审计缺陷的逐条修复记录（现象／错误逻辑／修法）
 - [docs/research/](docs/research/)：中国小说市场、中文排版、换行与版面、阅读器界面调研
 - [reviews/](reviews/)：读者复核报告与各章落实记录
 - [docs/licensing.md](docs/licensing.md)：上游许可与合规做法

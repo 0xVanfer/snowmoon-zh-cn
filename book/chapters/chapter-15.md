@@ -40,15 +40,15 @@
 
 塞拉掏出手持终端，手忙脚乱地打起字来。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>消息</th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#54a1f9">快告诉我你还在自由城，你没事吧。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>扬</center></td></tr></tbody></table><button>发送</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#54a1f9">快告诉我你还在自由城，你没事吧。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>扬</center></td></tr></tbody></table><button>发送</button></div>
 
 她点了发送。
 
 几个嘀嗒后：
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">别担心，我在自由城。</span></td><td>32117</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">别担心，我在自由城。</span></td><td>32117</td></tr></tbody></table></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">我们这边居然还一直挺重视防务的，而且在联合城邦里，自由城离红郡差不多是最远的了，也就银滩和马布利更远一点。</span></td><td>32124</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">我们这边居然还一直挺重视防务的，而且在联合城邦里，自由城离红郡差不多是最远的了，也就银滩和马布利更远一点。</span></td><td>32124</td></tr></tbody></table></div>
 
 塞拉松了口气。
 
@@ -98,51 +98,51 @@
 
 泽焦急地戳着手持终端上的按键，第五次把消息发出去。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">你还好吗？？？？！<br><br>快告诉我你在哪儿。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">你还好吗？？？？！<br><br>快告诉我你在哪儿。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 他坐在酒店大堂餐厅的一张桌子旁哭。面前摆着一杯茶和一份米饭配蔬菜。茶他喝得很快，机器人已经续了四次。那份米饭和蔬菜摆在那儿快一长时了，他一口没动。
 
 终于，他收到了回信。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">别担心，我还活着。<br><br>不过看样子我一时半会儿回不了泽国了。</span></td><td>84690</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">别担心，我还活着。<br><br>不过看样子我一时半会儿回不了泽国了。</span></td><td>84690</td></tr></tbody></table></div>
 
 这不是泽想要的结果，但比他害怕的结果好太多了。他松了口气。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我找到往外发消息的办法了。<br><br>有个北极士兵，跟他的朋友——也可能是他的 AI，或者别的什么——一起捣鼓出一套办法，能把隐藏的文本消息嵌进他实时回传给指挥部的健康数据里。<br><br>指挥部里另有一个人把这个信号转接进天气数据流，再往上传到卫星。<br><br>他靠匿名替人转发消息，挣了一大堆齐普币。</span></td><td>84714</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我找到往外发消息的办法了。<br><br>有个北极士兵，跟他的朋友——也可能是他的 AI，或者别的什么——一起捣鼓出一套办法，能把隐藏的文本消息嵌进他实时回传给指挥部的健康数据里。<br><br>指挥部里另有一个人把这个信号转接进天气数据流，再往上传到卫星。<br><br>他靠匿名替人转发消息，挣了一大堆齐普币。</span></td><td>84714</td></tr></tbody></table></div>
 
 泽擦掉眼泪，开始专注地打字。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">哇。你……跟那个士兵有联系？</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">哇。你……跟那个士兵有联系？</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我有个匿名联系的渠道。</span></td><td>84723</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我有个匿名联系的渠道。</span></td><td>84723</td></tr></tbody></table></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">问问他往健康数据里塞消息，用的是什么编码方式。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">问问他往健康数据里塞消息，用的是什么编码方式。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 泽想了想，意识到也许轮到自己当老师了。他掏出一块键盘，开始飞快地敲。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">或者说——再一想，他不会回答的。不过你告诉他：随机翻最低有效位，是所有人第一次碰到这个问题时都会先想到的那套办法，但它不是理想解。有时候高位完全可以翻，有时候连翻一个最低有效位都有危险。<br><br>你要做的是：<br><br>\* 在实际分布上训练一个语言模型，让它以其余所有位为条件，给出某一位应当是0还是1的概率<br><br>\* 把数据切成一个个分桶——分桶务必用解密密钥本身来随机决定——并要求第 i 个分桶内所有位异或的结果等于密文第 i 位。在每个分桶里，用模型找出哪些位的概率最接近50/50——也就是在那个语境里，这一位取0取1都“自然”——然后翻掉那一位，让分桶的异或值对上。<br><br>也就是说，由语言模型来判断哪些位“最不重要”、可以放心翻，而不是永远只动每个数字里最低的那一位二进制数。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">或者说——再一想，他不会回答的。不过你告诉他：随机翻最低有效位，是所有人第一次碰到这个问题时都会先想到的那套办法，但它不是理想解。有时候高位完全可以翻，有时候连翻一个最低有效位都有危险。<br><br>你要做的是：<br><br>* 在实际分布上训练一个语言模型，让它以其余所有位为条件，给出某一位应当是0还是1的概率<br><br>* 把数据切成一个个分桶——分桶务必用解密密钥本身来随机决定——并要求第 i 个分桶内所有位异或的结果等于密文第 i 位。在每个分桶里，用模型找出哪些位的概率最接近50/50——也就是在那个语境里，这一位取0取1都“自然”——然后翻掉那一位，让分桶的异或值对上。<br><br>也就是说，由语言模型来判断哪些位“最不重要”、可以放心翻，而不是永远只动每个数字里最低的那一位二进制数。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 泽往后靠了靠，心里得意：他不仅弄懂并讲清了一个复杂概念，而且是这份活儿恰恰需要的那个复杂概念。
 
 他决定继续说下去，一半出于对自己理解力的得意，一半出于想让更多红郡人把消息偷偷从北极审查者眼皮底下送出去的愿望。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">想走得更远，你可以让分桶部分重叠。比如说：<br><br>\* 第一个分桶是0～199<br>\* 第二个是20～219<br>\* 第三个是40～239<br><br>以此类推，不过记住整个顺序应当是一个伪随机排列。<br><br>另外，每个分桶里只随机挑一半的位置参与异或，这样总能找到一些位，翻掉其中某一位只影响某一个分桶，而不影响它前一个或后一个分桶。比如说，204可以属于第二个分桶，却不属于第三个。<br><br>顺利情况下的算法是：<br><br>\* 在0～199里挑一位翻掉，让第一个分桶的异或值对上<br>\* 在200～219里挑一位翻掉，让第二个分桶的异或值对上<br>\* 在220～239里挑一位翻掉，让第三个分桶的异或值对上<br><br>以此类推……<br><br>但假如说，240～259连续给你20个位，这20个位一个都不适合翻——想象一幅非常清晰的夜空图，连续20个像素本来就该是纯黑——换成健康数据也一样——那你就往回退，在220～239里找一组可翻的位，让最后两个分桶的异或同时对上；如果还不行，就再往回退，在200～239里找一组位，让最后三个分桶的异或都对上，依此类推。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">想走得更远，你可以让分桶部分重叠。比如说：<br><br>* 第一个分桶是0～199<br>* 第二个是20～219<br>* 第三个是40～239<br><br>以此类推，不过记住整个顺序应当是一个伪随机排列。<br><br>另外，每个分桶里只随机挑一半的位置参与异或，这样总能找到一些位，翻掉其中某一位只影响某一个分桶，而不影响它前一个或后一个分桶。比如说，204可以属于第二个分桶，却不属于第三个。<br><br>顺利情况下的算法是：<br><br>* 在0～199里挑一位翻掉，让第一个分桶的异或值对上<br>* 在200～219里挑一位翻掉，让第二个分桶的异或值对上<br>* 在220～239里挑一位翻掉，让第三个分桶的异或值对上<br><br>以此类推……<br><br>但假如说，240～259连续给你20个位，这20个位一个都不适合翻——想象一幅非常清晰的夜空图，连续20个像素本来就该是纯黑——换成健康数据也一样——那你就往回退，在220～239里找一组可翻的位，让最后两个分桶的异或同时对上；如果还不行，就再往回退，在200～239里找一组位，让最后三个分桶的异或都对上，依此类推。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 他随即意识到，上一条消息可能太像是在逞能，于是又补发了一条。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">这招是我从登的密码学教材里学来的。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">这招是我从登的密码学教材里学来的。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我会转给他的。<br><br>不过我猜，他的首要任务会是找到带宽更高的通道来藏数据。优化翻哪些位确实很聪明，但也许只有2倍收益；找到一个更好的数据流，却可能是1000倍收益。<br><br>永远先去拿笨办法带来的1000倍收益，别去追那个聪明绝顶的2倍。</span></td><td>85190</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我会转给他的。<br><br>不过我猜，他的首要任务会是找到带宽更高的通道来藏数据。优化翻哪些位确实很聪明，但也许只有2倍收益；找到一个更好的数据流，却可能是1000倍收益。<br><br>永远先去拿笨办法带来的1000倍收益，别去追那个聪明绝顶的2倍。</span></td><td>85190</td></tr></tbody></table></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">这句是我在商学院学的。</span></td><td>85200</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">这句是我在商学院学的。</span></td><td>85200</td></tr></tbody></table></div>
 
 泽心里对更好的隐写编码更乐观了些：改进幅度说不定真不小。但他还是决定不再纠缠这一点。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">好，那你注意安全。<br><br>要是有什么事我能帮上忙，或者我认识的那些聪明人能帮上忙，只要能让你安全脱身，就跟我说一声。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">好，那你注意安全。<br><br>要是有什么事我能帮上忙，或者我认识的那些聪明人能帮上忙，只要能让你安全脱身，就跟我说一声。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 泽本来想说‘或者昆高培能做的’，甚至想说‘或者泽国那些高明的秘密社团能做的’。但他意识到：第一，让一个外人——尤其是在敌占区的外人——知道这些东西的存在，就是泄密；第二，他并不能完全信任这条联系通道——他甚至还没问过德鲁因一个安全问题。于是说出口的就成了‘我这边认识的聪明人’。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">好。谢谢你这么关心我。</span></td><td>84821</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">好。谢谢你这么关心我。</span></td><td>84821</td></tr></tbody></table></div>
 
 泽放下手持终端，呼出一口气。他的目光在餐厅里扫了一圈，发现这时已经没别人了。他终于开始吃那份米饭配蔬菜。
 
@@ -226,7 +226,7 @@
 
 泽想起该看一眼手表。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">那个北极士兵说谢谢，帮了大忙。</span></td><td>92115</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">那个北极士兵说谢谢，帮了大忙。</span></td><td>92115</td></tr></tbody></table></div>
 
 <span style="color:#df74b1">“看来就是这一招。”</span>
 

@@ -768,7 +768,7 @@
   {
    "id": "c10-b0097",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c10-s0096}}</th><th>{{S:c10-s0097}}</th><th>{{S:c10-s0098}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c10-s0099}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c10-s0100}}</td><td>{{S:c10-s0101}}</td><td>{{S:c10-s0102}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c10-s0096}}</th><th></th><th>{{S:c10-s0097}}</th><th>{{S:c10-s0098}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c10-s0099}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c10-s0100}}</td><td>{{S:c10-s0101}}</td><td>{{S:c10-s0102}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c10-s0096}}",
     "{{S:c10-s0097}}",

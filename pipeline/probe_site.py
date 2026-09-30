@@ -570,7 +570,14 @@ def main() -> None:
                 print(f"FAIL {pid}: {e}")
                 failed += 1
                 continue
-            bad = check(pid, d)
+            try:
+                bad = check(pid, d)
+            except Exception as e:  # noqa: BLE001
+                # check() 会对探针返回值做索引/属性访问；某个元素缺失时应报 FAIL 而不是崩掉整轮，
+                # 否则前面已经跑过的预设结果和退出码都会丢掉。
+                print(f"FAIL {pid}: 断言执行出错 {type(e).__name__}: {e}")
+                failed += 1
+                continue
             retried = False
             if bad:
                 # headless 环境偶发（ResizeObserver/虚拟时间抖动）：同一预设重跑一次再判

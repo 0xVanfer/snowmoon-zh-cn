@@ -52,7 +52,7 @@
 
 他的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">我最近多盯了德尔瓦特一阵，我们该谈谈。</span></td><td>71256</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">我最近多盯了德尔瓦特一阵，我们该谈谈。</span></td><td>71256</td></tr></tbody></table></div>
 
 格拉迪亚斯对着颈带低声说话，给莫夫拨了通电话。
 

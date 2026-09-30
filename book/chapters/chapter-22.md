@@ -20,7 +20,7 @@
 
 扬放在腿上的手持终端震了一下。
 
-<div class="device-view wide-device-view"><table><thead><tr><th colspan="3">出租车费</th></tr></thead><tbody><tr><td><center>司机起步价</center></td><td>3.69</td></tr><tr><td><center>每分钟通行费</center></td><td>9分钟</td><td>1.89</td></tr><tr><td><center>每公里通行费</center></td><td>5.65公里</td><td>1.26</td></tr><tr><td><center>加减速通行费</center></td><td>113 m/s Δv</td><td>1.03</td></tr><tr><td><center>道路拥堵通行费</center></td><td>1.50</td></tr><tr><td><center>道路拥堵通行费</center></td><td>1.00</td></tr><tr><td><center>道路拥堵通行费</center></td><td>2.25</td></tr><tr><td><center>合计</center></td><td>12.52</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th colspan="3">出租车费</th></tr></thead><tbody><tr><td><center>司机起步价</center></td><td></td><td>3.69</td></tr><tr><td><center>每分钟通行费</center></td><td>9分钟</td><td>1.89</td></tr><tr><td><center>每公里通行费</center></td><td>5.65公里</td><td>1.26</td></tr><tr><td><center>加减速通行费</center></td><td>113 m/s Δv</td><td>1.03</td></tr><tr><td><center>道路拥堵通行费</center></td><td></td><td>1.50</td></tr><tr><td><center>道路拥堵通行费</center></td><td></td><td>1.00</td></tr><tr><td><center>道路拥堵通行费</center></td><td></td><td>2.25</td></tr><tr><td><center>合计</center></td><td></td><td>12.52</td></tr></tbody></table></div>
 
 <span style="color:#78b249">“嘿，师傅？”</span>扬问司机。
 

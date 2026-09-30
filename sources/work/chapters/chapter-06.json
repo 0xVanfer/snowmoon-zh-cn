@@ -351,7 +351,7 @@
   {
    "id": "c06-b0044",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c06-s0044}}</th><th>{{S:c06-s0045}}</th></tr></thead><tbody><tr><td style=\"width: 5%\">{{S:c06-s0046}}</td><td style=\"width: 20%\">{{S:c06-s0047}}</td><td>{{S:c06-s0048}}</td></tr><tr><td style=\"width: 5%\">{{S:c06-s0049}}</td><td style=\"width: 20%\">{{S:c06-s0050}}</td><td>{{S:c06-s0051}}</td></tr><tr><td style=\"width: 5%\">{{S:c06-s0052}}</td><td style=\"width: 20%\">{{S:c06-s0053}}</td><td>{{S:c06-s0054}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th></th><th>{{S:c06-s0044}}</th><th>{{S:c06-s0045}}</th></tr></thead><tbody><tr><td style=\"width: 5%\">{{S:c06-s0046}}</td><td style=\"width: 20%\">{{S:c06-s0047}}</td><td>{{S:c06-s0048}}</td></tr><tr><td style=\"width: 5%\">{{S:c06-s0049}}</td><td style=\"width: 20%\">{{S:c06-s0050}}</td><td>{{S:c06-s0051}}</td></tr><tr><td style=\"width: 5%\">{{S:c06-s0052}}</td><td style=\"width: 20%\">{{S:c06-s0053}}</td><td>{{S:c06-s0054}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c06-s0044}}",
     "{{S:c06-s0045}}",

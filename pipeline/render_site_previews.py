@@ -26,7 +26,28 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "book" / "site"
 OUT = ROOT / "sources" / "work" / "site-previews"
-CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+def chrome_path() -> str:
+    """定位 Chrome：环境变量 CHROME 优先，其次 macOS 默认位置与常见替代路径。"""
+    import shutil
+    env = os.environ.get("CHROME") or os.environ.get("CHROME_PATH")
+    if env:
+        return env
+    candidates = [
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        str(Path.home() / "Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
+        "/usr/bin/google-chrome",
+        "/usr/bin/chromium",
+        "/usr/bin/chromium-browser",
+    ]
+    for c in candidates:
+        if Path(c).exists():
+            return c
+    found = shutil.which("google-chrome") or shutil.which("chromium") or shutil.which("chrome")
+    if found:
+        return found
+    raise SystemExit("找不到 Chrome：请设置环境变量 CHROME=<可执行文件路径>（headless 渲染需要它）")
+
+CHROME = chrome_path()
 
 PRESET_SCRIPT = """<script>
 try{localStorage.setItem("snowmoon.reader.v1", JSON.stringify(%s));}catch(e){}
@@ -203,10 +224,17 @@ def stage(tmp: Path, rel: str, preset: dict | None, pid: str = "") -> Path:
                   'JSON.stringify(%s));}catch(e){}</script>\n' % json.dumps(state, ensure_ascii=False))
         # 同一个临时目录里会被反复 stage，先清掉上一次注入，保证幂等
         raw = re.sub(r'<script id="preset-inject">.*?</script>\n?', '', raw, flags=re.S)
-        raw = raw.replace('<script src="', inject + '<script src="', 1)
+        if '<script src="' in raw:
+            raw = raw.replace('<script src="', inject + '<script src="', 1)
+        elif "</head>" in raw:
+            raw = raw.replace("</head>", inject + "</head>", 1)
+        else:
+            raise SystemExit(f"{rel}: 页面里既没有 <script src=> 也没有 </head>，无法注入预设")
         action = ACTIONS.get(pid)
         raw = re.sub(r'<script id="preset-action">.*?</script>\n?', '', raw, flags=re.S)
         if action:
+            if "</head>" not in raw:
+                raise SystemExit(f"{rel}: 页面缺少 </head>，无法注入动作脚本")
             raw = raw.replace("</head>", ACTION_SCRIPT % (action, 600) + "</head>", 1)
         page.write_text(raw, encoding="utf-8")
     return page
@@ -266,7 +294,10 @@ def main() -> None:
                 good = shoot(page, png, w, h, wait)
             ok += good
             print(("OK  " if good else "FAIL") + f" {pid:<18} {rel} {w}x{h}", flush=True)
+    if not todo:
+        raise SystemExit("没有匹配的预设")
     print(f"截图 {ok}/{len(todo)} → sources/work/site-previews/")
+    sys.exit(1 if ok != len(todo) else 0)
 
 
 if __name__ == "__main__":

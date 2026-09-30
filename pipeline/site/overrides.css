@@ -142,7 +142,6 @@ html[data-page-mode="paged"] .flip-label[data-mode="scroll"] { display: none; }
 .book-facts dd,
 .book-facts dt,
 .book-facts span { white-space: nowrap; }
-.book-facts > * { align-items: flex-start; }
 
 /* 10) 主页两个 CTA 按钮高度不一致、右端与卡片行不齐。 */
 .reading-actions { align-items: stretch; }
@@ -407,8 +406,9 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
 }
 
 /* --- 章末导航：三枚胶囊，窄屏改为整行堆叠，避免挤压换行 --- */
-#chapter-nav { gap: 12px; margin-block: 40px; }
-#chapter-nav a {
+#chapter-nav,
+.chapter-navigation { gap: 12px; margin-block: 40px; }
+#chapter-nav a, .chapter-navigation a {
   justify-content: center;
   min-height: 42px;
   padding: 9px 18px;
@@ -426,7 +426,8 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
 #nav-toc { justify-self: center; }
 #nav-next { justify-self: end; justify-content: center; text-align: center; }
 @media (hover: hover) {
-  #chapter-nav a:hover { border-color: var(--accent); color: var(--accent); box-shadow: var(--ring); }
+  #chapter-nav a:hover,
+  .chapter-navigation a:hover { border-color: var(--accent); color: var(--accent); box-shadow: var(--ring); }
 }
 
 /* --- 主页 / 目录页的按钮与卡片 --- */
@@ -510,15 +511,16 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
     font-size: 12.5px;
   }
   #page-indicator { min-width: 4.5em; font-size: 12px; }
-  #chapter-nav { grid-template-columns: minmax(0, 1fr); gap: 8px; }
-  #chapter-nav a { width: 100%; }
+  #chapter-nav,
+.chapter-navigation { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  #chapter-nav a, .chapter-navigation a { width: 100%; }
   #nav-prev, #nav-toc, #nav-next { justify-self: stretch; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   #topbar .reader-control, #topbar #btn-lang, #bottombar .reader-bar-button,
   .setting-options button, .reader-dialog__header button, #lang-tabs button,
-  #chapter-nav a, .button, .chapter-link, #drawer-toc a {
+  #chapter-nav a, .chapter-navigation a, .button, .chapter-link, #drawer-toc a {
     transition: none;
   }
   #topbar .reader-control:active, #topbar #btn-lang:active,

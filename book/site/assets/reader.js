@@ -142,7 +142,6 @@
     html.setAttribute('data-font', s.font);
     html.setAttribute('data-lang-mode', s.lang);
     html.setAttribute('data-page-mode', s.mode);
-    html.setAttribute('data-sync', s.sync ? 'on' : 'off');
     html.setAttribute('data-paragraph', s.paragraph);
     html.style.setProperty('--reader-size', s.size + 'px');
     html.style.setProperty('--reader-leading', String(s.leading));
@@ -170,7 +169,6 @@
       if (!Object.prototype.hasOwnProperty.call(DEFAULTS, key)) return;
       var selected = s[key] === controlValue(control);
       control.setAttribute('aria-pressed', String(selected));
-      control.classList.toggle('is-selected', selected);
     });
     var langButton = qs('btn-lang');
     if (langButton) {
@@ -214,7 +212,7 @@
   function reflectOverlay() {
     Object.keys(triggers).forEach(function (id) {
       var panel = qs(id);
-      if (panel) panel.hidden = overlay !== id;
+      if (panel && !closing[id]) panel.hidden = overlay !== id;
       triggers[id].forEach(function (triggerId) {
         var trigger = qs(triggerId);
         if (!trigger) return;
@@ -223,12 +221,28 @@
       });
     });
     var scrim = qs('scrim');
-    if (scrim) scrim.hidden = overlay === null;
+    if (scrim && !closing.scrim) scrim.hidden = overlay === null;
     api.overlay = overlay;
   }
+  var closing = Object.create(null);   // id -> true：退出动画播放期间不要立刻 hidden
   function closePanel(restore) {
     if (!overlay) return false;
+    var closingId = overlay;
     overlay = null;
+    var panel = qs(closingId);
+    var scrimEl = qs('scrim');
+    closing[closingId] = true;
+    if (scrimEl) closing.scrim = true;
+    if (panel) panel.setAttribute('data-state', 'closing');
+    if (scrimEl) scrimEl.setAttribute('data-state', 'closing');
+    setTimeout(function () {
+      if (!closing[closingId]) return;
+      delete closing[closingId];
+      delete closing.scrim;
+      if (panel) { panel.hidden = true; panel.removeAttribute('data-state'); }
+      if (scrimEl) { scrimEl.hidden = true; scrimEl.removeAttribute('data-state'); }
+      reflectOverlay();
+    }, 220);
     reflectOverlay();
     var target = returnFocus;
     returnFocus = null;
@@ -246,6 +260,8 @@
   }
   function openPanel(id, trigger) {
     if (!Object.prototype.hasOwnProperty.call(triggers, id) || !qs(id)) return;
+    delete closing[id];
+    delete closing.scrim;
     if (overlay === id) { closePanel(); return; }
     if (overlay) closePanel(false);
     overlay = id;
@@ -344,6 +360,9 @@
   var langs = ['zh', 'en'];
   var tabs = S.qs('#lang-tabs');
   var positions = { zh: 0, en: 0 };
+  // captured：该栏是否真的量到过位置。没量到过的栏在布局切换时不能拿 0 去写，
+  // 否则刚从隐藏变可见的那一栏会跳到章首（而另一栏还停在原处）。
+  var captured = { zh: false, en: false };
   var expected = { zh: null, en: null };
   var active = root.getAttribute('data-active-pane') === 'en' ? 'en' : 'zh';
   var layout = root.getAttribute('data-dual-layout') === 'tabs' ? 'tabs' : 'columns';
@@ -406,6 +425,7 @@
     if (!visible(lang) || mode() !== 'scroll') return;
     var m = metrics(lang);
     positions[lang] = clamp(m.y / Math.max(1, m.max));
+    captured[lang] = true;
   }
   function capture() {
     langs.forEach(remember);
@@ -413,19 +433,22 @@
   function writePosition(lang, percent) {
     if (!visible(lang) || mode() !== 'scroll') return;
     var m = metrics(lang);
+    positions[lang] = clamp(percent);
+    captured[lang] = true;
+    if (m.max <= 0) return;   // 容器不可滚动：不要留下永远清不掉的 expected 闩锁
     var y = clamp(percent) * m.max;
     expected[lang] = y;
-    positions[lang] = clamp(percent);
     m.box.scrollTop = y;
   }
   function restoreVisible() {
     if (mode() !== 'scroll') return;
-    if (language() === 'dual' && layout === 'columns') {
-      langs.forEach(function (lang) { writePosition(lang, positions[lang]); });
-    } else {
-      var lang = currentLang();
-      writePosition(lang, positions[lang]);
-    }
+    var targets = (language() === 'dual' && layout === 'columns') ? langs : [currentLang()];
+    var anchor = null;
+    langs.forEach(function (l) { if (anchor === null && captured[l]) anchor = positions[l]; });
+    targets.forEach(function (lang) {
+      if (captured[lang]) writePosition(lang, positions[lang]);
+      else if (anchor !== null) writePosition(lang, anchor);   // 新露出的栏对齐到已知位置
+    });
   }
   function updateTabs() {
     if (!tabs) return;
@@ -577,6 +600,8 @@
       S.emit('page-step', { direction: direction, lang: lang });
       return;
     }
+    // 不可见的栏量到的是 0/0（max=0、y=0），会把「上一屏/下一屏」误判成到章首/章末而跳章。
+    if (!visible(lang)) return;
     var m = metrics(lang);
     if ((direction > 0 && m.y >= m.max - 2) || (direction < 0 && m.y <= 2)) {
       navigate(direction);
@@ -589,6 +614,35 @@
   ['prev', 'next'].forEach(function (name) {
     var button = S.qs('#btn-' + name + '-screen');
     if (button) button.addEventListener('click', function () { S.step(name === 'prev' ? -1 : 1); });
+  });
+
+  // [用户请求] 设置面板里写着「←/→ 上一屏/下一屏；↑/↓ 滚动当前阅读栏」，
+  // 但全局 keydown 只处理了 Tab/Esc/t/d，方向键此前完全没接。
+  document.addEventListener('keydown', function (event) {
+    if (event.defaultPrevented || event.isComposing || event.altKey ||
+        event.ctrlKey || event.metaKey || event.shiftKey) return;
+    var target = event.target;
+    if (target && target.closest &&
+        target.closest('input,textarea,select,[contenteditable],[role="tab"]')) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      S.step(event.key === 'ArrowRight' ? 1 : -1);
+      return;
+    }
+    if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+      var lang = currentLang();
+      if (mode() === 'paged') {           // 翻页模式没有可滚动容器，方向键改翻页
+        event.preventDefault();
+        S.step(event.key === 'ArrowDown' ? 1 : -1);
+        return;
+      }
+      if (!visible(lang)) return;
+      var m = metrics(lang);
+      if (m.max <= 0) return;             // 交给浏览器原生滚动
+      event.preventDefault();
+      m.box.scrollTop = Math.max(0, Math.min(m.max, m.y + (event.key === 'ArrowDown' ? 48 : -48)));
+      remember(lang);
+    }
   });
 
   function excluded(target, boundary) {
@@ -837,7 +891,7 @@
       root.dataset.chapter || ((location.pathname.match(/chapter-(\d+)\.html$/) || [])[1]));
     var validChapter = function (n) { return Number.isInteger(n) && n >= 1 && n <= 32; };
     var reading = !!main && validChapter(chapter);
-    var models = [], originals = [], snapshots = {};
+    var models = [], originals = [], wrappers = [], snapshots = {};
     var ready = false, frame = 0, saveTimer = 0, directoryFrame = 0;
     var initial = true, previousMode = state.settings.mode;
     var bar = document.getElementById('progress-bar');
@@ -879,6 +933,14 @@
         else r.el.setAttribute('style', r.css);
       });
       originals = [];
+      // 翻页模式给表格套的包装层要拆掉：留在 DOM 里会改变滚动模式下的包含块
+      wrappers.forEach(function (w) {
+        if (w.wrapper.parentNode) {
+          w.wrapper.parentNode.insertBefore(w.table, w.wrapper);
+          w.wrapper.parentNode.removeChild(w.wrapper);
+        }
+      });
+      wrappers = [];
     }
     function scrollHost(m) {
       var el = m.viewport;
@@ -945,6 +1007,7 @@
         wrapper.className = 'pagination-table-scroll';
         table.parentNode.insertBefore(wrapper, table);
         wrapper.appendChild(table);
+        wrappers.push({ wrapper: wrapper, table: table });
       });
       Array.prototype.forEach.call(m.flow.querySelectorAll('img, svg'), function (image) {
         style(image, { maxWidth: '100%', maxHeight: height + 'px', objectFit: 'contain' });
@@ -957,12 +1020,15 @@
       });
     }
     function layoutPages(m) {
-      var rect = m.viewport.getBoundingClientRect();
       var bottom = document.getElementById('bottombar');
-      var reserve = bottom ? Math.max(48, bottom.offsetHeight) : 48;
-      var available = Math.max(1, window.innerHeight - Math.max(0, rect.top) - reserve - 16);
+      var topbar = S.qs('#topbar');
+      var topH = topbar && topbar.offsetHeight ? topbar.offsetHeight : 56;
+      var reserve = (bottom ? Math.max(48, bottom.offsetHeight) : 48) + topH;
+      // 页高只看视口高度，不看 rect.top——rect.top 随文档滚动变化，
+      // 于是「先滚动再切翻页」会少算一屏：首行被固定顶栏压住，而且没有滚动余量可以救回来。
+      var available = Math.max(1, window.innerHeight - reserve - 16);
       var width = Math.max(1, m.viewport.clientWidth);
-      var height = Math.max(1, Math.min(m.viewport.clientHeight || available, available));
+      var height = Math.max(1, available);
       style(m.viewport, { height: height + 'px', overflow: 'hidden', position: 'relative',
         padding: '0', scrollBehavior: 'auto' });
       width = Math.max(1, m.viewport.clientWidth);
@@ -971,11 +1037,13 @@
         padding: '0', margin: '0', columnWidth: width + 'px', columnGap: '32px',
         columnCount: 'auto', columnFill: 'auto', overflow: 'visible', direction: 'ltr',
         transition: 'none', transform: 'none' });
-      m.flow.style.setProperty('--page-w', width + 'px');
-      m.flow.style.setProperty('--page-h', height + 'px');
       prepareOversize(m, height);
       m.step = width + 32;
       m.pages = Math.max(1, Math.ceil((m.flow.scrollWidth + 32) / m.step));
+      // 把正文盒顶端对齐到顶栏下沿（新高度生效后再量一次）
+      var doc = documentBox();
+      var shift = m.viewport.getBoundingClientRect().top - topH;
+      if (Math.abs(shift) > 1) doc.scrollTop = Math.max(0, doc.scrollTop + shift);
       m.viewport.scrollTop = 0;
     }
     function restoreScroll(m, saved, first) {
@@ -1022,8 +1090,14 @@
           var n = Number(li.dataset.chapter), isCurrent = n === current;
           li.classList.toggle('is-read', !!(state.chapters[n] && state.chapters[n].read));
           li.classList.toggle('is-current', isCurrent);
-          if (isCurrent) li.setAttribute('aria-current', 'location');
-          else if (li.getAttribute('aria-current') === 'location') li.removeAttribute('aria-current');
+          var link = li.querySelector('.chapter-link');
+          if (isCurrent) {
+            li.setAttribute('aria-current', 'page');
+            if (link) link.setAttribute('aria-current', 'page');
+          } else {
+            if (li.getAttribute('aria-current') === 'page') li.removeAttribute('aria-current');
+            if (link && link.getAttribute('aria-current') === 'page') link.removeAttribute('aria-current');
+          }
           if (scrollCurrent && isCurrent && li.getClientRects().length) {
             var button = document.getElementById('btn-drawer');
             if (id === 'toc-list' || (button && button.getAttribute('aria-expanded') === 'true')) {

@@ -8,11 +8,16 @@
 用法:
     python3 pipeline/build_site.py            # 全部章节
     python3 pipeline/build_site.py 1 2 3      # 指定章
+
 产物:
     book/site/index.html
     book/site/toc.html
     book/site/read/chapter-NN.html
-    book/site/assets/{style.css,reader.js,images/*.svg}
+    book/site/assets/{style.css,reader.js,overrides.css,images/*.svg}
+
+不变量：
+  * 目录条目与「全书 N 章」一律取自**实际有译文的章节**，不是模板常量；
+  * 陈旧的逐章页面与插图会被清理，撤下的章节不会继续发布（CI 直接部署 book/site）。
 """
 from __future__ import annotations
 
@@ -48,7 +53,11 @@ def load_json(p: Path) -> dict:
     return json.loads(p.read_text(encoding="utf-8"))
 
 
-def segs_of(p: Path) -> dict[str, str]:
+def segs_of(p: Path, required: bool = True) -> dict[str, str]:
+    if not p.exists():
+        if required:
+            raise SystemExit(f"缺少必需文件 {p.relative_to(ROOT)}")
+        return {}
     return {s["id"]: s["text"] for s in load_json(p)["segments"]}
 
 
@@ -60,6 +69,44 @@ def build_date() -> str:
         return out or "—"
     except Exception:  # noqa: BLE001
         return "—"
+
+
+def block_ids(blk: dict) -> list[str]:
+    return [m.group(1) for m in PLACEHOLDER_RE.finditer("".join(blk.get("segs", [])))]
+
+
+def chapter_meta(ch: int) -> tuple[str | None, list[str]]:
+    """从骨架里取「标题片段 id」与「卷首日期块的全部片段 id」。
+
+    不再按 s0001/s0002/s0003 这类下标猜——那依赖「每章都有 h1、日期后紧跟正文」的假设。
+    """
+    data = load_json(CHAP_DIR / f"chapter-{ch:02d}.json")
+    title_id: str | None = None
+    dateline: list[str] = []
+    for blk in data["blocks"]:
+        kind = blk.get("kind")
+        if kind == "title" and title_id is None:
+            ids = block_ids(blk)
+            title_id = ids[0] if ids else None
+        elif kind == "dateline-open" and not dateline:
+            dateline = block_ids(blk)
+    return title_id, dateline
+
+
+def check_sync(ch: int, *seg_maps: dict[str, str]) -> None:
+    """骨架引用的每个片段都必须在给定片段表里存在。
+
+    只在 expand() 里兜底是不够的：章标题、卷首日期这类块在站点侧由模板渲染、
+    根本不走 expand，id 失配会悄无声息。这里在构建前一次性全量核对。
+    """
+    data = load_json(CHAP_DIR / f"chapter-{ch:02d}.json")
+    ids = set(PLACEHOLDER_RE.findall(json.dumps(data, ensure_ascii=False)))
+    for i, segs in enumerate(seg_maps):
+        missing = sorted(ids - set(segs))
+        if missing:
+            raise SystemExit(
+                f"chapter-{ch:02d}: 骨架引用的片段在第 {i + 1} 份片段表里缺失 {missing[:4]}"
+                f"（译文与骨架不同步）")
 
 
 def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
@@ -78,8 +125,7 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
         if kind in ("title", "dateline-open"):
             continue
         if kind == "scene-break":
-            ids = [m.group(1) for m in PLACEHOLDER_RE.finditer("".join(blk.get("segs", [])))]
-            vals = [segs.get(i, "") for i in ids if segs.get(i)]
+            vals = [segs[i] for i in block_ids(blk) if segs.get(i)]
             if not vals:
                 continue
             out.append(f'<p class="scene-break">{mini_to_html(" · ".join(vals), zh)}</p>')
@@ -88,7 +134,7 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
         elif kind == "figure":
             for f in blk.get("figures", []):
                 cap = captions.get(f[:-4], "")
-                alt = html.escape(cap or f"插图 {f[:-4]}")
+                alt = html.escape(cap or f"插图 {f[:-4]}", quote=True)
                 out.append(f'<figure class="fig"><img src="{prefix}images/{f}" alt="{alt}"'
                            f' title="{alt}" loading="lazy" decoding="async"></figure>')
             if blk.get("skeleton"):
@@ -96,7 +142,10 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
         elif kind == "p":
             inner = expand(blk.get("skeleton", ""), segs, zh)
             inner = re.sub(r"^<p>|</p>$", "", inner)
-            m = re.fullmatch(r'<span style="(#[0-9a-f]{6})">.*</span>[。！？…，]*', inner, re.S)
+            # 片段里的颜色写成完整声明（color:#rrggbb），这里两处都要认，
+            # 否则「整段对话加同色左侧色条」永远不生效（历史 bug）。
+            m = re.fullmatch(r'<span style="(?:color:)?(#[0-9a-f]{6})">.*</span>[。！？…，]*',
+                             inner, re.S)
             rail = f' class="dialog railed" style="color:{m.group(1)}"' if m else ' class="dialog"'
             out.append(f"<p{rail}>{inner}</p>")
         else:
@@ -126,6 +175,8 @@ def toc_items(href_prefix: str, chapters: list[int], datelines: dict[int, str]) 
 
 def inject_overrides(page: str, prefix: str) -> str:
     """把集成补充样式挂在 style.css 之后（视觉模型的产出保持原样，补丁单独一份文件）。"""
+    if "</head>" not in page:
+        raise SystemExit("页面模板缺少 </head>，无法注入 overrides.css")
     link = f'<link rel="stylesheet" href="{prefix}overrides.css">\n'
     return page.replace("</head>", link + "</head>", 1)
 
@@ -144,25 +195,33 @@ def fill(template: str, values: dict[str, str], where: str) -> str:
 
 
 def build() -> None:
-    todos = [int(x) for x in sys.argv[1:]] or CHAPTERS
+    requested = sorted({int(x) for x in sys.argv[1:]}) or CHAPTERS
     captions = {k: v.get("caption", "") for k, v in
                 load_json(FIG_MANIFEST).items()} if FIG_MANIFEST.exists() else {}
-    # 每章的中英通用信息（目录用），从年级片段里取
+
+    # 实际会发布的章 = 有译文的章。目录、章数、上下章导航全部以它为准。
+    chapters = [ch for ch in CHAPTERS if (ZH_DIR / f"chapter-{ch:02d}.zh.json").exists()]
+    if not chapters:
+        raise SystemExit("没有任何译文，未组装站点")
+
     titles_zh: dict[int, str] = {}
-    titles_en: dict[int, str] = {}
     datelines: dict[int, str] = {}
-    for ch in CHAPTERS:
+    datelines_en: dict[int, str] = {}
+    for ch in chapters:
         zh = segs_of(ZH_DIR / f"chapter-{ch:02d}.zh.json")
-        en = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json")
-        first = sorted(k for k in zh if re.match(rf"c{ch:02d}-s\d+$", k))[:3]
-        titles_zh[ch] = zh.get(first[0], f"第{cn_num(ch)}章") if first else f"第{cn_num(ch)}章"
-        titles_en[ch] = en.get(first[0], f"Chapter {ch}") if first else f"Chapter {ch}"
-        dl = [zh.get(i, "") for i in first[1:3]]
-        datelines[ch] = " · ".join(x for x in dl if x)
+        en = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json", required=False)
+        title_id, dl_ids = chapter_meta(ch)
+        titles_zh[ch] = zh.get(title_id or "", f"第{cn_num(ch)}章")
+        parts = [zh[i] for i in dl_ids if zh.get(i)]
+        datelines[ch] = " · ".join(parts)
+        parts_en = [en[i] for i in dl_ids if en.get(i)]
+        datelines_en[ch] = " · ".join(parts_en)
+
     common = dict(REPO_URL=REPO_URL, SITE_URL=SITE_URL, UPSTREAM_URL=UPSTREAM_URL,
                   CONTACT_EMAIL=CONTACT_EMAIL, SITE_TITLE=SITE_TITLE,
-                  CHAPTER_COUNT=str(len(CHAPTERS)), TOTAL_WORDS=TOTAL_WORDS,
+                  CHAPTER_COUNT=str(len(chapters)), TOTAL_WORDS=TOTAL_WORDS,
                   BUILD_DATE=build_date())
+    toc_html = toc_items("read/", chapters, datelines)
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "read").mkdir(parents=True, exist_ok=True)
@@ -171,45 +230,55 @@ def build() -> None:
     for name in ("style.css", "reader.js", "overrides.css"):
         shutil.copy2(SRC_DIR / name, assets / name)
     (assets / "images").mkdir(parents=True, exist_ok=True)
+    published = set()
     for svg in sorted(IMG_DIR.glob("*.svg")):
         shutil.copy2(svg, assets / "images" / svg.name)
+        published.add(svg.name)
+    # 清理陈旧的已发布插图
+    for old in (assets / "images").glob("*.svg"):
+        if old.name not in published:
+            old.unlink()
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
+    first = chapters[0]
     # ---- 主页 ----
     home = (SRC_DIR / "index.html").read_text(encoding="utf-8")
     (OUT / "index.html").write_text(inject_overrides(fill(home, dict(
         common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
-        PREV_HREF="toc.html", NEXT_HREF="read/chapter-01.html",
+        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
         PREV_LABEL="上一章", NEXT_LABEL="开始阅读",
-        TOC_ITEMS=toc_items("read/", CHAPTERS, datelines),
-        CHAPTER_NO="1", CHAPTER_TITLE_ZH=titles_zh[1], CHAPTER_TITLE_EN=titles_en[1],
-        CHAPTER_DATELINE_ZH=datelines[1], CHAPTER_DATELINE_EN="",
+        TOC_ITEMS=toc_html,
+        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
+        CHAPTER_TITLE_EN=f"Chapter {first}",
+        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
         CONTENT_ZH="", CONTENT_EN=""), "index.html"), "assets/"), encoding="utf-8")
 
     # ---- 目录页 ----
     toc = (SRC_DIR / "toc.html").read_text(encoding="utf-8")
     (OUT / "toc.html").write_text(inject_overrides(fill(toc, dict(
         common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
-        PREV_HREF="toc.html", NEXT_HREF="read/chapter-01.html",
+        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
         PREV_LABEL="上一章", NEXT_LABEL="下一章",
-        TOC_ITEMS=toc_items("read/", CHAPTERS, datelines),
-        CHAPTER_NO="1", CHAPTER_TITLE_ZH=titles_zh[1], CHAPTER_TITLE_EN=titles_en[1],
-        CHAPTER_DATELINE_ZH=datelines[1], CHAPTER_DATELINE_EN="",
+        TOC_ITEMS=toc_html,
+        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
+        CHAPTER_TITLE_EN=f"Chapter {first}",
+        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
         CONTENT_ZH="", CONTENT_EN=""), "toc.html"), "assets/"), encoding="utf-8")
 
     # ---- 逐章正文 ----
     tpl = (SRC_DIR / "chapter.html").read_text(encoding="utf-8")
-    built = 0
-    for ch in todos:
-        zh_p = ZH_DIR / f"chapter-{ch:02d}.zh.json"
-        if not zh_p.exists():
+    built: list[int] = []
+    for ch in requested:
+        if ch not in chapters:
             print(f"skip ch{ch:02d}（无译文）")
             continue
         prefix = "../assets/"
-        zh_segs = segs_of(zh_p)
-        en_segs = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json")
-        prev_ch = ch - 1 if ch > 1 else None
-        next_ch = ch + 1 if ch < CHAPTERS[-1] else None
+        zh_segs = segs_of(ZH_DIR / f"chapter-{ch:02d}.zh.json")
+        en_segs = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json", required=False)
+        check_sync(ch, zh_segs, en_segs)
+        pos = chapters.index(ch)
+        prev_ch = chapters[pos - 1] if pos > 0 else None
+        next_ch = chapters[pos + 1] if pos + 1 < len(chapters) else None
         values = dict(
             common, ASSET_PREFIX=prefix,
             HOME_HREF="../index.html", TOC_HREF="../toc.html",
@@ -222,20 +291,26 @@ def build() -> None:
             NEXT_CH_HREF=f"chapter-{next_ch:02d}.html" if next_ch else "",
             PREV_CH_HIDDEN="" if prev_ch else " hidden",
             NEXT_CH_HIDDEN="" if next_ch else " hidden",
-            TOC_ITEMS=toc_items("", CHAPTERS, datelines),
+            TOC_ITEMS=toc_items("", chapters, datelines),
             CHAPTER_NO=str(ch),
-            CHAPTER_TITLE_ZH=f"第{cn_num(ch)}章",
+            CHAPTER_TITLE_ZH=html.escape(titles_zh[ch], quote=True),
             CHAPTER_TITLE_EN=f"Chapter {ch}",
-            CHAPTER_DATELINE_ZH=datelines[ch],
-            CHAPTER_DATELINE_EN=f"{en_segs.get(f'c{ch:02d}-s0002', '')} · "
-                                f"{en_segs.get(f'c{ch:02d}-s0003', '')}",
+            CHAPTER_DATELINE_ZH=html.escape(datelines[ch], quote=True),
+            CHAPTER_DATELINE_EN=html.escape(datelines_en[ch], quote=True),
             CONTENT_ZH=render_blocks(ch, zh_segs, captions, prefix, zh=True),
             CONTENT_EN=render_blocks(ch, en_segs, captions, prefix, zh=False),
         )
         page = inject_overrides(fill(tpl, values, f"read/chapter-{ch:02d}.html"), prefix)
         (OUT / "read" / f"chapter-{ch:02d}.html").write_text(page, encoding="utf-8")
-        built += 1
-    print(f"站点已组装：{built} 章 + 主页 + 目录 → {OUT.relative_to(ROOT)}")
+        built.append(ch)
+
+    # 清理陈旧的逐章页面（撤下的章节不该继续被 CI 发布）
+    keep = {f"chapter-{ch:02d}.html" for ch in chapters}
+    for old in (OUT / "read").glob("chapter-*.html"):
+        if old.name not in keep:
+            old.unlink()
+
+    print(f"站点已组装：{len(built)} 章 + 主页 + 目录（全书 {len(chapters)} 章）→ {OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

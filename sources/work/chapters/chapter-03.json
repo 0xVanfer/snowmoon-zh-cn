@@ -303,7 +303,7 @@
   {
    "id": "c03-b0038",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c03-s0045}}</th><th>{{S:c03-s0046}}</th><th>{{S:c03-s0047}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c03-s0048}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c03-s0049}}</td><td>{{S:c03-s0050}}</td><td>{{S:c03-s0051}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c03-s0045}}</th><th></th><th>{{S:c03-s0046}}</th><th>{{S:c03-s0047}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c03-s0048}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c03-s0049}}</td><td>{{S:c03-s0050}}</td><td>{{S:c03-s0051}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c03-s0045}}",
     "{{S:c03-s0046}}",

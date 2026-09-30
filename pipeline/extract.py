@@ -11,7 +11,9 @@
 设计要点见 docs/pipeline.md：
   * 结构（标签、样式、表格布局）与文字彻底分离，翻译时只动文字，杜绝结构漂移；
   * 内联文字用受限 mini-markup 表达（见 docs/style-guide.md），便于校验和回写；
-  * 虚构语言（Dzegoban 罗马字）片段标记 locked，不送翻译。
+  * 虚构语言（Dzegoban 罗马字）片段标记 locked，不送翻译：有 `pre` / `dz-line` 标记的直接判定，
+    没有标记的（散落在普通 <p>/<td> 里）用 sources/work/conlang_vocab.json 词表识别；
+    词表覆盖不到的泽国语变体由 validate_translation.py 的兜底规则放行。
 """
 from __future__ import annotations
 
@@ -37,6 +39,8 @@ INLINE = {"span", "b", "strong", "i", "em", "sup", "sub", "code", "a", "br", "u"
 BLOCK = {"p", "div", "table", "thead", "tbody", "tfoot", "tr", "td", "th",
          "ul", "ol", "li", "blockquote", "center", "h1", "h2", "h3", "h4", "h5", "h6",
          "pre", "figure", "figcaption", "section", "article", "b", "hr", "button"}
+# 空元素也必须在骨架里保留的「占位槽」：丢了会破坏表格列数／列表编号
+EMPTY_KEEP = {"td", "th", "li", "a", "button"}
 # 会承载文字、且通常不含块级子节点的容器
 LEAF_ROLES = {
     "p": "p", "h1": "title", "h2": "h2", "h3": "h3", "h4": "h4",
@@ -46,9 +50,64 @@ LEAF_ROLES = {
 
 CONLANG_FONT_RE = re.compile(r"TeX Gyre Chorus", re.I)
 CONLANG_TEXT_RE = re.compile(r"^[a-z][a-z\s&nbsp;]*$")
+# 泽国语词表（由 build_conlang_vocab.py 生成）。用于识别「没有 dz-line / Chorus 字体标记」
+# 的虚构语言片段——这类文字散落在普通 <p>/<td> 里，只靠标签无从判断，必须靠词表。
+CONLANG_VOCAB: set[str] = set()
+_cv = ROOT / "sources" / "work" / "conlang_vocab.json"
+if _cv.exists():
+    try:
+        CONLANG_VOCAB = {w.lower() for w in json.loads(_cv.read_text(encoding="utf-8"))}
+    except (json.JSONDecodeError, TypeError, ValueError):
+        CONLANG_VOCAB = set()
 # 布局容器：flex/grid 的子元素各自是独立布局项，绝不能把子元素拍平成一个文本节点
 # （典型：投票/拖动条的 `display:flex; justify-content:space-between` 刻度行）。
 LAYOUT_RE = re.compile(r"display\s*:\s*(?:flex|grid)|justify-content", re.I)
+
+# 只出现在页面结构里、绝不该出现在 <svg> 内部的 HTML 标签。
+# 出现即说明上游有未闭合的 <svg>，把后续兄弟节点吞进了图里（见 docs/lessons.md）。
+HTML_ONLY_TAGS = {
+    "p", "div", "span", "table", "thead", "tbody", "tfoot", "tr", "td", "th",
+    "figure", "figcaption", "blockquote", "center", "ul", "ol", "li",
+    "h1", "h2", "h3", "h4", "h5", "h6", "section", "article", "button", "pre",
+}
+
+
+# 与英语常用词同形的泽国语音节：出现即放弃判定，交给校验脚本的兜底规则处理。
+ENGLISH_LOOKALIKE = {
+    "a", "am", "an", "and", "are", "as", "at", "be", "but", "by", "can", "die", "do",
+    "for", "from", "go", "had", "has", "he", "her", "hi", "him", "his", "if", "in",
+    "is", "it", "me", "min", "my", "no", "not", "of", "on", "or", "our", "out", "she",
+    "so", "ten", "than", "that", "the", "them", "then", "they", "this", "to", "up",
+    "us", "was", "we", "who", "why", "with", "you",
+}
+
+
+def looks_like_conlang(text: str) -> bool:
+    """判断一段纯文本是否为「未加标记的泽国语罗马字」。
+
+    规则（保守，宁可漏判不可误判——误判会把已翻译的片段锁死）：
+      * 含汉字则不是；
+      * 至少两个词（单词多半是人名／界面 token，如 Fin / Bai，它们确实要翻译）；
+      * 除句首外不出现大写（排除 TEI / MUG 这类缩写）；
+      * 不含与英语常用词同形的音节（如 ten min 实为「10 分钟」，已被译出）；
+      * 所有词都在泽国语词表内。
+    漏判是可以接受的（校验脚本仍有兜底），误判会直接让已翻译的章节校验失败。
+    """
+    if not CONLANG_VOCAB:
+        return False
+    body = re.sub(r"<[^>]+>", " ", text or "")
+    if re.search(r"[\u3400-\u9fff]", body):
+        return False
+    toks = re.findall(r"[A-Za-z]+", body)
+    if len(toks) < 2:
+        return False
+    for t in toks:
+        if t[1:] != t[1:].lower():
+            return False
+    low = [t.lower() for t in toks]
+    if any(t in ENGLISH_LOOKALIKE for t in low):
+        return False
+    return all(t in CONLANG_VOCAB for t in low)
 
 # HTMLParser 把标签/属性名统一转小写；SVG 是 XML，必须还原大小写，否则 viewBox / clipPath 失效。
 SVG_TAG_CASE = {
@@ -149,7 +208,9 @@ def esc_attr(s: str) -> str:
 
 
 def attr_str(attrs: dict[str, str]) -> str:
-    return "".join(f' {k}="{esc_attr(v)}"' for k, v in attrs.items() if v != "")
+    # 空值属性（布尔属性 checked/disabled、class="" 等）一并保留：
+    # 丢掉它们会静默改变语义与样式。
+    return "".join(f' {k}="{esc_attr(v)}"' for k, v in attrs.items())
 
 
 def has_block_child(node: Node) -> bool:
@@ -199,16 +260,23 @@ class Extractor:
         return f"{self.pad}-b{self.bn:04d}"
 
     # ---------- mini-markup ----------
-    def inline_markup(self, node: Node) -> str:
+    def inline_markup(self, node: Node, preserve_ws: bool = False) -> str:
+        """把节点的内联内容转成 mini-markup。
+
+        preserve_ws=True 用于 <pre>：空白与换行是内容的一部分（字符画／排版），
+        必须原样保留；其余场景把连续空白折叠成单个空格。
+        """
         out = []
         for c in node.children:
             if isinstance(c, str):
-                out.append(esc_text(re.sub(r"[\t\r\n]+", " ", c)))
+                out.append(esc_text(c if preserve_ws else re.sub(r"[\t\r\n]+", " ", c)))
+            elif c.tag in ("script", "style", "nav"):
+                continue  # 叶子容器里的脚本/样式不得漏进可译文本
             elif c.tag == "br":
                 out.append("<br/>")
             elif c.tag == "span":
                 style = c.attrs.get("style", "")
-                inner = self.inline_markup(c)
+                inner = self.inline_markup(c, preserve_ws)
                 if not style:
                     out.append(inner)
                 elif CONLANG_FONT_RE.search(style) and CONLANG_TEXT_RE.match(c.texts().strip() or "x"):
@@ -216,31 +284,34 @@ class Extractor:
                 else:
                     out.append(f'<c st="{esc_attr(style)}">{inner}</c>')
             elif c.tag in ("b", "strong"):
-                out.append(f"<b>{self.inline_markup(c)}</b>")
+                out.append(f"<b>{self.inline_markup(c, preserve_ws)}</b>")
             elif c.tag in ("i",):
-                out.append(f"<i>{self.inline_markup(c)}</i>")
+                out.append(f"<i>{self.inline_markup(c, preserve_ws)}</i>")
             elif c.tag in ("em",):
-                out.append(f"<e>{self.inline_markup(c)}</e>")
+                out.append(f"<e>{self.inline_markup(c, preserve_ws)}</e>")
             elif c.tag in ("sup", "sub", "code", "u", "small", "mark"):
-                out.append(f"<{c.tag}>{self.inline_markup(c)}</{c.tag}>")
+                out.append(f"<{c.tag}>{self.inline_markup(c, preserve_ws)}</{c.tag}>")
             elif c.tag == "a":
                 href = c.attrs.get("href", "")
-                out.append(f'<a href="{esc_attr(href)}">{self.inline_markup(c)}</a>')
+                out.append(f'<a href="{esc_attr(href)}">{self.inline_markup(c, preserve_ws)}</a>')
             elif c.tag in VOID:
                 continue
             else:  # 兜底：丢掉标签保留内容
-                out.append(self.inline_markup(c))
+                out.append(self.inline_markup(c, preserve_ws))
         s = "".join(out)
+        if preserve_ws:
+            # 只裁掉 <pre> 首尾的换行（HTML 规定标签后紧跟的换行不参与渲染），内部原样
+            return s.strip("\n")
         s = re.sub(r"\s+", " ", s)
         return s.strip()
 
     def is_locked(self, node: Node) -> bool:
-        """虚构语言（Dzegoban 罗马字）片段：pre / dz-line 或整段用 Chorus 字体。"""
+        """不可翻译片段：<pre> / dz-line / 未加标记的泽国语罗马字。"""
         if node.tag == "pre":
             return True
         if "dz-line" in node.cls():
             return True
-        return False
+        return looks_like_conlang(node.texts())
 
     # ---------- 结构 ----------
     def render(self, node: Node, segs_here: list[str], ctx: list | None = None) -> str:
@@ -252,21 +323,20 @@ class Extractor:
             return f"<{node.tag}{attr_str(node.attrs)}>" if node.tag != "br" else "<br/>"
         if node.tag in ("script", "style", "nav"):
             return ""
-        if node.tag in ("input",):
-            return f"<input{attr_str({k: v for k, v in node.attrs.items() if k in ('type', 'style')})}>"
         # 布局容器（flex/grid）：子元素必须逐个保留，否则 space-between 之类会失效
         if not has_block_child(node) and LAYOUT_RE.search(
                 node.attrs.get("style", "") + " " + node.attrs.get("class", "")):
             return self.render_layout_items(node, segs_here, [0, None])
         # 叶子容器 -> 单片段
-        if not has_block_child(node) and node.tag in LEAF_ROLES or (
-            not has_block_child(node) and node.tag == "div"
-        ):
-            markup = self.inline_markup(node)
+        if not has_block_child(node) and (node.tag in LEAF_ROLES or node.tag == "div"):
+            markup = self.inline_markup(node, preserve_ws=(node.tag == "pre"))
             if markup == "":
+                # 空单元格/空列表项是**占位槽**：丢掉会让整行的列数变少、
+                # 后面的单元格整体左移（第 15 章 17 个空 <th> 就是这样丢的）。
+                if node.tag in EMPTY_KEEP:
+                    return f"<{node.tag}{attr_str(self.out_attrs(node))}></{node.tag}>"
                 return ""
-            roles = LEAF_ROLES.get(node.tag)
-            role = roles or ("div" if "dz-card" in node.cls() else "div")
+            role = LEAF_ROLES.get(node.tag) or "div"
             locked = self.is_locked(node)
             seg = self.seg_in(role, markup, ctx, locked=locked,
                               note="conlang" if locked else "")
@@ -368,14 +438,16 @@ class Extractor:
 
     def simple_block(self, kind: str, node: Node) -> dict:
         segs: list[str] = []
-        markup = self.inline_markup(node)
+        markup = self.inline_markup(node, preserve_ws=(node.tag == "pre"))
         if markup == "":
             return {"id": self.new_block_id(), "kind": "empty"}
         role = LEAF_ROLES.get(node.tag, kind)
-        seg = self.new_seg(role, markup, locked=self.is_locked(node))
+        locked = self.is_locked(node)
+        seg = self.new_seg(role, markup, locked=locked, note="conlang" if locked else "")
         segs.append(seg)
         return {"id": self.new_block_id(), "kind": kind,
-                "skeleton": f"<{node.tag}>{seg}</{node.tag}>", "segs": segs}
+                "skeleton": f"<{node.tag}{attr_str(self.out_attrs(node))}>{seg}</{node.tag}>",
+                "segs": segs}
 
     def struct_block(self, kind: str, node: Node) -> dict:
         segs: list[str] = []
@@ -393,7 +465,10 @@ class Extractor:
                         elif "date" in s2.cls():
                             date = s2.texts().strip()
                 txt_direct = "".join(c for c in sp.children if isinstance(c, str)).strip()
-                if txt_direct and date is None and place is None:
+                # 裸文本兜底：既要覆盖「完全没有 place/date 子 span」的情形，
+                # 也要覆盖「有 place span + 裸文本日期」（如第 26 章 `…</span>·</span>3724 Frostime 6`）——
+                # 旧条件额外要求 place is None，导致这种日期被整段丢弃。
+                if txt_direct and date is None:
                     date = re.sub(r"\s+", " ", txt_direct)
         segs: list[str] = []
         if place:
@@ -413,6 +488,13 @@ class Extractor:
         if svgs:
             figs = []
             for svg in svgs:
+                # 上游若有未闭合的 <svg>，HTMLParser 会把后续兄弟节点挂进 svg 里，
+                # 正文会拿不到片段 id 并连带被写进插图文件。这里显式拦下，宁可报错也不静默吞内容。
+                leaked = sorted({d.tag for d in descendants(svg) if d.tag in HTML_ONLY_TAGS})
+                if leaked:
+                    raise SystemExit(
+                        f"chapter-{self.chapter}: <svg> 未闭合，吞入了页面元素 {leaked}；"
+                        f"请先修复上游 HTML 再抽取")
                 self.fn += 1
                 fname = f"chapter-{self.chapter:02d}-fig-{self.fn:02d}.svg"
                 svg_src = serialize_svg(svg)
@@ -436,6 +518,14 @@ class Extractor:
         return self.struct_block("panel", node)
 
 
+def descendants(node: Node):
+    """深度优先后代节点（不含自身）。"""
+    for c in node.children:
+        if isinstance(c, Node):
+            yield c
+            yield from descendants(c)
+
+
 def serialize_svg(node: Node) -> str:
     """序列化 SVG。HTMLParser 会把标签/属性名转小写，这里恢复 SVG 的大小写敏感性。"""
 
@@ -451,15 +541,30 @@ def serialize_svg(node: Node) -> str:
     return rec(node)
 
 
+def slice_document_page(raw: str) -> str:
+    """截出 <div class="document-page">…</div> 这一段。
+
+    verify_extract.py 复用同一个函数，避免两处切片逻辑各自演化（历史 bug）。
+    用正则找起始 div：原先写死 `class="document-page"` 必须是第一个属性，
+    属性顺序一变就整段切片错位。
+    """
+    m = re.search(r'<div[^>]*\bclass="[^"]*\bdocument-page\b[^"]*"', raw)
+    if not m:
+        raise SystemExit("上游 HTML 里找不到 class 含 document-page 的 div")
+    i = m.start()
+    j = raw.rfind("</div>")
+    if j < i:
+        raise SystemExit("上游 HTML 结构异常：找不到 document-page 的结束标签")
+    return raw[i:j + 6]
+
+
 def parse_chapter(path: Path) -> Node:
     raw = path.read_text(encoding="utf-8")
-    i = raw.find('<div class="document-page">')
-    if i < 0:
-        i = raw.find('<div class="document-page"')
-    j = raw.rfind("</div>")
-    body = raw[i:j + 6]
+    body = slice_document_page(raw)
     b = DomBuilder()
     b.feed(body)
+    if not b.root.children or not isinstance(b.root.children[0], Node):
+        raise SystemExit(f"{path}: 解析后没有根节点")
     page = b.root.children[0]
     assert isinstance(page, Node) and "document-page" in page.cls(), path
     return page
@@ -486,6 +591,12 @@ def process(chapter: int) -> dict:
         encoding="utf-8")
     for f in ex.figures:
         (WORK / "figures" / f["file"]).write_text(f["svg"], encoding="utf-8")
+    # 清理本章的陈旧插图：上游删图后旧文件会留在目录里，
+    # make_figures.build() 是 glob 整个目录的，会为不存在的图白跑一次模型调用。
+    keep = {f["file"] for f in ex.figures}
+    for old in (WORK / "figures").glob(f"chapter-{chapter:02d}-fig-*.svg"):
+        if old.name not in keep:
+            old.unlink()
     return {"chapter": chapter, "blocks": len(blocks), "segs": len(ex.segs),
             "locked": sum(1 for s in ex.segs if s["locked"]), "figures": len(ex.figures)}
 

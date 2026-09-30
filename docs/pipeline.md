@@ -6,7 +6,7 @@
 ## 0. 总览
 
 ```
-sources/en/html/chapter-N.html       上游英文原文（1.6 MB，32 章，仅本地保留，不随仓库分发）
+sources/en/html/chapter-N.html       上游英文原文（1.6 MB，32 章，**不入库**：.gitignore 已忽略 sources/en/）
         │  pipeline/extract.py
         ▼
 sources/work/chapters/chapter-NN.json     结构骨架（块 + {{S:id}} 占位，不可变）
@@ -19,8 +19,8 @@ translations/zh/chapter-NN.zh.json   中文片段（只改文字，不改结构�
         │  pipeline/build_markdown.py
         ▼
 book/chapters/chapter-NN.md  逐章 Markdown
-book/snowmoon-zh.md          全书单文件 Markdown
-book/snowmoon-zh.html        单页 HTML（含中文排版 CSS）
+book/snowmoon-zh.md          全书单文件 Markdown（插图引用 images/）
+book/site/                   多页阅读站点（含中英对照，见 §5）
 book/images/*.svg            中文插图（视觉模型重绘）
 ```
 
@@ -39,11 +39,13 @@ book/images/*.svg            中文插图（视觉模型重绘）
   容器内第一条片段占用正常自增编号，其余用 `基准id#2`、`#3`…，所以容器外的片段编号与既有译文 id 完全不动。
 - SVG 是 XML：HTMLParser 会把 `viewBox`/`clipPath` 等转小写，脚本按映射表还原大小写。
 - `verify_extract.py` 做还原比对：把抽取值回填成纯文本，与原文纯文本逐章 diff（排除 SVG 内部文字），
-  当前 32 章仅剩 `·`（分隔号）与 entity 归一化差异。
+  两类有意差异（dateline 的 `·` 分隔号、字符实体归一化）已在两侧对齐，当前 31 章 OK；
+  第 30 章因上游有未闭合的 `<svg>`，校验器报 WARN 并跳过该章（该章插图由 `validate_svg.py` 单独校验）。
+  `verify_extract.py` 有退出码：有差异即 exit 1，可以当闸门用。
 
 ## 2. 翻译
 
-- 翻译单位是「片段」：一个 `<p>`／表格单元格／按钮／列表项 = 一条，全章约 100–210 条。
+- 翻译单位是「片段」：一个 `<p>`／表格单元格／按钮／列表项 = 一条，全章 96–218 条（全书 4 808 条）。
 - 由 DeepSeek Harness 的 subagent 逐章执行，任务书是 [prompts/translate.md](prompts/translate.md)，
   术语以 [glossary.json](../pipeline/glossary.json) 为唯一事实源。
 - 译文只允许出现白名单标签；`locked` 片段必须逐字照抄。
@@ -63,7 +65,7 @@ book/images/*.svg            中文插图（视觉模型重绘）
   `<harness 本地 provider 配置>` 与 `<本地凭据文件>`），带磁盘缓存（可断点续跑）、
   并发、失败重试、`max_tokens` 自适应降档。
 - `validate_svg.py` 校验等价性：根属性、元素标签序列、`<text>` 数量与位置/锚点/颜色、
-  font-size ±20%、数字与虚构语言必须原样、其余文字必须含中文且不残留英文标点。
+  font-size ±20%、数字与虚构语言必须原样、其余文字必须含中文且不残留英文单词。
 - 泽国语罗马字靠 `build_conlang_vocab.py` 自动建表（locked 片段 + Chorus 字体 span + 纯小写短词），
   避免把 `fai hie` 这类虚构语言误判为「未翻译」。
 - 结果落 `book/images/`，图注（`CAPTION`）写入 `manifest.json`，Markdown 的 `alt` 直接用它（无障碍）。
@@ -96,7 +98,7 @@ book/images/*.svg            中文插图（视觉模型重绘）
   任务书见 `pipeline/prompts/design-reader-site.md`；`build_site.py` 只做占位符替换，
   不参与视觉设计。占位符契约（`{{CONTENT_ZH}}`、`{{TOC_ITEMS}}`、`{{REPO_URL}}`、
   `{{PREV_CH_HREF}}` 等）写在该任务书里，模板与构建脚本必须保持一致。
--视觉模型的产出是三份文件、多次调用生成的，段落之间存在接口不一致；视觉模型之后的修补统一放在
+-视觉模型的产出是五份文件（index/toc/chapter.html + style.css + reader.js）、多次调用生成的，段落之间存在接口不一致；视觉模型之后的修补统一放在
   `pipeline/site/overrides.css`（由 `build_site.py` 注入到每个页面 `<head>` 末尾），分
   「接口对齐 / 视觉复核修补 / 用户请求的界面调整」三类；视觉模型的原始产出只做最小改动，
   便于将来用同一份任务书重新生成后做 diff。逐条记录见
@@ -105,7 +107,10 @@ book/images/*.svg            中文插图（视觉模型重绘）
   非颜色线索，并在主页说明「颜色仅作辅助」。
 - `qa_book.py`：书级体检（章节数、插图引用与存在性、占位符残留、中文标点/空格体例）。
 - `qa_site.py`：站点结构体检（页面齐全、占位符清空、双语两栏在位、站内链接与插图可解析，
-  以及**布局容器（flex/grid）子项与原文逐项一致**——见 [lessons.md](lessons.md) 第 6 节）。
+  以及**布局容器（flex/grid）子项与原文逐项一致**、**结构元素计数（table/tr/td/th/
+  blockquote/li、终端面板、插图）不得减少**、**中文栏长度不得塌陷**、**assets 与
+  pipeline/site 同步**——见 [lessons.md](lessons.md) 第 6 节。上游原文不入库时，
+  依赖它的三项检查会自动跳过并提示。
 
 ## 5.1 部署
 
@@ -121,14 +126,14 @@ GitHub Actions 发布到 Pages（仓库 Settings → Pages → Source 选 “Git
 python3 pipeline/extract.py                 # 32 章结构 + 片段 + 插图
 python3 pipeline/verify_extract.py            # 抽取自检
 #  逐章翻译（subagent，任务书见 pipeline/prompts/translate.md）
+python3 pipeline/build_conlang_vocab.py       # 泽国语词表（validate/merge 都依赖它，必须先跑）
 python3 pipeline/validate_translation.py      # 译文自检
-python3 pipeline/merge_terms.py               # 合并新术语 + 生成 docs/glossary.md
+python3 pipeline/merge_terms.py               # 合并新术语 + 生成 docs/glossary.md（有冲突则 exit 1）
 python3 pipeline/normalize_zh.py              # 术语/空格/标点统一
 #  读者复核（3 视角，任务书见 pipeline/prompts/review-reader.md）
 python3 pipeline/collect_reviews.py --todo    # 汇总问题清单
 #  改稿（任务书见 pipeline/prompts/apply-review.md）
-python3 pipeline/build_conlang_vocab.py       # 泽国语词表
-python3 pipeline/make_figures.py build        # 插图任务
+python3 pipeline/make_figures.py build        # 插图任务（含图前正文上下文）
 python3 pipeline/vision_api.py --batch sources/work/jobs/figures.jsonl \
     --out sources/work/jobs/figures.out.jsonl --concurrency 6
 python3 pipeline/make_figures.py apply        # 校验 + 落盘 book/images
@@ -145,9 +150,13 @@ python3 pipeline/render_site_previews.py      # 各视口截图，供人工/视�
 
 ```bash
 # 1) 让视觉模型产出前端文件（结果落 JSONL，带磁盘缓存）
+#    注意是**两批**任务：大文件（style.css / reader.js）在 jobs2.jsonl 里分段生成，
+#    只跑第一批会导致 style.css / reader.js 无法重建（extract_design_files.py 会拒绝写入）。
 python3 pipeline/vision_api.py --batch sources/work/design/jobs.jsonl \
     --out sources/work/design/out.jsonl --concurrency 5
-# 2) 剥掉围栏，落到 pipeline/site/
+python3 pipeline/vision_api.py --batch sources/work/design/jobs2.jsonl \
+    --out sources/work/design/out2.jsonl --concurrency 4
+# 2) 剥掉围栏，落到 pipeline/site/（全有或全无：缺一个文件就一个都不写）
 python3 pipeline/extract_design_files.py
 # 3) 重新组装站点
 python3 pipeline/build_site.py && python3 pipeline/qa_site.py

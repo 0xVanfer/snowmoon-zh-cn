@@ -22,15 +22,19 @@ KIND_ORDER = ["person", "place", "org", "tech", "term", "unit", "month", "inflec
 
 
 def is_conlang_entry(en: str, zh: str) -> bool:
-    """术语表里登记的虚构语言（泽国语罗马字）：只作理解参考，正文必须保留罗马字原样。"""
+    """术语表里登记的虚构语言（泽国语罗马字）：只作理解参考，正文必须保留罗马字原样。
+
+    判定要求**至少两个词**且全部在词表内。单词一律不判：
+    No / To / pin / TEI 这些英文词与人名词都与泽国语音节同形，
+    一旦把 `No → 反对`（表决按钮）判成虚构语言，就会反过来要求正文保留英文。
+    也不认「全大写」——CPU/GUI 这类缩写不是泽国语。
+    """
     vf = ROOT / "sources" / "work" / "conlang_vocab.json"
     vocab = set(json.loads(vf.read_text(encoding="utf-8"))) if vf.exists() else set()
     words = re.findall(r"[a-zA-Z]+", en)
-    if not words or not vocab:
+    if len(words) < 2 or not vocab:
         return False
-    if all(w.lower() in vocab or w.isupper() for w in words):
-        return True
-    return False
+    return all(w.lower() in vocab for w in words)
 
 
 def main() -> None:
@@ -62,18 +66,23 @@ def main() -> None:
         print("  +", a[0], "→", a[1])
     for c in conflicts:
         print(f"  ! {c[0]}: {c[1]} 既有「{c[2]}」 vs 本章「{c[3]}」")
-    # 既有条目重新分类：多词且全部是泽国语音节的「术语」实为虚构语言
+    # 既有条目重新分类：全部是泽国语音节的「术语」实为虚构语言（单词、多词都算）
     for e in glos["entries"]:
-        if e.get("kind") == "term" and " " in e["en"] and is_conlang_entry(e["en"], e.get("zh", "")):
+        if e.get("kind") == "term" and is_conlang_entry(e["en"], e.get("zh", "")):
             e["kind"] = "conlang"
             if not (e.get("note") or "").startswith("（虚构语言"):
                 e["note"] = "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）" + (e.get("note") or "")
     if check_only:
+        if conflicts:
+            sys.exit(1)
         return
     glos["entries"].sort(key=lambda e: (KIND_ORDER.index(e["kind"]) if e.get("kind") in KIND_ORDER else 99,
                                         e["en"].lower()))
     GLOSSARY.write_text(json.dumps(glos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     render_doc(glos)
+    # 术语冲突必须让调用方看得见：退出码是唯一的机器可读信号
+    if conflicts:
+        sys.exit(1)
 
 
 def render_doc(glos: dict) -> None:

@@ -4,7 +4,7 @@
 
 格拉迪亚斯沿街走着，手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">［5张图片］</span></td><td>34125</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">［5张图片］</span></td><td>34125</td></tr></tbody></table></div>
 
 他打开手持终端，想把图片看得清楚些。
 
@@ -22,7 +22,7 @@
 
 格拉迪亚斯的手表震了一下，屏幕上弹出一条通知。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">记住，你今天的考核不只看知识，还得让那些参议员看得上你。</span></td><td>34576</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">记住，你今天的考核不只看知识，还得让那些参议员看得上你。</span></td><td>34576</td></tr></tbody></table></div>
 
 格拉迪亚斯叹了口气，把胳膊垂回腰边，继续等着。
 
@@ -206,7 +206,7 @@
 
 格拉迪亚斯一走出大楼就看了看手表。准入表决进行的时候，手表一直在响，他一直没理会。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">不好意思打扰你，是关于莉莉的事。她刚在公民课上考砸了。我觉得她见见你和塞拉会好一些。</span></td><td>45183</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">不好意思打扰你，是关于莉莉的事。她刚在公民课上考砸了。我觉得她见见你和塞拉会好一些。</span></td><td>45183</td></tr></tbody></table></div>
 
 塞拉还在伊普塔克，格拉迪亚斯想。他只能自己去。
 
@@ -214,7 +214,7 @@
 
 <span style="color:#be9b00">“我这就来”</span>，格拉迪亚斯对着颈带低声说——又一次，不是那一刻他有多想藏住隐私，只是到这时候他已经习惯了小声说话。<span style="color:#be9b00">“给我点我常点的那份吃食。我刚从准入听证会出来，会饿。”</span>
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">你至少被录取了吧？</span></td><td>45501</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">你至少被录取了吧？</span></td><td>45501</td></tr></tbody></table></div>
 
 <span style="color:#be9b00">“录取了。不过险得很。”</span>
 
@@ -252,7 +252,7 @@
 
 格拉迪亚斯的手表响了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">［请求通话］</span></td><td>59063</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">［请求通话］</span></td><td>59063</td></tr></tbody></table></div>
 
 他接通了。
 

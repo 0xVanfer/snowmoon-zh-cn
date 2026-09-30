@@ -43,7 +43,8 @@
   - 过程记录（`reviews/`：96 份读者复核报告 + 各章落实记录，含采纳/驳回理由）。
 - 成品中标注原著来源与本项目的修改事实（见全书开篇声明与 [README](../README.md)）。
 - 源码文件在文件头标注 `SPDX-License-Identifier: GPL-3.0-only`（Python 脚本已标注）。
-- 上游英文原文快照 `sources/en/html/` 仅本地保留，未随仓库分发；复现时按上表来源自行获取。
+- 上游英文原文快照 `sources/en/html/` 仅本地保留，未随仓库分发：`.gitignore` 已忽略 `sources/en/`
+  （`git ls-files sources/en` 为空），复现时按上表来源自行获取。
 
 ## 来源与取得日期
 

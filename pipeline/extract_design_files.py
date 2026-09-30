@@ -37,12 +37,16 @@ FILES = {
 FENCE = re.compile(r"```[a-zA-Z]*\s*\n(.*?)```", re.S)
 
 
-def payload(text: str) -> str:
-    """剥掉围栏与说明文字，只留文件正文。"""
+def payload(text: str, jid: str) -> str:
+    """剥掉围栏与说明文字，只留文件正文。
+
+    没有围栏时**拒绝写入**：模型在长回复里经常改用「说明 + 正文」的散文格式，
+    直接落盘会把整段说明写进 style.css / reader.js，而且只有打开文件才能发现。
+    """
     blocks = FENCE.findall(text)
     if not blocks:
-        return text.strip() + "\n"
-    return max(blocks, key=len).strip() + "\n"
+        raise SystemExit(f"{jid}: 模型回复里没有围栏代码块，拒绝把说明文字当成文件内容写入")
+    return blocks[-1].strip() + "\n"   # 正稿通常在最后一个围栏块（取最长会命中示例块）
 
 
 def main() -> None:
@@ -51,21 +55,31 @@ def main() -> None:
     for p in IN:
         if not p.exists():
             continue
-        for line in p.read_text(encoding="utf-8").splitlines():
-            if line.strip():
+        for lineno, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
                 r = json.loads(line)
-                recs[r["id"]] = r
+            except json.JSONDecodeError as e:
+                raise SystemExit(f"{p.name} 第 {lineno} 行无法解析：{e}")
+            recs[r["id"]] = r
     missing = [jid for jids in FILES.values() for jid in jids
                if jid not in recs or not recs[jid].get("ok")]
+    # 全有或全无：缺任何一个文件就一个都不写，避免「新模板 + 旧 CSS/JS」的混合前端被发布。
+    # （overrides.css 是手写的集成补丁，不在这里生成，也不会被覆盖。）
+    payloads: dict[str, str] = {}
     for fname, jids in FILES.items():
         if any(j in missing for j in jids):
             continue
-        body = "".join(payload(recs[j]["text"]) for j in jids)
-        (SITE / fname).write_text(body, encoding="utf-8")
-        print(f"{'+'.join(jids)} -> pipeline/site/{fname}  ({len(body)} 字符)")
+        payloads[fname] = "".join(payload(recs[j]["text"], j) for j in jids)
     if missing:
         print(f"缺失/失败：{missing}", file=sys.stderr)
+        print("未写入任何文件（缺一个即全部不写）", file=sys.stderr)
         sys.exit(1)
+    for fname in FILES:
+        body = payloads[fname]
+        (SITE / fname).write_text(body, encoding="utf-8")
+        print(f"{'+'.join(FILES[fname])} -> pipeline/site/{fname}  ({len(body)} 字符)")
 
 
 if __name__ == "__main__":

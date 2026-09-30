@@ -134,7 +134,7 @@
 
 塞拉的手表震了一下。她抬起手看了看。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">\[5张图片\]</span></td><td>45904</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">[5张图片]</span></td><td>45904</td></tr></tbody></table></div>
 
 她点了进去，看了看那些照片。前三张是自由城的人们在街头和公园里庆祝。
 

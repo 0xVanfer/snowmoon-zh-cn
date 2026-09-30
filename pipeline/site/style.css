@@ -798,7 +798,7 @@ html[data-ui="hidden"] #topbar {
   font: 14px/1.5 var(--font-sans);
   transition: transform .2s ease, background-color .2s ease;
 }
-html.js #bottombar { display: flex; }
+html[data-js] #bottombar { display: flex; }
 #bottombar button { min-height: 44px; min-width: 88px; }
 #page-indicator {
   min-width: 8em;
@@ -908,8 +908,8 @@ html[data-lang-mode="dual"][data-dual-layout="tabs"][data-active-pane="en"] #pan
   background: var(--bg);
   font: 14px/1.5 var(--font-sans);
 }
-html.js[data-lang-mode="dual"][data-dual-layout="tabs"] #lang-tabs { display: flex; }
-html.js[data-lang-mode="dual"][data-dual-layout="tabs"] .reader-page {
+html[data-js][data-lang-mode="dual"][data-dual-layout="tabs"] #lang-tabs { display: flex; }
+html[data-js][data-lang-mode="dual"][data-dual-layout="tabs"] .reader-page {
   padding-top: 100px;
 }
 #lang-tabs button {
@@ -927,7 +927,8 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
   color: var(--accent);
   font-weight: 700;
 }
-#chapter-nav {
+#chapter-nav,
+.chapter-navigation {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
@@ -940,7 +941,8 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
   border-top: 1px solid var(--border);
   font: 15px/1.5 var(--font-sans);
 }
-#chapter-nav a { display: flex; align-items: center; min-height: 44px; }
+#chapter-nav a,
+.chapter-navigation a { display: flex; align-items: center; min-height: 44px; }
 #nav-toc { justify-content: center; }
 #nav-next { justify-content: flex-end; text-align: right; }
 #drawer, #settings-panel {
@@ -1042,10 +1044,11 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
   .reader-control__label { display: none; }
   .reader-control__short { display: inline; }
   .chapter-heading { margin-block: 32px 24px; }
-  .chapter-heading, #reader-main, #chapter-nav { width: calc(100% - 40px); }
+  .chapter-heading, #reader-main, #chapter-nav, .chapter-navigation { width: calc(100% - 40px); }
   .chapter-heading h1 { font-size: 26px; }
   #bottombar { gap: 8px; }
-  #chapter-nav { gap: 8px; font-size: 14px; }
+  #chapter-nav,
+  .chapter-navigation { gap: 8px; font-size: 14px; }
   #drawer, #settings-panel {
     inset: auto 0 0;
     width: 100%;
@@ -1327,11 +1330,10 @@ html[data-page-mode="paged"] .reader-viewport::-webkit-scrollbar {
   display: none;
 }
 /* 内部终端仍保留滚动提示，不隐藏其滚动条。 */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .chapter-content .chapter-title { font-size: 1.45em; }
   .chapter-content blockquote { padding-inline: 12px; }
-  .chapter-content figure.fig { width: 100%; padding: 4px; }
-  .chapter-content figure.fig img { width: 100%; }
+  .chapter-content figure.fig { padding: 4px; }
   .device-view { padding: 12px; }
   .device-view th, .device-view td { padding: 8px; }
   html:not([data-js]) .chapter-content {
@@ -1377,54 +1379,58 @@ html:not([data-js]) #reader-main .dz-card { max-height: none; }
 
 @media print {
   html, html body { height: auto; overflow: visible; background: none; color: black; }
-  #topbar, #bottombar, #progress-bar, #lang-tabs, #chapter-nav,
+  #topbar, #bottombar, #progress-bar, #lang-tabs, #chapter-nav, .chapter-navigation,
   #drawer, #settings-panel, #scrim, .skip-link,
   body.reader-page button, body.reader-page input,
   body.reader-page select, body.reader-page textarea { display: none !important; }
   html #reader-main {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     position: static;
-    width: auto;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
     margin: 0;
     padding: 0;
-    overflow: visible;
+    overflow: visible !important;
+    display: block !important;
   }
   html #reader-main [data-lang],
   html #reader-main .reader-viewport,
   html #reader-main .reader-flow,
   html #reader-main .chapter-content {
     position: static;
-    width: auto;
-    max-width: none;
+    width: auto !important;
+    max-width: none !important;
     height: auto !important;
-    max-height: none;
+    max-height: none !important;
     margin: 0;
     padding: 0;
-    overflow: visible;
-    columns: auto;
+    overflow: visible !important;
+    columns: auto !important;
+    column-width: auto !important;
     transform: none !important;
     contain: none;
     background: none;
     color: black;
   }
-  html #reader-main #pane-zh { display: block; order: 2; }
-  html #reader-main #pane-en { display: none; order: 1; }
-  html[data-js][data-lang-mode="en"] #reader-main #pane-zh { display: none; }
+  html #reader-main #pane-zh { display: block !important; order: 2; }
+  html #reader-main #pane-en { display: none !important; order: 1; }
+  html[data-js][data-lang-mode="en"] #reader-main #pane-zh { display: none !important; }
   html[data-js][data-lang-mode="en"] #reader-main #pane-en,
-  html[data-js][data-lang-mode="dual"] #reader-main #pane-en { display: block; }
-  html[data-js][data-lang-mode="dual"] #reader-main #pane-zh { display: block; }
+  html[data-js][data-lang-mode="dual"] #reader-main #pane-en { display: block !important; }
+  html[data-js][data-lang-mode="dual"] #reader-main #pane-zh { display: block !important; }
   html #reader-main figure.fig, html #reader-main .device-view,
   html #reader-main .dz-card {
-    max-height: none;
-    overflow: visible;
+    max-height: none !important;
+    overflow: visible !important;
     background: none;
     color: black;
     box-shadow: none;
     break-inside: auto;
   }
-  html #reader-main figure.fig img { max-height: none; }
+  html #reader-main figure.fig img { max-height: none !important; }
   .device-view thead { background: none; color: black; }
   .device-view th, .device-view td { border-color: currentColor; }
   .chapter-content .chapter-title { break-after: avoid; }

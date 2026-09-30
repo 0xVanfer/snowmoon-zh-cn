@@ -630,7 +630,7 @@
   {
    "id": "c23-b0076",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c23-s0103}}</th><th>{{S:c23-s0104}}</th><th>{{S:c23-s0105}}</th></tr></thead><tbody><tr><td style=\"width: 25%; color: red\"><center>{{S:c23-s0106}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c23-s0107}}</td><td style=\"color: red\">{{S:c23-s0108}}</td><td style=\"color: red\">{{S:c23-s0109}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c23-s0103}}</th><th></th><th>{{S:c23-s0104}}</th><th>{{S:c23-s0105}}</th></tr></thead><tbody><tr><td style=\"width: 25%; color: red\"><center>{{S:c23-s0106}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c23-s0107}}</td><td style=\"color: red\">{{S:c23-s0108}}</td><td style=\"color: red\">{{S:c23-s0109}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c23-s0103}}",
     "{{S:c23-s0104}}",

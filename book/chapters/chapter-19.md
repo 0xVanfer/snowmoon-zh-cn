@@ -118,7 +118,7 @@
 
 <span style="color:#df74b1">“正是。那院子好像把它发给了过去半年里所有来过的客人，消息上带了个什么标记，我的本地 AI 接受了，其他几乎所有人的 AI 都把它滤掉了。”</span>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th></tr></thead><tbody><tr><td style="width: 25%"><center>sa dzu du de<br>len su 2415 de<br>bun kai mo fan</center></td><td style="width: 6%; text-align:center">→</td><td>ci sen hu jan pu zau fe 400 lin man<br>ci cau be fe ti tie<br>ci tan jan pu ciu cu shan jin fe pa bi<br>ci sen hu fe bu</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th></tr></thead><tbody><tr><td style="width: 25%"><center>sa dzu du de<br>len su 2415 de<br>bun kai mo fan</center></td><td style="width: 6%; text-align:center">→</td><td>ci sen hu jan pu zau fe 400 lin man<br>ci cau be fe ti tie<br>ci tan jan pu ciu cu shan jin fe pa bi<br>ci sen hu fe bu</td></tr></tbody></table></div>
 
 <span style="color:#be9b00">“上面说什么？”</span>格拉迪亚斯问。
 

@@ -192,7 +192,7 @@
 
 他的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>个人提醒</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00b5d6">下一场掌则人会议5分钟后开始</span></td><td>39500</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>个人提醒</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00b5d6">下一场掌则人会议5分钟后开始</span></td><td>39500</td></tr></tbody></table></div>
 
 该走了。
 

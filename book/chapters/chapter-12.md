@@ -192,7 +192,7 @@
 
 <p class="scene-break">3724年草期25日</p>
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>白</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ed756b">\[dia lau shau\]</span></td><td>23098</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>白</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ed756b">[dia lau shau]</span></td><td>23098</td></tr></tbody></table></div>
 
 泽醒了。白在请求通话。
 

@@ -495,7 +495,7 @@
   {
    "id": "c16-b0063",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th style=\"font-size:150%; color: yellow\">{{S:c16-s0062}}</th><th style=\"font-size:150%; color: #808\">{{S:c16-s0063}}</th></tr></thead><tbody><tr><td style=\"font-size:150%; color: red\">{{S:c16-s0064}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0065}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0066}}</td></tr><tr><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0067}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0068}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0069}}</td></tr><tr><td style=\"font-size:150%; color: #88f\">{{S:c16-s0070}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0071}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0072}}</td></tr><tr><td style=\"font-size:150%; color: #fff\">{{S:c16-s0073}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0074}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0075}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th></th><th style=\"font-size:150%; color: yellow\">{{S:c16-s0062}}</th><th style=\"font-size:150%; color: #808\">{{S:c16-s0063}}</th></tr></thead><tbody><tr><td style=\"font-size:150%; color: red\">{{S:c16-s0064}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0065}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0066}}</td></tr><tr><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0067}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0068}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0069}}</td></tr><tr><td style=\"font-size:150%; color: #88f\">{{S:c16-s0070}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0071}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0072}}</td></tr><tr><td style=\"font-size:150%; color: #fff\">{{S:c16-s0073}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0074}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0075}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c16-s0062}}",
     "{{S:c16-s0063}}",
@@ -540,7 +540,7 @@
   {
    "id": "c16-b0067",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th style=\"font-size:150%; color: yellow\">{{S:c16-s0079}}</th><th style=\"font-size:150%; color: #808\">{{S:c16-s0080}}</th></tr></thead><tbody><tr><td style=\"font-size:150%; color: red\">{{S:c16-s0081}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0082}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0083}}</td></tr><tr><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0084}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0085}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0086}}</td></tr><tr><td style=\"font-size:150%; color: #88f\">{{S:c16-s0087}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0088}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0089}}</td></tr><tr><td style=\"font-size:150%; color: #fff\">{{S:c16-s0090}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0091}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0092}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th></th><th style=\"font-size:150%; color: yellow\">{{S:c16-s0079}}</th><th style=\"font-size:150%; color: #808\">{{S:c16-s0080}}</th></tr></thead><tbody><tr><td style=\"font-size:150%; color: red\">{{S:c16-s0081}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0082}}</td><td style=\"font-size:150%; color: red\">{{S:c16-s0083}}</td></tr><tr><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0084}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0085}}</td><td style=\"font-size:150%; color: #8f8\">{{S:c16-s0086}}</td></tr><tr><td style=\"font-size:150%; color: #88f\">{{S:c16-s0087}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0088}}</td><td style=\"font-size:150%; color: #88f\">{{S:c16-s0089}}</td></tr><tr><td style=\"font-size:150%; color: #fff\">{{S:c16-s0090}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0091}}</td><td style=\"font-size:150%; color: #fff\">{{S:c16-s0092}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c16-s0079}}",
     "{{S:c16-s0080}}",
@@ -769,7 +769,7 @@
   {
    "id": "c16-b0094",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c16-s0119}}</th><th>{{S:c16-s0120}}</th><th>{{S:c16-s0121}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c16-s0122}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c16-s0123}}</td><td>{{S:c16-s0124}}</td><td>{{S:c16-s0125}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c16-s0119}}</th><th></th><th>{{S:c16-s0120}}</th><th>{{S:c16-s0121}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c16-s0122}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c16-s0123}}</td><td>{{S:c16-s0124}}</td><td>{{S:c16-s0125}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c16-s0119}}",
     "{{S:c16-s0120}}",
@@ -823,7 +823,7 @@
   {
    "id": "c16-b0100",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c16-s0131}}</th><th>{{S:c16-s0132}}</th><th>{{S:c16-s0133}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c16-s0134}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c16-s0135}}</td><td>{{S:c16-s0136}}</td><td>{{S:c16-s0137}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c16-s0131}}</th><th></th><th>{{S:c16-s0132}}</th><th>{{S:c16-s0133}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c16-s0134}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c16-s0135}}</td><td>{{S:c16-s0136}}</td><td>{{S:c16-s0137}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c16-s0131}}",
     "{{S:c16-s0132}}",
@@ -845,7 +845,7 @@
   {
    "id": "c16-b0102",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c16-s0139}}</th><th>{{S:c16-s0140}}</th></tr></thead><tbody><tr><td>{{S:c16-s0141}}</td><td style=\"width: 6%; text-align:center\">{{S:c16-s0142}}</td><td style=\"width: 25%\"><center>{{S:c16-s0143}}</center></td></tr></tbody></table><button>{{S:c16-s0144}}</button></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c16-s0139}}</th><th></th><th>{{S:c16-s0140}}</th></tr></thead><tbody><tr><td>{{S:c16-s0141}}</td><td style=\"width: 6%; text-align:center\">{{S:c16-s0142}}</td><td style=\"width: 25%\"><center>{{S:c16-s0143}}</center></td></tr></tbody></table><button>{{S:c16-s0144}}</button></div>",
    "segs": [
     "{{S:c16-s0139}}",
     "{{S:c16-s0140}}",

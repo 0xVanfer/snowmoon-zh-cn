@@ -180,7 +180,7 @@
 
 格拉迪亚斯低头看向手持终端。
 
-![预测分数的变化及其与90分基准的对比。](../images/chapter-01-fig-01.svg)
+![预测分数的变化及其与90分基准的对比。](images/chapter-01-fig-01.svg)
 
 见习官做出的审计，有10%会被监审官重做一遍。见习官的分数，反映的就是这部分投票与监审官判断吻合到什么程度。今天，格拉迪亚斯的分数是92。只要保持在90以上，他就能入选，成为监审官——或者，如果他改了主意，也可以当掌则人。但分数哪怕掉3分，他的职业生涯就至少要再搁置一年。
 
@@ -322,11 +322,11 @@
 
 就在这时，格拉迪亚斯的手持终端震了一下。他掏出来，跳出一条通知。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">我在演唱会上看见你了，我知道你在掌舵会。</span></td><td>60259</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">我在演唱会上看见你了，我知道你在掌舵会。</span></td><td>60259</td></tr></tbody></table></div>
 
 又过了几个嘀嗒，来了第二条：
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">别担心，我不打算举报你去领赏金。不过，我有个请求想请你帮忙。</span></td><td>60266</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">别担心，我不打算举报你去领赏金。不过，我有个请求想请你帮忙。</span></td><td>60266</td></tr></tbody></table></div>
 
 
 ---
@@ -441,7 +441,7 @@
 
 讲师按了一下手表上的按钮，前墙上出现了一张幻灯片：
 
-![两个容器中粒子运动幅度与数值范围的对比](../images/chapter-02-fig-01.svg)
+![两个容器中粒子运动幅度与数值范围的对比](images/chapter-02-fig-01.svg)
 
 <span style="color:#93ab2c">“想象我们有两罐气体。每罐有一百万个分子。但左边那罐里，分子的运动速度快得多。假设左罐里分子的速度可以用六位数表示，从0到999,999。而右边那罐里分子运动得慢，速度可以用六位数表示，从0到99。”</span>
 
@@ -473,7 +473,7 @@
 
 讲师又点了一下手表。下一张幻灯片。
 
-![双室容器内粒子及其运动方向示意图](../images/chapter-02-fig-02.svg)
+![双室容器内粒子及其运动方向示意图](images/chapter-02-fig-02.svg)
 
 <span style="color:#93ab2c">“那么，要表示我们对这个新系统所不知道的信息，需要多少位数字？”</span>
 
@@ -672,7 +672,7 @@
 
 又走出一段，再也听不见他们说话之后不久，他的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">\[4张图片\]</span></td><td>44029</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">[4张图片]</span></td><td>44029</td></tr></tbody></table></div>
 
 他看了一眼。
 
@@ -856,7 +856,7 @@
 
 格拉迪亚斯看了看手表。
 
-![格拉迪亚斯与莫夫的位置及移动方向](../images/chapter-03-fig-01.svg)
+![格拉迪亚斯与莫夫的位置及移动方向](images/chapter-03-fig-01.svg)
 
 
 ---
@@ -871,7 +871,7 @@
 
 泽用手指敲了敲桌面。芬的目光猛地收回来，重新专注地盯住泽手持终端上的一段动画。
 
-![泽的手持终端上正播放着民本棋对局动画。](../images/chapter-04-fig-01.svg)
+![泽的手持终端上正播放着民本棋对局动画。](images/chapter-04-fig-01.svg)
 
 <span style="color:#ce9200">“那好，我这是在看什么？”</span>芬问。
 
@@ -903,11 +903,11 @@
 
 芬看向机器人身上的屏幕。
 
-![杯、叶、牛、鱼的泽国语词汇图解](../images/chapter-04-fig-02.svg)
+![杯、叶、牛、鱼的泽国语词汇图解](images/chapter-04-fig-02.svg)
 
 他点了“kai”，又点了一张沙拉的图片。
 
-![用户在点餐终端点击“kai”，再选择沙拉图片。](../images/chapter-04-fig-03.svg)
+![用户在点餐终端点击“kai”，再选择沙拉图片。](images/chapter-04-fig-03.svg)
 
 芬又点了一下，接着按了几个按钮点了茶。机器人应声叫了一下，滑到泽身边。
 
@@ -973,7 +973,7 @@
 
 泽的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>芬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ce9200">jie fe hen dzi</span></td><td>74160</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>芬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ce9200">jie fe hen dzi</span></td><td>74160</td></tr></tbody></table></div>
 
 芬给他发来消息：“祝你好运。”
 
@@ -1091,7 +1091,7 @@
 
 观众能看到一幅巨大的详细地图，呈现屏幕上发生的一切。芬在远处用手持终端查看，看到的是摘要视图，上面标着每位选手符记的位置：
 
-![四类不同符号的数据点分布示意图](../images/chapter-04-fig-04.svg)
+![四类不同符号的数据点分布示意图](images/chapter-04-fig-04.svg)
 
 泽继续攻打扎。把对手两名选手里彻底清掉一个，他想，他们在干预回合里的操作量就少一半——而干预回合永远是最出人意料的变数来源。
 
@@ -1135,7 +1135,7 @@
 
 两百个回合后，扎剩下的符记全部被清除。
 
-![圆点、方块与三角形在平面上的分布。](../images/chapter-04-fig-05.svg)
+![圆点、方块与三角形在平面上的分布。](images/chapter-04-fig-05.svg)
 
 按符记总数算，是十五比十五——正好持平。但现在扎出局了，泽和白在干预回合里合力能做的事，是潘一个人能做的两倍。
 
@@ -1274,7 +1274,7 @@
 
 泽和白慢悠悠地沿坡道走，不久看见一家餐馆。一男一女坐在那儿，喝着茶，吃一盘蔬菜配米饭。旁边有块大屏幕，正在放一场讲解联合城邦共治制度的讲座。
 
-![城市之间的双向连接及权重示意图](../images/chapter-05-fig-01.svg)
+![城市之间的双向连接及权重示意图](images/chapter-05-fig-01.svg)
 
 <span style="color:#23ba7d">“两座城市建立共治关系后，各自选出对方议会中的一定比例席位。”</span>
 
@@ -1360,7 +1360,7 @@
 
 ---
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">［正在呼叫］</span></td><td>58130</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">［正在呼叫］</span></td><td>58130</td></tr></tbody></table></div>
 
 塞拉点了点手表。
 
@@ -1501,13 +1501,13 @@
 
 格拉迪亚斯挂断了通话。他拿出手持终端，接着研究掌则人的治理结构。
 
-![随机选出评则掌则人并分配至讨论组。](../images/chapter-06-fig-01.svg)
+![随机选出评则掌则人并分配至讨论组。](images/chapter-06-fig-01.svg)
 
 格拉迪亚斯记下：结构跟监审官类似，只是更大——监审官是三组、每组三人，掌则人是三组、每组七人。合议庭不属于掌舵会，但他记得也很像：先是两两成对、各自分开评议，然后才投票；另有一人专管破平局，五人意见取中位数定案。掌则人小组比合议庭和监审官小组人多，这说得通：一条评则比任何一次单独裁决都重要。合议庭人少也说得通：五名法官只负责一轮，而且总能上诉。
 
 格拉迪亚斯在几个界面之间来回切换，翻看这一轮计划评估的评则清单：
 
-<div class="device-view wide-device-view"><table><thead><tr><th>评则名称</th><th>摘要</th></tr></thead><tbody><tr><td style="width: 5%">5</td><td style="width: 20%">实体空间的应急准备</td><td>设有安全庇护所、耐用应急物资、完全或部分脱离电网的，适用较低税率档；建筑设计不安全或脆弱的，适用较高税率档。</td></tr><tr><td style="width: 5%">6</td><td style="width: 20%">硬件开放度</td><td>尊重用户维修权、公开可用的原理图、设计及其他源文件、遵循开放标准的，适用较低税率档；故意制造不兼容、限制可改造性及相关反竞争做法的，适用较高税率档。</td></tr><tr><td style="width: 5%">7</td><td style="width: 20%">室内空气洁净</td><td>税率与实测的平均空气质量指标成比例——二氧化碳、PM2.5 及其他主流指标。计算平均时，人员在室时间更长的时段权重更高。适用于容纳超过20人的场所。</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th></th><th>评则名称</th><th>摘要</th></tr></thead><tbody><tr><td style="width: 5%">5</td><td style="width: 20%">实体空间的应急准备</td><td>设有安全庇护所、耐用应急物资、完全或部分脱离电网的，适用较低税率档；建筑设计不安全或脆弱的，适用较高税率档。</td></tr><tr><td style="width: 5%">6</td><td style="width: 20%">硬件开放度</td><td>尊重用户维修权、公开可用的原理图、设计及其他源文件、遵循开放标准的，适用较低税率档；故意制造不兼容、限制可改造性及相关反竞争做法的，适用较高税率档。</td></tr><tr><td style="width: 5%">7</td><td style="width: 20%">室内空气洁净</td><td>税率与实测的平均空气质量指标成比例——二氧化碳、PM2.5 及其他主流指标。计算平均时，人员在室时间更长的时段权重更高。适用于容纳超过20人的场所。</td></tr></tbody></table></div>
 
 格拉迪亚斯继续往下翻掌则人的文档。大约30分钟后，他累了，往后靠进椅子里。他让翡翠根据自己到现在看过的内容出一套测验题，帮他复习。翡翠应了一声，开始在后台干活。
 
@@ -1924,7 +1924,7 @@
 
 观众们都盯着大屏幕。
 
-![浅蓝圆点与紫色方块分布在蓝紫色背景上。](../images/chapter-07-fig-01.svg)
+![浅蓝圆点与紫色方块分布在蓝紫色背景上。](images/chapter-07-fig-01.svg)
 
 第一次干预回合到了。泽让 AI 去调整前线附近的结构，反正这些变化白马上就能看到。
 
@@ -1944,7 +1944,7 @@
 
 然后，滑翔机忽然从西、北、东三面朝那艘飞船扑来。它很快崩解，炸成一片残骸和十几架滑翔机。到那一刻，泽才明白发生了什么。白的 AI 没考虑对角线，根本不是失误。是白故意让 AI 专注其他方向，而她自己在对角线上布下了纵深的多层防御。那是个陷阱，泽结结实实地踩了进去。
 
-![圆点与方块在平面上的分布。](../images/chapter-07-fig-02.svg)
+![圆点与方块在平面上的分布。](images/chapter-07-fig-02.svg)
 
 穆对泽生出一阵失望。十七比二十二，她想。他怎么会踩进那个陷阱，自己又想不出任何有意思的东西？他在中央有一艘飞船向北飞，可那又怎样？白的基地对沿对角线的进攻防得很好，泽那艘飞船到达北侧的胜算也不大。除非泽拿出什么完全出人意料的东西，她想，这盘会变成一场消耗战，而消耗战只会越来越偏向白。
 
@@ -1974,7 +1974,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 又过了五百回合，棋盘已经大不一样。
 
-![圆点与方块在平面上的分布](../images/chapter-07-fig-03.svg)
+![圆点与方块在平面上的分布](images/chapter-07-fig-03.svg)
 
 到这时，穆不再凝重地摇头，芬脸上的惊恐也变成了兴奋的笑容。
 
@@ -1986,7 +1986,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 五百回合后，双方的攻势都见了分晓。泽的成了，白的没成。白唯一值得一提的战果，是毁掉了泽在西南的基地里剩下的符记。
 
-![圆点与方块在平面上的分布。](../images/chapter-07-fig-04.svg)
+![圆点与方块在平面上的分布。](images/chapter-07-fig-04.svg)
 
 十二比六。
 
@@ -2049,7 +2049,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 格拉迪亚斯沿街走着，手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">［5张图片］</span></td><td>34125</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">［5张图片］</span></td><td>34125</td></tr></tbody></table></div>
 
 他打开手持终端，想把图片看得清楚些。
 
@@ -2067,7 +2067,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 格拉迪亚斯的手表震了一下，屏幕上弹出一条通知。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">记住，你今天的考核不只看知识，还得让那些参议员看得上你。</span></td><td>34576</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">记住，你今天的考核不只看知识，还得让那些参议员看得上你。</span></td><td>34576</td></tr></tbody></table></div>
 
 格拉迪亚斯叹了口气，把胳膊垂回腰边，继续等着。
 
@@ -2235,7 +2235,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 参议员们开始按下按钮。每投出一票，就响起一声不同的提示音。几嘀嗒之内，所有票都投完了。格拉迪亚斯望向房间上方那块屏幕。
 
-![格拉迪亚斯的接纳投票分布](../images/chapter-08-fig-01.svg)
+![格拉迪亚斯的接纳投票分布](images/chapter-08-fig-01.svg)
 
 <span style="color:#eb7a52">“哇”</span>，主席叹道。<span style="color:#eb7a52">“十比十，正好。按准入表决的规则，由我来投决定票。那么我投……”</span>
 
@@ -2243,7 +2243,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#eb7a52">“赞成。”</span>
 
-![格拉迪亚斯的接纳投票示意图](../images/chapter-08-fig-02.svg)
+![格拉迪亚斯的接纳投票示意图](images/chapter-08-fig-02.svg)
 
 <span style="color:#eb7a52">“欢迎加入掌舵会，格拉迪亚斯。”</span>
 
@@ -2251,7 +2251,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 格拉迪亚斯一走出大楼就看了看手表。准入表决进行的时候，手表一直在响，他一直没理会。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">不好意思打扰你，是关于莉莉的事。她刚在公民课上考砸了。我觉得她见见你和塞拉会好一些。</span></td><td>45183</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">不好意思打扰你，是关于莉莉的事。她刚在公民课上考砸了。我觉得她见见你和塞拉会好一些。</span></td><td>45183</td></tr></tbody></table></div>
 
 塞拉还在伊普塔克，格拉迪亚斯想。他只能自己去。
 
@@ -2259,7 +2259,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#be9b00">“我这就来”</span>，格拉迪亚斯对着颈带低声说——又一次，不是那一刻他有多想藏住隐私，只是到这时候他已经习惯了小声说话。<span style="color:#be9b00">“给我点我常点的那份吃食。我刚从准入听证会出来，会饿。”</span>
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">你至少被录取了吧？</span></td><td>45501</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">你至少被录取了吧？</span></td><td>45501</td></tr></tbody></table></div>
 
 <span style="color:#be9b00">“录取了。不过险得很。”</span>
 
@@ -2297,7 +2297,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 格拉迪亚斯的手表响了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">［请求通话］</span></td><td>59063</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">［请求通话］</span></td><td>59063</td></tr></tbody></table></div>
 
 他接通了。
 
@@ -2562,7 +2562,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 登打开手持终端，给泽看了一张图。
 
-![四台计算机与多层节点的网络连接示意图。](../images/chapter-09-fig-01.svg)
+![四台计算机与多层节点的网络连接示意图。](images/chapter-09-fig-01.svg)
 
 <span style="color:#e58137">“你以前见过这个吗？”</span>登问。
 
@@ -2817,7 +2817,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 他的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>个人提醒</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00b5d6">下一场掌则人会议5分钟后开始</span></td><td>39500</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>个人提醒</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00b5d6">下一场掌则人会议5分钟后开始</span></td><td>39500</td></tr></tbody></table></div>
 
 该走了。
 
@@ -3457,7 +3457,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 这一节讲的是哈希函数。书页中间有一幅大图。
 
-![多层网络中的交叉连接与跳跃连接示意图](../images/chapter-12-fig-01.svg)
+![多层网络中的交叉连接与跳跃连接示意图](images/chapter-12-fig-01.svg)
 
 “哈希算法的构想”。
 
@@ -3551,7 +3551,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <p class="scene-break">3724年草期25日</p>
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>白</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ed756b">\[dia lau shau\]</span></td><td>23098</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>白</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ed756b">[dia lau shau]</span></td><td>23098</td></tr></tbody></table></div>
 
 泽醒了。白在请求通话。
 
@@ -3739,7 +3739,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 观众专注地看着。河对岸，白也专注地看着。远处，芬、穆和登同样在看着。
 
-![六边形内上方分布圆点，下方分布方块。](../images/chapter-12-fig-02.svg)
+![六边形内上方分布圆点，下方分布方块。](images/chapter-12-fig-02.svg)
 
 观众很意外。他们发现，两位选手都没能弄出任何纵向移动的滑翔机。
 
@@ -3808,7 +3808,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 他的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">我最近多盯了德尔瓦特一阵，我们该谈谈。</span></td><td>71256</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">我最近多盯了德尔瓦特一阵，我们该谈谈。</span></td><td>71256</td></tr></tbody></table></div>
 
 格拉迪亚斯对着颈带低声说话，给莫夫拨了通电话。
 
@@ -4067,7 +4067,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽和贡都看不到全局，但观众看得到。
 
-![三种颜色与形状的标记分布在蓝色背景上。](../images/chapter-14-fig-01.svg)
+![三种颜色与形状的标记分布在蓝色背景上。](images/chapter-14-fig-01.svg)
 
 几百回合后，泽意识到贡的攻势更见效。他不仅在中央与南面神龛之间、中央与西面神龛之间造出了永恒的滑翔机工厂，还发动了一波滑翔机攻势，摧毁了泽的载符飞船。
 
@@ -4083,7 +4083,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 然后，第四次干预回合到了。
 
-![深蓝背景上分布着圆点、方块和倒三角。](../images/chapter-14-fig-02.svg)
+![深蓝背景上分布着圆点、方块和倒三角。](images/chapter-14-fig-02.svg)
 
 泽清楚，贡在子力上优势很大。他唯一的优势就是藏得住。永恒滑翔机工厂放出的滑翔机四处乱飞，而东北角稍往南的位置，算是比较好待的地方之一。
 
@@ -4099,7 +4099,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 他没有移动自己的飞船，也动不了：接下来三千回合，他一边造新飞船，一边只能当活靶子。
 
-![蓝紫背景上分布着圆点、方块和倒三角。](../images/chapter-14-fig-03.svg)
+![蓝紫背景上分布着圆点、方块和倒三角。](images/chapter-14-fig-03.svg)
 
 第六次干预回合到了，正赶上贡的载符飞船被一阵密集的滑翔机击中。这让贡得到一个幸运的机会，来得及替它挡下滑翔机，使它多撑了一阵。
 
@@ -4123,7 +4123,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 第十次干预回合到了。似乎什么都没发生，只有残骸。越来越多的残骸。
 
-![深蓝背景上的三角形、方块与圆点分布](../images/chapter-14-fig-04.svg)
+![深蓝背景上的三角形、方块与圆点分布](images/chapter-14-fig-04.svg)
 
 泽加固了最后一艘载符飞船东侧和西侧的墙。
 
@@ -4179,7 +4179,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 菜单弹了出来。
 
-![四格图标展示杯子、叶片、牛头和鱼。](../images/chapter-14-fig-05.svg)
+![四格图标展示杯子、叶片、牛头和鱼。](images/chapter-14-fig-05.svg)
 
 <span style="color:#df74b1">“哇”</span>，泽轻呼一声。
 
@@ -4270,15 +4270,15 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 塞拉掏出手持终端，手忙脚乱地打起字来。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>消息</th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#54a1f9">快告诉我你还在自由城，你没事吧。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>扬</center></td></tr></tbody></table><button>发送</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#54a1f9">快告诉我你还在自由城，你没事吧。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>扬</center></td></tr></tbody></table><button>发送</button></div>
 
 她点了发送。
 
 几个嘀嗒后：
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">别担心，我在自由城。</span></td><td>32117</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">别担心，我在自由城。</span></td><td>32117</td></tr></tbody></table></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">我们这边居然还一直挺重视防务的，而且在联合城邦里，自由城离红郡差不多是最远的了，也就银滩和马布利更远一点。</span></td><td>32124</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">我们这边居然还一直挺重视防务的，而且在联合城邦里，自由城离红郡差不多是最远的了，也就银滩和马布利更远一点。</span></td><td>32124</td></tr></tbody></table></div>
 
 塞拉松了口气。
 
@@ -4328,51 +4328,51 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽焦急地戳着手持终端上的按键，第五次把消息发出去。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">你还好吗？？？？！<br><br>快告诉我你在哪儿。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">你还好吗？？？？！<br><br>快告诉我你在哪儿。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 他坐在酒店大堂餐厅的一张桌子旁哭。面前摆着一杯茶和一份米饭配蔬菜。茶他喝得很快，机器人已经续了四次。那份米饭和蔬菜摆在那儿快一长时了，他一口没动。
 
 终于，他收到了回信。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">别担心，我还活着。<br><br>不过看样子我一时半会儿回不了泽国了。</span></td><td>84690</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">别担心，我还活着。<br><br>不过看样子我一时半会儿回不了泽国了。</span></td><td>84690</td></tr></tbody></table></div>
 
 这不是泽想要的结果，但比他害怕的结果好太多了。他松了口气。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我找到往外发消息的办法了。<br><br>有个北极士兵，跟他的朋友——也可能是他的 AI，或者别的什么——一起捣鼓出一套办法，能把隐藏的文本消息嵌进他实时回传给指挥部的健康数据里。<br><br>指挥部里另有一个人把这个信号转接进天气数据流，再往上传到卫星。<br><br>他靠匿名替人转发消息，挣了一大堆齐普币。</span></td><td>84714</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我找到往外发消息的办法了。<br><br>有个北极士兵，跟他的朋友——也可能是他的 AI，或者别的什么——一起捣鼓出一套办法，能把隐藏的文本消息嵌进他实时回传给指挥部的健康数据里。<br><br>指挥部里另有一个人把这个信号转接进天气数据流，再往上传到卫星。<br><br>他靠匿名替人转发消息，挣了一大堆齐普币。</span></td><td>84714</td></tr></tbody></table></div>
 
 泽擦掉眼泪，开始专注地打字。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">哇。你……跟那个士兵有联系？</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">哇。你……跟那个士兵有联系？</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我有个匿名联系的渠道。</span></td><td>84723</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我有个匿名联系的渠道。</span></td><td>84723</td></tr></tbody></table></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">问问他往健康数据里塞消息，用的是什么编码方式。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">问问他往健康数据里塞消息，用的是什么编码方式。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 泽想了想，意识到也许轮到自己当老师了。他掏出一块键盘，开始飞快地敲。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">或者说——再一想，他不会回答的。不过你告诉他：随机翻最低有效位，是所有人第一次碰到这个问题时都会先想到的那套办法，但它不是理想解。有时候高位完全可以翻，有时候连翻一个最低有效位都有危险。<br><br>你要做的是：<br><br>\* 在实际分布上训练一个语言模型，让它以其余所有位为条件，给出某一位应当是0还是1的概率<br><br>\* 把数据切成一个个分桶——分桶务必用解密密钥本身来随机决定——并要求第 i 个分桶内所有位异或的结果等于密文第 i 位。在每个分桶里，用模型找出哪些位的概率最接近50/50——也就是在那个语境里，这一位取0取1都“自然”——然后翻掉那一位，让分桶的异或值对上。<br><br>也就是说，由语言模型来判断哪些位“最不重要”、可以放心翻，而不是永远只动每个数字里最低的那一位二进制数。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">或者说——再一想，他不会回答的。不过你告诉他：随机翻最低有效位，是所有人第一次碰到这个问题时都会先想到的那套办法，但它不是理想解。有时候高位完全可以翻，有时候连翻一个最低有效位都有危险。<br><br>你要做的是：<br><br>* 在实际分布上训练一个语言模型，让它以其余所有位为条件，给出某一位应当是0还是1的概率<br><br>* 把数据切成一个个分桶——分桶务必用解密密钥本身来随机决定——并要求第 i 个分桶内所有位异或的结果等于密文第 i 位。在每个分桶里，用模型找出哪些位的概率最接近50/50——也就是在那个语境里，这一位取0取1都“自然”——然后翻掉那一位，让分桶的异或值对上。<br><br>也就是说，由语言模型来判断哪些位“最不重要”、可以放心翻，而不是永远只动每个数字里最低的那一位二进制数。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 泽往后靠了靠，心里得意：他不仅弄懂并讲清了一个复杂概念，而且是这份活儿恰恰需要的那个复杂概念。
 
 他决定继续说下去，一半出于对自己理解力的得意，一半出于想让更多红郡人把消息偷偷从北极审查者眼皮底下送出去的愿望。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">想走得更远，你可以让分桶部分重叠。比如说：<br><br>\* 第一个分桶是0～199<br>\* 第二个是20～219<br>\* 第三个是40～239<br><br>以此类推，不过记住整个顺序应当是一个伪随机排列。<br><br>另外，每个分桶里只随机挑一半的位置参与异或，这样总能找到一些位，翻掉其中某一位只影响某一个分桶，而不影响它前一个或后一个分桶。比如说，204可以属于第二个分桶，却不属于第三个。<br><br>顺利情况下的算法是：<br><br>\* 在0～199里挑一位翻掉，让第一个分桶的异或值对上<br>\* 在200～219里挑一位翻掉，让第二个分桶的异或值对上<br>\* 在220～239里挑一位翻掉，让第三个分桶的异或值对上<br><br>以此类推……<br><br>但假如说，240～259连续给你20个位，这20个位一个都不适合翻——想象一幅非常清晰的夜空图，连续20个像素本来就该是纯黑——换成健康数据也一样——那你就往回退，在220～239里找一组可翻的位，让最后两个分桶的异或同时对上；如果还不行，就再往回退，在200～239里找一组位，让最后三个分桶的异或都对上，依此类推。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">想走得更远，你可以让分桶部分重叠。比如说：<br><br>* 第一个分桶是0～199<br>* 第二个是20～219<br>* 第三个是40～239<br><br>以此类推，不过记住整个顺序应当是一个伪随机排列。<br><br>另外，每个分桶里只随机挑一半的位置参与异或，这样总能找到一些位，翻掉其中某一位只影响某一个分桶，而不影响它前一个或后一个分桶。比如说，204可以属于第二个分桶，却不属于第三个。<br><br>顺利情况下的算法是：<br><br>* 在0～199里挑一位翻掉，让第一个分桶的异或值对上<br>* 在200～219里挑一位翻掉，让第二个分桶的异或值对上<br>* 在220～239里挑一位翻掉，让第三个分桶的异或值对上<br><br>以此类推……<br><br>但假如说，240～259连续给你20个位，这20个位一个都不适合翻——想象一幅非常清晰的夜空图，连续20个像素本来就该是纯黑——换成健康数据也一样——那你就往回退，在220～239里找一组可翻的位，让最后两个分桶的异或同时对上；如果还不行，就再往回退，在200～239里找一组位，让最后三个分桶的异或都对上，依此类推。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 他随即意识到，上一条消息可能太像是在逞能，于是又补发了一条。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">这招是我从登的密码学教材里学来的。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">这招是我从登的密码学教材里学来的。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我会转给他的。<br><br>不过我猜，他的首要任务会是找到带宽更高的通道来藏数据。优化翻哪些位确实很聪明，但也许只有2倍收益；找到一个更好的数据流，却可能是1000倍收益。<br><br>永远先去拿笨办法带来的1000倍收益，别去追那个聪明绝顶的2倍。</span></td><td>85190</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我会转给他的。<br><br>不过我猜，他的首要任务会是找到带宽更高的通道来藏数据。优化翻哪些位确实很聪明，但也许只有2倍收益；找到一个更好的数据流，却可能是1000倍收益。<br><br>永远先去拿笨办法带来的1000倍收益，别去追那个聪明绝顶的2倍。</span></td><td>85190</td></tr></tbody></table></div>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">这句是我在商学院学的。</span></td><td>85200</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">这句是我在商学院学的。</span></td><td>85200</td></tr></tbody></table></div>
 
 泽心里对更好的隐写编码更乐观了些：改进幅度说不定真不小。但他还是决定不再纠缠这一点。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">好，那你注意安全。<br><br>要是有什么事我能帮上忙，或者我认识的那些聪明人能帮上忙，只要能让你安全脱身，就跟我说一声。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th></th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">好，那你注意安全。<br><br>要是有什么事我能帮上忙，或者我认识的那些聪明人能帮上忙，只要能让你安全脱身，就跟我说一声。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
 
 泽本来想说‘或者昆高培能做的’，甚至想说‘或者泽国那些高明的秘密社团能做的’。但他意识到：第一，让一个外人——尤其是在敌占区的外人——知道这些东西的存在，就是泄密；第二，他并不能完全信任这条联系通道——他甚至还没问过德鲁因一个安全问题。于是说出口的就成了‘我这边认识的聪明人’。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">好。谢谢你这么关心我。</span></td><td>84821</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">好。谢谢你这么关心我。</span></td><td>84821</td></tr></tbody></table></div>
 
 泽放下手持终端，呼出一口气。他的目光在餐厅里扫了一圈，发现这时已经没别人了。他终于开始吃那份米饭配蔬菜。
 
@@ -4456,7 +4456,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽想起该看一眼手表。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">那个北极士兵说谢谢，帮了大忙。</span></td><td>92115</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">那个北极士兵说谢谢，帮了大忙。</span></td><td>92115</td></tr></tbody></table></div>
 
 <span style="color:#df74b1">“看来就是这一招。”</span>
 
@@ -4597,7 +4597,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 屏幕上的记分板跳了一下。
 
-<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">9</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1674</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th></th><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">9</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1674</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
 
 紫队的蓝球得分刚从20涨到23，合计得分从1540涨到1771——足以反超对手。
 
@@ -4605,7 +4605,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 记分板又变了。
 
-<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">10</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1860</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th></th><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">10</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1860</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
 
 <span style="color:#ce9200">“你得承认，现在的计分系统是真好，”</span>费布里克大声说。
 
@@ -4659,7 +4659,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 几个嘀嗒后，费布里克的手表震了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">\[钱包 0x8f62... 社交恢复模式交易请求\]</span></td><td>65129</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">[钱包 0x8f62... 社交恢复模式交易请求]</span></td><td>65129</td></tr></tbody></table></div>
 
 费布里克打开手持终端，一笔交易的详细视图弹了出来。他让翡翠上网查收款地址。几个嘀嗒后，翡翠回话确认，那确实是海德菲尔的收款地址。他接着看金额——5.5齐普币。一个水瓶加运费，这价钱算合理，不过费用的大头肯定在运费上。他又看了交易的数据字段。对，看上去是格拉迪亚斯住址的一段编码，格式符合标准的网购协议。
 
@@ -4671,11 +4671,11 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 不到一分钟，格拉迪亚斯的手表又震了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">安全问题：孩子们从维尔和黛雅那儿回来的那天晚上，我做过的最不寻常的事是什么？</span></td><td>73105</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">安全问题：孩子们从维尔和黛雅那儿回来的那天晚上，我做过的最不寻常的事是什么？</span></td><td>73105</td></tr></tbody></table></div>
 
 格拉迪亚斯立刻对着颈带低声回了一句。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#be9b00">你在餐馆里把屏幕的插头拔了，当时正在播埃菲里昂勋爵的演讲。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>塞拉</center></td></tr></tbody></table><button>发送</button></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#be9b00">你在餐馆里把屏幕的插头拔了，当时正在播埃菲里昂勋爵的演讲。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>塞拉</center></td></tr></tbody></table><button>发送</button></div>
 
 片刻之后，格拉迪亚斯的手表又震了。包括他自己在内，已经签好三个。还差一个。要么是莫夫，要么是佩洛——当然，真到了万不得已，他就得自己跑去保险库取第二把钥匙。
 
@@ -4822,7 +4822,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 他掏出手持终端，按了几个键。屏幕上展开一张图，他拿给格拉迪亚斯看。
 
-![空气传播疾病的防治措施及占比](../images/chapter-17-fig-01.svg)
+![空气传播疾病的防治措施及占比](images/chapter-17-fig-01.svg)
 
 <span style="color:#ed756b">“这是空气传播疾病防治的子图。图上每一个节点，密码学网络都会随机抽一个委员会，由它决定这个节点正下方那些边的权重。”</span>
 
@@ -4860,7 +4860,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#ed756b">“总之，放大到单个项目的层级，就是这样。”</span>
 
-![紫外线研究项目及其资源分配网络](../images/chapter-17-fig-02.svg)
+![紫外线研究项目及其资源分配网络](images/chapter-17-fig-02.svg)
 
 <span style="color:#be9b00">“让这些随机抽出的图谱资助委员会在这么细的层级上做决定，明智吗？”</span>
 
@@ -5123,7 +5123,12 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 白把屏幕转给他看。
 
-<div class="device-view wide-device-view"><blockquote><p>他选了人迹更少的那条路，为众人开出一条道来。</p><pre style="color:#fff">jan jo san sia ci pa jan li san sia te bia pin hu fe lo shun ci fi mu jan li san sia fe fi mu san sia te shun zo bia pin fe jan</pre></blockquote></div>
+<div class="device-view wide-device-view"><blockquote><p>他选了人迹更少的那条路，为众人开出一条道来。</p><pre style="color:#fff">         jan jo san sia
+   ci pa jan li san sia
+           te bia pin hu fe lo shun
+ci fi mu jan li san sia
+       fe fi mu san sia
+           te shun zo bia pin fe jan</pre></blockquote></div>
 
 <span style="color:#ed756b">“你知道这是什么意思吗？”</span>
 
@@ -5268,7 +5273,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 大约一嘀嗒后，他的手表震了一下，表示数据已收到。
 
-![信封图标，表示邮件或消息。](../images/chapter-19-fig-01.svg)
+![信封图标，表示邮件或消息。](images/chapter-19-fig-01.svg)
 
 <div class="device-view narrow-device-view"><b>fe cau tie dai<br>li shu</b></div>
 
@@ -5324,7 +5329,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#df74b1">“正是。那院子好像把它发给了过去半年里所有来过的客人，消息上带了个什么标记，我的本地 AI 接受了，其他几乎所有人的 AI 都把它滤掉了。”</span>
 
-<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th></tr></thead><tbody><tr><td style="width: 25%"><center>sa dzu du de<br>len su 2415 de<br>bun kai mo fan</center></td><td style="width: 6%; text-align:center">→</td><td>ci sen hu jan pu zau fe 400 lin man<br>ci cau be fe ti tie<br>ci tan jan pu ciu cu shan jin fe pa bi<br>ci sen hu fe bu</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th></tr></thead><tbody><tr><td style="width: 25%"><center>sa dzu du de<br>len su 2415 de<br>bun kai mo fan</center></td><td style="width: 6%; text-align:center">→</td><td>ci sen hu jan pu zau fe 400 lin man<br>ci cau be fe ti tie<br>ci tan jan pu ciu cu shan jin fe pa bi<br>ci sen hu fe bu</td></tr></tbody></table></div>
 
 <span style="color:#be9b00">“上面说什么？”</span>格拉迪亚斯问。
 
@@ -5408,7 +5413,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽照图书管理员说的做了。下载几乎立刻开始。
 
-![各十六进制标识对应的百分比对比。](../images/chapter-19-fig-02.svg)
+![各十六进制标识对应的百分比对比。](images/chapter-19-fig-02.svg)
 
 <span style="color:#df74b1">“哇，只要8分钟！”</span>
 
@@ -5537,7 +5542,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 她向下滑动手持终端，看到翡翠还标出了另外五条它认为对她非常重要的消息。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>费布里克</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ce9200">我和赫雷达都已安全进入大梅港。我们会尽力活下去。<br><br>我们爱你们。</span></td><td>19867</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">北林今天早上遭到入侵。</span></td><td>20045</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">看起来几乎没打什么仗，好像我们的政客和军队对这件事完全无所谓。</span></td><td>20060</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">我和费布里克已安全进入大梅港。北极人似乎把它当作某种中立区来尊重，至少目前如此。</span></td><td>20071</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">我很害怕。希望一切都会好起来。<br><br>爱你们。</span></td><td>20077</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>费布里克</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ce9200">我和赫雷达都已安全进入大梅港。我们会尽力活下去。<br><br>我们爱你们。</span></td><td>19867</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">北林今天早上遭到入侵。</span></td><td>20045</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">看起来几乎没打什么仗，好像我们的政客和军队对这件事完全无所谓。</span></td><td>20060</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">我和费布里克已安全进入大梅港。北极人似乎把它当作某种中立区来尊重，至少目前如此。</span></td><td>20071</td></tr><tr><td style="width: 25%"><center>赫雷达</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#aaa300">我很害怕。希望一切都会好起来。<br><br>爱你们。</span></td><td>20077</td></tr></tbody></table></div>
 
 塞拉开始回消息，向费布里克和赫雷达确认自己收到了他们的消息，并说她和维尔、黛雅会尽一切努力把他们接回家。还没打完，她就哭了。
 
@@ -6119,7 +6124,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 扬放在腿上的手持终端震了一下。
 
-<div class="device-view wide-device-view"><table><thead><tr><th colspan="3">出租车费</th></tr></thead><tbody><tr><td><center>司机起步价</center></td><td>3.69</td></tr><tr><td><center>每分钟通行费</center></td><td>9分钟</td><td>1.89</td></tr><tr><td><center>每公里通行费</center></td><td>5.65公里</td><td>1.26</td></tr><tr><td><center>加减速通行费</center></td><td>113 m/s Δv</td><td>1.03</td></tr><tr><td><center>道路拥堵通行费</center></td><td>1.50</td></tr><tr><td><center>道路拥堵通行费</center></td><td>1.00</td></tr><tr><td><center>道路拥堵通行费</center></td><td>2.25</td></tr><tr><td><center>合计</center></td><td>12.52</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th colspan="3">出租车费</th></tr></thead><tbody><tr><td><center>司机起步价</center></td><td></td><td>3.69</td></tr><tr><td><center>每分钟通行费</center></td><td>9分钟</td><td>1.89</td></tr><tr><td><center>每公里通行费</center></td><td>5.65公里</td><td>1.26</td></tr><tr><td><center>加减速通行费</center></td><td>113 m/s Δv</td><td>1.03</td></tr><tr><td><center>道路拥堵通行费</center></td><td></td><td>1.50</td></tr><tr><td><center>道路拥堵通行费</center></td><td></td><td>1.00</td></tr><tr><td><center>道路拥堵通行费</center></td><td></td><td>2.25</td></tr><tr><td><center>合计</center></td><td></td><td>12.52</td></tr></tbody></table></div>
 
 <span style="color:#78b249">“嘿，师傅？”</span>扬问司机。
 
@@ -6259,7 +6264,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 扬点开文件，弹出一个画面。
 
-![蓝底上的七个圆点与红色方块虚线标记。](../images/chapter-22-fig-01.svg)
+![蓝底上的七个圆点与红色方块虚线标记。](images/chapter-22-fig-01.svg)
 
 <span style="color:#78b249">“我这是在看什么？”</span>
 
@@ -6273,7 +6278,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 大约十嘀嗒后，扬的屏幕上又出现一个阅后即焚文件。
 
-![七个浅蓝点与红色方块及虚线的位置示意图](../images/chapter-22-fig-02.svg)
+![七个浅蓝点与红色方块及虚线的位置示意图](images/chapter-22-fig-02.svg)
 
 <span style="color:#df74b1">“再等一会儿。”</span>
 
@@ -6281,7 +6286,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#df74b1">“然后……开拍。”</span>
 
-![多个节点的圆形覆盖范围及位置标记](../images/chapter-22-fig-03.svg)
+![多个节点的圆形覆盖范围及位置标记](images/chapter-22-fig-03.svg)
 
 <span style="color:#df74b1">“看到了吗？”</span>
 
@@ -6291,7 +6296,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 对话停了大约二十嘀嗒。
 
-![七个节点的虚线圆范围与彩色标记](../images/chapter-22-fig-04.svg)
+![七个节点的虚线圆范围与彩色标记](images/chapter-22-fig-04.svg)
 
 <span style="color:#78b249">“还没死？怎么这么久？”</span>
 
@@ -6313,7 +6318,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#df74b1">“我们有麻烦了。”</span>
 
-![多个圆形覆盖区域与位置标记示意图](../images/chapter-22-fig-05.svg)
+![多个圆形覆盖区域与位置标记示意图](images/chapter-22-fig-05.svg)
 
 <span style="color:#78b249">“北极增援？你现在要接管，亲自把无人机开向胜利？”</span>
 
@@ -6349,7 +6354,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 终于，扬的电脑上下载图标又亮了。
 
-![多个虚线圆形范围与标记点的分布](../images/chapter-22-fig-06.svg)
+![多个虚线圆形范围与标记点的分布](images/chapter-22-fig-06.svg)
 
 <span style="color:#df74b1">“真的好险。”</span>
 
@@ -6542,7 +6547,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 格拉迪亚斯已经上床，正准备睡觉。突然，他的手表震了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%; color: red"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td style="color: red">\[正在呼叫\]</td><td style="color: red">91454</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%; color: red"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td style="color: red">[正在呼叫]</td><td style="color: red">91454</td></tr></tbody></table></div>
 
 这种红色的消息，他此前只见过两次：一次是北林遭到攻击时塞拉给他发来消息，一次是她为德尔瓦特的事打来电话。
 
@@ -6796,7 +6801,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 格拉迪亚斯和泽坐在一间密闭屋子的桌旁，桌面本身就是一块屏幕。屏幕上分作四格，各堆着一些圆圈。
 
-![四个虚线格中蓝色圆圈的数量与排列对比](../images/chapter-25-fig-01.svg)
+![四个虚线格中蓝色圆圈的数量与排列对比](images/chapter-25-fig-01.svg)
 
 <span style="color:#be9b00">“好，那我该怎么做？”</span>
 
@@ -6808,25 +6813,25 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 他用手指点了左上格里的一个圆圈。
 
-![四个虚线格展示不同数量与排列的蓝色圆圈。](../images/chapter-25-fig-02.svg)
+![四个虚线格展示不同数量与排列的蓝色圆圈。](images/chapter-25-fig-02.svg)
 
 泽立刻应了一手，点了右下格最上面的那个圆圈。
 
-![四个虚线格中不同数量的蓝色圆圈排列](../images/chapter-25-fig-03.svg)
+![四个虚线格中不同数量的蓝色圆圈排列](images/chapter-25-fig-03.svg)
 
 格拉迪亚斯决定换个路数。他点了左下格里的三个圆圈。
 
-![四个虚线格中分别排列着2、4、7、12个蓝色圆圈](../images/chapter-25-fig-04.svg)
+![四个虚线格中分别排列着2、4、7、12个蓝色圆圈](images/chapter-25-fig-04.svg)
 
 泽应了一手，把右下格里的圆圈全点走，只留下一个。
 
-![四个虚线格内分别排列不同数量的蓝色圆圈](../images/chapter-25-fig-05.svg)
+![四个虚线格内分别排列不同数量的蓝色圆圈](images/chapter-25-fig-05.svg)
 
 格拉迪亚斯把左下格剩下的圆圈全点了。泽只是点了右上格里的一个圆圈，作为回应。
 
 格拉迪亚斯把左上格剩下的圆圈全点了。泽则点了右上格剩下三个圆圈中的两个。
 
-![四个虚线格中，右侧两框各有一个蓝色圆圈。](../images/chapter-25-fig-06.svg)
+![四个虚线格中，右侧两框各有一个蓝色圆圈。](images/chapter-25-fig-06.svg)
 
 <span style="color:#be9b00">“好吧，我输了。”</span>格拉迪亚斯承认。
 
@@ -6984,7 +6989,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 格拉迪亚斯点了点手表。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th>收件人</th><th>时间</th></tr></thead><tbody><tr><td><span style="color:#be9b00">\[正在呼叫\]</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>韦尔多参议员</center></td><td>78145</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th><th>时间</th></tr></thead><tbody><tr><td><span style="color:#be9b00">[正在呼叫]</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>韦尔多参议员</center></td><td>78145</td></tr></tbody></table></div>
 
 过了一会儿，韦尔多接了。
 
@@ -7193,7 +7198,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 ---
 
-<p class="scene-break">梅尔丹，维里迪亚</p>
+<p class="scene-break">梅尔丹，维里迪亚 · 3724年霜期6日</p>
 
 泽在一把椅子上坐下，面前是一台控制台，跟他历次参加民本棋锦标赛时用的那些控制台惊人地相似。他能看出的最大不同是：这一次，没有防作弊侦测无人机在周围嗡嗡打转。
 
@@ -7243,7 +7248,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 随后，他刻意收拢心神，让自己完全专注于那场即将开始的战斗。
 
-![蓝色背景上的圆点、虚线与几何图形](../images/chapter-26-fig-01.svg)
+![蓝色背景上的圆点、虚线与几何图形](images/chapter-26-fig-01.svg)
 
 无人机渐渐逼近议会大楼，屏幕上出现的无人机也越来越多，泽紧紧盯着屏幕。
 
@@ -7267,7 +7272,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽下意识地点了点头。头戴设备自动把这个动作转成一个对勾图标，闪现在登和穆的显示画面上。
 
-![点阵、虚线连接与红色叉号标记示意图](../images/chapter-26-fig-02.svg)
+![点阵、虚线连接与红色叉号标记示意图](images/chapter-26-fig-02.svg)
 
 泽闷哼一声。他的无人机已经有三架被击中。
 
@@ -7295,7 +7300,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 又过了十个嘀嗒，黄色三角形变成了两个亮黄色的对勾。
 
-![点位、虚线与勾叉标记示意图](../images/chapter-26-fig-03.svg)
+![点位、虚线与勾叉标记示意图](images/chapter-26-fig-03.svg)
 
 泽有些困惑，但还是立刻做了唯一说得通的事。无人机飞得太低，绳索用不上。于是他把三架剩余无人机中的两架调到总统官邸正前方，减速停住。
 
@@ -7315,7 +7320,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽叹了口气。<span style="color:#df74b1">“我信你，穆。”</span>
 
-![两个点的虚线指引与勾选标记示意图](../images/chapter-26-fig-04.svg)
+![两个点的虚线指引与勾选标记示意图](images/chapter-26-fig-04.svg)
 
 泽重新坐回椅子上，叹了口气，对自己深感失望。他闭上眼。
 
@@ -7668,11 +7673,11 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽点头，点开了其中一张饼图。
 
-![公众对维里迪亚军方的信心分布。](../images/chapter-27-fig-01.svg)
+![公众对维里迪亚军方的信心分布。](images/chapter-27-fig-01.svg)
 
 <span style="color:#a38af2">“跟我预想的一样。现在看看大家觉得这个问题该怎么解决。”</span>
 
-![维里迪亚军方领导人选的民意分布。](../images/chapter-27-fig-02.svg)
+![维里迪亚军方领导人选的民意分布。](images/chapter-27-fig-02.svg)
 
 <span style="color:#a38af2">“限定为北岸来的人。”</span>
 
@@ -7682,7 +7687,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#df74b1">“啊，找到了。”</span>
 
-![北岸关联人群对维里迪亚军方领导者的偏好](../images/chapter-27-fig-03.svg)
+![北岸关联人群对维里迪亚军方领导者的偏好](images/chapter-27-fig-03.svg)
 
 <span style="color:#a38af2">“恭喜你，埃维洛尔”</span>，韦尔多干巴巴地说。<span style="color:#a38af2">“看来你比真正的议会更适合管北岸。”</span>
 
@@ -7994,7 +7999,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 莱克托转回去，又看了一眼屏幕。
 
-![北林周边各编队的位置与行动路线](../images/chapter-29-fig-01.svg)
+![北林周边各编队的位置与行动路线](images/chapter-29-fig-01.svg)
 
 各位集群指挥说的，似乎和地图上的计划都对得上。
 
@@ -8044,7 +8049,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽立刻在地图上看到了原因。
 
-![北林周边地点与虚线路线示意图](../images/chapter-29-fig-02.svg)
+![北林周边地点与虚线路线示意图](images/chapter-29-fig-02.svg)
 
 泽能听到加洛瓦和特尔波在频道里协调。
 
@@ -8062,7 +8067,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 几分钟后，双方的无人机机队靠近到可以交火的距离。维里迪亚机队抢先砍倒了大量树木，以防被包围，尤其是在北翼。加洛瓦的策略很简单：北边拖，东边打。大约20分钟后，特尔波的机队将从南面攻击东侧的北极集群，希望能将其包围并歼灭。
 
-![红色与浅蓝色散点的分布示意图](../images/chapter-29-fig-03.svg)
+![红色与浅蓝色散点的分布示意图](images/chapter-29-fig-03.svg)
 
 泽仔细看着。双方的无人机伤亡数开始迅速攀升。很快，维里迪亚和北极的损失都突破了100。
 
@@ -8074,7 +8079,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 40分钟后，他看到了真正重要的好消息：加洛瓦的部队已经从北极的北翼与东翼之间突了进去，特尔波的机队也开始从南面攻击北极东翼。
 
-![两组不同颜色的散点分布示意图](../images/chapter-29-fig-04.svg)
+![两组不同颜色的散点分布示意图](images/chapter-29-fig-04.svg)
 
 很快，东面的北极雪地无人机接连失能，而加洛瓦的西翼继续缓慢后撤，拖住北极的北翼。北极无人机试图照搬这种缓退战术，却没有成功：此时特尔波几乎已经把它们完全包围，它们无处可去。
 
@@ -8082,13 +8087,13 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽缩小地图，又看了一遍全局。
 
-![北林及周边地点与路线示意图](../images/chapter-29-fig-05.svg)
+![北林及周边地点与路线示意图](images/chapter-29-fig-05.svg)
 
 又过了一个半长时，维里迪亚的四支无人机机队继续推进——只有加洛瓦留下拖延其北面那支北极无人机部队的小股分队例外。
 
 警报再次响起。这一次，中集群和南集群同时受到威胁。
 
-![北林及周边地点分布示意图](../images/chapter-29-fig-06.svg)
+![北林及周边地点分布示意图](images/chapter-29-fig-06.svg)
 
 <span style="color:#23ba7d">“好了，各位。”</span>莱克托喊道。<span style="color:#23ba7d">“这才是真正的硬仗。”</span>
 
@@ -8309,7 +8314,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 几分钟后，他看到了结果。维里迪亚的雪地无人机快速推进，打穿敌军阵线，把前线搅成一团双方无人机混杂的乱局。维里迪亚无人机机队占了超过10比1的伤亡比优势。
 
-![北林及周边地点分布示意图](../images/chapter-30-fig-01.svg)
+![北林及周边地点分布示意图](images/chapter-30-fig-01.svg)
 
 泽放任自己高兴了片刻——这是整整一夜里，他头一次感到真正的快乐。
 
@@ -8351,7 +8356,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 而仅仅几分钟后，他们似乎就拿到了需要的结果。
 
-![北林及周边地点分布示意图](../images/chapter-30-fig-02.svg)
+![北林及周边地点分布示意图](images/chapter-30-fig-02.svg)
 
 穆把自己无人机机队最南端的一部分交给瓦卡里亚指挥，后者的任务是进入北林并重新控制它。
 
@@ -8504,7 +8509,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 塞拉的手表震了一下。她抬起手看了看。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">\[5张图片\]</span></td><td>45904</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">[5张图片]</span></td><td>45904</td></tr></tbody></table></div>
 
 她点了进去，看了看那些照片。前三张是自由城的人们在街头和公园里庆祝。
 

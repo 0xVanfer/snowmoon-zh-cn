@@ -733,8 +733,8 @@
    "id": "c12-s0105",
    "role": "cell",
    "text": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">[dia lau shau]</c>",
-   "locked": false,
-   "note": ""
+   "locked": true,
+   "note": "conlang"
   },
   {
    "id": "c12-s0106",

@@ -29,8 +29,11 @@ def load() -> dict[int, list[dict]]:
             continue
         ch = data.get("chapter")
         if not isinstance(ch, int):
+            print(f"! 跳过缺少整数 chapter 字段的报告 {f.name}")
             continue
         for issue in data.get("issues", []) or []:
+            if not issue.get("problem"):
+                issue["problem"] = ""
             issue["_reviewer"] = data.get("reviewer", f.stem)
             issue["_lens"] = data.get("lens", "?")
             by_ch[ch].append(issue)
@@ -42,7 +45,7 @@ def main() -> None:
     total = sum(len(v) for v in by_ch.values())
     sev = Counter(i.get("severity", "?") for v in by_ch.values() for i in v)
     typ = Counter(i.get("type", "?") for v in by_ch.values() for i in v)
-    print(f"报告覆盖 {len(by_ch)} 章，问题 {total} 条；severity={dict(sev)}")
+    print(f"有问题的章 {len(by_ch)} 章，问题 {total} 条；severity={dict(sev)}")
     print("类型分布:", dict(typ.most_common()))
     if "--chapter" in sys.argv:
         ch = int(sys.argv[sys.argv.index("--chapter") + 1])

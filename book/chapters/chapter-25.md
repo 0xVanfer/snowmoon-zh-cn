@@ -192,7 +192,7 @@
 
 格拉迪亚斯点了点手表。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th>收件人</th><th>时间</th></tr></thead><tbody><tr><td><span style="color:#be9b00">\[正在呼叫\]</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>韦尔多参议员</center></td><td>78145</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th><th>时间</th></tr></thead><tbody><tr><td><span style="color:#be9b00">[正在呼叫]</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>韦尔多参议员</center></td><td>78145</td></tr></tbody></table></div>
 
 过了一会儿，韦尔多接了。
 

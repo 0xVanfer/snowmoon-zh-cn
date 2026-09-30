@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 WORK = ROOT / "sources" / "work" / "segments"
 ZH = ROOT / "translations" / "zh"
 
-TAG_RE = re.compile(r"<(/?)([a-z]+)([^>]*?)(/?)>")
+TAG_RE = re.compile(r"<(/?)([A-Za-z]+)([^>]*?)(/?)>")
 ALLOWED = {"c", "b", "i", "e", "sup", "sub", "code", "a", "br", "f", "u", "small", "mark"}
 # [用户请求] 中文不用斜体：这些标记在中文译文里一律作废；<e> 允许被 <b> 顶替
 ITALIC = {"e", "i"}
@@ -34,6 +34,19 @@ EMPHASIS = {"e", "i", "b", "em", "strong"}
 ALLOW_LATIN_WORDS = {"ai", "api", "gui", "llm", "url", "id", "pm", "tei", "tau", "gph", "du", "vnu",
                      "shi", "gei", "xor", "kag", "ziu", "uvc", "fa", "le", "bi", "ze", "ha", "co",
                      "gu", "mu", "agi", "pdf", "html", "css", "svg", "kg", "km", "cm", "mm"}
+# 英语功能词：出现即说明这段是「没翻译的英文」而不是泽国语罗马字。
+# 与泽国语词表同形的（no/go/du/fa…）在运行时扣除，避免误伤真正的虚构语言。
+COMMON_ENGLISH = {
+    "about", "after", "all", "also", "and", "any", "are", "as", "at", "be", "because", "been",
+    "before", "between", "both", "but", "by", "can", "could", "did", "do", "does", "each", "for",
+    "from", "get", "got", "had", "has", "have", "he", "her", "here", "him", "his", "how", "if",
+    "in", "into", "is", "it", "its", "just", "may", "me", "might", "more", "most", "must", "my",
+    "no", "not", "now", "of", "on", "one", "only", "or", "other", "our", "out", "over", "own",
+    "said", "same", "say", "see", "she", "should", "so", "some", "such", "than", "that", "the",
+    "their", "them", "then", "there", "these", "they", "this", "those", "to", "too", "two", "up",
+    "us", "very", "was", "we", "were", "what", "when", "where", "which", "while", "who", "why",
+    "will", "with", "would", "you", "your",
+}
 
 
 def load_conlang_vocab() -> set[str]:
@@ -47,6 +60,7 @@ def tag_seq(s: str, drop_emphasis: bool = False) -> list[str]:
     out = []
     for m in TAG_RE.finditer(s):
         closing, name, attrs, selfclose = m.groups()
+        name = name.lower()
         if drop_emphasis and name in EMPHASIS:
             continue
         out.append(f"{'/' if closing else ''}{name}{attrs.strip()}{'/' if selfclose else ''}")
@@ -55,15 +69,26 @@ def tag_seq(s: str, drop_emphasis: bool = False) -> list[str]:
 
 def emphasis_count(s: str) -> int:
     """开标签数：原文的着重（含 `<b>`），用于限制译文加粗的规模。"""
-    return len(re.findall(r"<(?:e|i|b|em|strong)(?:\s[^>]*)?>", s))
+    return len(re.findall(r"<(?:e|i|b|em|strong)(?:\s[^>]*)?>", s, re.I))
 
 
 def bold_count(s: str) -> int:
-    return len(re.findall(r"<b(?:\s[^>]*)?>", s))
+    return len(re.findall(r"<b(?:\s[^>]*)?>", s, re.I))
+
+
+def unbalanced_tags(s: str) -> list[str]:
+    """强调类标签必须成对：翻译时漏掉一个 </b> 会把外层 <span> 提前闭合，静默毁掉排版。"""
+    bad = []
+    for tag in ("b", "e", "i", "em", "strong", "c", "f", "code", "a", "sup", "sub", "u", "small", "mark"):
+        opens = len(re.findall(rf"<{tag}(?:\s[^>]*)?>", s, re.I))
+        closes = len(re.findall(rf"</{tag}\s*>", s, re.I))
+        if opens != closes:
+            bad.append(f"<{tag}> {opens}/{closes}")
+    return bad
 
 
 def strip_tags(s: str) -> str:
-    s = re.sub(r"<br\s*/?>", " ", s)
+    s = re.sub(r"<br\s*/?>", " ", s, flags=re.I)
     return TAG_RE.sub("", s)
 
 
@@ -73,6 +98,8 @@ def check(chapter: int) -> list[str]:
     zh_p = ZH / f"chapter-{chapter:02d}.zh.json"
     if not zh_p.exists():
         return [f"缺失译文文件 {zh_p.relative_to(ROOT)}"]
+    if not src_p.exists():
+        return [f"缺失原文片段文件 {src_p.relative_to(ROOT)}"]
     src = json.loads(src_p.read_text(encoding="utf-8"))["segments"]
     try:
         data = json.loads(zh_p.read_text(encoding="utf-8"))
@@ -88,6 +115,8 @@ def check(chapter: int) -> list[str]:
         if extra:
             errs.append(f"  多余 {len(extra)} 条: {extra[:8]}")
         return errs
+    vocab = load_conlang_vocab()
+    stop_words = {w for w in COMMON_ENGLISH if w not in vocab}
     for s, z in zip(src, zh):
         sid = s["id"]
         tz = z.get("text")
@@ -101,7 +130,10 @@ def check(chapter: int) -> list[str]:
         st, zt = tag_seq(s["text"], True), tag_seq(tz, True)
         if st != zt:
             errs.append(f"{sid}: 标签序列不一致\n    原文 {st}\n    译文 {zt}")
-        italics = sorted({n for n in re.findall(r"<([a-z]+)", tz) if n in ITALIC})
+        broken = unbalanced_tags(tz)
+        if broken:
+            errs.append(f"{sid}: 标签未配对 {', '.join(broken)}（会破坏页面结构）")
+        italics = sorted({n.lower() for n in re.findall(r"<([A-Za-z]+)", tz) if n.lower() in ITALIC})
         if italics:
             errs.append(f"{sid}: 中文译文不得使用斜体标记 "
                         f"{', '.join('<%s>' % n for n in italics)}（要强调请用 <b>）")
@@ -113,21 +145,28 @@ def check(chapter: int) -> list[str]:
         body = strip_tags(tz)
         if "<" in body or ">" in body:
             errs.append(f"{sid}: 残留未转义尖括号: {body[:80]}")
-        for name in set(re.findall(r"<([a-z]+)", tz)):
+        for name in {n.lower() for n in re.findall(r"<([A-Za-z]+)", tz)}:
             if name not in ALLOWED:
                 errs.append(f"{sid}: 非法标签 <{name}>")
-        if not re.search(r"[\u3400-\u9fff\u3000-\u303f\uff00-\uffef]", body):
-            # 允许：纯数字/符号；纯泽国语罗马字（虚构语言，正文保留原样）；界面英文 token
-            words = re.findall(r"[A-Za-z]{2,}", re.sub(r"[^0-9A-Za-z\u4e00-\u9fff]", " ", body))
-            vocab = load_conlang_vocab()
-            # 泽国语音节全部 ≤4 字母；英文实词通常更长
+        if not re.search(r"[\u3400-\u9fff]", body):
+            # 允许：纯数字/符号；泽国语罗马字；界面英文 token / 缩写。
+            # 注意不能再用「单词短就放行」——那会让整句未翻译的短词英文蒙混过关。
+            # 哈希／十六进制串按「数据」看待，不参与「是否已翻译」的判定
+            # （第 30 章的终端面板里有整屏的加密校验和，它们本来就该原样保留）。
+            scan = re.sub(r"[0-9a-fA-F]{12,}", " ", body)
+            words = re.findall(r"[A-Za-z]{2,}", re.sub(r"[^0-9A-Za-z\u4e00-\u9fff]", " ", scan))
+            # 只有 ≥3 字母的功能词才算「这段是英文」的证据；be/no/du 这类与泽国语音节同形的
+            # 2 字母词在词表外的太多了，拿它当判据会误伤虚构语言与界面标签。
+            english_veto = any(w.lower() in stop_words and len(w) >= 3 for w in words)
+            single_token = len(words) <= 1
             conlang_ok = bool(words) and all(
-                len(w) <= 4 or w.lower() in vocab or w.isupper() or w.lower() in ALLOW_LATIN_WORDS
+                w.isupper() or w.lower() in ALLOW_LATIN_WORDS or w.lower() in vocab
+                or (len(w) <= 4 and (single_token or not english_veto))
                 for w in words)
             symbol_ok = not words
             if not (conlang_ok or symbol_ok):
                 errs.append(f"{sid}: 疑似未翻译（无中文）: {body[:90]}")
-        if re.search(r"\s{2,}", body) and not re.search(r"<br/>", tz):
+        if re.search(r"\s{2,}", body) and not re.search(r"<br\s*/?>", tz, re.I):
             errs.append(f"{sid}: 出现连续空格: {body[:60]}")
     return errs
 

@@ -180,8 +180,8 @@
    "id": "c19-s0026",
    "role": "cell",
    "text": "sen hu ?",
-   "locked": false,
-   "note": ""
+   "locked": true,
+   "note": "conlang"
   },
   {
    "id": "c19-s0027",
@@ -201,8 +201,8 @@
    "id": "c19-s0029",
    "role": "cell",
    "text": "gi dai",
-   "locked": false,
-   "note": ""
+   "locked": true,
+   "note": "conlang"
   },
   {
    "id": "c19-s0030",

@@ -4,7 +4,10 @@
 
 用法:
     python3 pipeline/build_markdown.py            # 组装全部已译章节
-    python3 pipeline/build_markdown.py 1 2 3      # 指定章
+    python3 pipeline/build_markdown.py 1 2 3      # 只重建这几章的逐章文件
+
+注意：参数只影响**逐章文件**；全书单文件 book/snowmoon-zh.md 始终由全部可用译文重建，
+否则一次定向重建就会把已入库的整本书截断成所选章节（历史 bug）。
 """
 from __future__ import annotations
 
@@ -23,8 +26,7 @@ BOOK_CH = BOOK / "chapters"
 
 TAG_RE = re.compile(r"<(/?)([a-z]+)((?:\s[^>]*)?)(/?)>")
 PLACEHOLDER_RE = re.compile(r"\{\{S:([^}]+)\}\}")
-
-CN_NUM = "零一二三四五六七八九十".split() if False else None
+KNOWN_TAGS = {"br", "c", "f", "b", "i", "e", "code", "a", "sup", "sub", "u", "small", "mark"}
 
 
 def cn_num(n: int) -> str:
@@ -65,8 +67,11 @@ def oklch_to_hex(style: str) -> str:
 MD_ESCAPE = re.compile(r"([\\`*_\[\]])")
 
 
-def mini_to_md(text: str) -> str:
+def mini_to_md(text: str, escape: bool = True) -> str:
     """mini-markup → Markdown / 内联 HTML。
+
+    escape=False 用于「骨架本身就是原始 HTML」的块（device-view 面板等）：
+    Markdown 转义序列在 raw HTML block 里不会被解释，加了反斜杠反而会显示成字面量。
 
     [用户请求] 中文不用斜体：本书是中文成品，`<e>`/`<i>`（原文着重）一律落成加粗 `**`，
     不再输出 `*…*`。见 docs/style-guide.md §2。
@@ -74,10 +79,18 @@ def mini_to_md(text: str) -> str:
     out: list[str] = []
     pos = 0
     links: list[str] = []
+
+    def text_out(s: str) -> str:
+        return MD_ESCAPE.sub(r"\\\1", s) if escape else s
+
     for m in TAG_RE.finditer(text):
-        out.append(MD_ESCAPE.sub(r"\\\1", text[pos:m.start()]))
+        out.append(text_out(text[pos:m.start()]))
         pos = m.end()
         closing, name, attrs, selfclose = m.groups()
+        if name not in KNOWN_TAGS:
+            raise SystemExit(
+                f"mini-markup 出现非法标签 <{name}>（片段只允许 "
+                f"{', '.join(sorted(KNOWN_TAGS))}）: {text[:80]!r}")
         if name == "br":
             out.append("<br>")
         elif name == "c":
@@ -104,12 +117,23 @@ def mini_to_md(text: str) -> str:
                 out.append("[")
         elif name in ("sup", "sub", "u", "small", "mark"):
             out.append(f"<{name}>" if not closing else f"</{name}>")
-    out.append(MD_ESCAPE.sub(r"\\\1", text[pos:]))
+    out.append(text_out(text[pos:]))
     return "".join(out)
 
 
-def expand(skeleton: str, segs: dict[str, str]) -> str:
-    return PLACEHOLDER_RE.sub(lambda m: mini_to_md(segs.get(m.group(1), "")), skeleton)
+def expand(skeleton: str, segs: dict[str, str], escape: bool = True) -> str:
+    """替换 {{S:id}}；片段缺失直接报错，绝不静默留空。"""
+    def sub(m: re.Match) -> str:
+        key = m.group(1)
+        if key not in segs:
+            raise SystemExit(f"骨架引用了不存在的片段 {key}（译文与骨架不同步）")
+        return mini_to_md(segs[key], escape)
+
+    return PLACEHOLDER_RE.sub(sub, skeleton)
+
+
+def block_ids(blk: dict) -> list[str]:
+    return [m.group(1) for m in PLACEHOLDER_RE.finditer("".join(blk.get("segs", [])))]
 
 
 def clean_ws(s: str) -> str:
@@ -118,11 +142,17 @@ def clean_ws(s: str) -> str:
     return s.strip()
 
 
-def build_chapter(ch: int, segs: dict[str, str]) -> str | None:
+def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/") -> str | None:
     cf = CHAP_DIR / f"chapter-{ch:02d}.json"
     if not cf.exists():
         return None
     data = json.loads(cf.read_text(encoding="utf-8"))
+    # 全量核对骨架与译文是否同步：章标题/卷首日期等块不经过 expand，
+    # 只靠 expand 兜底会让这类 id 失配静默留空。
+    ids = set(PLACEHOLDER_RE.findall(json.dumps(data, ensure_ascii=False)))
+    missing = sorted(ids - set(segs))
+    if missing:
+        raise SystemExit(f"chapter-{ch:02d}: 骨架引用的片段在译文中缺失 {missing[:4]}")
     captions: dict[str, str] = {}
     if FIG_MANIFEST.exists():
         man = json.loads(FIG_MANIFEST.read_text(encoding="utf-8"))
@@ -133,14 +163,12 @@ def build_chapter(ch: int, segs: dict[str, str]) -> str | None:
         if kind == "title":
             parts.append(f"# 第{cn_num(ch)}章\n")
         elif kind in ("dateline-open", "scene-break"):
-            ids = [m.group(1) for m in PLACEHOLDER_RE.finditer("".join(blk.get("segs", [])))]
-            vals = [segs.get(i, "") for i in ids]
-            vals = [v for v in vals if v]
+            vals = [segs[i] for i in block_ids(blk) if segs.get(i)]
             line = " · ".join(vals)
             cls = "dateline" if kind == "dateline-open" else "scene-break"
             if kind == "scene-break":
                 parts.append("---\n")
-            parts.append(f'<p class="{cls}">{mini_to_md(line)}</p>\n')
+            parts.append(f'<p class="{cls}">{mini_to_md(line, escape=False)}</p>\n')
         elif kind == "rule":
             parts.append("---\n")
         elif kind == "figure":
@@ -148,16 +176,17 @@ def build_chapter(ch: int, segs: dict[str, str]) -> str | None:
             for f in figs:
                 name = f[:-4]
                 cap = captions.get(name, "")
-                alt = cap or f"插图 {name}"
-                parts.append(f"![{alt}](../images/{f})\n")
+                alt = (cap or f"插图 {name}").replace("]", "］").replace("\n", " ")
+                parts.append(f"![{alt}]({img_prefix}{f})\n")
             if blk.get("skeleton"):
-                parts.append(expand(blk["skeleton"], segs) + "\n")
+                parts.append(expand(blk["skeleton"], segs, escape=False) + "\n")
         elif kind in ("p",):
-            html = expand(blk.get("skeleton", ""), segs)
+            html = expand(blk.get("skeleton", ""), segs, escape=True)
             inner = re.sub(r"^<p>|</p>$", "", html)
             parts.append(inner + "\n")
         else:
-            parts.append(expand(blk.get("skeleton", ""), segs) + "\n")
+            # panel / center / list / quote 等：骨架本身就是原始 HTML
+            parts.append(expand(blk.get("skeleton", ""), segs, escape=False) + "\n")
     return clean_ws("\n".join(parts))
 
 
@@ -183,28 +212,32 @@ FRONT = """# 雪月 Snowmoon · 中文版
 
 
 def main() -> None:
-    todo = [int(x) for x in sys.argv[1:]] or list(range(1, 33))
+    todo = sorted({int(x) for x in sys.argv[1:]}) or list(range(1, 33))
     BOOK_CH.mkdir(parents=True, exist_ok=True)
-    built = []
-    toc = []
+    wrote = 0
     for ch in todo:
         segs = load_segs(ch)
         if not segs:
             print(f"skip ch{ch:02d}（无译文）")
             continue
-        md = build_chapter(ch, segs)
+        md = build_chapter(ch, segs, "../images/")
         if md is None:
+            print(f"skip ch{ch:02d}（无骨架）")
             continue
         (BOOK_CH / f"chapter-{ch:02d}.md").write_text(md + "\n", encoding="utf-8")
-        built.append(ch)
-        toc.append(f"- [第{cn_num(ch)}章](chapters/chapter-{ch:02d}.md)")
-    if built:
-        book = FRONT + "\n".join(toc) + "\n\n"
-        for ch in built:
-            segs = load_segs(ch)
-            book += "\n\n---\n\n" + build_chapter(ch, segs) + "\n"
-        (BOOK / "snowmoon-zh.md").write_text(book, encoding="utf-8")
-    print(f"组装完成：{len(built)} 章 → book/snowmoon-zh.md")
+        wrote += 1
+
+    # 全书单文件：始终用「全部可用译文」重建，定向参数不影响它
+    available = [ch for ch in range(1, 33)
+                 if (CHAP_DIR / f"chapter-{ch:02d}.json").exists() and load_segs(ch)]
+    if not available:
+        raise SystemExit("没有任何可用译文，未生成全书 Markdown")
+    toc = [f"- [第{cn_num(ch)}章](chapters/chapter-{ch:02d}.md)" for ch in available]
+    book = FRONT + "\n".join(toc) + "\n\n"
+    for ch in available:
+        book += "\n\n---\n\n" + build_chapter(ch, load_segs(ch), "images/") + "\n"
+    (BOOK / "snowmoon-zh.md").write_text(book, encoding="utf-8")
+    print(f"组装完成：逐章 {wrote} 个文件 + 全书 {len(available)} 章 → book/")
 
 
 if __name__ == "__main__":

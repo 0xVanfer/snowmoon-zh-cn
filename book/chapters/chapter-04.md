@@ -110,7 +110,7 @@
 
 泽的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>芬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ce9200">jie fe hen dzi</span></td><td>74160</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th></th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>芬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ce9200">jie fe hen dzi</span></td><td>74160</td></tr></tbody></table></div>
 
 芬给他发来消息：“祝你好运。”
 

@@ -42,7 +42,9 @@ def load_aliases() -> dict[str, str]:
             alias[a] = e["zh"]
     for a, canon in (glos.get("aliases") or {}).items():
         alias[a] = canon
-    return alias
+    # 长键优先：否则「掌舵团」会被较短的「掌舵」先替换掉，
+    # 结果依赖术语表 JSON 的键序——重排一次键就静默改了正文。
+    return dict(sorted(alias.items(), key=lambda kv: (-len(kv[0]), kv[0])))
 
 
 def load_fixups() -> dict[str, list]:
@@ -122,8 +124,15 @@ def fix_segment(text: str, alias: dict[str, str], fixups: list | None = None) ->
     # 历史遗留：空格被塞进行内标签开头（「叫<e> dzu…」）→ 挪到标签之前
     text = re.sub(r"([\u3400-\u9fff])(<[a-z]+(?: [^>]*)?>) +(?=[0-9A-Za-z])", r"\1 \2", text)
     parts = TAG_SPLIT.split(text)
+    protected = 0       # <code>/<f> 的内容是字面量／虚构语言，不得做标点空格体例处理
     for i, p in enumerate(parts):
         if i % 2:
+            m = re.match(r"</?([A-Za-z]+)", p)
+            tag = m.group(1).lower() if m else ""
+            if tag in ("code", "f"):
+                protected += -1 if p.startswith("</") else 1
+            continue
+        if protected > 0:
             continue
         seg = fix_text(p, alias)
         if fixups:
@@ -151,13 +160,19 @@ def fix_segment(text: str, alias: dict[str, str], fixups: list | None = None) ->
 
 
 def main() -> None:
-    todo = [int(x) for x in sys.argv[1:]] or list(range(1, 33))
+    todo = []
+    for x in sys.argv[1:]:
+        if not x.isdigit():
+            raise SystemExit(f"章节号必须是数字：{x!r}")
+        todo.append(int(x))
+    todo = todo or list(range(1, 33))
     alias = load_aliases()
     fixups_all = load_fixups()
     BACKUP.mkdir(parents=True, exist_ok=True)
     for ch in todo:
         p = ZH / f"chapter-{ch:02d}.zh.json"
         if not p.exists():
+            print(f"ch{ch:02d}: 无译文，跳过")
             continue
         data = json.loads(p.read_text(encoding="utf-8"))
         src = {s["id"]: s for s in json.loads(
@@ -172,8 +187,14 @@ def main() -> None:
                 seg["text"] = new
                 changed += 1
         if changed:
-            shutil.copy2(p, BACKUP / p.name)
-            p.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            # 备份只留「第一次改动之前」的版本：反复运行不得覆盖掉真正的原始文本
+            bak = BACKUP / p.name
+            if not bak.exists():
+                shutil.copy2(p, bak)
+            # 原子写：中途崩溃不会留下半个 JSON
+            tmp = p.with_suffix(p.suffix + ".tmp")
+            tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            tmp.replace(p)
         print(f"ch{ch:02d}: 规范化 {changed} 条片段")
 
 

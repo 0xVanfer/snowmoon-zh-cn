@@ -31,7 +31,7 @@
   {
    "id": "c08-b0004",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0005}}</th><th>{{S:c08-s0006}}</th><th>{{S:c08-s0007}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c08-s0008}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0009}}</td><td>{{S:c08-s0010}}</td><td>{{S:c08-s0011}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0005}}</th><th></th><th>{{S:c08-s0006}}</th><th>{{S:c08-s0007}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c08-s0008}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0009}}</td><td>{{S:c08-s0010}}</td><td>{{S:c08-s0011}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c08-s0005}}",
     "{{S:c08-s0006}}",
@@ -109,7 +109,7 @@
   {
    "id": "c08-b0013",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0020}}</th><th>{{S:c08-s0021}}</th><th>{{S:c08-s0022}}</th></tr></thead><tbody><tr><td style=\"width: 15%\"><center>{{S:c08-s0023}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0024}}</td><td>{{S:c08-s0025}}</td><td>{{S:c08-s0026}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0020}}</th><th></th><th>{{S:c08-s0021}}</th><th>{{S:c08-s0022}}</th></tr></thead><tbody><tr><td style=\"width: 15%\"><center>{{S:c08-s0023}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0024}}</td><td>{{S:c08-s0025}}</td><td>{{S:c08-s0026}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c08-s0020}}",
     "{{S:c08-s0021}}",
@@ -839,7 +839,7 @@
   {
    "id": "c08-b0105",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0113}}</th><th>{{S:c08-s0114}}</th><th>{{S:c08-s0115}}</th></tr></thead><tbody><tr><td style=\"width: 15%\"><center>{{S:c08-s0116}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0117}}</td><td>{{S:c08-s0118}}</td><td>{{S:c08-s0119}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0113}}</th><th></th><th>{{S:c08-s0114}}</th><th>{{S:c08-s0115}}</th></tr></thead><tbody><tr><td style=\"width: 15%\"><center>{{S:c08-s0116}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0117}}</td><td>{{S:c08-s0118}}</td><td>{{S:c08-s0119}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c08-s0113}}",
     "{{S:c08-s0114}}",
@@ -877,7 +877,7 @@
   {
    "id": "c08-b0109",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0123}}</th><th>{{S:c08-s0124}}</th><th>{{S:c08-s0125}}</th></tr></thead><tbody><tr><td style=\"width: 15%\"><center>{{S:c08-s0126}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0127}}</td><td>{{S:c08-s0128}}</td><td>{{S:c08-s0129}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0123}}</th><th></th><th>{{S:c08-s0124}}</th><th>{{S:c08-s0125}}</th></tr></thead><tbody><tr><td style=\"width: 15%\"><center>{{S:c08-s0126}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0127}}</td><td>{{S:c08-s0128}}</td><td>{{S:c08-s0129}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c08-s0123}}",
     "{{S:c08-s0124}}",
@@ -1031,7 +1031,7 @@
   {
    "id": "c08-b0128",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0147}}</th><th>{{S:c08-s0148}}</th><th>{{S:c08-s0149}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c08-s0150}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0151}}</td><td>{{S:c08-s0152}}</td><td>{{S:c08-s0153}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c08-s0147}}</th><th></th><th>{{S:c08-s0148}}</th><th>{{S:c08-s0149}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c08-s0150}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c08-s0151}}</td><td>{{S:c08-s0152}}</td><td>{{S:c08-s0153}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c08-s0147}}",
     "{{S:c08-s0148}}",

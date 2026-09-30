@@ -10,7 +10,8 @@
   5. 数字、符号、虚构语言文本必须原样；其余文本必须已含中文；
   6. 不得残留成串英文单词（缩略语白名单除外）。
 
-用法: python3 pipeline/validate_svg.py [原始文件 中文文件] ...  或  python3 pipeline/validate_svg.py --pair-dir
+用法: python3 pipeline/validate_svg.py [原始文件 中文文件]
+       省略参数时逐个比对 sources/work/figures/*.svg ↔ book/images/*.svg（缺一张即失败）
 """
 from __future__ import annotations
 
@@ -127,22 +128,31 @@ def validate(src_path: Path, zh_path: Path) -> list[str]:
         if not has_cjk(tb):
             errs.append(f"未译成中文: {ta!r} → {tb!r}")
             continue
+        # 图中标注残留英文：中文与英文混排也要拦（旧版要求「去掉英文后完全没有中文」，
+        # 那个条件恒不成立，等于这条检查从来没生效过）。
         leftover = [w for w in re.findall(r"[A-Za-z][A-Za-z\-]{2,}", tb) if w not in ALLOW_LATIN]
-        if leftover and not has_cjk(re.sub(r"[A-Za-z][A-Za-z\-]{2,}", "", tb)):
-            errs.append(f"残留英文: {ta!r} → {tb!r}")
+        if leftover:
+            errs.append(f"残留英文: {ta!r} → {tb!r}（{', '.join(leftover[:3])}）")
     return errs
 
 
 def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    pairs = []
-    if len(args) >= 2:
+    if any(a.startswith("--") for a in sys.argv[1:]):
+        raise SystemExit("未知参数（本脚本只接受「原始文件 中文文件」两个位置参数）")
+    missing: list[str] = []
+    if len(args) == 2:
         pairs = [(Path(args[0]), Path(args[1]))]
+    elif len(args) == 1:
+        raise SystemExit("用法: validate_svg.py [原始文件 中文文件]")
     else:
+        pairs = []
         for f in sorted(SRC.glob("*.svg")):
             b = BOOK / f.name
             if b.exists():
                 pairs.append((f, b))
+            else:
+                missing.append(f.name)
     bad = 0
     for s, z in pairs:
         errs = validate(s, z)
@@ -153,6 +163,12 @@ def main() -> None:
                 print("   -", e)
         else:
             print(f"OK   {s.name}")
+    for name in missing:
+        bad += 1
+        print(f"FAIL {name}: 缺少中文版 book/images/{name}")
+    if not pairs and not missing:
+        print("没有任何可校验的图（sources/work/figures 为空？）")
+        sys.exit(1)
     print(f"{len(pairs)} 对图，失败 {bad}")
     sys.exit(1 if bad else 0)
 

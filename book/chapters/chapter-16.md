@@ -122,7 +122,7 @@
 
 屏幕上的记分板跳了一下。
 
-<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">9</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1674</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th></th><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">9</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1674</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
 
 紫队的蓝球得分刚从20涨到23，合计得分从1540涨到1771——足以反超对手。
 
@@ -130,7 +130,7 @@
 
 记分板又变了。
 
-<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">10</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1860</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th></th><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">10</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1860</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
 
 <span style="color:#ce9200">“你得承认，现在的计分系统是真好，”</span>费布里克大声说。
 
@@ -184,7 +184,7 @@
 
 几个嘀嗒后，费布里克的手表震了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">\[钱包 0x8f62... 社交恢复模式交易请求\]</span></td><td>65129</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">[钱包 0x8f62... 社交恢复模式交易请求]</span></td><td>65129</td></tr></tbody></table></div>
 
 费布里克打开手持终端，一笔交易的详细视图弹了出来。他让翡翠上网查收款地址。几个嘀嗒后，翡翠回话确认，那确实是海德菲尔的收款地址。他接着看金额——5.5齐普币。一个水瓶加运费，这价钱算合理，不过费用的大头肯定在运费上。他又看了交易的数据字段。对，看上去是格拉迪亚斯住址的一段编码，格式符合标准的网购协议。
 
@@ -196,11 +196,11 @@
 
 不到一分钟，格拉迪亚斯的手表又震了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">安全问题：孩子们从维尔和黛雅那儿回来的那天晚上，我做过的最不寻常的事是什么？</span></td><td>73105</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">安全问题：孩子们从维尔和黛雅那儿回来的那天晚上，我做过的最不寻常的事是什么？</span></td><td>73105</td></tr></tbody></table></div>
 
 格拉迪亚斯立刻对着颈带低声回了一句。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#be9b00">你在餐馆里把屏幕的插头拔了，当时正在播埃菲里昂勋爵的演讲。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>塞拉</center></td></tr></tbody></table><button>发送</button></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#be9b00">你在餐馆里把屏幕的插头拔了，当时正在播埃菲里昂勋爵的演讲。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>塞拉</center></td></tr></tbody></table><button>发送</button></div>
 
 片刻之后，格拉迪亚斯的手表又震了。包括他自己在内，已经签好三个。还差一个。要么是莫夫，要么是佩洛——当然，真到了万不得已，他就得自己跑去保险库取第二把钥匙。
 

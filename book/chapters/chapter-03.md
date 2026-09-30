@@ -72,7 +72,7 @@
 
 又走出一段，再也听不见他们说话之后不久，他的手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">\[4张图片\]</span></td><td>44029</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">[4张图片]</span></td><td>44029</td></tr></tbody></table></div>
 
 他看了一眼。
 

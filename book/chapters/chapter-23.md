@@ -148,7 +148,7 @@
 
 格拉迪亚斯已经上床，正准备睡觉。突然，他的手表震了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%; color: red"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td style="color: red">\[正在呼叫\]</td><td style="color: red">91454</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%; color: red"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td style="color: red">[正在呼叫]</td><td style="color: red">91454</td></tr></tbody></table></div>
 
 这种红色的消息，他此前只见过两次：一次是北林遭到攻击时塞拉给他发来消息，一次是她为德尔瓦特的事打来电话。
 

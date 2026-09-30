@@ -20,7 +20,28 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "sources" / "work" / "figures"
 ZH = ROOT / "book" / "images"
 OUT = ROOT / "sources" / "work" / "previews"
-CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+def chrome_path() -> str:
+    """定位 Chrome：环境变量 CHROME 优先，其次 macOS 默认位置与常见替代路径。"""
+    import shutil
+    env = os.environ.get("CHROME") or os.environ.get("CHROME_PATH")
+    if env:
+        return env
+    candidates = [
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        str(Path.home() / "Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
+        "/usr/bin/google-chrome",
+        "/usr/bin/chromium",
+        "/usr/bin/chromium-browser",
+    ]
+    for c in candidates:
+        if Path(c).exists():
+            return c
+    found = shutil.which("google-chrome") or shutil.which("chromium") or shutil.which("chrome")
+    if found:
+        return found
+    raise SystemExit("找不到 Chrome：请设置环境变量 CHROME=<可执行文件路径>（headless 渲染需要它）")
+
+CHROME = chrome_path()
 
 HTML = """<html><head><meta charset="utf-8"><style>
 body{{margin:0;background:#1b1b22;color:#ddd;font:13px -apple-system,"PingFang SC",sans-serif}}
@@ -36,8 +57,9 @@ img{{width:100%;height:auto;background:#000;border:1px solid #444;border-radius:
 
 def render(name: str) -> bool:
     svg = (SRC / f"{name}.svg").read_text(encoding="utf-8")
-    h = float((re.search(r'height="([\d.]+)"', svg) or [0, 600])[1] or 600)
-    w = float((re.search(r'width="([\d.]+)"', svg) or [0, 800])[1] or 800)
+    root = (re.search(r"<svg\b[^>]*>", svg, re.I) or re.match(r"", "")).group(0)
+    h = float((re.search(r'height="([\d.]+)"', root) or [0, 600])[1] or 600)
+    w = float((re.search(r'width="([\d.]+)"', root) or [0, 800])[1] or 800)
     win_h = max(320, min(1400, int(560 * h / max(w, 1)) + 90))
     html = HTML.format(name=name, src=SRC / f"{name}.svg", zh=ZH / f"{name}.svg")
     OUT.mkdir(parents=True, exist_ok=True)
@@ -77,12 +99,16 @@ def render(name: str) -> bool:
 
 def main() -> None:
     names = sys.argv[1:] or sorted(p.stem for p in SRC.glob("*.svg"))
+    if not names:
+        raise SystemExit("没有可渲染的插图（sources/work/figures 为空？）")
     ok = 0
     for n in names:
         good = render(n)
         ok += good
         print(("OK  " if good else "FAIL") + f" {n}", flush=True)
     print(f"{ok}/{len(names)} 张预览渲染成功 → {OUT.relative_to(ROOT)}")
+    # 渲染失败必须反映到退出码，否则「0/N 成功」也会被当成通过
+    sys.exit(1 if ok != len(names) else 0)
 
 
 if __name__ == "__main__":

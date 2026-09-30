@@ -547,7 +547,7 @@
   {
    "id": "c31-b0069",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c31-s0069}}</th><th>{{S:c31-s0070}}</th><th>{{S:c31-s0071}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c31-s0072}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c31-s0073}}</td><td>{{S:c31-s0074}}</td><td>{{S:c31-s0075}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c31-s0069}}</th><th></th><th>{{S:c31-s0070}}</th><th>{{S:c31-s0071}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c31-s0072}}</center></td><td style=\"width: 6%; text-align:center\">{{S:c31-s0073}}</td><td>{{S:c31-s0074}}</td><td>{{S:c31-s0075}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c31-s0069}}",
     "{{S:c31-s0070}}",

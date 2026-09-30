@@ -35,7 +35,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "sources" / "work" / "cache" / "vision"
 CRED = Path.home() / "<harness-config-dir>" / "<local-cred-file>"
-ENDPOINT = "https://<endpoint>/v1/chat/completions"
+ENDPOINT = os.environ.get("VISION_API_URL", "https://<endpoint>/v1/chat/completions")
 DEFAULT_MODEL = "vision-model"
 
 
@@ -46,12 +46,17 @@ def api_key() -> str:
     if CRED.exists():
         m = re.search(r"VISION_API_KEY:\s*(\S+)", CRED.read_text(encoding="utf-8"))
         if m:
-            return m.group(1).strip()
+            # YAML 允许 `KEY: "sk-…"`，引号必须剥掉，否则 Authorization 头会带上引号
+            return m.group(1).strip().strip('"').strip("'")
     raise SystemExit("找不到 VISION_API_KEY（环境变量或 <本地凭据文件>）")
 
 
-def cache_path(model: str, system: str, prompt: str) -> Path:
-    h = hashlib.sha1(f"{model}\x00{system}\x00{prompt}".encode()).hexdigest()
+def cache_path(model: str, system: str, prompt: str,
+               max_tokens: int | None = None, temperature: float | None = None) -> Path:
+    # max_tokens / temperature 必须进键：否则调大上限重跑仍会命中旧缓存，
+    # 一次被截断的回复会被永久复用。
+    h = hashlib.sha1(
+        f"{model}\x00{system}\x00{prompt}\x00{max_tokens}\x00{temperature}".encode()).hexdigest()
     return CACHE_DIR / f"{h}.json"
 
 
@@ -76,7 +81,7 @@ def _post(payload: dict, timeout: int = 600) -> dict:
 def call(prompt: str, system: str = "", model: str = DEFAULT_MODEL,
          max_tokens: int = 32000, temperature: float | None = None,
          cache: bool = True, retries: int = 4, tag: str = "") -> str:
-    cp = cache_path(model, system, prompt)
+    cp = cache_path(model, system, prompt, max_tokens, temperature)
     if cache and cp.exists():
         try:
             data = json.loads(cp.read_text(encoding="utf-8"))
@@ -97,17 +102,26 @@ def call(prompt: str, system: str = "", model: str = DEFAULT_MODEL,
             data = _post(payload)
             choice = (data.get("choices") or [{}])[0]
             content = (choice.get("message") or {}).get("content") or ""
-            if content.strip():
+            finish = choice.get("finish_reason")
+            if content.strip() and finish != "length":
                 if cache:
                     CACHE_DIR.mkdir(parents=True, exist_ok=True)
+                    cp = cache_path(model, system, prompt, payload["max_tokens"], temperature)
                     cp.write_text(json.dumps(
                         {"model": model, "tag": tag, "system": system, "prompt": prompt,
-                         "response": content, "usage": data.get("usage"),
-                         "created": int(time.time())}, ensure_ascii=False), encoding="utf-8")
+                         "max_tokens": payload["max_tokens"], "response": content,
+                         "usage": data.get("usage"), "created": int(time.time())},
+                        ensure_ascii=False), encoding="utf-8")
                 return content
-            # 空回复：多半是 reasoning 吃满预算，抬高上限重试
-            last = f"空回复 finish_reason={choice.get('finish_reason')} usage={data.get('usage')}"
-            payload["max_tokens"] = min(int(payload["max_tokens"] * 2), 96000)
+            if content.strip() and finish == "length":
+                # 被 max_tokens 截断的回复**不能**当成成功：SVG/CSS/JS 截断后是废文件，
+                # 而且一旦进缓存就永久复用。抬高上限重试。
+                last = f"输出被 max_tokens 截断（{payload['max_tokens']}）finish_reason=length"
+                payload["max_tokens"] = min(int(payload["max_tokens"] * 2), 96000)
+            else:
+                # 空回复：多半是 reasoning 吃满预算，抬高上限重试
+                last = f"空回复 finish_reason={finish} usage={data.get('usage')}"
+                payload["max_tokens"] = min(int(payload["max_tokens"] * 2), 96000)
         except urllib.error.HTTPError as e:
             body = e.read().decode(errors="replace")[:400]
             last = f"HTTP {e.code}: {body}"
@@ -119,10 +133,15 @@ def call(prompt: str, system: str = "", model: str = DEFAULT_MODEL,
                 continue
             if e.code == 400:
                 break
+            if e.code == 429 or e.code >= 500:
+                ra = e.headers.get("Retry-After") if e.headers else None
+                if ra:
+                    time.sleep(min(60.0, float(ra) if ra.isdigit() else 5.0))
         except Exception as e:  # noqa: BLE001
             last = f"{type(e).__name__}: {e}"
-        time.sleep(min(2 ** attempt * 2, 30))
-    raise RuntimeError(f"视觉模型调用失败（{retries} 次）：{last}")
+        if attempt < retries - 1:
+            time.sleep(min(2 ** attempt * 2, 30))
+    raise RuntimeError(f"视觉模型调用失败：{last}")
 
 
 def main() -> None:
@@ -141,11 +160,39 @@ def main() -> None:
     args = ap.parse_args()
 
     if args.batch:
-        jobs = [json.loads(l) for l in Path(args.batch).read_text(encoding="utf-8").splitlines() if l.strip()]
+        jobs = []
+        for lineno, line in enumerate(Path(args.batch).read_text(encoding="utf-8").splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                jobs.append(json.loads(line))
+            except json.JSONDecodeError as e:
+                raise SystemExit(f"任务文件第 {lineno} 行无法解析：{e}")
         out = Path(args.out) if args.out else None
+        # 续跑：读出已有的成功结果，重写一份干净的结果文件（顺带丢掉半行损坏），
+        # 只跑还没成功的任务。旧实现用 "w" 打开，一启动就把上一轮结果全毁了。
+        done: dict[str, dict] = {}
+        if out and out.exists():
+            for line in out.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    rec = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if rec.get("id"):
+                    done[rec["id"]] = rec
+        pending = [j for j in jobs if j.get("id") not in done]
+        if done:
+            print(f"续跑：已跳过 {len(jobs) - len(pending)} 个已完成任务", file=sys.stderr)
         fh = out.open("w", encoding="utf-8") if out else None
+        if fh:
+            for rec in done.values():
+                fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            fh.flush()
         lock = threading.Lock()
-        done = [0]
+        done_n = [0]
+        failures = [0]
 
         def run_one(job: dict) -> dict:
             try:
@@ -157,21 +204,26 @@ def main() -> None:
             except Exception as e:  # noqa: BLE001
                 rec = {"id": job.get("id", ""), "ok": False, "error": str(e)}
             with lock:
-                done[0] += 1
+                done_n[0] += 1
+                if not rec["ok"]:
+                    failures[0] += 1
                 line = json.dumps(rec, ensure_ascii=False)
                 if fh:
                     fh.write(line + "\n")
                     fh.flush()
-                print(f"[{done[0]}/{len(jobs)}] {rec['id']} {'ok' if rec['ok'] else 'FAIL'} "
+                print(f"[{done_n[0]}/{len(pending)}] {rec['id']} {'ok' if rec['ok'] else 'FAIL'} "
                       f"{len(rec.get('text', ''))} chars", file=sys.stderr)
             return rec
 
         try:
             with ThreadPoolExecutor(max_workers=max(1, args.concurrency)) as ex:
-                list(ex.map(run_one, jobs))
+                list(ex.map(run_one, pending))
         finally:
             if fh:
                 fh.close()
+        if failures[0]:
+            print(f"{failures[0]} 个任务失败", file=sys.stderr)
+            sys.exit(1)
         return
 
     if args.prompt_file:

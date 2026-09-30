@@ -1144,7 +1144,7 @@
   {
    "id": "c01-b0139",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c01-s0183}}</th><th>{{S:c01-s0184}}</th><th>{{S:c01-s0185}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c01-s0186}}<br/><br/><div style=\"border: 1px solid; border-radius: 5px; padding: 5px\">{{S:c01-s0187}}<b style=\"font-size: 150%; color: #8f8\">{{S:c01-s0188}}</b></div></center></td><td style=\"width: 6%; text-align:center\">{{S:c01-s0189}}</td><td>{{S:c01-s0190}}</td><td>{{S:c01-s0191}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c01-s0183}}</th><th></th><th>{{S:c01-s0184}}</th><th>{{S:c01-s0185}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c01-s0186}}<br/><br/><div style=\"border: 1px solid; border-radius: 5px; padding: 5px\">{{S:c01-s0187}}<b style=\"font-size: 150%; color: #8f8\">{{S:c01-s0188}}</b></div></center></td><td style=\"width: 6%; text-align:center\">{{S:c01-s0189}}</td><td>{{S:c01-s0190}}</td><td>{{S:c01-s0191}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c01-s0183}}",
     "{{S:c01-s0184}}",
@@ -1168,7 +1168,7 @@
   {
    "id": "c01-b0141",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c01-s0193}}</th><th>{{S:c01-s0194}}</th><th>{{S:c01-s0195}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c01-s0196}}<br/><br/><div style=\"border: 1px solid; border-radius: 5px; padding: 5px\">{{S:c01-s0197}}<b style=\"font-size: 150%; color: #8f8\">{{S:c01-s0198}}</b></div></center></td><td style=\"width: 6%; text-align:center\">{{S:c01-s0199}}</td><td>{{S:c01-s0200}}</td><td>{{S:c01-s0201}}</td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c01-s0193}}</th><th></th><th>{{S:c01-s0194}}</th><th>{{S:c01-s0195}}</th></tr></thead><tbody><tr><td style=\"width: 25%\"><center>{{S:c01-s0196}}<br/><br/><div style=\"border: 1px solid; border-radius: 5px; padding: 5px\">{{S:c01-s0197}}<b style=\"font-size: 150%; color: #8f8\">{{S:c01-s0198}}</b></div></center></td><td style=\"width: 6%; text-align:center\">{{S:c01-s0199}}</td><td>{{S:c01-s0200}}</td><td>{{S:c01-s0201}}</td></tr></tbody></table></div>",
    "segs": [
     "{{S:c01-s0193}}",
     "{{S:c01-s0194}}",
