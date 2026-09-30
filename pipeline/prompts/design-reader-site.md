@@ -106,7 +106,7 @@ assets/images/*.svg
 | `{{PREV_HREF}}` `{{NEXT_HREF}}` | 上一章/下一章链接（首章上一章指向 `toc.html`，末章下一章指向 `toc.html`） |
 | `{{PREV_LABEL}}` `{{NEXT_LABEL}}` | 上一章/下一章的按钮文案（如「上一章 · 第X章」） |
 | `{{REPO_URL}}` | `https://github.com/0xVanfer/snowmoon-zh-cn` |
-| `{{SITE_URL}}` | `https://0xvanfer.github.io/snowmoon-zh-cn/` |
+| `{{SITE_URL}}` | `https://snowmoon.vanfer.tech/` |
 | `{{UPSTREAM_URL}}` | `https://vitalik.eth.limo/snowmoon/` |
 | `{{CONTACT_EMAIL}}` | `vanfer@vanfer.tech` |
 | `{{CHAPTER_COUNT}}` `{{TOTAL_WORDS}}` `{{BUILD_DATE}}` | 32 / 约 14.6 万 / 构建日期 |

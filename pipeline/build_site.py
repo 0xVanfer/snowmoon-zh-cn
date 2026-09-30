@@ -34,7 +34,7 @@ IMG_DIR = ROOT / "book" / "images"
 OUT = ROOT / "book" / "site"
 
 REPO_URL = "https://github.com/0xVanfer/snowmoon-zh-cn"
-SITE_URL = "https://0xvanfer.github.io/snowmoon-zh-cn/"
+SITE_URL = "https://snowmoon.vanfer.tech/"
 UPSTREAM_URL = "https://vitalik.eth.limo/snowmoon/"
 CONTACT_EMAIL = "vanfer@vanfer.tech"
 SITE_TITLE = "雪月 Snowmoon · 中文版"

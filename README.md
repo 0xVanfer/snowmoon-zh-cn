@@ -6,7 +6,7 @@
 原著共 32 章、约 10.2 万英文词，正文内嵌 56 幅 SVG 插图（另有 85 个模拟手表／终端界面的面板）。
 中译本约 146 千汉字（含标点约 19 万字符）。
 
-线上阅读：<https://0xvanfer.github.io/snowmoon-zh-cn/>
+线上阅读：<https://snowmoon.vanfer.tech/>
 
 ## 依赖
 
@@ -60,7 +60,7 @@ python3 pipeline/extract_design_files.py && python3 pipeline/build_site.py
 
 | 入口 | 说明 |
 | --- | --- |
-| <https://0xvanfer.github.io/snowmoon-zh-cn/> | 线上站点：主页 / 目录 / 逐章正文，中英对照、翻页模式、进度记忆 |
+| <https://snowmoon.vanfer.tech/> | 线上站点：主页 / 目录 / 逐章正文，中英对照、翻页模式、进度记忆 |
 | [book/site/index.html](book/site/index.html) | 本地站点：纯静态，`file://` 直接打开即可（首页 → 目录 → 章节） |
 | [book/snowmoon-zh.md](book/snowmoon-zh.md) | 全书 Markdown（插图以相对路径引用 `book/images/`） |
 | [book/chapters/](book/chapters/) | 逐章 Markdown |

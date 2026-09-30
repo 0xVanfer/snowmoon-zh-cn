@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "sources" / "en" / "html"
 SITE = ROOT / "book" / "site"
 REPO_URL = "https://github.com/0xVanfer/snowmoon-zh-cn"
-SITE_URL = "https://0xvanfer.github.io/snowmoon-zh-cn/"
+SITE_URL = "https://snowmoon.vanfer.tech/"
 EMAIL = "vanfer@vanfer.tech"
 CHAPTERS = list(range(1, 33))
 
