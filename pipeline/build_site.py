@@ -63,11 +63,13 @@ def build_date() -> str:
 
 
 def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
-                  prefix: str) -> str:
+                  prefix: str, zh: bool = False) -> str:
     """把一章的结构骨架 + 指定语言的片段渲染成正文 HTML。
 
     章标题与开篇日期由模板的 `.chapter-heading` 统一渲染（中英各一行，随语言模式收敛），
     正文流里不再重复一遍；章节中段的场景分隔（scene-break）照旧保留。
+
+    [用户请求] `zh=True` 时 `<e>`/`<i>` 渲染成加粗而不是斜体（中文不用斜体）。
     """
     data = load_json(CHAP_DIR / f"chapter-{ch:02d}.json")
     out: list[str] = []
@@ -80,7 +82,7 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
             vals = [segs.get(i, "") for i in ids if segs.get(i)]
             if not vals:
                 continue
-            out.append(f'<p class="scene-break">{mini_to_html(" · ".join(vals))}</p>')
+            out.append(f'<p class="scene-break">{mini_to_html(" · ".join(vals), zh)}</p>')
         elif kind == "rule":
             out.append('<hr class="rule">')
         elif kind == "figure":
@@ -90,15 +92,15 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
                 out.append(f'<figure class="fig"><img src="{prefix}images/{f}" alt="{alt}"'
                            f' title="{alt}" loading="lazy" decoding="async"></figure>')
             if blk.get("skeleton"):
-                out.append(expand(blk["skeleton"], segs))
+                out.append(expand(blk["skeleton"], segs, zh))
         elif kind == "p":
-            inner = expand(blk.get("skeleton", ""), segs)
+            inner = expand(blk.get("skeleton", ""), segs, zh)
             inner = re.sub(r"^<p>|</p>$", "", inner)
             m = re.fullmatch(r'<span style="(#[0-9a-f]{6})">.*</span>[。！？…，]*', inner, re.S)
             rail = f' class="dialog railed" style="color:{m.group(1)}"' if m else ' class="dialog"'
             out.append(f"<p{rail}>{inner}</p>")
         else:
-            out.append(expand(blk.get("skeleton", ""), segs))
+            out.append(expand(blk.get("skeleton", ""), segs, zh))
     return "\n".join(x for x in out if x.strip())
 
 
@@ -227,8 +229,8 @@ def build() -> None:
             CHAPTER_DATELINE_ZH=datelines[ch],
             CHAPTER_DATELINE_EN=f"{en_segs.get(f'c{ch:02d}-s0002', '')} · "
                                 f"{en_segs.get(f'c{ch:02d}-s0003', '')}",
-            CONTENT_ZH=render_blocks(ch, zh_segs, captions, prefix),
-            CONTENT_EN=render_blocks(ch, en_segs, captions, prefix),
+            CONTENT_ZH=render_blocks(ch, zh_segs, captions, prefix, zh=True),
+            CONTENT_EN=render_blocks(ch, en_segs, captions, prefix, zh=False),
         )
         page = inject_overrides(fill(tpl, values, f"read/chapter-{ch:02d}.html"), prefix)
         (OUT / "read" / f"chapter-{ch:02d}.html").write_text(page, encoding="utf-8")

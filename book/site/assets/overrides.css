@@ -540,3 +540,25 @@ html[data-paragraph="webnovel"] #pane-zh .chapter-content .dialog { padding-bloc
 html[data-paragraph="webnovel"] #pane-zh .chapter-content .dialog.railed { padding-inline-start: 14px; }
 html[data-paragraph="webnovel"] #pane-zh .chapter-content .scene-break,
 html[data-paragraph="webnovel"] #pane-zh .chapter-content .dateline { margin-block: 16px; }
+
+/* ==========================================================================================
+   用户请求 ③：移动端拖拽（触摸滚动）
+   ① 终端面板带 `overscroll-behavior: contain`（视觉模型第 3 段样式），而面板在竖向上没有溢出，
+      于是「手指落在面板上往下拖」既不滚面板、也不会接续滚正文——手机上大片区域像卡住了。
+      桌面滚轮由 reader.js 显式接管，触摸没有对应接管，这里直接还给浏览器原生的 scroll chaining：
+      面板自己还有余量时仍然先滚面板，滚到头再接续整页。
+   ② 翻页模式的横向滑动翻页在 reader.js 里补（触摸事件），样式侧无需参与。
+   ========================================================================================== */
+#reader-main .device-view { overscroll-behavior: auto; }
+
+/* ==========================================================================================
+   用户请求 ④：中文不用斜体
+   中文排版不使用斜体，成品里的着重一律落成加粗（译文与构建脚本都已保证不再产出 <em>）。
+   这里再兜一层：中文栏万一出现 <em>/<i>，也会直立加粗而不是被合成一个假的斜体字形。
+   英文栏（原文）保持斜体，那是英文排版本来的用法。
+   ========================================================================================== */
+#pane-zh em,
+#pane-zh i {
+  font-style: normal;
+  font-weight: 700;
+}

@@ -55,6 +55,15 @@
 | 已提交的产物比规则更早存在 | `.gitignore` 里写着 `__pycache__/`、`*.pyc`，但两个 `.pyc` 和 172 个可再生的中间产物（模型缓存、译文备份、截图预览）早已被提交，规则对它们完全无效 | 补规则的同时用 `git rm -r --cached` 把已跟踪的可再生产物移出索引（本地文件保留）；「改了 .gitignore 却还一直有脏文件」先怀疑「是不是早就跟踪了」 |
 | 子代理/工作流的 `provider` / `model` 覆盖在本环境不生效 | 用 workflow 的 `agent(..., {provider, model})` 指定视觉模型时全部返回 `null`（失败被吞掉），看着像「模型不可用」；旧记录里的 `MiniMax-M3` 也不是当前模型 id | 需要图像复核时直接依赖运行时的默认子代理模型（本环境为 `minimax-cn / MiniMax-M3.1-Flash-Preview`），不要依赖覆盖参数；`null` 先归因到「覆盖失效」而不是「模型不行」 |
 
+## 4.5 移动端触摸
+
+| 现象 | 原因 | 处理 |
+| --- | --- | --- |
+| 手机上「拖拽极其僵硬，无法正常滚动」 | 终端面板 `.device-view` 带 `overscroll-behavior: contain`（当初是为了让桌面滚轮由脚本接管），而面板竖向上没有溢出：触摸拖拽落在面板上时既不滚面板、也不会接续滚正文，**手势被整段吃掉**；这片区域点按又被 `excluded()` 排除，等于死区 | 面板改回 `overscroll-behavior: auto`，把 scroll chaining 交还浏览器，滚轮接管逻辑照旧。教训：`overscroll-behavior: contain` 同时作用于滚轮与触摸，只为其中一种输入加的限制必须把另一种也验一遍；「桌面能滚」不等于「手机能滚」 |
+| 翻页模式在手机上完全拖不动 | 分页模式只有「点左/右三分之一」与键盘 `←/→` 两种入口，移动端本能的横向滑动没有任何处理器 | 补 `touchstart`/`touchend` 横向滑动翻页（阈值 48px，且横向位移须大于纵向 1.2 倍才判定），落在面板／链接／按钮等交互区时不接管 |
+| 无头环境里怎么验证「手机能不能拖」 | `--dump-dom` 的几何探针测不到浏览器自己怎么处理手势 | 用 CDP（`--remote-debugging-port` + 手写 WebSocket 客户端）设 `Emulation.setDeviceMetricsOverride(mobile)` 后发 `Input.dispatchTouchEvent`，直接量 `window.scrollY` 位移；`Input.synthesizeScrollGesture` 在 headless 里没有惯性，测不出 momentum 相关现象 |
+| 在受沙箱约束的 harness 里启动 CDP 版 Chrome | `--headless=new` 起完就 `GPU process exited unexpectedly: exit_code=6` → `GPU process isn't usable. Goodbye.`，`/json/version` 短暂可用后进程消失 | 加 `--no-sandbox --in-process-gpu --disable-crash-reporter` 即可；`probe_site.py` / `render_site_previews.py` 用的 `--dump-dom` / `--screenshot` 模式不受影响，无需改动 |
+
 ## 5. 流程经验
 
 - **结构与文字分离**是整条流水线能自动校验的前提：翻译只改 `segments[].text`，标签序列由脚本逐条比对，任何结构漂移都会在 `validate_translation.py` 暴露。

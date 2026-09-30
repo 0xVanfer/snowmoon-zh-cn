@@ -60,7 +60,8 @@ python3 pipeline/validate_translation.py NN
 ## 硬性约束
 
 - 只改 `translations/zh/chapter-NN.zh.json`，只写 `reviews/chapter-NN.applied.json`；**不要动其它任何文件**。
-- 标签（`<c st="…">`、`<e>`、`<b>`、`<br/>`、`<f>`、`<a href>`）的种类、数量、顺序、属性必须与原文完全一致，只改文字。
+- 标签（`<c st="…">`、`<b>`、`<br/>`、`<f>`、`<a href>`）的种类、数量、顺序、属性必须与原文完全一致，只改文字。
+  例外：`<e>`／`<i>`（斜体）——**中文不用斜体**，一律取消；只有承载「对比／纠正／焦点」的少数几处才改成 `<b>`。
 - 术语一律以 `pipeline/glossary.json` 为准；术语表没收录的新词不要乱改，保持章节内一致即可。
 - 数字与汉字之间不加空格；拉丁词（≥2 字母）与汉字之间加一个空格（见 style-guide §3）。
 - 不要向用户提问，不要请求权限。

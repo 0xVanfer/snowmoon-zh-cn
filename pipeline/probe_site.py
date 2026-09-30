@@ -224,6 +224,14 @@ window.addEventListener('load', function(){
         '.reader-brand, .reader-control, #btn-lang, .reader-topbar__chapter'),
       barFit: fit(document.getElementById('bottombar'), '.reader-bar-button, #page-indicator'),
       settingsFit: fit(document.getElementById('settings-panel'), '.setting-options button'),
+      // ---- [用户请求] 中文不用斜体：中文栏不得残留 <em>/<i> ----
+      zhItalics: document.querySelectorAll('#pane-zh em, #pane-zh i').length,
+      zhBold: document.querySelectorAll('#pane-zh b, #pane-zh strong').length,
+      // ---- [用户请求] 移动端拖拽：终端面板不能再吃掉触摸滚动（overscroll-behavior: contain）----
+      panelOverscroll: (function () {
+        var e = document.querySelector('.device-view');
+        return e ? getComputedStyle(e).overscrollBehaviorY : null;
+      })(),
       // ---- 滚轮接管（由动作脚本写入）----
       wheel: window.__wheel || null
     };
@@ -383,6 +391,14 @@ def check(pid: str, d: dict) -> list[str]:
              f"当前章的状态标记没显示：{current}")
     if pid.startswith("read"):
         need(d["page"] == "read", f"data-page 应为 read，实际 {d['page']}")
+        # [用户请求] 中文不用斜体：中文栏不得有 <em>/<i>（着重一律走加粗）
+        need(d.get("zhItalics", 0) == 0,
+             f"中文栏残留斜体标记 {d.get('zhItalics')} 处（中文不用斜体，应改为加粗或取消）")
+        # [用户请求] 移动端拖拽：终端面板带 overscroll-behavior: contain 时会吃掉触摸滚动
+        if d.get("panelOverscroll"):
+            need(d["panelOverscroll"] == "auto",
+                 f"终端面板的 overscroll-behavior-y 应为 auto（否则手机上手指落在面板上拖不动）："
+                 f"{d['panelOverscroll']}")
         if d["lang"] == "zh":
             need(vis_zh and not vis_en, f"中文模式应只显示中文栏（zh={vis_zh}, en={vis_en}）")
         if d["lang"] == "dual":

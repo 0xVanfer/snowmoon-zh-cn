@@ -116,7 +116,7 @@
 
 <span style="color:#be9b00">“那院子怎么知道你在那儿吃过饭？付账用的是齐普币，完全匿名。”</span>
 
-<span style="color:#df74b1">“正是。那院子好像把它发给了过去半年里*所有*来过的客人，消息上带了个什么标记，我的本地 AI 接受了，其他几乎所有人的 AI 都把它滤掉了。”</span>
+<span style="color:#df74b1">“正是。那院子好像把它发给了过去半年里所有来过的客人，消息上带了个什么标记，我的本地 AI 接受了，其他几乎所有人的 AI 都把它滤掉了。”</span>
 
 <div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th></tr></thead><tbody><tr><td style="width: 25%"><center>sa dzu du de<br>len su 2415 de<br>bun kai mo fan</center></td><td style="width: 6%; text-align:center">→</td><td>ci sen hu jan pu zau fe 400 lin man<br>ci cau be fe ti tie<br>ci tan jan pu ciu cu shan jin fe pa bi<br>ci sen hu fe bu</td></tr></tbody></table></div>
 
@@ -126,7 +126,7 @@
 
 <span style="color:#be9b00">“这真是个……拿捏得很准的描述。”</span>
 
-<span style="color:#df74b1">“确实。他们想把范围放得足够宽，确保里面包含我；他们烧掉400齐普币，是要向那院子、向我们的本地 AI、也向我们表明，这条消息值得花力气去读懂。但同时，他们又把范围收得足够窄，窄到这则广播*才可能*只花400齐普币就发出来。”</span>
+<span style="color:#df74b1">“确实。他们想把范围放得足够宽，确保里面包含我；他们烧掉400齐普币，是要向那院子、向我们的本地 AI、也向我们表明，这条消息值得花力气去读懂。但同时，他们又把范围收得足够窄，窄到这则广播**才可能**只花400齐普币就发出来。”</span>
 
 <span style="color:#be9b00">“也窄到不会让太多人知道这条消息。”</span>
 
@@ -288,7 +288,7 @@
 
 <span style="color:#be9b00">“好，所以这是个语言模型。但那文件有多大？数据重建之后。”</span>
 
-<span style="color:#df74b1">“10.7 GB。开销正好是六倍。我让后台线程查了那些文件的来源，全都是最近才上传的。六分之一是几部新近的电影——公开数据，不过*选了哪几部电影*当然算得上一种密钥。另外一半是某人的一大堆健康数据。最后三分之一也是视频，但看起来是 AI 生成的，全是北极的说教，讲维里迪亚和泽国文明从根子上有多糟。”</span>
+<span style="color:#df74b1">“10.7 GB。开销正好是六倍。我让后台线程查了那些文件的来源，全都是最近才上传的。六分之一是几部新近的电影——公开数据，不过**选了哪几部电影**当然算得上一种密钥。另外一半是某人的一大堆健康数据。最后三分之一也是视频，但看起来是 AI 生成的，全是北极的说教，讲维里迪亚和泽国文明从根子上有多糟。”</span>
 
 <span style="color:#df74b1">“重组算法是六分之五的纠删码，五块，每块10.7 GB。每一块又是一层隐写编码：他们用语言模型找出可以翻转的比特，让数据看起来仍然合理，同时把真正要传的消息编进去，比例相当激进——每四位密文才藏一位明文。而那些电影相当于一种密码本：如果你不知道用的到底是哪几部电影，就算你把明文全挖出来，它看上去也只是一堆随机数据。”</span>
 

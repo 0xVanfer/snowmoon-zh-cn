@@ -66,7 +66,11 @@ MD_ESCAPE = re.compile(r"([\\`*_\[\]])")
 
 
 def mini_to_md(text: str) -> str:
-    """mini-markup → Markdown / 内联 HTML。"""
+    """mini-markup → Markdown / 内联 HTML。
+
+    [用户请求] 中文不用斜体：本书是中文成品，`<e>`/`<i>`（原文着重）一律落成加粗 `**`，
+    不再输出 `*…*`。见 docs/style-guide.md §2。
+    """
     out: list[str] = []
     pos = 0
     links: list[str] = []
@@ -88,7 +92,7 @@ def mini_to_md(text: str) -> str:
         elif name == "b":
             out.append("**")
         elif name in ("i", "e"):
-            out.append("*")
+            out.append("**")
         elif name == "code":
             out.append("`")
         elif name == "a":

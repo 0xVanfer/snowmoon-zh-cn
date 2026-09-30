@@ -32,6 +32,8 @@ book/images/*.svg            中文插图（视觉模型重绘）
 - 用标准库 `html.parser` 建 DOM；`<nav>`、`<script>`、`<style>`、装饰性 `<br>` 丢弃。
 - 不可译的虚构语言（泽国语 `dz-line`、`<pre>`）标记 `locked: true`。
 - 内联文字转成受限 mini-markup（`<c st="…">` 颜色、`<e>`、`<b>`、`<sup>`、`<a>`、`<br/>`、`<f>` 等）。
+  其中 `<e>`（原文着重）只存在于**原文侧**骨架：中文译文不用斜体，一律取消或改写为 `<b>`
+  （见 [style-guide.md](style-guide.md) §2），`validate_translation.py` 会拒绝译文里的 `<e>`/`<i>`。
 - **布局容器单独处理**：`style` 里带 `display:flex|grid`／`justify-content` 的容器，其直接子元素各自是
   独立布局项（`space-between` 靠项数分位），因此不拍平成一条文本，而是逐个保留元素、各自成一条片段。
   容器内第一条片段占用正常自增编号，其余用 `基准id#2`、`#3`…，所以容器外的片段编号与既有译文 id 完全不动。

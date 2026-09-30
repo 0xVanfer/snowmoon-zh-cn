@@ -4,6 +4,9 @@
 
 mini-markup 见 docs/style-guide.md：`<c st>` 上色、`<f>` 虚构语言字体、`<b>/<i>/<e>/<code>/<a>`
 以及 `<sup>/<sub>/<u>/<small>/<mark>`；`<br/>` 为换行。
+
+[用户请求] 中文不用斜体：`zh=True` 时 `<e>`/`<i>`（原文着重）渲染成 `<b>` 加粗，绝不输出 `<em>`；
+英文栏 `zh=False` 保持斜体（英文排版本来就用斜体）。见 docs/style-guide.md §2。
 """
 from __future__ import annotations
 
@@ -21,7 +24,7 @@ TAG_RE = re.compile(r"<(/?)([a-z]+)((?:\s[^>]*)?)(/?)>")
 PLACEHOLDER_RE = re.compile(r"\{\{S:([^}]+)\}\}")
 
 
-def mini_to_html(text: str) -> str:
+def mini_to_html(text: str, zh: bool = False) -> str:
     out: list[str] = []
     pos = 0
     links: list[str] = []
@@ -43,7 +46,8 @@ def mini_to_html(text: str) -> str:
         elif name == "b":
             out.append("</b>" if closing else "<b>")
         elif name in ("i", "e"):
-            out.append("</em>" if closing else "<em>")
+            tag = "b" if zh else "em"
+            out.append(f"</{tag}>" if closing else f"<{tag}>")
         elif name == "code":
             out.append("</code>" if closing else "<code>")
         elif name == "a":
@@ -59,5 +63,5 @@ def mini_to_html(text: str) -> str:
     return "".join(out)
 
 
-def expand(skeleton: str, segs: dict[str, str]) -> str:
-    return PLACEHOLDER_RE.sub(lambda m: mini_to_html(segs.get(m.group(1), "")), skeleton)
+def expand(skeleton: str, segs: dict[str, str], zh: bool = False) -> str:
+    return PLACEHOLDER_RE.sub(lambda m: mini_to_html(segs.get(m.group(1), ""), zh), skeleton)

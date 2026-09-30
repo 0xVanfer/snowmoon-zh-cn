@@ -9,6 +9,9 @@
   4. 不得残留非法标签、未转义的尖括号、{{S:}} 占位符；
   5. 目标文本必须含中文（除 locked、纯数字/符号/URL/界面 token 外）。
 
+  [用户请求] 中文不用斜体：中文译文**禁止** `<e>`/`<i>`；原文的 `<e>`（着重）允许取消或用 `<b>`
+  顶替，因此着重标记不参与第 3 条的结构比对，另按「加粗数不得超过原文着重数」把关。
+
 用法: python3 pipeline/validate_translation.py [章节号...]
 """
 from __future__ import annotations
@@ -24,6 +27,9 @@ ZH = ROOT / "translations" / "zh"
 
 TAG_RE = re.compile(r"<(/?)([a-z]+)([^>]*?)(/?)>")
 ALLOWED = {"c", "b", "i", "e", "sup", "sub", "code", "a", "br", "f", "u", "small", "mark"}
+# [用户请求] 中文不用斜体：这些标记在中文译文里一律作废；<e> 允许被 <b> 顶替
+ITALIC = {"e", "i"}
+EMPHASIS = {"e", "i", "b", "em", "strong"}
 # 允许保留的英文 token（界面/技术缩写），以及非泽国语但同样原样保留的短词
 ALLOW_LATIN_WORDS = {"ai", "api", "gui", "llm", "url", "id", "pm", "tei", "tau", "gph", "du", "vnu",
                      "shi", "gei", "xor", "kag", "ziu", "uvc", "fa", "le", "bi", "ze", "ha", "co",
@@ -37,12 +43,23 @@ def load_conlang_vocab() -> set[str]:
     return set()
 
 
-def tag_seq(s: str) -> list[str]:
+def tag_seq(s: str, drop_emphasis: bool = False) -> list[str]:
     out = []
     for m in TAG_RE.finditer(s):
         closing, name, attrs, selfclose = m.groups()
+        if drop_emphasis and name in EMPHASIS:
+            continue
         out.append(f"{'/' if closing else ''}{name}{attrs.strip()}{'/' if selfclose else ''}")
     return out
+
+
+def emphasis_count(s: str) -> int:
+    """开标签数：原文的着重（含 `<b>`），用于限制译文加粗的规模。"""
+    return len(re.findall(r"<(?:e|i|b|em|strong)(?:\s[^>]*)?>", s))
+
+
+def bold_count(s: str) -> int:
+    return len(re.findall(r"<b(?:\s[^>]*)?>", s))
 
 
 def strip_tags(s: str) -> str:
@@ -81,9 +98,16 @@ def check(chapter: int) -> list[str]:
             if tz != s["text"]:
                 errs.append(f"{sid}: locked 片段被改动（虚构语言必须原样保留）")
             continue
-        st, zt = tag_seq(s["text"]), tag_seq(tz)
+        st, zt = tag_seq(s["text"], True), tag_seq(tz, True)
         if st != zt:
             errs.append(f"{sid}: 标签序列不一致\n    原文 {st}\n    译文 {zt}")
+        italics = sorted({n for n in re.findall(r"<([a-z]+)", tz) if n in ITALIC})
+        if italics:
+            errs.append(f"{sid}: 中文译文不得使用斜体标记 "
+                        f"{', '.join('<%s>' % n for n in italics)}（要强调请用 <b>）")
+        if bold_count(tz) > emphasis_count(s["text"]):
+            errs.append(f"{sid}: 加粗比原文着重还多"
+                        f"（原文 {emphasis_count(s['text'])} 处，译文 {bold_count(tz)} 处）")
         if "{{S:" in tz:
             errs.append(f"{sid}: 残留占位符 {{{{S:…}}}}")
         body = strip_tags(tz)

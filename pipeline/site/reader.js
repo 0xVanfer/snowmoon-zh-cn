@@ -654,6 +654,30 @@
     });
   });
 
+  // ---- [用户请求] 移动端拖拽：翻页模式没有任何触摸手势入口，手机上只能靠「点左/右三分之一」
+  //      翻页，手指一拖就毫无反应（看起来就是「拖不动、滚不了」）。这里给翻页模式补一个横向
+  //      滑动翻页：横向位移过阈值且明显大于纵向才翻，且落在面板／链接／按钮等交互区时不接管。
+  var swipe = null;
+  main.addEventListener('touchstart', function (event) {
+    if (event.touches.length !== 1) { swipe = null; return; }
+    var touch = event.touches[0];
+    swipe = { x: touch.clientX, y: touch.clientY, target: touch.target || event.target };
+  }, { passive: true });
+  main.addEventListener('touchend', function (event) {
+    var start = swipe;
+    swipe = null;
+    if (!start || mode() !== 'paged') return;
+    var touch = event.changedTouches && event.changedTouches[0];
+    if (!touch) return;
+    var dx = touch.clientX - start.x, dy = touch.clientY - start.y;
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.2) return;
+    var lang = currentLang();
+    if (start.target && start.target.closest && excluded(start.target, pane(lang) || main)) return;
+    setActive(lang);
+    S.step(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  main.addEventListener('touchcancel', function () { swipe = null; }, { passive: true });
+
   // ---- [用户请求] 段式：「网文分行」把中文正文按句断开（一句一行），更接近中文网文阅读习惯 ----
   // 断句只在文本节点上做：在每句终止符号之后插入一个 display:block 的空 span，
   // 于是同一段里的句子各占一行，颜色、加粗、虚构语言等内联样式都原样保留；
