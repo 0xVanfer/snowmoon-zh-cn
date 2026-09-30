@@ -1,8 +1,7 @@
 # Snowmoon 中译术语表
 
-> 本文件由 `python3 pipeline/merge_terms.py`（内置 `render_doc()`）从
-> [`pipeline/glossary.json`](../pipeline/glossary.json) 生成，请勿手工编辑；
-> 修改请改 JSON 后重跑该脚本。
+> 本文件由 `pipeline/render_glossary.py`（`merge_terms.py` 内置）从 [`pipeline/glossary.json`](../pipeline/glossary.json) 生成，请勿手工编辑；
+> 修改请改 JSON 后重跑脚本。
 
 ## 命名与翻译政策
 
@@ -36,7 +35,7 @@
 | --- | --- | --- | --- |
 | Alagael | 阿拉盖尔 | person | 掌舵会宣谕使，公民大会主持 |
 | Albor | 阿尔博 | person | 红郡总统，第15章被北极入侵时身亡 |
-| Ancus | 安库斯 | person | 维里迪亚参议员 |
+| Ancus | 安库斯 | person | 维里迪亚议员 |
 | Arctic Emperor | 北极皇帝 | person |  |
 | Artsun | 阿尔岑 | person | 配角 |
 | Bai | 白 | person | 泽国天才棋手；全名 Bai Jahen → 白嘉恒 |
@@ -88,14 +87,14 @@
 | number Twenty | 二十号 | person | 掌则人编号 |
 | One | 一号 | person | 掌则人编号，以数字相称 |
 | Pan | 潘 | person | 泽国棋手，强敌 |
-| Papli | 帕普利 | person | 维里迪亚参议员 |
+| Papli | 帕普利 | person | 维里迪亚议员 |
 | Pelae | 佩莱 | person | 掌舵会成员 |
 | Pelow | 佩洛 | person | 格拉迪亚斯钱包恢复流程中可能需要的共同签名人 |
 | Plat | 普拉特 | person | 翔球比赛中穿黄衫的孩子，黄队第四分 |
 | Seila | 塞拉 | person | 格拉迪亚斯之妻 |
 | Seiza | 塞扎 | person | 泽国棋手寇塞扎之名 |
 | Selwert | 塞尔沃特 | person | Sewlert 的另一种拼写，同一人物 |
-| Senator | 参议员 | person | 维里迪亚议会议员；术语表收录其姓名（韦尔多、安库斯、帕普利等） |
+| Senator | 议员 | person | 维里迪亚议会议员；术语表收录其姓名（韦尔多、安库斯、帕普利等） |
 | Sewlert | 塞尔沃特 | person | 维里迪亚合议庭法官；同章原文亦拼作 Selwert |
 | Six | 六号 | person | 掌则人编号，以数字相称（同 Eighteen→十八） |
 | Su | 苏 | person | 民本棋全国赛组织者之一（祭司）；泽国名用汉字音译 |
@@ -107,7 +106,7 @@
 | Telroy | 特尔罗伊 | person | 掌舵会成员 |
 | Thirteen | 十三号 | person | 掌则人编号，以数字相称 |
 | Utaku | 乌塔库 | person | 贝尔帕基来的博士生 |
-| Verdow | 韦尔多 | person | 维里迪亚参议员 |
+| Verdow | 韦尔多 | person | 维里迪亚议员 |
 | Vil | 维尔 | person | 共同家庭的叔辈 |
 | Zei | 泽 | person | 泽国主线主角之一；全名 Zei Leimin → 泽雷民 |
 | Zero | 零号 | person | 掌则人编号，以数字相称 |
@@ -210,8 +209,8 @@
 | Order of Steering | 掌舵会 | org | 维里迪亚税则与补贴体系 |
 | Parliament | 议会 | org | 维里迪亚议会；与掌舵会体系并列的直接决策机构 |
 | public safety agency | 公共安全机构 | org | 与地方环境机构并列，德尔瓦特主张其应有广泛数据访问权限 |
-| senate | 参议院 | org | 维里迪亚参议院；与议会（Parliament）不同 |
-| senate committee | 参议院委员会 | org |  |
+| senate | 议会 | org | 原文 senate 与 Parliament 同指维里迪亚立法机构；统一译作议会 |
+| senate committee | 议会委员会 | org |  |
 | Sentinel | 监审官 | org | 审计企业者 |
 | Sentinels | 监审官 | org |  |
 | shadow military | 影子军队 | org | 格拉迪亚斯所称泽国以民本棋锦标赛培养的秘密军事力量 |
@@ -509,7 +508,7 @@
 | selection hearing | 遴选听证会 | term | 见习官转为正式掌舵会成员的听证 |
 | semi-final | 半决赛 | term | 民本棋锦标赛淘汰赛轮次；与术语表 quarter-final 配套 |
 | semifinals | 半决赛 | term |  |
-| senate hearing | 参议院听证会 | term | 维里迪亚参议院就北林被入侵举行的听证 |
+| senate hearing | 议会听证会 | term | 维里迪亚议会就北林被入侵举行的听证 |
 | Send | 发送 | term | 界面按钮 |
 | sentry unit | 警戒小队 | term | 北极前出警戒的无人机小队；与术语表 Sentinel「监审官」区分 |
 | shelter | 庇护所 | term | 自由城的地下防护居所，兼作广告卖点与防务议题；与第 6 章 secure shelters 同译 |

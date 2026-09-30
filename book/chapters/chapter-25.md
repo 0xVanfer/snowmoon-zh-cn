@@ -2,7 +2,7 @@
 
 <p class="dateline">帕佛盖都，泽国 · 3724年霜期1日</p>
 
-格拉迪亚斯和泽坐在一间密闭屋子的桌旁，桌面本身就是一块屏幕。屏幕上分作四格，各堆着一些圆圈。
+格拉迪亚斯和泽坐在一间密闭屋子的桌旁，桌面本身就是一块屏幕。屏幕上分作4格，各堆着一些圆圈。
 
 ![四个虚线格中蓝色圆圈的数量与排列对比](../images/chapter-25-fig-01.svg)
 
@@ -22,7 +22,7 @@
 
 ![四个虚线格中不同数量的蓝色圆圈排列](../images/chapter-25-fig-03.svg)
 
-格拉迪亚斯决定换个路数。他点了左下格里的三个圆圈。
+格拉迪亚斯决定换个路数。他点了左下格里的3个圆圈。
 
 ![四个虚线格中分别排列着2、4、7、12个蓝色圆圈](../images/chapter-25-fig-04.svg)
 
@@ -32,7 +32,7 @@
 
 格拉迪亚斯把左下格剩下的圆圈全点了。泽只是点了右上格里的一个圆圈，作为回应。
 
-格拉迪亚斯把左上格剩下的圆圈全点了。泽则点了右上格剩下三个圆圈中的两个。
+格拉迪亚斯把左上格剩下的圆圈全点了。泽则点了右上格剩下3个圆圈中的两个。
 
 ![四个虚线格中，右侧两框各有一个蓝色圆圈。](../images/chapter-25-fig-06.svg)
 
@@ -54,7 +54,7 @@
 
 <span style="color:#be9b00">“等等，慢点，举个例子。”</span>
 
-<span style="color:#df74b1">“就拿我们开局那个棋盘。四个格子的圆圈数是3、4、10、13。”</span>
+<span style="color:#df74b1">“就拿我们开局那个棋盘。4个格子的圆圈数是3、4、10、13。”</span>
 
 <span style="color:#be9b00">“好。”</span>
 
@@ -64,7 +64,7 @@
 
 <span style="color:#df74b1">“对！不过我们补几个0，把它们凑成一样长，再写下来。”</span>
 
-他打开手持终端，把这四个数写成网格的样子。
+他打开手持终端，把这4个数写成网格的样子。
 
 <div class="device-view wide-device-view"><div>0011<br>0100<br>1010<br>1101</div></div>
 
@@ -112,11 +112,11 @@
 
 <span style="color:#be9b00">“我以前从没见过后手占优的游戏。”</span>
 
-<span style="color:#df74b1">“也未必！只有开局异或和是0时，它才偏向后手。而后手占优的游戏，比你想的要常见。”</span>
+<span style="color:#df74b1">“也未必！只有开局异或和是0时，它才算后手占优。而后手占优的游戏，比你想的要常见。”</span>
 
 <span style="color:#be9b00">“通常局面里总有一处位置、一块地盘是有价值的，先手因为能先到，就占了便宜。”</span>
 
-<span style="color:#df74b1">“你能想到，是什么底层原因让一个游戏偏向后手吗？”</span>
+<span style="color:#df74b1">“你能想到，是什么底层原因会让一个游戏后手占优吗？”</span>
 
 <span style="color:#be9b00">“什么意思？”</span>
 
@@ -192,13 +192,13 @@
 
 格拉迪亚斯点了点手表。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th><th>时间</th></tr></thead><tbody><tr><td><span style="color:#be9b00">[正在呼叫]</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>韦尔多参议员</center></td><td>78145</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th></th><th>收件人</th><th>时间</th></tr></thead><tbody><tr><td><span style="color:#be9b00">[正在呼叫]</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>韦尔多议员</center></td><td>78145</td></tr></tbody></table></div>
 
 过了一会儿，韦尔多接了。
 
 <span style="color:#a38af2">“格拉迪亚斯！近来可好啊？”</span>
 
-<span style="color:#be9b00">“参议员，我们有个新想法。”</span>
+<span style="color:#be9b00">“议员，我们有个新想法。”</span>
 
 <span style="color:#a38af2">“什么想法？”</span>
 
