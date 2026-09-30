@@ -146,6 +146,11 @@ python3 pipeline/probe_site.py                # 站点几何/交互探针（head
 python3 pipeline/render_site_previews.py      # 各视口截图，供人工/视觉模型复核
 ```
 
+README 给读者看的两张截图（`assets/readme/reader-dual.png`、`assets/readme/reader-mobile.png`）
+同样出自 `render_site_previews.py` 的 `read-wide-dual` / `read-narrow-zh` 预设，
+渲染结果落在 `sources/work/site-previews/`（不入库），需要时手动拷进 `assets/readme/`。
+站点改版后要重新拷一次，否则 README 里的图会与线上不一致。
+
 前端需要重新设计时（任务书见 `pipeline/prompts/design-reader-site.md`）：
 
 ```bash

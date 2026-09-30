@@ -1,101 +1,114 @@
-# Snowmoon / 雪月 · 中文版
+# 雪月 Snowmoon · 中文版
 
-本项目为 [Vitalik 的小说 Snowmoon](https://vitalik.eth.limo/snowmoon/) 的非官方中译版本，
-目标是译制成更适合中文读者阅读习惯的形式：中文正文 + 中文化插图 + 中文排版 + 中英对照阅读。
+**Vitalik Buterin（以太坊创始人）的英文科幻小说《Snowmoon》完整中文译本。**
+32 章、约 14.6 万汉字，56 幅插图全部重绘为中文。
 
-原著共 32 章、约 10.2 万英文词，正文内嵌 56 幅 SVG 插图（另有 85 个模拟手表／终端界面的面板）。
-中译本约 146 千汉字（含标点约 19 万字符）。
+## 👉 [点此在线阅读 → snowmoon.vanfer.tech](https://snowmoon.vanfer.tech/)
 
-线上阅读：<https://snowmoon.vanfer.tech/>
+打开网页就能读。手机和电脑都适配，不用注册、不用下载，下次打开还记得读到哪一章。
 
-## 依赖
+![阅读界面：中英对照模式，左英文右中文](assets/readme/reader-dual.png)
+
+## 这是什么书
+
+《雪月》是 Vitalik Buterin 写的一部英文科幻小说，故事发生在城邦维里迪亚（Veridia）：
+公共资源靠「二次方资助」这类密码学机制分配，职位把关要看预测分数，
+手腕上的终端能投票、能收消息；街上还说着一种当地人自创的语言「泽国语」（Dzegoban）。
+世界观做得扎实，适合慢慢读、边读边琢磨。
+
+这个仓库是它的**非官方中文译本**：正文由英文原文译出，56 幅插图重绘为中文版，
+书中模拟手表与终端的界面（投票刻度、聊天记录、税务表格等 85 处）也按原样保留，没有删改结构。
+
+## 读起来是什么样
+
+顶部一排按钮，中文读者基本不用配置：
+
+- **中英对照**：「中文 / English / 对照」一键切换。对照模式左右分栏，两边同步滚动，随时核对原文。
+- **两种读法**：滚动（像网页一样往下读）或翻页（一屏一页）。
+- **接着上次读**：读到的位置和已读章节记在你自己浏览器里，关掉再打开还是那一页。
+- **看着舒服**：羊皮纸 / 浅色 / 深色 / 夜间护眼四种底色，宋体 / 黑体，五档字号，段落可选「常规段落」或「一句一行」。
+- **手机上也能读**：窄屏自动收成单栏，按钮缩成短标签，点正文左右两侧或横向滑动即可翻页。
+- **桌面端快捷键**：`←` `→` 翻屏（到章首章末继续按就换章）、`↑` `↓` 滚动、`D` 切换中英对照、`T` 切换主题、`Esc` 关闭面板。
+
+<p align="center"><img src="assets/readme/reader-mobile.png" width="320" alt="手机上的阅读界面"></p>
+
+## 不想联网？把书拿到本地
+
+在 GitHub 上下载这个仓库的 zip，或者：
+
+```bash
+git clone https://github.com/0xVanfer/snowmoon-zh-cn.git
+```
+
+拿到之后不用装任何东西：
+
+| 打开这个 | 适合 |
+| --- | --- |
+| `book/site/index.html` | 和线上一样的完整阅读站（纯静态，双击即可） |
+| `book/snowmoon-zh.md` | 全书单文件 Markdown，插图以相对路径引用，适合导入其它阅读器 |
+| `book/chapters/` | 逐章 Markdown，一章一个文件 |
+
+## 关于这个译本
+
+| 项目 | 情况 |
+| --- | --- |
+| 原著 | 《Snowmoon》，作者 Vitalik Buterin，[原站](https://vitalik.eth.limo/snowmoon/)，共 32 章 |
+| 译文 | 32 章全部完成，约 14.6 万汉字 |
+| 插图 | 56 幅，全部由英文版重绘为中文版 |
+| 状态 | 已完结；非官方译本，未经原作者审定 |
+
+译制过程中做过多轮「读者视角」复核（逐章检查忠实度、中文语感、术语一致性），
+译文、插图与站点成品都有脚本自动校验，不通过就不会发布。
+如果你发现译文有问题，或觉得某处可以更顺，**欢迎提 issue 或发邮件告诉我们**。
+
+## 常见问题
+
+**Q：手机上怎么读？**
+用手机浏览器打开 <https://snowmoon.vanfer.tech/> 就行，页面会自动变成单栏。进度存在手机本地，关掉浏览器再回来还在原处。
+
+**Q：能分享给别人吗？**
+可以，请注明来自本项目。译文与插图以 GPL v3 发布，英文原文版权归原作者，许可细节见 [docs/licensing.md](docs/licensing.md)。
+
+**Q：为什么叫「非官方译本」？**
+这是社区的译制版本，与原作者没有隶属关系，译文和重绘插图都未经他审定。对译文有疑问时，随时切到「对照」模式看英文原文。
+
+## 想自己动手
+
+只想读的话，到上面一节就够了；如果你想自己跑一遍译制流程或改站点：
 
 | 用途 | 依赖 |
 | --- | --- |
-| 阅读成品 | 现代浏览器，无需构建（阅读站点与 Markdown 均可直接打开） |
-| 译制流水线 | Python 3.11+（仅标准库）；`python3 pipeline/*.py` |
+| 读成品 | 现代浏览器，无需构建 |
+| 译制流水线 | Python 3.11+（仅标准库），`python3 pipeline/*.py` |
 | 文字翻译 | DeepSeek Harness + DeepSeek V4.1 Flash（subagent 逐章翻译） |
-| 前端设计 |视觉模型（任务书 `pipeline/prompts/design-reader-site.md`，调用器 `pipeline/vision_api.py`） |
-| 插图重绘 |视觉模型（`pipeline/vision_api.py` 直连 harness 配置的端点） |
-| 插图渲染校验 | Google Chrome（headless，把 SVG 渲染成 PNG 供视觉复核） |
-| 站点托管 | GitHub Pages（`.github/workflows/pages.yml`，推送 `main` 自动构建发布） |
-
-## 运行方式
+| 前端设计与插图重绘 |视觉模型（`pipeline/vision_api.py`） |
+| 插图与站点截图校验 | Google Chrome（headless） |
+| 站点托管 | GitHub Pages（推送 `main` 自动构建发布） |
 
 ```bash
-# 1) 结构抽取（上游英文原文不入库，需自备到 sources/en/html/chapter-N.html，见 docs/licensing.md）
+# 1) 结构抽取（上游英文原文按许可要求不入库，需自备到 sources/en/html/chapter-N.html）
 python3 pipeline/extract.py
-
-# 2) 逐章翻译：按 pipeline/prompts/translate.md 派 subagent，
-#    每章产出 translations/zh/chapter-NN.zh.json 后自检
+# 2) 逐章翻译：按 pipeline/prompts/translate.md 派 subagent，产出 translations/zh/chapter-NN.zh.json
 python3 pipeline/validate_translation.py
-
-# 3) 泽国语词表（validate/merge 都依赖它）、术语合并、体例统一
+# 3) 术语与体例统一（依赖 pipeline/build_conlang_vocab.py 生成的泽国语词表）
 python3 pipeline/build_conlang_vocab.py
 python3 pipeline/merge_terms.py && python3 pipeline/normalize_zh.py
-
 # 4) 插图中文化（需要 harness 环境中的视觉模型凭据）
 python3 pipeline/make_figures.py build
 python3 pipeline/vision_api.py --batch sources/work/jobs/figures.jsonl \
     --out sources/work/jobs/figures.out.jsonl --concurrency 6
 python3 pipeline/make_figures.py apply
-
-# 5) 组装阅读成品
-python3 pipeline/build_markdown.py     # → book/snowmoon-zh.md, book/chapters/
-python3 pipeline/build_site.py         # → book/site/（主页 / 目录 / 逐章正文，中英对照）
+# 5) 组装成品并自检（→ book/snowmoon-zh.md、book/chapters/、book/site/）
+python3 pipeline/build_markdown.py && python3 pipeline/build_site.py
 python3 pipeline/qa_book.py && python3 pipeline/qa_site.py
 ```
 
-前端需要重新设计时（改 `pipeline/prompts/design-reader-site.md` 后）：
+流水线的每一步、前端重设计流程、部署与复现说明，见 [docs/pipeline.md](docs/pipeline.md)。
+其余文档：[文体与排版规范](docs/style-guide.md)、[术语表](docs/glossary.md)、[读者复核记录](reviews/)。
 
-```bash
-# 两批任务：大文件（style.css / reader.js）在 jobs2.jsonl 里分段生成，缺一批会拒绝写入
-python3 pipeline/vision_api.py --batch sources/work/design/jobs.jsonl \
-    --out sources/work/design/out.jsonl --concurrency 5
-python3 pipeline/vision_api.py --batch sources/work/design/jobs2.jsonl \
-    --out sources/work/design/out2.jsonl --concurrency 4
-python3 pipeline/extract_design_files.py && python3 pipeline/build_site.py
-```
+## 许可与联系
 
-流水线细节、踩坑记录与复现步骤见 [docs/pipeline.md](docs/pipeline.md)。
+本项目（中文译文、中文化插图、自产脚本与提示词）与上游 Snowmoon 均以 **GPL-3.0-only** 发布，
+完整条款见 [LICENSE](LICENSE) 与 [docs/licensing.md](docs/licensing.md)。
 
-## 阅读入口
-
-| 入口 | 说明 |
-| --- | --- |
-| <https://snowmoon.vanfer.tech/> | 线上站点：主页 / 目录 / 逐章正文，中英对照、翻页模式、进度记忆 |
-| [book/site/index.html](book/site/index.html) | 本地站点：纯静态，`file://` 直接打开即可（首页 → 目录 → 章节） |
-| [book/snowmoon-zh.md](book/snowmoon-zh.md) | 全书 Markdown（插图以相对路径引用 `book/images/`） |
-| [book/chapters/](book/chapters/) | 逐章 Markdown |
-
-## 质量保证
-
-- 逐章结构校验：译文只改文字，标签/样式/表格/颜色由脚本逐条比对，标签必须成对；「疑似未翻译」不再放行短词英文（`pipeline/validate_translation.py`）。
-- 抽取还原比对：把抽取结果还原成纯文本与原文逐章差集比对，有差异即 exit 1（`pipeline/verify_extract.py`；上游原文不在时自动跳过）。
-- 布局与结构保真：原文 flex/grid 容器的子项与顺序逐条比对；`table/tr/td/th/blockquote/li`、终端面板与插图数量不得减少；中文栏长度不得塌陷（`pipeline/qa_site.py`）。
-- 插图逐张校验：根属性、元素序列、`<text>` 数量与位置、数字与虚构语言原样；另有「英文原版 | 中文版」
-  并排渲染 +视觉模型复核（56/56 通过）。
-- 读者视角复核：32 章 × 3 个视角（忠实度 / 中文语感与本土化 / 一致性）共 96 份报告，
-  经改稿者逐条采纳或驳回，过程记录保留在 [reviews/](reviews/)。
-- 成品书级体检：`pipeline/qa_book.py`（章节数、插图**路径可解析**、占位符残留、游离的 Markdown 转义符、中文标点与空格体例）。
-- 以上校验全部接在 `.github/workflows/pages.yml` 的发布流程里：任一项失败即中止部署。
-
-## 文档
-
-- [docs/pipeline.md](docs/pipeline.md)：流水线、前端设计流程、部署与复现说明
-- [docs/style-guide.md](docs/style-guide.md)：文体、标点、数字、排版规范（事实源）
-- [docs/glossary.md](docs/glossary.md)：术语表（由 `pipeline/glossary.json` 生成）
-- [docs/lessons.md](docs/lessons.md)：踩坑与经验记录
-- [docs/fixes.md](docs/fixes.md)：逻辑审计缺陷的逐条修复记录（现象／错误逻辑／修法）
-- [docs/research/](docs/research/)：中国小说市场、中文排版、换行与版面、阅读器界面调研
-- [reviews/](reviews/)：读者复核报告与各章落实记录
-- [docs/licensing.md](docs/licensing.md)：上游许可与合规做法
-
-## 许可与声明
-
-本项目（中文译文、中文化插图及自产脚本与提示词）以 **GPL v3** 发布，完整条款见 [LICENSE](LICENSE)。
-上游 Snowmoon 亦为 GPL-3.0-only，按上游要求，本项目的译制流水线（提示词、脚本、harness）一并开源。
-阅读站点中的英文原文同样来自上游，遵循同一许可。
-
-本项目为粉丝译制，与原作者无关联；译文与重绘插图均未经原作者审定。
-问题反馈与建议：GitHub Issues（<https://github.com/0xVanfer/snowmoon-zh-cn/issues>）或 <vanfer@vanfer.tech>。
+本项目为粉丝译制，与原作者无关联。问题反馈：<https://github.com/0xVanfer/snowmoon-zh-cn/issues> 或 <vanfer@vanfer.tech>。
