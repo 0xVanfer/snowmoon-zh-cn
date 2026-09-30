@@ -61,9 +61,10 @@ book/images/*.svg            中文插图（视觉模型重绘）
 
 - `make_figures.py build` 为每张图生成任务：术语表子集 + 该图前后段落的原文/译文 + 原始 SVG 源码，
   提示词见 [prompts/svg-zh.md](prompts/svg-zh.md)；要求模型输出「CAPTION 行 + 完整 SVG」。
-- 调用器 `vision_api.py` 走 harness 环境里配置的 harness 里配置的 provider（视觉模型，端点与凭据取自
-  `<harness 本地 provider 配置>` 与 `<本地凭据文件>`），带磁盘缓存（可断点续跑）、
-  并发、失败重试、`max_tokens` 自适应降档。
+- 调用器 `vision_api.py`：端点、模型名、凭据一律由环境变量注入（`VISION_API_URL` /
+  `VISION_MODEL` / `VISION_API_KEY`，或本地 gitignored 的 `.vision.env`；详见该脚本 docstring），
+  **仓库里不保存任何网关地址与 provider 命名**；带磁盘缓存（可断点续跑）、并发、失败重试、
+  `max_tokens` 自适应降档，报错文本落盘前会先抹掉端点 URL。
 - `validate_svg.py` 校验等价性：根属性、元素标签序列、`<text>` 数量与位置/锚点/颜色、
   font-size ±20%、数字与虚构语言必须原样、其余文字必须含中文且不残留英文单词。
 - 泽国语罗马字靠 `build_conlang_vocab.py` 自动建表（locked 片段 + Chorus 字体 span + 纯小写短词），
@@ -142,6 +143,7 @@ python3 pipeline/build_markdown.py            # 组装 Markdown
 python3 pipeline/build_site.py                # 组装阅读站点
 python3 pipeline/qa_book.py                   # 书级体检
 python3 pipeline/qa_site.py                   # 站点结构体检
+python3 pipeline/check_privacy.py             # 隐私闸门：端点/凭据/provider 命名不得进仓库
 python3 pipeline/probe_site.py                # 站点几何/交互探针（headless Chrome）
 python3 pipeline/render_site_previews.py      # 各视口截图，供人工/视觉模型复核
 ```

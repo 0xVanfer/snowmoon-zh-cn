@@ -27,7 +27,7 @@
 | 现象 | 原因 | 处理 |
 | --- | --- | --- |
 | 调用网关返回 `HTTP 403 error code: 1010` | Cloudflare 拦截 Python `urllib` 默认 UA | `vision_api.py` 改用浏览器 UA |
-| Harness 工作流里指定 `provider: <本地 provider 名>` 的子代理报 `Stream ended without finish_reason` | 该网关的流式响应与 pi-ai 适配器不兼容 | 不走工作流，改用自带 `vision_api.py` 直连同一端点与同一凭据（本项目 harness 的一部分，随仓库开源）；带磁盘缓存与并发 |
+| 子代理直接走 harness 里那个 OpenAI 兼容 provider 时报 `Stream ended without finish_reason` | 该网关的流式响应与 pi-ai 适配器不兼容 | 不走工作流，改用自带 `vision_api.py` 以非流式方式直连（端点/凭据/模型名一律经环境变量注入，不进仓库）；带磁盘缓存与并发 |
 | 大图（40 KB，内嵌 base64 位图）批次里缺结果 | 后台 `nohup` 进程随父 bash 任务结束被回收 | 重试时改用独立后台任务，并把结果按 `id` 落盘 `figures.out.jsonl`，缺哪张补哪张 |
 | 模型偶发空回复 | reasoning token 吃满 `max_tokens` | 空回复时把上限翻倍重试；HTTP 400（超上限）时自动降档重试 |
 | 26 张纯图形插图无需译字 | 图中没有可译文字 | 仍经模型处理并生成中文图注，图注进入 Markdown 的 `alt`（无障碍） |
@@ -54,6 +54,7 @@
 | 用 `#reader-main` 的实测尺寸判断「能不能分栏」 | 该元素在标签页/单栏下被 `max-width: 38em` 限宽，量到的是当前布局而不是可用空间，于是窗口一旦变窄掉进标签页就再也回不到分栏 | 分栏/标签页这类「响应式状态机」必须用**与当前状态无关**的输入（视口可用宽高），两个方向用同一套输入，否则迟滞会退化成单向棘轮；判据重算也别只挂在 `ResizeObserver` 上，`window.resize` 一起接（缩放/iframe 变宽/一次 RO 回调丢失都可能漏掉），并补一条「先窄后宽必须恢复分栏」的回归预设 |
 | 已提交的产物比规则更早存在 | `.gitignore` 里写着 `__pycache__/`、`*.pyc`，但两个 `.pyc` 和 172 个可再生的中间产物（模型缓存、译文备份、截图预览）早已被提交，规则对它们完全无效 | 补规则的同时用 `git rm -r --cached` 把已跟踪的可再生产物移出索引（本地文件保留）；「改了 .gitignore 却还一直有脏文件」先怀疑「是不是早就跟踪了」 |
 | 子代理/工作流的 `provider` / `model` 覆盖在本环境不生效 | 用 workflow 的 `agent(..., {provider, model})` 指定视觉模型时全部返回 `null`（失败被吞掉），看着像「模型不可用」；旧记录里的 `MiniMax-M3` 也不是当前模型 id | 需要图像复核时直接依赖运行时的默认子代理模型（本环境为 `minimax-cn / MiniMax-M3.1-Flash-Preview`），不要依赖覆盖参数；`null` 先归因到「覆盖失效」而不是「模型不行」 |
+| 内部网关端点与 provider、凭据命名随流水线源码进了公开仓库 | 调用器把端点写成代码默认值，docstring 又写明 provider 名与凭据文件位置；调用失败时 `urllib` 的异常文本自带 URL，会随 `--batch` 的结果文件一起落盘 | 端点/模型名/凭据一律改为环境变量注入（本机 `.vision.env`，不入库），脚本内不留任何默认端点，报错落盘前先抹掉端点；新增 `check_privacy.py` 闸门（密钥形状、`/v1/` 端点、harness 本地配置路径、代码里的非白名单主机）并接入 CI。教训：**「只在本机存在」的接入信息一行都不许进仓库**——默认值、注释、报错文本、任务文件、提交信息都算 |
 
 ## 4.5 移动端触摸
 

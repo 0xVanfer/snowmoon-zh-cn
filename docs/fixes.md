@@ -336,10 +336,11 @@ ch26 已核对：除新增日期外**无增删、顺序保持**。日期写法�
 
 ### 5.7 `vision_api.py` 的凭据与重试细节
 
-- 错在哪：YAML 若写成 `VISION_API_KEY: "sk-…"`，`\S+` 会把引号一起塞进 Authorization 头；
-  端点硬编码且不可配置；429/5xx 忽略 `Retry-After`；最后一次尝试后仍 `time.sleep`；
+- 错在哪：凭据文件里若写成 `NAME: "sk-…"`，`\S+` 会把引号一起塞进 Authorization 头；
+  端点与模型名硬编码在脚本里；429/5xx 忽略 `Retry-After`；最后一次尝试后仍 `time.sleep`；
   错误信息里的重试次数与实际不符。
-- 修法：凭据剥引号；端点改为 `VISION_API_URL` 环境变量可覆盖；尊重 `Retry-After`；
+- 修法：凭据剥引号；端点/凭据/模型名全部改为 `VISION_API_URL`、`VISION_API_KEY`、`VISION_MODEL`
+  环境变量（或本地 gitignored 的 `.vision.env`）注入，脚本内不留任何默认端点；尊重 `Retry-After`；
   仅在还有下一次尝试时 sleep；错误信息不再虚报次数。
 
 ### 5.8 前端重生成：缺文件留旧版 / 无围栏写散文

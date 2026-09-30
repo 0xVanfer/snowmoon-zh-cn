@@ -15,6 +15,10 @@ venv/
 # 上游英文原文快照：仅本地保留，不随仓库分发（见 docs/licensing.md）
 sources/en/
 
+# 本机的视觉模型接入信息与隐私闸门词表：端点/凭据/provider 命名只许留在本机
+.vision.env
+.privacy-terms
+
 # 流水线可再生中间产物（本地保留即可，不入库）
 #   cache/         vision_api.py 的模型调用磁盘缓存
 #   backup/        normalize_zh.py 每次运行前的译文备份

@@ -2,14 +2,24 @@
 # SPDX-License-Identifier: GPL-3.0-only
 """视觉模型调用器（Snowmoon 中译项目专用 harness）。
 
-使用 DeepSeek Harness 环境中配置的 harness 里配置的 provider（视觉模型，见
-`<harness 本地 provider 配置>`）与其凭据（`<本地凭据文件>`
-中的 `VISION_API_KEY`，或同名环境变量）。
+端点、凭据、模型名一律从环境变量读取，仓库里不保存任何网关/provider 信息：
+
+    VISION_API_URL        完整的 chat/completions 端点
+    VISION_MODEL          模型名
+    VISION_API_KEY        凭据（直接给值）
+    VISION_API_KEY_FILE   或：本地凭据文件路径（`NAME: value` 形式）
+    VISION_API_KEY_NAME   配合上一个使用：取该文件里的哪个键
+
+以上变量也可以写在仓库根目录的 `.vision.env`（每行 `KEY=VALUE`，该文件已 gitignore，
+同名环境变量优先）。必填项缺失时直接报错退出，不退回任何写死的默认值——这是刻意的：
+端点与 provider 命名一旦进仓库就等于公开。
 
 设计要点：
   * 结果落盘缓存（`sources/work/cache/vision/`），键为模型+系统提示+用户提示的 SHA-1，
     因此流水线可中断续跑、重跑同一图片不会重复计费；
   * 失败自动重试（网络/空回复/被 reasoning 吃满 max_tokens 时提高上限重试）；
+  * 报错文本落盘前抹掉端点 URL（urllib 异常与网关错误 body 都带 URL，
+    否则一次失败就把网关地址写进了结果文件）；
   * 支持单条与 JSONL 批处理两种模式。
 
 用法:
@@ -28,27 +38,87 @@ import sys
 import threading
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "sources" / "work" / "cache" / "vision"
-CRED = Path.home() / "<harness-config-dir>" / "<local-cred-file>"
-ENDPOINT = os.environ.get("VISION_API_URL", "https://<endpoint>/v1/chat/completions")
-DEFAULT_MODEL = "vision-model"
+ENV_FILE = ROOT / ".vision.env"
+
+_env_loaded = False
+
+
+def _load_env_file() -> None:
+    """把 `.vision.env` 读进 os.environ（不覆盖已存在的环境变量）。"""
+    global _env_loaded
+    if _env_loaded:
+        return
+    _env_loaded = True
+    if not ENV_FILE.exists():
+        return
+    for line in ENV_FILE.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+def _require(name: str) -> str:
+    _load_env_file()
+    val = os.environ.get(name, "").strip()
+    if not val:
+        raise SystemExit(f"缺少 {name}：请设置该环境变量，或写进 {ENV_FILE.name}"
+                         f"（该文件不入库；配置方式见 docs/pipeline.md §3）")
+    return val
+
+
+def endpoint() -> str:
+    return _require("VISION_API_URL")
+
+
+def model_name() -> str:
+    return _require("VISION_MODEL")
 
 
 def api_key() -> str:
-    key = os.environ.get("VISION_API_KEY")
+    _load_env_file()
+    key = os.environ.get("VISION_API_KEY", "").strip()
     if key:
-        return key.strip()
-    if CRED.exists():
-        m = re.search(r"VISION_API_KEY:\s*(\S+)", CRED.read_text(encoding="utf-8"))
-        if m:
-            # YAML 允许 `KEY: "sk-…"`，引号必须剥掉，否则 Authorization 头会带上引号
-            return m.group(1).strip().strip('"').strip("'")
-    raise SystemExit("找不到 VISION_API_KEY（环境变量或 <本地凭据文件>）")
+        return key
+    cred = os.environ.get("VISION_API_KEY_FILE", "").strip()
+    name = os.environ.get("VISION_API_KEY_NAME", "").strip()
+    if not cred or not name:
+        raise SystemExit("缺少 VISION_API_KEY：请直接设置它，或设置 VISION_API_KEY_FILE + "
+                         "VISION_API_KEY_NAME 指向本地凭据文件（见 docs/pipeline.md §3）")
+    path = Path(cred).expanduser()
+    if not path.exists():
+        raise SystemExit(f"凭据文件不存在：{path}")
+    # 凭据文件是 `NAME: value` 形式的 YAML（键可能缩进在 `refs:` 之下）；
+    # YAML 允许 `NAME: "sk-…"`，引号必须剥掉，否则 Authorization 头会带上引号
+    m = re.search(rf"^[ \t]*{re.escape(name)}:[ \t]*(\S+)",
+                  path.read_text(encoding="utf-8"), re.M)
+    if not m:
+        raise SystemExit(f"凭据文件 {path} 里没有 {name}")
+    return m.group(1).strip().strip('"').strip("'")
+
+
+def _redact(text: str) -> str:
+    """抹掉错误文本里的端点 URL 与主机名。
+
+    `urllib` 的异常文本自带请求 URL，网关的错误 body 也常回显 URL；这些字符串会随
+    `--batch` 的结果文件落盘，一旦跟着提交就等于把网关地址写进了开源仓库。
+    """
+    url = os.environ.get("VISION_API_URL", "").strip()
+    if not url:
+        return text
+    text = text.replace(url, "<endpoint>")
+    host = urllib.parse.urlsplit(url).netloc
+    if host:
+        text = text.replace(host, "<endpoint>")
+    return text
 
 
 def cache_path(model: str, system: str, prompt: str,
@@ -62,7 +132,7 @@ def cache_path(model: str, system: str, prompt: str,
 
 def _post(payload: dict, timeout: int = 600) -> dict:
     req = urllib.request.Request(
-        ENDPOINT,
+        endpoint(),
         data=json.dumps(payload).encode(),
         headers={
             "Content-Type": "application/json",
@@ -78,9 +148,10 @@ def _post(payload: dict, timeout: int = 600) -> dict:
         return json.loads(resp.read().decode())
 
 
-def call(prompt: str, system: str = "", model: str = DEFAULT_MODEL,
+def call(prompt: str, system: str = "", model: str | None = None,
          max_tokens: int = 32000, temperature: float | None = None,
          cache: bool = True, retries: int = 4, tag: str = "") -> str:
+    model = model or model_name()
     cp = cache_path(model, system, prompt, max_tokens, temperature)
     if cache and cp.exists():
         try:
@@ -141,7 +212,7 @@ def call(prompt: str, system: str = "", model: str = DEFAULT_MODEL,
             last = f"{type(e).__name__}: {e}"
         if attempt < retries - 1:
             time.sleep(min(2 ** attempt * 2, 30))
-    raise RuntimeError(f"视觉模型调用失败：{last}")
+    raise RuntimeError(f"视觉模型调用失败：{_redact(last)}")
 
 
 def main() -> None:
@@ -149,7 +220,7 @@ def main() -> None:
     ap.add_argument("--prompt")
     ap.add_argument("--prompt-file")
     ap.add_argument("--system", default="")
-    ap.add_argument("--model", default=DEFAULT_MODEL)
+    ap.add_argument("--model", default=None, help="默认取环境变量 VISION_MODEL")
     ap.add_argument("--max-tokens", type=int, default=32000)
     ap.add_argument("--tag", default="")
     ap.add_argument("--out")

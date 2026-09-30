@@ -28,6 +28,8 @@ jobs:
           python3 pipeline/build_site.py
       - name: 校验（任一项失败即中止发布）
         run: |
+          # 仓库里不得出现端点 / 凭据 / provider 命名的痕迹
+          python3 pipeline/check_privacy.py
           # 译文结构 / 插图等价性 / 抽取还原 —— 不需要上游原文的项先跑
           python3 pipeline/validate_translation.py
           python3 pipeline/validate_svg.py
