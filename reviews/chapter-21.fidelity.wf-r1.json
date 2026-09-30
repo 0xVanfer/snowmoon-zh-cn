@@ -1,0 +1,62 @@
+{
+  "chapter": 21,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 21 章的忠实度很高。107 个片段逐条对得上，没有漏译、没有整段增译，各段 <c> 颜色标记的数量与位置与原文完全一致，说话人没有一处张冠李戴（塞拉／维尔／黛雅／莉莉／兹文／格拉迪亚斯六条声线都对）。数字与逻辑关系逐一核对无出入：81、95、11比10、四分之一、两三倍与8到27倍、三个讨论组、半年、第五次、半分与6分的加总都对得上；否定句全部保留了否定（仅 s0018 的附加疑问句「aren't they」按中文习惯省略），时态与情态（should have、could always have、must have）除下面一条外均落地正确。第 20 章埋下的线索在本章译文里也自洽（大梅港、掌则人分三组互不通气、第二个掌则人没听过反战说法、银聊最在意的评则没人被接触过），术语（掌则人、评则、掌舵会、银聊、合议庭、图谱资助、民本棋、翔球、泽国人、飞地）与术语表一致，locked 内容无需处理。问题只有 6 处，全部落在用词与语气层面，没有一处是事实性误译；按下列建议就地小改即可定稿，不需要重译。",
+  "issues": [
+    {
+      "id": "c21-s0070",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Each individual unit of evidence might only shift the odds ratio by a factor of two or three. But when there's three independent factors that all point in the same direction, that multiplies up to shifting the odds ratio a factor of eight to twenty seven.",
+      "zh": "单独一条证据，也许只能把几率比推动两三倍。可当三个互相独立的因素都指向同一个方向时，乘起来就是把几率比推动8到27倍。",
+      "problem": "shift 是「让……变动／移动」，译成「推动」在中文里是「推动（进程、工作）」，不能带「两三倍」「8到27倍」这种倍数补语，「把几率比推动两三倍」这句读不通，同段连出两次更明显。这是全章唯一一处需要回读才通的地方，而这句正是塞拉整段概率论证的支点，读不通会直接削弱她的推论。",
+      "suggestion": "单独一条证据，也许只能让几率比变动两三倍。可当三个互相独立的因素都指向同一个方向时，乘起来就是让几率比变动8到27倍。"
+    },
+    {
+      "id": "c21-s0089",
+      "severity": "low",
+      "type": "误译",
+      "source": "And notice what it took, Gladias. He got to you, and through you he got to one third of one discussion group. The military, the parliament, media platforms - he and his friends walked straight through all of them.",
+      "zh": "再看看他花了多大代价，格拉迪亚斯。他搞定了你，再通过你搞定了某个讨论组的三分之一。军队、议会、媒体平台——他和他的同伙一路直穿而过。",
+      "problem": "notice what it took 是让格拉迪亚斯注意「他走到这一步靠的是什么手段」，下半句正是拿「军队、议会、媒体平台一路直穿而过」与「只拿到一个讨论组的三分之一」作对比，落点是隐私这道门他撬不开。译成「他花了多大代价」字面变成「他付出了很大代价」，与紧接着的对比方向相反，读者容易把塞拉的意思理解成「他成本很高」，整段的收束（隐私不是奢侈品，我们能站在这儿全靠它）也会失去铺垫。",
+      "suggestion": "再看看他是怎么得手的，格拉迪亚斯。他搞定了你，再通过你搞定了某个讨论组的三分之一。军队、议会、媒体平台——他和他的同伙一路直穿而过。"
+    },
+    {
+      "id": "c21-s0076",
+      "severity": "low",
+      "type": "误译",
+      "source": "Their goal is to adjust the discourse environment, either of one person or of a whole country, so suit their interests.",
+      "zh": "他们要的不是寻找并分享自己认为的真相，而是调整话语环境——无论是一个人的，还是一整个国家的——好迁就自己的利益。",
+      "problem": "suit their interests 是「让（所调整的话语环境）合乎自己的利益」；「迁就」在中文里是「将就、让步于他人的要求」，主语通常是人、宾语是他人的意愿，搭配「自己的利益」不成话，也把「主动把环境调成对自己有利」改成了「让步」的意味，正好和塞拉强调宣传家主动塑造舆论的意思相反。",
+      "suggestion": "他们要的不是寻找并分享自己认为的真相，而是调整话语环境——无论是一个人的，还是一整个国家的——好让这环境顺着自己的利益走。"
+    },
+    {
+      "id": "c21-s0066",
+      "severity": "low",
+      "type": "误译",
+      "source": "Come on, his spying ability is much better than Mov's, at some point he must have caught on to the fact that Mov was following him, and one day he planted that seed on purpose, to make his cover story more believable.",
+      "zh": "想想吧，他的侦察本事比莫夫强得多，迟早会发现莫夫在跟踪他，于是某天故意埋下那句话，好让自己的掩护说法更可信。",
+      "problem": "at some point he must have caught on 是对已发生之事的推断（「他总归是察觉到了莫夫在跟踪他」），译成「迟早会发现」变成将来时，和紧接的「于是某天故意……」在时间上接不上；planted that seed 是明确的比喻（埋下种子／布下这一手），译成「埋下那句话」把比喻压成了字面，而这一手正是第 20 章莫夫「撞见他跟银聊的人见面」的伏笔收束处，处理成「那句话」会让读者以为只是随口一句。",
+      "suggestion": "想想吧，他的侦察本事比莫夫强得多，肯定早就察觉到莫夫在跟踪他，于是某天故意埋下那颗种子，好让自己的掩护说法更可信。"
+    },
+    {
+      "id": "c21-s0074",
+      "severity": "low",
+      "type": "生硬",
+      "source": "That's really hard to believe. Nothing he has ever said to me sounds anything like Lord Ephelion.",
+      "zh": "这实在难以置信。他跟我说过的话，没有一句像埃菲里昂勋爵。",
+      "problem": "原文是省略说法（sounds anything like Lord Ephelion [would say]），中文照搬后成了「话像勋爵这个人」，语法上说不通，读者要自己补「会说的话」才读得顺；同一章 s0045 处理成「像她从埃菲里昂勋爵嘴里听到的东西」是通的，两处口径也不一致。",
+      "suggestion": "这实在难以置信。他跟我说过的每一句话，都不像是埃菲里昂勋爵会说的。"
+    },
+    {
+      "id": "c21-s0038",
+      "severity": "low",
+      "type": "误译",
+      "source": "they're saying different things to different people to manipulate each person based on their exact position",
+      "zh": "他们对不同的人说不同的话，针对每个人的具体位置分别下手",
+      "problem": "exact position 指每个人在掌舵会／评则里的具体处境与立场——第 20 章里德尔瓦特正是按各人所在的评则组（环境传感器数据留存、私立学校、社媒开放度）分别下话术；译成「具体位置」在中文里首先被读成地点或职级，把「看人下菜碟，按其立场分别下手」这层信息虚化了。",
+      "suggestion": "他们对不同的人说不同的话，针对每个人的具体处境分别下手"
+    }
+  ]
+}

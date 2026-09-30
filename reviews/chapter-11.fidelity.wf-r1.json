@@ -1,0 +1,62 @@
+{
+  "chapter": 11,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 11 章的忠实度很高：163 个片段与原文逐句对得上，说话人的颜色标记（Gladias 93.33／Seila 253.33／Vil 293.33／Daia 53.33／教练 120／三位掌则人 266.67、200、66.67）与原文一一对应，翔球比赛的比分与得分人（黄队 1、2、3、4、5、6 分，紫队 2、3、4、5 分）、面板数值（906／918、4.4、16、0）、专名与术语（分歧资本、跃升、图谱资助、二次方资助、掌则人、齐普币、重水、海德菲尔）都核对无误，没有发现误译、漏译或因果／否定颠倒意义上的高严重度问题。真正需要动的只有两处：比赛段里对兹文「看上去在漫游」的叙述被写成了事实陈述，以及空气质量税的三分之一／三分之二被换成小数后基准与上限对不上；其余四条是用词层面的轻微折损（many 缩小成「好几个」、your life 泛化成「你的事」、much smaller 丢了程度、品牌名加引号模拟大写），按下面清单就地替换即可定稿。",
+  "issues": [
+    {
+      "id": "c11-s0108",
+      "severity": "medium",
+      "type": "误译",
+      "source": "Zero if your air quality is perfect, an extra third of a percent per year if the average occupied room reads worse than a thousand. / A third of a percent of the land value, per year. / Increase the maximum to two thirds of a percent.",
+      "zh": "空气质量完美就是零，有人的房间平均读数超过一千，每年就多收0.33%。／土地价值的0.33%，每年。／把上限提高到0.67%。",
+      "problem": "原文三处（s0108、s0110、s0121）用的都是分数「三分之一」「三分之二」，译文一律换成小数，而且取整方向不一致：1/3 被截成 0.33%（准确值是 0.333…），2/3 被进位成 0.67%（准确值是 0.666…）。结果是这档税的上限不再是基准的两倍（0.33×2＝0.66≠0.67），而这是在场的掌则人正在讨论的核心数值，后文 s0115「你漏掉了尾部风险」、s0121「把上限提高到……」都建立在同一套数字上，细心的读者会发现前后对不上。",
+      "suggestion": "s0108 → 「空气质量完美就是零；有人使用的房间平均读数超过一千，每年就再多收三分之一个百分点（0.33%）。」；s0110 → 「土地价值每年三分之一个百分点。对很多企业来说，这差不多是他们收入的六分之一。」；s0121 → 「把上限提高到三分之二个百分点（0.67%）。」"
+    },
+    {
+      "id": "c11-s0060",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "Zven flew up alone, and did not try to join any of the groups. Instead, he seemed to simply wander the sky, his eyes constantly watching the horizon to try to find where the fourth redball might be.",
+      "zh": "兹文独自飞着，没想加入任何一组。他只是在天上漫游，眼睛不停扫着地平线，想找出第四个红球可能在哪里。",
+      "problem": "两处折损叠在一起：\"did not try to join\" 说的是「没有试图加入」（叙述他做了什么），译文「没想加入」变成「不想加入」，把外部行为写成了内心意愿；\"he seemed to simply wander the sky\" 的 seem 被删，原文是从看台上的家长视角写「看上去只是在漫游」，译文「他只是在天上漫游」成了确定的事实陈述。这恰恰丢掉了本段的反差点——所有孩子都忘了第四个红球，只有兹文一个人还在找。",
+      "suggestion": "兹文独自飞着，没有试图加入任何一组。看上去他只是在天上漫游，眼睛不停扫着地平线，想找出第四个红球可能在哪里。"
+    },
+    {
+      "id": "c11-s0031",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"Yes!\", many kids shouted in unison.",
+      "zh": "“知道！”好几个孩子齐声喊道。",
+      "problem": "many 是「很多」，译文「好几个」只表示「几个」，把齐声应和的人数明显缩小；上下文刚交代过场上有十个孩子，这句回应的场面感应是「一大片人喊」。",
+      "suggestion": "“知道！”许多孩子齐声喊道。"
+    },
+    {
+      "id": "c11-s0015",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"Come on, Vil, your life is important to us.\"",
+      "zh": "“别这样，维尔，你的事对我们很重要。”",
+      "problem": "原文 your life 指的是「你这个人／你过得怎么样」，译成「你的事」后缩成了「你手头那件事」，恰好和上一句维尔说的「不想拿这些琐事烦你们」撞在一起，读起来像在说「你的官司我们关心」，而不是「我们关心的是你」。",
+      "suggestion": "“别这样，维尔，你的生活对我们很重要。”"
+    },
+    {
+      "id": "c11-s0027",
+      "severity": "low",
+      "type": "漏译",
+      "source": "The instructor walked into the truck, and soon came out with a much smaller box.",
+      "zh": "教练走进卡车，很快抱着一个更小的箱子出来。",
+      "problem": "much smaller 的程度被抹掉，只剩光秃秃的「更小」；而中文的「更小」需要有比较对象，上文并没有出现过别的箱子，读者到这里会顿一下，不知道在跟什么比。",
+      "suggestion": "教练走进卡车，很快抱着一个小得多的箱子出来。"
+    },
+    {
+      "id": "c11-s0135",
+      "severity": "low",
+      "type": "增译",
+      "source": "Our water comes from fresh Veridian NORTHERN ICE, bravely extracted only thirty kilometers away from the Arctic border, and it contains 132 parts per million heavy water.",
+      "zh": "我们的水取自维里迪亚新鲜的“北方寒冰”，勇敢地从距北极边境仅三十公里处开采而来，其中每百万份只含132份重水。",
+      "problem": "原文用全大写标出品牌名 NORTHERN ICE，译文改用引号「“北方寒冰”」承接这个大写效果；体例规范明确写了「原文全大写……按普通句译出即可……不得自造全角大写或加引号模拟」，而且同一条广告里的 TEN PERCENT LESS TOXIC（s0136）并没有加引号也没有加粗，同一段内前后处理不一致。",
+      "suggestion": "我们的水取自维里迪亚新鲜的北方寒冰，勇敢地从距北极边境仅三十公里处开采而来，其中每百万份只含132份重水。"
+    }
+  ]
+}

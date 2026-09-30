@@ -1,0 +1,152 @@
+{
+  "chapter": 21,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第 21 章的对话部分是本章最稳的地方：莉莉报喜、兹文讲火箭、饭桌上那句「是北极人吗？」都像中文小孩在说话，塞拉与格拉迪亚斯的长电话也读得下去，没有出戏的称谓或度量问题。问题集中在两类：一是后半段塞拉那几段论证性长句照搬了英语的定语结构，把两三层从句压进一个名词短语（s0063、s0064、s0068），其中 s0064 需要回读才能拼出主干；二是少量固定说法与搭配的直搬（s0078「亲自由／亲和平」、s0099「打了一半的仗」、s0095「一边……一边」被原因从句劈开、s0017「让我们这边某些人不好看」）。没有一处影响主线理解，都属于就地小改即可的润色与语感问题，不需要重译。",
+  "issues": [
+    {
+      "id": "c21-s0064",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "we found a Keeper who was on the rubric that Silverchat should care the most about - social media openness and interoperability - and neither Delwart nor anyone else had tracked down any of them at all.",
+      "zh": "“最后，为了确认，我们找到了一个负责银聊最该在意的那条评则——社交媒体开放度与互操作性——的掌则人，而德尔瓦特也好、别人也好，压根没找过他们中的任何一个。”",
+      "problem": "英文把插入语用一对破折号夹在定语从句中间，中文照搬后变成「负责……的评则——社交媒体开放度与互操作性——的掌则人」：中心语「掌则人」被推到第二个破折号之后，读者读到「的掌则人」时必须回头重拼主干。这是全章最需要回读的一处，而它正是塞拉整段论证的收口。",
+      "suggestion": "“最后，为了确认，我们找到了一个掌则人，他负责的正是银聊最该在意的那条评则——社交媒体开放度与互操作性。而德尔瓦特也好、别人也好，压根没找过他们中的任何一个。”"
+    },
+    {
+      "id": "c21-s0063",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Delwart was telling her to remove the incentives for private schools to have proper Veridian civics education.",
+      "zh": "“然后我们又找到了另一个。她负责教育方面的评则。德尔瓦特对她说，要取消让私立学校提供正规维里迪亚公民课教育的激励。”",
+      "problem": "「取消让私立学校提供正规维里迪亚公民课教育的激励」是「取消＋让＋提供」三重套叠的长定语，读者要一直读到句尾的「的激励」才知道宾语是什么；而且「取消……激励」本身搭配不成立，中文里被取消的是激励「措施」。",
+      "suggestion": "“德尔瓦特对她说，要取消那些让私立学校开设正规维里迪亚公民课的激励措施。”"
+    },
+    {
+      "id": "c21-s0068",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "but he never found his way at all into the Keeper group that was working on the rubric that Silverchat would care about the most!",
+      "zh": "“可他压根没钻进那个负责银聊最该在意的评则的掌则人小组！”",
+      "problem": "一句话里连用三个「的」，并把「负责某条评则」与「掌则人小组」两层领属压进同一个名词短语；这正是英文 that 从句叠 that 从句的搬运。中文更自然的做法是把评则提出来做话题，再说小组。",
+      "suggestion": "“可银聊最该在意的那条评则，他压根没钻进负责它的掌则人小组！”"
+    },
+    {
+      "id": "c21-s0078",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "it's a better message for him to be sometimes pro-freedom, sometimes pro-peace, sometimes whatever else, depending on the rubric and the person he's talking to.",
+      "zh": "“所以对他来说，更好的话术就是时而亲自由、时而亲和平、时而别的什么，取决于评则和他谈话的对象。”",
+      "problem": "中文的「亲」只黏实体对象（亲美、亲俄、亲北极），不接「自由」「和平」这类抽象概念，「亲自由」「亲和平」读起来是硬造词；另外「时而别的什么」缺动词，句子半悬。",
+      "suggestion": "“所以对他来说，更好的话术就是时而讲自由、时而讲和平、时而讲点别的，看评则和他谈话的对象而定。”"
+    },
+    {
+      "id": "c21-s0097",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "we're ahead on technology and industry that might be a threat to them, but behind on thinking at all about defense",
+      "zh": "“我们在可能威胁到他们的技术和工业上领先，却完全没在防御上动过脑筋”",
+      "problem": "「在……上领先」中间硬塞一个带定语的长名词短语，读者得先破解「可能威胁到他们的」修饰的是「技术和工业」，还要等「上领先」才落地；这是 ahead on X that... 的介词结构直搬。原意是「我们的技术和工业领先，这对他们构成潜在威胁」。",
+      "suggestion": "“我们的技术和工业领先，可能威胁到他们，却完全没在防御上动过脑筋”"
+    },
+    {
+      "id": "c21-s0099",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Convincing the Dzegojan is only half the battle. ... unless they had some magic foresight about how naive you are, which I doubt.",
+      "zh": "“说服泽国人只是打了一半的仗。……除非他们能未卜先知地预见到你有多天真，我很怀疑。”",
+      "problem": "①only half the battle 是英语习语，直译成「只是打了一半的仗」在中文里像一句没说完的话，读者要顿一下才反应过来是「只算完成一半」；②句末「，我很怀疑」孤悬在「除非」从句之后，中文读不出怀疑的对象是什么，讽刺的落点散掉了。",
+      "suggestion": "“说服泽国人只是第一步。……除非他们能未卜先知，早就看出你有多天真——我对此深表怀疑。”"
+    },
+    {
+      "id": "c21-s0095",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "while I've been crying because our kids are stuck in an enclave surrounded by Arctics and trying to clean up your mess.",
+      "zh": "“我在这边一边哭，因为我们的孩子困在北极人包围的飞地里，一边替你收拾烂摊子。”",
+      "problem": "「一边……一边……」被「因为……」原因从句从中间劈开，两个关联词隔得太远，读起来像两截话，要回读才知道「一边替你收拾烂摊子」是和前面「一边哭」配对。这句是塞拉全章最重的一句抱怨，断了就泄气。",
+      "suggestion": "“我在这边哭，因为我们的孩子困在北极人包围的飞地里，同时还得替你收拾烂摊子。”"
+    },
+    {
+      "id": "c21-s0017",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Of course it was all encrypted, but some former employee had access and handed it over. They found some video and messages that make some of us look bad.",
+      "zh": "“当然原本都是加密的，但有个前员工有权限，把它交了出来。他们从中找到一些让我们这边某些人不好看的视频和消息，就据此声称这次上诉是有正当理由的。”",
+      "problem": "①「有个前员工有权限」两个「有」连用，「有权限」缺了「访问」的落点，读者要自己补；②「让我们这边某些人不好看的视频和消息」是 make somebody look bad 的逐字搬运，中文「不好看」指难看、不体面，说「让我们这边某些人不好看」不成话。",
+      "suggestion": "“当然原本都是加密的，但有个前员工有访问权限，把东西交了出来。他们从中找到一些能让我们这边某些人难堪的视频和消息，就据此声称这次上诉有正当理由。”"
+    },
+    {
+      "id": "c21-s0044",
+      "severity": "low",
+      "type": "生硬",
+      "source": "they then got hoodwinked again by his mask, his pretense that he was from Silverchat.",
+      "zh": "“他们又被他的面具骗了第二次：他假装自己是银聊的人。”",
+      "problem": "①「被他的面具骗了第二次」把次数词塞在「骗了」之后，中文习惯说「第二次上当」或「又被骗了过去」；②同一句前有「被戳破」、后有「被骗」，「被」字句连用读着沉。",
+      "suggestion": "“他们又上了一次当，被他另一张面具骗了过去：他假装自己是银聊的人。”"
+    },
+    {
+      "id": "c21-s0014",
+      "severity": "low",
+      "type": "本土化",
+      "source": "So a whole different group of judges got selected to hear the case",
+      "zh": "“于是重新抽选了一整套不同的法官来审”",
+      "problem": "「一整套」在中文里用来数班子、设备、流程，拿来数法官像在数一套家具，读者会顿一下；原意只是「换了一整批人」。",
+      "suggestion": "“于是又抽选了一整批完全不同的法官来重审”"
+    },
+    {
+      "id": "c21-s0009",
+      "severity": "low",
+      "type": "欧化",
+      "source": "At this point I'm starting to suspect that the Arctics' plan to reunify everyone is to just invade the rest of Veridia too.",
+      "zh": "“还是没有。到这一步，我开始怀疑北极人所谓把所有人重新统一的计划，其实就是把维里迪亚剩下的地方也一并打下来。”",
+      "problem": "①「北极人所谓把所有人重新统一的计划」是英语长定语前置，中文口语里更常把内容单独引起来说，读者不必在「所谓……计划」里绕一圈；②「到这一步」不是中文习惯的过渡语（此处多说「事到如今」）。",
+      "suggestion": "“还是没有。事到如今，我都有点怀疑，北极人所谓的‘重新统一所有人’，其实就是把维里迪亚剩下的地方也一并打下来。”"
+    },
+    {
+      "id": "c21-s0023",
+      "severity": "low",
+      "type": "本土化",
+      "source": "“Normally I would say, now you've earned your trip to Northglade.” ... “But, well...”",
+      "zh": "“按平时我该说，这下你挣到去北林玩一趟的资格了。”……“不过，唉……”",
+      "problem": "①「按平时我该说」是 Normally I would say 的直搬，中文更常说「搁平时」「换平时」；②「挣到去北林玩一趟的资格」里「挣到＋去＋玩一趟＋的资格」链条过长，读着赶；③But, well 是犹豫吞回去的语气，译成「唉」变成了难过叹气，与「不过」的转折对不上。",
+      "suggestion": "“搁平时我该说：这下北林那趟算是你挣到手了。”……“不过嘛……”"
+    },
+    {
+      "id": "c21-s0031",
+      "severity": "low",
+      "type": "本土化",
+      "source": "So a few days ago he took me out privately to a garage, and showed me a mini rocket.",
+      "zh": "“所以前几天他私下带我去了一个车库，给我看了一个迷你火箭。”",
+      "problem": "这里的 So 是接着上一句继续讲故事的「对了／还有」，不是因果连词。译成「所以」，读者会去找前因——可前一句只是物理考了 95 分，与老师带他看火箭并无因果关系，读着别扭。",
+      "suggestion": "“对了，前几天他还私下带我去了一个车库，给我看了一个迷你火箭。”"
+    },
+    {
+      "id": "c21-s0043",
+      "severity": "low",
+      "type": "生硬",
+      "source": "She hit her palm against her face for a fifth time",
+      "zh": "“她第五次用手掌拍自己的脸”",
+      "problem": "「用手掌拍自己的脸」是 hit her palm against her face 的逐字直译：中文里「手掌」这个工具和「自己的」都是赘余，且与后半句「为自己先前的盲目」的「自己」撞车。",
+      "suggestion": "“她第五次一巴掌拍在自己脸上”"
+    },
+    {
+      "id": "c21-s0045",
+      "severity": "low",
+      "type": "欧化",
+      "source": "But she had not gone further quickly enough.",
+      "zh": "“但她没有足够快地追下去。”",
+      "problem": "「没有足够快地＋动词」是 not ... quickly enough 的语序直搬，中文说不出「足够快地追」；这句是塞拉自责的关键句，卡一下就把情绪截断了。",
+      "suggestion": "“但她没有及时追下去。”"
+    },
+    {
+      "id": "c21-s0029",
+      "severity": "low",
+      "type": "本土化",
+      "source": "I also got ninety five on a physics exam a month ago. My teacher is really impressed.",
+      "zh": "“一个月前物理考试我还拿了95分。老师对我赞不绝口。”",
+      "problem": "说话的是刚考完试、抢着报喜的孩子，「赞不绝口」是书面成语，语域偏高，与前后「太好玩了」「我长大了要造火箭」不像同一个人说的，童声一下子变成了作文腔。",
+      "suggestion": "“一个月前物理考试我还拿了95分。老师都夸我了。”"
+    }
+  ]
+}

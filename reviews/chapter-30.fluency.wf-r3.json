@@ -1,0 +1,170 @@
+{
+  "chapter": 30,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第30章中文整体读得下去：技术对话（s0026～s0032 的对抗攻击流程、s0038～s0042 的迭代汇报）意思清楚、语气不飘，结尾「狗」这个笑点也落住了。问题集中在两类：一是英文句套与「的」字长定语直搬，几处要回读才能拼出主干（s0008、s0053、s0056、s0058、s0093）；二是少量搭配在中文里不成立或不合语感（s0034「打瘫了行动能力」「打出一轮最后的伤害」、s0054「越来越优化」、s0051「让它在做什么更难被看清」），另有五处对话与提示语之间漏标点，读起来话和提示语黏成一团。全章没有出戏的称谓、度量或礼貌语问题，按条就地替换即可达到出版级语感。",
+  "issues": [
+    {
+      "id": "c30-s0008",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "But I can give you the next best thing: API access to their simulated environment. ... partial simulations that focus on their input modalities and give you classification results - given a particular visual input stream, what kind of object they think they are looking at.",
+      "zh": "但我能给你们一个次优的选择：他们模拟环境的 API 访问权限。……也有只针对输入模态的部分模拟，会给出分类结果——给定某条视觉输入流，它们会认为自己看到的是什么。",
+      "problem": "「他们模拟环境的 API 访问权限」把英文 their 直接搬成「他们」，读者要先猜这个「他们」指北极还是指平台方，且与下一句的「北极无人机」指代搅在一起；中文更顺的做法是把领属落到「北极那套模拟环境」上。段末「给定某条视觉输入流，它们会认为自己看到的是什么」是把 what kind of object they think they are looking at 逐词拼出来的「是……的」悬空句，谓语落到句尾却没有宾语，读起来像话没说完。",
+      "suggestion": "但我能给你们一个次优的选择：北极那套模拟环境的 API 访问权限。……也有只针对输入模态的部分模拟，会给出分类结果——喂进一段特定的视觉输入，它就能告诉你，它以为自己看到的是什么物体。"
+    },
+    {
+      "id": "c30-s0036",
+      "severity": "medium",
+      "type": "标点体例",
+      "source": "\"We have some early good news\", a Bansunpei researcher exclaimed. ／ \"It's definitely working\", another researcher interjected. ／ \"Agreed\", Zei replied. ／ \"Then let's do it\", Mu added. ／ \"Alright then\", Lektor spoke up softly but firmly.",
+      "zh": "“我们有了点初步的好消息”一名班孙培研究员喊道。／“确实起效了”另一名研究员插话。／“同意”泽答道。／“那就动手吧”穆补了一句。／“那就这样”莱克托轻声却坚定地开口。",
+      "problem": "五处（s0036／s0042／s0060／s0061／s0067）引语与提示语之间一个标点都没有（原文 </c> 后都带逗号）。中文里「引语＋某某说」必须断开：引语本身是分句时，逗号点在引号内。现在这样「……好消息」一名……喊道」黏成一句，读者得自己判断哪几个字是台词、哪几个字是叙述。",
+      "suggestion": "逐一改成：“我们有了点初步的好消息，”一名班孙培研究员喊道。／“确实起效了，”另一名研究员插话。／“同意，”泽答道。／“那就动手吧，”穆补了一句。／“那就这样，”莱克托轻声却坚定地开口。"
+    },
+    {
+      "id": "c30-s0034",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "any Veridian drones that had motion disabled by combat damage but had their weapons still intact could go into low-power mode and then wake up and do a final burst of damage as soon as the Arctics themselves advanced to their position.",
+      "zh": "任何被战斗损伤打瘫了行动能力、但武器仍完好的维里迪亚无人机，都可以进入低功耗模式，等北极人自己推进到它们所在的位置，再醒过来打出一轮最后的伤害。",
+      "problem": "「打瘫了行动能力」搭配不成立：「打瘫」的宾语是机体、系统、网络这类实体，不能是抽象的「行动能力」；外面再套一层「被……打瘫了」的被动，句子更绕。句末「打出一轮最后的伤害」是 do a final burst of damage 的逐词搬运，读着像游戏里「打出伤害」，放在战场描写里出戏。",
+      "suggestion": "凡是因战损失去行动能力、但武器仍完好的维里迪亚无人机，都可以进入低功耗模式，等北极人自己推进到它们所在的位置，再苏醒过来，打出最后一阵火力。"
+    },
+    {
+      "id": "c30-s0054",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei watched the attack patterns become more and more optimized, sheets of paper containing squiggles and messages that seemed simultaneously very recognizable and familiar but also completely alien.",
+      "zh": "泽看着攻击图案变得越来越优化：一张张纸上满是扭曲的线条和文字，看上去既格外熟悉、似曾相识，又完全陌生。",
+      "problem": "「变得越来越优化」不成话：「优化」是及物动词，中文可以说「越来越精」「优化得越来越到位」，不能直接受「越来越」修饰。后半「既格外熟悉、似曾相识」把原文 very recognizable and familiar 的两层压成一对近义词重复，语势反而泄掉。",
+      "suggestion": "泽看着攻击图案一点点优化成型：一张张纸上满是扭曲的线条和文字，看上去既异常眼熟，又完全陌生。"
+    },
+    {
+      "id": "c30-s0058",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Slowly, the sky began to shift from a near-total pitch black to a dark blue that was especially visible in the far east. As the minutes passed, the blue became brighter.",
+      "zh": "天色缓缓从几乎彻底的黑，转成一种在极东方向尤其显眼的深蓝。随着分钟过去，那蓝色一寸寸亮了起来。",
+      "problem": "「从几乎彻底的黑，转成……」在「黑」后断句，读者会先把「黑」当形容词、再折回来当名词；「一种在极东方向尤其显眼的深蓝」也是英文 that 从句前置的定语堆。第二句「随着分钟过去」是 As the minutes passed 的逐字搬运，中文只说「时间一分分过去」。",
+      "suggestion": "天色从近乎全黑，缓缓转成一片深蓝，极东方向尤其看得分明。时间一分分过去，那蓝色也一寸寸亮了起来。"
+    },
+    {
+      "id": "c30-s0056",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Lektor gave the order to set up printing infrastructure about two kilometers behind their current positions - a place they would be able to safely organize a retreat to around sunrise.",
+      "zh": "莱克托下令在他们当前位置后方约2公里处搭建印刷设施——那是个大约在日出时分能够安全组织后撤的地方。",
+      "problem": "破折号后的「那是个大约在日出时分能够安全组织后撤的地方」把 a place they would be able to... 的定语整块搬到「地方」前面，「大约在日出时分」又插在「能够安全组织后撤」中间，读起来要停三次才拼出主干。",
+      "suggestion": "莱克托下令在他们当前位置后方约2公里处搭建印刷设施——那里能让他们在日出前后安全地组织后撤。"
+    },
+    {
+      "id": "c30-s0053",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Another team, two researchers and Emerald instances, began figuring out how to automatically analyze the discrepancies between the simulator and reality in the nighttime setting to learn how to construct queries to the simulator that would better match real-world situations.",
+      "zh": "另一个小组，两名研究员加上几个翡翠实例，开始研究如何自动分析夜间环境下模拟与现实的偏差，从而学会怎样构造向模拟器发出的查询，让结果更贴近真实战场情况。",
+      "problem": "「构造向模拟器发出的查询」把 construct queries to the simulator 逐词排开，「向……发出的查询」这种定语式说法在中文里别扭（读起来先被当成「查询模拟器」）。「另一个小组，两名研究员加上几个翡翠实例」用逗号代替「包括／由……组成」，同位关系要读者自己补。",
+      "suggestion": "另一个小组由两名研究员和几个翡翠实例组成，他们开始研究如何自动分析夜间环境下模拟与现实的偏差，进而学会怎样构造发给模拟器的查询，让结果更贴近真实战场。"
+    },
+    {
+      "id": "c30-s0093",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Over the next longhour she managed to completely surround the remaining Arctic drone fleet, linking up with Telpo's northernmost flank almost exactly a longhour after sunrise.",
+      "zh": "她机队的其余部分向北横扫。接下来一个长时里，她成功把残余的北极无人机机队彻底围住，并在日出后差不多整整一个长时的时候，与特尔波最北端的侧翼会合。",
+      "problem": "「在日出后差不多整整一个长时的时候」把一个时间点摊成四层（差不多＋整整＋一个长时＋的时候），读者得停下来算一遍才知道是「日出后约一个长时」；同一句里「一个长时」又出现两次，节奏也被拖平。",
+      "suggestion": "她机队的其余部分向北横扫。接下来一个长时里，她把残余的北极无人机机队彻底围住，并在日出后约一个长时整，与特尔波最北端的侧翼会合。"
+    },
+    {
+      "id": "c30-s0024",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"Yeah this seems doable. It's a not very well known fact that you don't actually need the raw weights of a model to effectively train adversarial attacks.\"",
+      "zh": "“嗯，这看起来能做。有个不太为人所知的事实：要有效地练出对抗攻击，其实并不需要模型的原始权重。”",
+      "problem": "「有个不太为人所知的事实：」是 It's a not very well known fact that 的逐字搬运，中文口语里没人这样起头，芬那种随口一提的兴奋被拖成公告体。后半「练出对抗攻击」搭配也不成立——攻击是「训练／做」出来的，「练出」多接技能、本事。",
+      "suggestion": "“嗯，这看着能成。知道的人不多：要有效地训练出对抗攻击，其实并不需要模型的原始权重。”"
+    },
+    {
+      "id": "c30-s0009",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Here are the network addresses and access keys, as well as addresses and keys for Arctic endpoints in Redshire that you can proxy through. Remember to be safe and minimize risk of detection.",
+      "zh": "以下是网络地址和访问密钥，另外还有红郡那些北极端点的地址和密钥，你们可以借着它们中转。记住要稳妥行事，把被侦测到的风险压到最低。",
+      "problem": "「借着它们中转」的「借着」是 by means of 的硬译，中文这里说「经由」；「红郡那些北极端点」的「那些」是英文 those 的填充词；「把被侦测到的风险压到最低」被字句加「压到最低」也偏重，不如「尽量降低被侦测的风险」自然。",
+      "suggestion": "以下是网络地址和访问密钥，另有红郡几处北极端点的地址和密钥，可以经由它们中转。记住稳妥行事，尽量降低被侦测的风险。"
+    },
+    {
+      "id": "c30-s0042",
+      "severity": "low",
+      "type": "生硬",
+      "source": "It's finding ways to extract more information from each query, and better parallelize the queries so this all happens faster.",
+      "zh": "它在找办法从每次查询里榨出更多信息，也把查询更好地并行起来，让这一切跑得更快。",
+      "problem": "「把查询更好地并行起来」是 better parallelize the queries 的直搬，「把……更好地……起来」这一套在中文里不成搭配；技术语境里有现成的「并行化」可用。",
+      "suggestion": "它在找办法从每次查询里榨出更多信息，也在让查询更好地并行化，好让这一切跑得更快。"
+    },
+    {
+      "id": "c30-s0051",
+      "severity": "low",
+      "type": "生硬",
+      "source": "and maybe even make each query attempt multiple different attacks simultaneously so it's less clear what it's doing.",
+      "zh": "甚至可以让每次查询同时尝试好几种不同的攻击，让它在做什么更难被看清。",
+      "problem": "「让它在做什么更难被看清」把宾语从句整块塞进「让……更难被看清」，「在做什么」悬在中间，须回读一次；「被看清」的被动也不如「看清」直接。",
+      "suggestion": "甚至可以让每次查询同时尝试好几种不同的攻击，这样别人就更难看清它在做什么。"
+    },
+    {
+      "id": "c30-s0055",
+      "severity": "low",
+      "type": "生硬",
+      "source": "After another thirty minutes, it doubled again.",
+      "zh": "又过了30分钟，这个时间又翻了一倍。",
+      "problem": "「这个时间」在前文并没有被用作「侦测时间」的代称，读者要回看上一段才知道「这个时间」指什么；紧接上段的「翻了一倍还多」，「又翻了一倍」也容易被读成钟点又变了。",
+      "suggestion": "又过了30分钟，侦测时间再次翻倍。"
+    },
+    {
+      "id": "c30-s0069",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Casualty ratios were more than ten to one in the Veridian drone fleet's favor.",
+      "zh": "伤亡比对维里迪亚无人机机队有利，超过10比1。",
+      "problem": "「对……有利，超过10比1」把比值甩到句尾作补充，读者读到「有利」时还不知道有利到什么程度；中文更顺的是让数字先立住。",
+      "suggestion": "维里迪亚无人机机队占了超过10比1的伤亡比优势。"
+    },
+    {
+      "id": "c30-s0070",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Zei allowed himself to feel a moment of joy - the first genuine joy that he had felt the whole night.",
+      "zh": "泽允许自己享受了片刻喜悦——这是整整一夜里他第一次感到真正的快乐。",
+      "problem": "「允许自己享受了片刻喜悦」是 allowed himself to feel a moment of joy 的逐词搬运，「允许自己＋享受＋喜悦」三个书面词叠在一起，把人物一瞬间的松弛写成了自我审批；后半「喜悦／快乐」又是同义重复。",
+      "suggestion": "泽放任自己高兴了片刻——这是整整一夜里，他头一次感到真正的快乐。"
+    },
+    {
+      "id": "c30-s0074",
+      "severity": "low",
+      "type": "生硬",
+      "source": "they had adopted emergency defensive positions, each squad of drones circling into a formation, to buy time.",
+      "zh": "但他们已经摆出应急防御阵位，每一小队无人机都绕成环形，结成阵形，好争取时间。",
+      "problem": "「摆出应急防御阵位」是 adopted emergency defensive positions 的直搬，中文讲「占据应急防御位置／转入应急防御」；「绕成环形，结成阵形」两个分句说的是同一件事（circle into a formation），叠在一起显啰嗦。",
+      "suggestion": "但他们已经转入应急防御：每一小队无人机都绕成环形，好争取时间。"
+    },
+    {
+      "id": "c30-s0082",
+      "severity": "low",
+      "type": "生硬",
+      "source": "My next message will contain exact coordinates of some of our units on the southern flank, and recommended weak points to attack through.",
+      "zh": "我下一条消息会给出我们南翼部分部队的精确坐标，以及建议的几个可攻击的薄弱点。",
+      "problem": "「建议的几个可攻击的薄弱点」三个定语层层前置，「建议的薄弱点」关系也含混（是「我建议的」还是「被建议的」），读者要顿一下；中文一般说「几处建议的攻击薄弱点」。",
+      "suggestion": "我下一条消息会给出我们南翼部分部队的精确坐标，以及几处建议的攻击薄弱点。"
+    },
+    {
+      "id": "c30-s0097",
+      "severity": "low",
+      "type": "生硬",
+      "source": "For the first time in over fourteen longhours, he went to sleep.",
+      "zh": "泽靠回椅子，把椅背调到最大仰角。14个多长时以来，他第一次睡了过去。",
+      "problem": "「14个多长时以来」用「以来」接一段时长，中文读来别扭（「以来」一般接时间点或事件）；「睡了过去」在中文里常指昏睡过去、睡死过去，这里只是睡着，语感偏了。",
+      "suggestion": "泽靠回椅子，把椅背调到最大仰角。熬过14个多长时之后，他头一次睡着了。"
+    }
+  ]
+}

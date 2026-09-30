@@ -1,0 +1,206 @@
+{
+  "chapter": 32,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第32章的对话与议论整体读得下去，笑点也基本落住（s0024～s0026 的「菜和饭／绿植线面包」、s0104～s0107 端茶送饭的前后呼应都好），术语与称谓没有让人出戏的地方，度量也已按公制落地。主要毛病集中在三类：一是英文句套直搬，长定语前置或「的一部分是：……」这种结构让读者要回读才能拼出主干（s0059、s0112、s0110）；二是搭配不成立的硬译，个别句子在中文里已经不成话（s0109「把景致稍稍坏了一点」、s0067「被动地让……相加多于相减」，后者的「被动」在中文里恰好把原意读反）；三是议论段落里成串的「的」「他们」和抽象名词堆叠（s0090、s0044、s0091），句子本身没错，但读起来是英文骨架套中文词。以上按条就地替换即可达到出版级语感，不需要重构段落。",
+  "issues": [
+    {
+      "id": "c32-s0005",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "he unceremoniously threw the camera into a box that was several meters below him on the ground. The throw landed perfectly.",
+      "zh": "拧完，他毫不讲究地把摄像头朝地上的箱子一扔——箱子在他下方好几米处。这一扔正中箱内。",
+      "problem": "「毫不讲究」在中文里是「不挑剔、不讲究排场」的意思，拿来形容扔东西的动作不着调；原文想说的是「毫不在意、随手」。下一句「这一扔正中箱内」也不是中文搭配——「正中」后面通常接「靶心／要害」，「箱内」是方位词，读起来像机器翻译。",
+      "suggestion": "拧完，他随手把摄像头朝地上的箱子一扔——箱子在他下方好几米处。这一扔不偏不倚，正好落进箱里。"
+    },
+    {
+      "id": "c32-s0008",
+      "severity": "low",
+      "type": "生硬",
+      "source": "We are now offering the freshest of fresh water SEIZED from the CORE TERRITORY of the ARCTIC EMPIRE.",
+      "zh": "本店现供应最新鲜的鲜水，缴获自北极帝国核心领土。",
+      "problem": "「最新鲜的鲜水」是把 the freshest of fresh water 逐词搬过来，中文读着像口误；「缴获自」是公文式的倒装介词结构，放在广告吆喝里一点劲都没有。广告语该读起来像人喊出来的。",
+      "suggestion": "本店现供应鲜水中的鲜水，直接从北极帝国核心领土缴获！"
+    },
+    {
+      "id": "c32-s0011",
+      "severity": "low",
+      "type": "生硬",
+      "source": "The road transitioned to dense shrubbery, and then to a sky bridge overlooking a busy highway.",
+      "zh": "路渐渐变成茂密的灌木丛，接着又是一条空中步道，俯瞰着一条繁忙的高速公路。",
+      "problem": "「路变成灌木丛」字面成立但违背常识（路不会长成植物），中文读者会卡一下；原文的 transitioned 指的是沿路景物接续变化。另外「接着又是一条空中步道，俯瞰着一条繁忙的高速公路」里两个「一条」挨得太近。",
+      "suggestion": "路渐渐钻进茂密的灌木丛，再往前是一条空中步道，底下是繁忙的高速公路。"
+    },
+    {
+      "id": "c32-s0020",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "he told the robot in a deliberately clear tone.",
+      "zh": "他用刻意放清楚的语调对机器人说。",
+      "problem": "「放清楚」不成词——「放」不能直接带「清楚」作补语，中文讲发音清楚会说「咬字清楚」「一字一句说得格外清楚」。现在是英文 deliberately clear 的逐字对译。",
+      "suggestion": "他一字一句、刻意咬清字音地对机器人说。"
+    },
+    {
+      "id": "c32-s0024",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "\"Okay, I'm embarrassed. What is dze kai lin pan?\"",
+      "zh": "“好吧，我有点丢脸。dze kai lin pan 是什么？”",
+      "problem": "I'm embarrassed 在这里是自嘲式的「有点不好意思、露怯」，「丢脸」在中文里分量重得多，像是真当众出了丑，跟下一句玩笑式的追问语气不搭。",
+      "suggestion": "“好吧，我承认我露怯了。dze kai lin pan 到底是什么？”"
+    },
+    {
+      "id": "c32-s0027",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"By the way Zei, when are we going to start switching over from meters to lightfeet?\"",
+      "zh": "“对了泽，我们什么时候开始把米制换成光尺？”",
+      "problem": "两处小问题：一是「米制」是单位制、「光尺」是单个单位，两者不是一类东西（第9章同一话题的说法是「用光尺取代米」），中文读者会觉得别扭；二是「对了泽」缺逗号，容易被读成一个名字。",
+      "suggestion": "“对了，泽，我们什么时候开始用光尺取代米？”"
+    },
+    {
+      "id": "c32-s0028",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "see if they can help you guys get up to speed on those things too.",
+      "zh": "看看能不能帮你们也把这些事跟上。",
+      "problem": "「把……跟上」在中文里不成搭配，「跟上」是不及物用法，不能这样带「把」字宾语；另外「这些事」承接上文的 privacy and security habits 也偏虚。",
+      "suggestion": "看看能不能帮你们也把这一块补上。"
+    },
+    {
+      "id": "c32-s0036",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Information in physical reality is fundamentally much more leaky.",
+      "zh": "物理现实中的信息，本质上漏得多。",
+      "problem": "「漏得多」在口语里多形容漏雨漏风，用来讲信息泄漏，画面不对；「本质上」后面直接接「漏得多」也断得生硬。这句是维尔多的论述要点，该说得利落。",
+      "suggestion": "物理世界里的信息，从根上就更容易漏出去。"
+    },
+    {
+      "id": "c32-s0044",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "how is it even possible for a government to be accountable to its own citizens, without also being 'accountable' to powerful financial interests on the inside and adversaries on the outside",
+      "zh": "一个政府怎么可能既对本国公民负责，又不至于同时也要对内部有钱有势的利益集团、对外部的敌人‘负责’？",
+      "problem": "「又……也要……」两个连接词叠在一起，读起来打结；「对内部……、对外部的……」两个介词短语塞进同一个宾语槽里，句子主干被压到最后才落地。",
+      "suggestion": "一个政府怎么可能既对本国公民负责，又不必同时对内有钱有势的利益集团、对外部的敌人也‘负责’？"
+    },
+    {
+      "id": "c32-s0047",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Who feeds the AI information, and who intervenes in the AI's thought process to assist it?",
+      "zh": "谁给 AI 喂信息，谁又在 AI 的思考过程里插手帮它？",
+      "problem": "「插手」在中文里带贬义（多指不该管而管），这里说的是正当的介入协助，用词与语气错位。",
+      "suggestion": "谁给 AI 喂信息，谁又介入 AI 的思考过程去帮它？"
+    },
+    {
+      "id": "c32-s0049",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "I would first take a step back and ask what the problems are. And I think I have noticed one.",
+      "zh": "我会先退一步，问问题到底出在哪儿。我想我找到了一条。",
+      "problem": "「问问题」连读拗口；更麻烦的是「我想我找到了一条」缺中心词——读者第一反应会接「一条路／一条结论」，而原文的 one 指的是「一个问题」。",
+      "suggestion": "我会先退一步，想想问题到底出在哪儿。我想我已经发现了一个。"
+    },
+    {
+      "id": "c32-s0050",
+      "severity": "low",
+      "type": "生硬",
+      "source": "you rise up if you're right, and fall if you're wrong",
+      "zh": "说对了你就上升，说错了你就下落。",
+      "problem": "「上升／下落」是物理升降的直译，中文讲人的地位起落要说「升上去／掉下来」，「下落」还是个名词化的词（下落不明）。",
+      "suggestion": "说对了你就往上升，说错了你就往下掉。"
+    },
+    {
+      "id": "c32-s0059",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "What if part of the human condition is that we don't fully know what we want, and any attempt to crystallize it into one piece breaks down if you push it far enough?",
+      "zh": "要是人的处境里本来就有一部分是：我们并不完全知道自己想要什么；任何想把它结晶成一整块的努力，推得够远都会散架？",
+      "problem": "part of X is that… 直搬成「有一部分是：……」，后面跟一个分号长从句，中文读起来是先堆了一个没有着落的开头，再等主语；「结晶成一整块」和「散架」也偏硬。同一段末「然后终究被人钻空子，我们再调整评则，然后再重复」三个「然后／再」连着滚，节奏拖沓。",
+      "suggestion": "要是人本来就是这样呢——我们并不完全知道自己想要什么，而任何想把它定死成一块的尝试，只要推得够远，终究会崩掉？……它们能管用一阵子，最后总会被人钻空子；我们就调整评则，然后再来一遍。"
+    },
+    {
+      "id": "c32-s0066",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "A society that can do the good of ordinary life but not the evil of empire and conquest.",
+      "zh": "一个社会能做日常生活的善，而不做帝国和征服的恶。",
+      "problem": "「做……的善／恶」是 do the good/evil of 的逐字对译，中文不这样搭配，「做善」单独用都少见，更不会说「做日常生活的善」。这句是维尔多的总结句，尤该立得住。",
+      "suggestion": "一个能行日常之善、而不行帝国与征服之恶的社会。"
+    },
+    {
+      "id": "c32-s0067",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Decentralized forces - markets, open intellectual discourse, open science, culture and law - passively make the trillion forces of our trillion dreams add more often than they subtract.",
+      "zh": "去中心化的力量——市场、开放的思想讨论、开放的科学、文化与法律——被动地让我们那万亿个梦想的万亿份力量，相加的时候多过相减。",
+      "problem": "「被动地」在中文里的意思是「受外力驱使、不情愿地」，跟原文 passively 想表达的「无人主导、自发地」正好相反——读者会理解成「我们被逼着把力量相加」，把整段立意读反。另外「力量，相加的时候多过相减」中间那个逗号把施动者和动作切开，读起来卡。",
+      "suggestion": "去中心化的力量——市场、开放的思想讨论、开放的科学、文化与法律——在无人主导的情况下，让我们那万亿个梦想的万亿份力量相加多于相减。"
+    },
+    {
+      "id": "c32-s0072",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"Seila, what do you think we should do more?\"",
+      "zh": "“塞拉，你觉得我们该多做什么？”",
+      "problem": "「该多做什么」是 do more 的字面搬运，中文里语义悬空——容易读成「应该多做点什么事情」，而原文问的是「该在哪些方面多下功夫」。",
+      "suggestion": "“塞拉，你觉得我们该往哪方面多使点劲？”"
+    },
+    {
+      "id": "c32-s0090",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Have more of a view into their society and their technology, make sure that for any advance they make, we learn about it.",
+      "zh": "对他们的社会和他们的技术多看进去一些，确保他们每有一点进展，我们都能知道。",
+      "problem": "两个「他们的」叠加是英语所有格直搬，中文一句里出现两次「他们的」很拗；「多看进去一些」也不成话（「看进去」不能带「一些」）。",
+      "suggestion": "对他们的社会和技术多看出些门道，确保他们每有一点进展，我们都能知道。"
+    },
+    {
+      "id": "c32-s0091",
+      "severity": "low",
+      "type": "欧化",
+      "source": "then you can unlock strictly higher levels of cooperation",
+      "zh": "就能让合作达到严格更高的水平。",
+      "problem": "「严格更高」是 strictly higher 的数学式直译，中文读者要停一下才反应过来「严格」在这里不是「严格意义上」而是「实打实地」；「达到……水平」也偏报告体。",
+      "suggestion": "就能把双方的合作抬到比原来更高的层次。"
+    },
+    {
+      "id": "c32-s0099",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"I just hope we have peace\" ... All these questions: genetic engineering, uploading, going to the stars",
+      "zh": "“我只希望我们能和平”……“这一大堆问题：基因工程、上传、去星辰——要是我们因为害怕，每一步都赶着走，我不觉得能得出对的答案。……",
+      "problem": "「我们能和平」缺谓语，中文里不成句（和平是名词／形容词，不能直接作「能」的谓语）；同一句末尾「去星辰」也不是自然说法，中文会说「走向星辰／上太空」。另外「这些事都该是我们仔细做出的选择，并且尊重那些选择跟我们不一样的人」把「是选择」和「尊重别人」硬并列，结构断裂。",
+      "suggestion": "“我只盼着能有和平”……“这一大堆问题：基因工程、上传、走向星辰——要是我们因为害怕，每一步都赶着走，我不觉得能得出对的答案。……这些事都该是我们深思熟虑后的选择，也该尊重那些跟我们选得不一样的人，而不是为了在战争里活下去而仓促做出的决定。”"
+    },
+    {
+      "id": "c32-s0109",
+      "severity": "high",
+      "type": "生硬",
+      "source": "The building that looked like an aeroplane stood out from among the others, slightly spoiling the view.",
+      "zh": "那栋像飞机的建筑在其他楼里格外扎眼，把景致稍稍坏了一点。",
+      "problem": "「把景致稍稍坏了一点」在中文里不成话——「坏」不能这样带「把」字宾语（「坏了景致」才行），读者会直接卡住。中文吐槽景色被毁，最顺的说法是「煞风景」。",
+      "suggestion": "那栋像飞机的建筑在楼群里格外扎眼，稍微煞了点风景。"
+    },
+    {
+      "id": "c32-s0110",
+      "severity": "low",
+      "type": "生硬",
+      "source": "The whole thing was a square nearly a kilometer wide",
+      "zh": "整个大梅港是一个将近1公里见方的方形",
+      "problem": "「见方的方形」同义重复，「一个……是……方形」的说法也绕；中文直接说「是块……见方的区域」即可。",
+      "suggestion": "整个大梅港是块将近1公里见方的区域"
+    },
+    {
+      "id": "c32-s0112",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Only about half of the apartment buildings shaped like oversided medieval-style castle towers were visible from where they were.",
+      "zh": "从他们所在的位置，只能看见大约一半那种仿中世纪城堡塔楼造型的公寓楼。",
+      "problem": "「大约一半那种……公寓楼」是英文长定语直接前置，中文里「一半」和「那种」挤在一起，读者要回读才能确定「一半」修饰的是哪一类楼。",
+      "suggestion": "从他们所在的位置，那种仿中世纪城堡塔楼的公寓楼只能看见大约一半。"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "chapter": 29,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "整章信息读得懂，战役进程和最后的转折都跟得上，没有需要重译的地方；但句子层面的翻译腔偏重：军事部署与 AI 段落里长定语、介词结构套叠（c29-s0097、c29-s0135、c29-s0062），英文语序后置的“他意识到/他明白了”直接搬进中文（c29-s0084），以及若干搭配不成立的硬译（c29-s0004“留了一线”、c29-s0076“损失抬到最高”、c29-s0112“打成一场胜利”）。对话部分整体尚可，最需要先动的是 c29-s0110、c29-s0105、c29-s0076 三处，其余多做一轮母语润色即可。",
+  "issues": [
+    {
+      "id": "c29-s0004",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "thick enough to allow them to enjoy the surroundings but deliberately not quite thick enough for them to feel warm.",
+      "zh": "那厚度足以让他们从容欣赏这片景色，却又刻意留了一线，不至于觉得暖和。",
+      "problem": "“留了一线”在中文里是留余地、留条活路（留一线生机、网开一面）的意思，不能用来形容“厚度差一点”，读者会在这一处比喻上卡住；原意是刻意做得不够厚，恰好冷着。",
+      "suggestion": "身上其余部位裹在白灰相间的外套里，厚度足以让他们从容欣赏这片景色，却又刻意差着一点，始终暖和不起来。"
+    },
+    {
+      "id": "c29-s0011",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "pulling her up the final step so that she could be at the same height as him and Mu",
+      "zh": "把她拉上最后一步，让她站到和自己、穆一样高的地方。",
+      "problem": "“拉上最后一步”不成话（step 在雪坡上指最后一级台阶／最后一段）；后半句把 the same height 逐字翻成“一样高的地方”，再叠上“和自己、穆”，读者要回读才能确定是谁跟谁齐平。",
+      "suggestion": "泽转过身，抓住她的手，把她拉上最后一级台阶，让她和自己、穆站到同一高度。"
+    },
+    {
+      "id": "c29-s0026",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "No offensive positional objective, our job is to keep them occupied and make sure they don't break through.",
+      "zh": "没有进攻性的位置目标，我们的任务是拖住他们，确保他们突不破。",
+      "problem": "“进攻性的位置目标”是把 offensive positional objective 逐词搬过来，中文军事语境里没有这种说法，听众（读者）得猜是“要攻占的阵地”还是“进攻的位置”。",
+      "suggestion": "没有必须攻占的阵地目标，我们的任务是拖住他们，确保他们突不破。"
+    },
+    {
+      "id": "c29-s0041",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"Fi le gei fa\", he thought - one hundred ticks until it begins.",
+      "zh": "他心想，“Fi le gei fa”——距开始还有100个嘀嗒。",
+      "problem": "提示语在前时，“他心想”后面应当用冒号引出引语，现在用逗号，与全书对话体例（提示语在句末才用逗号）不一致。",
+      "suggestion": "他心想：“Fi le gei fa”——距开始还有100个嘀嗒。"
+    },
+    {
+      "id": "c29-s0047",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The robot beeped softly.",
+      "zh": "机器人轻轻滴了一声。",
+      "problem": "电子音在中文里写作“嘀”（第17章同一动作就是“机器人嘀了一声，表示接单”）；“滴”是水滴声，读者读到这里会当成错字。",
+      "suggestion": "机器人轻轻嘀了一声。"
+    },
+    {
+      "id": "c29-s0053",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zei and Mu were sitting on their chairs in adjacent but separate rooms. They could each see the same command screen. On the top left, the clock was showing the time.",
+      "zh": "泽和穆坐在相邻却彼此隔开的房间里，各自坐在椅子上。两人能看见同一块指挥屏幕。左上角，时钟显示着时间。",
+      "problem": "一句里出现两个“坐”，“各自坐在椅子上”是 in their chairs 的冗余直译；“时钟显示着时间”是同义反复（时钟当然显示时间），中文只需说“左上角是时钟”。",
+      "suggestion": "泽和穆待在相邻却各自隔开的房间里，各坐一把椅子。两人能看见同一块指挥屏幕，左上角是时钟。刚过午夜。"
+    },
+    {
+      "id": "c29-s0054",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The launch of the Naval group was delayed, so that its assault would come shortly after the beginning of the main battle.",
+      "zh": "海上集群推迟了出动，好让它的突袭紧随主战事开始之后。",
+      "problem": "“紧随……开始之后”把两个时间标记叠在一起，句子读不顺；“好让”后面再接“它的突袭”，主语也绕。",
+      "suggestion": "海上集群则推迟了出动，好让它的突袭在主战事打响后不久发起。"
+    },
+    {
+      "id": "c29-s0062",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "These improvements came at the expense of effectiveness in traditional fixed face-to-face combat. ... direct face-to-face combat with fixed battle lines.",
+      "zh": "这些改进牺牲的是传统固定正面交战的效能。……固定战线的正面交锋。",
+      "problem": "“传统固定正面交战”把四个修饰语硬叠成一个名词短语，读者要分解才懂；同一段前文叫“传统固定正面交战”、后文叫“固定战线的正面交锋”，中文读者会以为是两种打法。",
+      "suggestion": "这些改进的代价，是牺牲了传统固定战线正面交战的效能。……所以对他们最有利的打法，似乎就是……摆开固定战线，正面硬碰硬。"
+    },
+    {
+      "id": "c29-s0066",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "A large fleet of Helisport copters and delivery copters, seemingly modified to carry more dangerous payloads, flew out.",
+      "zh": "一大群翔球小型飞行器和送货小型飞行器飞了出来，似乎改装过，挂载着更危险的载荷。",
+      "problem": "“翔球小型飞行器”把运动名“翔球”直接当机型前缀，读起来像“翔球牌飞行器”，很难反应过来是比赛用机；“送货小型飞行器”同样是硬拼（第5章用的是“几架小型飞行器……运着货”）。",
+      "suggestion": "一大群翔球赛场用的飞行器和送货飞行器飞了出来，似乎改装过，挂载着更危险的载荷。"
+    },
+    {
+      "id": "c29-s0071",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "to avoid any risk that partially disabled remnants or their traps would cause damage",
+      "zh": "以免半残的残余单位或陷阱造成损失",
+      "problem": "“半残的残余单位”语义叠床架屋（残＋残余），而且“单位”是从 unit 直搬的军事术语，中文小说里用它指残余无人机很生硬。",
+      "suggestion": "免得那些半瘫的残兵或它们留下的陷阱造成损失"
+    },
+    {
+      "id": "c29-s0076",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Be careful, minimize our losses and maximize theirs.",
+      "zh": "小心，把我们的损失压到最低，把他们的损失抬到最高。",
+      "problem": "中文里“抬到最高”搭配的是价格、分数、音量，不能搭配“损失”；前半句“压到最低”很地道，后半句搭配一崩，战前训话读起来发笑。",
+      "suggestion": "小心，把我们的损失压到最低，让他们的损失尽可能大。"
+    },
+    {
+      "id": "c29-s0081",
+      "severity": "low",
+      "type": "生硬",
+      "source": "On the fully zoomed-out map, Zei could see the lines slowly come closer.",
+      "zh": "在完全缩小的地图上，泽能看见两条线缓缓靠近。",
+      "problem": "“完全缩小的地图”是逐字直译，第一反应是“尺寸变小的地图”，要结合上文才想到是缩放视图。",
+      "suggestion": "地图缩到全览时，泽能看见两条线缓缓靠近。"
+    },
+    {
+      "id": "c29-s0083",
+      "severity": "low",
+      "type": "生硬",
+      "source": "He scrolled through small-scale tactical maps and real-time visual feeds.",
+      "zh": "他翻过一张张小尺度战术地图和实时画面。",
+      "problem": "“小尺度”是 small-scale 的直译，中文地图学的说法是“小比例尺”；另外“翻过一张张”表示已经翻完了，这里应是持续翻看。",
+      "suggestion": "他不停翻看一张张小比例尺的战术地图和实时画面。"
+    },
+    {
+      "id": "c29-s0084",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Something was wrong, he realized.",
+      "zh": "有些不妙，他意识到。",
+      "problem": "把 he realized 后置成“他意识到”，是照搬英文语序，六字短句这样收尾非常别扭；同章还有同样毛病——c29-s0062“他明白了”、c29-s0084 前文 s0037“是光纤电缆，他明白了”。",
+      "suggestion": "他意识到，有些不对。（s0062 可改“他明白过来：北极人一直在为又一场快速攻势做准备。”）"
+    },
+    {
+      "id": "c29-s0090",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Units with IDs ending in 0 or 5, explore random modifications.",
+      "zh": "ID 末尾是0或5的单位，随机尝试改良。",
+      "problem": "“尝试改良”不成立：中文里“改良”是不及物的“变好”，不能当“尝试”的宾语；原意是让这些单位去试各种随机改动。",
+      "suggestion": "ID 末尾是0或5的单位，随机试各种改动。"
+    },
+    {
+      "id": "c29-s0093",
+      "severity": "low",
+      "type": "生硬",
+      "source": "has already been introduced as the mainline version of tactic five",
+      "zh": "已作为战术五的主线版本投入使用。",
+      "problem": "“主线版本”是 mainline version 的软件行业直译，掉进战争指挥的对话里会让读者卡一下；此处意思是已经并入战术五的正式版本。",
+      "suggestion": "已经并入战术五的标准版本投入使用。"
+    },
+    {
+      "id": "c29-s0096",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Come on, Zei thought. Think of something.",
+      "zh": "快想啊，泽心想。想个办法。",
+      "problem": "两句里“想”出现三次，读起来像绕口令，紧张感被字面重复冲掉。",
+      "suggestion": "快想啊，泽在心里催自己。想个办法。"
+    },
+    {
+      "id": "c29-s0097",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "both east of Northglade and in Arctic core territory in Telten hundreds of kilometers further east",
+      "zh": "它们在北林以东和往东数百公里外特尔滕的北极核心领土上都投下了地面载具。",
+      "problem": "“和往东数百公里外特尔滕的北极核心领土上”把三个定语连缀在一起，地点被推到十几个字之后，第一遍读不容易切分谁在哪。",
+      "suggestion": "它们在北林以东，以及再往东数百公里、属于北极核心领土的特尔滕，都投下了地面载具。"
+    },
+    {
+      "id": "c29-s0105",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "trying to optimize positional advantage and casualty ratios. Mu had immediately taken over as the commander of Group South.",
+      "zh": "试图优化位置优势和伤亡比。穆已经立刻接任南集群指挥。",
+      "problem": "“已经”说完成、“立刻”说即刻，两个词并列是硬凑；另外“优化伤亡比”搭配也不成立（比数只能说“改善／拉大／缩小”），这是本章情绪最重的一段，句子一涩就散了。",
+      "suggestion": "试图在阵地态势和伤亡比上多争一点。穆当即接任了南集群指挥。"
+    },
+    {
+      "id": "c29-s0108",
+      "severity": "low",
+      "type": "生硬",
+      "source": "to connect the watch to the display in his glasses",
+      "zh": "把手表接到眼镜的显示上。",
+      "problem": "“接到……显示上”缺中心词，“显示”单独作名词不成话，中文应说“显示屏”。",
+      "suggestion": "把手表连到眼镜的显示屏上。"
+    },
+    {
+      "id": "c29-s0110",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "with the combination of my successful Minpentai background and my parents' status, this proved to be easy.",
+      "zh": "凭我成功的民本棋履历，再加上我父母的地位，这件事证明并不难。",
+      "problem": "“这件事证明并不难”把 this proved to be easy 逐字搬过来，主语和逻辑都拧着（应是“事实证明并不难”）；“成功的履历”也不像中文，履历只有漂亮／拿得出手，谈不上成功。这是本章的关键情报文字，读者在这里打结最伤。",
+      "suggestion": "凭我出色的民本棋战绩，再加上我父母的身份地位，要做到这一点并不难。"
+    },
+    {
+      "id": "c29-s0111",
+      "severity": "low",
+      "type": "生硬",
+      "source": "there are great limits to what I can do to the Arctic drone fleet without blowing my cover",
+      "zh": "在不暴露我的前提下，我能对北极无人机机队做的事非常有限。",
+      "problem": "“不暴露我”是英文反身代词的直搬，中文用“自己”；现在这样写，读者会把“我”当成宾语快速掠过，句子不顺。",
+      "suggestion": "在不暴露自己的前提下，我能对北极无人机机队做的事非常有限。"
+    },
+    {
+      "id": "c29-s0112",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "then proceed north and south to expand the rupture into a complete victory on the southern front.",
+      "zh": "然后向北、向南扩大缺口，把南线打成一场彻底的胜利。",
+      "problem": "“打成”在中文里接的是“打成一片／打成平手／打成重伤”，不能接“胜利”；expand the rupture 的比喻（把口子撑大）也被译丢了。",
+      "suggestion": "然后向北、向南扩大缺口，把突破口撑成南线的一场完胜。"
+    },
+    {
+      "id": "c29-s0120",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Tactics would lead to faster defeat if used against Veridian, Kungaupei or Freetown AI.",
+      "zh": "若用于对付维里迪亚、昆高培或自由城的 AI，这些战术会加速失败。",
+      "problem": "“会加速失败”缺主语：既可以读成“这些战术会更快失效”，也可以读成本方更快落败，而原意明确是后者（c29-s0118“则会加速失败”同此病）。这是翡翠给出的关键判断，歧义会直接影响读者对局势的理解。",
+      "suggestion": "若用来对付维里迪亚、昆高培或自由城的 AI，这些战术反而会让我们输得更快。"
+    },
+    {
+      "id": "c29-s0121",
+      "severity": "low",
+      "type": "生硬",
+      "source": "decided to ask for human help",
+      "zh": "决定向人求助。",
+      "problem": "“向人求助”太泛，读者不明白为什么要强调“人”；在翡翠是 AI 的语境里，human help 的意思是“找真人”。",
+      "suggestion": "决定找真人帮忙。"
+    },
+    {
+      "id": "c29-s0129",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "So we flip it around on him. It's his responsibility to take the first leap of faith.",
+      "zh": "所以，我们把这件事反过来，压到他头上。先迈出信任这一步，是他的责任。",
+      "problem": "“压到他头上”带“强加／栽赃”的贬义，与“把主动权推回给他”的原意相反；“是他的责任”是 it's his responsibility 的直搬，中文里该说“该由他先迈这一步”。",
+      "suggestion": "所以，这次把球踢回给他。该由他先迈出信任的第一步。"
+    },
+    {
+      "id": "c29-s0135",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "You can take the derivative of the outcome of the model in the simulator against all of the variables that we can change in the field",
+      "zh": "你可以对模型在模拟器里的输出结果，针对我们在战场上能改的所有变量求导",
+      "problem": "“对……针对……求导”两个介词结构套在一起，中间还夹着长定语，中文讲数学不会这样组句，读两遍才理清谁对谁求导。",
+      "suggestion": "你可以拿模型在模拟器里的输出结果，对我们在战场上能改的所有变量求导——"
+    },
+    {
+      "id": "c29-s0136",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "a bunch of squiggles that look incomprehensible and weird. ... it's like a magical snake with a deadly stare looking at you right in your face.",
+      "zh": "那大概是一堆看不懂、古怪的涂鸦。……它就像一条魔法蛇，带着致命的目光，直直盯在你脸上。",
+      "problem": "“涂鸦”在中文指街头涂鸦，squiggles 应是“鬼画符／乱涂的线”；“带着致命的目光”搭配不成立（目光是投来、射来），是 with a deadly stare 的直搬；“盯在你脸上”应为“盯着你的脸”。白这段是他在炫耀式地吓人，语气被这些硬译泄掉了。",
+      "suggestion": "在我们人类看来，那大概就是一堆看不懂的鬼画符。而对我们要用这套攻击去针对的 AI 来说，它就像一条魔法蛇，用致命的目光直直盯着你的脸。"
+    }
+  ]
+}

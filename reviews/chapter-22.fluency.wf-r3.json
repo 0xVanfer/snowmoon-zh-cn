@@ -1,0 +1,188 @@
+{
+ "chapter": 22,
+ "lens": "fluency",
+ "reviewer": "wf-r3",
+ "overall": "整体可读，剧情与对话都能跟上：出租车里司机与扬论税、研究所里乌塔库与扬谈制度正当性、泽那边直播猎杀北极无人机三条线都不拗口，几处口语化落地得不错（「路面看着空不少」「我开着也舒服」「你干你的，不用给我实况解说」「把突然性做到最大」），司机的称谓本土化成「师傅／老板」也自然。问题集中在翻译腔：一是英文长定语被整段前置（s0014、s0045、s0074），二是英语句套与双重否定直搬（s0082、s0148、s0156、s0102），三是少数搭配在中文里直接不成立——最刺眼的是 s0076「被打发得越来越用力」和 s0103「我这是在看的什么？」，两处都不成话。改动量不大，属于「能读但有几处会卡」这一层。",
+ "issues": [
+  {
+   "id": "c22-s0005",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Almost immediately after the highway, the taxi passed by a small park to the left, and a tall industrial building on the right.",
+   "zh": "刚过完高架路，出租车左边经过一个小公园，右边是一栋高大的工业建筑。",
+   "problem": "「出租车左边经过一个小公园」把方位状语当了主语，「经过」的动作主体含糊，读者要顿一下才反应过来是小公园在车左边；后半句「右边是一栋……」又换了句式，前后不对称。",
+   "suggestion": "刚过完高架路，出租车驶过左边的一个小公园，右边是一栋高大的工业建筑。"
+  },
+  {
+   "id": "c22-s0014",
+   "severity": "low",
+   "type": "欧化",
+   "source": "Here, Jahn saw a type of activity that, to him, seemed to have been steadily increasing for the past six months: construction of roads.",
+   "zh": "在这儿，扬看到一种在他看来过去半年里一直在稳步增加的现象：修路。",
+   "problem": "「一种＋在他看来＋过去半年里＋一直在稳步增加的＋现象」四层修饰全部压在中心词前面，是典型的英文长定语直搬；「现象」也不如「活动」贴，修路是有人在做的事。",
+   "suggestion": "在这儿，扬注意到一种活动——在他看来，过去半年里它一直在稳步增加：修路。"
+  },
+  {
+   "id": "c22-s0045",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Less shelter space left for us poor folks than if they just rationed it, but hey, they are trying. And if they use that money to defend us well, less chance we'll end up needing any shelters in the first place.",
+   "zh": "留给咱们穷人的庇护所空间，确实比配给制下要少，可话说回来，人家也在出力。要是他们拿这笔钱把咱们保护得好，咱们一开始就用不着庇护所的机会也更大。",
+   "problem": "「咱们一开始就用不着庇护所的机会也更大」把「机会」的定语铺了一长串，中文读起来得回读一次；「把咱们保护得好」也不是中文搭配（保护得好＝护得周全，但「拿钱把人保护得好」生硬）。前一句「比配给制下要少」还丢掉了原文的反事实（要是他们干脆搞配给的话），比较对象悬空。",
+   "suggestion": "留给咱们穷人的庇护所空间，确实比他们干脆搞配给还少，可话说回来，人家也在出力。他们要是真拿这笔钱把咱们护住了，咱们打一开始就用不着庇护所的指望也更大。"
+  },
+  {
+   "id": "c22-s0046",
+   "severity": "low",
+   "type": "生硬",
+   "source": "\"Well, yes that's the polite story. Freetown's economic philosophy at its finest.\"",
+   "zh": "“话虽如此，那是体面版本的说法。自由城的经济哲学，登峰造极。”",
+   "problem": "「体面版本的说法」是 story→版本 的直搬，中文说「台面上的说法」才像司机这种人在讲话；「登峰造极」单摆一句，读者容易当成真夸，反讽落不下来（原文是最高的讽刺，得有个「算是／真是」托一下）。",
+   "suggestion": "“话是这么说，可那是台面上的说法。自由城的经济哲学，也算是玩到极致了。”"
+  },
+  {
+   "id": "c22-s0048",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "I guess that's where we'll find out how good Freetown is at staying 'free'.",
+   "zh": "自由城到底多会保持‘自由’，大概就得在那儿见分晓了。",
+   "problem": "「多会保持」在中文里首先被读成「多＋会（频繁）」，「到底多会……」这个搭配不成立，要卡一下才通。紧接着的 c22-s0049「也看它多会自保。」同病，而且省得只剩半句，更像没说完。",
+   "suggestion": "自由城到底能不能守住“自由”，大概就得在那儿见分晓了。／ c22-s0049 改为：“也看它能不能自保。”"
+  },
+  {
+   "id": "c22-s0050",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "The driver and Jahn stayed silent for a minute. Soon, the taxi slowed to a halt. Jahn looked outside the window. He had arrived at the Freetown Economics Institute.",
+   "zh": "司机和扬沉默了一分钟。很快，出租车减速停下。扬往窗外看。自由城经济研究所到了。",
+   "problem": "连续四个主谓短句平铺，一句一顿，把原文那种「车停、人回神、到地方了」的顺承节奏打碎了；「很快」接在「沉默了一分钟」后面也偏书面的翻译腔，这里该是叙事镜头感。",
+   "suggestion": "司机和扬沉默了一分钟。没多久，出租车减速停下。扬朝窗外一看——自由城经济研究所到了。"
+  },
+  {
+   "id": "c22-s0069",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Eventually the armies of this continent came together and cooperated more, and that was a big part of why the Arctic offensive against Dzego was finally stopped.",
+   "zh": "最后这片大陆上的军队走到了一起，合作多了起来，北极对泽国的攻势最终被挡住，很大程度就靠这个。",
+   "problem": "一句里「最后」和「最终」两个同义时间词前后撞车，读起来像重复；「就靠这个」指代也离得远。",
+   "suggestion": "后来这片大陆上的军队走到了一起，合作多了起来，北极对泽国的攻势最后能被打退，很大程度就靠这个。"
+  },
+  {
+   "id": "c22-s0072",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "but enough that future politicians would not have an incentive to ignore their surrounding continent completely.",
+   "zh": "但足以让后来的政客没有动机完全无视周边这片大陆。",
+   "problem": "「没有动机」在中文里默认指作案动机，用来翻译 incentive（缺少激励／不敢）读着别扭；「没有动机完全无视」两个否定＋长状语的堆叠也硬。",
+   "suggestion": "但足以让后来的政客不敢把周边这片大陆完全抛在脑后。"
+  },
+  {
+   "id": "c22-s0074",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "then gave bigger subsidies to people who got what the government thought was a compatible result.",
+   "zh": "然后给那些测出政府认为‘契合’的结果的人发更多补贴。",
+   "problem": "「给那些＋测出＋政府认为＋‘契合’的＋结果的＋人＋发更多补贴」，四个「的」套在一起，中心词「人」离动词「给」太远，中文必须回读才拆得开。",
+   "suggestion": "结果出来后，凡是政府认为“契合”的，补贴就发得更多。"
+  },
+  {
+   "id": "c22-s0076",
+   "severity": "high",
+   "type": "生硬",
+   "source": "If you go against the system too much, you get pushed harder and harder to leave and go to Freetown.",
+   "zh": "你要是太跟这套系统对着干，就会被打发得越来越用力，最后走人去自由城。",
+   "problem": "「被打发得越来越用力」不成话：打发是「草草把人支走」，既不能「越来越用力」地打发，也不接「得」字补语。原文是「被越来越使劲地往外推」，中文读者在这里会卡住、只能靠上下文猜；「最后走人去自由城」也少了「只能」的被迫含义。",
+   "suggestion": "你要是太跟这套系统对着干，系统就会越来越狠地把你往外推，最后你只能走人，去自由城。"
+  },
+  {
+   "id": "c22-s0080",
+   "severity": "low",
+   "type": "欧化",
+   "source": "Do you think some people are ... genetically more freedom-loving than others?",
+   "zh": "你觉得有些人在基因上就是比别人更爱自由吗？",
+   "problem": "「在基因上」是 genetically 的硬译，中文口语里这个意思说「天生」「骨子里」；「基因上更爱自由」也让「基因」这个具象词承担抽象修饰，读着像科普译文。",
+   "suggestion": "你觉得有些人天生就比别人更爱自由吗？"
+  },
+  {
+   "id": "c22-s0082",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "I think there might be a core that even someone from the medieval era would understand. ... but not at the expense of leaving each other space to be in peace.",
+   "zh": "我觉得可能有一个内核，连中世纪的人都能懂。……但不能以不给彼此留清静空间为代价。",
+   "problem": "「有一个内核」把 core 直搬成 IT 味的「内核」，这里说的是「最核心的那点东西」；「以不给彼此留清静空间为代价」是 at the expense of＋否定 的双重否定硬结构，中文要转成正说才顺。",
+   "suggestion": "我觉得里头有个最核心的东西，连中世纪的人都能懂。……能互相帮一把当然好，但不能因此挤掉彼此清净过日子的空间。"
+  },
+  {
+   "id": "c22-s0087",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Huh, I'm surprised you got into those circles at all. Were they interested in your thoughts as an economist on how to raise more funding for defense?",
+   "zh": "嗯，我倒吃惊你居然能进到那种圈子里。他们是看中你经济学家的想法，想知道怎么为防务筹更多钱？",
+   "problem": "「看中你经济学家的想法」把两个同位语直接粘在一起，缺了「作为」这类连接，中文读着像漏字；「我倒吃惊」也不是自然口语，一般是「我倒挺意外／我倒是吃了一惊」。",
+   "suggestion": "嗯，你居然能混进那种圈子，我倒挺意外。他们是看中你作为经济学家的想法，想知道怎么给防务筹更多钱？"
+  },
+  {
+   "id": "c22-s0102",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Jahn clicked on the file, and a view opened up.",
+   "zh": "扬点了那个文件，一个视图打开了。",
+   "problem": "「视图」是软件界面术语（view）的直搬，日常中文说「画面／窗口」；「一个视图打开了」也是英语被动式叙述，中文该说「弹出／打开了一个画面」。",
+   "suggestion": "扬点开文件，弹出一个画面。"
+  },
+  {
+   "id": "c22-s0103",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "\"What am I looking at here?\"",
+   "zh": "“我这是在看的什么？”",
+   "problem": "「在看的什么」把进行体「在」和「的」字结构混在一处，不是合法中文，正常说法是「我这是在看什么？」或「这画面上是什么？」。对话里出现这种病句最伤语感。",
+   "suggestion": "“我这是在看什么？”"
+  },
+  {
+   "id": "c22-s0121",
+   "severity": "low",
+   "type": "欧化",
+   "source": "trying any kind of trick to avoid getting killed, ideally get mistaken for an Arctic drone or even an animal, and eventually only kill when the target is too close to escaping the trap.",
+   "zh": "用尽各种花招避免被杀，最好还能被误认成北极的无人机，甚至误认成一只动物，直到目标快要逃出陷阱时才动手。",
+   "problem": "一句里连用「被杀」「被误认」两处被动，加上前半句刚说过「它们的目标是」，「直到目标快要……」的「目标」就与「目标＝goal」撞车，读者会瞬间错位。原文后半的 target 指那架敌机。",
+   "suggestion": "用尽各种花招躲过击杀，最好还能被认成北极的无人机，甚至认成一只动物，直到那架目标快要逃出陷阱时才动手。"
+  },
+  {
+   "id": "c22-s0145",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Last step is that it will walk around and chip and memory-kill all the drones, first the Arctics and then the rest of our own just in case.",
+   "zh": "最后一步，它得走一圈，把场上所有无人机——先北极的，再我们自己的，以防万一——芯片和存储全部杀掉。",
+   "problem": "「把所有无人机……芯片和存储全部杀掉」把 kill 直配到「芯片」（中文只能说打掉／烧掉／干掉），而且破折号插在「无人机」和它的中心语「芯片」之间，读到「全部杀掉」时宾语已经散了，必须回读。",
+   "suggestion": "最后一步，它得走一圈，把场上所有无人机的芯片和存储全部打掉——先收拾北极的，再收拾我们自己的，以防万一。"
+  },
+  {
+   "id": "c22-s0148",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "Even then we can't actually be certain that the Arctics won't be able to salvage training data.",
+   "zh": "即便如此，我们也不能真的确定北极人一定抢救不出训练数据。",
+   "problem": "「不能确定……一定……不出」是 can't be certain that…won't… 的双重否定照搬，中文里三层否定套叠，得在脑子里算一遍才知道结论是「有可能被捞走」。中文习惯把否定翻到正面。",
+   "suggestion": "就算这样，也没法真正确保北极人捞不回训练数据。只能往好处想。"
+  },
+  {
+   "id": "c22-s0156",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "Actually, that's what I'll ask for your help one more time for.",
+   "zh": "其实，这就是我还要再请你帮一次忙的地方。",
+   "problem": "「这就是我……的地方」是英语 that's what…for／that's where… 的句套直搬，中文里「的地方」指处所，用在这里等于说「这件事是个地点」，读着突兀。",
+   "suggestion": "其实，这事我还得再请你帮一次忙。"
+  },
+  {
+   "id": "c22-s0161",
+   "severity": "medium",
+   "type": "本土化",
+   "source": "Also, come on, it's Freetown, this is a market. You gotta talk to multiple people and compare them against each other, to make sure they're not screwing you over.",
+   "zh": "再说，这可是自由城，这是个市场。你得多找几个人，互相比较，才能确保自己不被坑。",
+   "problem": "「再说」把 come on 的催促／没好气语气磨平了，泽这句是在打趣扬太老实，中文该有「拜托」这类口气词；「多找几个人，互相比较」主语错位——是「你」比较他们，不是他们互相比较，中文容易读成后者。地道的说法是「货比三家」。",
+   "suggestion": "再说，拜托，这可是自由城，这儿就是个市场。你得多找几家，货比三家，才能保证自己不被坑。"
+  }
+ ]
+}

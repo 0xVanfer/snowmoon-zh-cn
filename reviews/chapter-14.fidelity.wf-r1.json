@@ -1,0 +1,44 @@
+{
+  "chapter": 14,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第14章译文忠实度很高：对局主线（第一个到第十三个干预回合的推进、载符飞船的建造与被毁、永恒滑翔机工厂、神龛每千回合按异或作用后重置）与英文逐句对得上，方位、数量、否定、因果没有一处搞反，术语（符记／载符飞船／神龛／永恒滑翔机工厂／异或／子力／沙盒／手持终端）与术语表一致，泽国语罗马字和 <e> 强调标签都原样保留，本章没有 high 级问题。可查的只有几处局部损耗：开场播报把「我们见过的最艰难的一些对局」压成「许多最艰难的对局」，战况叙述里贡那艘飞船的所有格被省掉、指代含糊，另有一处程度升格（major→致命）和一处漏译（the forces of）。译文整体可读，按条替换即可。",
+  "issues": [
+    {
+      "id": "c14-s0032",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "We have had forty days of some of the most challenging matches we have seen.",
+      "zh": "四十天里，我们见到了许多最艰难的对局。",
+      "problem": "some of the most challenging matches we have seen 的意思是「我们见过的最艰难的那几场」，译文把 we have seen 这个比较范围整块丢掉，又把 some of the most 的量级改成「许多最」——意思不对，中文本身也不成立（「许多最艰难的对局」不成话）。这是开场播报给整场比赛定调的一句，压下去后气势和精确度都没了。",
+      "suggestion": "这四十天里，各位见证了开赛以来最艰难的一些对局。"
+    },
+    {
+      "id": "c14-s0057",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "Meanwhile, in the southeast, Zei's own symbols began to disappear one by one - first, from Gun's eternal glider factories, then from new gliders fired by his symbol-carrying spaceship now moving eastward from the south.",
+      "zh": "与此同时，在东南面，泽自己的符记开始一个个消失——先是毁于贡的永恒滑翔机工厂，接着又毁于那艘正从南面向东移动的载符飞船新放出的滑翔机。",
+      "problem": "英文的 his 指贡（上文刚写贡的两艘载符飞船向南移动、正在拆泽的符记），中文把所有格省成「那艘……载符飞船」后，句内回指并不唯一：上一段刚交代泽只剩东面那一艘，读者很容易把攻击者读成泽自己的飞船，得停下来回推才能接上因果。这是战况白描，攻击者归属不该有歧义。",
+      "suggestion": "与此同时，在东南面，泽自己的符记开始一个个消失——先是毁于贡的永恒滑翔机工厂，接着又被贡那艘从南面转向东去的载符飞船新放出的滑翔机打掉。"
+    },
+    {
+      "id": "c14-s0047",
+      "severity": "low",
+      "type": "增译",
+      "source": "He realized that he had one major weakness",
+      "zh": "他意识到自己有一个致命弱点",
+      "problem": "major 只是「重大／很大」，译成「致命」把程度升了一档；后文他并没有因此崩盘，而是靠隐藏和续造化解了这一点，「致命」与情节给出的结论不符。",
+      "suggestion": "他意识到自己有个很大的弱点：……"
+    },
+    {
+      "id": "c14-s0120",
+      "severity": "low",
+      "type": "漏译",
+      "source": "rather something that the forces of orbital dynamics and biology and tectonics randomly handed them down for free",
+      "zh": "只是轨道动力学、生物和地质构造随手白送的东西",
+      "problem": "the forces of 整块没有译出，三个学科名直接当主语，就出现了「生物随手白送」这种搭配不成立的说法；另外 biology 在这里指的是生物学（演化与生态那一整套作用），译作「生物」偏成了生物体。",
+      "suggestion": "只是轨道动力学、生物学、地质构造这几股力量随手白送的东西"
+    }
+  ]
+}

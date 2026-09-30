@@ -1,0 +1,80 @@
+{
+  "chapter": 6,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "第 6 章的一致性整体很好：人名、地名、机构与术语（格拉迪亚斯／莫夫／塞拉／德尔瓦特／佩莱／阿拉盖尔／费布里克／维尔／黛雅／加拉纳尔／塔帕亚／卡利马尔／英格尔沃／大梅港、掌则人／监审官／宣谕使／见习官／掌舵会／合议庭／评则／图谱资助／二次方资助／嘀嗒／长时／齐普币／作废符等）与术语表及相邻各章一致，日期、数字、颜色标记与说话人归属逐条对得上，面板文案与术语表所收条目一致，本章没有 locked 虚构语言，也没有 high 级问题。问题只集中在术语与体例细节：合议庭成员本章称「裁判」而全书（第 7／11／21 章）称「法官」；设备面板里的哈希字面量被改写成中文省略号；另有若干空格与评则名写法不统一。另请主进程留意（不属本章改动范围）：tick 在第 1 章作「滴答」、第 2／4 章作「提克」，social recovery 在第 16 章作「社会恢复模式」，二者与本章及术语表口径都不一致，宜全书统一为「嘀嗒」「社交恢复」。",
+  "issues": [
+    {
+      "id": "c06-s0042",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "The Courts being smaller made sense too: five judges were just for one round and you can always appeal.",
+      "zh": "合议庭人少也说得通：五名裁判只负责一轮，而且总能上诉。",
+      "problem": "同一句前半段刚说「合议庭」由两对两人加一名平局裁决组成，后半段却把它的成员叫「裁判」。全书对 Court judges 的固定译法是「法官」：第 7 章作「合议庭法官」，第 21 章作「五个法官」；术语表也只有 Courts → 合议庭，没有「裁判」这一角色的先例。而「裁判」在中文里首先指体育裁判，读者会以为「五名裁判」是另一套与合议庭无关的角色。",
+      "suggestion": "合议庭人少也说得通：五名法官只负责一轮，而且总能上诉。"
+    },
+    {
+      "id": "c06-s0083",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "I think Graph Funding members or judges can become Heralds too.",
+      "zh": "我记得图谱资助的成员或者裁判也能当宣谕使。",
+      "problem": "与上一条同源：此处「裁判」与「掌则人／监审官」「图谱资助的成员」并列，被当作一种身份列出，用「裁判」会让读者以为是另一种职称，而全书此处对应的角色一律作「法官」（第 7 章「掌则人、监审官和合议庭法官」）。",
+      "suggestion": "我记得图谱资助的成员或者合议庭法官也能当宣谕使。"
+    },
+    {
+      "id": "c06-s0145",
+      "severity": "medium",
+      "type": "标点体例",
+      "source": "Nullifier: <br/><br/>0x18f4...60c5",
+      "zh": "作废符：<br/><br/>0x18f4……60c5",
+      "problem": "体例规范第 3 节把 `0x18f4...60c5` 明确列为「界面数值……原样保留」，这里的半角三点是设备面板里机器可读的字面量，改成中文省略号等于改写了它。第 16 章同类面板（钱包 0x8f62... ）仍保留半角写法，本章与全书也不一致。",
+      "suggestion": "作废符：<br/><br/>0x18f4...60c5"
+    },
+    {
+      "id": "c06-s0163",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "He got to the Y-shaped intersection.",
+      "zh": "……来到那个 Y字形路口。",
+      "problem": "单个拉丁字母与汉字紧邻时不加空格（体例规范第 3 节例外条款「Y字形」）；第 3 章与第 32 章写同一个路口都作「一个Y字形路口」，本章却在「那个」后多出一个半角空格，属于跨章空格体例不统一。",
+      "suggestion": "……来到那个Y字形路口。"
+    },
+    {
+      "id": "c06-s0054",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "Tax bracket proportional to observed average air quality indicators - CO2, PM2.5 and other mainstream measures.",
+      "zh": "税率与实测的平均空气质量指标成比例——二氧化碳、 PM2.5及其他主流指标。",
+      "problem": "中文标点（顿号）与西文之间不加空格，此处「、」后多了一个半角空格。同章其余西文 token（AI、0x18f4...）的空格处理都正确，只有这一处走了样。",
+      "suggestion": "税率与实测的平均空气质量指标成比例——二氧化碳、PM2.5及其他主流指标。"
+    },
+    {
+      "id": "c06-s0175",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "Very well, three-seven-two-eff. Have you made your choice?",
+      "zh": "“好吧， 372ef。你做好选择了吗？”",
+      "problem": "全角逗号后多了一个半角空格；同章第 180 段同样的称谓写作「372ef，你可以再把手持终端贴一次圆圈」，同一章内前后不一致。",
+      "suggestion": "“好吧，372ef。你做好选择了吗？”"
+    },
+    {
+      "id": "c06-s0115",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "There's a rubric that incentivizes ground-floor active use",
+      "zh": "有条评则奖励底层铺面的活跃使用",
+      "problem": "这条评则名在术语表和本章 new_terms 里都定为「底层活跃使用」，正文却写成「底层铺面的活跃使用」；第 11 章谈同一条评则又作「一层活跃用途」。同一评则名出现三种写法，读者无法确认说的是不是同一条。",
+      "suggestion": "有条评则奖励底层活跃使用（临街底层铺面被真正使用）——直接用术语表的「底层活跃使用」，不另起说法。"
+    },
+    {
+      "id": "c06-s0048",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Reduced tax bracket for presence of secure shelters, durable emergency supplies, full or partial grid-independence. Increased tax bracket for unsafe or fragile building design.",
+      "zh": "设有安全庇护所、耐用应急物资、完全或部分脱离电网的，减税；建筑设计不安全或脆弱的，加税。",
+      "problem": "术语表把 tax brackets 定为「税率档」（开放度评则的档位数值 0 / 6 / 12 / 18 / 24），第 17 章也一直用「税率档」「第 4 档」这类说法；本表把 reduced／increased tax bracket 压成「减税／加税」，丢掉了「档」这一贯穿全书的评则档位概念（第 51 段同此）。",
+      "suggestion": "设有安全庇护所、耐用应急物资、完全或部分脱离电网的，适用较低税率档；建筑设计不安全或脆弱的，适用较高税率档。（第 51 段同样改为「……的，适用较低税率档；……的，适用较高税率档。」）"
+    }
+  ]
+}

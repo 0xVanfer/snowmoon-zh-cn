@@ -1,0 +1,89 @@
+{
+  "chapter": 4,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "整体一致性良好：人名、地名、日期体例（帕佛盖都／泽国／3724年雪月24日）、面板体例（zan/tie/tei、Fin→芬、74160）、虚构语言罗马字（jie mo kai tu jie hei ja ma?／kai／po so dze go ban de sia／jie fe hen dzi／PA GU……TAU FA）以及民本棋术语（符记、滑翔机、石阵、负熵、干预回合、沙盒、主基地、棋场／棋盘）都与术语表和相邻章节吻合，标签结构也与原文逐段对齐。问题集中在少数术语与体例：一件设备的名称（game console）与第 12、26、30 章不一致，symbol-carrying spaceship 未用术语表的「载符飞船」，attestation 未用全书的「认证」，同一届赛事的年份说法与第 7 章不同，泽国语系统播报的引号在同一章内全角／半角混用。这些都不影响读懂，但都会在读者面前露出跨章不统一的痕迹，建议按条修正。",
+  "issues": [
+    {
+      "id": "c04-s0114",
+      "severity": "high",
+      "type": "术语不一致",
+      "source": "Right behind his three moving walls, all aimed at Dza's corner of the game board, he put his symbol-carrying spaceships.",
+      "zh": "在三道移动墙正后方——它们全都对准扎在棋盘上的那一角——他放上了携带自己符记的飞船。",
+      "problem": "术语表收有专用条目 symbol-carrying spaceship → 载符飞船，第 7、10、14 章一律作「载符飞船」；本章用描述性长句「携带自己符记的飞船」，成为全书唯一写法。同一局棋里 s0111 也说「留下各自符记的复制」，此处再展开解释一次，读者会以为是另一种棋子。",
+      "suggestion": "在三道移动墙正后方——它们全都对准扎在棋盘上的那一角——他放上了自己的载符飞船。"
+    },
+    {
+      "id": "c04-s0082",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "A path lit up, showing the way to a giant game console with a chair. / A tray slid out from under the game console",
+      "zh": "一条通道亮了起来，指向一台带椅子的巨大游戏主机。 / 一只托盘从游戏主机下方滑出来",
+      "problem": "同一件锦标赛对局设备在第 12、26、30 章均译「控制台」（第 12 章 c12-s0145 明确回指「比帕佛盖都那间大得多的巨型房间」，即本章这间），第 26 章更作「一台控制台，跟他打历次民本棋锦标赛时用的那些控制台惊人地相似」。本章的「游戏主机」会被中文读者理解成家用游戏机，且与全书用词冲突。",
+      "suggestion": "s0082 改为「一条通道亮了起来，指向一台带椅子的巨大控制台。」；s0086 改为「一只托盘从控制台下方滑出来」"
+    },
+    {
+      "id": "c04-s0085",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "demand and verify an attestation from the manufacturer and two inspectors that the drone's firmware was running an anti-cheat scan",
+      "zh": "要求制造商和两名检查员出具证明并加以核验，证明这架无人机的固件跑的是反作弊扫描",
+      "problem": "attestation 在全书统一作「认证」：第 1 章「收到一份密码学认证」、第 5 章「一整套硬件认证」，术语表也有 hardware attestation → 硬件认证、Attested → 已证。本章改用「证明」，且一句里连着两个「证明」，与全书术语不统一。",
+      "suggestion": "要求制造商和两名检查员出具认证并加以核验，确认这架无人机的固件跑的是反作弊扫描，而不是来取他性命的。"
+    },
+    {
+      "id": "c04-s0087",
+      "severity": "medium",
+      "type": "标点体例",
+      "source": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI FA\"</c>. Starting in fifty ticks. / <c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI FA\"</c>. Starting in twenty-five ticks.",
+      "zh": "一个洪亮的机械音再次严肃地宣布：<c st=\"color:oklch(0.7 0.15 160)\">“MU GU GEI FA”</c>。五十嘀嗒后开始。 / <c st=\"color:oklch(0.7 0.15 160)\">“LE MU GEI FA”</c>。二十五嘀嗒后开始。",
+      "problem": "泽国语系统播报按术语表 conlang 条「保留罗马字与半角引号原样」。本章 s0091、s0100、s0103、s0107、s0108 都用半角，第 7、12、14 章也一律半角（即使后面接中文叙述，如第 7 章 c07-s0057「\"MU GU GEI FA\"</c>，响亮的自动语音播报道。」）。只有 s0087、s0089 用了全角，章内自相矛盾，也与全书判例不符。",
+      "suggestion": "s0087 改为：一个洪亮的机械音再次严肃地宣布：<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI FA\"</c>。五十嘀嗒后开始。；s0089 改为：<c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI FA\"</c>。二十五嘀嗒后开始。"
+    },
+    {
+      "id": "c04-s0092",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "Welcome to the first quarter-final round of the eighteenth year of the Minpentai tournaments.",
+      "zh": "“欢迎来到民本棋锦标赛第十八年、四分之一决赛的首轮。……”",
+      "problem": "同一届赛事在第 7 章作「帕佛盖都第十八届民本棋锦标赛」（c07-s0063），术语表 Minpentai 条也写明「赛事称『民本棋锦标赛』」并按届次计数。本章「民本棋锦标赛第十八年」是同一件事的另一种说法，两章并读会以为是两个不同的计数体系。",
+      "suggestion": "“欢迎来到第十八届民本棋锦标赛、四分之一决赛的首轮。……”"
+    },
+    {
+      "id": "c04-s0008",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"This was from my last Minpentai game. We were playing with the 'rotate one eighty if three' rule. ...\"",
+      "zh": "“这是我上一盘民本棋的棋谱。那局我们用的是“逢三转一百八”的规则。……”",
+      "problem": "说话人台词已经用外层“ ”，规则名又用一层“ ”，读者难以判断引号在哪一层闭合；体例规范第 3 节明确「引号用“ ”（内层‘ ’）」，且全书只有本章出现嵌套双引号。",
+      "suggestion": "“这是我上一盘民本棋的棋谱。那局我们用的是‘逢三转一百八’的规则。……”"
+    },
+    {
+      "id": "c04-s0036",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "But if you think about parts of 'language' that are not tied to speech",
+      "zh": "但如果你想一想“语言”里那些不依附于说话的部分",
+      "problem": "同上：整段是芬的台词（外层“ ”），内层再次使用双引号，应改为单引号，保持全书统一的层级。",
+      "suggestion": "但如果你想一想‘语言’里那些不依附于说话的部分"
+    },
+    {
+      "id": "c04-s0114-movingwall",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Zei put down a \"moving wall\" design that he had perfected / three moving walls",
+      "zh": "泽摆下了他打磨成熟的“移动墙”形……在三道移动墙正后方",
+      "problem": "moving wall 本章作「移动墙」（术语表专用条目亦为「移动墙」），第 7 章 c07-s0097 却作「活动墙」，而术语表 wall 条的备注又写「moving wall → 活动墙」——术语表自身两处冲突，导致跨章用词分裂。本章内部三次都作「移动墙」，是自洽的，需要的是定案而不是改本章。",
+      "suggestion": "以术语表专用条目为准，全书统一作「移动墙」；建议同时把 glossary 中 wall 条备注「moving wall → 活动墙」改为「moving wall → 移动墙」，并把第 7 章 c07-s0097 的「活动墙」改为「移动墙」。本章 s0114 无需改动。"
+    },
+    {
+      "id": "c04-new_terms-tick",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"en\": \"tick\", \"zh\": \"提克\", \"kind\": \"unit\", \"note\": \"泽国时间单位，承第 2 章；维里迪亚线作「嘀嗒」\"",
+      "zh": "（本章 new_terms 条目）tick → 提克；正文一律作「嘀嗒」（五十嘀嗒、二十五嘀嗒、一千嘀嗒）",
+      "problem": "术语表已收 tick → 嘀嗒（from chapter-01.zh），体例规范第 3 节也规定 tick → 嘀嗒、milli-tick → 毫嘀嗒；本章正文全部用的是「嘀嗒」（正确），但 new_terms 里仍按第 2 章的旧稿提「提克」，并沿用「MU GU GEI FA＝五十提克」的旧注。这份 new_terms 会被合并进术语表，可能把「提克」重新带回后续章节，造成读者可见的不统一。",
+      "suggestion": "把本章 new_terms 的该条改为 {\"en\": \"tick\", \"zh\": \"嘀嗒\", \"kind\": \"unit\", \"note\": \"泽国时间单位；一千嘀嗒＝十分钟\"}（或直接删除，术语表已有该条），并把同一批 new_terms 里 MU GU GEI FA 条目中的「五十提克／二十五提克／最后一提克」改为「五十嘀嗒／二十五嘀嗒／最后一嘀嗒」。"
+    }
+  ]
+}

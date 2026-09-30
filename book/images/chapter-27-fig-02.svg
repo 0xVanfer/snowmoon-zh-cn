@@ -11,7 +11,7 @@
 <rect width="400" height="240" fill="#334488"/>
 <circle cx="200" cy="138" r="88" fill="url(#glow)"/>
 <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
-<text x="200" y="17" text-anchor="middle" font-size="12" font-weight="700" fill="#cceeff">您更希望由谁领导维里迪亚军队？</text>
+<text x="200" y="17" text-anchor="middle" font-size="12" font-weight="700" fill="#cceeff">你更希望谁来掌管维里迪亚军方？</text>
 <circle cx="200" cy="138" r="60" fill="none" stroke="#cceeff" stroke-opacity="0.18" stroke-width="0.8"/>
 <g id="slices">
 <path d="M 200 138 L 200 83 A 55 55 0 0 1 240.09 100.35 Z" fill="#dbeeff" stroke="#334488" stroke-width="1.2" stroke-linejoin="round"/>

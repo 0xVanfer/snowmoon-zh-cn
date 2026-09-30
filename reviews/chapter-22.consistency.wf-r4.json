@@ -1,0 +1,35 @@
+{
+  "chapter": 22,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "第 22 章的一致性整体很干净：161 段逐条比对，人名（扬、乌塔库、泽）、地名（自由城、联合城邦、红郡、北林、贝尔帕基、阿图里亚、大梅港、诸阿克）、术语（庇护所、防务公司、卡特尔、图谱资助、评则、合议庭、预算上限规则、追溯性回报、防御网、尽责性、杀伤链、地面／干扰／攻击无人机、隐写术、纠删码、阅后即焚文件、通话亭、算力盒、手持终端、手表、闸机、长时、嘀嗒、齐普币）与术语表及第 5、6、10、15、19、20 章逐一对得上，面板数值（3.69／1.89／1.26／1.03／1.50／1.00／2.25／12.52、9分钟、5.65公里、113 m/s Δv）与原文逐一相同；日期「3724年雾期22日」落在第 21 章（雾期20日）与第 23 章（雾期22日）之间，头行体例与第 5／10／15 章同一地点完全一致；全角标点、六点省略号、双破折号、引号层级与中英空格体例全部合规（validate_translation.py 报 OK，按 normalize_zh.py 的规则在内存中试跑，本章 0 处需要改动），<c> 颜色标记与原文逐条一致（扬 133.33…、司机 53.33…、乌塔库 280、泽 346.66… 与第 10／15 章同一人物一致），16 条 new_terms 与术语表全部同名同字、merge_terms.py --check 未报本章冲突，本章无 locked 片段，故不涉及虚构语言被误译。真正的问题只有三处小瑕疵：一处百分比写成汉字「百分之一」（第 2 章复核已点名要求按同一口径处理）、一处「干扰机」与全章及术语表的「干扰无人机」不一致、以及 new_terms 里 attack drone 的 note 把「补刀」记给了攻击无人机（正文里收尾的是六边形阵位上的干扰无人机）。三条都是就地小改，不影响可读性。",
+  "issues": [
+    {
+      "id": "c22-s0072",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "That's one part of it. Each city gave a percent of the votes in its parliament to its neighbors - not enough to threaten the cities' independence and their unique cultures, but enough that future politicians would not have an incentive to ignore their surrounding continent completely.",
+      "zh": "“那只是一部分。每座城市把议会票数的百分之一让给邻城——不足以威胁城市自身的独立和独特文化，但足以让后来的政客没有动机完全无视周边这片大陆。”",
+      "problem": "体例规范 §3 明确把「百分比」列入必须用阿拉伯数字的类别（示例即「20%」），全书主流写法也是 N%（跨 12 个章节约 150 余处）；讲同一套共治机制的前文同样如此：第 2 章「自由城在德文维尔占5%的投票权，德文维尔在红郡占15%」、第 10 章「德文维尔议会有12%的席位是红郡选的」。第 2 章复核报告（c02-s0018）还专门点名「第 22 章同样写「百分之一」，建议一并按同一口径处理」，是一处已经挂号但尚未落地的体例分歧。另外同一机制在第 2 章作「投票权」、第 5／10 章作「席位」，这里的「议会票数」是第三种说法，读者不易与前后文对上是同一件事。",
+      "suggestion": "“那只是一部分。每座城市把议会1%的投票权让给邻城——不足以威胁城市自身的独立和独特文化，但足以让后来的政客没有动机完全无视周边这片大陆。”"
+    },
+    {
+      "id": "c22-s0127",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Yep, that's exactly what I'm doing. Temporarily have the two damaged-but-alive jammers play dead, lure the attackers to center, jammers reactivate, reform a circle, and then make a kill.",
+      "zh": "“对，我正打算这么干。先让那两架受了伤但还活着的干扰机装死，把攻击者引到中心，干扰机重新启动，再合围，然后做掉它。”",
+      "problem": "同一个对象在本章有两种叫法：s0105 说明「蓝色圆圈是我们自己的七架无人机……它们的任务是干扰通信」，s0114 直接作「干扰无人机正在干扰」，术语表该条也是 jammer drone → 「干扰无人机」（note：在六边形阵位上压制通信的无人机，画面中为蓝色圆圈）。只有 s0127 两处缩成「干扰机」，读者会以为阵中另有一种叫「干扰机」的装备。",
+      "suggestion": "“对，我正打算这么干。先让那两架受了伤但还活着的干扰无人机装死，把攻击者引到中心，干扰无人机重新启动，再合围，然后做掉它。”"
+    },
+    {
+      "id": "c22-new_terms-attack-drone",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "The jammer drones are jamming. ... And the blue triangles are our two attack drones. / Our drones, the triangles, are not actually trying to make a kill ... / Then the seven drones in the hexagon can finish the kill",
+      "zh": "new_terms：{\"en\": \"attack drone\", \"zh\": \"攻击无人机\", \"kind\": \"tech\", \"note\": \"负责补刀的无人机，画面中为蓝色三角形\"}",
+      "problem": "这条 note 与本章正文的分工相反：s0117 明说两架三角形（就是攻击无人机）「其实并不是要杀死它」，s0121 说它们的目标是尽可能久地活下来、直到目标快要逃出陷阱时才动手；真正「收尾」的是 s0122 的「六边形里的七架无人机」，而按术语表 jammer drone 条，这七架（蓝色圆圈）是干扰无人机。note 把「补刀」这个角色记在攻击无人机头上，与 s0114 自己「蓝色三角形是我们的两架攻击无人机」＋s0122 的收尾安排互相矛盾；合并进术语表后，还会给后面几章大段无人机作战的译法留下错依据。",
+      "suggestion": "把该条 note 改为：「画面中为蓝色三角形；平时以『跳舞』拖延求生，只在目标将要逃出陷阱时出手，最终收尾由六边形阵位上的干扰无人机完成」。（若只想保留一句：「与干扰无人机同在阵中、画面中为蓝色三角形的两架，平时不与目标硬拼，只在目标将要逃出陷阱时出手」）"
+    }
+  ]
+}

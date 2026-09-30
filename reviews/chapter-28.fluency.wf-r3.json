@@ -1,0 +1,197 @@
+{
+  "chapter": 28,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第 28 章中文整体可读，两条线都立得住：白的层层说服、穆的坏笑、格拉迪亚斯那段「带一点北极味」都是像人说的话，s0035／s0036／s0043 三段长说理也没丢线。问题集中在两类：一是英文句式直搬造成的结构性卡顿——最重的是 s0096，主语框架缺失导致整句要回头重搭；s0094 的套叠定语、s0049 的后置同位语同样要读两遍。二是生造搭配没落地（「民本棋棋手」「精心设计到了完美」「军队不是新车……那样就接管过来」「反正难着」「整包给你」），以及 s0043 的「平时范式／战时范式」——「范式」全书仅此一处，建议按中文现成的「平战转换」落地。按条替换后可达出版级语感。",
+  "issues": [
+    {
+      "id": "c28-s0096",
+      "severity": "high",
+      "type": "生硬",
+      "source": "It turned out that among the senators who were just lazy and tired, letting Lektor do what he wanted was the path of least resistance - because that meant that the legal case would immediately end.",
+      "zh": "结果发现，那些只是懒、只是累的参议员，让莱克托照自己的意思去做才是阻力最小的路——因为那意味着官司立刻就能结束。",
+      "problem": "「那些只是懒、只是累的参议员」被放在主语位置，读者会先把它读成「让莱克托……」的主语（参议员让莱克托照他的意思去做），读到「才是阻力最小的路」才发现缺主语、得回头重搭句子。原文是 among the senators…, letting Lektor do what he wanted was the path of least resistance，中文缺一个「对……来说」的框架。这是全章最需要回头重读的一句。",
+      "suggestion": "结果发现，对那些只是懒、只是累的参议员来说，让莱克托照自己的意思去做才是阻力最小的路——因为那意味着官司立刻就能结束。"
+    },
+    {
+      "id": "c28-s0015",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "He was wearing a shirt that seemed almost perfectly designed to strike the balance of looking like traditional Veridian military attire while being comfortable for everyday wear.",
+      "zh": "他穿的衬衫几乎像是精心设计到了完美：看着既像传统的维里迪亚军装，又舒服得能当日常衣服穿。",
+      "problem": "「精心设计到了完美」是 designed to perfection 的直搬，中文「设计到了完美」不成搭配（要么「设计得完美」，要么「设计到了极致」）；冒号后半句其实很顺，前半句一卡，人物首次登场的这段描写就掉了档次。",
+      "suggestion": "他穿的衬衫几乎像是专门设计来拿捏这个分寸的：看着既像维里迪亚的传统军装，又舒服得能当日常衣服穿。"
+    },
+    {
+      "id": "c28-s0035",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "So we have to take a stand. Together, now.",
+      "zh": "所以我们必须站出来。一起，现在就站。",
+      "problem": "原文 Together, now. 是两个词的收束短句，落点在 stand 上；中文直搬成「一起，现在就站」，「站」孤零零留在句尾，读者要回头找动词，节奏没有砸下来。这段是登全章最重要的表态，末尾越短越要顶得住。",
+      "suggestion": "所以我们必须站出来——一起站出来，就现在。"
+    },
+    {
+      "id": "c28-s0036",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "You can't just commandeer a military the same way you just pick up and drive a new car.",
+      "zh": "“军队不是新车，不能像你随手拉开车门、开走一辆那样就接管过来。",
+      "problem": "比喻的两个动作（拉开车门、开走一辆）与被比喻的动作（接管军队）隔了二十来字，「那样」指代发空，句子中间还塞进「就接管过来」，读者要折回一次才拼得上。莱克托这段是全场第一个正面反驳，开头就该砸得响。",
+      "suggestion": "“军队不是一辆新车——不能你想开走就直接开走。"
+    },
+    {
+      "id": "c28-s0039",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "We don't actually want to zero out the top three levels of the Veridian military hierarchy. Even if we could bring over all of our top thousand Minpentai players tomorrow…",
+      "zh": "“我们其实没打算把维里迪亚军方的高层三级全部清零。……一千名顶尖民本棋棋手……",
+      "problem": "「民本棋棋手」把棋名与「棋手」机械叠在一起，连着两个「棋」字，念出来别扭（第 29 章同一说法也写作「民本棋棋手」）。另外「高层三级」是 top three levels 的直搬，中文说「最高三级」更顺，也和下文的「最高将领」呼应。",
+      "suggestion": "“我们其实没打算把维里迪亚军方的最高三级全部清零。就算我们真能明天就把一千名顶尖的民本棋选手全带过来……”（第 29 章同处可一并统一为「民本棋选手」）"
+    },
+    {
+      "id": "c28-s0043",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "you have to shift paradigms from peacetime to wartime, at the exact moment that many of the generals are probably being bribed or blackmailed by the Arctics",
+      "zh": "而你们的处境最难：你们得从平时范式切换到战时范式，偏偏就在这个节骨眼上，不少将军很可能正被北极人收买或要挟。",
+      "problem": "「从平时范式切换到战时范式」是 shift paradigms 的直搬。「范式」是学术词，全书仅此一处，从一位将军嘴里说出来会让读者出戏；中文里军队由平时转入战时本来就有现成说法。另外「偏偏就在这个节骨眼上」与前句的时间关系被「你们得……」拉远，读起来像两件事。",
+      "suggestion": "而你们的处境最难：眼下正是要做平战转换的时候，偏偏又赶上不少将军很可能正被北极人收买或要挟。"
+    },
+    {
+      "id": "c28-s0043b",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "the surveillance cameras that we backdoored already caught several",
+      "zh": "我们知道这是真的——我们做过后门的监控摄像头已经抓到好几个。",
+      "problem": "「做过后门的监控摄像头」把 backdoored 硬塞成动宾，读者会先理解成「我们做过某种后门的摄像头」，停一下才明白是「我们植入过后门的摄像头」；而且「知道这是真的」＋「已经抓到好几个」中间被这个卡顿隔开，底牌的力道泄了。",
+      "suggestion": "我们知道这是真的——我们动过手脚的那些监控摄像头，已经抓到好几个了。"
+    },
+    {
+      "id": "c28-s0049",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "But the exploits will work great against the damaged drone that you guys managed to recover from Northshore two months ago.",
+      "zh": "但这些漏洞用在那架无人机上会很灵：两个月前你们从北岸弄回来的那架受损无人机。功劳算你的。",
+      "problem": "中文先说「那架无人机」，再用冒号补出是哪一架，读者读到冒号会以为要展开说明，结果接到一个倒装的名词短语，语气就断了；这一步是整段交易的关键（东西要用在哪），说明该插进前半句。",
+      "suggestion": "但这些漏洞用在两个月前你们从北岸弄回来的那架受损无人机上，会很灵。功劳都算你的。"
+    },
+    {
+      "id": "c28-s0062",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "She says that she is starting to feel like she wants to come back now!",
+      "zh": "“她说，她现在开始觉得想回来了！”",
+      "problem": "「开始觉得想回来」是 starting to feel like she wants to come back 的逐词直搬，中文不说「觉得想」；兹文是冲进来报喜，这句读起来却像转述公文，兴奋劲儿没了。",
+      "suggestion": "“她说，她现在有点想回来了！”"
+    },
+    {
+      "id": "c28-s0067",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "but you can only enjoy the house during the time that you're not working. It's exactly the same math!",
+      "zh": "可房子只有你不干活的那点时间才享受得到。这数学一模一样！",
+      "problem": "「房子只有你不干活的那点时间才享受得到」把 enjoy the house during the time that you're not working 逐字搬来，「才享受得到」挂在句尾，前半的「只有……的那点时间」与动词之间夹了太多层，要拆两遍才通。这是莉莉整段推理的落点（也是笑点）。「这数学一模一样！」也偏硬，中文口语说的是「这笔账」。",
+      "suggestion": "可这房子，你只有不干活的那点时间才享受得到。这笔账一模一样！"
+    },
+    {
+      "id": "c28-s0071",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "They put their entire identity into the team, they buy into all the ideas about why their team is great, and how it's a big sign of your worth which team you're from.",
+      "zh": "他们把全部身份都押在队上，全盘接受那些说法：自己的队为什么了不起，你属于哪个队又是你价值多高的标志。",
+      "problem": "两处问题：①叙述主语一直是「他们」，中间忽然插进一个「你」（原文 your worth 的泛称 you），中文里会造成人称跳动，读者会以为在直接对兹文说话；②「押在队上」把 put their identity into 说成赌博，中文更常说「把自我认同寄托在队上」，而且「自己的队为什么了不起」与「你属于哪个队又是……」两个小句结构不对称，读不顺。",
+      "suggestion": "他们把全部自我认同都寄托在队上，全盘接受那些说法：自己的队为什么了不起，自己是哪个队的人就等于自己有多大的价值。"
+    },
+    {
+      "id": "c28-s0073",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "If someone is struggling or doesn't understand, then help them and be kind.",
+      "zh": "“如果有人正难着，或者只是不懂，那就帮他，对他好些。",
+      "problem": "「正难着」不成话——中文「难着」只出现在「这下难着你了」这类说法里，读者会先在「正难着」上卡住再猜是「正遇上难处」。原文是 struggling／doesn't understand 的对照（有难处／不明白），中文该把这层对照说清楚。",
+      "suggestion": "“如果有人正遇上难处，或者只是不懂，那就帮他，对他好些。"
+    },
+    {
+      "id": "c28-s0082",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "She needs to have a good role model of what a real winner is like - someone who doesn't lord over others and push them down, but helps lift other people up and wants others to win along with him.",
+      "zh": "她需要一个真正赢家的好榜样——那种不骑在别人头上、不把别人按下去的人，而是愿意把别人托起来、希望别人也跟他一起赢的人。",
+      "problem": "①「一个真正赢家的好榜样」把 a good role model of what a real winner is like 压成偏正结构，中文会读成「一个赢家的一个好榜样」，意思走偏；②破折号后面「那种……的人，而是……」结构断裂（「那种」不能与「而是」搭配，应是「一个不……而是……的人」）。这句是本章主旨句，破了很可惜。",
+      "suggestion": "她需要一个好榜样，让她知道真正的赢家是什么样——不是骑在别人头上、把别人按下去，而是愿意把别人托起来，希望别人也跟他一起赢。"
+    },
+    {
+      "id": "c28-s0094",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "that the top general had been having regular meetings with someone who turned out to be an Arctic spy, and the other candidate they were proposing as an alternative was being blackmailed",
+      "zh": "那位最高将领定期会面的人，后来查明是北极间谍；而他们提出来作替代的那位候选人，正被人要挟。",
+      "problem": "前半句把定语套得只剩一层皮：读者先在「会面的人」处停一下，才拼回「将领定期会面的人」，而「定期会面」（持续）与「后来查明」（时点）也挤在同一句里；后半句「他们提出来作替代的那位候选人」同样用动词短语硬作定语。这是本章信息密度最高的复盘，两处一挤，读者容易看漏「另一个替代人选也在被要挟」这个关键点。",
+      "suggestion": "那位最高将领一直在跟一个人定期见面，后来查明那人是北极间谍；而他们提出的那位替代人选，也正被人要挟。"
+    },
+    {
+      "id": "c28-s0031",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zei and Mu over there personally commanded the operation with me.",
+      "zh": "那边的泽和穆两位，是跟我一起亲自指挥这次行动的人。",
+      "problem": "「泽和穆两位，是……的人」把同位语「两位」和「是……的人」叠在一起，读起来像在念名单；中文让「两位」直接跟动词搭配更自然。登介绍战友的那股爽快被这个句尾「的人」拖住了。",
+      "suggestion": "那边的泽和穆两位，当初都跟我一起亲自指挥了这次行动。"
+    },
+    {
+      "id": "c28-s0045",
+      "severity": "low",
+      "type": "生硬",
+      "source": "That line of argument was not part of their plan, but they could all recognize that it was the right plan to switch to.",
+      "zh": "这条论证不在他们原本的计划里，但他们都看得出，这才是该转过去的正确方向。",
+      "problem": "「这条论证」拿「论证」指一段说辞，偏学术（登、泽、穆是刚听完白说话，不是在评审论文）；「该转过去的正确方向」把 switch to 直译成「转过去」，读者要停一下想转向哪儿。",
+      "suggestion": "这番话不在他们原本的计划里，但他们都看得出，这才是该顺势转向的正路。"
+    },
+    {
+      "id": "c28-s0052",
+      "severity": "low",
+      "type": "生硬",
+      "source": "They used the wrong kind of booth for too many discussions",
+      "zh": "“他们谈得太多次，还老是挑错隔间。”穆咧嘴一笑。",
+      "problem": "原文的笑点是一句话说完：次数太多＋挑错了隔间（所以才被拍到）。中文拆成两截，还多出「老是」，读起来像补一句抱怨，穆那种得意的坏笑就弱了。",
+      "suggestion": "“他们谈得太勤，还挑错了隔间。”穆咧嘴一笑。"
+    },
+    {
+      "id": "c28-s0053",
+      "severity": "low",
+      "type": "生硬",
+      "source": "We'll give you a dump of the info we have.",
+      "zh": "“我们会把手上掌握的信息整包给你。计划你自己定。",
+      "problem": "「整包给你」不是中文的说法（「整包」多作量词用），dump 在这里是「打包／一股脑交给」。白是在给对方吃定心丸，用词该干脆。",
+      "suggestion": "“我们会把手上掌握的信息打包给你。计划你自己定。"
+    },
+    {
+      "id": "c28-s0083",
+      "severity": "low",
+      "type": "生硬",
+      "source": "What do we do for Lily now?",
+      "zh": "“妈，爸？”兹文插嘴。“那我们现在为莉莉做什么？”",
+      "problem": "「为莉莉做什么」是 What do we do for Lily now 的直搬，中文问「为某人做什么」听着像「替她干活」；兹文问的是接下来怎么帮姐姐，说法该更贴口语。",
+      "suggestion": "“妈，爸？”兹文插嘴。“那我们现在能为莉莉做点什么？”"
+    },
+    {
+      "id": "c28-s0095",
+      "severity": "low",
+      "type": "欧化",
+      "source": "he proposed a different strategy that they could use against Arctics that involved using their dependence on AI against them",
+      "zh": "“之后，他提出了一套对付北极人的不同策略，核心是利用他们对 AI 的依赖来反制他们。",
+      "problem": "一句里「他们」出现三次，且「对付北极人」与「反制他们」是同义反复，代词叠用是典型的译文腔；「一套对付北极人的不同策略」中「对付北极人的」与「不同」两个定语叠着也不顺。",
+      "suggestion": "“之后，他提出了一套对付北极人的新思路：拿他们对 AI 的依赖做文章。"
+    },
+    {
+      "id": "c28-s0009",
+      "severity": "low",
+      "type": "生硬",
+      "source": "One of the generals. Actually one of the few that I respect.",
+      "zh": "“一位将军。还是我少数几个敬重的将军之一。",
+      "problem": "原文 Actually 是补充加强（准确说／其实），中文用「还是」会被先读成「仍然是我敬重的将军之一」，韦尔多那种「这人跟别人不一样」的意味没出来。",
+      "suggestion": "“一位将军。准确说，是我少数几个敬重的将军之一。"
+    }
+  ]
+}

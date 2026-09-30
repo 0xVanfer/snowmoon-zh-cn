@@ -1,0 +1,62 @@
+{
+  "chapter": 16,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "本章忠实度整体很高：逐句对照后未发现误译到读不懂、漏译整句或说话人张冠李戴的情况，颜色标签、表格数值（6/9/7/31/23、1674/1771、1860、20→23、1540→1771，且 11×7×23=1771、6×10×31=1860 与乘法计分自洽）、面板文案与日期体例都与原文一致，体育段落的规则解释也没有讲反。问题集中在少数局部用词：一个术语与第6章既定译法冲突（social recovery），一处动作细节译错（taped→写就），一处添加了原文没有的「支出」而换了指称对象，另有几处小词义偏移。无 high 级问题，修完这 6 条即可定稿。",
+  "issues": [
+    {
+      "id": "c16-s0124",
+      "severity": "medium",
+      "type": "误译",
+      "source": "[Wallet 0x8f62... social recovery mode transaction request]",
+      "zh": "[钱包 0x8f62... 社会恢复模式交易请求]",
+      "problem": "social recovery 是钱包术语，指由预先指定的家人朋友分持密钥、凑齐阈值签名找回资金；第6章已将其定为「社交恢复」（术语表 social recovery → 社交恢复，chapter-06.zh），本章却写成「社会恢复」。「社会恢复」在中文里是「社会层面的恢复」，与钱包恢复机制不是一回事，且与第6章用词直接冲突。",
+      "suggestion": "[钱包 0x8f62... 社交恢复模式交易请求]"
+    },
+    {
+      "id": "c16-s0033",
+      "severity": "low",
+      "type": "误译",
+      "source": "This time, an additional note was hastily taped on to the poster, advertising packages that offered tasty, nutritionally complete and long-lasting preserved food that was sufficient for thirty days of survival.",
+      "zh": "这一次，海报上又多贴了一张匆匆写就的告示，推销一种套装：味道好、营养全面、耐存放，够一个人撑过三十天。",
+      "problem": "hastily taped on to the poster 是「匆匆贴在海报上」，译文改成「匆匆写就」，把「贴」的动作换成了「写」的动作（写与贴分属两个不同的人/动作）。另外 packages 是复数，preserved food（可长期保存的食品）只落成「耐存放」，「一个人」是原文没有的补足。",
+      "suggestion": "这一次，海报上又匆匆贴了一张告示，推销几款套装：味道好、营养全面、能长期保存，足够撑过三十天。"
+    },
+    {
+      "id": "c16-s0024",
+      "severity": "low",
+      "type": "增译",
+      "source": "Obviously don't make the rubric exclude military now.",
+      "zh": "显然，现在别让那条评则把军事支出排除在外。",
+      "problem": "原文被排除的是「军事（相关产品/项目）」——参第13章「把一切军事、监视和反监视产品从开放度税评则里较为优惠的档位中排除出去」、第20章「任何与军事相关的东西都该排除在税收优惠之外」。译文添加「支出」后，指称对象从军事产品变成了军费开支，与全书语境不符。",
+      "suggestion": "显然，现在别让那条评则把军事相关产品排除在外。"
+    },
+    {
+      "id": "c16-s0015",
+      "severity": "low",
+      "type": "误译",
+      "source": "I'm not just one ideologue who is doing this alone.",
+      "zh": "干这件事的不只是我一个空想家，我不是单打独斗。",
+      "problem": "ideologue 指抱定一套意识形态、按教条行事的人（意识形态信徒／教条主义者）；「空想家」指不切实际的空想者。这里德尔瓦特是在承认自己的意识形态偏执（下文即解释他因憎恶干预主义而蒙眼），译成「空想家」把自我定位从「教条」改成了「爱做梦」，与前文语义不合。",
+      "suggestion": "干这件事的不只是我一个死抱意识形态的人，我不是单打独斗。"
+    },
+    {
+      "id": "c16-s0098",
+      "severity": "low",
+      "type": "误译",
+      "source": "that had been a good cheat for whichever side was worse at redballs even back when the scores were additive",
+      "zh": "那在还是加分制的年代，对红球弱的一方来说都是个好用的取巧手段",
+      "problem": "本段正在对比「加法计分」与紧接着说的乘法计分（同一段「把得分改成相乘」，合计得分 11×7×23=1771 也证明是乘法）。「加分制」在中文里通常指「额外加分」的规则，容易被读成奖励性加分，与「相加／相乘」这组对立对不上。",
+      "suggestion": "那招在还是按加法计分的年代，对红球较弱的一方来说就已经很好用。"
+    },
+    {
+      "id": "c16-s0107",
+      "severity": "low",
+      "type": "误译",
+      "source": "Gladias and Febric both returned to eating. A few minutes later, they were both finished.",
+      "zh": "格拉迪亚斯和费布里克都回去吃饭。几分钟后，两人都吃完了。",
+      "problem": "returned to eating 是「又接着吃」，译文「都回去吃饭」在中文里默认读作「回到某处去吃饭」，与上文两人正在同一张桌边吃饭的场景矛盾，读者会卡一下。",
+      "suggestion": "格拉迪亚斯和费布里克都接着吃了起来。几分钟后，两人都吃完了。"
+    }
+  ]
+}

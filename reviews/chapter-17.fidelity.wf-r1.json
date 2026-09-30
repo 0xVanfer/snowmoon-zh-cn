@@ -1,0 +1,89 @@
+{
+  "chapter": 17,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 17 章译文忠实度整体很高：124 个片段与原文一一对应，没有整句漏译，<c> 颜色标记逐条比对完全一致（格拉迪亚斯／韦尔多／贝尔戈尔／机器人／塞拉／兹文／赫雷达／费布里克无一处张冠李戴），数字与单位（第1、2、4、5档，0/6/12/18/24 → 0/10/20/26/32，前10%、91/99、75%、前5%、200多公里、15长时、七天、80%、十倍）全部对得上，专名与术语（掌则人／掌舵会／图谱资助／二次方资助／评则／理事／民本棋／银聊／紫外线灯／维里迪亚国立大学材料科学实验室／泽国与「泽」的区分）与术语表及前后章一致，图谱资助的技术论述段（子图、边权重、委员会、有向无环图、截线以上随机化）与泽国语罗马字保留也都没有问题。发现的问题以一处理解反了为主，其余是词义、指代与条件语气上的细部走样，按下表就地改完即可定稿。",
+  "issues": [
+    {
+      "id": "c17-s0026",
+      "severity": "high",
+      "type": "误译",
+      "source": "\"Being a Keeper is nice, but come on, you're only one of over a thousand.\"",
+      "zh": "“当掌则人是不错，可话又说回来，一千多个人里才你一个。",
+      "problem": "you're only one of over a thousand 是「你不过是一千多人里的一个」，意思是掌则人多的是、不缺你一个，所以下一句才接「我们国家需要像你这样的人多出来做事」「去泽国亲身经历一番可能更有意义」。译文「一千多个人里才你一个」把重心落在「才你一个」上，中文读起来是「一千多人里只有你这么一个（稀罕人才）」，等于把「不差你一个」说成了「就你一个」，劝他去泽国的整段理由被译反了。",
+      "suggestion": "“当掌则人是不错，可话说回来，你也就是一千多人里的一个。"
+    },
+    {
+      "id": "c17-s0032",
+      "severity": "medium",
+      "type": "误译",
+      "source": "\"Honestly, you might have a better lead than I do.\"",
+      "zh": "“说实话，你手上的线可能比我还好。",
+      "problem": "lead 在这是名词「门路／线索（能搭上关系的人）」，中文单说一个「线」不成词，「手上的线」读起来像「手里攥着一根线」，读者要停顿一下才能猜出是「线索」；而且韦尔多紧接着就把自己的联系人介绍给他，这里的话是一个对比：你那条门路比我这些门路还硬。",
+      "suggestion": "“说实话，你手上的门路可能比我还硬。"
+    },
+    {
+      "id": "c17-s0070",
+      "severity": "low",
+      "type": "误译",
+      "source": "So for the lower levels of the graph, there's been a movement lately to just randomize at the top end.",
+      "zh": "所以最近在图的下层出现了一种主张：在顶端直接随机化。",
+      "problem": "原文 for the lower levels of the graph 是「针对图中较低层级（的分配决定）」，主张的对象是这些下层决定；译文「在图的下层出现了一种主张」把「下层」变成了主张出现的地点，读者会以为下层节点自己冒出了什么想法，「截线以上随机化」到底改的是哪一层变得含糊。",
+      "suggestion": "所以近来，针对图里较低的层级，出现了一种主张：干脆在排名顶端直接随机化。"
+    },
+    {
+      "id": "c17-s0079",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"Is there any chance that the Arctics could hit them with a pandemic that won't eventually bounce right back to them?\"",
+      "zh": "“北极人有可能对他们发动一场瘟疫，而这场瘟疫最终不会反弹回自己身上吗？”",
+      "problem": "这句的问眼就在「反弹回谁身上」：原文 them 指北极人自己，问的是「有没有可能放出去的瘟疫最终不反噬他们自己」。译文「自己」紧跟在「对他们」之后，中文读者容易把「自己」理解成前面的「他们」（泽国人），句意会读成「瘟疫不会反弹回泽国人身上」，正好把格拉迪亚斯问的那层「不受反噬」问反了。",
+      "suggestion": "“北极人有没有可能对他们发动一场瘟疫，而这场瘟疫最终不会反弹到北极人自己身上？”"
+    },
+    {
+      "id": "c17-s0090",
+      "severity": "low",
+      "type": "误译",
+      "source": "I think everyone who said we should cut military hardware out of the best tiers in the rubric went quiet.",
+      "zh": "“那些说要让评则把军用硬件剔出最高几档的人，我看全都沉默了。",
+      "problem": "原文主张者是「人」（who said we should cut…），译文「让评则把军用硬件剔出……」把「评则」变成了动作的主语，读起来像评则自己在剔东西。另外 best tiers 指评则里最优／最优惠的档：第 13 章同一件事译作「从开放度税评则里较为优惠的档位中排除出去」，本章 0113 的动议也是加在第1档、第2档，而「最高几档」在中文里容易被读成档位数字最大的第4、5档。",
+      "suggestion": "“那些说该把军用硬件从评则最优的几档里剔除的人，我看全都沉默了。"
+    },
+    {
+      "id": "c17-s0100",
+      "severity": "low",
+      "type": "漏译",
+      "source": "\"It's fun, we'll get to ski off mountains wearing a copter and then glide back down!\"",
+      "zh": "“可好玩了，我们能穿着小型飞行器从山上滑下来，再一路滑翔回山下！”",
+      "problem": "原文是两个动作：穿着飞行器从山上滑雪冲下去（ski off mountains），然后滑翔下来（glide back down）。译文前一半只说「从山上滑下来」、把 ski（滑雪）丢了，后一半「一路滑翔回山下」又把下山动作重复了一遍，赫雷达这句炫耀刺激的劲儿被冲淡。",
+      "suggestion": "“可好玩了，我们能穿着小型飞行器从山上滑雪冲下去，再一路滑翔下来！”"
+    },
+    {
+      "id": "c17-s0024",
+      "severity": "low",
+      "type": "误译",
+      "source": "If he's going to be in Dzego for a few months, might as well get acclimated and start drinking some tea - and knowing the local word for it.",
+      "zh": "既然要在泽国待上几个月，不如早点适应，先从喝茶开始——顺便记住本地话怎么说。",
+      "problem": "原文是 if 引导的假设（「要是真去待上几个月」），此时格拉迪亚斯还没答应去——下一句他才问 So you think I should go to Dzego?；译文用「既然要……」，在中文里带预设，等于替他先把「去」定了下来，假设句变成了既成事实。",
+      "suggestion": "要是真在泽国待上几个月，不如早点适应，先从喝茶开始——顺便记住本地话怎么说。"
+    },
+    {
+      "id": "c17-s0012",
+      "severity": "low",
+      "type": "增译",
+      "source": "Inside, he saw a man wearing a Veridian parliament robe.",
+      "zh": "屋里坐着一个穿维里迪亚议员长袍的男人。",
+      "problem": "原文只说看见一个穿维里迪亚议员长袍的男人，「坐着」是译文加出来的姿态（原文直到 0015 参议员说 Please sit down. 才涉及坐姿）。这里多补一个动作，虽不影响情节，但属于凭空增译。",
+      "suggestion": "屋里有个穿维里迪亚议员长袍的男人。"
+    },
+    {
+      "id": "c17-s0107",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"She prefers summer, she doesn't like the cold as much.\"",
+      "zh": "“她更喜欢夏天，不太受得了冷。”",
+      "problem": "doesn't like the cold as much 是「没那么喜欢冷（相对而言）」，程度很轻；「受得了／受不了」说的是耐受限度，译成「不太受得了冷」把「相对不喜欢」升格成「扛不住」，塞拉这句轻描淡写的解释被加重了。",
+      "suggestion": "“她更喜欢夏天，没那么喜欢冷。”"
+    }
+  ]
+}

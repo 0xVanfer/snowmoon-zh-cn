@@ -1,0 +1,62 @@
+{
+  "chapter": 7,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 7 章的忠实度很高：141 个片段与原文一一对应，无缺漏、无多余片段，内联标记与说话人配色（<c st> 的色彩值）逐段完全一致，所以不存在说话人张冠李戴；数字、比分、日期、人称与否定均与原文吻合，棋局关键逻辑（第四/第二个符记、西南触发、砖挡 AI 滑翔机、白故意不防对角线的陷阱）逐句对得上，罗马字播报与 😐/🙂 面板字面量都按全书体例原样保留，「bin hu／无首」的双关也译出来了。没有发现高严重度的误译、漏译或因果/否定颠倒。剩下的问题集中在两处与全书既定专名不一致（第 127 段的 Steering system、第 26 段的 mountain pyramid）以及三处轻微弱化或增译，按下面 6 条就地修改即可定稿。另需提醒（非正文问题）：本章 new_terms 把 symbol 记作「符」、rock formation 记作「岩石」，与术语表的「符记」「石阵」冲突，而正文本身用的正是「符记／石阵」，合并 new_terms 时请勿覆盖术语表。",
+  "issues": [
+    {
+      "id": "c07-s0127",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "Look at the Veridian Steering system, for example. It's one of the most opaque parts of the government - even the Keepers don't know who each other are - and yet one of the most trustworthy and incorruptible parts precisely for that reason.",
+      "zh": "比如看维里迪亚的掌舵体系。那是政府里最不透明的一块——连掌则人彼此都不知道对方是谁——可正因如此，它也是最值得信任、最没法被腐蚀的一块。",
+      "problem": "Steering 在本书里是机构/制度专名，术语表 Order of Steering → 掌舵会、Steering system taxes → 掌舵会体系下的税；第 3 章 the Steering system 译「掌舵会体系」、第 11 章 suspicious of Steering 译「对掌舵会体系……怀疑」。本章压成泛指的「掌舵体系」，中文读者会理解成「一整套掌舵/引导机制」，与后半句并列的「合议庭」这类具体制度体对不上，也是全章唯一一处脱离全书用语的地方。",
+      "suggestion": "比如看维里迪亚的掌舵会体系。那是政府里最不透明的一块——连掌则人彼此都不知道对方是谁——可正因如此，它也是最值得信任、最没法被腐蚀的一块。"
+    },
+    {
+      "id": "c07-s0026",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Fin and Zei walked up the slope toward the mountain pyramid.",
+      "zh": "芬和泽沿着斜坡往上走，朝山中的金字塔去。",
+      "problem": "mountain pyramid 是全书固定地标名，第 4、9、12、15、18、19、23、24、27 章一律作「山体金字塔」，术语表 Pafogai Du grand library 条也写作「帕佛盖都山体金字塔内的图书馆」。译成「山中的金字塔」把专名拆成了方位描写，读者会以为是「山里面的一座金字塔」，而不是那座被凿成金字塔形状的山（第 4 章已交代「这本就是一座现成的山……人们把它翻修成金字塔的样子」）。",
+      "suggestion": "芬和泽沿着斜坡往上走，朝那座山体金字塔去。"
+    },
+    {
+      "id": "c07-s0063",
+      "severity": "low",
+      "type": "误译",
+      "source": "Welcome to the final round of the eighteenth year of the Minpentai tournaments in Pafogai Du.",
+      "zh": "欢迎来到帕佛盖都第十八届民本棋锦标赛的决赛。",
+      "problem": "原文是 the eighteenth year of the Minpentai tournaments（赛事的第十八年），第 4 章同一句式的播报译作「欢迎来到民本棋锦标赛第十八年、四分之一决赛的首轮」；「第十八届」把「年度」改成了「届次」，与第 4 章已经建立的译法不一致。",
+      "suggestion": "欢迎来到帕佛盖都民本棋锦标赛第十八年、决赛的现场。"
+    },
+    {
+      "id": "c07-s0100",
+      "severity": "low",
+      "type": "误译",
+      "source": "Sitting on the other side of the room, in less comfortable public seating, Fin gazed with fear at the gameboard as well.",
+      "zh": "房间另一侧，坐在不那么舒服的公众座席上，芬也惴惴不安地盯着棋盘。",
+      "problem": "gazed with fear 是「带着恐惧／惊恐地看」，译成「惴惴不安」把情绪弱化成担心；同一情绪在第 112 段作「芬满脸的惊恐」，同一章前后力度不一致。",
+      "suggestion": "房间另一侧，坐在不那么舒服的公众座席上，芬也惊恐地盯着棋盘。"
+    },
+    {
+      "id": "c07-s0015",
+      "severity": "low",
+      "type": "误译",
+      "source": "Looks like the Bansunpei think I'm actually a good fit for them.",
+      "zh": "看来班孙培觉得我挺合他们胃口。",
+      "problem": "「合胃口」在中文里偏「合口味、投其所好」，常用于吃食或带轻微贬义，而原文 a good fit 说的是「我适合这个组织、他们觉得我正合适」；副词 actually（没想到真被认可）也一并丢失。",
+      "suggestion": "看来班孙培还真觉得我挺适合他们。"
+    },
+    {
+      "id": "c07-s0062",
+      "severity": "low",
+      "type": "增译",
+      "source": "Zei breathed in again, and held his breath for the last remaining ten ticks until the announcement.",
+      "zh": "泽又吸了一口气，屏住呼吸，数着最后剩下的十个嘀嗒，等待那句宣布。",
+      "problem": "原文只说屏息撑过最后剩下的十个嘀嗒，没有「数」这个动作；增译的「数着」把被动等待改写成了主动计数。",
+      "suggestion": "泽又吸了一口气，屏住呼吸，撑过最后剩下的十个嘀嗒，等待那句宣布。"
+    }
+  ]
+}

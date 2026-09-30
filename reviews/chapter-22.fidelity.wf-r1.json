@@ -1,0 +1,71 @@
+{
+  "chapter": 22,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 22 章的忠实度整体很高：161 个片段与原文一一对应，无漏段、无整句漏译；<c> 颜色标记逐条比对完全一致，扬／司机／乌塔库／泽四方对话的说话人归属（含 0041 司机反问、0052 司机答话、0161 泽继续说话）没有一处张冠李戴；面板数值与单位（3.69／1.89／1.26／1.03／1.50／1.00／2.25／12.52、9分钟、5.65公里、113 m/s Δv、325,000／50,000齐普币）、日期（3724年雾期22日）以及术语（图谱资助、评则、合议庭、卡特尔、诸阿克、纠删码、隐写术、阅后即焚文件、长时／嘀嗒）都与原文和术语表对得上，因果、否定与数量关系（\"less chance we'll end up needing shelters\"、\"can't be certain the Arctics won't salvage\"、tripled／doubled again／by a quarter）没有搞反。发现的问题集中在局部用词范围与语气强度：一处把泽国「语言」改革收窄成「文字」，一处自行补出原文省略的对句，另有几处把强断言弱化成猜测、把法律裁决换成打斗动作、把导演口吻的电影梗磨平。均不影响读懂剧情。",
+  "issues": [
+    {
+      "id": "c22-s0063",
+      "severity": "medium",
+      "type": "误译",
+      "source": "All coordinated by machinery that they originally created, supposedly, to upgrade their language - and to give us a much more sensible distance and time system.",
+      "zh": "协调这一切的，是他们当初搞出来的那套机器，据说本来是为了改革他们的文字——顺带还要给我们一套合理得多的距离和时间单位体系。",
+      "problem": "upgrade their language 说的是泽国语这门语言本身，全书一贯译「语言」（第 18 章「我们泽国人八次改进、完善自己的语言」，第 9 章「语言是无害的」；术语表 Dzegoban 条也把「语言文字体系」整体归为泽国语）。译文收窄成「文字」，读者会以为只是换字形、改正字法的技术动作，而这句话的分量恰恰在于：泽国用同一套机器既做语言升级、又外溢到全世界的度量衡与计时体系，这才是扬拿来对照自由城的软实力。范围一缩，论证就轻了。",
+      "suggestion": "协调这一切的，是他们当初搞出来的那套机器，据说最初是为了改良他们的语言——顺带还要给我们一套合理得多的距离和时间单位体系。"
+    },
+    {
+      "id": "c22-s0137",
+      "severity": "low",
+      "type": "增译",
+      "source": "It's just our AI against the Arctics, AI plus human. And if our jamming works, our AI against theirs.",
+      "zh": "就是我们的 AI 对北极人，我们的 AI 加人对他们的 AI 加人。要是我们的干扰起了作用，就变成我们的 AI 对他们的 AI。",
+      "problem": "原文第二分句只是省略式的补语「AI plus human」（我们这边是人机配合，对方同样如此），译文自行补出「对他们的 AI 加人」，并且与前半句「我们的 AI 对北极人」重复成两句并列，读者会以为泽先说的是「AI 对北极人」、随即又改成「AI 加人对 AI 加人」，自相矛盾；实际上原文的留白正是要点。",
+      "suggestion": "现在没我什么事了。这会儿就是我们的 AI 加人，对北极人那边的 AI 加人。要是我们的干扰起了作用，就只剩我们的 AI 对他们的 AI。"
+    },
+    {
+      "id": "c22-s0086",
+      "severity": "low",
+      "type": "误译",
+      "source": "this is military, I don't think I'm allowed to tell you.",
+      "zh": "这是军事，我觉得我不该告诉你。",
+      "problem": "I don't think I'm allowed to 是没有权限、被保密规则挡住，属于硬约束；「我不该告诉你」降成个人道德上的「不应该」，像是扬自己拿主意。紧接着乌塔库追问「我倒吃惊你居然能进到那种圈子里」，正是顺着「有没有资格说」来的，语气被削弱后接不上。",
+      "suggestion": "这是军事，我恐怕没有权限告诉你。"
+    },
+    {
+      "id": "c22-s0084",
+      "severity": "low",
+      "type": "误译",
+      "source": "it's not like Belpaki where they just immediately think you must be an Arctic or something.",
+      "zh": "也不像在贝尔帕基，他们会立刻觉得你八成是北极的人还是什么。",
+      "problem": "must be 表达的是几乎肯定的推断（准是、必定是），译文「八成是」把它降为八成的概率猜测，正好抵消了乌塔库这句对比的分量——贝尔帕基是「立刻断定」，不是「大概怀疑」。另外术语表规定 the Arctics 作「北极人」，「北极的人」把这个专名拆成了普通短语（同章 0067、0069 均作「北极」）。",
+      "suggestion": "也不像在贝尔帕基，他们会立刻觉得你准是北极人还是什么。"
+    },
+    {
+      "id": "c22-s0111",
+      "severity": "low",
+      "type": "误译",
+      "source": "And ... action.",
+      "zh": "然后……开始。",
+      "problem": "这里是导演喊的开机口令（action＝开拍），和泽把这场猎杀当表演看的一整段语气配套：0119「它们在跳舞」、0122 把北极无人机叫「陪练」、0128 扬说「不用给我实况解说」。「开始」只留下「事情启动」的字面意思，电影梗丢了，泽那股玩票式的兴奋也淡了。",
+      "suggestion": "然后……开拍。"
+    },
+    {
+      "id": "c22-s0046",
+      "severity": "low",
+      "type": "误译",
+      "source": "There's no evidence of any collusion between them and the companies - that would get knocked down hard by the courts - but my theory is that it's a sort of retroactive reward.",
+      "zh": "没有证据表明他们跟那些公司有串通——真有的话，合议庭会狠狠拍死——但我的理论是，这是一种追溯性回报。",
+      "problem": "knock down 在法律语境里是推翻、判为无效（术语表 Courts → 合议庭，是随机抽选的裁断机构），译文换成「狠狠拍死」，读者先要愣一下「谁拍死谁」，把制度性裁断说成了动手打斗，扬这段讲制度如何绕开预算上限的冷静分析因此掉了调。",
+      "suggestion": "没有证据表明他们跟那些公司有串通——真有的话，合议庭会毫不留情地推翻——但我的理论是，这是一种追溯性回报。"
+    },
+    {
+      "id": "c22-s0006",
+      "severity": "low",
+      "type": "误译",
+      "source": "though Jahn could just barely notice that the amount of activity on the streets seemed to be lower than usual.",
+      "zh": "只是扬勉强察觉到，街上的人流似乎比平时少了些。",
+      "problem": "activity 是街上整体活动量——行人、车辆、生意都算在内，译文只说「人流」，把车流和商业活动排除在外；而后文司机说「路上车少了，我开着也舒服」，正属于同一项「街上活动变少」的观察，扬此刻感到的异常应比「人流少了」更宽。",
+      "suggestion": "只是扬勉强察觉到，街上的人车往来似乎比平时少了些。"
+    }
+  ]
+}

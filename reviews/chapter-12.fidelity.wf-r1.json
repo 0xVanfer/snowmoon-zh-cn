@@ -1,0 +1,71 @@
+{
+  "chapter": 12,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 12 章的忠实度整体很高：全部 203 个片段逐句对得上，颜色标记与说话人归属、数字与时间单位（嘀嗒／回合／长时、30,003、房间号304、八天／六轮／三十二人）、复现术语（符记／石阵／沙盒／干预回合／主基地／山体金字塔／民本棋祭司）都与原文及术语表一致；哈希与保熵置换的讲解段、六边形规则的「时间反演」推理段语义准确，没有因果或否定颠倒，也没有整句漏译或凭空增译。发现的问题集中在用词与指代层面：最重的是把 advanced biology research lab 译成「高等生物研究实验室」（中文会读成「研究高等生物的实验室」），其次是赛程「Two days after」译成「再过两天」与本章后文日期（草期25日）不合。没有 high 级问题，按下面 7 条就地修改即可定稿。",
+  "issues": [
+    {
+      "id": "c12-s0066",
+      "severity": "medium",
+      "type": "误译",
+      "source": "\"Explosion in an advanced biology research lab. Probably the Arctics, as usual. They're going to spend days cleaning up to make sure everything is safe.\"",
+      "zh": "“一家高等生物研究实验室发生了爆炸。多半又是北极人干的。他们得花好几天清理，确保一切安全。”",
+      "problem": "advanced biology research lab 指「技术先进的生物学研究实验室」，advanced 修饰的是研究水平/技术；译成「高等生物研究实验室」后，中文的「高等生物」是相对「低等生物」的生物学分类词，读者会理解成「研究高等生物的实验室」，实验室的性质被译成了研究对象。",
+      "suggestion": "“一家尖端生物学研究实验室发生了爆炸。多半又是北极人干的。他们得花好几天清理，确保一切安全。”"
+    },
+    {
+      "id": "c12-s0093",
+      "severity": "medium",
+      "type": "误译",
+      "source": "\"Today, we will have a walk through the Minpentai museum, right here inside this mountain pyramid. Tomorrow, we will have some tourist excursions around Sadzu Du, and in the evening you will get a chance to rest. Two days after, the first championship games will begin.\"",
+      "zh": "“今天，我们会在这座山体金字塔里参观民本棋博物馆。明天，我们会安排几趟萨祖都的游览，晚上你们可以休息。再过两天，锦标赛的第一批对局就将开始。”",
+      "problem": "Two days after 是接着上一句「明天」往后数两天（游览日之后再过两天），由本章 0099 的日期「3724年草期25日」和 0112「三天前在博物馆」（即草期22日）可反推，首场比赛正是演讲日（22日）之后第三天；中文「再过两天」会被读成从演讲当天起两天后（即24日），与本章自己的日期线对不上，时间关系被压掉了一天。",
+      "suggestion": "“今天，我们会在这座山体金字塔里参观民本棋博物馆。明天，我们会安排几趟萨祖都的游览，晚上你们可以休息。游览结束再过两天，锦标赛的第一批对局就将开始。”"
+    },
+    {
+      "id": "c12-s0030",
+      "severity": "low",
+      "type": "误译",
+      "source": "c12-s0026: \"...a wider variety of venues. Some medicine stores.\" / c12-s0030: \"Soon the health stores gave way to some stores selling artistic furniture and other household items.\"",
+      "zh": "c12-s0026: “还有些药铺。” / c12-s0030: “很快，保健品店换成了卖艺术家具和其他家居用品的店。”",
+      "problem": "英文 the health stores 回指的是上一段的 medicine stores（同一类店铺换了个说法），译文却先后用了「药铺」和「保健品店」两个不同的词，读者会以为路边又冒出一种前文没出现过的店，指代链断了。",
+      "suggestion": "0026 改为「还有些药店。」；0030 改为「很快，这些药店换成了卖艺术家具和其他家居用品的店。」"
+    },
+    {
+      "id": "c12-s0036",
+      "severity": "low",
+      "type": "误译",
+      "source": "Zei stepped out. He was in a hotel.",
+      "zh": "泽下了车。面前是一家酒店。",
+      "problem": "He was in a hotel 说的是人已经身处酒店之内（前一句刚交代车门正抵着酒店门），译文「面前是一家酒店」把「已在其中」改成了「在门外看着它」，与紧接着的「他走到最近的绿色圆圈前」在大堂内的动作接不上。",
+      "suggestion": "泽下了车，人已经在一家酒店里了。"
+    },
+    {
+      "id": "c12-s0076",
+      "severity": "low",
+      "type": "误译",
+      "source": "That's not a very Dzegojan name, Zei thought.",
+      "zh": "这名字不太像泽国人，泽想。",
+      "problem": "原文说的是「这不像个泽国名字」（名字给德鲁因的身份露了底，下一句他果然承认自己从红郡来），译文的「不太像泽国人」变成了形容人，后半句「名字把我出卖了吧」也就失去了呼应。",
+      "suggestion": "这名字一听就不像泽国名字，泽想。"
+    },
+    {
+      "id": "c12-s0125",
+      "severity": "low",
+      "type": "误译",
+      "source": "Zei groaned.",
+      "zh": "泽哼了一声。",
+      "problem": "groaned 是对白「你要是放我进去，那就有」之后的无奈呻吟／哀叹，「哼了一声」在中文里是轻蔑、不服气的鼻音，情绪方向译反了。",
+      "suggestion": "泽无奈地叹了口气。"
+    },
+    {
+      "id": "c12-s0140",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"It will be a fun game today, I'm sure of it.\"",
+      "zh": "“今天会是一盘好棋，我敢肯定。”",
+      "problem": "fun 说的是「（对观众/对我们）会很有意思、很好玩」，译文改成「一盘好棋」变成了对棋局质量的评价，苏这句轻松的调侃意味丢了。",
+      "suggestion": "“今天会是一盘有意思的棋，我敢肯定。”"
+    }
+  ]
+}

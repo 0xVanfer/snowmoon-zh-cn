@@ -1,0 +1,224 @@
+{
+ "chapter": 27,
+ "lens": "fluency",
+ "reviewer": "wf-r3",
+ "overall": "第27章中文整体可读，质量中上：塞拉「我有个更简单的答案」那段收尾（「光这一点就已经值得抵抗」）和泽那套「世界是可逆的—不可逆」的论述立得住，科技段落里「混淆电路」「可验证两方计算」「共同知识」这些术语也都落地了。问题集中在两处：一是英文句式的直搬——凡把一整个判断塞进「的」前作定语（s0133 的概率句、s0125 的方式状语后置）或叠用同义结构（s0096 的「足以值得」、s0083 的「不是什么……那种」）都要读第二遍；二是搭配没落地——「泽看得惊叹」「剧烈的动作」「漂亮的排版和打磨」「字面上就有20%」这类词读着像译文。另有一处会让读者会错意：s0073 的「我有个别的问题想问你」会被读成「我有几个别的问题」。对话标签的标点（4处「？」后接逗号）也需一并统一。按条替换后可达出版级语感。",
+ "issues": [
+  {
+   "id": "c27-s0073",
+   "severity": "high",
+   "type": "生硬",
+   "problem": "「有个别的问题」在中文里的第一义是「有几个零星的、个别的问题」——「个别」本身就是形容词。读者读到「我有个别的问题想问你」会先理解成「我有几个别的问题」，要回头靠「想问你」才勉强拐回「另外的问题」。这是全章唯一一句话会被读成另一个意思的。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“格拉迪亚斯”</c>，埃维洛尔开口道。<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“你看起来挺聪明。我另外有个问题想问你。”</c>",
+   "source": "\"Gladias\", Evelor asked. \"You seem smart. I have a different question I wanted to ask you.\"",
+   "zh": "“格拉迪亚斯”，埃维洛尔开口道。“你看起来挺聪明。我有个别的问题想问你。”"
+  },
+  {
+   "id": "c27-s0125",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "三处卡顿：①「字面上就有20%的人说」是 literally has 的直搬，中文没有这种说法；②「全部政府所有的土地」连读会被切成「政府／所有」，也说不清「政府所有」是修饰「土地」的定语；③「以这种方式出资恢复北岸」把方式状语甩到句尾，读者要回头才明白「这种方式」指的是前半句。穆是在用这个问题说明「民调问得很杂、北极人看不出重点」，句子一散这个功能就没了。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“我觉得没事”</c>，穆答道。<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“这次民调我们问了很多不同的问题。其中一个问题，实打实有20%的人说，我们该出资恢复北岸——办法是依法把北岸所有政府持有的土地都转给海德菲尔，让他们自己去想办法。”</c>",
+   "source": "\"I think it's okay\", Mu replied. \"We asked many different questions in the poll. One of them literally has twenty percent saying that we should fund recovering Northshore by legally transferring all of its government-owned territory to Hydrafill and letting th…",
+   "zh": "“我觉得没事”，穆答道。“这次民调我们问了很多不同的问题。其中一个问题，字面上就有20%的人说，我们应该依法把北岸全部政府所有的土地转给海德菲尔，让他们自己去想办法，以这种方式出资恢复北岸。”"
+  },
+  {
+   "id": "c27-s0133",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "「保有本国领土比例不低于当前的概率为20%」把一整个主谓判断压进「的」字前当定语，读者要读到「的概率为20%」才知道句子主干，必须回头重读。这一条恰恰是机器人给出的核心结论、后面「26%／50%」全靠它对照。",
+   "suggestion": "在任何“寻常”情形下——即维里迪亚军队维持现状，或由维里迪亚议会在没有巨大外部压力的情况下主导重组——一年之后，维里迪亚保有的领土比例不低于当前水平的概率为20%",
+   "source": "Under any 'ordinary' scenario, meaning either status quo continuation of the Veridian military, or a reorganization led by the Veridian parliament without large outside pressure, the probability that Veridia will hold the same or greater percent of its own ter…",
+   "zh": "在任何“寻常”情形下——即维里迪亚军队维持现状，或由维里迪亚议会在没有巨大外部压力的情况下主导重组——维里迪亚在一年后保有本国领土比例不低于当前的概率为20%"
+  },
+  {
+   "id": "c27-s0091",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "①「它奔向无穷越快」掉了「远」，读起来像「奔向无穷（次）越快」；②「所有人就幸福得越快」把 happy 直接当形容词接「得越快」，中文不成立（没有「幸福得越快」这种说法）。这是泽那套「脆弱世界」论述的起句，起句读不通，后面三段的气势就带不出来。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“埃菲里昂暗含的模型是这样的：有一个向量朝着无穷远射出去，它跑得越快，所有人也就越快得到幸福。可我看到的世界根本不是这样。”</c>",
+   "source": "\"There is this underlying model that Ephelion is implying, where there's a vector that's shooting outward toward infinity, and the faster it goes toward infinity the faster everyone is happy. But that's not how I see the world at all.\"",
+   "zh": "“埃菲里昂暗含的模型是这样的：有一个向量朝着无穷远射出去，它奔向无穷越快，所有人就幸福得越快。可我看到的世界根本不是这样。”"
+  },
+  {
+   "id": "c27-s0064",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "「除非……要么……要么……否则……」把两种句式叠在一起，中文读着别扭（应为「若非……或……」）；「把价格推动一部分」是 force at least some shift 的直搬，价格不说「推动一部分」；同一段的「那任何套利者都很难愿意进场」，「难愿意」也不成话。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“已有结论表明：套利者若不是完全风险中性、或没有无限多的资金，操纵者总能至少让价格挪动一点。而如果标的变量本身是前所未有、无人知晓的东西——比如我们能不能赢下过去一百年里全世界所见过的对北极人的第二次胜利——那就很难有套利者愿意进场。”</c>",
+   "source": "\"There's known results that unless the arbitrageurs are either fully risk-neutral or have infinite money, a manipulator can always force at least some shift in the price. And if the underlying variable is something so unprecedented and unknown - like whether o…",
+   "zh": "“已有结论表明：除非套利者要么完全风险中性，要么有无限多的钱，否则操纵者总能至少把价格推动一部分。而如果标的变量本身是前所未有、无人知晓的东西——比如我们能不能赢下过去一百年里全世界所见过的对北极人的第二次胜利——那任何套利者都很难愿意进场。”"
+  },
+  {
+   "id": "c27-s0083",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "「不是什么……那种……」两层指示结构叠用（原文只有一层）；「带着同情、爱与关怀美感的健康」把三层定语硬压在一个名词上；「硬邦邦的金属感长寿诊所」又把 hard 和 metallic 都摊成形容词，读起来像在罗列标签。埃维洛尔这段话是反驳西尔卡的关键一步，落点应是「不是那种审美，而是冷硬的诊所」。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“但另一方面”</c>，埃维洛尔接着说，<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“北极人确实在意健康。那可不是西尔卡想要的那种同情、爱与关怀的审美——而是冷硬的金属质感长寿诊所，但它仍然是健康。”</c>",
+   "source": "\"But on the other hand\", Evelor continued, \"the Arctics do care about health. It's not health with the aesthetic of compassion and love and care that Sylka would want, it's hard metallic longevity clinics, but it's still health.\"",
+   "zh": "“但另一方面”，埃维洛尔接着说，“北极人确实在意健康。那不是什么西尔卡想要的那种带着同情、爱与关怀美感的健康，而是硬邦邦的金属感长寿诊所，但它仍然是健康。”"
+  },
+  {
+   "id": "c27-s0081",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "原文是个冷幽默：一个社交媒体网站的白皮书第一页居然在讲特征向量，话说一半就卡住（Eigenvectors are like ... on the first page）。现译把省略号插在「差不多是」后面、把「东西」摆在句尾，成了平铺直叙的说明句，笑点没了，读者也看不出为什么要提白皮书。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“银聊是个社交媒体网站。特征向量……差不多就写在原始白皮书的第一页上。”</c>",
+   "source": "\"Silverchat is a social media website. Eigenvectors are like ... on the first page of the original whitepaper.\"",
+   "zh": "“银聊是个社交媒体网站。特征向量差不多是……原始白皮书第一页上的东西。”"
+  },
+  {
+   "id": "c27-s0105",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "①「我让翡翠去读原始学术论文，自己写一份实现」里的「自己」既可读成「翡翠自己」，也可读成「穆自己」，而原文明确是让翡翠写它自己的实现——这句话正是穆在说明「我用了独立的一套复核方法」，主语一含糊，论证力度就弱了；②「以防这十多年来证明系统或定义在什么地方坏了却没人发现」把时间状语夹在中间，读着发闷。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“我也查过”</c>，穆插话。<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“我用的是另一种方法，免得证明系统或那些定义十几年前就在哪儿坏掉了、却一直没人发现。我让翡翠去读原始学术论文，让它自己写一份实现，再让一个全新的实例把那份代码和原版并排读，逐处比对差异，看哪边是对的。埃维洛尔的代码毫无瑕疵。”</c>",
+   "source": "\"I checked too\", Mu interjected. \"I used a different approach, just in case the proof system or the definitions have somehow been broken for over a decade and nobody noticed. I had Emerald read the original academic papers and write its own implementation, and…",
+   "zh": "“我也查过”，穆插话。“我用的是另一种方法，以防这十多年来证明系统或定义在什么地方坏了却没人发现。我让翡翠去读原始学术论文，自己写一份实现，再让一个全新的实例把那份代码和原版并排读，逐处比对差异，看哪边是对的。埃维洛尔的代码毫无瑕疵。”"
+  },
+  {
+   "id": "c27-s0069",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "「非线性那部分对语言变聪明是必需的」把 for the language to be smart 直搬成「对……变聪明」，中文不这么说；前一句「针对 AI 计算有专门的优化」也缺一个落点，读起来像小标题。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“针对 AI 计算，有一些专门的优化。别忘了，大语言模型内部几乎一切都是线性的。要让语言足够聪明，非线性那部分是少不了的，可它只占整个计算量的0.1%。”</c>",
+   "source": "\"There's optimizations specific to AI computation. Remember, almost everything inside a large language model is linear. The nonlinear part is necessary for the language to be smart, but it's only a tenth of a percent of the entire computation.\"",
+   "zh": "“针对 AI 计算有专门的优化。别忘了，大语言模型内部几乎一切都是线性的。非线性那部分对语言变聪明是必需的，但它只占整个计算量的0.1%。”"
+  },
+  {
+   "id": "c27-s0078",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "「能干让人有更多资源变得更好」把 productivity 译成「能干」，于是主语变成一个形容词性的词，句子读不通（「能干」作为一种属性怎么「让人有更多资源变得更好」）。这是格拉迪亚斯论证的第二步，卡在这里，后面「教育支撑这两者」就接不上。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“我认为复利的可不只是经济总产出。很多好东西会互相叠加：健康让人更有精力做事，效率又让人有资源变得更好，教育撑着这两样，而健康也撑着教育。”</c>",
+   "source": "\"I don't think it's just economic output that compounds on itself, I think many good things compound on each other. Health makes people more productive. Productivity gives people the resources to be better. Education supports both, and health supports educatio…",
+   "zh": "“我认为复利的不只是经济总产出。很多好东西会互相叠加。健康让人更能干；能干让人有更多资源变得更好；教育支撑这两者，而健康又支撑教育。”"
+  },
+  {
+   "id": "c27-s0126",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "①「那桩诉讼北极人当然会注意到、会盯着」主语后没有停顿，读者会先把「诉讼北极人」连成一个偏正结构、再折回来，需要在「诉讼」后补一个逗号；②「太过协同」是 too coordinated 的直搬，中文说「像是事先串通好的」。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“那桩诉讼，北极人当然会注意到，也会盯着。我们该推迟几天，免得看起来像是事先串通好的。但不管我们怎么做，我们都已经让所有人——包括北极人——清楚看到，维里迪亚人认识到存在一个大问题。需要藏起来的是解决方案的细节。”</c>",
+   "source": "\"The lawsuit is something that the Arctics will notice and watch, of course. We should delay it by a few days to make it not look too coordinated. But regardless of what we do, we will have made it clear to everyone - including the Arctics - that Veridians rec…",
+   "zh": "“那桩诉讼北极人当然会注意到、会盯着。我们该推迟几天，免得看起来太过协同。但不管我们怎么做，我们都已经让所有人——包括北极人——清楚看到，维里迪亚人认识到存在一个大问题。需要藏起来的是解决方案的细节。”"
+  },
+  {
+   "id": "c27-s0034",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "「泽看得惊叹」不成立——「惊叹」是动词／名词，不能作「看得」的补语（可说「看得惊叹不已」或「惊叹地看着」）。这是泽视角段落的起句，一开头就绊一下。",
+   "suggestion": "泽惊叹地看着眼前这一幕，脑子里立刻拿它跟泽国的山体金字塔作比。",
+   "source": "Zei marveled at the sight, and his mind jumped immediately to comparing it to the mountain pyramids in Dzego. In Dzego, he thought, they crafted natural mountains into pyramids, and made nature seem like the work of man. In Veridia - or at least in the Kalimar…",
+   "zh": "泽看得惊叹，脑子里立刻拿它跟泽国的山体金字塔作比。在泽国，他想，人们把天然的山凿成金字塔，让自然看上去像人的作品；而在维里迪亚——至少是梅尔丹的卡利马尔区——人们把一座很可能完全人造的小丘做得像自然。泽国可以从维里迪亚这种风格里学点东西，他想。用来防护，说不定还更好。"
+  },
+  {
+   "id": "c27-s0092",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "①「只要任何人……」搭配不成立：中文的「只要」后面接的是条件，不能用「任何人」这种全称主语（应作「只要有谁……」）；②「把自己的权力永久锁死」的「锁死」在中文里多用于「锁死价格／锁死选项」，而 lock in 说的是把权力焊在原地，紧接「不可逆。永远。」两句短句，用「锁住」更稳。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“我看到的世界是个脆弱的世界。它并非一直如此脆弱。过去，通讯有限，权力的传递也有限。任何帝国统一得够久，最终都会垮掉。世界是可逆的。可今天，有了现代的机器人和现代监控，只要有谁成功接管并巩固了对全世界的控制，就能把自己的权力永久锁住。不可逆。永远。”</c>",
+   "source": "\"The world that I am seeing is a fragile world. It did not use to be this fragile. In the past, communication was limited and transmission of authority was limited. Any empire united for long enough would eventually fall. The world was reversible. But today, w…",
+   "zh": "“我看到的世界是个脆弱的世界。它并非一直如此脆弱。过去，通讯有限，权力的传递也有限。任何帝国统一得够久，最终都会垮掉。世界是可逆的。可今天，有了现代的机器人和现代监控，只要<e>任何人</e>成功接管并巩固了对全世界的控制，就能把自己的权力永久锁死。不可逆。永远。”"
+  },
+  {
+   "id": "c27-s0096",
+   "severity": "medium",
+   "type": "生硬",
+   "problem": "「足以值得」把「足以」和「值得」两个同义结构叠在一起；后半句又叠一个「也早已足以值得」。两句连着读像绕口令——而这正是塞拉全章最有分量的一段话，收尾不该被语法绊住。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“我有个更简单的答案”</c>，塞拉补充道。<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“所有这些关于遥远未来的论证都很难预测。而且，如果一条路你本就认定要走，那要说服自己这条路是对的，再编出一套精妙的数学来给它背书，实在太容易了。但有一件事很好预测：如果北极人征服了维里迪亚，这场战争可能杀死我们数十万乃至数百万人，北极人还会毁掉我们所知所珍爱的那个美丽世界。对我来说，光这一点就已经值得抵抗了。而我们这个世界、这些国家、这些友谊的美，也已经值得为之而战。”</c>",
+   "source": "\"I have a simpler answer\", Seila added. \"All these arguments about the far future, they're hard to predict. And it's really easy to convince yourself that one path is right, and come up with really smart math to justify it, if that's the path that you already …",
+   "zh": "“我有个更简单的答案”，塞拉补充道。“所有这些关于遥远未来的论证都很难预测。而且，如果一条路你本就认定要走，那要说服自己这条路是对的，再编出一套特别聪明的数学来给它背书，实在太容易了。但有一件事很好预测：如果北极人征服了维里迪亚，这场战争可能杀死我们数十万乃至数百万人，北极人还会毁掉我们所知所珍爱的那个美丽世界。对我来说，光这一点就足以值得抵抗。而我们这个世界、这些国家、这些友谊的美，也早已足以值得为之而战。”"
+  },
+  {
+   "id": "c27-s0100",
+   "severity": "medium",
+   "type": "标点体例",
+   "problem": "引号内以问号／叹号收尾时，后面的提示语不再加逗号（GB/T 15834 体例：「……吗？」塞拉问。）。本章有4处写成了「？」＋引号＋「，」：c27-s0100、c27-s0107、c27-s0111、c27-s0139。这4处的对话标签与全章其它处体例不一，读者会读成多打了一个逗号。",
+   "suggestion": "4处一并删去 `</c>` 后的逗号：c27-s0100 `<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“你们把要放进机器人那个数据包的信息都提交完了吗？”</c>塞拉问。`；c27-s0107 `“这次不学民本棋比赛播报员的腔调了？”</c>白打趣地回了一句。`；c27-s0111 `“喂！”</c>泽回了一句。`；c27-s0139 `“你觉得合理吗？”</c>格拉迪亚斯问。`",
+   "source": "\"Are you all done submitting your information into the package for the bots?\", Seila asked.",
+   "zh": "“你们把要放进机器人那个数据包的信息都提交完了吗？”，塞拉问。"
+  },
+  {
+   "id": "c27-s0120",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "「我们设了这个粒度的分项吗」搭配别扭：设的是「分项」，粒度只是分项的粗细；而且下一句塞拉的回答用的是「做了细分」，一问一答用词不接，读起来像两个人分别在说术语。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“等等，我们还做了这么细的分项？投票是匿名的，我们没法知道每一票是谁投的。”</c>",
+   "source": "\"Wait, did we set it up to provide that level of granularity? Votes are anonymous, we have no way to tell who sent each one.\"",
+   "zh": "“等等，我们设了这个粒度的分项吗？投票是匿名的，我们没法知道每一票是谁投的。”"
+  },
+  {
+   "id": "c27-s0072",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "「先抬起、再滑移」两个动词都没带宾语和方向，读者不知道抬起的是什么、往哪儿滑；「给他上茶」在这个场景里偏「上茶待客」的语感，机器人只是把茶送到他手上。",
+   "suggestion": "谈话暂时停下——他们听见下面传来一阵机械声，越来越响。几嘀嗒后，他们看见了机器人的顶部：它端着托盘上的四杯茶，一级一级往上爬，每上一级都先向上抬升、再横向滑移。到了楼梯顶端，它先滑到格拉迪亚斯面前，把茶递给他。",
+   "source": "Their conversation briefly paused as they heard a mechanical noise getting louder and louder below them. A few ticks later, they could see the top of the robot, slowly climbing up the staircase with a raising motion and then a sliding motion at each step, carr…",
+   "zh": "谈话暂时停下——他们听见下面传来一阵机械声，越来越响。几嘀嗒后，他们看见了机器人的顶部：它端着托盘上的四杯茶，一级一级往上爬，每上一级都先抬起、再滑移。到了楼梯顶端，它先朝格拉迪亚斯滑过去，给他上茶。"
+  },
+  {
+   "id": "c27-s0095",
+   "severity": "low",
+   "type": "欧化",
+   "problem": "一小段里三个被动式连用（无法被完全控制、无法被完全毁灭、被永远乘以零），中文读起来像技术文档；「被永远乘以零」尤其别扭，「乘以零」在中文里落地就是「归零」。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“最终，世界会重新变得可逆。我们将能在群星之间旅行，我们的文明会大到没人能完全控制、也没人能彻底毁灭。但在那一天到来之前，我们身处一个脆弱的阶段。如果接下来十年里有人把这一切乘以零、永远回不来，那罪魁祸首就是北极人。”</c>",
+   "source": "\"Eventually, the world will become reversible again. We will be able to travel between the stars, and our civilization will become too big to completely control or completely destroy. But until that happens, we are in a fragile place, and if within the next de…",
+   "zh": "“最终，世界会重新变得可逆。我们将能在群星之间旅行，我们的文明会大到无法被完全控制、也无法被完全毁灭。但在那一天到来之前，我们身处一个脆弱的阶段。如果接下来十年里，这一切被永远乘以零，那原因就是北极人。”"
+  },
+  {
+   "id": "c27-s0016",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "「会有件军事上的有意思的事发生」把「军事上的＋有意思的＋事」三个「的／事」套在一起，中文更顺的说法是把「军事上」提到前面作状语。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“你在泽国的时候，我和莫夫开始在银聊里一级一级往上爬，跟那边的人搭话。一开始没能引起他们的注意。大约十天前韦尔多加入进来，帮了大忙，可即便那样，他们也没太把我们当回事。但昆高培救出塔芬德尔那天，我冒了一次险：我提前一个长时告诉他们，军事上会有件有意思的事发生。后来当然就发生了。所以现在，他们愿意听了。而我已经想好了该请他们做什么。”</c>",
+   "source": "\"While you were in Dzego, Mov and I started making our way up the ladder in Silverchat, talking to people there. We were not too successful at getting their attention at first. Verdow joining in about ten days ago helped a lot, but even then they didn't take u…",
+   "zh": "“你在泽国的时候，我和莫夫开始在银聊里一级一级往上爬，跟那边的人搭话。一开始没能引起他们的注意。大约十天前韦尔多加入进来，帮了大忙，可即便那样，他们也没太把我们当回事。但昆高培救出塔芬德尔那天，我冒了一次险：我提前一个长时告诉他们，会有件军事上的有意思的事发生。后来当然就发生了。所以现在，他们愿意听了。而我已经想好了该请他们做什么。”"
+  },
+  {
+   "id": "c27-s0102",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "「排版」指印刷／页面版式，用在这里（交给机器人的资料包）是选词不当，原文 presentation 说的是「怎么呈现给对方」；「漂亮的……打磨」也偏书面。塞拉这句是随口的宽慰，应该更口语。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“记住，它是个机器人。用不着弄得多漂亮、多讲究。你要是又想起什么要说的，直接扔进去就行。”</c>",
+   "source": "\"Remember, it's a bot. It doesn't need any amazing presentation and polish. If you think of something else to say or dump in, just throw it in.\"",
+   "zh": "“记住，它是个机器人。不需要什么漂亮的排版和打磨。你要是又想起什么，直接扔进去就行。”"
+  },
+  {
+   "id": "c27-s0052",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "「塞拉把整套计划的底细交出去得太快了」把「把」字结构和程度补语挤在一起，中文更常说「太快就把……交了出去」。",
+   "suggestion": "泽微微皱眉。塞拉太快就把整套计划的底细都交了出去，他想。昆高培绝不会这么做。可也许维里迪亚的文化就是更愿意信任别人——又或者，埃维洛尔已经在塞拉、甚至在整个维里迪亚面前证明了自己值得信任。",
+   "source": "Zei winced slightly. Seila was volunteering the content of her master plan too quickly, he thought. The Kungaupei would never operate in this way. But maybe Veridian culture is just more trusting - or maybe Evelor had already proven himself to Seila, or even t…",
+   "zh": "泽微微皱眉。塞拉把整套计划的底细交出去得太快了，他想。昆高培绝不会这么做。可也许维里迪亚的文化就是更愿意信任别人——又或者，埃维洛尔已经在塞拉、甚至在整个维里迪亚面前证明了自己值得信任。"
+  },
+  {
+   "id": "c27-s0006",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "「几乎立刻开口」是 almost immediately 的直搬（中文说「几乎是马上」「想都没想就」）；「脸上满是难过」把 sad expression 拆成「难过」作名词，搭配勉强。这是全章第一句台词，语感偏硬。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“对不起，塞拉”</c>，格拉迪亚斯几乎是马上开口，脸上写满难过。<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“我觉得这个方案行不通。”</c>",
+   "source": "\"I'm so sorry, Seila\", Gladias said almost immediately with a sad expression on his face. \"I don't think this plan is going to work.\"",
+   "zh": "“对不起，塞拉”，格拉迪亚斯几乎立刻开口，脸上满是难过。“我觉得这个方案行不通。”"
+  },
+  {
+   "id": "c27-s0004",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "四句里有三句连着以「他」开头（他房间、他住、他还没），而且第二句是为交代 hotel 硬插进来的独立短句，把「敲门—门开」的连贯动作打断；原文这一信息是收在同一个名词短语里的。这是全章开场第一段，第一印象就在这句。",
+   "suggestion": "格拉迪亚斯听见有人敲房门——他住的是政府经营的酒店。还没来得及应声，他就听见一阵嗡嗡声，门开了。",
+   "source": "Gladias heard a knock on the door of his government hotel room. Before he could respond, he heard a buzzing sound, and the door opened.",
+   "zh": "格拉迪亚斯听见有人敲他房间的门。他住在政府经营的酒店里。他还没来得及应声，就听见一阵嗡嗡声，门开了。"
+  },
+  {
+   "id": "c27-s0060",
+   "severity": "low",
+   "type": "生硬",
+   "problem": "「剧烈的动作」搭配不当：「剧烈」形容的是运动、反应、疼痛，用来修饰「动作」会让人先想到肢体动作；这里说的是大刀阔斧的举措。",
+   "suggestion": "<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“但还有另一个问题”</c>，埃维洛尔接着说。<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“如果我们这么做，能帮法官看到，做出大的改变是得人心的，民众也并不觉得议会多有合法性。当然，也可能我们发现，自己对维里迪亚人想法的判断错得离谱。但这不会让他们相信，这么激烈的举措真的<e>行得通</e>。”</c>",
+   "source": "\"But there's also another issue\", Evelor continued. \"If we do this we can help the judges see that making a big change would be popular, and that the people don't see the parliament as being all that legitimate. Or of course we'll learn that we're very wrong i…",
+   "zh": "“但还有另一个问题”，埃维洛尔接着说。“如果我们这么做，能帮法官看到，做出大改变是得人心的，民众也并不觉得议会多有合法性。当然，也可能我们发现，自己对维里迪亚人想法的判断错得离谱。但这不会让他们相信，这种剧烈的动作真的<e>行得通</e>。”"
+  }
+ ]
+}

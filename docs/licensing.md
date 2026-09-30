@@ -34,9 +34,16 @@
 ## 本项目做法
 
 - 根目录 [LICENSE](../LICENSE) 为 GPL v3 完整原文，未作改动。
-- 流水线、提示词与规范随仓库提交，不另设限制（当前仍是初始化阶段，流水线尚未落地）。
-- 成品中标注原著来源与本项目的修改事实。
-- 新增源码文件建议在文件头标注 `SPDX-License-Identifier: GPL-3.0-only`。
+- 制作流水线随仓库提交，不另设限制，包括：
+  - 全部脚本（`pipeline/*.py`）：结构抽取、译文/插图自检、术语合并与体例统一、插图重绘、
+    Markdown/HTML 组装、成品书级体检；
+  - 全部提示词（`pipeline/prompts/`：逐章翻译、插图中文化、读者复核、复核落实）；
+  - 术语表与规范（`pipeline/glossary.json`、`docs/glossary.md`、`docs/style-guide.md`）；
+  - 任务专用 harness（`pipeline/vision_api.py`：视觉模型调用器，含缓存、并发、重试）；
+  - 过程记录（`reviews/`：96 份读者复核报告 + 各章落实记录，含采纳/驳回理由）。
+- 成品中标注原著来源与本项目的修改事实（见全书开篇声明与 [README](../README.md)）。
+- 源码文件在文件头标注 `SPDX-License-Identifier: GPL-3.0-only`（Python 脚本已标注）。
+- 上游英文原文快照 `sources/en/html/` 仅本地保留，未随仓库分发；复现时按上表来源自行获取。
 
 ## 来源与取得日期
 

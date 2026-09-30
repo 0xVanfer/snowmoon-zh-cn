@@ -1,0 +1,35 @@
+{
+  "chapter": 21,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "第 21 章的一致性整体很干净：107 段逐条比对，人名、地名与术语表及全书逐一对得上（塞拉、维尔、黛雅、莉莉、兹文、格拉迪亚斯、莫夫、德尔瓦特、埃菲里昂勋爵、费布里克、赫雷达、梅尔丹、维里迪亚、大梅港、北林、马布利、联合城邦、泽国／泽国人、掌则人、评则、掌舵会、合议庭、图谱资助、银聊、分歧资本、跃升、翔球、民本棋、齐普币、飞地、影子军队都正确），日期与地点头「3724年雾期20日／梅尔丹，维里迪亚」落在第 20 章（雾期10日）与第 22 章（雾期22日）之间，时间线自洽；数字体例（81分、95分、11比10、1分／0分／半分、第五次、半年、两个半组、三分之一）与全书一致，拉丁字母与汉字、数字与汉字之间无多余空格，全角标点、六点省略号、双破折号、引号层级均无违规，<c> 颜色标签与原文逐段完全一致，本章无 device-view 面板、无 locked 虚构语言，故无面板体例与 conlang 误译问题。真正的问题只有术语命名一处硬伤：同一条评则在第 20 章与术语表里叫「社交媒体开放度与互操作性评则」，本章缩成「社媒开放度与互操作性」，并且 new_terms 又登记了一个与术语表不同的名字。按下面三条就地小改即可，不影响可读性。",
+  "issues": [
+    {
+      "id": "c21-s0064",
+      "severity": "high",
+      "type": "术语不一致",
+      "source": "we found a Keeper who was on the rubric that Silverchat should care the most about - social media openness and interoperability - ... / Four: not participate in the social media openness and interoperability rubric.",
+      "zh": "“最后，为了确认，我们找到了一个负责银聊最该在意的那条评则——社媒开放度与互操作性——的掌则人……”；“第四：没有参与社媒开放度与互操作性这条评则。行，掌则人分三组……”",
+      "problem": "同一条评则在本章缩写成「社媒开放度与互操作性」（s0064、s0085 共 2 处），而这条评则是第 20 章正面写过的：第 20 章正文作「社交媒体开放度评则组」（c20-s0165）、「管社交媒体开放度与互操作性的」（c20-s0196）、「社交媒体开放度与互操作性评则」（评则表），术语表（唯一事实源）该条也收作「社交媒体开放度与互操作性评则」。全书译文里「社媒」只在本章出现，读者连读第 20、21 章会看到同一条评则两个名字，且「社媒」这一缩写也偏离术语表条目本身。",
+      "suggestion": "把这两处统一为术语表／第 20 章的规范名：s0064 改为「……我们找到了一个负责银聊最该在意的那条评则——社交媒体开放度与互操作性——的掌则人……」；s0085 改为「第四：没有参与社交媒体开放度与互操作性这条评则。行，掌则人分三组，这一条可以乘二分之一。……」"
+    },
+    {
+      "id": "c21-new_terms-social-media",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "new_terms: {\"en\": \"social media openness and interoperability\", \"zh\": \"社媒开放度与互操作性\"}",
+      "zh": "new_terms 第 10 条：social media openness and interoperability → 社媒开放度与互操作性（note：「与术语表 Lectoby『社媒开放度评则』配套的评则全称」）",
+      "problem": "术语表里已经有第 20 章录入的同义条目 social media openness and interoperability rubric → 「社交媒体开放度与互操作性评则」，本章 new_terms 又给同一评则登记了一个不同中文名的条目，合并后术语表会同时存在两个名字（glossary.json 现已是两条并存），以后各章从此各取一个都会被视为「有据可依」。这是同一处命名分歧的源头，建议在改正文的同时一并清掉。",
+      "suggestion": "删除这条 new_terms（或把 zh 改为「社交媒体开放度与互操作性」，与既有条目 social media openness and interoperability rubric → 社交媒体开放度与互操作性评则 合并），note 里的简称也统一写作「社交媒体开放度评则」。"
+    },
+    {
+      "id": "c21-s0066",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Come on, his spying ability is much better than Mov's ... / Six: his spying capabilities ... / I'd even multiply the last point, about spying capabilities by two",
+      "zh": "“想想吧，他的侦察本事比莫夫强得多……”（s0066）；s0038「侦察能力惊人」、s0087「他的侦察能力」、s0088「关于侦察能力的分数」",
+      "problem": "「侦察能力」在本章是塞拉论证里被单独计分的一条证据项（s0087 计 1 分、s0088 加权乘二），同一概念在 s0038、s0087、s0088 都作「侦察能力」，只有 s0066 改作「侦察本事」。同一章里同一条证据项两种叫法，读者回看列表时会多一次辨认。",
+      "suggestion": "s0066 统一为：「想想吧，他的侦察能力比莫夫强得多，肯定早就察觉到莫夫在跟踪他，于是某天故意埋下那颗种子，好让自己的掩护说法更可信。」"
+    }
+  ]
+}

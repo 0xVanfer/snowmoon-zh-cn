@@ -1,0 +1,224 @@
+{
+ "chapter": 23,
+ "lens": "fluency",
+ "reviewer": "wf-r3",
+ "overall": "整体读得下去：泽汇报战况、食堂里格拉迪亚斯用泽国语朗读、掌舵会治理机制问答、结尾塞拉来电四条线都跟得住，口语落点也有几处不错（「好险」「来嘛，试试看」「我一下子炸了」「谁也没连上」「啪地把手表拍在圆圈上」都像人在说话），面板表头与「[正在呼叫]」文案照旧，没有出戏的地方。问题集中在翻译腔：一是英文长定语、条件从句整块前置（s0089、s0095、s0093、s0083、s0005），二是英语句套直搬（s0085「是随着……才成为可能」、s0128「什么都没做，去真正激励她」、s0009 的「在……之前」前置、s0057 的 only…once），三是少数搭配在中文里不成立或会被读反——最严重的是 s0120「费布里克和赫雷达正因为北极人被卡在……」会被读成北极人被困，其次是 s0111「翡翠正在用它告诉……」指代不明、s0114「记得听说」、s0122「连一点点忙都没帮上」。另有 s0064 一段逐词直译已拗到不成句（s0054–s0079 是格拉迪亚斯的朗读段落，别扭是本色，只需补回骨架），以及两处引语提示语标点不合体例。全章属「能读但有若干处会卡」这一层，改动量不大。已在 fidelity／consistency 修正在途的片段（s0009 宾语、s0069 改口、s0071 数字、s0058／s0066 年份、s0090 术语）未重复列条，仅在句式层面补充。",
+ "issues": [
+  {
+   "id": "c23-s0009",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"That was close. We got ambushed by some Arctic drones, we just barely managed to beat them. Fortunately, we had a full five minutes before the next swarm came to finish ours off, s…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“好险。我们被几架北极无人机伏击，勉强才打赢。幸好下一波蜂群赶来把我们剩下的无人机清掉之前，我们整整有五分钟，所以我想那些芯片都毁掉了，北极人没法从这场战斗里提取训练数据。”</c>",
+   "problem": "「幸好下一波蜂群赶来把我们清掉之前，我们整整有五分钟」把「在……之前」的时间从句整块提到句首，中文读起来像把话说了一半再补，读者要回读一次才能拼出「我们只剩五分钟」；「我们被几架北极无人机伏击」也把施事方硬塞进「被」字句，中文更常说「遭到……的伏击」。宾语（己方无人机）那条意思修正在途，但语序没跟着改，仍旧别扭。",
+   "suggestion": "“好险。我们遭到几架北极无人机的伏击，勉强才打赢。好在这波蜂群赶来把我们剩下的无人机清掉之前，我们还有整整五分钟，所以我想芯片都毁掉了，北极人没法从这场战斗里提取训练数据。”"
+  },
+  {
+   "id": "c23-s0017",
+   "severity": "medium",
+   "type": "本土化",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Seila says she's going to try to figure something out. I gave her Verdow's contact, so far he's the only senator I really trust. So we'll see.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“塞拉说她打算想想办法。我把韦尔多的联系方式给了她，他是我目前真正信得过的唯一一位参议员。走着瞧吧。”</c>",
+   "problem": "「走着瞧吧」在中文口语里带挑衅、威胁的味道（「你等着瞧」），像在跟人叫板；泽这里只是说「成不成还得往后看」。而且「So we'll see」是收尾的轻描淡写，中文这句落在句尾，语气被抬高了一档。",
+   "suggestion": "“塞拉说她打算想想办法。我把韦尔多的联系方式给了她，他是我目前真正信得过的唯一一位参议员。后面再看吧。”"
+  },
+  {
+   "id": "c23-s0056",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Ah, I see, this is one of those cases where knowing the roots on its own really doesn't get you there.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“啊，我明白了，这就是那种光认识词根也到不了意思的情况。”</c>",
+   "problem": "「光认识词根也到不了意思的情况」把 knowing the roots / get you there 逐词拼成中文，「到不了意思」不成搭配，读者要先猜「意思」是「词义」还是「用意」，才明白是「光知道词根也没用」。这是格拉迪亚斯自己的评论（不是朗读段落），应当说人话。",
+   "suggestion": "“啊，我明白了，这就是那种光知道词根也没用的例子。”"
+  },
+  {
+   "id": "c23-s0057",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "<c st=\"color:oklch(0.7 0.15 80)\">\"Indeed. And the whole project of shrinking the roots down only succeeded once we accepted that that's inevitable.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 80)\">“确实。而且，把词根压缩下去的整个工程，也只有在我们接受这件事不可避免之后才算成功。”</c>",
+   "problem": "「把词根压缩下去的整个工程，也只有在我们接受这件事不可避免之后才算成功」是 only…once 句套的直搬：两个「的」字定语压在「工程」上，再把条件从句整块前置，一句话要断三次气；「接受这件事不可避免」里「这件事」也悬空，读者不知道指什么。",
+   "suggestion": "“确实。而且缩词根这件事，也是等我们承认它不可避免之后，才算做成的。”"
+  },
+  {
+   "id": "c23-s0083",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Social media is not always good for people's mental health. Much of the interest in privacy is driven not just by fear of the Arctics, but rather the sheer volume of everyone talki…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“社交媒体并不总是对人心理健康有好处。人们对隐私的关注，很大一部分不只是出于对北极的恐惧，更是因为所有人都在议论所有人的那种铺天盖地的量，以及私生活中的偶然事件变成公共话题的那种不可预测。”</c>",
+   "problem": "两句都在搬英文长定语：「所有人都在议论所有人的那种铺天盖地的量」四个「的」叠在一起，「的那种不可预测」又把抽象名词吊在句尾，中文里「不可预测」不能这样当名词收尾。整段是泽解释网络极简主义的引子，读者在这一句上会明显减速。",
+   "suggestion": "“社交媒体并不总是对人的心理健康有好处。人们对隐私的关注，很大一部分不只是出于对北极人的恐惧，更因为所有人都在议论所有人，信息量大得铺天盖地，而且私生活里的偶然事件随时会变成公共话题，完全没法预料。”"
+  },
+  {
+   "id": "c23-s0085",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"And so now we're slowly seeing the emergence of a different kind of minimalism: internet minimalism. Disconnect. Do things on your own device. And like physical minimalism was made…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“所以现在，我们慢慢看到另一种极简主义的出现：网络极简主义。断开连接。只在自己的设备上做事。就像物质极简主义是随着数字世界能力的增长才成为可能，网络极简主义是随着 AI 和本地软件能力的增长才成为可能——你可以把整个世界装在自己的设备里。”</c>",
+   "problem": "「物质极简主义是随着数字世界能力的增长才成为可能，网络极简主义是随着 AI 和本地软件能力的增长才成为可能」同一个「是随着……才成为可能」连用两遍，像在念公式；原文 like…so… 是类比，不是重复定义。",
+   "suggestion": "“所以现在，我们慢慢看到另一种极简主义出现：网络极简主义。断开连接。只在自己的设备上做事。物质极简主义能成立，靠的是数字世界能力的增长；网络极简主义也一样，靠的是 AI 和本地软件能力的增长——你可以把整个世界装在自己的设备里。”"
+  },
+  {
+   "id": "c23-s0111",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Emerald was letting Gladias know the level of importance and Seila's mood and, Gladias knew, this was already a large part of the message.",
+   "zh": "翡翠正在用它告诉格拉迪亚斯事情的紧要程度和塞拉的情绪；而格拉迪亚斯明白，这本身就已经是这条消息的一大部分。",
+   "problem": "「翡翠正在用它告诉格拉迪亚斯……」的「它」指代不明——最近的名词是「红色的消息」「手表」，读者要先停下来判断是「这个颜色」还是「翡翠本身」；「这本身就已经是这条消息的一大部分」也是 a large part of the message 的直搬，中文不会把「消息」论「大部分」，这里说的是颜色本身已经传达了大半信息。",
+   "suggestion": "“翡翠正借这个颜色告诉格拉迪亚斯事情的紧要程度和塞拉的情绪；格拉迪亚斯明白，光这一点，就已经把消息传达了一大半。”"
+  },
+  {
+   "id": "c23-s0120",
+   "severity": "high",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"I snapped. I called her out on it, and asked how she could possibly be betraying us like this, when Febric and Hreda were stuck a thousand kilometers away because of them.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“我一下子炸了。我当场质问她，问她怎么能这样背叛我们——费布里克和赫雷达正因为北极人被卡在一千公里之外。”</c>",
+   "problem": "「费布里克和赫雷达正因为北极人被卡在一千公里之外」会先被读成「北极人被卡在……」：中文里「因为＋名词＋被」中间不加「而」时，被字句的主语默认是紧邻的名词，读者会把被困的人读成北极人，塞拉指责的分量当场掉一半。这是全章最容易读反的一处。",
+   "suggestion": "“我一下子炸了。我当场质问她，问她怎么能这样背叛我们——费布里克和赫雷达，就是被他们害得困在一千公里之外。”"
+  },
+  {
+   "id": "c23-s0128",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Wow. Now I feel so bad. We really haven't been doing anything to actually motivate or encourage her.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“哇。我现在觉得特别糟。我们真的什么都没做，去真正激励她、鼓励她。”</c>",
+   "problem": "「我们真的什么都没做，去真正激励她、鼓励她」把 have been doing anything to actually… 的 to 不定式照搬成「去……」，中间那个逗号在中文里读起来像话没说完；「真正激励她、鼓励她」两个近义动词并排也显得公式化，这里是格拉迪亚斯愧疚时的自白。",
+   "suggestion": "“哇。我现在觉得特别糟。我们其实一直什么也没做，没有真正去激励她、鼓励她。”"
+  },
+  {
+   "id": "c23-s0005",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Between the tables and the wall of the cafeteria, there were green trees on all sides. Two of the walls were covered with vines. The other two walls were covered with large mirrors, making the whole room seem like it was part of s…",
+   "zh": "食堂的桌椅与墙壁之间，四面都种着绿树。两面墙上爬满藤蔓，另外两面则镶着巨大的镜子，让整个房间仿佛属于某种无限重复、无边无际的空间。入口只有一个，位于一角，两侧各有一丛茂密的灌木，挡住了通往入口隧道的视线。",
+   "problem": "「让整个房间仿佛属于某种无限重复、无边无际的空间」是 part of some kind of…space 的逐词对应，中文里房间不会「属于」一个空间，读起来像在说产权；「某种无限重复、无边无际的」两层定语也偏堆叠。",
+   "suggestion": "“食堂的桌椅与墙壁之间，四面都种着绿树。两面墙上爬满藤蔓，另外两面则镶着巨大的镜子，让整个房间仿佛置身于某种无限重复、无边无际的空间里。入口只有一个，位于一角，两侧各有一丛茂密的灌木，挡住了通往入口隧道的视线。”"
+  },
+  {
+   "id": "c23-s0021",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 80)\">\"Here, let's see how good your Dzegoban is. Open up a page and read.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 80)\">“来，看看你的泽国语学得怎么样。随便翻开一页，读。”</c>",
+   "problem": "「随便翻开一页，读。」末尾单摆一个「读」，是 Open up a page and read 的直搬；中文要人朗读会说「念」，而且这里芬是在考他的发音，得有个听的对象才成立。",
+   "suggestion": "“来，看看你的泽国语学得怎么样。随便翻一页，念给我听。”"
+  },
+  {
+   "id": "c23-s0064",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Living with the warm-heartedness - happiness? - of having few things is freedom.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“与物少而来的‘暖心’——幸福？——一起活着，就是自由。”</c>",
+   "problem": "这一段是格拉迪亚斯逐词直译泽国语，别扭是应该的；但「与物少而来的‘暖心’——幸福？——一起活着，就是自由」已经拗到不成句：中文「与……一起活着」要求前面是能并列的人或物，「与‘暖心’一起活着」读者一时看不出是在说「带着这种暖心过日子」。保留直译的僵硬，但要补回句子骨架。",
+   "suggestion": "“带着因东西少而来的‘暖心’——幸福？——活着，就是自由。”"
+  },
+  {
+   "id": "c23-s0069",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"This implied that many people gathered physical things ... wait, physical things gathered by many people, began to be unwanted.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“这意味着许多人攒下了实物……等等，是众人攒下的实物，开始变得没人想要了。”</c>",
+   "problem": "这段的「等等」是原作的自我更正（先说 people gathered things，再改口成 things gathered by people，让主语从「人」换成「实物」）；现在的中文版本「许多人攒下了实物……等等，是众人攒下的实物」前后只换了「许多人／众人」，改口读不出来，读者会以为是排版重复。这是全章唯一一处改口本身丢掉的段落。",
+   "suggestion": "“这意味着许多人攒下了实物……等等，是说被众人攒起来的那些实物，开始变得没人想要了。”"
+  },
+  {
+   "id": "c23-s0071",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Hand devices caused to be unnecessary aggregate-and-group devices, music devices, sound conversation devices and ten other devices that one would previously have.\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“手持终端让‘聚合与分组装置’、音乐装置、声音交谈装置，以及以前一个人会有的另外十种装置，都变得不必要了。”</c>",
+   "problem": "「以前一个人会有的另外十种装置」里「一个人会有的」是 that one would previously have 的直搬，中文说「一个人会有的装置」像在讲生理构造；这仍是朗读句，直译感可以留，但搭配要像中文。",
+   "suggestion": "“手持终端让‘聚合与分组装置’、音乐装置、声音交谈装置，以及以前每个人都会有的另外十种装置，都变得不必要了。”"
+  },
+  {
+   "id": "c23-s0084",
+   "severity": "low",
+   "type": "欧化",
+   "source": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"People are afraid of many parts of the internet, especially in other countries where privacy technology is not as strong and well-understood. Location tracking, behavior profiling,…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“人们害怕互联网的许多部分，尤其是在隐私技术不如这里强、也不如这里被人理解的其他国家。位置追踪、行为画像，这一切。而且不只是隐私——人们正在意识到，互联网可以像毒品一样让人上瘾。”</c>",
+   "problem": "「不如这里被人理解」把 well-understood 直翻成「被人理解」，被动式在中文里既拗口又有歧义（是技术被理解，还是人理解技术）；前半句「不如这里强」已经省了比较对象，后半句再加个「被」，读起来一顿。",
+   "suggestion": "“人们害怕互联网的许多部分，尤其是在隐私技术没这里强、也没这里这么普及的其他国家。位置追踪、行为画像，这一切。而且不只是隐私——人们正在意识到，互联网可以像毒品一样让人上瘾。”"
+  },
+  {
+   "id": "c23-s0089",
+   "severity": "low",
+   "type": "欧化",
+   "source": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"There is a collection of tax rubrics. For each rubric, twenty one Keepers are randomly chosen - seven added in each year, for a three year term. The job of the group is to propose …",
+   "zh": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“有一套税则评则。每一条评则随机抽二十一名掌则人——每年新增七名，任期三年。这个组的职责是提出并表决对评则的修改。二十一人分成三个七人小组，每组都混有第一年、第二年和第三年的人。任何掌则人都可以就修改评则提出提案。每个小组独立讨论每一项提案，彼此不知道对方是谁。讨论几轮之后，二十一名掌则人对每项提案投票，拿到至少二十一人中十三票赞成的提案就被采纳。”</c>",
+   "problem": "「拿到至少二十一人中十三票赞成的提案就被采纳」把 with at least thirteen out of twenty one votes approving 的条件整块前置成「的」字定语，主语「提案」被压到句尾；这是全章信息密度最高的一段制度说明，最后一句卡一下最影响理解。",
+   "suggestion": "“有一套税评则。每一条评则随机抽二十一名掌则人——每年新增七名，任期三年。这个组的职责是提出并表决对评则的修改。二十一人分成三个七人小组，每组都混有第一年、第二年和第三年的人。任何掌则人都可以就修改评则提出提案。每个小组独立讨论每一项提案，彼此不知道对方是谁。讨论几轮之后，二十一名掌则人对每项提案投票；拿到二十一人中至少十三票赞成的，就算通过。”"
+  },
+  {
+   "id": "c23-s0093",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Actually, good that you mention that last part. My co-father, Vil, was in a long lawsuit against, well, basically his former employer, for doing some financial trickery to fire him …",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“其实，你提到最后那点正好。我共同家庭的另一位父亲维尔，打了一场很长的官司，告的……嗯，基本就是他以前的雇主，因为他们搞了些财务上的把戏把他解雇，好赖掉事先约定好的遣散费。第一轮他赢了。公司上诉，输了。然后他们又上诉了一次。就在昨天，法庭驳回了他们的第二次上诉，判定为恶意，并把他们要付给维尔和其他工人的金额提到了三倍。”</c>",
+   "problem": "「我共同家庭的另一位父亲维尔，打了一场很长的官司」把 eleven 字的名词短语整个压在「维尔」前面，读者要读到人名才知道在介绍谁；中文介绍亲友惯用同位语先点人、再补身份。",
+   "suggestion": "“其实，你提到最后那点正好。维尔是我共同家庭里的另一位父亲，他打了一场很长的官司，告的……嗯，基本就是他以前的雇主，因为他们搞了些财务上的把戏把他解雇，好赖掉事先约定好的遣散费。第一轮他赢了。公司上诉，输了。然后他们又上诉了一次。就在昨天，法庭驳回了他们的第二次上诉，判定为恶意，并把他们要付给维尔和其他工人的金额提到了三倍。”"
+  },
+  {
+   "id": "c23-s0095",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"That's always the most important question: whether or not it actually works. The Parliament hearings approving new Keepers and Sentinels, for example, barely work at all at this poi…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“最重要的问题永远是它到底管不管用。比如批准新掌则人和新监审官的议会听证，到眼下这一步，基本上已经形同虚设了——至少在我看来是这样。”</c>",
+   "problem": "「比如批准新掌则人和新监审官的议会听证，到眼下这一步，基本上已经形同虚设了」——「批准……的议会听证」是长定语，「新×人」连用两次，最后「到眼下这一步」也不是中文说法（应为「到目前」「到这一步」）。泽这里是在下判断，句子该短促。",
+   "suggestion": "“最重要的问题永远是它到底管不管用。比如议会那套批准新掌则人、新监审官的听证程序，到目前基本上已经形同虚设了——至少在我看来是这样。”"
+  },
+  {
+   "id": "c23-s0114",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"I ... do not. I just remember hearing that she got eighty-one percent on her latest exam. What happened?!\"</c>",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“我……不知道。我只记得听说她最近一次考试考了81%。出什么事了？！”</c>",
+   "problem": "「我只记得听说她最近一次考试考了81%」把 remember hearing that 拼成「记得听说」，两个动词直接叠在一起，中文要么「记得听人说过」，要么「就记得有这么回事」。这是塞拉尖叫质问时格拉迪亚斯的答话，越口语越好。",
+   "suggestion": "“我……不知道。我只记得听人说过，她最近一次考试考了81%。出什么事了？！”"
+  },
+  {
+   "id": "c23-s0118",
+   "severity": "low",
+   "type": "本土化",
+   "source": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"She was in some kind of chat group, and they were sharing Arctic propaganda. Cheering on Lord Ephelion's messages. Hoping that the Arctics would come to the rest of Veridia soon.\"<…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“她在某个聊天群里，他们在分享北极的宣传。为埃菲里昂勋爵的言论叫好。盼着北极人快点来到维里迪亚的其余地方。”</c>",
+   "problem": "「盼着北极人快点来到维里迪亚的其余地方」——北极人在故事里是打进来的入侵者，「来到……其余地方」像在写旅游行程；中文里这种语境下会说「打到……来」。后一句「为埃菲里昂勋爵的言论叫好」没问题，这一句语气不搭。",
+   "suggestion": "“她在某个聊天群里，他们在分享北极的宣传。为埃菲里昂勋爵的言论叫好。盼着北极人早点打到维里迪亚其他地方来。”"
+  },
+  {
+   "id": "c23-s0122",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">\"That the Arctics were right. Their philosophy, their idea that some people are worse and other people are better, and that the better people should rule everyone else, and the most…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“她说北极人是对的。他们的哲学——有些人更差、有些人更好，更好的人就该统治其他所有人，人生最重要的事就是努力成为那更好的人之一——正是激励她的东西，给了她学习和用功的理由。说我们无条件的爱是毒药。说北极人的哲学——欣赏和爱只作为成功的奖赏——反而把她从深坑里拉了出来，而我们做的一切连一点点忙都没帮上。”</c>",
+   "problem": "「而我们做的一切连一点点忙都没帮上」是 nothing we did helped even a little 的逐词搬运：「帮忙」的主语得是人或人的动作，而这里的主语是「我们做的一切」；「一点点忙」和「帮上」也重复。收尾这句正是莉莉这番话最刺人的地方，落点要干脆。",
+   "suggestion": "“她说北极人是对的。他们的哲学——有些人更差、有些人更好，更好的人就该统治其他所有人，人生最重要的事就是努力成为那更好的人之一——正是激励她的东西，给了她学习和用功的理由。说我们无条件的爱是毒药。说北极人的哲学——欣赏和爱只作为成功的奖赏——反而把她从深坑里拉了出来，而我们做的一切，连一点用都没有。”"
+  },
+  {
+   "id": "c23-s0131",
+   "severity": "low",
+   "type": "生硬",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"Okay, hold on. Not seeing through Delwart, that one is on me. I was dumb. Mov was dumb. I admit it. This, this is on both of us. You're Lily's mom. You saw her many times - before s…",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“好，等一下。没看穿德尔瓦特，那件事是我的错。我蠢。莫夫也蠢。我承认。这件事，这件事是我们两个人的。你是莉莉的妈妈。你见过她很多次——在她去维尔和黛雅那儿之前，在她住在他们那儿时我们去看她的时候，还有她回来之后。你有很多机会把事情变好，就像我一样。而你没做成，就像我也没做成。所以我们一起解决这个问题吧。”</c>",
+   "problem": "「你有很多机会把事情变好，就像我一样。而你没做成，就像我也没做成。」——「把事情变好」是 make things better 的直搬（中文说「把事情往好里扳」「把关系修补好」），「你没做成」单摆也缺宾语，两句连读像文件里的对账；这里是格拉迪亚斯试图拉回塞拉的长段话，语气要连贯。",
+   "suggestion": "“好，等一下。没看穿德尔瓦特，那件事是我的错。我蠢。莫夫也蠢。我承认。这件事，这件事是我们两个人的。你是莉莉的妈妈。你见过她很多次——在她去维尔和黛雅那儿之前，在她住在他们那儿时我们去看她的时候，还有她回来之后。你有很多机会把事情往好里扳，就像我一样；可你没做到，我也没做到。所以我们一起解决这个问题吧。”"
+  },
+  {
+   "id": "c23-s0051",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">\"You think I can do this?\"</c>, Gladias asked incredulously.",
+   "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“你觉得我能读这个？”</c>，格拉迪亚斯不敢相信地问。",
+   "problem": "引语以问号收尾，后面的提示语前又多了一个逗号（「……吗？」</c>，格拉迪亚斯……）。体例规范第 4 节的范例是「“我赢了！”男孩喊道。」，全书写法也是问号／叹号后直接相接，这里多出的停顿把句子切成两截；源文里那个逗号是原文标记的残留。",
+   "suggestion": "“你觉得我能读这个？”格拉迪亚斯不敢相信地问。"
+  },
+  {
+   "id": "c23-s0099",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Sounds good\"</c>, Zei replied.",
+   "zh": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“好。”</c>，泽答道。",
+   "problem": "陈述语气的引语用句号收尾、后面还带一个逗号（「好。」</c>，泽答道），引语和提示语被切成两句却又连着逗号。按体例规范第 4 节，陈述引语应收在引号内加逗号，再写提示语，全章／全书同类句都作「……，」某某说」。",
+   "suggestion": "“好，”泽答道。"
+  }
+ ]
+}

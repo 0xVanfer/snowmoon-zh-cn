@@ -1,0 +1,53 @@
+{
+  "chapter": 9,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "本章一致性总体良好：人名（泽、白、芬、登）、地名（帕佛盖都／泽国、自由城、英格尔沃）、机构与术语（昆高培、最高评议会、班孙培、民本棋祭司、泽国语、影子军队、隐私袍、隔信箔、算力盒、山体金字塔、手持终端、滑翔机、工厂、全国赛、芯片验证、混网、密码学网络、元程序、混淆协议、物理不可克隆函数、公共检查员、光尺、嘀嗒、长时）逐条与术语表核对无误；颜色标签与原文完全一致、未发生说话人张冠李戴；日期体例「3724年雨月28日」与全书一致；数字与汉字之间无空格、拉丁词与汉字之间单空格、全角标点、六点省略号、破折号经脚本全章扫描均无违例；本章无 locked 段，泽国语罗马字（giu jan li mo fe jia dzu lie／lo mo fe jia dzu lie zo hen jun／jia dzu lie／jia dzu ji lie／po so dze go ban de sia）全部原样保留，无被误译者；本章无 device-view 面板，无面板文案体例问题。可挑的问题 5 条、均为跨章用词分叉：同一物件在全书已有既定译法而本章另起一种（绿色圆圈→圆环、黑色轿车→黑色汽车、手持终端→手终端、热力学课→热力学讲座、标题夹注引号）。数值体例另做核验：一分钟一百嘀嗒＝一长时一百分钟＝一天十长时（换算得 1嘀嗒＝0.864秒，与「光每一嘀嗒走十亿光尺／一光尺＝259.020683712毫米」自洽），五十光尺≈12.95米与本章「差不多十三米」吻合，未发现数字矛盾。流程提醒（不计入问题）：本章 new_terms 的 14 条中文与 kind 已与术语表逐条完全相同（lightfoot、mixnet、cryptographic network、fab、physical unclonable function、public inspectors、obfuscation protocol、meta-program、Minpentai priests、Bansunpei priests、mountain pyramid、chip verification 均为本章自身并入，glider、the nationals 为重复登记），无冲突项，合并时忽略即可。",
+  "issues": [
+    {
+      "id": "c09-s0052",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "\"Eventually, he got to a sealed door with a green circle beside it. He tapped his watch against the circle. The door slowly opened.\" / c09-s0125 \"Den put his watch against a circle with a glowing green outline. The door opened.\"",
+      "zh": "c09-s0052：「最后，他来到一扇密封的门前，门边有个绿色的圆环。他把手表贴上去碰了一下。门缓缓打开。」；c09-s0125：「登把手表贴到一个泛着绿光的圆环上。门开了。」",
+      "problem": "同一物件（门上那种贴手表感应的绿色圆盘）全书一律作「圆圈」：第1章同源句 a circle with a glowing green outline 译作「闸门上一个泛着绿光的圆圈」，第5章 a green circle 译作「绿色圆圈」，其余各章共 12 处「圆圈」（含本章之前反复出现的绿色圆圈）。本章两处改成「圆环」，与术语表及全书既定译法分叉；「圆环」在中文里更像环形装饰件，读者容易误以为门上装的是个环，而非第1、5 章那种贴手表的圆盘。",
+      "suggestion": "c09-s0052 改为：「最后，他来到一扇密封的门前，门边有个绿色的圆圈。他把手表贴上去碰了一下。门缓缓打开。」；c09-s0125 改为：「登把手表贴到一个泛着绿光的圆圈上。门开了。」"
+    },
+    {
+      "id": "c09-s0132",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "\"My hand device has a protocol by which it repeatedly contacts each device a million times ...\"",
+      "zh": "「……我的手终端上跑着一套协议，会反复联系每台设备一百万次，要求整套协议在十分之一嘀嗒内跑完。……」",
+      "problem": "术语表 hand device → 「手持终端」；全书 96 处作「手持终端」，本章 c09-s0111 也作「手持终端」（「登打开手持终端」），只有这一处缩成非词的「手终端」（第 10 章同人物场景亦有同样写法）。同一个物件在一章内两种叫法，且「手终端」不是中文里的既有说法，读者会短暂卡壳。",
+      "suggestion": "改为：「……我的手持终端上跑着一套协议，会反复联系每台设备一百万次，要求整套协议在十分之一嘀嗒内跑完。……」"
+    },
+    {
+      "id": "c09-s0104",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "c09-s0104 \"The exit led directly into the interior of a large rectangular-shaped black car.\" / c09-s0109 \"Zei and Den got out of the black car.\"",
+      "zh": "c09-s0104：「……出口直通一辆长方形黑色汽车的内部。……」（c09-s0109 同作「泽和登下了黑色汽车」）",
+      "problem": "术语表 black car → 「黑色轿车」（第18章条目，note 明确指本章这辆隐私轿车：仿真窗、参与车厢互换），全书 9 处均作「黑色轿车」；第12章还专门回指本章同一辆车：「门那边是一辆黑色轿车的内部，和几个月前登带他去晶圆厂时坐的那辆一模一样」——同一辆车在前文叫「黑色汽车」、回指时叫「黑色轿车」，读者会以为是两辆车。",
+      "suggestion": "c09-s0104 改为：「泽和登走出屋子，穿过隧道，来到金字塔一个较小的出口。出口直通一辆长方形黑色轿车的内部。金字塔的门和车门形状一模一样，紧紧贴在一起。」；c09-s0109 改为：「泽和登下了黑色轿车。……」"
+    },
+    {
+      "id": "c09-s0076",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"That arm had been broken and taken a month to heal, all because of a thermodynamics lecture. What Den was suggesting was not a lecture.\"",
+      "zh": "「防卫。泽下意识地一张一合左手的每根手指。那条胳膊断过，养了一个月才好，起因只是一场热力学讲座。而登说的这个，不是讲座。」",
+      "problem": "同一事件（一个月前教室被炸、泽左臂骨折的那堂课）在第4章已按原文 the thermodynamics lecture from a month ago 译作「回想起一个月前那堂热力学课」，此后全书一律称「那堂热力学课」；此处改用「讲座」，把同一件旧事说成另一种场合。",
+      "suggestion": "改为：「防卫。泽下意识地一张一合左手的每根手指。那条胳膊断过，养了一个月才好，起因只是一堂热力学课。而登说的这个，可不是上课。」"
+    },
+    {
+      "id": "c09-s0029",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "c09-s0029 \"Fin took out his booklet, with \\\"po so dze go ban de sia\\\" - the conception of Dzegoban version nine - on the cover.\"",
+      "zh": "「芬掏出他的小册子，封面上写着“po so dze go ban de sia”——泽国语第九版的构想。」",
+      "problem": "同一本小册子、同一句原文（\"po so dze go ban de sia\" - the conception of Dzegoban version nine）在第4章首现时作「“po so dze go ban de sia”——“泽国语第九版的构想”。」，中文释义带全角引号，形成体例规范 §4 要求的「外文招牌＋中文解释」样式；本章漏掉这层引号，同一道具在两章的排版不一致。",
+      "suggestion": "改为：「芬掏出他的小册子，封面上写着“po so dze go ban de sia”——“泽国语第九版的构想”。」"
+    }
+  ]
+}

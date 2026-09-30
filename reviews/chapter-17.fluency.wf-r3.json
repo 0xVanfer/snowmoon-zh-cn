@@ -1,0 +1,152 @@
+{
+  "chapter": 17,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "整体可读，议会拜访与家庭晚餐两条线都跟得上，人物口吻基本落地（韦尔多的热络、贝尔戈尔的技术腔与务实、塞拉的轻描淡写、赫雷达的兴奋都像人说话），图谱资助那段技术长台词也没有读不懂的地方。残留的翻译腔集中在少数几句：把英文的介词结构、存在句和被动语态逐字搬进中文的地方（“给……以……”“权衡永远在那里”“站到更平的场地上”“被录取去……上一些”），以及几个生硬搭配（“眼睛一睁”“目光四处乱转”“放一场大疫”）。没有需要返工重译的段落，改完这十几处即可定稿；本轮没有 high。",
+  "issues": [
+    {
+      "id": "c17-s0032",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Verdow's eyes opened. \"Honestly, you might have a better lead than I do. ... If I had to find someone to defend me against the Arctics, I'd almost trust them over the actual Dzego army.\"",
+      "zh": "韦尔多眼睛一睁。<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“说实话，你手上的门路可能比我还硬。你看泽国的民本棋比赛就知道，那些棋手，还有训练他们的人，明显都是顶尖的。要是让我找人护着我对付北极人，我几乎更信他们，而不是泽国正规军。”</c>",
+      "problem": "“韦尔多眼睛一睁”是把 eyes opened 逐字搬过来。中文里“眼睛一睁”常出现在“眼睛一睁一闭”“眼睛一睁天就亮了”这类时间状语里，用来写吃惊的反应会让人先想到醒来，中文写惊讶是“睁大了眼睛”“眼睛一下瞪圆了”。后半句“我几乎更信他们，而不是泽国正规军”是 trust them over X 的直搬：中文比较要么前置（“比起泽国正规军，我更信他们”），要么整句改写（“我宁可找他们，也不找泽国正规军”）；“我几乎更信他们”里的“几乎”也悬在半空。",
+      "suggestion": "韦尔多睁大了眼睛。<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“说实话，你手上的门路可能比我还硬。你看泽国的民本棋比赛就知道，那些棋手，还有训练他们的人，明显都是顶尖的。要是让我找人护着我对付北极人，比起泽国正规军，我几乎更信他们。”</c>"
+    },
+    {
+      "id": "c17-s0072",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "That's what randomize-above-cutoff does: accountability for those who won't succeed without it, and freedom from incentives for the best",
+      "zh": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“正是。有时候你其实并不想要问责，而是想给人的内在动机留出空间。站在最顶端的人，可能比委员会还聪明。‘截线以上随机化’做的就是这件事：给没有它就成不了事的人以问责，给最优秀的人以摆脱激励的自由——他们几乎不用费什么力气，就能让委员会相信自己的工作足够好。”</c>",
+      "problem": "两处“给……以……”是英文介词结构的硬搬，中文要回读才理得出“对谁用问责、对谁免问责”。更麻烦的是第一处那个“它”指代不清：原文的 it 指 accountability（没有“问责”就成不了事的人），但紧跟在“截线以上随机化”后面，读者第一反应会把“它”读成随机化，句意跑偏。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“正是。有时候你其实并不想要问责，而是想给人的内在动机留出空间。站在最顶端的人，可能比委员会还聪明。‘截线以上随机化’做的就是这件事：没有问责就成不了事的人，给他问责；最优秀的人，则给他不受激励摆布的自由——他们几乎不用费什么力气，就能让委员会相信自己的工作足够好。”</c>"
+    },
+    {
+      "id": "c17-s0080",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "they could release a pandemic that only they can effectively protect only their own people from. ... Put the whole world on a more level playing field, so no one is in a position to light a fire and be the only ones with fireproof suits.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“嗯，如果北极的抗疫技术远远领先于世界其他地方，那他们就有可能放出一场瘟疫，只有他们能有效保护自己人不受其害。这也是为什么把这一切开源——至少是防御性的那些东西——如此有价值：让整个世界站到更平的场地上，谁也甭想一边放火，一边做唯一有防火服的人。”</c>",
+      "problem": "“只有他们能有效保护自己人不受其害”两个分句直接并排、中间没有连接词，而“自己人”又紧跟在“他们”后面，读者要停一下才能确定说的是北极人自己的人。“让整个世界站到更平的场地上”是 level playing field 的逐字直译：level 在这里是“拉平、对等”，不是“平坦”，中文说“更平的场地”不成意象。“一边放火，一边做唯一有防火服的人”里“做……人”搭配生硬，中文说“当唯一有防火服的人”。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“嗯，如果北极的抗疫技术远远领先于世界其他地方，那他们就能放出一场瘟疫，而只有他们能有效保护自己的人不受其害。这也是为什么把这一切开源——至少是防御性的那些东西——如此有价值：让整个世界站在同一条水平线上，谁也甭想一边放火，一边当唯一有防火服的人。”</c>"
+    },
+    {
+      "id": "c17-s0094",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "That actually makes sense, everyone knows the official Dzego government is not where any of the interesting action is happening.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“这倒说得通。谁都知道，泽国官方政府那儿可不是什么有意思的事发生的地方。”</c>",
+      "problem": "“不是……事发生的地方”把英文 where 从句整块搬进中文，否定长定语压在“地方”前面，读者得在“不是／什么有意思的事／发生的地方”之间切三次。这是塞拉随口接的一句话，中文口语不会把“发生”留到最后，而会把它提到动词位置。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“这倒说得通。谁都知道，有意思的事从来不在泽国官方政府那儿发生。”</c>"
+    },
+    {
+      "id": "c17-s0051",
+      "severity": "low",
+      "type": "生硬",
+      "source": "We thought that maybe you should tell him more about Graph Funding, and any advice on what he should do or learn in Dzego.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“格拉迪亚斯在考虑近期去泽国。我们想，也许你可以多给他讲讲图谱资助，还有他在泽国该做什么、该学什么，也给他些建议。”</c>",
+      "problem": "“多给他讲讲图谱资助，还有他在泽国该做什么、该学什么，也给他些建议”把“讲”和“给建议”两套搭配搓在同一句里，最后的“也给他些建议”悬在句尾，像是想起来才补上的。中文更顺的层次是先讲什么、再就什么给建议。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“格拉迪亚斯在考虑近期去泽国。我们想，也许你可以多给他讲讲图谱资助，再就他在泽国该做什么、该学什么给他些建议。”</c>"
+    },
+    {
+      "id": "c17-s0069",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Of course, that's always the tradeoff.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“当然，权衡永远在那里。”</c>",
+      "problem": "“there”是英文存在句式，中文说“权衡永远在那里”像在指某个地方摆着一件东西；贝尔戈尔这里是接话，口吻应该是“永远都有取舍／永远都得权衡”。保留“权衡”一词可与下一段“还有另一个权衡”对上。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“当然，权衡永远都在。”</c>"
+    },
+    {
+      "id": "c17-s0075",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Committees could just decide to give the VNU Materials Science Lab 'ownership' of an entire category, and let them allocate internally.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“我自己也不确定。这个设计的好处是，它总能自己演化，而不用改结构。委员会大可以决定把整个类别‘交给’维里迪亚国立大学材料科学实验室，让它们内部去分配。其实开源社交媒体分析那一项，我们差不多就是这么干的，80%直接给了银聊。”</c>",
+      "problem": "“维里迪亚国立大学材料科学实验室”在中文里是由人组成的机构，指代该用“他们”而不是指物的“它们”；“让它们内部去分配”读起来像把实验室当成一台机器。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“我自己也不确定。这个设计的好处是，它总能自己演化，而不用改结构。委员会大可以决定把整个类别‘交给’维里迪亚国立大学材料科学实验室，让实验室内部自行分配。其实开源社交媒体分析那一项，我们差不多就是这么干的，80%直接给了银聊。”</c>"
+    },
+    {
+      "id": "c17-s0022",
+      "severity": "low",
+      "type": "生硬",
+      "source": "The screen was in Dzegoban. Gladias's eyes wandered around with confusion.",
+      "zh": "屏幕上全是泽国语。格拉迪亚斯一脸茫然，目光四处乱转。",
+      "problem": "“乱转”在中文里带贬义，多用于“眼珠一转”“目光乱转”这类写人心思活络、打主意的场合；放在“一脸茫然”后面气质不对，原文只是视线茫然地四处移动。",
+      "suggestion": "屏幕上全是泽国语。格拉迪亚斯一脸茫然，目光四处游移。"
+    },
+    {
+      "id": "c17-s0023",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"Oh, if you want water, that's 'ja'. And if you want tea, that's 'kai ja'. Literally 'plant water'.\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“哦，想要水是 ja，想要茶是 kai ja，字面意思就是‘植物水’。”</c>",
+      "problem": "“想要水是 ja”省掉了动词，中文口语介绍说法时会说“想要水就说 ja”；现在的写法像一张对照表，念出来不像人在说话。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“哦，想要水就说 ja，想要茶就说 kai ja，字面意思就是‘植物水’。”</c>"
+    },
+    {
+      "id": "c17-s0024",
+      "severity": "low",
+      "type": "本土化",
+      "source": "The robot beeped, signaling acceptance of the order, and began to quietly glide away from them.",
+      "zh": "格拉迪亚斯点了 kai ja。要是真在泽国待上几个月，不如早点适应，先从喝茶开始——顺便记住本地话怎么说。机器人嘀了一声，表示接单，然后悄无声息地滑开。房门短暂地开了一下，机器人出去了。",
+      "problem": "“接单”是外卖、网约车语境里的现代汉语行话，出现在议会办公室的侍应机器人身上，中国读者很容易联想到骑手抢单，会出戏；原文只是“确认收到订单”。",
+      "suggestion": "格拉迪亚斯点了 kai ja。要是真在泽国待上几个月，不如早点适应，先从喝茶开始——顺便记住本地话怎么说。机器人嘀了一声，表示收到订单，然后悄无声息地滑开。房门短暂地开了一下，机器人出去了。"
+    },
+    {
+      "id": "c17-s0047",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"Good to see you too, Verdow!\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“我也高兴见到你，韦尔多！”</c>",
+      "problem": "中文见面寒暄的固定说法是“我也很高兴见到你”，少了程度副词“很”，单说“高兴见到你”偏书面；上一句韦尔多那句“又见面了，真好”是热络的口语，两句落差明显。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“我也很高兴见到你，韦尔多！”</c>"
+    },
+    {
+      "id": "c17-s0060",
+      "severity": "low",
+      "type": "欧化",
+      "source": "one difference between the Graph Funding design and how the Courts and the Order work is that Graph Funding allows even more specialization.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“总之，图谱资助的设计跟合议庭、掌舵会的运作有一个不同：图谱资助允许更高程度的专业化。毕竟分配资金是件相当技术性的事。”</c>",
+      "problem": "“允许更高程度的专业化”是 allow more specialization 的名词化直译：“允许”接抽象名词在中文里很公文，“更高程度的专业化”还要绕一下才明白说的是分工更细。贝尔戈尔这里是解释给外行听，不该用这种句法。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“总之，图谱资助的设计跟合议庭、掌舵会有一个不同：它能容下更细的专业分工。毕竟分配资金是件相当技术性的事。”</c>"
+    },
+    {
+      "id": "c17-s0078",
+      "severity": "low",
+      "type": "生硬",
+      "source": "a few of them are getting paranoid that the Arctics might hit them with a deliberately-released pandemic at some point.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“啊，其实这些技术有很多都传到了泽国，他们开始更认真地对待空气过滤器和紫外线灯——有少数人已经在疑神疑鬼，怕北极人哪天故意放一场大疫来打他们。”</c>",
+      "problem": "“放一场大疫”搭配不成立：大疫指局面，不是能“放”的东西，中文说“放出瘟疫”“投放病毒”。而且紧接的 s0079、s0080 都用“瘟疫”，这里单独换成“大疫”，同一段对话前后用词不一，读起来像换了个作者。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 26.666666666666664)\">“啊，其实这些技术有很多都传到了泽国，他们开始更认真地对待空气过滤器和紫外线灯——有少数人已经在疑神疑鬼，怕北极人哪天故意放出一场瘟疫来打他们。”</c>"
+    },
+    {
+      "id": "c17-s0093",
+      "severity": "low",
+      "type": "生硬",
+      "source": "The Senator and the Graph Funding person both seemed quite supportive of me going. Though they said that Zei might be an even better contact to help me with my visit than anyone they knew!",
+      "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“很顺利。那位参议员和图谱资助的那位都挺支持我去。不过他们说，要论帮我在那边跑这一趟，泽可能是比他们认识的任何人都更好的人选！”</c>",
+      "problem": "“是比他们认识的任何人都更好的人选”把“比……都”和“更好的”叠在同一个定语里，句子重心被推到句尾，念出来要顿一下；中文顺着说“比他们认识的任何人都更合适”就干净了。另外“图谱资助的那位”在中文里略突兀，补成“图谱资助那边的一位”更像口语。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“很顺利。参议员和图谱资助那边的一位都挺支持我去。不过他们说，要论帮我在那边跑这一趟，泽可能比他们认识的任何人都更合适！”</c>"
+    },
+    {
+      "id": "c17-s0102",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"I'm in the top five percent in math in my class, so I got accepted to attend some special education there.\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 106.66666666666666)\">“维里迪亚最好的数学大学就在那儿，”</c>赫雷达答道。<c st=\"color:oklch(0.7 0.15 106.66666666666666)\">“我在班里数学排前5%，所以被录取去那儿上一些专门的课程。”</c>",
+      "problem": "“被录取去那儿上一些专门的课程”是英文被动语态的直搬，还把“一些”这个泛指量词带进了一个孩子炫耀自己名额的句子里，语气被冲淡。中文里孩子说这件事用“被选上……上专门课程”更自然。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 106.66666666666666)\">“维里迪亚最好的数学大学就在那儿，”</c>赫雷达答道。<c st=\"color:oklch(0.7 0.15 106.66666666666666)\">“我在班里数学排前5%，所以被选去那边上专门的课程。”</c>"
+    },
+    {
+      "id": "c17-s0017",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "<c st=\"color:oklch(0.7 0.15 240)\">\"jie mo kai tu jie hei ja ma?\"</c>, the robot asked.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 240)\">“jie mo kai tu jie hei ja ma？”</c>，机器人问。",
+      "problem": "引语已经用问号收尾，后面的提示语前不该再加逗号（体例规范第 4 节的范例是“我赢了！”男孩喊道。；本章 s0084、s0086、s0098、s0099、s0101 的问号／叹号结尾句也都是直接相接）。这句是全章唯一在“？”</c> 后仍带“，”的地方，念出来多一个停顿，机器人的发问被切断。",
+      "suggestion": "<c st=\"color:oklch(0.7 0.15 240)\">“jie mo kai tu jie hei ja ma？”</c>机器人问。"
+    }
+  ]
+}

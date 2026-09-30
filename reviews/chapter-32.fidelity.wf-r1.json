@@ -1,0 +1,80 @@
+{
+  "chapter": 32,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "整体忠实度很高：115 个片段齐全，颜色标签、<e> 着重、罗马字虚构语（dze kai lin pan）与数字（9000万／9亿／90亿／9万亿、15层、40米、200米、将近1公里）逐条对得上，否定、条件与因果关系没有搞反，说话人颜色标记与中文提示语一致，未发现整句漏译或张冠李戴；s0104 机器人端来「茶、米饭和蔬菜」也正确回收了 s0020～s0026 的包袱。问题集中在两处指代／术语层面的偏差：s0032 把全书主线概念 open up 译成「拆解」，s0006 把「the province's liberation」译成「本省解放」而把解放对象指错；其余为时态、数量单位与比喻链上的小偏差。建议按条目修一轮即可发布。",
+  "issues": [
+    {
+      "id": "c32-s0032",
+      "severity": "medium",
+      "type": "误译",
+      "source": "helping open up the Arctic technologies we captured so that we can properly benefit and learn from them",
+      "zh": "帮我们拆解缴获的北极技术，好让我们真正从中受益、学到东西",
+      "problem": "open up 在这里是「开放／公开」（让缴获的技术对外可用），不是「拆开机器」。这一层紧接着第31章的同一话题：c31-s0051 说服塔尔杜尔人「自愿分享知识和专长」、c31-s0052「开源——不只是一个好主意，更是法律」；第8章也把 open up the online world 译为「把网络世界打开」。译成「拆解」丢掉了全书「开放技术」的主线概念，读者会以为他们在拆机器做逆向工程。",
+      "suggestion": "塔尔杜尔也已经有不少人接受了我们的条件，帮我们把缴获的北极技术开放出来，好让我们真正从中受益、学到东西。"
+    },
+    {
+      "id": "c32-s0006",
+      "severity": "medium",
+      "type": "误译",
+      "source": "a particular type of red flower that was native to Northglade, that residents were buying to celebrate the province's liberation",
+      "zh": "一种北林特有的红花，居民们买它来庆祝本省解放",
+      "problem": "「本省」在中文里指叙事者／说话人所在的省，即这条街所在的梅尔丹所在的省；但被解放的省是北岸省：第20章明写「北极士兵……从四面八方扑向北岸省」，第26章写北林属「北极占领区」，第28章「北岸之战即将开始」，本章 s0032、s0034 又交代「北林解放了」「北极人丢了北岸」。北林只是北岸省内的一座边城（且位于一座约20公里宽的岛上），梅尔丹是维里迪亚首都、不在北岸。用「本省」把庆祝对象指成了梅尔丹自己所在的省，与已定地理及本段「北林特有的红花」自相矛盾。",
+      "suggestion": "一种北林特有的红花，居民们买它来庆祝该省解放。"
+    },
+    {
+      "id": "c32-s0027",
+      "severity": "low",
+      "type": "误译",
+      "source": "when are we going to start switching over from meters to lightfeet?",
+      "zh": "我们什么时候开始把米换成光尺？",
+      "problem": "「米」在中文里既是长度单位又是米饭。本章前脚刚用「菜和饭」（s0025）抖过包袱，后脚机器人又端来「米饭和蔬菜」（s0104），「把米换成光尺」很容易被读成「把米饭换成光尺」；同时「米」作单位单说也偏口语。",
+      "suggestion": "我们什么时候开始把米制换成光尺？"
+    },
+    {
+      "id": "c32-s0037",
+      "severity": "low",
+      "type": "误译",
+      "source": "I hear there's already a batch of the new cameras from Dzego flying in, with built-in hard guarantees of what information they can and can't transmit.",
+      "zh": "听说有一批泽国的新摄像头已经运到，内置了硬性保证，能传什么、不能传什么都写死在里面。",
+      "problem": "flying in 是「正在运来／在途」，译文「已经运到」把在途状态改成了已抵达；紧接的后半句「维里迪亚国立大学正在琢磨检查它们的方法」也说明货还没走完流程，两处状态对不上。",
+      "suggestion": "听说已经有一批泽国的新摄像头在运来的路上，内置了硬性保证，能传什么、不能传什么都写死在里面。"
+    },
+    {
+      "id": "c32-s0056",
+      "severity": "low",
+      "type": "误译",
+      "source": "That's why you need the other piece - being able to gather together different people's goals and add them up",
+      "zh": "所以才需要另一半——能把不同人的目标汇集起来、加在一起",
+      "problem": "上一句韦尔多刚说「你要是造一台完美的目标执行机器」，the other piece 是这台机器的另一个部件，译文「另一半」把机器比喻换成对半分，中文里「另一半」还常指配偶，读第一眼容易跑偏。",
+      "suggestion": "所以才需要另外那个部件——能把不同人的目标汇集起来、加在一起，这样你才知道自己实现的是人民真正的目标，而不是某一个皇帝的目标。"
+    },
+    {
+      "id": "c32-s0059",
+      "severity": "low",
+      "type": "误译",
+      "source": "any attempt to crystallize it into one piece breaks down if you push it far enough",
+      "zh": "任何想把它凝成一整块的努力，推得够远都会散架",
+      "problem": "crystallize 是本章水—冰—晶体主比喻的动词形态，后文 s0062「结成厚厚的晶体」、s0067「能结成晶体」都在用同一个意象；译成「凝成」丢掉了这处呼应，比喻链少了一环。",
+      "suggestion": "任何想把它结晶成一整块的努力，推得够远都会散架"
+    },
+    {
+      "id": "c32-s0067",
+      "severity": "low",
+      "type": "误译",
+      "source": "The natural, gentle progress we make from decades upon decades of that is worth more than satisfying any goal.",
+      "zh": "这样一代代积累下来的、自然而温和的进步，比满足任何目标都更值钱。",
+      "problem": "decades upon decades 是「几十年又几十年」，强调同一尺度上的长期缓慢累积；「一代代」换成了代际单位，也把「from ... of that」的累积过程改写成「积累下来」，原文的时间尺度被换掉。",
+      "suggestion": "这样几十年又几十年下来自然而然取得的温和进步，比满足任何目标都更值钱。"
+    },
+    {
+      "id": "c32-s0089",
+      "severity": "low",
+      "type": "误译",
+      "source": "we don't really have much power to be the ones to answer that question if the Arctics continue to stay further ahead",
+      "zh": "这个嘛，如果北极人一直领先下去，我们其实没什么资格来做那个回答的人。",
+      "problem": "power 指实力／能力（有没有分量去决定答案），译成「资格」变成了「配不配」，把「因为落后所以没有实力作答」换成了「没有正当性作答」，因果落点偏移。",
+      "suggestion": "这个嘛，如果北极人一直领先下去，我们其实没多少实力来回答那个问题。"
+    }
+  ]
+}

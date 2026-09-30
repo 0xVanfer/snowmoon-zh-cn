@@ -1,0 +1,35 @@
+{
+  "chapter": 25,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "第 25 章一致性整体很干净，没有 high／medium 问题：122 段与原文逐段一一对应，id、顺序、role（title／place／date／p 109／div 3／th 3／cell 3／center 1）全对得上；89 处 <c> 的 st 颜色值（格拉迪亚斯 oklch(0.7 0.15 93.33)38 处、泽 346.66 38 处、韦尔多 293.33 13 处）与原文逐字符完全相同，6 处 <e>（some／you／I／not／based on／that）与 9 处 <br/> 无一处错位、少或多；本章 locked 全为 false、原文不含任何 <f>，不存在虚构语言被误译的问题。术语逐条落在术语表上：帕佛盖都／泽国／维里迪亚／红郡／北林／掌舵会／合议庭／议会／军方／法官／参议员／韦尔多（含面板「韦尔多参议员」，与第 8、17、26 章同式）／格拉迪亚斯／泽／登／德尔瓦特／民本棋／手持终端／手表／圆圈／异或／异或和／先手占优／后手占优／根本法／密码学网络／熵，与 pipeline/glossary.json 的 zh 完全一致，别名表里 30 余条禁用变体（含「小绿圈」「圆环」「手终端」「自由城的防卫队」等）一条未出现；日期「3724年霜期1日」接第 24 章「雾期27日」、第 26 章「霜期5日」，地点头「帕佛盖都，泽国」与全书 9 处同型，月份用词与术语表 months 的 Frostime→霜期 一致，数字与汉字之间无空格；「第十四条根本法」与第 26 章「第十四条／第二十一条根本法」同体例。数字链可逐格复原且与三块面板、六张插图完全吻合（3／4／10／13 → 0011/0100/1010/1101 → 0010/0100/1010/1101 → 0010/0100/1010/1100；插图从左到右、从上到下依次 3,4,10,13 → 2,4,10,13 → 2,4,10,12 → 2,4,7,12 → 2,4,7,1 → 0,1,0,1），全章无半角标点、无拉丁字母残留、无违规空格，引号层级（内层‘ ’三处）、六点省略号、双破折号体例合规，面板文案「消息／收件人／时间」与第 15、16 章同源表头（Message／To／Time）一致，[正在呼叫] 保持半角方括号、合体例（第 23 章同款，glossary 亦收「now calling → 正在呼叫」）。只发现 3 条 low：一处对举词搭配不统一（先手就能赢／做后手／执先手）、一处同指两称（堆／格）、一处插图说明与正文术语漂移（蓝点／圆点 vs 圆圈），都不影响阅读。另注：new_terms 里 XOR 条的 note 写「术语表尚未收录」，但 glossary.json 已收 XOR（from chapter-14.zh），属该文件口径滞后，与正文无关。",
+  "issues": [
+    {
+      "id": "c25-s0049",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"Now, if the board started with an XOR sum that's <e>not</e> zero, then I would win if I go first. But if the board starts with an XOR sum of zero, then as second player I'm guaranteed to win.\"",
+      "zh": "“如果开局时棋盘的异或和<e>不</e>是0，那我先手就能赢。但如果开局异或和是0，那我做后手就稳赢。”",
+      "problem": "「先手／后手」这一对概念在本章的动词搭配出现了三种写法：c25-s0020「先手后手由你挑」（名词并列）、本句前半「（我）先手就能赢」（把「先手」直接当动词）、本句后半「做后手」（又换一个动词）、c25-s0064「如果你执先手」。同一句里的左右两半不同构，「先手就能赢」与「做后手就稳赢」并列时读者会以为说的不是同一组对应关系；而「做后手」也不是中文棋类术语的固定搭配（本章另一处用的是「执先手」，术语表 new_terms 立的是「先手占优／后手占优」这一对）。建议与 c25-s0064 对齐，统一用「执先手／执后手」。（fluency 报告 wf-r3 的 c25-s0049 条也指出此处，结论一致。）",
+      "suggestion": "“如果开局时棋盘的异或和<e>不</e>是0，那我执先手就能赢。但如果开局异或和是0，那我执后手就稳赢。”"
+    },
+    {
+      "id": "c25-s0004",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Gladias and Zei were sitting at a table in an enclosed room, with the tabletop functioning as a screen. On the screen, there were four piles of circles. ／ \"It's your turn first, so you pick one pile, and take at least one circle from the pile. You can take more, but you have to take at least one, and you can only take from one pile.\"",
+      "zh": "格拉迪亚斯和泽坐在一间封闭房间的桌旁，桌面本身就是一块屏幕。屏幕上摆着四堆圆圈。 ／ “你先走，所以挑一堆，从那堆里至少拿走一个圆圈。可以多拿，但至少要拿一个，而且一次只能从一堆里拿。”",
+      "problem": "这四个区域在全书被定为「格」：术语表（pipeline/glossary.json 与 docs/glossary.md）收 box →「格」，note 写明「棋局界面上分装圆圈的四个格子，如上左格、右下格」，本章译文自身的 new_terms 也把 box 登记为「格」；正文从 c25-s0009 起共 15 处一律用「格／格子」（左上格、右下格、左下格、每个格子的圆圈数、四个格子、挑出这样一个格子），6 张插图画的也正是四个虚线格。只有开头的 c25-s0004「四堆圆圈」与 c25-s0006「挑一堆／从那堆里／从一堆里」用「堆」，同一章内同一样东西两个名字，且与术语表、new_terms 的定名不一致（英文 s0004／s0006 用 pile、s0009 起改用 box，是原文自身换词，中文按术语表统一到「格」即可，不必跟着英文换）。",
+      "suggestion": "c25-s0004：格拉迪亚斯和泽坐在一间封闭房间的桌旁，桌面本身就是一块屏幕。屏幕上分作四格，各堆着一些圆圈。 c25-s0006：“你先走，所以挑一格，从那一格里至少拿走一个圆圈。可以多拿，但至少要拿一个，而且一次只能从一格拿。”"
+    },
+    {
+      "id": "c25-fig-captions",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "（插图说明／alt 文本，无英文对应句；源见 sources/work/figures/manifest.json 中 chapter-25-fig-01…06 的 caption，经 pipeline/build_markdown.py、pipeline/build_html.py 写入 book/chapters/chapter-25.md 与 book/snowmoon-zh.html 的 alt／title）",
+      "zh": "「四个虚线框中蓝色圆点的数量与排列对比」「四个虚线框展示不同数量与排列的蓝色圆点。」「四个虚线框中不同数量的蓝色圆点排列」「四个虚线框中分别排列着2、4、7、12个蓝点」「四个虚线框内分别排列不同数量的蓝点」「四个虚线方框中，右侧两框各有一个蓝点。」",
+      "problem": "同一批棋子，正文与术语表一律叫「圆圈」（glossary 别名表另有「圆环 → 圆圈」的规范化记录），本章正文出现 16 次；六条插图说明却写成「蓝色圆点」「圆点」「蓝点」三种说法，指同一批棋子却用了正文从未出现的词，同一组里还有「虚线框中／虚线框内／虚线方框中」三种写法。alt／title 是读者可见文本（悬停即显示），与正文术语不一致；同类漂移在第 4、22 章的插图说明里也有过（说明由生图流水线的 caption 统一生成），但按术语表应统一为「圆圈」，指四个区域时用「格」。",
+      "suggestion": "六条说明统一改为：`四个虚线格中蓝色圆圈的排列对比`／`四个虚线格中不同数量的蓝色圆圈`／`四个虚线格中蓝色圆圈的数量与排列`／`四个虚线格中分别排列着2、4、7、12个蓝色圆圈`／`四个虚线格中数量不同的蓝色圆圈`／`四个虚线格中，右侧两格各有一个蓝色圆圈。`（改 sources/work/figures/manifest.json 的 caption 后重跑 build_markdown.py 与 build_html.py）"
+    }
+  ]
+}

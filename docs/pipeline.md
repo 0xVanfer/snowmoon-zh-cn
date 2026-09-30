@@ -63,16 +63,33 @@ book/images/*.svg            中文插图（视觉模型重绘）
   避免把 `fai hie` 这类虚构语言误判为「未翻译」。
 - 结果落 `book/images/`，图注（`CAPTION`）写入 `manifest.json`，Markdown 的 `alt` 直接用它（无障碍）。
 
-## 4. 组装与阅读
+## 4. 复核与改稿（读者视角，两轮）
+
+翻译初稿完成后进入独立复核，复核者与译者不是同一批 subagent：
+
+- **视角**：`fidelity`（忠实度：误译/漏译/增译/因果/比喻/说话人）· `fluency`（中文语感与本土化：
+  翻译腔、断句、对话是否说人话、语气与笑点、称谓与度量）· `consistency`（术语、编号、人称、
+  数字与单位体例、标点、面板文案、locked 虚构语言）。
+- **规模**：3 视角 × 32 章 = 96 份报告（`reviews/chapter-NN.<lens>.<reviewer>.json`），
+  共 987 条意见（high 49 / medium 436 / low 502）；提出者不修稿，只写报告。
+- **落实**：改稿者按 [prompts/apply-review.md](prompts/apply-review.md) 逐条判断，采纳的用脚本按 `id` 改
+  `segments[].text`，驳回的写明理由（风格偏好、理解偏差、或落实对象其实是术语表），
+  分别记入 `reviews/chapter-NN.applied.json`（第一轮）与 `applied2.json`（第二轮）。
+- **分工**：跨章与术语表层的问题由主进程处理——`glossary.json` 的 `aliases`（异体译名统一）+
+  `fixups.json`（需要上下文的定点正则，如「载符飞船」里的「符」不能动），改完再全量 `normalize_zh.py`。
+- 每轮结束都必须 `validate_translation.py` 全绿：结构、`locked`、标签序列一条都不能漂。
+
+## 5. 组装与阅读
 
 - `build_markdown.py`：把骨架里的占位符替换成译文，并做 mini-markup → Markdown 转换
   （颜色 span 的 `oklch()` 会换算成 `#rrggbb` 以兼容旧渲染器）。
-- `build_html.py`（可选成品）：同一份结构渲染成单页 HTML，中文排版规则（首行缩进 2em、`line-break: strict`、
+- `build_html.py`：同一份结构渲染成单页 HTML，中文排版规则（首行缩进 2em、`line-break: strict`、
   1.75 行高、32em 行长、深色模式、设备面板样式）都在这里的 CSS 落地。
 - 色彩可用性：原文用颜色区分说话人。HTML 版除了保留颜色，还给纯对话段落加了同色左侧色条作为
   非颜色线索，并在书首说明「颜色仅作辅助」。
+- `qa_book.py`：书级体检（章节数、插图引用与存在性、占位符残留、中文标点/空格体例、HTML 标签配对）。
 
-## 5. 复现步骤
+## 6. 复现步骤
 
 ```bash
 python3 pipeline/extract.py                 # 32 章结构 + 片段 + 插图
@@ -81,21 +98,21 @@ python3 pipeline/verify_extract.py            # 抽取自检
 python3 pipeline/validate_translation.py      # 译文自检
 python3 pipeline/merge_terms.py               # 合并新术语 + 生成 docs/glossary.md
 python3 pipeline/normalize_zh.py              # 术语/空格/标点统一
+#  读者复核（3 视角，任务书见 pipeline/prompts/review-reader.md）
+python3 pipeline/collect_reviews.py --todo    # 汇总问题清单
+#  改稿（任务书见 pipeline/prompts/apply-review.md）
 python3 pipeline/build_conlang_vocab.py       # 泽国语词表
 python3 pipeline/make_figures.py build        # 插图任务
 python3 pipeline/vision_api.py --batch sources/work/jobs/figures.jsonl \
     --out sources/work/jobs/figures.out.jsonl --concurrency 6
 python3 pipeline/make_figures.py apply        # 校验 + 落盘 book/images
+python3 pipeline/render_previews.py           # 渲染「原图 | 中文版」供视觉复核
 python3 pipeline/build_markdown.py            # 组装 Markdown
 python3 pipeline/build_html.py                # 组装单页 HTML
+python3 pipeline/qa_book.py                   # 书级体检
 ```
 
-## 6. 已踩过的坑
+## 7. 踩坑记录
 
-| 现象 | 原因 | 处理 |
-| --- | --- | --- |
-| `viewBox` 失效、渐变不显示 | HTMLParser 把 SVG 标签/属性名转小写 | `extract.py` 里维护大小写还原映射表 |
-| 网关返回 `HTTP 403 error code: 1010` | Cloudflare 拦截 Python 默认 UA | `vision_api.py` 使用浏览器 UA |
-| 工作流里 `provider: <本地 provider 名>` 的子代理报 `Stream ended without finish_reason` | pi-ai 适配器与该公司网关的流式响应不兼容 | 改用自带 `vision_api.py` 直连同一端点与凭据（本项目 harness 的一部分） |
-| 校验把 `improvements`、`care` 判定为虚构语言 | 只按「全小写」判断泽国语 | 改为按词表 + 短词规则判断（`build_conlang_vocab.py`） |
-| subagent 并发上限（8）导致启动失败 | harness 限制 | 分批启动，等通知再补 |
+关键错误与经验单独记在 [lessons.md](lessons.md)（抽取的 SVG 大小写、字符实体比对、术语别名自替换、
+Chrome headless 不退出、网关 UA 拦截、子代理并发上限等），此处不再重复。

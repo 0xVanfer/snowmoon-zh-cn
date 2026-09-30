@@ -1,0 +1,170 @@
+{
+  "chapter": 20,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "整体可读：新闻播报、莫夫的两场盘问、与巴尔梅和莱克托比的两段对话都跟得上，口语落点也不错（“幸会，塞拉”“走投无路”“就是不想跟人说话”）。问题集中在三类：新闻段里“干扰无人机制”读不通；对话里成串的英文名词化与分词结构（“威胁是要防内幕交易”“这个检查被触发了多少次”“满场做戏式的愤怒”）让长句必须回读；还有若干逐字搬运的搭配（“你的孩子，我很遗憾”“再说一次”“等等看”）。都属于润色层面，不动情节即可改好。",
+  "issues": [
+    {
+      "id": "c20-s0013",
+      "severity": "high",
+      "type": "误译",
+      "source": "Long-distance transmissions between the Greater Plum Harbor and the rest of Northglade, which are evading the jamming mechanisms, are now the main channel of two-way communication...",
+      "zh": "大梅港与北林其余地区之间的远距离传输躲过了干扰无人机制，如今成了与北岸省双向通信的主要通道。",
+      "problem": "“干扰无人机制”读不通：原文只有 jamming mechanisms（干扰机制／干扰设备，第 15 章同类处即译作“干扰设备”），这里却插进了“无人机”，读者会先把它切成年表里的术语“干扰无人机”，再对着尾巴那个“制”发懵，全句卡住。",
+      "suggestion": "大梅港与北林其余地区之间的远距离传输躲过了干扰机制，如今成了与北岸省双向通信的主要通道。"
+    },
+    {
+      "id": "c20-s0099",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "it was some kind of paranoid threat against an enemy that was not really present ... He argued to me that the more important information threat is protecting against insider trading.",
+      "zh": "那是一种偏执，在防一个根本不存在的敌人——不过也许现在他会改口了。他跟我主张，更重要的信息威胁是要防内幕交易。",
+      "problem": "三处名词化硬搬：“偏执”在中文里是形容词性说法，单独作名词再带“在防……”很别扭（原文这里本是“疑神疑鬼地防一个不存在的敌人”）；“他跟我主张”不是中文说法；“信息威胁是要防内幕交易”主宾不搭——威胁是要被防的，不能说威胁去防什么。",
+      "suggestion": "那有点疑神疑鬼，防的是一个根本不存在的敌人——不过也许现在他会改口了。他跟我争论说，更需要防的信息威胁其实是内幕交易。"
+    },
+    {
+      "id": "c20-s0129",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "he thought that schools should just teach people knowledge, and they should learn to love Veridia by seeing how great it is on their own.",
+      "zh": "他认为学校只该教人知识，爱不爱维里迪亚，该由他们自己看到它有多好之后自然产生。",
+      "problem": "末句主语和谓语接不上：“该由他们自己看到它有多好之后自然产生”，到底什么“自然产生”悬在空中，读者要回读两遍；用“由……之后”串联时间与施动也是英文结构直搬。",
+      "suggestion": "他认为学校只该教人知识；至于爱不爱维里迪亚，该让他们自己看到它有多好，然后自己去爱上它。"
+    },
+    {
+      "id": "c20-s0131",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "He seemed generally pro-freedom, he believed that people should be left to evolve on their own, generally things work out best when they happen spontaneously and naturally, the Order should not be putting its thumb on the scale so much.",
+      "zh": "“他总体上像是主张自由，认为该让人自行演化，事情顺其自然往往结果最好，掌舵会不该这样把拇指按在天平上。”",
+      "problem": "四个分句用逗号一字排开，主次全平，读起来像提纲；“像是主张自由”是 seemed pro-freedom 的逐字搬运（“像是不像”悬空）；“让人自行演化”把 evolve 用在人事上，带生物学味，中文得说“自己慢慢发展／自己摸索”。",
+      "suggestion": "“他大体上是倾向自由的，认为该让人自己去摸索、慢慢发展；事情顺其自然往往结果最好，掌舵会不该这样把拇指按在天平上。”"
+    },
+    {
+      "id": "c20-s0140",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "a language model inside the camera, that detects whether or not, say, an act of violence is going on ... so we get a public trace of how many times the check was triggered.",
+      "zh": "大概就是在摄像头里装一个语言模型，用来判断比如有没有暴力行为正在发生。……这样我们就能公开追踪这个检查被触发了多少次。",
+      "problem": "“判断比如有没有……”把插入语 say 硬塞进动宾之间，读到“比如”会断气；“公开追踪这个检查被触发了多少次”是名词化加被动叠加，中文更自然的是“查到……一共被触发过多少次”。",
+      "suggestion": "大概就是在摄像头里装一个语言模型，用来判断——比方说——有没有正在发生的暴力行为。……这样我们就能公开查到这项检查一共被触发过多少次。"
+    },
+    {
+      "id": "c20-s0186",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "seems like no one is lifting a finger again. I checked the senate hearing on my way here, a lot of performative outrage, no action, no introspection about how we got here.",
+      "zh": "他们拿下了北林，看起来又没人动一根手指。来的路上我看了一下参议院听证会，满场做戏式的愤怒，没有行动，也没有反思我们是怎么走到这一步的。",
+      "problem": "“没人动一根手指”是 lift a finger 的直搬，中文说“没人肯出手／没人管”；“满场做戏式的愤怒”把 performative outrage 逐字拼起来，中文里“做戏式”不作定语修饰“愤怒”，读者要在脑子里转一道。",
+      "suggestion": "他们拿下了北林，看起来又没见谁动一根手指。来的路上我看了一下参议院听证会，满场都是作秀式的义愤，没有行动，也没有反思我们是怎么走到这一步的。"
+    },
+    {
+      "id": "c20-s0080",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "On the higher floors, from the outside all they could see were regularly-spaced but well-decorated windows of people's apartments.",
+      "zh": "更高的楼层从外面只能看见住户的窗户，间距规整，装点得挺讲究。",
+      "problem": "主语错位：按中文读法，“更高的楼层”成了“看见”的主语（楼层看见窗户），得靠语感硬掰回来才明白是“他们从外面看高层只能看见窗户”。",
+      "suggestion": "楼层再往上，从外面只能看见一扇扇住户的窗户，间距规整，装点得也挺讲究。"
+    },
+    {
+      "id": "c20-s0145",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "do you know any Keepers who are in any rubric groups related to social media?",
+      "zh": "你认识在社交媒体相关评则组里的掌则人吗？",
+      "problem": "长定语“在……里的”整个压在“掌则人”前面，口语提问不会这么说；中文要么把定语后置，要么改问“哪个掌则人在……”。",
+      "suggestion": "你认识哪个掌则人是在社交媒体相关评则组里的吗？"
+    },
+    {
+      "id": "c20-s0178",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "He has strong opinions that seem to differ depending on whom he talks to.",
+      "zh": "他的观点很强硬，而且似乎因人而异。",
+      "problem": "“观点很强硬”搭配不对——中文里强硬是说态度、手段，观点是“鲜明／有主见”；“因人而异”偏书面中性，没能把 differ depending on whom he talks to（见什么人说什么话）那层意思点出来，这句正是塞拉起疑的关键。",
+      "suggestion": "他的看法很鲜明，而且似乎见什么人说什么话。"
+    },
+    {
+      "id": "c20-s0071",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "You don't want to focus on seeing what you can do for Febric and Hreda today?",
+      "zh": "“你今天不想先顾着看看能为费布里克和赫雷达做点什么吗？”",
+      "problem": "“先顾着看看能……做点什么”三个动词叠在一起，中间还隔着“顾着”，说出口很绊嘴；中文口语里“先操心一下”“先想想能不能”都比它顺。",
+      "suggestion": "“你今天不想先看看自己能替费布里克和赫雷达做点什么吗？”"
+    },
+    {
+      "id": "c20-s0185",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "I'm sorry about your kids. This whole Arctic thing is just ... so crazy.",
+      "zh": "“你的孩子，我很遗憾。北极这一摊事真是……太疯了。”",
+      "problem": "“你的孩子，我很遗憾”是英语话题前置的语序（I'm sorry about your kids），中文安慰人时说“孩子的事，我很遗憾／真替你难过”，照搬语序会显得像在给对方的孩子下评语。",
+      "suggestion": "“孩子的事，我很遗憾。北极这一摊事真是……太疯了。”"
+    },
+    {
+      "id": "c20-s0004",
+      "severity": "low",
+      "type": "欧化",
+      "source": "Seila woke up, as the alarm in her watch buzzed. Her watch was flashing bright red - a message from Emerald of a type that she had never before seen.",
+      "zh": "塞拉被手表闹钟的震动叫醒了。手表正闪着刺眼的红光——那是翡翠发来的消息，这种类型她从未见过。",
+      "problem": "开篇第一句用了“被……叫醒了”这种被动式，中文叙述里通常直接说“手表闹钟震了震，塞拉醒了”；后半“这种类型她从未见过”是 of a type that... 的倒装搬运，句子重心落在“这种类型”上，读着像翻译文件。",
+      "suggestion": "手表的闹钟震了震，塞拉醒了。表盘正闪着刺眼的红光——那是翡翠发来的消息，她从来没见过这种类型。"
+    },
+    {
+      "id": "c20-s0051",
+      "severity": "low",
+      "type": "生硬",
+      "source": "suprised that it was even possible to say something so uselessly obvious.",
+      "zh": "塞拉面无表情地看着他，惊讶于一个人居然能说出这种毫无用处的废话。",
+      "problem": "“毫无用处的废话”语义重复（废话本就是不中用的话），而原文的刺点在 uselessly obvious——“这么明摆着的事也值得说出口”，中文把 obvious 丢掉了，调侃味也一起丢了。",
+      "suggestion": "塞拉面无表情地看着他，惊讶于他竟能把这么明摆着的事说得像条正经建议。"
+    },
+    {
+      "id": "c20-s0113",
+      "severity": "low",
+      "type": "生硬",
+      "source": "A gentle cool breeze blew against their backs, subconsciously driving them to walk faster.",
+      "zh": "一阵微凉的清风拂过他们的后背，潜意识里催着他们走快些。",
+      "problem": "“潜意识里”是修饰人的状语，硬挂在“清风”后面，读起来像风自己有潜意识；“催着”也偏抽象。",
+      "suggestion": "一阵微凉的清风拂过他们的后背，不知不觉催着他们加快了脚步。"
+    },
+    {
+      "id": "c20-s0137",
+      "severity": "low",
+      "type": "生硬",
+      "source": "not using cryptography to try to limit the data collection and get guarantees about what purpose the data is being used for.",
+      "zh": "不必用密码学去限制数据收集、去要一个数据用途的保证。",
+      "problem": "“去要一个数据用途的保证”是 get guarantees about... 的逐字搬运，中文里“要一个……的保证”后面必须落到“保证什么”，现在停在名词上，意思半截。",
+      "suggestion": "不必用密码学去限制数据收集、去要求对方保证数据只用在什么地方。"
+    },
+    {
+      "id": "c20-s0180",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Let's wait for my Keeper group to see what they say.",
+      "zh": "“等等看我掌则人小组的人怎么说。”",
+      "problem": "“等等看”和“等我……小组”撞在一起，读成“等／等看”；“我掌则人小组”又缺了结构助词，听上去像一长串名词堆叠。中文口语是“先看看……怎么说”。",
+      "suggestion": "“先看看我那个掌则人小组怎么说。”"
+    },
+    {
+      "id": "c20-s0192",
+      "severity": "low",
+      "type": "生硬",
+      "source": "One did reply that a friend in a different rubric group had that happen to him. But none in this rubric group.",
+      "zh": "“他们都没遇到过。有一个人回说，他在另一个评则组的朋友遇到过。但这个评则组里没有。”",
+      "problem": "“回说”是口语里不成立的压缩（应作“有一个人说／有一个人回”）；末句“但这个评则组里没有”承前省略过头，宾语悬空，读起来像话没说完。",
+      "suggestion": "“他们都没遇到过。有一个人说，他朋友在另一个评则组遇到过。但这个评则组里一个都没有。”"
+    },
+    {
+      "id": "c20-s0199",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Again, this could be a coincidence, but...",
+      "zh": "“再说一次，这也可能是巧合，不过……”",
+      "problem": "Again 在这里是“还是那句话”的语篇标记，译成“再说一次”变成要求对方重复一遍（“你再说一次”），字面读得通、语境里却错位。",
+      "suggestion": "“还是那句话，这也可能是巧合，不过……”"
+    }
+  ]
+}

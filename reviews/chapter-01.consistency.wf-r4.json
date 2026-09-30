@@ -1,0 +1,53 @@
+{
+  "chapter": 1,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "本章一致性总体很好：人名、地名、机构与技术术语（格拉迪亚斯、塞拉、兹文、费布里克、赫雷达、维尔、黛雅、扬、翡翠、恐结、海德菲尔、梅尔丹、卡利马尔、维里迪亚、自由城、巴德拉街、清丘大道、掌舵会／掌则人／监审官／见习官、手持终端、算力盒、隐私袍、隔音墙、空中步道、嘀嗒、长时、二次方资助、图谱资助、综合土地税、公共美学税、不推荐物质等）与术语表逐条对得上；日期「3724年雪月3日」、地址「巴德拉街1103号」、面板表头与按钮（来自／消息／时间、匿名、信誉分 ≥ 200已验证、选择／返回、表决对象：、档／标准／税率）与第2—32 章逐字一致，标点全部全角，本章无 locked 片段、无 <f> 虚构语言内容，故不存在虚构语言误译。问题集中在少数术语用词与数字体例：co-governance 未按术语表作「共治」、prediction score 作「预测分」而非「预测分数」、new_terms 把 tick 登记成「滴答」，另有 5 处「%」后多余空格与 3 处汉字「五层」。除第一条外均不影响读懂。",
+  "issues": [
+    {
+      "id": "c01-s0179",
+      "severity": "high",
+      "type": "术语不一致",
+      "source": "I've spent so much time reading about their co-governance, actually looking forward to seeing more how it all connects to what's on the ground.",
+      "zh": "我读了太多他们共同治理的东西，现在真想看看那些说法落到地上究竟怎么连起来。",
+      "problem": "co-governance 是术语表收录的术语，规范译名是「共治」（pipeline/glossary.json: co-governance → 共治）；全书正文也一律作「共治」：第2章「死记硬背那些共治投票比例」、第5章「联合城邦共治制度」、第10章「琢磨出共治这样的机制」、第11章「通过共治由红郡议会部分管理」、第22章「我猜是共治制度？」。本章是全书写到这个机制的第一处，却译成「共同治理」，与唯一事实源及全书十章用词不一致（全章仅此一处）。",
+      "suggestion": "我读了太多他们共治的东西，现在真想看看那些说法落到地上究竟怎么连起来。"
+    },
+    {
+      "id": "c01-s0117",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "He would take the ten percent chance of a hit to his prediction score.",
+      "zh": "他愿意冒那10% 的风险，让自己的预测分受损。",
+      "problem": "prediction score 术语表作「预测分数」，第7、8、23 章正文也都作「预测分数」（第8章「预测分数已经排到第94百分位」），本章缩成「预测分」，全章仅此一处。旁证：pipeline/fixups.json 里 chapter-01 的定点修补规则写成了 [\"预测分数\",\"预测分数\"]，是自我替换的空操作（第8章对应的 [\"预测分(?!数)\",\"预测分数\"] 才是有效写法），所以本章这处一直没被自动修掉；normalize_zh.py 的别名表里也没有「预测分」。",
+      "suggestion": "他愿意冒那10%的风险，让自己的预测分数受损。"
+    },
+    {
+      "id": "c01-new_terms-tick",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "tick（本章 new_terms 条目）",
+      "zh": "{\"en\": \"tick\", \"zh\": \"滴答\", \"kind\": \"unit\", \"note\": \"维里迪亚计时单位，短于长时（longhour）\"}",
+      "problem": "术语表 tick → 嘀嗒、milli-tick → 毫嘀嗒，正文两处也正确（c01-s0129「几个嘀嗒之后」、c01-s0192「又过了几个嘀嗒」），但本章 new_terms 却登记成「滴答」。pipeline/merge_terms.py --check 已把它报成冲突（「! chapter-01.zh: tick 既有『嘀嗒』 vs 本章『滴答』」）；而 normalize_zh.py 只规范化 segments、不碰 new_terms，别名表里的「滴答→嘀嗒」修不到这里，所以这条错登记会一直留在文件里。第6章的 new_terms 也专门注明「第 1 章作『滴答』……建议由主进程统一为『嘀嗒』」。",
+      "suggestion": "把该条改为 {\"en\": \"tick\", \"zh\": \"嘀嗒\", \"kind\": \"unit\", \"note\": \"维里迪亚计时单位，短于长时（longhour）\"}（或直接删除，术语表已有 tick → 嘀嗒）。"
+    },
+    {
+      "id": "c01-s0114",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "Ten percent of the time, any audit made by Acolytes would be repeated by Sentinels. ... a twenty or thirty percent chance his vote would significantly affect Dreadknot's tax rate ...",
+      "zh": "见习官做出的审计，有10% 会被监审官重做一遍。……就当20% 吧。也就是说，有20% 到30% 的概率，他这一票会明显影响恐结明年的税率。……他愿意冒那10% 的风险",
+      "problem": "「%」与其后的汉字之间多了半角空格，违反体例规范「数字与汉字之间不加空格」（规范例子即「31%」「掉3分」）。全章共 5 处：c01-s0114「10% 会」、c01-s0116「20% 吧」「20% 到」「30% 的」、c01-s0117「10% 的」。normalize_zh.py 的 T3b 只删「10 %」这种数字与百分号之间的空格，百分号之后的空格不会被自动清掉（全书仅第10章 3 处、第17章 1 处同类，本章最多）。",
+      "suggestion": "见习官做出的审计，有10%会被监审官重做一遍。……就当20%吧。也就是说，有20%到30%的概率，他这一票会明显影响恐结明年的税率。……他愿意冒那10%的风险"
+    },
+    {
+      "id": "c01-s0016",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "there was now a row of five-storey apartment buildings / Emerald AI summary: Five-storey apartment building. Blue-grey colored.",
+      "zh": "左侧是一排五层公寓楼 / 翡翠 AI 摘要：五层公寓楼，蓝灰色",
+      "problem": "同章写同一类楼，这里用汉字「五层」（c01-s0016、c01-s0020、c01-s0052 共 3 处），而 c01-s0014 写「约15层」，第32章同类描写也作「约15层」；体例规范第3节要求数量用阿拉伯数字（举例「20人」「约2公里」）。建议统一为阿拉伯数字。",
+      "suggestion": "左侧是一排5层公寓楼 / 翡翠 AI 摘要：5层公寓楼，蓝灰色"
+    }
+  ]
+}

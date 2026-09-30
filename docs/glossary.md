@@ -48,7 +48,7 @@
 | Chairman | 主席 | person | 议会委员会主席，遴选听证与表决的主持者 |
 | Daia | 黛雅 | person | 共同家庭的婶辈 |
 | Dela | 德拉 | person | 配角 |
-| Deluin | 德鲁因 | person | 泽国棋手，后被收买 |
+| Deluin | 德鲁因 | person | 红郡棋手，作为外国来宾参加泽国民本棋全国赛；后被北极收买 |
 | Delwart | 德尔瓦特 | person | 掌舵会成员，被北极收买 |
 | Den | 登 | person | 昆高培最高评议会成员 |
 | Dommus | 多穆斯 | person | 学生 |
@@ -74,7 +74,7 @@
 | Kau | 寇 | person | 泽国棋手 |
 | Lectoby | 莱克托比 | person | 掌舵会成员，社媒开放度评则 |
 | Leimin | 雷民 | person | 泽国棋手泽雷民之名 |
-| Lektor | 莱克托 | person | 昆高培行动负责人 |
+| Lektor | 莱克托 | person | 昆高培成员，后任维里迪亚最高将领 |
 | Lily | 莉莉 | person | 格拉迪亚斯次女 |
 | Meny | 梅尼 | person | 翔球比赛中穿紫衫的孩子，紫队第四分 |
 | Min | 敏 | person | 泽的母亲；第 5 章首次出现，泽国名按汉字音译 |
@@ -97,6 +97,7 @@
 | Senator | 参议员 | person | 维里迪亚议会议员；术语表收录其姓名（韦尔多、安库斯、帕普利等） |
 | Sewlert | 塞尔沃特 | person | 维里迪亚合议庭法官；同章原文亦拼作 Selwert |
 | Six | 六号 | person | 掌则人编号，以数字相称（同 Eighteen→十八） |
+| Su | 苏 | person | 民本棋全国赛组织者之一（祭司）；泽国名用汉字音译 |
 | Sylka | 西尔卡 | person | 维里迪亚国立大学校长 |
 | Tafindel | 塔芬德尔 | person | 维里迪亚总统之子，被北极俘获 |
 | Tapaia | 塔帕亚 | person | 配角 |
@@ -192,13 +193,13 @@
 | DU | 去中心化大学 | org | Decentralized University；泽国语作 dzu hu sun du |
 | DU chapter | 去中心化大学分部 | org | Decentralized University 的地方分部／分支 |
 | Freetown corps | 自由城防卫队 | org | 承第 23 章 Freetown defense corps 译法；本章原文简称 corps，指与昆高培合作的自由城防务组织 |
-| Freetown defense corps | 自由城防卫队 | org | 愿意与昆高培合作的自由城防务组织 |
+| Freetown defense corps | 自由城防卫队 | org |  |
 | Freetown Economics Institute | 自由城经济研究所 | org |  |
 | GPH | 大梅港 | org | Greater Plum Harbor 的缩写 |
 | Herald | 宣谕使 | org | 随机退休转任的掌舵会大使 |
 | Heralds | 宣谕使 | org |  |
 | High Council | 最高评议会 | org | 昆高培领导机构 |
-| Ichara | 伊查拉 | org | 自由城如今有名的防卫公司之一，扬照片中厂房的标志 |
+| Ichara | 伊查拉 | org | 自由城知名防务公司 |
 | Jump | 跃升 | org | 破产的金融公司 |
 | Keeper | 掌则人 | org | 投票制定税则者 |
 | Keepers | 掌则人 | org |  |
@@ -208,16 +209,19 @@
 | Order of Steering | 掌舵会 | org | 维里迪亚税则与补贴体系 |
 | Parliament | 议会 | org | 维里迪亚议会；与掌舵会体系并列的直接决策机构 |
 | public safety agency | 公共安全机构 | org | 与地方环境机构并列，德尔瓦特主张其应有广泛数据访问权限 |
+| senate | 参议院 | org | 维里迪亚参议院；与议会（Parliament）不同 |
+| senate committee | 参议院委员会 | org |  |
 | Sentinel | 监审官 | org | 审计企业者 |
 | Sentinels | 监审官 | org |  |
 | shadow military | 影子军队 | org | 格拉迪亚斯所称泽国以民本棋锦标赛培养的秘密军事力量 |
 | Transportation Ministry | 交通部 | org | 维里迪亚政府部门，曾以行政调整放宽公共场所监控摄像头的用途限制 |
 | Veridia National University | 维里迪亚国立大学 | org | 简称 VNU |
+| VNU | 维里迪亚国立大学 | org | 维里迪亚国立大学 |
 | VNU Materials Science Lab | 维里迪亚国立大学材料科学实验室 | org | VNU 为 Veridia National University 缩写 |
 | air filter | 空气过滤器 | tech | 议会圆形议事堂内分布于座位之间的设备 |
 | anti-transmission foil | 隔信箔 | tech | 阻断无线信号的材料 |
 | anti-transmission room | 隔信室 | tech | 四壁封死无线信号的房间，与术语表 anti-transmission foil → 隔信箔 同族 |
-| attack drone | 攻击无人机 | tech | 负责补刀的无人机，画面中为蓝色三角形 |
+| attack drone | 攻击无人机 | tech | 负责突击与压制的无人机；收尾清场由干扰无人机等其他机型完成 |
 | autobus | 巴士 | tech |  |
 | battle drone | 战斗无人机 | tech |  |
 | black car | 黑色轿车 | tech | 泽国安保升级后使用的隐私轿车，车窗为仿真窗，并参与车厢互换 |
@@ -230,20 +234,22 @@
 | digital archive node | 数字档案节点 | tech | 山体金字塔内存储档案的节点 |
 | Emerald | 翡翠 | tech | 格拉迪亚斯的本地 AI |
 | far-UVC | 远紫外 | tech | far-UVC disinfection lights → 远紫外消毒灯 |
-| forecaster bots | 预测机器人 | tech | 第 27 章银聊 Predict 排行榜上表现最好的五支机器人，此处指它们 |
+| forecaster bots | 预测机器人 | tech | 银聊预测平台上的五支预测机器人 |
 | formal verification | 形式化验证 | tech |  |
 | ground drone | 地面无人机 | tech | 北极在红郡部署的陆行无人机 |
 | hand device | 手持终端 | tech |  |
 | handwriting instrument | 手写笔 | tech | 锦标赛小礼品 |
 | hash-based signatures | 基于哈希的签名 | tech | 后量子签名方案 |
+| Helisport copters | 翔球小型飞行器 | tech | 翔球比赛用的个人飞行器 |
 | Hydrafill | 海德菲尔 | tech | 饮品品牌 |
 | jammer drone | 干扰无人机 | tech | 在六边形阵位上压制通信的无人机，画面中为蓝色圆圈 |
 | journaling file system | 日志式文件系统 | tech | 用于沙盒内回滚到初始状态 |
+| LLM | 语言模型 | tech | 大语言模型；正文作「语言模型」 |
 | mixnet | 混网 | tech | 多层加密转发网络，使交易进入密码学网络而无法追溯发送者 |
 | neck band | 颈带 | tech | 喉部震动发声通讯器 |
 | nonlinear junction detector | 非线性结检测器 | tech | 用于探测隐藏电子器件的设备 |
 | ozone-based electric water disinfection pen | 臭氧电动水消毒笔 | tech | 锦标赛小礼品 |
-| personal copter | 个人飞行器 | tech | 翔球选手乘坐的单人小型飞行器，顶上带旋翼与护罩；第 5 章 copter 作「小型飞行器」 |
+| personal copter | 个人飞行器 | tech |  |
 | privacy robe | 隐私袍 | tech |  |
 | rotor shield | 旋翼护罩 | tech | 个人飞行器旋翼外圈的护罩，可互相碰撞而不伤人 |
 | seaborne drone | 海上无人机 | tech | 海上接送与运输用无人机；第 22、29 章亦出现 |
@@ -254,6 +260,7 @@
 | soundproof barrier | 隔音墙 | tech | 演唱会场地外围的高墙 |
 | stateless tree-of-tree-based | 无状态的树套树结构 | tech | 基于哈希签名的一类构造 |
 | steganographic channel | 隐写信道 | tech | 德鲁因与泽之间传递隐蔽消息的通道 |
+| streetlight | 路灯 | tech |  |
 | subvocalization neck band | 喉震颈带 | tech | 靠喉部震动拾音的颈带，只动口型即可发声 |
 | surveillance bat | 侦察蝠 | tech | 小型蝠形监视飞行器，可投放进场所内监听或制造干扰声响 |
 | thermal cloak | 隔热斗篷 | tech | 降低被侦测概率的披挂装备；第 30 章亦出现 |
@@ -293,6 +300,7 @@
 | bounded-depth trees | 有界深度树 | term | 费布里克考试内容，计算机科学数据结构 |
 | box | 格 | term | 棋局界面上分装圆圈的四个格子，如上左格、右下格 |
 | brick | 砖 | term | 民本棋的小型阻挡结构 |
+| broad listen report | 广泛聆听报告 | term | 掌则人裁决评则前收集的公众意见报告，沿用第 8 章译法 |
 | broad listen reports | 广泛聆听报告 | term | 掌则人裁决评则前收集的公众意见报告 |
 | bucket | 分桶 | term | 隐写编码中随机划分位位置的单位；桶内所有位异或等于密文对应位 |
 | cartel | 卡特尔 | term | 红郡被吞并后几家防务公司结成的垄断同盟 |
@@ -366,7 +374,7 @@
 | glider | 滑翔机 | term | 民本棋棋子 |
 | glider factory | 滑翔机工厂 | term |  |
 | glyph | 字形 | term | 泽国语第九版的可视化字形 |
-| gradient descent | 梯度下降 | term | 白提出的对抗攻击优化方法 |
+| gradient descent | 梯度下降 | term | 泽提出的对抗攻击优化方法（第 29 章） |
 | Graph Funding | 图谱资助 | term |  |
 | Great Book | 《大典》 | term | 维里迪亚典籍正典，原文首字母大写 |
 | Greenball player hits | 绿球击人 | term | 翔球记分板行标签 |
@@ -379,7 +387,7 @@
 | hash | 哈希 | term |  |
 | hash function | 哈希函数 | term | 把任意长度的输入映射为定长指纹的函数 |
 | hash-based trie | 基于哈希的前缀树 | term | 数据结构；trie 亦译「字典树」 |
-| head general | 最高将领 | term | 维里迪亚军方最高指挥官；莱克托经闭门会议接任此位 |
+| head general | 最高将领 | term | 维里迪亚军方最高军职 |
 | heavy water | 重水 | term | 海德菲尔广告中的科学恐吓点，氢被氘取代的水 |
 | Helisport | 翔球 | term | 球类运动 |
 | Helisport blueball | 蓝球 | term | 翔球比赛用球，用于击倒球瓶得分 |
@@ -395,7 +403,7 @@
 | Intelligence Score | 智力分 | term | 北极人推崇的个人智力评分，主张由分数最高者治理社会 |
 | internet minimalism | 网络极简主义 | term | 泽所说的第二种极简主义，与物质极简主义相对 |
 | interoperability | 互操作性 | term | 社交媒体评则的议题之一 |
-| intervention turn | 干预回合 | term | 可在符记复制附近落子的特殊回合 |
+| intervention turn | 干预回合 | term | 书内量词统一作「第N次干预回合」 |
 | Key Allocation Group | 密钥分配组 | term | 掌舵会投票密钥分配机制，简称 KAG；由投票者当面见过的5人组成，至少3人登记盲化份额方可生成投票密钥 |
 | kill chain | 杀伤链 | term | 军事术语，指发现并摧毁目标的完整流程 |
 | land tax | 土地税 | term | 总称；composite land tax 见术语表作「综合土地税」 |
@@ -418,6 +426,7 @@
 | meta-program | 元程序 | term | 可依输入运行任意程序的程序 |
 | micro-tactics | 微观战术 | term | 无人机近距离交战的细节战术；micro-tactical maps → 微观战术地图 |
 | Minpentai | 民本棋 | term | 泽国棋类；赛事称「民本棋锦标赛」 |
+| Minpentai player | 民本棋选手 | term |  |
 | mirror wall | 镜面墙 | term | 民本棋设计，原路反射滑翔机 |
 | moving wall | 移动墙 | term | 民本棋战术设计，专反弹基础滑翔机 |
 | nationals | 全国赛 | term | 民本棋全国锦标赛 |
@@ -446,6 +455,7 @@
 | physical minimalism | 物质极简主义 | term | 40年前兴起、以少物为美的极简主义 |
 | physical unclonable function | 物理不可克隆函数 | term | 芯片制造中由化学沉降自然生成的不可复制密钥 |
 | physical-delivery mixnet | 实物投递混网 | term | 把混网机制用于实体物品投递；参术语表 mixnet → 混网 |
+| pin | 球瓶 | term | 民本棋／翔球场景中的瓶状物 |
 | pipeline | 流水线 | term | 此处指「想出规则→自对弈微调→再对局」的训练流程 |
 | plaque | 纪念牌 | term | 锦标赛奖品中的纪念铭牌 |
 | poll | 民调 | term | 银聊平台的付费问卷调查功能；polling feature → 民调功能 |
@@ -491,6 +501,7 @@
 | sales tax | 销售税 | term | 税种，与综合土地税、掌舵税并列 |
 | sandbox | 沙盒 | term | 民本棋中试验阵形的私人视图，验证后再部署到棋场 |
 | scoreboard | 记分板 | term | 翔球转播界面 |
+| scouting capability | 侦察能力 | term |  |
 | second order effects | 二阶效应 | term | 经济学用语，指间接的连锁影响 |
 | second-player-favoring | 后手占优 | term | 同上 |
 | Select | 选择 | term | 界面按钮 |
@@ -506,16 +517,16 @@
 | small thinking | 小思考 | term | 泽国语词组字面义，实指极简主义；格拉迪亚斯逐词直译时的说法 |
 | snowshoe | 雪鞋 | term | 雪地行军装备 |
 | social impact of public performances | 公开演出的社会影响 | term | 掌舵会税则评则名称 |
-| social media openness and interoperability | 社媒开放度与互操作性 | term | 与术语表 Lectoby「社媒开放度评则」配套的评则全称 |
+| social media openness and interoperability | 社交媒体开放度与互操作性 | term | 与术语表 Lectoby「社媒开放度评则」配套的评则全称 |
 | social media openness and interoperability rubric | 社交媒体开放度与互操作性评则 | term | 莱克托比所属的评则组 |
-| social recovery | 社交恢复 | term | 由预先指定的家人朋友各持一把密钥，凑齐阈值签名即可找回资金 |
+| social recovery | 社交恢复 | term | 钱包找回机制；模式语境作「社交恢复模式」 |
 | social recovery mode | 社会恢复模式 | term | 钱包由多位联系人共同签名恢复的模式 |
 | societal cohesion | 社会凝聚力 | term | 埃菲里昂所称「软性」指标之一 |
 | sound conversation devices | 声音交谈装置 | term | 泽国语字面义，实指电话 |
 | spaceship | 飞船 | term | 民本棋棋子，大型慢速滑翔机，用于远距离投放符记 |
 | standing | 诉讼资格 | term | 原告与案件结果有利害关系的法律资格 |
 | stationary trap | 固定陷阱 | term | 北极散布在森林中的静止陷阱装置 |
-| Steering tax | 掌舵税 | term | 掌舵会体系下的税，简称自 Steering system taxes |
+| Steering tax | 掌舵税 | term | 掌舵会体系下的税制，含补贴与评则 |
 | Steering taxes | 掌舵会税制 | term | 维里迪亚掌舵会维护的税收与补贴体系 |
 | steganographic encoding | 隐写编码 | term | 把消息藏进看似合理数据的编码方式 |
 | steganography | 隐写术 | term | 把消息藏进正常数据中以躲过审查的做法；steganographic encoding → 隐写编码 |
@@ -523,7 +534,7 @@
 | subgraph | 子图 | term | 图谱资助按领域划分的子图，如空气传播疾病防治 |
 | Submit | 提交 | term | 界面按钮 |
 | Summary | 摘要 | term | 评则表格表头；同 Executive summary → 摘要 |
-| supervirus | 超级病毒 | term | 德尔因称北极帝国最该关停的研究项目 |
+| supervirus | 超级病毒 | term | 自由城方向研制的超级病毒（第 31 章） |
 | surplus | 剩余 | term | 博弈论用语，指合作带来的额外收益；泽在对话中使用 |
 | symbol | 符记 | term | 民本棋中玩家的点阵标记，复制散落棋盘可提供视野与落子点 |
 | symbol-carrying spaceship | 载符飞船 | term | 搭载符的飞船，被击穿后符损毁并炸出滑翔机 |
@@ -554,11 +565,12 @@
 | Vote on: | 表决对象： | term | 界面文案 |
 | voting key | 投票密钥 | term | 掌舵会表决中唯一的有效签名密钥 |
 | voting view | 投票界面 | term | 机器人屏幕上的评分表决界面 |
-| wall | 墙 | term | 民本棋的防御／导向结构；moving wall → 活动墙 |
+| wall | 墙 | term | 民本棋的防御／导向结构；moving wall → 移动墙 |
 | war of attrition | 消耗战 | term | 与第 7 章用法一致 |
 | well-being | 福祉 | term | 情绪与社会健康类指标的通称；emotional well-being → 情绪状态 |
 | whitepaper | 白皮书 | term | 银聊的创始文件 |
 | world model | 世界模型 | term | 北极无人机 AI 的完整环境模拟；full world-model simulation → 完整的世界模型模拟 |
+| XOR | 异或 | term | 按位异或运算；正文作「异或」 |
 | xor | 异或 | term | 按位异或运算 |
 | XOR sum | 异或和 | term | 棋局四格圆圈数按位异或所得的数，为0时称局面「平衡」；XOR 沿用第 12／14／15 章译法「异或」 |
 | Yes | 赞成 | term | 表决按钮；界面 Yes/No 译「赞成／反对」 |
@@ -578,25 +590,20 @@
 | Jahen's | 嘉恒的 | inflection | 所有格 |
 | De lu hin | 德鲁因 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语中德鲁因的名字，意为「一副叉子的模样」 |
 | dia jie fe kai ja cu dze kai lin pan | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，格拉迪亚斯吩咐机器人端来茶与饭菜的语句；kai ja＝茶 |
-| dia lau shau | 请求通话 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语手表消息，同第 4 章 jie fe hen dzi 例；下一句叙述给出中文释义 |
+| dia lau shau | 请求通话 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语手表消息，同第 4 章 jie fe hen dzi 例；下一句叙述给出中文释义 |
 | Dze go ba fau gie | Dze go ba fau gie | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语口号／祝语（愿泽国昌盛之意）；全篇保留罗马字不译，与第 2、7 章一致 |
 | dze kai lin pan | 菜和饭 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，意为蔬菜和米饭；字面拆开为绿植／线／面包，故韦尔多听成「绿植线面包」 |
 | gie fe kiu kai ci bin hu | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语口号；紧随其后的英文释义译为「扎根，无首」 |
-| GUI SAU | GUI SAU | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）帕佛盖都灯具店招牌，泽国语罗马字 |
+| GUI SAU | GUI SAU | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）帕佛盖都灯具店招牌，泽国语罗马字 |
 | hun fe bin jin zo de jan li gi | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽看到满街戴颈带的人后脱口而出的泽国语 |
-| ja | 水 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语机器人口播菜单用语 |
+| ja | 水 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语机器人口播菜单用语 |
 | jie fe hen dzi | 祝你好运 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语；手表消息原文保留罗马字，下一句给出中文释义 |
 | jie mo kai tu jie hei ja ma? | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）维里迪亚议会内机器人用泽国语问询的语句 |
-| kai ja | 茶 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，字面「植物水」 |
-| LLM | 语言模型 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）大语言模型；正文中泽用它判断哪些位适合翻转 |
+| kai ja | 茶 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，字面「植物水」 |
 | mi cin pin fe lo kin do | mi cin pin fe lo kin do | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）格拉迪亚斯用泽国语向登致意；据下文推断为问候语（很高兴见到你之意） |
-| MIN KUI | MIN KUI | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）帕佛盖都算力盒店铺招牌，泽国语罗马字 |
-| MU GU GEI FA | 五十提克 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语开赛倒计时播报。独立成句的播报在正文里保留罗马字与半角引号原样（纯系统提示，不含中文）；LE MU GEI FA＝二十五提克，PA GU GEI FA＝最后一提克，TAU FA＝开始（据上下文推断） |
-| pin | 球瓶 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）翔球场上立于圆板上的目标（knockdown → 击倒） |
+| MIN KUI | MIN KUI | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）帕佛盖都算力盒店铺招牌，泽国语罗马字 |
+| MU GU GEI FA | 五十提克 | conlang | 倒计时播报（理解参考：五十嘀嗒） |
 | po so dze go ban de sia | 泽国语第九版的构想 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）班孙培小册子书名；正文保留泽国语罗马字，破折号后为中文释义 |
 | sen hen zi li die fe / zo lia kin / man dun li jie hu / cau tie zen / ci fan zi li | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国酒店入住面板，第 12、18 章同款；紧随其后的叙述给出中文释义（信誉分、付款、批准、房号） |
-| Su | 苏 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）民本棋全国赛组织者之一，祭司；泽国名按汉字音译 |
-| VNU | 维里迪亚国立大学 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）Veridia National University 的缩写（术语表已收该机构），正文按中文全称译出 |
-| XOR | 异或 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）民本棋规则用语，神龛变化按异或作用到邻近区域 |
 | zan / tie / tei | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）手表面板表头，泽国语罗马字，与第 2 章 TEI 同例，界面原样保留 |
 | zui fia pai dan | zui fia pai dan | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）一本泽国建筑书籍的书名 |

@@ -78,14 +78,27 @@ def fix_text(t: str, alias: dict[str, str]) -> str:
     t = re.sub(rf"(?<=[{CJK}])\?(?=[{CJK}“”]|$)", "？", t)
     t = re.sub(rf"(?<=[{CJK}])!(?=[{CJK}“”]|$)", "！", t)
     t = re.sub(rf"(?<=[{CJK}])\.(?=$|[{CJK}“”])", "。", t)
-    # T3 空格体例：拉丁词（≥2 字母）与汉字之间加一个半角空格；
-    #    数字与汉字之间不留空格（中文出版惯例：3724年雪月3日、约2公里、掉3分），
-    #    但形如 0x18f4、5G 这类含字母的混合 token 仍与汉字分开。
-    t = re.sub(rf"([{HAN}]) *(\d+)(?![0-9A-Za-z])", r"\1\2", t)
-    t = re.sub(rf"(?<=\d) *([{HAN}])", r"\1", t)
-    t = re.sub(rf"([{HAN}])([0-9]*[A-Za-z][A-Za-z]{{1,}})", r"\1 \2", t)
-    t = re.sub(rf"([A-Za-z]{{2,}})([{HAN}])", r"\1 \2", t)
-    t = re.sub(rf"([{HAN}])(0x[0-9A-Fa-f]+)", r"\1 \2", t)
+    # T3 空格体例：拉丁词与「含字母的混合 token」（CO2 / 0x18f4 / 5G / TEI）与汉字之间，
+    #    统一一个半角空格；纯数字与汉字之间不留空格（3724年雪月3日、约2公里、掉3分）。
+    #    注意必须整 token 判断：只看前一位会把「CO2 和」压成「CO2和」。
+    #   token 允许含 . - _ / %（PM2.5、0x18f4...60c5、A/B）；先把「字母+空格+数字」
+    #   这类内部含空格的 token（TEI 70000）保护起来，避免被当成「数字贴汉字」压掉空格。
+    MARK = "\u0001"
+    t = re.sub(r"([A-Za-z]+) (\d+)", lambda m: m.group(1) + MARK + m.group(2), t)
+    TOKEN = "[0-9A-Za-z][0-9A-Za-z.\\-_/%\u0001]*"
+
+    def _tok_before_cjk(m: re.Match) -> str:
+        tok = m.group(1)
+        return (tok + " " if re.search(r"[A-Za-z]", tok) else tok) + m.group(2)
+
+    t = re.sub(rf"({TOKEN}) *([{HAN}])", _tok_before_cjk, t)
+
+    def _cjk_before_tok(m: re.Match) -> str:
+        tok = m.group(2)
+        return m.group(1) + (" " if re.search(r"[A-Za-z]", tok) else "") + tok
+
+    t = re.sub(rf"([{HAN}]) *({TOKEN})", _cjk_before_tok, t)
+    t = t.replace(MARK, " ")
     # T3a 中英混排的引号/括号内不留首尾空格
     t = re.sub(r"([“（《])\s+", r"\1", t)
     t = re.sub(r"\s+([”）》])", r"\1", t)
@@ -97,18 +110,44 @@ def fix_text(t: str, alias: dict[str, str]) -> str:
     return t
 
 
+TOKEN_RE = re.compile(r"[0-9A-Za-z][0-9A-Za-z.\-_/%]*")
+
+
+def _needs_space(token: str) -> bool:
+    return bool(re.search(r"[A-Za-z]", token))
+
+
 def fix_segment(text: str, alias: dict[str, str], fixups: list | None = None) -> str:
+    text = re.sub(r"(?<=[0-9A-Za-z]) +</(sub|sup|e|b|i|c|code|f)>", r"</\1>", text)
+    # 历史遗留：空格被塞进行内标签开头（「叫<e> dzu…」）→ 挪到标签之前
+    text = re.sub(r"([\u3400-\u9fff])(<[a-z]+(?: [^>]*)?>) +(?=[0-9A-Za-z])", r"\1 \2", text)
     parts = TAG_SPLIT.split(text)
-    out = []
     for i, p in enumerate(parts):
         if i % 2:
-            out.append(p)
-        else:
-            seg = fix_text(p, alias)
-            if fixups:
-                seg = apply_fixups(seg, fixups)
-            out.append(seg)
-    return "".join(out)
+            continue
+        seg = fix_text(p, alias)
+        if fixups:
+            seg = apply_fixups(seg, fixups)
+        parts[i] = seg
+    # 跨标签边界补空格：中文↔拉丁/混合 token 被 <e>、<c>、<f>、<sub> 等切开时，
+    # 逐段规范化看不到边界，这里对相邻文本段做一次修补（左侧取「忽略标签后的可见文字」，
+    # 这样 CO<sub>2</sub>读数 也能识别出 CO2 这个 token）。
+    text_idx = [i for i in range(0, len(parts), 2)]
+    for b in text_idx[1:]:
+        left = "".join(parts[j] for j in text_idx if j < b)
+        right = parts[b]
+        if not left or not right:
+            continue
+        if re.search(r"[\u3400-\u9fff]$", left):
+            m = TOKEN_RE.match(right)
+            if m and _needs_space(m.group(0)) and not right.startswith(" "):
+                parts[b] = " " + right
+        elif re.search(r"[0-9A-Za-z.\-_/%]$", left):
+            toks = list(TOKEN_RE.finditer(left))
+            if toks and re.match(r"[\u3400-\u9fff]", right) and not left.endswith(" "):
+                if _needs_space(toks[-1].group(0)):
+                    parts[b] = " " + right
+    return "".join(parts)
 
 
 def main() -> None:

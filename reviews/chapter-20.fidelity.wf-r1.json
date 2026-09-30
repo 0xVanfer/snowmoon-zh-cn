@@ -1,0 +1,53 @@
+{
+  "chapter": 20,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第20章译文忠实度很高：205 段与原文逐段对应，没有整句漏译、没有说话人张冠李戴（对话着色全部原样保留），时态、否定、数量（5,250、19867 等时间戳、100 与 50 齐普币、五条消息、三个小组、三年）均与原文一致，<c>/<e>/<br/> 标记也无一处错位。问题只有零星几处：一处代词指代会让「谁驻扎在北林」被读反，一处比喻（thumbs on the scale）两次被抹平，另有三处限定词或指代被弱化。整体完全可读，无需大改。",
+  "issues": [
+    {
+      "id": "c20-s0011",
+      "severity": "medium",
+      "type": "误译",
+      "source": "The Veridian military offered almost no resistance, and within two longhours their soldiers and drones were stationed in Northglade.",
+      "zh": "维里迪亚军队几乎没有抵抗，两个长时之内，他们的士兵和无人机就已驻扎在北林。",
+      "problem": "their 指上一句的北极军队，但中文「他们」紧跟在「维里迪亚军队」之后，最近的先行词变成维里迪亚一方，很容易读成「维里迪亚的士兵驻扎在北林」。这句正是新闻里最关键的占领事实，读反就把入侵者与被入侵者的角色调了个个儿。",
+      "suggestion": "维里迪亚军队几乎没有抵抗，两个长时之内，北极的士兵和无人机就已驻扎在北林。"
+    },
+    {
+      "id": "c20-s0129",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "he thought we should not be putting our thumbs on the scale, using the tax rubrics to encourage what he considered biased civics education ...",
+      "zh": "说我们不该插手偏帮，用税则去鼓励他所认为有偏向的公民课……",
+      "problem": "putting our thumbs on the scale（把拇指压在秤上＝做手脚偏帮）是个具体比喻，原文在第129、131段连用两次（s0131：the Order should not be putting its thumb on the scale so much），中文两处都作「插手偏帮」，比喻整体消失，德尔瓦特那套「别去拨弄天平」的论调被抽平成了抽象表述。",
+      "suggestion": "说我们不该把手指按在天平上，用税则去鼓励他所认为有偏向的公民课……（s0131 相应作「掌舵会不该这样把手指按在天平上」）"
+    },
+    {
+      "id": "c20-s0072",
+      "severity": "low",
+      "type": "漏译",
+      "source": "I don't think we and they are any better at pulling off some kind of grand escape from Northglade than any of the hundred people trying to fly in to the Greater Plum Harbor who got shot down.",
+      "zh": "想从北林搞一场什么大逃亡，我不觉得我们比那上百个想飞进大梅港却被击落的人强。",
+      "problem": "原文是 we and they——塞拉这边和困在北林的费布里克、赫雷达两边都办不到；中文只剩「我们」，「他们同样没戏」这层被她吞掉了，而这正是她说服自己按兵不动的另一半理由。",
+      "suggestion": "想从北林搞一场什么大逃亡，我不觉得我们和他们能比那上百个想飞进大梅港却被击落的人强。"
+    },
+    {
+      "id": "c20-s0136",
+      "severity": "low",
+      "type": "误译",
+      "source": "He basically thinks anything military is a zero-sum game, you can't know what will lead to a good or bad outcome, and Veridia should stay out entirely.",
+      "zh": "他基本上认为军事就是零和博弈，你没法预知哪个结果是好是坏，维里迪亚就该完全置身事外。",
+      "problem": "原文说的是「无法预知哪种做法会通向好结果、哪种会通向坏结果」（行动与结果之间不可预测），中文改成「无法预知哪个结果是好是坏」（结果本身的好坏判断不了），论证方向偏了一点：前者才是他主张完全置身事外的理由。",
+      "suggestion": "他基本上认为军事就是零和博弈，你没法预知哪一步会带来好结果、哪一步会带来坏结果，维里迪亚就该完全置身事外。"
+    },
+    {
+      "id": "c20-s0094",
+      "severity": "low",
+      "type": "误译",
+      "source": "I'm Telroy. Though ... if you know I'm in the Order and you know about Delwart, maybe you already know that too.",
+      "zh": "我是特尔罗伊。不过……既然你们知道我在掌舵会，也知道德尔瓦特的事，那也许这些你们早就知道了。",
+      "problem": "that 指的是眼前这个具体信息——「我叫特尔罗伊／我是谁」；中文「这些」没有先行词，指代泛化成一堆事，特尔罗伊「你们八成早就查到我的名字了」的试探意味丢了。",
+      "suggestion": "我是特尔罗伊。不过……既然你们知道我在掌舵会，也知道德尔瓦特的事，那也许我是谁，你们也早就知道了。"
+    }
+  ]
+}

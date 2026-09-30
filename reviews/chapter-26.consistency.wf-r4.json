@@ -1,0 +1,53 @@
+{
+  "chapter": 26,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "第26章的一致性整体很稳：202 个片段与原文逐条对齐，`<c>` 颜色与说话人无一处错位；维里迪亚／梅尔丹／格勒博尔／卡利马尔／北林／北岸／大梅港／红郡／阿图里亚／多利纳尔／泽温／塞尔沃特／塔芬德尔／凯隆／莫夫／民本棋／昆高培／隔热斗篷／海上无人机／诉讼资格／根本法等人名地名术语全部与术语表和相邻章节一致，编号（第十四条、第二十一条根本法）、人称、百分比（6%×50＝3）与公制单位无差错，泽国语罗马字（s0006–s0047、s0051、s0114、s0119 及「Veridia ba fau gie」）按 locked 规则原样保留、无一误译，标点全角、无半角标点／`...`／单个破折号，数字与汉字间也没有多余空格。只挑出 5 处体例／术语不统一，其中 1 处中等（Pafogai 在本章被写成小写拉丁 pafogai，与术语表「帕佛盖」及上一句「帕佛盖都」脱节），其余 4 处是可改可不改的统一化（74,000 的千位逗号、闸机／闸门、街灯／路灯、黑色轿车），逐条就地替换即可，不影响阅读。",
+  "issues": [
+    {
+      "id": "c26-s0055",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "\"Wait, I just realized ... Pafogai means 'fourteen stone'? Where did that name come from?\"",
+      "zh": "“等等，我刚反应过来……pafogai 的意思就是‘十四块石头’？这名字是怎么来的？”",
+      "problem": "同一个专名在本章已被译出：s0052 的「Pafogai Du」译作「帕佛盖都」，术语表也把 Pafogai 定为「帕佛盖」（Pafogai Du 才是「帕佛盖都」，Du＝都）。这里却退回小写拉丁字母 pafogai，与术语表和全书专名政策（泽国专名用汉字音译）不一致；原文此处也是大写 Pafogai，并非需要保留罗马字的泽国语引文。读者刚读完「帕佛盖都」这个名字的拆解，紧接着撞上一个外文小写词，无法把两者对上。",
+      "suggestion": "“等等，我刚反应过来……帕佛盖的意思就是‘十四块石头’？这名字是怎么来的？”"
+    },
+    {
+      "id": "c26-s0062",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "two passage gates blocking the way in the middle. ... the green circle on the side of the gate they were passing through ... both gates announced ... The gates opened",
+      "zh": "s0061“中间有两道闸机挡着路”／s0062“所过闸机侧面的绿色圆圈”＋“两道闸门几乎同时开口”／s0063“闸门打开”",
+      "problem": "同一个物件在三段之内被叫成「闸机」和「闸门」两个名字（s0061、s0062 前半用「闸机」，s0062 后半与 s0063 用「闸门」），读者会以为房间里既有闸机又有闸门。全书对 passage gate 也多用「闸机」。",
+      "suggestion": "统一作「闸机」：s0062 改为“……过了几个嘀嗒，两道闸机几乎同时开口：<c st=\"color:oklch(0.7 0.15 66.66666666666666)\">“欢迎来到维里迪亚。”</c>”；s0063 改为“闸机打开，泽和格拉迪亚斯走了过去。”"
+    },
+    {
+      "id": "c26-s0135",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "the streetlights and the lights inside the buildings all blinking chaotically ... I used them to first take control of the streetlights",
+      "zh": "s0135“街灯和楼内的灯光全都开始混乱地闪烁”／s0164“我先控制了街灯”",
+      "problem": "全书把 streetlight 译作「路灯」（第4章“一盏路灯”“公共路灯杆”，第9章“路灯杆”），本章唯一两处改用「街灯」，同一物件出现两套叫法。",
+      "suggestion": "两处均改「路灯」：s0135“……路灯和楼内的灯光全都开始混乱地闪烁”；s0164“我先控制了路灯”。"
+    },
+    {
+      "id": "c26-s0063",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "the interior of one of the large black cars that they had seen earlier through the window of the aeroplane",
+      "zh": "s0058“大一点的那辆黑车是我们的”／s0063“房间另一头的出口径直通向一辆黑色大车的内部”",
+      "problem": "这类黑色公务车在全书有定译「黑色轿车」（第9、12、18 章，术语表别名也把「黑色汽车」统一为「黑色轿车」，紧邻的第27章同样写“坐黑色轿车”）；本章改写成“黑车”“黑色大车”，同一车队在相邻章节出现两种称呼。",
+      "suggestion": "s0063 改为“房间另一头的出口径直通向一辆黑色轿车的内部——正是他们先前从飞机窗口望见的那几辆之一”；s0058 可一并改为“大一点的那辆黑色轿车是我们的。”"
+    },
+    {
+      "id": "c26-s0011",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"The local time is 74,000 and the temperature is seven degrees.\"",
+      "zh": "“当地时间是74000，气温7度。再过一小会儿，飞行器就会降落地面。”",
+      "problem": "原文的表盘读数带千位逗号，第2章同类手表／终端时间也照原文保留逗号（“时间刚跳到69,000”“课在70,000嘀嗒开始”“泽看了一眼手表。70,001。”），本章写成 74000，同一类数值的体例与全书不一致（规范也要求界面数值原样保留）。",
+      "suggestion": "“当地时间是74,000，气温7度。再过一小会儿，飞行器就会降落地面。”"
+    }
+  ]
+}

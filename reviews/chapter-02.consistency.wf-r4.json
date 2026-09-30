@@ -1,0 +1,80 @@
+{
+  "chapter": 2,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "本章的人名地名、颜色标记、locked 泽国语罗马字、日期与度量体例整体对得上术语表和全书：芬／泽、帕佛盖都、训民街、文贵街、民本棋、隔信箔、手持终端、嘀嗒／毫嘀嗒正文用法都正确，133 条片段的 <c> 颜色、<e>、<f> 与原文一一对应，全角标点与数字空格体例也没有别的问题。问题集中在“同一处术语／固定表述在别处写法不同”：文件自带的 new_terms 把 tick／milli-tick 写成已被术语表列为旧译的「提克／毫提克」，与本章正文的「毫嘀嗒」自相矛盾；口号「grow roots, no head」「Dzego will rise again」的释义与第 18、7 章不一致；地址体例漏「号」；另有 3 处数字与中西文空格体例的小瑕疵。不影响读懂，但都属于必须统一的一致性问题。",
+  "issues": [
+    {
+      "id": "c02-new-terms",
+      "severity": "high",
+      "type": "术语不一致",
+      "source": "new_terms: {\"en\": \"tick\", \"zh\": \"提克\"} / {\"en\": \"milli-tick\", \"zh\": \"毫提克\"}（正文 c02-s0012 为 \"hundreds of milli-ticks\"）",
+      "zh": "\"new_terms\": [{\"en\": \"tick\", \"zh\": \"提克\", \"note\": \"泽国时间单位；一千提克≈十分钟，慢步走约一提克一米\"}, {\"en\": \"milli-tick\", \"zh\": \"毫提克\", \"note\": \"提克的千分之一\"}]（正文 c02-s0012：\"在几百毫嘀嗒内就走完了\"）",
+      "problem": "术语表（唯一事实源）里 tick→嘀嗒、milli-tick→毫嘀嗒，并且 aliases 明确把「提克」「毫提克」登记为待替换的旧译；本章正文 c02-s0012 用的也正是「毫嘀嗒」。文件自带的 new_terms 却写成「提克／毫提克」，同一份译文里自相矛盾；实测 `python3 pipeline/merge_terms.py --check` 会因此报出两条冲突：`! chapter-02.zh: tick 既有「嘀嗒」 vs 本章「提克」`、`! chapter-02.zh: milli-tick 既有「毫嘀嗒」 vs 本章「毫提克」`（第 4 章有同样的历史遗留）。",
+      "suggestion": "把这两条改成 {\"en\": \"tick\", \"zh\": \"嘀嗒\", \"kind\": \"unit\", \"note\": \"泽国时间单位；一千嘀嗒＝十分钟\"} 与 {\"en\": \"milli-tick\", \"zh\": \"毫嘀嗒\", \"kind\": \"unit\", \"note\": \"千分之一嘀嗒\"}（note 里的「提克」一并改掉），或直接删掉这两条（术语表已有）。"
+    },
+    {
+      "id": "c02-s0010",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "\"gie fe kiu kai ci bin hu\", Zei thought to himself. \"Grow roots, no head\".（c02-s0130 同句：\"'gie fe kiu kai ci bin hu': grow roots, no head\"）",
+      "zh": "“gie fe kiu kai ci bin hu。”泽在心里默念。“生根，无首。”……（c02-s0130：“……‘gie fe kiu kai ci bin hu’：生根，无首。用分布式制造……”）",
+      "problem": "同一句泽国口号的英文释义 \"grow roots, no head\" 在第 18 章（c18-s0135）译作「扎根，无首」，术语表该条 note 记录的也是「英文释义译为「扎根，无首」」；本章两处都写「生根，无首」。同一口号全书两种固定译法，读者在第 2 章和第 18 章会对不上。",
+      "suggestion": "本章两处统一为「扎根，无首」：c02-s0010 →“gie fe kiu kai ci bin hu。”泽在心里默念。“扎根，无首。”；c02-s0130 →“……‘gie fe kiu kai ci bin hu’：扎根，无首。用分布式制造……”"
+    },
+    {
+      "id": "c02-s0033",
+      "severity": "medium",
+      "type": "排版",
+      "source": "th: \"MUN GUI 1842\"；p: \"it says Mun Gui 1842. We... just passed 1990 Hun Min.\"",
+      "zh": "面板 c02-s0026：\"文贵街1842\"；对话 c02-s0033：\"行吧。总之它上面写着文贵街1842。我们……刚经过训民街1990。那它在我们后头。\"",
+      "problem": "体例规范 §3 规定地址写作「巴德拉街1103号」「清丘大道980号」；第 1 章面板同样处理（Badra St #1103 → 巴德拉街1103号，Clearhill Ave #980 → 清丘大道980号）。本章面板与对话都漏了「号」，而同一章 c02-s0035 自己又写「从2000号走到1842号」，同一章内门牌写法不统一。",
+      "suggestion": "面板 c02-s0026 改「文贵街1842号」；c02-s0033 改「行吧。总之它上面写着文贵街1842号。我们……刚经过训民街1990号。那它在我们后头。」"
+    },
+    {
+      "id": "c02-s0133",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"Dzego will rise again.\"（呼应 c02-s0132 的 \"Dze go ba fau gie\"）",
+      "zh": "“泽国必将再起。”",
+      "problem": "同一口号在别处的释义不统一：第 7 章 c07-s0214 写「“Dze go ba fau gie”意思是“泽国将再度崛起”」，本章写「泽国必将再起」。这是全书反复出现的固定口号，两处措辞不同会让读者以为是两句不同的话。",
+      "suggestion": "统一为「泽国必将再度崛起。」（若要保留本章的短促语气，则把第 7 章 c07-s0214 一并改成同一句）。"
+    },
+    {
+      "id": "c02-s0061",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "from zero to 999,999 ... from zero to 99 ... between zero and five hundred thousand",
+      "zh": "“从零到999,999。而右边那罐里分子运动得慢，速度可以用六位数表示，从零到99。”（c02-s0073/74/79：\"零到五十万\"）",
+      "problem": "同一类速度区间在本章有三种写法：与阿拉伯数字混排的「从零到999,999／从零到99」，以及纯汉字的「零到五十万」。体例规范 §3 要求数量用阿拉伯数字，且数字与汉字不混搭；「零」和「999,999」并排尤其不一致。",
+      "suggestion": "统一为阿拉伯数字：c02-s0061「从0到999,999」「从0到99」；c02-s0073「速度最终会落在中间某处，0到50万之间」；c02-s0074「说0到50万吧」；c02-s0079「从0到50万，比五位多，又不到六位」。"
+    },
+    {
+      "id": "c02-s0018",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "Freetown gets five percent votes in Devanvil, Devanvil gets fifteen percent votes in Redshire",
+      "zh": "“嗯，我们在讲联合城邦，老师就让我们死记硬背那些共治投票比例。自由城在德文维尔占百分之五的投票权，德文维尔在红郡占百分之十五，红郡又……”",
+      "problem": "体例规范 §3 明确把「百分比」列入用阿拉伯数字的类别（示例 `20%`），全书主流写法也是 `N%`（跨 12 个章节约 150 余处，如「80%」「10%」）；本章这里用汉字「百分之五／百分之十五」，与规范和全书主流不一致（第 22 章同样写「百分之一」，建议一并按同一口径处理）。",
+      "suggestion": "“自由城在德文维尔占5%的投票权，德文维尔在红郡占15%，红郡又……”"
+    },
+    {
+      "id": "c02-s0023",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "DU - \"Decentralized University\", or dzu hu sun du in Dzegoban - the place they were going.",
+      "zh": "去中心化大学（DU），泽国语里叫<e>dzu hu sun du</e>——就是他们要去的地方。泽想起得确保准时到，便看了一眼手表。",
+      "problem": "体例规范 §3 要求拉丁词（≥2 个字母）与汉字之间加一个半角空格；这里是汉字「叫」直接紧贴拉丁词 dzu。规范化脚本漏掉了它，因为 `<e>` 标签把文本切开、正则看不到跨标签相邻（实测 `normalize_zh.py` 对本段无任何改动），全书也仅此一处出现汉字紧贴拉丁词。",
+      "suggestion": "去中心化大学（DU），泽国语里叫 <e>dzu hu sun du</e>——就是他们要去的地方。……"
+    },
+    {
+      "id": "c02-s0042",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "pictures of cute cartoon animals playing with electronic gadgets and chemistry lab equipment, with a backdrop of green trees and blue skies（与 c18-s0077 逐字相同）",
+      "zh": "可爱的卡通小动物玩着电子小玩意儿、摆弄着化学实验器材，背景是绿树和蓝天（第 18 章作：可爱的卡通动物在摆弄电子器件和化学实验器材，背景是绿树和蓝天）",
+      "problem": "这是原文逐字重复的泽国审美套语（第 2 章与第 18 章完全一样），译文两处却分别作「卡通小动物玩着电子小玩意儿」与「卡通动物在摆弄电子器件」，同一视觉母题写法不统一。",
+      "suggestion": "两处采用同一句，例如本章改为「……箔面之上是泽国经典的那种审美：上面画着可爱的卡通动物在摆弄电子器件和化学实验器材，背景是绿树和蓝天。」，第 18 章 c18-s0077 沿用同一句。"
+    }
+  ]
+}

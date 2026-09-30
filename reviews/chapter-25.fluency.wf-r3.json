@@ -1,0 +1,161 @@
+{
+  "chapter": 25,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第25章整体好读，是全书里少见的「对话推演」章节：尼姆博弈的讲解部分数字链清晰、术语（异或和、先手／后手占优、根本法）落得住，「独门秘诀」「换个路数」「你倒是懂我」这类口语化处理把泽与格拉迪亚斯的师生感带出来了，末段韦尔多的政治论证也有气势。问题集中在两处：一是英文长句结构直搬，最明显的是 c25-s0120——「把整个军方领导层换掉……为什么是能救维里迪亚……的事」丢掉了支配它的动词，读者必须回头重读；二是抽象词的硬搭配（「这一定是个减小」「那笑意多半是出于赞赏」「毫无战略头绪」「模仿出来的虚拟世界」），单独看都能懂，连读时会让中文发涩。另有少量术语腔（「应手」「非0」）和一处电话问候的语用没有落地。按条替换后，本章中文可到出版级语感。",
+  "issues": [
+    {
+      "id": "c25-s0120",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Explain to them why replacing the entire military leadership, and if needed the parliament, is something that will rescue Veridia, rather than throwing it into further chaos.",
+      "zh": "把整个军方领导层换掉——必要时连议会一起换掉——为什么是能救维里迪亚、而不是让它更乱的事。",
+      "problem": "这一句没有支配它的动词：原文是「Explain to them why X is something that ...」，中文把前面那句「把话说透」当成了唯一的动词，于是「把整个军方领导层换掉……为什么是……」直接悬在半空，读者读到这里找不到主干，必须回头重读才知道主语其实是后面那个「为什么」从句。同段开头「光是我刚说的那套论证直接扔到公众面前……是不够的」又把一长串动作压在「光是」和「是不够的」之间，也是英文句式的直搬。",
+      "suggestion": "要赢这一局，光把我刚才那套论证扔到公众面前，指望法官一看就知道当然正确、立刻照办，是不够的。你得去说服他们。你得跟他们坐下来，把话说透：这不只是一个站得住脚的法律论证，而且对维里迪亚有好处；还要向他们说明，为什么把整个军方领导层换掉——必要时连议会一起换掉——是能够拯救维里迪亚、而不是把局面推得更乱的事。"
+    },
+    {
+      "id": "c25-s0119",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "It's something so crazy that I don't think anything remotely like it has been attempted in Veridian history.",
+      "zh": "疯狂到我不认为维里迪亚历史上有人尝试过任何类似的事。",
+      "problem": "「疯狂到」后面要接结果分句，这里接的却是否定判断「我不认为……」，等于「疯狂到（我不认为）」，逻辑绕了一圈；跟前一句「这很疯狂。」连读时，读者会先把「疯狂到」挂到「我不认为」上，再折回来。",
+      "suggestion": "疯狂到在我看来，维里迪亚历史上从未有人尝试过任何类似的事。"
+    },
+    {
+      "id": "c25-s0046",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "In that box, change its count from N to N XORed with the XOR sum. That's always a decrease, because one digit flips from 1 to 0 and all other digits that change are lower-order.",
+      "zh": "挑出这样一个格子，把它的圆圈数改成它与异或和相异或的结果。这一定是个减小，因为有一位从1翻成了0，而其余发生变化的位都比它低。",
+      "problem": "「这一定是个减小」把动词「减小」硬当名词用，中文口语里没有「这是个减小」的说法；另外「把它……改成它与异或和相异或的结果」一句里连着三个「它／异或」，读起来打结，正是全章最绕的一句讲解。",
+      "suggestion": "挑出这样一个格子，把它的圆圈数和异或和再做一次异或，用得出的结果替换原来的数。改完之后一定比原来小，因为有一位从1翻成了0，而其余变化的位都比它低。"
+    },
+    {
+      "id": "c25-s0063",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "This time, Zei paused.",
+      "zh": "这次轮到泽停顿。",
+      "problem": "「轮到」在中文里是轮次的意思（第23章 c23-s0088 就是「现在轮到你了」），用在这里让读者以为又要轮流做什么；而且本章通篇在讲先后手，这个「轮到」还会被误读成棋局的轮次。「停顿」也偏书面。",
+      "suggestion": "这一回，顿住的是泽。／这次，泽停了一下。"
+    },
+    {
+      "id": "c25-s0073",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "...and get it to do their bidding and nudge Veridian society to not bother resisting.",
+      "zh": "还劝得维里迪亚社会觉得抵抗也没什么意思。",
+      "problem": "「劝得……觉得……」不是中文搭配（「劝得」后面要接动作结果，如「劝得他回心转意」），而且「劝」是对人说话的行为，用在整个社会身上也不对；原文 nudge 是潜移默化的推动。",
+      "suggestion": "还让维里迪亚社会觉得抵抗也没什么意思。"
+    },
+    {
+      "id": "c25-s0087",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "a lie is essentially a simulated virtual universe, and it's very hard to make a virtual universe that's consistent without actually simulating the whole thing.",
+      "zh": "一个谎言本质上是一个模拟出来的虚拟世界，而要让它自洽，除非你真的把整个世界都模拟一遍，否则极难做到。",
+      "problem": "「模拟出来的虚拟世界」里「模拟」和「虚拟」语义重叠，等于说了两遍；后半句「除非……否则极难做到」是 unless 句式的直搬，中文把条件放在结论后面才顺。整句是泽／格拉迪亚斯对话里最需要读两遍的一处。",
+      "suggestion": "一个谎言本质上就是一个虚拟世界，而要让它自洽，你就得把整个世界真的模拟一遍，这几乎做不到。"
+    },
+    {
+      "id": "c25-s0117",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The goal of law is not to try to eliminate the subjective nature of interpreting what's right and wrong in the world. Gather, the goal is to structure it - put it into channels that make it more predictable, and more focused...",
+      "zh": "法律的目的，不是要消灭判断世上是非对错时的那种主观性。相反，它要做的是给这种判断搭出结构——把它引进一些渠道，让它更可预测、更聚焦……",
+      "problem": "连着两个「它」分别指「法律」和「主观判断」，读者要回看才能确定第二个「它」不是法律；「把它引进一些渠道」也不成搭配——渠道是「纳入／划出」的宾语，不是「引进」的去处。韦尔多这段法理独白本该是本章最见分量的话，被这两处拖钝了。",
+      "suggestion": "法律的目的，不是要消灭判断世上是非对错时的那种主观性。恰恰相反，法律要做的是给这种主观判断搭出结构——为它划出一些渠道，使它更可预测、更聚焦……"
+    },
+    {
+      "id": "c25-s0107",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Verdow seemed to laugh, more with admiration than anything else.",
+      "zh": "韦尔多似乎笑了，那笑意多半是出于赞赏。",
+      "problem": "「笑意……出于赞赏」主谓搭配不成立：「笑」可以出于某种情绪，「笑意」是一种表情状态，不能说它「出于」什么。半文半白的腔调也和本章其余口语化叙述不搭。",
+      "suggestion": "韦尔多似乎笑了，那笑更多是出于赞赏。"
+    },
+    {
+      "id": "c25-s0008",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Gladias did not feel like he had any strategic insight about the game, and so he decided he would learn by playing.",
+      "zh": "格拉迪亚斯觉得自己对这游戏毫无战略头绪，于是决定边下边学。",
+      "problem": "「毫无战略头绪」是把 strategic 硬塞进「毫无头绪」这个固定搭配，中文没有「战略头绪」这种说法；「战略」和「头绪」不搭。",
+      "suggestion": "格拉迪亚斯看不出这游戏有什么门道，于是决定边下边学。"
+    },
+    {
+      "id": "c25-s0071",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Gladias's eyes opened wide, visibly surprised at the new direction the conversation was going.",
+      "zh": "格拉迪亚斯眼睛睁大了，显然对这话题的新走向感到意外。",
+      "problem": "「对这话题的新走向感到意外」是 the new direction the conversation was going 的逐词直译，中文更常说「没想到话题会拐到这里」；「话题的新走向」这种名词化说法在叙事句里发僵。",
+      "suggestion": "格拉迪亚斯眼睛睁大了，显然没想到话题会拐到这边。"
+    },
+    {
+      "id": "c25-s0100",
+      "severity": "low",
+      "type": "本土化",
+      "source": "\"How are you, Gladias!\"",
+      "zh": "“你好啊，格拉迪亚斯！”",
+      "problem": "这是接起电话的第一句，「你好啊」在中文电话语境里更像当面寒暄，用来开场打招呼会显得平；问候近况的说法才把原文的热情接住。",
+      "suggestion": "“格拉迪亚斯！近来可好啊？”"
+    },
+    {
+      "id": "c25-s0090",
+      "severity": "low",
+      "type": "生硬",
+      "source": "You set up that call. I'll quickly ping Den and get the latest on how our spying in Veridia is going.",
+      "zh": "“那通电话你来安排。我这就问登一声，看看我们在维里迪亚的谍报工作有什么最新进展。”",
+      "problem": "「问登一声」把单音节人名夹进「问……一声」中间，中文读不顺（改成「问一声登」也别扭）；ping 的随口感也没有落地，整句偏书面。",
+      "suggestion": "“那通电话你来安排。我这就去问一下登，看看我们在维里迪亚的谍报进展。”"
+    },
+    {
+      "id": "c25-s0010",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zei immediately responded by tapping the circle at the top of the bottom right box. (同 c25-s0012 “Zei responded by tapping every circle in the bottom right box, except for one.”)",
+      "zh": "泽立刻应手，点了右下格最上面的那个圆圈。（c25-s0012：“泽应手，把右下格里的圆圈全点走，只留下一个。”）",
+      "problem": "「应手」是围棋术语，一般作名词用，单说「泽应手」读不通，还容易被读成「得心应手」；这里只是点圆圈的棋，借围棋术语也没有额外效果，两处连用更显生硬。",
+      "suggestion": "“泽立刻应了一手，点了右下格最上面的那个圆圈。”（c25-s0012：“泽应了一手，把右下格里的圆圈全点走，只留下一个。”）"
+    },
+    {
+      "id": "c25-s0044",
+      "severity": "low",
+      "type": "生硬",
+      "source": "But if it's nonzero, then I always have some move that can set it back to zero again. (同 c25-s0048 “you can only change the XOR sum from zero to nonzero”)",
+      "zh": "“但只要它非0，我就总能找到某一步，把它重新变回0。”（c25-s0048：“只能把异或和从0变成非0”）",
+      "problem": "「非0」是数学符号语言，说话时讲「非0」会让人一愣，像是把板书念出来；本章这两处又都出现在泽的口语讲解里。",
+      "suggestion": "“但只要它不是0，我就总能找到某一步，把它调回0。”（c25-s0048：“只能让异或和不再是0”）"
+    },
+    {
+      "id": "c25-s0049",
+      "severity": "low",
+      "type": "生硬",
+      "source": "But if the board starts with an XOR sum of zero, then as second player I'm guaranteed to win.",
+      "zh": "“但如果开局异或和是0，那我做后手就稳赢。”",
+      "problem": "上文用的是「如果你执先手」（c25-s0064），这里换成了「做后手」，同一组对举词前后不统一；「做后手」本身也不如「执后手」自然。",
+      "suggestion": "“但如果开局异或和是0，那我执后手就稳赢。”"
+    },
+    {
+      "id": "c25-s0105",
+      "severity": "low",
+      "type": "生硬",
+      "source": "though that does mean we have to be more careful now about not breaking our cover any further.",
+      "zh": "“不过这也意味着，我们接下来得更小心，不能再多暴露自己。”",
+      "problem": "「不能再多暴露自己」是 not ... any further 的直译：「多暴露」在中文里偏向数量，「不能再多」读起来像「暴露的量不能更多」，而原意是「不能再往前多走一步」。",
+      "suggestion": "“不过这也意味着，我们接下来得更小心，不能再暴露更多了。”"
+    },
+    {
+      "id": "c25-s0004",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Gladias and Zei were sitting at a table in an enclosed room, with the tabletop functioning as a screen.",
+      "zh": "格拉迪亚斯和泽坐在一间封闭房间的桌旁，桌面本身就是一块屏幕。",
+      "problem": "「一间封闭房间」里「间」字重复，读起来发黏；「封闭房间」也是 enclosed room 的字面对应，中文更常说「密闭的屋子」。",
+      "suggestion": "格拉迪亚斯和泽坐在一间密闭屋子的桌旁，桌面本身就是一块屏幕。"
+    }
+  ]
+}

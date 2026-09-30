@@ -1,0 +1,53 @@
+{
+  "chapter": 15,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "本章一致性整体过关：218 段与原文一一对应、顺序一致，颜色标签 66 开 66 闭逐条同色；人名（扬、乌塔库、格拉迪亚斯、塞拉、费布里克、赫雷达、兹文、莉莉、德尔瓦特、莫夫、泽、德鲁因、苏、登、穆、芬、阿尔博、塞莱迪尔、塔芬德尔）、地名（自由城、联合城邦、梅尔丹、维里迪亚、红郡、德文维尔、银滩、马布利、帕佛盖都、萨祖都、泽国）、机构与术语（掌舵会、掌则人、评则、硬件开放度评则、税率档、密钥分配组、盲化份额、投票密钥、混淆电路、最低有效位、分桶、异或、伪随机排列、掩护流量、载符飞船、滑翔机、民本棋、昆高培、银聊、恐结、齐普币、嘀嗒、长时、手持终端、颈带、隐私袍、闸机）逐条与术语表吻合；面板体例（西方面板译中文表头「消息／收件人／来自／时间／发送」，泽国语面板 zan/tie/tei/dun/be 原样保留罗马字）与第1、3、4、5、8、10、12、13章完全一致；全角标点、引号配对、「——」「……」与区间「～」经全章脚本扫描无一处违例，界面数值（32117、84690、92115、85190 等）原样保留；本章无 locked 段落、无 <f> 虚构语言片段，不存在泽国语被误译。共 5 条问题，且集中在两处：一是「At 15,500 this morning」没有沿用第20章「今天早上5,250时」的全书时刻写法；二是 new_terms 与术语表的元数据出错（面板 tie/dun 含义写错、LLM／Su／XOR 被标成 conlang「虚构语言，正文保留罗马字」）。没有会被绊住的阅读级一致性问题，本章可读。",
+  "issues": [
+    {
+      "id": "c15-newterms-llm-conlang",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "术语表条目：LLM → 语言模型，kind: conlang，note「（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）大语言模型；正文中泽用它判断哪些位适合翻转」（from: chapter-15.zh）；同类还有 Su → 苏（from: chapter-12.zh）、XOR → 异或（from: chapter-14.zh）",
+      "zh": "本章正文 c15-s0119「在实际分布上训练一个语言模型」、c15-s0202「拿他自己的健康数据训练一个语言模型」；c15-s0169「是苏」；c15-s0127「让第一个分桶的异或值对上」",
+      "problem": "术语表把 LLM／Su／XOR 三条标成 conlang（虚构语言），note 明令「正文保留罗马字原样，不得译成中文」，与本章及全书正文的「语言模型／苏／异或」直接冲突；而本章 new_terms 里这三条登记的 kind 分别是 term／person／term，说明是这次合并把 kind 写错并套上了 conlang 样板说明（术语表里还有若干条目样板文字重复两遍，同一根因）。任何按 conlang 处理的下游——等宽／装饰字体渲染、保罗马字的规范化脚本、后续章节译者检索——都会据此得出「LLM／Su／XOR 应保留罗马字」的错误结论。另外 Su、XOR 两条在第12、14章已收录，本章属重复登记。",
+      "suggestion": "只改术语表，正文不动：LLM → kind 改 term，note 改「大语言模型；正文中泽用它判断哪些位适合翻转」；Su → kind 改 person，note 改「民本棋全国赛组织者之一，祭司；泽国名按汉字音译」；XOR → kind 改 term，note 改「按位异或运算」。本章 new_terms 中的 Su、XOR 与面板条目在第12、14、4章已收录，合并时可跳过。"
+    },
+    {
+      "id": "c15-s0011",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "At 15,500 this morning, a large number of Arctic drones and aircraft landed all across the major cities and military bases in Redshire",
+      "zh": "今天15,500，大批北极无人机与飞行器在红郡各大城市和军事基地降落",
+      "problem": "同一句式在第20章作「今天早上5,250时」（c20-s0010：At 5,250 this morning → 今天早上5,250时），本章少了「早上」和表时刻的「时」，成了全书唯一写作「今天15,500」的例子（其余时刻写法见第2章「70,001。」、第12章「30,003，手表显示」、第24章「时间刚跳到20,000」）。「今天」后直接接五位数字，中文读者第一眼会读成数量，正好与紧随其后的「大批……」撞在一起。（漏译与生硬两面已由 fidelity／fluency 报告另行提出，此处只记跨章体例不一致。）",
+      "suggestion": "今天早上15,500时，大批北极无人机与飞行器在红郡各大城市和军事基地降落——与第20章「今天早上5,250时」保持同一体例。"
+    },
+    {
+      "id": "c15-newterms-panel",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "HTML 面板真值：撰写面板 <th>tie</th>…<th>dun</th>（列序＝消息文本｜→｜收件人），消息列表面板 <th>zan</th>…<th>tie</th><th>tei</th>（列序＝发件人｜→｜消息｜时间）；西方面板同结构作 Message｜(空)｜To → 消息｜收件人",
+      "zh": "new_terms 条目 note：「泽国语手表面板表头与按钮（zan/tie/tei＝来自／消息／时间，tie/dun＝来自／收件人，be＝发送），界面原样保留罗马字，与第 4 章一致」",
+      "problem": "该 note 自相矛盾并写错一处：前段说 tie＝消息，后段又说 tie＝来自。按 HTML 列位，tie 在撰写面板压在消息文本列、在消息列表压在消息列，dun 压在收件人列（正对应西方面板的 To→收件人），故 tie＝消息、dun＝收件人、zan＝来自、tei＝时间。此 note 已随合并进入术语表「zan / tie / tei / dun / be」条，下游据此做界面词典或复核时会把「消息」列标成「来自」。",
+      "suggestion": "把 note 改为「泽国语手表面板表头与按钮（zan/tie/tei＝来自／消息／时间，tie/dun＝消息／收件人，be＝发送），界面原样保留罗马字，与第 4、12 章一致」，并同步修正术语表同条 note；正文（面板罗马字原样保留）无需改动。"
+    },
+    {
+      "id": "c15-s0152",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Zei felt more optimistic about how much of an improvement a better steganographic encoding would be, but decided not to press the point further.",
+      "zh": "泽对更好的隐写术编码能带来多大改进，心里更乐观了些，但还是决定不再纠缠这一点。",
+      "problem": "术语表把 steganographic encoding 定为「隐写编码」，「隐写术」对应的是 steganography（术语表另有该条，note 明写「steganographic encoding → 隐写编码」）；本章 new_terms 登记的也是「隐写编码 → steganographic encoding」。正文多出一个「术」字，与术语表（唯一事实源）不一致（第19章正文有同样写法，需一并统一）。",
+      "suggestion": "泽对更好的隐写编码能带来多大改进，心里更乐观了些，但还是决定不再纠缠这一点。"
+    },
+    {
+      "id": "c15-s0064",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "You generate your voting key by meeting at least 3 of 5 people from your Key Allocation Group",
+      "zh": "你要和密钥分配组五个人里的至少3个碰面",
+      "problem": "同一小句里「五」与「3」两种数字写法并用：体例规范要求数量用阿拉伯数字，术语表同一条（Key Allocation Group）的 note 也写作「由投票者当面见过的5人组成」，本章其余数字（至少3个、20个位、2倍／1000倍、第i个分桶）一律用阿拉伯数字。",
+      "suggestion": "你要和密钥分配组5个人里的至少3个碰面（若全章决定统一采用汉字小数字，则改为「五个人里的至少三个」，两方案只能取一，但同一小句内必须统一）。"
+    }
+  ]
+}

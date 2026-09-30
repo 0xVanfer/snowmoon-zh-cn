@@ -1,0 +1,44 @@
+{
+  "chapter": 31,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "本章忠实度整体很高：101 个片段编号、颜色标签、<e> 着重与面板内容全部与原文一一对应，没有整段漏译，数字（20公里、30米、100/200米、五天、一个半月、十年、几万人）与因果、否定关系均准确，说话人归属（泽／德鲁因／白／穆／格拉迪亚斯一家）无一错位。发现 1 处会破坏原作笑点的硬误译（民本棋冠军被提前改写成“半决赛胜出”），1 处指代易被误读为北极一方，另有 2 处轻微漏译／比喻走味。修掉这四处即可放心定稿。",
+  "issues": [
+    {
+      "id": "c31-s0026",
+      "severity": "high",
+      "type": "误译",
+      "source": "try to use my parents' reputation together with my own status as a Minpentai champion-",
+      "zh": "利用我父母的声望，加上我在民本棋半决赛中胜出的身份——",
+      "problem": "原文 Deluin 自夸的是“冠军”（champion），下一段 Zei 才会抢白“民本棋冠军是我！”，Deluin 再回“那是因为比赛取消了，他们直接把头衔给了你”——这是三段式的斗嘴（自夸→抢白→揭底）。译文把 s0026 提前改写成 s0032 才该出现的“半决赛胜出”，等于把 Zei 抢白的由头抽掉了，Deluin 那句“比赛取消了，头衔给了你”也变成自说自话；同时 s0032 特意用 <e> 标出的“半决赛胜出”（由口误改口为准确说法）与前面的对照关系被抹平。可对照第 15 章“今年的冠军是你”（泽因决赛取消而获头衔）与第 19 章德鲁因自述“我在泽国赢下民本棋半决赛”。",
+      "suggestion": "“我做了一个风险很大的决定。我决定‘归化’过去——装作北极事业的彻底支持者，利用我父母的声望，加上我自己那个民本棋冠军的头衔——”"
+    },
+    {
+      "id": "c31-s0059",
+      "severity": "medium",
+      "type": "误译",
+      "source": "Freetown defense corps are reporting that the Arctic garrison in Redshire has tripled. They tried some sabotage operations with their drones already on Redshire using the tricks that we discovered during the battle two days ago, but they are mostly failing now.",
+      "zh": "自由城防卫队报告说，红郡的北极驻军已经增加到三倍。他们已经用我们两天前那场战斗里发现的招数，派无人机在红郡试了几次破坏行动，但现在大多都失败了。",
+      "problem": "英文的 They 指自由城防卫队一方（在红郡搞破坏的是己方）。中文“他们”紧跟在“红郡的北极驻军”之后，按话题链读下来先被理解成“北极驻军”，只有读到“用我们……发现的招数”才会发现读不通，需要回头重解——这正是读者会卡壳的地方。另外 “with their drones already on Redshire” 是无人機“已经在红郡（潜伏）”，译文“派无人机在红郡”把它变成临时派发，丢掉了“已在当地”这层信息。",
+      "suggestion": "“自由城防卫队报告说，红郡的北极驻军已经增加到三倍。自由城方面已经用我们两天前那场战斗里发现的招数，让已在红郡的无人机试了几次破坏行动，但现在大多都失败了。”"
+    },
+    {
+      "id": "c31-s0026b",
+      "severity": "low",
+      "type": "误译",
+      "source": "I decided I would 'go native' - pretend to be a full-on supporter of the Arctic cause",
+      "zh": "我决定‘就地投诚’——装作北极事业的彻底支持者",
+      "problem": "“go native”指外来者／被征服者融入并模仿当地人、把自己变成“他们的人”，重点在“同化、装作自己人”；“投诚”是敌方人员归附投降，强调阵营转换。用在 Deluin 的渗透计划上词义偏了，引号里那种带点自嘲的殖民／人类学语气也没了。",
+      "suggestion": "“我决定‘归化’过去——装作完全拥护北极事业的人”"
+    },
+    {
+      "id": "c31-s0097",
+      "severity": "low",
+      "type": "漏译",
+      "source": "and they can show us what actual properly cooked Dzego food is like?",
+      "zh": "让他们给我们露一手，尝尝真正的泽国菜该是什么味道？",
+      "problem": "“properly cooked”（正经做出来的）没有译出。上一段 Febric 刚说过北极的“蛋白制品”味道像鱼和肉，Gladias 这句是用“正经烹饪”跟那些合成食品对照，落点正在这里，只留“真正的”会弱掉这层玩笑。",
+      "suggestion": "“让他们给我们露一手，尝尝正经做出来的泽国菜该是什么味道？”"
+    }
+  ]
+}

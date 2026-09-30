@@ -133,10 +133,11 @@ figure img{max-width:100%; height:auto; border-radius:10px; background:var(--pan
   max-width:32em; text-align:center}
 .dz-card .dz-line{margin:3px 0}
 .dz-script{font-family:"TeX Gyre Chorus","Courier New",monospace; letter-spacing:.04em}
-.toc{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1.2em 1.4em;
-  margin:2em 0 3em}
+.toc{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1.1em 1.3em;
+  margin:2em 0 1.6em}
 .toc h3{margin:.1em 0 .6em; font-size:1.05em; letter-spacing:.08em}
-.toc ol{margin:0; padding-inline-start:1.6em; columns:2; column-gap:2em}
+.toc ol{margin:0; padding-inline-start:1.5em; columns:3; column-gap:1.4em; font-size:.94em}
+.toc li{margin:.12em 0; break-inside:avoid}
 .toc a{color:inherit; text-decoration:none; border-bottom:1px dotted var(--line)}
 .notice{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1em 1.3em;
   color:var(--ink-soft); font-size:.9em; margin:2em 0}
@@ -144,6 +145,7 @@ figure img{max-width:100%; height:auto; border-radius:10px; background:var(--pan
 .controls{position:fixed; inset-block-start:14px; inset-inline-end:14px; z-index:20}
 .controls button{background:var(--card); color:var(--ink); border:1px solid var(--line);
   border-radius:999px; padding:.45em .9em; font:inherit; font-size:.85em; cursor:pointer}
+@media (max-width:900px){ .toc ol{columns:2} }
 @media (max-width:640px){ :root{--fs:17px} .page{padding:26px 16px 64px} .toc ol{columns:1} }
 @media print{ .controls{display:none} body{background:#fff; color:#000} .page{max-inline-size:none} }
 """

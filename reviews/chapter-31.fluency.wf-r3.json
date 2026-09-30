@@ -1,0 +1,197 @@
+{
+ "chapter": 31,
+ "lens": "fluency",
+ "reviewer": "wf-r3",
+ "overall": "整体可读性不错：对话密度高但基本像人说话，民本棋斗嘴和「开源」口号都能落地，读者不会被术语或长定语卡住。问题集中在少数长句按英文语序逐词硬搬（s0067 的「守住……底线目标」、s0051 的「抬到……前沿上」、s0039 的「一套……的说法」），以及代词堆叠和两处书面／客套腔与人物身份不搭；其余多为搭配、量词与对话断句的细修，改完即可放心定稿。",
+ "issues": [
+  {
+   "id": "c31-s0067",
+   "severity": "high",
+   "type": "欧化",
+   "source": "Two Greater Plum Harbor security guards, wearing purple and grey attire, simply watched the crowds move in and out, and resigned themselves to meeting the fallback objective of preventing any theft and violence.",
+   "zh": "两名大梅港保安穿着紫灰两色的制服，只是看着人流进出，退而求其次，只管守住防止偷盗和暴力的底线目标。",
+   "problem": "“守住……底线目标”动宾搭配不成立——目标只能“达成／保住”，不能“守住”；“退而求其次”与“底线目标”语义又重复一遍，整句是按英文 “meeting the fallback objective of …” 的结构逐词搬过来的，读两遍才明白是“只求不出事”。",
+   "suggestion": "两名大梅港保安穿着紫灰两色的制服，只是看着人流进出，也只能退而求其次：保证不出偷盗和暴力事件。"
+  },
+  {
+   "id": "c31-s0051",
+   "severity": "high",
+   "type": "生硬",
+   "source": "bring the whole world up to at least the frontier that the Arctics have created to keep for themselves.",
+   "zh": "把整个世界至少抬到北极人自己留着不出的那条前沿上。",
+   "problem": "“抬到……前沿上”里“抬”是抬高能力／水平，“前沿”却是空间／技术线，两个意象打架；后半“自己留着不出”把 “created to keep for themselves” 压成四个字，指代含混。整句是本章最难读的一处。",
+   "suggestion": "把整个世界至少拉到北极人自己独享的那条技术前沿上。"
+  },
+  {
+   "id": "c31-s0025",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "The Arctics offered them a position. They said that they should come to Glasscrown, and advise the top leadership on integration -",
+   "zh": "“北极人给了我父母一个职位。他们要请他们去琉璃冠，为最高领导层做整合方面的顾问——",
+   "problem": "连着两个“他们”分指两拨人（北极人／我父母），读者读到“他们要请他们”必须回读才知道谁请谁；“做整合方面的顾问”也是 “advise on integration” 的直搬，中文里“整合顾问”更顺。",
+   "suggestion": "“北极人给了我父母一个职位，想请他们去琉璃冠，给最高领导层当整合顾问——先是整合被占领的红郡人口，然后是北林居民，最后是所有他们将要征服的人。”"
+  },
+  {
+   "id": "c31-s0039",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "They don't really have much of a theory of people having their own motivations, dreaming their own hundred thousand dreams, and how to tell when someone's heart beats together with yours and when they are just pretending.",
+   "zh": "他们根本没有一套关于人各有其动机、各做各的十万个梦的说法，也分不清谁的心是和你一起跳的，谁只是在装。",
+   "problem": "“没有一套关于……的说法”是把 “don't have much of a theory of” 逐词搬过来，中文里“说法”和“理论”错位，定语又长到断气；“各做各的十万个梦”也让人卡一下。段落前半“人就是机器人”单独成句同样突兀（原文 People as bots 是无谓语片段，中文需补出谓语）。",
+   "suggestion": "“他们那一整套意识形态完全不看重立场，只看重能力。在他们眼里，顶尖人才是可以互换的，人不过是机器人，薪水开高一点就能被重新分配。他们压根没有‘人各有各的动机、各做各的十万个梦’这回事，也分不清谁的心是跟你一起跳的，谁只是在装。所以你只要喊对口号，让他们相信你是顶尖人才，他们就会……信任你。”"
+  },
+  {
+   "id": "c31-s0024",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Back in Grapetime, about two months after they occupied Redshire, some Arctic officers came to our house, to talk with my parents.",
+   "zh": "“葡期的时候，他们占领红郡大约两个月后，几个北极军官来到我们家，找我父母谈话。",
+   "problem": "两个时间状语（“葡期的时候”“占领红郡大约两个月后”）叠在一句话头上，后一个才是真正的叙事锚点，读起来像两句被硬压成一句；“找我父母谈话”也偏公文腔。",
+   "suggestion": "“那还是葡期的事。他们占领红郡大概两个月后，几个北极军官上门来找我父母谈话。"
+  },
+  {
+   "id": "c31-s0024b",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "saying we should be more open to peace and cooperating with them. But once the invasion happened, they quickly flipped to just being full supporters of what the Arctics were doing.",
+   "zh": "总说我们应该更开放地谈和平、跟他们合作。可入侵一开始，他们很快就转成了北极所作所为的全力支持者。",
+   "problem": "“be open to peace” 是“对和平持开放态度”，译成“更开放地谈和平”变成“更公开地讨论和平”，意思走味且读着别扭；“转成了……的全力支持者”也是英文名词化结构的直搬。",
+   "suggestion": "总说我们该对和平更开放一些，多跟他们合作。可入侵一开始，他们一下就变成了北极所作所为的坚定拥护者。"
+  },
+  {
+   "id": "c31-s0059",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "They tried some sabotage operations with their drones already on Redshire using the tricks that we discovered during the battle two days ago, but they are mostly failing now.",
+   "zh": "“自由城防卫队报告说，红郡的北极驻军已经增加到三倍。自由城方面已经用我们两天前那场战斗里发现的招数，让已在红郡的无人机试了几次破坏行动，但现在大多都失败了。”",
+   "problem": "“让已在红郡的无人机试了几次破坏行动”把 “drones already on Redshire” 塞成前置定语，像公文；“自由城防卫队……自由城方面”与两个“已经”在一段里反复撞车。",
+   "suggestion": "“自由城防卫队报告说，红郡的北极驻军已经增加到三倍。他们用我们两天前那场战斗里发现的招数，拿早就在红郡的那些无人机试了几次破坏行动，但现在大多都失败了。”"
+  },
+  {
+   "id": "c31-s0018",
+   "severity": "medium",
+   "type": "本土化",
+   "source": "\"Nice to meet you, Mu\", Deluin replied, gently laughing.",
+   "zh": "“幸会，穆。”德鲁因轻声笑着答道。",
+   "problem": "“幸会”是商务宴请、正式见面的客套话，一个年轻棋手在雪山顶上随口打招呼不会这么说，人物一下子端起来了；“轻声笑着答道”也是英语现在分词结构的直搬。",
+   "suggestion": "“你好啊，穆。”德鲁因笑了笑。"
+  },
+  {
+   "id": "c31-s0044",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "It's beautiful in its own way. It makes you feel like you're living inside of a giant ice crystal. Its tallest tower is a kilometer above ground, and its caverns stretch deep underground.",
+   "zh": "“琉璃冠是我见过最迷人的城市之一。它有它自己的美。走在里面，就像住在一颗巨大的冰晶里。它最高的塔高出地面一公里，地下的洞窟深不见底。”",
+   "problem": "连续三个“它”作主语（它有它自己的美／它最高的塔／it makes you feel），是英语代词习惯直接搬进中文，读起来像说明书；“它有它自己的美”也不像中文说法。",
+   "suggestion": "“琉璃冠是我见过最迷人的城市之一，它的美很独特。走在城里，就像住在一颗巨大的冰晶里。最高的塔离地一公里，地下洞窟深不见底。”"
+  },
+  {
+   "id": "c31-s0004",
+   "severity": "low",
+   "type": "生硬",
+   "source": "because it was being regularly plowed and salted by a drone that they could see about thirty meters further above them.",
+   "zh": "则是因为有台无人机在定期清雪、撒盐，他们能看见那台无人机就在上方约30米处。",
+   "problem": "无人机的量词用“架”不用“台”；末句“他们能看见那台无人机就在……”是把定语从句另起一句硬接，语尾发沉。",
+   "suggestion": "则是因为有架无人机在定期清雪、撒盐——他们看得见，那无人机就在上方约30米处。"
+  },
+  {
+   "id": "c31-s0010",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Deluin raised his head up, saw Zei, and ran up the last twenty meters of the staircase.",
+   "zh": "德鲁因抬起头，看见泽，跑完了阶梯最后20米。",
+   "problem": "“跑完了阶梯最后20米”语序别扭，“跑完”也像是在交代任务完成，不如“跑完最后20米台阶”顺。",
+   "suggestion": "德鲁因抬起头，看见泽，三步并作两步跑完最后20米台阶。"
+  },
+  {
+   "id": "c31-s0011",
+   "severity": "low",
+   "type": "生硬",
+   "source": "He reached the top, and almost threw Zei off balance as he threw himself into his arms for a hug.",
+   "zh": "他登上顶端，一头扑进泽怀里抱住他，差点把泽撞得站不稳。",
+   "problem": "“扑进怀里”已经把拥抱的动作说完了，“抱住他”是重复；一句里三次出现泽／他，读起来发绕。",
+   "suggestion": "他登上山顶，一把抱住泽，差点把他撞得站不稳。"
+  },
+  {
+   "id": "c31-s0016",
+   "severity": "low",
+   "type": "生硬",
+   "source": "somewhat unsure if he was genuinely recollecting a memory of seeing her or simply confabulating one.",
+   "zh": "心里却有点拿不准：自己是真的想起了见过她，还是只是在凭空编造一段记忆。",
+   "problem": "“想起了见过她”两个动词硬叠，中文不这么说；后半“凭空编造一段记忆”反而很好。",
+   "suggestion": "心里却有点拿不准：自己是真的记得见过她，还是只是在凭空编造一段记忆。"
+  },
+  {
+   "id": "c31-s0032",
+   "severity": "low",
+   "type": "生硬",
+   "source": "I used my parents' reputation and my status as a Minpentai <e>semifinals winner</e> to climb up the hierarchy myself.",
+   "zh": "我靠父母的声望，加上我民本棋<e>半决赛胜出</e>的身份，自己往上爬。",
+   "problem": "“半决赛胜出”是动词短语，后面直接接“的身份”缺了中心词，读着不成话（“胜出者的身份”才完整）；“自己往上爬”也稍生硬。",
+   "suggestion": "我靠父母的声望，加上我身为民本棋<e>半决赛胜出者</e>的身份，一路往上爬。"
+  },
+  {
+   "id": "c31-s0036",
+   "severity": "low",
+   "type": "生硬",
+   "source": "\"Then no, they definitely did not figure that out.\"",
+   "zh": "“那就不是。他们绝对没弄明白。",
+   "problem": "“那就不是。”是对上一问的否定回答，但中文里缺了被否定的内容，成了没头没尾的半句，读者要愣一下。",
+   "suggestion": "“那倒没有。他们绝对没弄明白。"
+  },
+  {
+   "id": "c31-s0041",
+   "severity": "low",
+   "type": "生硬",
+   "source": "\"I'm just glad that you managed to play the game better than any of the others did.\"",
+   "zh": "“我只是庆幸，这场局你玩得比谁都好。”",
+   "problem": "本章从头到尾都在斗民本棋，“这场局”平了点；白本身是棋手，用“这盘棋”既贴人物也接住前面的斗嘴。",
+   "suggestion": "“我只是庆幸，这盘棋你下得比谁都好。”"
+  },
+  {
+   "id": "c31-s0052",
+   "severity": "low",
+   "type": "本土化",
+   "source": "\"Open source - it's not just a good idea, it's the law\", Zei replied.",
+   "zh": "“开源——不只是一个好主意，更是法律”泽答道。",
+   "problem": "原文是口号式断言 (“it's the law”＝这是铁律／规矩)，中文“更是法律”读起来像在引法条，口号感没了。",
+   "suggestion": "“开源——不只是一个好主意，这是铁律。”泽答道。"
+  },
+  {
+   "id": "c31-s0066",
+   "severity": "low",
+   "type": "生硬",
+   "source": "enjoyed the view of snowflakes gently falling on every building in the town of Northglade and covering it with thick snow.",
+   "zh": "看雪花轻轻落在北林镇的每一栋建筑上，把它们盖上一层厚雪。",
+   "problem": "“把它们盖上一层厚雪”是 “covering it with” 的直搬，中文讲积雪更自然的是“积起厚厚一层”。",
+   "suggestion": "看雪花轻轻落在北林镇的每一栋建筑上，渐渐积起厚厚一层。"
+  },
+  {
+   "id": "c31-s0078",
+   "severity": "low",
+   "type": "生硬",
+   "source": "The last was a picture of Jahn himself taking a selfie with what appeared to be one of the managers who worked at the defense company.",
+   "zh": "最后一张是扬本人和一个人的自拍，那人看着像是那家防卫公司的经理之一。",
+   "problem": "“和一个人的自拍”先出现一个空泛的“一个人”，“经理之一”接在单数“那人”后又自相矛盾，读者要绕一圈。",
+   "suggestion": "最后一张是扬本人的自拍，跟他合影的像是那家防卫公司的一位经理。"
+  },
+  {
+   "id": "c31-s0087",
+   "severity": "low",
+   "type": "生硬",
+   "source": "\"I'm so glad that you are all here together.\"",
+   "zh": "“你们都在这里，聚在一起，我太高兴了。”",
+   "problem": "“都在这里”和“聚在一起”说的是同一件事，中文一句话里说两遍显得啰嗦。",
+   "suggestion": "“你们能聚在一起，我太高兴了。”"
+  },
+  {
+   "id": "c31-s0089",
+   "severity": "low",
+   "type": "生硬",
+   "source": "\"We've gotten through it now, and if we need to, we can get through even more.\"",
+   "zh": "“别道歉。过去这一年，我们每个人都犯了很多错。现在我们都熬过来了；真需要的话，还能再熬过更多。我们是一家人。”",
+   "problem": "“熬过更多”后面没有宾语，动词悬空；中文要么补出“更多难关”，要么改成“再难也能熬过去”。",
+   "suggestion": "“现在我们都熬过来了；真需要的话，再难也能熬过去。”"
+  }
+ ]
+}

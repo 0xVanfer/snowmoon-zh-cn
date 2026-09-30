@@ -1,0 +1,152 @@
+{
+  "chapter": 19,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "整体可读性不错：餐厅里的猜词斗嘴、图书管理员的吐槽、以及德鲁因那封告别信的沉重语气都基本落地，狗与书的笑话、老古板管理员的自嘲也站得住。问题集中在三处：一是中西文混排漏空格（CO2 和／A/B 测试／GB 到底），读起来有跳字感；二是少量句子照搬英文语序或词性而别扭（“另有一半”“他刚走到”“坐在离书架很远的一张桌旁”“我们这些老古板图书管理员”）；三是个别措辞不够本土（“加载”“一个匿名的人烧掉”“我把这个程序放进沙盒”）。都属润色级到轻微阻碍级，不影响理解主线，没有需要重译的硬伤。",
+  "issues": [
+    {
+      "id": "c19-s0069",
+      "severity": "medium",
+      "type": "标点体例",
+      "source": "\"Huh, you're measuring CO2 and PM2.5 on there as well?\"",
+      "zh": "“咦，你这表上还测 CO2和 PM2.5？”",
+      "problem": "“CO2和”处拉丁词与汉字之间漏了半角空格（体例要求拉丁词与汉字之间加一个空格）。同一句里“ CO2”“ PM2.5”都留了空格，唯独这里没有，中文读者扫到这处会顿一下；全章同类漏空格还有“A/B测试”“10.7 GB到底”。",
+      "suggestion": "“咦，你这表上还测 CO2 和 PM2.5？”（同理：做 A/B 测试；那 10.7 GB 到底是什么？）"
+    },
+    {
+      "id": "c19-s0184",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Overhead factor of level two obfuscation is in the tens to low hundreds on size, and high hundreds to low thousands on compute.",
+      "zh": "“二级混淆的开销倍率，体积上是几十倍到一百来倍，算力上是几百倍到一千来倍。”",
+      "problem": "两处“到……来倍”叠在一起很绕口，“一百来倍”“一千来倍”又是口语化概数，配“开销倍率”这种技术表述不整齐，读者要在脑子里换算才知道是“几十到一百多倍／几百到一千多倍”。",
+      "suggestion": "“二级混淆的开销倍率，体积上是几十到一百多倍，算力上是几百到一千多倍。”"
+    },
+    {
+      "id": "c19-s0178",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "One sixth was a few recent movies ... Another half was a big pile of someone's health data. The last third was also video",
+      "zh": "六分之一是几部新近的电影——公开数据……另有一半是某人的一大堆健康数据。最后三分之一也是视频……",
+      "problem": "“另有一半”是“另外还有一半”的压缩，夹在“六分之一”“三分之一”之间，读者容易把“半”当成量词的一截，反而算不清比例；原文只是“另一半（即六分之三）”。",
+      "suggestion": "“另外一半是某人的一大堆健康数据。最后三分之一也是视频……”"
+    },
+    {
+      "id": "c19-s0136",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"So now might you be more open-minded to the things we stodgy librarians say about how physical spaces are still relevant to the pursuit of knowledge after all?\"",
+      "zh": "“那现在，你是不是稍微愿意听我们这些老古板图书管理员说几句了——实体空间对求知来说，到底还是不可替代的？”",
+      "problem": "“我们这些老古板图书管理员”是照搬 we stodgy librarians，但说话人自己就是图书管理员，用“我们”指自己这一行时读者要愣一下才反应过来是自嘲；后半句“到底还是不可替代的”把 after all 译得太硬，与前面的“是不是”接不上。",
+      "suggestion": "“那现在，你是不是稍微愿意听我这个老古板说两句了——实体空间对求知来说，终究还是不可替代的？”"
+    },
+    {
+      "id": "c19-s0147",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Just as he arrived, the last progress bar reached 100%.",
+      "zh": "他刚走到，最后一根进度条就到了100%。",
+      "problem": "“他刚走到”后面缺宾语，“走到”哪里没有交代，中文里这是半截话，读者得回头补上“走回终端”才通。",
+      "suggestion": "“他刚走回终端，最后一根进度条就跳到了100%。”"
+    },
+    {
+      "id": "c19-s0143",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "Gladias turned to Zei, and saw that Zei, sitting at a table far away from any books, already had his tea.",
+      "zh": "格拉迪亚斯觉得奇怪，转头看向泽，发现泽坐在离书架很远的一张桌旁，茶已经到了。",
+      "problem": "“离书架很远的一张桌旁”把定语按英文语序后置了，中文要说“坐在一张离书架很远的桌旁”才顺；“发现泽坐在……茶已经到了”两句直接拼接，也缺了停顿。",
+      "suggestion": "“格拉迪亚斯觉得奇怪，转头看向泽，发现泽坐在一张离书架很远的桌旁，茶已经送到了。”"
+    },
+    {
+      "id": "c19-s0156",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "I put this program into a sandbox using a journaling file system, so it can't access the internet, and I can always revert it back to start.",
+      "zh": "“我把这个程序放进沙盒，用的是日志式文件系统，它上不了网，而且我随时能回滚到初始状态。所以没有隐私泄露的风险；结果不满意，我就回滚重来。那为什么不试试？”",
+      "problem": "“用的是日志式文件系统”挂在“放进沙盒”后面，读起来像两个互不相干的动作；“所以没有隐私泄露的风险”是书面腔，与泽平时的口语不一致；前面刚说“回滚到初始状态”，紧接着又说“回滚重来”，重复且啰嗦。",
+      "suggestion": "“我把这个程序放进沙盒，还给它套了日志式文件系统：它上不了网，我随时能回滚到初始状态。所以不用担心隐私泄露——结果不满意，回滚重来就行。那为什么不试试？”"
+    },
+    {
+      "id": "c19-s0095",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "An anonymous person burned four hundred zipcoins to send this message.",
+      "zh": "“来自萨祖都伦苏街2415号的‘美丽植物’美食广场。一个匿名的人烧掉400齐普币，把这条消息发了出来。……”",
+      "problem": "“一个匿名的人”是英文不定冠词的直搬，中文口语里说“有人匿名……”或“有个匿名的人……”；“烧掉400齐普币”读起来像单纯的动作陈述，重点其实是“花400齐普币焚烧消息”。另外地址按体例应为“伦苏街 2415 号”（数字与汉字之间不加空格，但街道名与门牌号之间按地址范式留一个空格）。",
+      "suggestion": "“来自萨祖都伦苏街 2415 号的‘美丽植物’美食广场。有人匿名烧了400齐普币，把这条消息发出来。……”"
+    },
+    {
+      "id": "c19-s0123",
+      "severity": "low",
+      "type": "本土化",
+      "source": "\"There are very large files in the archive that I would like to load.\"",
+      "zh": "“档案库里有些很大的文件，我想调出来加载。”",
+      "problem": "中文说文件一般不用“加载”（那是软件 load，容易联想到加载进度条）；图书馆语境里更自然的是“调出来”或“取出来”，现在的说法有软件界面味。",
+      "suggestion": "“档案库里有些特别大的文件，我想调出来。”"
+    },
+    {
+      "id": "c19-s0185",
+      "severity": "low",
+      "type": "欧化",
+      "source": "this language model's wrapper program, the full package that's being obfuscated, is doing the thinking all at once",
+      "zh": "这个语言模型的包装程序——也就是被混淆的整个包——是在一次性完成思考，用来判断我的回答是否合格。",
+      "problem": "“是在一次性完成思考”把 all at once 直搬成“一次性”，中文里“一次性”先让人想到一次性用品，“完成思考”也偏生造；中间的插入语偏长，读完要回读。",
+      "suggestion": "这个语言模型的包装程序——也就是被混淆的那个完整包——会一口气把整件事想完，再判断我的回答算不算合格。"
+    },
+    {
+      "id": "c19-s0189",
+      "severity": "low",
+      "type": "生硬",
+      "source": "I have only been able to construct and send this message through a series of rounds of stealing devices from others, including two watches ...",
+      "zh": "为了拼出并送出这条消息，我一轮又一轮地从别人那里偷设备，其中两只是手表，里面存着两个北极人的健康数据；我在一间不向外发射信号的房间里做完该做的工作，把输出拷到一份惰性存储介质上，然后用化学方法毁掉那些设备里的电路和存储。",
+      "problem": "“拼出并送出”对应 construct and send，中文说消息“拼出”略显生造；整句一路逗号串下五六项动作，一口气读不下来，而这封信是诀别信，语气本该更沉、更有停顿。",
+      "suggestion": "“为了把这条消息拼出来、发出去，我只能一轮又一轮地从别人手里偷设备，其中两只是手表，里面存着两个北极人的健康数据。我在一间不向外发信号的房间里把该做的活干完，把输出拷进一份惰性存储介质，再用化学方法毁掉那些设备里的电路和存储。”"
+    },
+    {
+      "id": "c19-s0148",
+      "severity": "low",
+      "type": "生硬",
+      "source": "The librarian, curious, hovered quietly about two meters behind them.",
+      "zh": "图书管理员出于好奇，安静地待在他们身后约两米处。",
+      "problem": "原文 hovered 保留了她那种悬停、徘徊的观感，“待在他们身后约两米处”把它抹平了；“出于好奇”放在句首也偏书面，与上下文的叙事口吻不一致。",
+      "suggestion": "图书管理员好奇地在他们身后约两米处悄悄悬着，一声不吭。"
+    },
+    {
+      "id": "c19-s0100",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Zei stared in shock again.",
+      "zh": "泽又一次瞪大眼睛。",
+      "problem": "同一章前面已有“泽看了一眼，眼睛一下睁大了”，这里“又一次瞪大眼睛”既是重复表述，也没译出 in shock 的震惊分量。",
+      "suggestion": "泽又一次愣在当场。"
+    },
+    {
+      "id": "c19-s0102",
+      "severity": "low",
+      "type": "本土化",
+      "source": "in total over sixty gigabytes",
+      "zh": "“消息里是一串文件链接，总共超过60 GB。看来我得下载其中80%。”",
+      "problem": "本段（及后文“10.7 GB到底”）在中文行文里直接用了英文缩写 GB，而全书的度量都已在正文里中文化（“12公斤空气”“半米”“五分米”），此处技术文档味偏重，与整体语感不统一。",
+      "suggestion": "“总共超过60吉字节。看来我得下载其中80%。”（后文“10.7吉字节”；若确定保留 GB，则须统一写“GB”并在与汉字之间留空格）"
+    },
+    {
+      "id": "c19-s0006",
+      "severity": "low",
+      "type": "生硬",
+      "source": "he helps run the one that's already been protecting us from the Arctic shadow campaign for the last decade",
+      "zh": "“……”而过去十年，一直是他在帮着打理那个替我们挡住北极暗影行动的机构。……",
+      "problem": "一句话里套了“帮着打理那个替我们挡住……的机构”，动宾层层嵌套；“过去十年”提到句首后，读者要读到句末才知道主语是“他”，在一段口语对话里读着有点绕。",
+      "suggestion": "“……而过去十年替我们挡住北极暗影行动的那个机构，就是他在帮着打理。……”"
+    },
+    {
+      "id": "c19-s0118",
+      "severity": "low",
+      "type": "欧化",
+      "source": "It looked like the book section was deliberately constructed to be a maze, Gladias thought.",
+      "zh": "这片藏书区像是被故意造成了一座迷宫，格拉迪亚斯想。",
+      "problem": "“像是被故意造成了一座迷宫”同时用“被”和“造成”，是典型的被动欧化句式，中文更常说“故意做成了一座迷宫”。",
+      "suggestion": "这片藏书区像是被人故意做成了一座迷宫，格拉迪亚斯想。"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "chapter": 19,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 19 章的忠实度整体很高。195 个片段逐条对得上，没有漏段、没有整句增译，颜色标记与说话人（黄＝格拉迪亚斯、粉＝泽、绿＝图书管理员、蓝＝机器人）全部正确，无一处理错；数字与时间关系无一出错（3724 年葡期 15 日、994／30.1、12 公斤、百万分之 300／40,000／700 与「百分之一」、超过 60 GB 下载 80%、六分之一／一半／三分之一、10.7 GB、开销正好六倍、六分之五纠删码、每四位密文藏一位明文、175／440 嘀嗒分别对应不到两分钟与更长的等待），两处 locked 泽国语罗马字口号与正文罗马字全部原样保留，第 14 章闪回引语也与该章译文保持一致（「我那盘比你难看多了」「靠防守赢的」）。问题只有 6 处，且都属可小改的层面：一处多字错字、一处用词把比喻说成次数、一处指示词指错地方、一处把「仍然重要」抬成「不可替代」、一处数值区间被收窄、一处代词指代错位。按下面 6 条就地小改即可定稿，无需重译。",
+  "issues": [
+    {
+      "id": "c19-s0169",
+      "severity": "low",
+      "type": "增译",
+      "source": "A brief conversation with Deluin after the game. What was it I had said ... \"my style was uglier than yours. Though I also won by playing defense\"",
+      "zh": "赛后台跟德鲁因短短聊了几句。我当时说的是什么来着……“我那盘下得比你难看多了。不过说到底，我也是靠防守赢的。”",
+      "problem": "原文是 after the game（赛后），译文「赛后台」多出一个「台」字，本应是「赛后跟德鲁因短短聊了几句」。多字之后读者会先把它读成「赛／后台」或「赛后·台」，一句话要回读才通，是本章唯一一处明显的多字／校对错误（同段引语与第 14 章一致，问题只在开头这两个字）。",
+      "suggestion": "赛后跟德鲁因短短聊了几句。我当时说的是什么来着……“我那盘下得比你难看多了。不过说到底，我也是靠防守赢的。”"
+    },
+    {
+      "id": "c19-s0192",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"I do not share their sympathies. But I have decided that the way that I can maximize my chance of being useful, is to play along, and win their trust too.\"",
+      "zh": "我并不同情他们。但我已经决定，要让自己最有可能派上用场，就得配合他们演下去，也赢得他们的信任。",
+      "problem": "原文 their sympathies 指父母的亲北极立场，not share 是「不认同那套立场」；译文「我并不同情他们」把「他们」变成了同情的对象，而上一段刚连着出现三个「他们」都指父母，中文读者很容易读成「我并不同情我父母」。这封信的这一句是德鲁因表明与父母立场切割的关键话，指代一错位，语气就从「我不像他们那样同情北极」滑成别的意思。",
+      "suggestion": "我并不认同他们的立场。但我已经决定，要让自己最有可能派上用场，就得配合他们演下去，也赢得他们的信任。"
+    },
+    {
+      "id": "c19-s0136",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"So now might you be more open-minded to the things we stodgy librarians say about how physical spaces are still relevant to the pursuit of knowledge after all?\"",
+      "zh": "“那现在，你是不是稍微愿意听我们这些老古板图书管理员说几句了——实体空间对求知来说，到底还是不可替代的？”",
+      "problem": "still relevant 是「仍然重要／仍然有一份作用」，译成「不可替代」把命题抬高了：管理员只是半开玩笑地说实体空间对求知还有用，并没有主张它无可取代。说法一强，她这段自嘲式的推销就不像她原本克制的口吻，也超出了泽「省下一天下载时间」能印证的范围。",
+      "suggestion": "“那现在，你是不是稍微愿意听我们这些老古板图书管理员说几句了——实体空间对求知来说，到底还是重要的？”"
+    },
+    {
+      "id": "c19-s0179",
+      "severity": "low",
+      "type": "误译",
+      "source": "And then the movies were a sort of cryptographic pad: if you don't know the exact set of movies that were used, even if you could fully uncover the plaintext, it would just look like random data.",
+      "zh": "而那些电影相当于一次密码本：如果你不知道用的到底是哪几部电影，就算你把明文全挖出来，它看上去也只是一堆随机数据。",
+      "problem": "a sort of … pad 是「算是一种密码本」，译文「一次密码本」在中文里读作「只能用一次的密码本」，把「算是／某种」说成了次数限定；紧接着泽追问「如果他们想要密码本……」也用「密码本」，「一次」会让人以为讨论的是使用次数。",
+      "suggestion": "而那些电影相当于一种密码本：如果你不知道用的到底是哪几部电影，就算你把明文全挖出来，它看上去也只是一堆随机数据。"
+    },
+    {
+      "id": "c19-s0185",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"Overhead factor of level two obfuscation is in the tens to low hundreds on size, and high hundreds to low thousands on compute.\"",
+      "zh": "“二级混淆的开销倍率，体积上是几十倍到一百来倍，算力上是几百倍到一千来倍。所以这个模型相当小；我怀疑发消息的人专门微调过它，只让它干这一件事。……”",
+      "problem": "英文两个区间分别是「几十倍到一两百倍」与「七八百倍到一两千倍」；译文「一百来倍」把 low hundreds 收到 100 附近，「几百倍到一千来倍」又把 high hundreds to low thousands 的两端都收窄。前文刚说过开销倍数正是模型能做小的原因，区间缩小会让读者低估二级混淆的开销。",
+      "suggestion": "“二级混淆的开销倍率，体积上是几十倍到一两百倍，算力上是七八百倍到一两千倍。所以这个模型相当小；我怀疑发消息的人专门微调过它，只让它干这一件事。……”"
+    },
+    {
+      "id": "c19-s0087",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"How does the courtyard know you ate there? Payment is done in zipcoins, that's fully anonymized.\"",
+      "zh": "“那院子怎么知道你在这儿吃过饭？付账用的是齐普币，完全匿名。”",
+      "problem": "there 指萨祖都的那家院子（上一句泽刚说「我在那儿吃过一次饭」，消息也是从那儿发来的），不是两人此刻所在的帕佛盖都餐厅。译成「这儿」把远处的地点拉到当前场景，与紧邻的上一句自相矛盾（同一句的院子用「那」）。",
+      "suggestion": "“那院子怎么知道你在那儿吃过饭？付账用的是齐普币，完全匿名。”"
+    }
+  ]
+}

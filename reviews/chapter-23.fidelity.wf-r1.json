@@ -1,0 +1,71 @@
+{
+ "chapter": 23,
+ "lens": "fidelity",
+ "reviewer": "wf-r1",
+ "overall": "第 23 章的忠实度整体很好：133 个片段与原文一一对应，9 段 locked 泽国语（s0023–s0050）逐字未动，面板表头/单元格（来自・消息・时间・塞拉・[正在呼叫]・91454）照译，日期 3724年雾期22日、81%、前10%、二十一名掌则人／七名／三年／十三票／五名法官对九名／三倍／十分钟／一千公里等数字与因果全部对得上；上色对话的色彩标记与说话人归属（346.67＝泽、80＝芬、26.67＝白、93.33＝格拉迪亚斯、253.33＝塞拉）无一处张冠李戴，掌则人／监审官／见习官／评则／合议庭／掌舵会／帕佛盖都／北林／翡翠／长时等专名与术语表一致。问题集中在两处词义与一处机构名上，其余是几处轻微走样，都不影响通读，按下表改完即可定稿。",
+ "issues": [
+  {
+   "id": "c23-s0072",
+   "severity": "medium",
+   "type": "误译",
+   "source": "\"Aggregate-and-group devices should be add and multiply devices - calculators. Sound conversation devices are phones.\"",
+   "zh": "“‘聚合与分组装置’应该就是加减乘除装置——计算器。‘声音交谈装置’是电话。”",
+   "problem": "这一段的趣味全在泽国语词根与英文词的一一对应：aggregate 对应 add（聚合＝相加），group 对应 multiply（分组＝相乘）。中文写成「加减乘除」，凭空多出减、除两种运算，把「聚合—相加、分组—相乘」这层对应打断了，后文拿词根猜词义的整个游戏也跟着走样。",
+   "suggestion": "“‘聚合与分组装置’应该就是加法与乘法装置——计算器。‘声音交谈装置’是电话。”"
+  },
+  {
+   "id": "c23-s0090",
+   "severity": "medium",
+   "type": "误译",
+   "source": "For an Acolyte to get accepted, they have to both pass Senate committee approval, and be in the top ten percent by prediction score",
+   "zh": "见习官要被接纳，既要通过议会委员会的批准，还要在预测分数上排进前10%",
+   "problem": "Senate 在术语表与第 20 章均作「参议院」（senate hearing → 参议院听证会，senator → 参议员），而「议会」是 Parliament：本章 s0095 泽自己说过「批准新掌则人和新监审官的议会听证」（Parliament hearings），用的正是「议会」。原文在同一段话里分别用 Senate 和 Parliament 指两个机构，译文一律写「议会」，把维里迪亚两套机构压成了一个。",
+   "suggestion": "见习官要被接纳，既要通过参议院委员会的批准，还要在预测分数上排进前10%"
+  },
+  {
+   "id": "c23-s0013",
+   "severity": "low",
+   "type": "误译",
+   "source": "get legitimacy by performance as soon as possible so people trust you to take the next step.",
+   "zh": "尽快靠实绩挣到正当性，别人才信你敢走下一步。",
+   "problem": "trust you to take the next step 是「信任你、放心让你走下一步」；「别人才信你敢走下一步」读成「别人才相信你有胆量走下一步」，把对方对你的信任错置成对你胆量的判断，白这句话的落点（先攒实绩、换来别人放你走下一步）就散了。",
+   "suggestion": "尽快靠实绩挣到正当性，别人才放心让你走下一步。"
+  },
+  {
+   "id": "c23-s0060",
+   "severity": "low",
+   "type": "增译",
+   "source": "Many people recognized that having many physical things is not only line-heartedness but also a locked room.",
+   "zh": "“许多人认识到，拥有许多实物不只是没有‘线心’，还是一间‘锁住的房间’。”",
+   "problem": "原文没有否定词：not only line-heartedness but also a locked room。译文自行补了「没有」，等于替作者改了一处否定。这大概是译者看出原文此处读来自相矛盾（物多当然不『线心』）而顺手修补，但这一节是格拉迪亚斯逐词直译泽国语原文，读者该看到的是原文（以及他的直译）本身。",
+   "suggestion": "“许多人认识到，拥有许多实物不只是‘线心’的问题，还是一间‘锁住的房间’。”"
+  },
+  {
+   "id": "c23-s0069",
+   "severity": "low",
+   "type": "漏译",
+   "source": "\"This implied that many people gathered physical things ... wait, physical things gathered by many people, began to be unwanted.\"",
+   "zh": "“这意味着许多人攒下的实物……等等，是许多人攒下的实物，开始变得没人想要了。”",
+   "problem": "原文的自我更正是从句式改口：「许多人攒下了实物」（主谓宾）改成「被许多人攒下的实物」（名词短语，作后句主语）。译文前后用了完全相同的一串字，读者看到的是一次毫无理由的复读，不知道他在改什么，改口的语气也就丢了。",
+   "suggestion": "“这意味着许多人攒下了实物……等等，是众人攒下的实物，开始变得没人想要了。”"
+  },
+  {
+   "id": "c23-s0089",
+   "severity": "low",
+   "type": "误译",
+   "source": "\"There is a collection of tax rubrics.\"",
+   "zh": "“有一套税则评则。”",
+   "problem": "术语表 rubric →「评则」，且 tax rubric 全书已固定为「税评则」（第 13 章、第 20 章均如此）。「税则」在中文里是关税税则，硬叠成「税则评则」既生造，又和前面章节的既定译法不一致。",
+   "suggestion": "“有一套税评则。”"
+  },
+  {
+   "id": "c23-s0009",
+   "severity": "low",
+   "type": "误译",
+   "source": "Fortunately, we had a full five minutes before the next swarm came to finish ours off",
+   "zh": "幸好下一波蜂群赶来把我们清掉之前，我们整整有五分钟",
+   "problem": "finish ours off 的宾语是「我们的无人机」（ours 指己方机群），译文「把我们清掉」把被消灭的对象换成了人（泽本人正在饭桌上说话，显然没被清掉）。紧接着的「芯片都毁掉了」正依赖这一点：他们是在己方无人机被全歼前抢时间销毁机上的芯片。",
+   "suggestion": "幸好下一波蜂群赶来把我们剩下的无人机清掉之前，我们整整有五分钟"
+  }
+ ]
+}

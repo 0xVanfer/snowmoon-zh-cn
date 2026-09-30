@@ -1,0 +1,80 @@
+{
+  "chapter": 11,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "本章一致性整体不错：人名、地名、机构、技术名词（塞拉／黛雅／维尔／格拉迪亚斯／兹文、梅尔丹、泽国、翔球、掌则人、掌舵会、跃升、分歧资本、蓝鲸、海德菲尔、图谱资助、二次方资助、齐普币、嘀嗒、红球）、日期与地点抬头（3724年花期15日）、比分与编号、对话着色标记、以及全文标点（全角、……、——）都经核对无误，`<c>/<e>/<sub>` 标记与原文逐条对齐，本章没有 locked/<f> 虚构语言段落。主要问题集中在少数与术语表和别章对不齐的用词：一条评则名（ground-floor active use）与术语表／第6章冲突，另有 airborne disease resistance、UVC 灯、personal copter 三处叫法同全书不统一，以及单位与面板标点的零星体例偏差。译文可读性不受影响，但术语层面的偏差建议在合并前改齐。另注：本章 new_terms 的 12 项均已在术语表内（from=chapter-11.zh），无需再次合并。",
+  "issues": [
+    {
+      "id": "c11-s0111",
+      "severity": "high",
+      "type": "术语不一致",
+      "source": "\"Ground-floor active use, though that one is controversial and some people think it should just be folded into aesthetics.\" / \"The ground-floor active use isn't just about aesthetics, it also contributes to walkability, reduces congestion-\"",
+      "zh": "「……你在多大比例的地块上盖楼。一层活跃用途——不过这一项有争议，有人觉得干脆并进美学里算了。应急准备。消防安全。」/「一层活跃用途不只是美学问题，它还能提升步行友好度、缓解拥堵——」",
+      "problem": "术语表把 ground-floor active use 定为「底层活跃使用」（kind=term，note：评则名，from chapter-06.zh），第6章正文同样作「有条评则奖励底层活跃使用」。本章 s0111、s0113 两处改成「一层活跃用途」：既与术语表和既有章节冲突，读者也会以为是另一条评则；且「一层」说的是楼层，原文 ground-floor 指临街底层铺面被真正使用。",
+      "suggestion": "两处统一改回「底层活跃使用」：「……你在多大比例的地块上盖楼。底层活跃使用——不过这一项有争议，有人觉得干脆并进美学里算了。应急准备。消防安全。」；「底层活跃使用不只是美学问题，它还能提升步行友好度、缓解拥堵——」"
+    },
+    {
+      "id": "c11-s0112",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "\"If you look at the broad listen report we ran a month ago, indoor airborne disease resistance is just not one of Veridians' top ten concerns.\"",
+      "zh": "「看看我们一个月前做的那份广泛聆听报告，室内空气传播疾病的防范根本排不进维里迪亚人最关心的前十项。」",
+      "problem": "术语表把 airborne disease resistance 定为「空气传播疾病防治」（kind=term，note：图谱资助子图名称，from chapter-17.zh），第17章正文亦作「这是空气传播疾病防治的子图」。本章把同一概念写成「室内空气传播疾病的防范」，与术语表及第17章的「防治」不一致，同一个图谱子图在书里出现两个名字。",
+      "suggestion": "「看看我们一个月前做的那份广泛聆听报告，室内空气传播疾病防治根本排不进维里迪亚人最关心的前十项。」"
+    },
+    {
+      "id": "c11-s0108",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "\"The limits get adjusted up if you have filters or UVC.\"",
+      "zh": "「装了过滤器或者紫外线消毒，限值会放宽。」",
+      "problem": "术语表 UVC lamp →「紫外线灯」，并明确注明「与术语表 far-UVC → 远紫外 同族；正文统一作『紫外线灯』」；第6章 UVC disinfection lights 作「远紫外消毒灯」，第17章 UVC lamps、第24章 ultraviolet lamps 均作「紫外线灯」。本章把裸词 UVC 译成动作性的「紫外线消毒」，既不合术语表的统一要求，也把「装了 UVC 灯这档设备」说成了「做了消毒这件事」。",
+      "suggestion": "「装了过滤器或者紫外线灯，限值会放宽。」"
+    },
+    {
+      "id": "c11-s0025",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "\"Some personal copters, simple chairs with rotor blades on top surrounded by shielding, automatically rolled out of the truck.\"（同章 s0026/s0029/s0033 反复出现 personal copters）",
+      "zh": "「几台个人飞行器自动从车里滚了出来。它们只是些简单的椅子，顶上装着旋翼，四周有一圈护罩。」",
+      "problem": "本章为 personal copter 立了新词「个人飞行器」（已并入术语表），但同一物件在别章叫法不同：第20章 personal copters 作「私人小型飞行器」，第28章 Helisport copters 作「翔球用的小型飞行器」、第29章作「翔球小型飞行器」（术语表 copter →「小型飞行器」）。读者容易把「个人飞行器」和「翔球小型飞行器」当成两种器械。",
+      "suggestion": "本章保留「个人飞行器」不动（术语表已收录），请同步统一其它章：第20章「还有更多难民试图乘私人小型飞行器进入」→「还有更多难民试图乘个人飞行器进入」；第28章「要是非得把那些翔球用的小型飞行器改成无人机」→「要是非得把那些翔球个人飞行器改成无人机」；第29章「一大群翔球小型飞行器和送货小型飞行器」→「一大群翔球个人飞行器和送货小型飞行器」。"
+    },
+    {
+      "id": "c11-s0134",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"We studied our competitors' water, and found that on average, it contains 145 parts per million heavy water.\" / \"and it contains 132 parts per million heavy water.\"",
+      "zh": "「我们研究过竞争对手的水，发现其中平均每百万份含145份重水。」/「其中每百万份只含132份重水。」",
+      "problem": "同一个单位 parts per million，第19章一律作「百万分之X」（「平均浓度是百万分之300」「我们呼出的气是百万分之40,000」「你吸进的空气是百万分之700」），本章改成「每百万份含X份」，全书的单位写法不统一。",
+      "suggestion": "「我们研究过竞争对手的水，发现其中平均含百万分之145的重水。」/「我们的水取自维里迪亚新鲜的北方寒冰，勇敢地从距北极边境仅三十公里处开采而来，其中只含百万分之132的重水。」"
+    },
+    {
+      "id": "c11-s0100",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"Unknown ?\"（device-view 面板单元格）",
+      "zh": "「未知 ?」",
+      "problem": "面板单元格里用了半角问号并留了一个空格，与全书面板体例不一致：同样的 Unknown ? 在第3章面板作「未知？」（全角、无空格），第19章面板也用全角标点（「未知，风险升高！」）。体例规范只允许面板内的方括号／圆括号保持半角，其余标点仍用全角。同一张表的「已证 ✓」「空气」「设备」等单元格跨章一致，只有这一格写法不同。",
+      "suggestion": "「未知？」"
+    },
+    {
+      "id": "c11-s0136",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"Hence, our water is TEN PERCENT LESS TOXIC than our competitors.\" / \"You donate ten zipcoins and get back twenty, they get a hundred including the bounded matching.\"",
+      "zh": "「因此，我们的水比竞争对手的毒性低百分之十。」/「你捐十个齐普币，能拿回二十个；算上封顶配捐，项目方到手一百个。」",
+      "problem": "同一章内百分比写法不统一：税收部分用阿拉伯数字（0.33%、0.67%，s0108/s0109/s0110/s0121），广告这句却写成「百分之十」；体例规范明确「百分比……用阿拉伯数字」。同段广告的数量也全用汉字，而第19章同类金额作「400齐普币」。",
+      "suggestion": "「因此，我们的水比竞争对手的毒性低10%。」配捐句作「你捐10个齐普币，能拿回20个；算上封顶配捐，项目方到手100个。」（若采纳 fidelity 意见把三个税率改回「三分之一／三分之二」，则本章百分比须整体择一，不能百分数、分数、汉字三种写法混用。）"
+    },
+    {
+      "id": "c11-s0090",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"This was the third circle of Keepers that Gladias was assigned to, and the topic was air quality.\"",
+      "zh": "「这是格拉迪亚斯被分配到手的第三个掌则人小组，议题是空气质量。」",
+      "problem": "本章「掌则人小组」与术语表 circle of Keepers、以及第3、6、8、20章的 Keeper group 译法都一致，本身没问题；不一致在第10章 c10-s0056 把同一组织叫作「圈子」（「在这个圈子里我是二十号」），读者会以为是两个不同的组织。",
+      "suggestion": "本章无需改动；请把第10章 c10-s0056 的「在这个圈子里我是二十号，三年级」改为「在这个小组里我是二十号，三年级」，与本章及全书的「掌则人小组」统一。"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": 25,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 25 章的忠实度很高。122 个片段与原文逐条对应，无漏段、无整句漏译；<c> 颜色逐条比对与原文（及 sources/en/html/chapter-25.html）完全一致，泽／格拉迪亚斯／韦尔多的说话人归属没有一处张冠李戴（0015 的「格拉迪亚斯承认」、0063 的「这次轮到泽停顿」、0068 的「泽接着说道」、0069 的「泽又沉默了」都对得上）。棋局数字链可以逐步复原且与原文一致：四堆、3／4／10／13、11／100／1010／1101，三块面板 0011/0100/1010/1101 → 0010/…/1101 → 0010/…/1100，每一步「谁从哪一格拿走几个」都与下文复盘吻合；否定与因果（「异或和不是0就先手赢、是0就后手稳赢」「有一位从1翻成0所以必定是减小」）没有搞反；术语（合议庭、掌舵会、根本法、异或和、先手／后手占优、手持终端、红郡、北林、韦尔多参议员）与术语表及 23、24、26 章一致。发现的问题都在细部：一处「锁定胜局」被写成可能被误读的「锁死」，另有三处把「尝试去做」弱化成中性的「有没有做／发生过」，一处把整局赞叹缩成一手棋。都不影响读懂剧情。",
+  "issues": [
+    {
+      "id": "c25-s0066",
+      "severity": "medium",
+      "type": "误译",
+      "source": "To you, there was a mathematical structure that has one desirable state - the state where the XOR sum is zero every time I move. And once you reach it, you're locked in forever.",
+      "zh": "在你眼里，这里有个数学结构，它有一个理想状态——每当我走完，异或和都是0的那个状态。一旦进入这个状态，你就永远锁死了。",
+      "problem": "locked in 的意思是「胜局被锁死、再无反复」：泽一旦把局面带进这个状态，胜负就固定下来，格拉迪亚斯再也翻不回来（紧接着 0068 泽把这一层称为「不可逆的」，说的就是同一件事）。译文省掉宾语后，「你就永远锁死了」在中文里既可读成「你锁定胜局」，也可读成「你（自己）被锁死、出不来了」；后一种读法正好和上文「理想状态」相反，读者容易取错。",
+      "suggestion": "一旦进入这个状态，胜局就永远锁定了。"
+    },
+    {
+      "id": "c25-s0017",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"That was impressive.\"",
+      "zh": "“这手真厉害。”",
+      "problem": "impressive 夸的是泽整局棋（他一路压制到格拉迪亚斯认输），译文「这手」把它缩到「刚才那一步」，像是单夸某一手棋；上文 0015 格拉迪亚斯刚认输，此处承接的是整盘对局。",
+      "suggestion": "“你下得真厉害。”"
+    },
+    {
+      "id": "c25-s0112",
+      "severity": "low",
+      "type": "漏译",
+      "source": "In Northglade, they completely failed to defend the country, and they are barely even trying to make any serious reforms in response.",
+      "zh": "在北林，他们彻底没能守住国家，而且事后几乎没做任何认真的改革。",
+      "problem": "barely even trying 的锋芒落在「尝试」上：连做样子推动认真改革都几乎没有。译文落成「几乎没做任何认真的改革」，变成对改革成果的中性陈述，韦尔多这段话的指控力度被削弱——他后面正是用「失职且毫无补救」推出整支军队违法。",
+      "suggestion": "在北林，他们彻底没能守住国家，而且事后几乎连认真改革的尝试都没有。"
+    },
+    {
+      "id": "c25-s0119",
+      "severity": "low",
+      "type": "漏译",
+      "source": "It's something so crazy that I don't think anything remotely like it has been attempted in Veridian history.",
+      "zh": "疯狂到我不认为维里迪亚历史上有过任何类似的事。",
+      "problem": "原文是「没有人尝试过」，强调敢不敢做；译文「有过任何类似的事」换成「有没有发生过」，变成事实上的先例有无。这段话的落点是「此刻正需要这样一份疯狂的判决」，即鼓励去做前人不敢做的事，用「有没有发生过」表述就把「没人敢试」这层意思漏掉了。",
+      "suggestion": "疯狂到我不认为维里迪亚历史上有人尝试过任何类似的事。"
+    },
+    {
+      "id": "c25-s0103",
+      "severity": "low",
+      "type": "漏译",
+      "source": "We want to do the same thing to the Courts that the Arctics tried to do to the Order.",
+      "zh": "北极人想对掌舵会做的事，我们想对合议庭做一遍。",
+      "problem": "tried to do 是「已经动手试过、而且部分得手」（德尔瓦特就是被北极收买进掌舵会的），译文只作「想对……做的事」，读起来像北极人只是有过这个念头。这里的类比力量恰恰在于对方那套已经跑通过一遍，所以照搬可行。",
+      "suggestion": "北极人当初对掌舵会试过的那一套，我们也想对合议庭来一遍。"
+    }
+  ]
+}

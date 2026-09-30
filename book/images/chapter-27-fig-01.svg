@@ -11,7 +11,7 @@
 <rect width="400" height="240" fill="#334488"/>
 <circle cx="200" cy="138" r="88" fill="url(#glow)"/>
 <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
-<text x="200" y="17" text-anchor="middle" font-size="12" font-weight="700" fill="#cceeff">你对维里迪亚军队</text>
+<text x="200" y="17" text-anchor="middle" font-size="12" font-weight="700" fill="#cceeff">你对维里迪亚军方</text>
 <text x="200" y="31.4" text-anchor="middle" font-size="12" font-weight="700" fill="#cceeff">有多大信心？</text>
 <circle cx="200" cy="138" r="60" fill="none" stroke="#cceeff" stroke-opacity="0.18" stroke-width="0.8"/>
 <g id="slices">

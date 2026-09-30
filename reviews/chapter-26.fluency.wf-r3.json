@@ -1,0 +1,206 @@
+{
+  "chapter": 26,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第26章中文整体读得下去：机上翻译练习（“绿色植物构成的风景”“也就是旅游景点”）和庭审后半段的唇枪舌剑都有口语的呼吸感，术语与数字也没给读者添麻烦。生硬点集中在叙述句里——三重“的”字长定语（s0113）、悬空的“其中”（s0169），以及把英文条件句、被动式和名词化结构照搬的地方（s0103、s0115、s0191、s0198），都要读者回读一遍才能还原意思。对话层面登的两处关键台词没落地：“跳出框框”这个笑点（s0162）和“撞上这个坐标”（s0137）都不像人话，穆的技术播报（s0153）也被“收拢包围”“越久越好”绊住；另有几处用词会让中国读者出戏（泽“低声呻吟”s0127、对话里突然冒出“pafogai”s0055）。问题都是可逐条就地替换的润色，不动情节，按下面各条改完可达出版语感。",
+  "issues": [
+    {
+      "id": "c26-s0113",
+      "severity": "high",
+      "type": "欧化",
+      "source": "Zei checked the various numbers in the display that was being blasted into his eyes through the glasses he was wearing.",
+      "zh": "泽核对了眼镜直射进他眼里的显示画面上的各项数字。",
+      "problem": "中心语“数字”前面压了四层“的”字定语（眼镜／直射进他眼里的／显示画面上的／各项），读者要回读两三次才能把关系拆开；而且“眼镜直射进他眼里的”会让人先读成“眼镜射进他眼里”，实际把画面投进眼里的是显示画面。英文的定语从句在中文里更自然的做法是拆成两个小句。",
+      "suggestion": "眼镜把显示画面直接投进他眼里，泽逐一核对上面的各项数字。"
+    },
+    {
+      "id": "c26-s0162",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Sometimes the only way to win is to think completely outside the box. Not outside the box as in figuring out some clever way to encode an entire computer inside of a glider structure, but outside the box as in, jumping out of your console chair and running over and bashing the other player in the face.",
+      "zh": "“这跟民本棋不一样。有时候唯一的取胜之道，就是彻底跳出框框去想。不是那种想办法把一整台计算机编码进滑翔机结构里的跳出框框，而是从控制台椅子上跳起来、冲过去照对手脸上来一拳的跳出框框。”",
+      "problem": "“跳出框框”在中文里不是现成说法（常见的是“跳出条条框框”“换个思路”），这里又被反复当名词用（“……里的跳出框框”“……的跳出框框”），对比的两层被挤进一句绕口的长定语里，登这个调侃的落点（键盘上的聪明劲儿 vs 真人冲上去打脸）就散了；“计算机编码进滑翔机结构里”也太抽象，中文说“骨架/机身”更像棋里的实物。",
+      "suggestion": "“这跟民本棋不一样。有时候想赢，唯一的办法就是把思路整个跳出框框。不是把一整台计算机编码进滑翔机骨架里那种跳出框框，而是从控制台椅子上蹿起来、冲过去照对手脸上来一拳那种跳出框框。”"
+    },
+    {
+      "id": "c26-s0169",
+      "severity": "high",
+      "type": "生硬",
+      "source": "Five judges that Mov and Seila had helped to identify - with significant help from surveillance cameras that had been backdoored by Dzego - were already sitting inside.",
+      "zh": "格拉迪亚斯拉开隔间的门，走了进去。五名法官已经坐在里面——这五人是莫夫和塞拉帮忙物色出来的，其中泽国黑进监控摄像头帮了大忙。",
+      "problem": "“其中”前面只有“这五人”，指的是人，后面接的却是“泽国黑进监控摄像头”；“泽国黑进监控摄像头”又缺一个“的”，读起来像是“泽国（这个国家）帮了大忙”。整句要读两遍才能还原成“能把这五个人找出来，靠的是泽国黑进的那些摄像头”，而这是格拉迪亚斯布局的来路，交代不清后面整场戏都悬空。",
+      "suggestion": "格拉迪亚斯拉开隔间的门，走了进去。五名法官已经坐在里面——能把这五个人找出来，莫夫和塞拉出了力，泽国黑进的那些监控摄像头更是帮了大忙。"
+    },
+    {
+      "id": "c26-s0004",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "All four were looking silently out the window, enjoying the view of a mostly flat, green landscape. The main visible features were a row of small mountains and the city of Meldan further in the background.",
+      "zh": "泽、白、格拉迪亚斯和登坐在飞机上一间封闭的小舱里，泽和白面朝前，格拉迪亚斯和登面朝后。四人都默默望着窗外，欣赏着大片大体平坦的绿色原野。视野里最显眼的是一排小山，再往远处，便是背景中的梅尔丹城。",
+      "problem": "“大片大体平坦”连着两个“大”，节奏打结，而且“大片”（面积）和“平坦”（地势）也不搭，中文会说“一望无际、地势平坦”；“背景中的梅尔丹城”是 in the background 的直搬，读者会先以为是画面里的背景层，直接说“再远处就是梅尔丹城”即可。",
+      "suggestion": "四人都默默望着窗外，欣赏着这片一望无际、大体平坦的绿色原野。视野里最显眼的是一排小山，再往远处就是梅尔丹城。"
+    },
+    {
+      "id": "c26-s0029",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "In the center there is a small mountain. In the lower half there are many people's homes. In the upper half part of the government works.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“城区正中有一座小山。下半山是许多人的家，上半山有一部分政府机构在办公。爬上山去，心情愉快，风景也美。”</c>",
+      "problem": "“下半山”“上半山”不是中文说法（中文讲“山脚／山腰／山顶”，或“下半截、上半截”）；“是许多人的家”也是 there are 的直搬，搭配松。格拉迪亚斯这段是“翻译练习”的展示，句子该是顺口的中文而不是英文语序的中文。",
+      "suggestion": "“城区正中有一座小山。山的下半截住着许多人家，上半截有一部分政府机构在办公。爬上山去，心情愉快，风景也美。”"
+    },
+    {
+      "id": "c26-s0055",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "\"Wait, I just realized ... Pafogai means 'fourteen stone'? Where did that name come from?\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 93.33333333333333)\">“等等，我刚反应过来……pafogai 的意思就是‘十四块石头’？这名字是怎么来的？”</c>",
+      "problem": "上一句刚把这座城市译成“帕佛盖都”，同一个词在这里又变回小写拉丁字母“pafogai”，中文读者在对话中间撞上一个外文词会出戏；术语表 Pafogai 也作“帕佛盖”，而原文此处是大写 Pafogai，小写也不合体例。",
+      "suggestion": "“等等，我刚反应过来……‘帕佛盖’的意思就是‘十四块石头’？这名字是怎么来的？”"
+    },
+    {
+      "id": "c26-s0076",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Zven stayed in touch with Lily, and she admitted to him where she was: she had crossed over into Arctic-occupied territory and was in Northglade.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“塞拉费了很大劲才联系上我，把事情的前前后后都跟我说了。兹文一直和莉莉有联络，她向他承认了自己在哪：她已经越过边界，进了北极占领区，人在北林。”</c>",
+      "problem": "“她向他承认了自己在哪”是把 admitted to him where she was 逐字搬过来：“承认”的宾语应是事实而不是“在哪”，中文听着别扭；再者前面已有“兹文”，这里再用“他”指代，读者会短暂错认成别人。",
+      "suggestion": "“塞拉费了很大劲才联系上我，把事情的前前后后都跟我说了。兹文一直和莉莉有联络，她自己跟兹文说了在哪儿：她已经越过边界，进了北极占领区，人在北林。”"
+    },
+    {
+      "id": "c26-s0077",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "We then scanned through all the feeds the security cameras that you so brilliantly suggested the Dzegojan should hack into.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“接着我们把所有监控画面都筛了一遍——就是你当初极有见地地建议泽国人去黑进的那些。找了几天，我们找到了她。她待在北极人办的一所寄宿学校里，离大梅港大约1公里。”</c>",
+      "problem": "“极有见地地建议”两个“地”连用，念起来磕牙；后面“就是你当初……去黑进的那些”这个长定语从句围着“监控画面”绕了一圈，读者很难一眼把它接回前面的中心语。这句话是韦尔多在夸泽，语气应该利落些。",
+      "suggestion": "“接着我们把所有监控画面都筛了一遍——当初你出了个绝妙的主意，让泽国人黑进了那些摄像头。找了几天，我们找到了她。她待在北极人办的一所寄宿学校里，离大梅港大约1公里。”"
+    },
+    {
+      "id": "c26-s0083",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "if you can live longer but it depends on ongoing infusions of proprietary Arctic medicine, you become dependent on them for your life, you become their slave. ... And that that's not just true for a person, it's true for a civilization.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“埃菲里昂肯定会这么看。当然，西尔卡会不高兴，说他们在隐瞒隐性代价——如果你能活得更久，靠的却是持续注射北极的专有药物，那你的命就捏在他们手里，你就成了他们的奴隶。可埃菲里昂会说，死了——躺在棺材里，连动一块肌肉、想一个念头都不自由——那才是最彻底的奴役。而且这不只是对一个人成立，对一个文明也成立。”</c>",
+      "problem": "条件从句里用“却”（“如果你能活得更久，靠的却是……”）中文不通，转折词放在假设里让人读着卡住；末尾“这不只是对一个人成立，对一个文明也成立”把 true for 硬译成“成立”，是法律／数学腔，放在这场关于生死与奴役的哲学对话里显得冷硬。",
+      "suggestion": "“埃菲里昂肯定会这么看。当然，西尔卡会不高兴，说他们在隐瞒隐性代价——你能活得更久，靠的却是持续注射北极的专有药物，那你的命就捏在他们手里，你就成了他们的奴隶。可埃菲里昂会说，死了——躺在棺材里，连动一块肌肉、想一个念头都不自由——那才是最彻底的奴役。而且这不只是对一个人如此，对一个文明也是一样。”"
+    },
+    {
+      "id": "c26-s0084",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "If we want Veridia to succeed and thrive, we have to find the synthesis. ... We need to recognize success, and reward it.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 293.3333333333333)\">“想让维里迪亚成功、兴旺，我们就得找到综合之道。我们可以承认北极人有些事做得非常好，承认他们追求一个彻底更好的未来这件事本身可以是健康的。维里迪亚的北极星不能只是‘保持现在这样，但少一点贪婪、社会结构好一点’。我们得有真正的进步，并且取其精华、去其糟粕。我们得承认成功，并奖励成功。”</c>",
+      "problem": "“找到综合之道”是 find the synthesis 的直译，中文读者读不出“综合”指什么（下文讲的其实是把北极人的长处和维里迪亚的价值合起来）；“我们得承认成功，并奖励成功”里“承认”是 recognize 的硬译——中文“承认成功”更像“不得不认账”，而且一句话里两次“成功”很啰嗦。",
+      "suggestion": "“想让维里迪亚成功、兴旺，我们就得找到那条融合之路。我们可以承认北极人有些事做得非常好，承认他们追求一个彻底更好的未来这件事本身可以是健康的。维里迪亚的北极星不能只是‘保持现在这样，但少一点贪婪、社会结构好一点’。我们得有真正的进步，并且取其精华、去其糟粕。我们要认可成就，并给予回报。”"
+    },
+    {
+      "id": "c26-s0092",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "a console that looked remarkably similar to the consoles on which he had played all of his championship Minpentai games.",
+      "zh": "泽在一把椅子上坐下，面前是一台控制台，跟他打历次民本棋锦标赛时用的那些控制台惊人地相似。他能看出的最大不同是：这一次，没有防作弊侦测无人机在周围嗡嗡打转。",
+      "problem": "“打历次民本棋锦标赛”搭配不成立：“打”后面得跟具体的比赛，“历次”不能做“打”的宾语，中文会说“他历次参加民本棋锦标赛时用的”。",
+      "suggestion": "泽在一把椅子上坐下，面前是一台控制台，跟他历次参加民本棋锦标赛时用的那些控制台惊人地相似。他能看出的最大不同是：这一次，没有防作弊侦测无人机在周围嗡嗡打转。"
+    },
+    {
+      "id": "c26-s0103",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The only dangerous window is if the drone gets shot down within a few ticks after it picks him up - too soon for the backup drones to swoop in and grab him before he hits the ground.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“如果北极人出现——士兵或无人机——就开火。如果他不走到阳台上，没有备用方案，那就完了——我们的无人机没法直接落在楼顶上还活下来。如果带绳索的无人机被击落，我们还有第二架，甚至其他战斗无人机也可能把目标再接回来，虽然它们不是为这个设计的。唯一危险的窗口，是无人机接住他之后的几个嘀嗒内被击落——那太快了，备用无人机来不及扑过去抓住他，他就已经摔到地上了。”</c>",
+      "problem": "英文的 if 条件句被译成判断句“是无人机……被击落”，读者第一遍读到的像是一个已经成立的陈述；破折号后的“那太快了”没有主语，指代不明；“他就已经摔到地上了”又带出既成事实的味道。这是泽在复述作战风险，句子必须一遍读懂。",
+      "suggestion": "“如果北极人出现——士兵或无人机——就开火。如果他不走到阳台上，没有备用方案，那就完了——我们的无人机要是不得不直接落在楼顶上，根本撑不住。如果带绳索的无人机被击落，我们还有第二架，甚至其他战斗无人机也可能把目标再接回来，虽然它们不是为这个设计的。唯一危险的窗口，是无人机接住他之后没过几个嘀嗒就被击落——这个空当太短，备用无人机来不及扑过去抓住他，人就摔到地上了。”"
+    },
+    {
+      "id": "c26-s0115",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "He then consciously switched his mood to be entirely focused on the battle that was very soon to begin.",
+      "zh": "随后，他有意识地把自己的情绪切换成完全专注于那场即将开始的战斗。",
+      "problem": "“把情绪切换成完全专注于……”在中文里接不上：切换的对象应该是某种状态，而“专注于战斗”是动作；另外“有意识地”是 consciously 的直搬，写心理时太术语化，读者会觉得是说明书。",
+      "suggestion": "随后，他刻意收拢心神，让自己完全专注于那场即将开始的战斗。"
+    },
+    {
+      "id": "c26-s0127",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "Zei groaned.",
+      "zh": "泽低声呻吟。他的无人机已经有三架被击中。",
+      "problem": "“呻吟”在中文里带疼痛、病弱的联想，用在因为自己指挥失误、眼看四架无人机被击落而懊恼的泽身上，读者容易出戏；英文 groan 在这里是闷哼、低低地哀叹。",
+      "suggestion": "泽闷哼一声。他的无人机已经有三架被击中。"
+    },
+    {
+      "id": "c26-s0137",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"I need a crash at these coordinates.\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">“我要一架无人机撞上这个坐标。”</c>",
+      "problem": "“撞上这个坐标”不成话——坐标是地图上的点，不是能撞上的实体；这句是登下达自杀式撞击的指令，口气该短促明确。现在的说法像机翻，也让下一句“泽立刻指挥无人机全速撞向那里”失去呼应。",
+      "suggestion": "“让一架无人机撞在这个坐标上。”"
+    },
+    {
+      "id": "c26-s0153",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "\"Our drones touched down at a large shopping complex in Dolinar. Arctics are closing in on them. Hopefully the manhunt will take as long as possible.\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“我们的无人机在多利纳尔一处大型商业综合体降落。北极人正在收拢包围。但愿这场搜捕能拖得越久越好。”</c>",
+      "problem": "“收拢包围”不成词（中文说“收拢包围圈”“正在合围”）；“但愿这场搜捕能拖得越久越好”把“越……越……”的后半截单独挂在“但愿……能”后面，语法上缺前项，读着别扭。穆这几句是干脆的进度播报，两处都在绊读者。",
+      "suggestion": "“我们的无人机在多利纳尔一处大型商业综合体降落。北极人正在合围。但愿这场搜捕能拖久一点。”"
+    },
+    {
+      "id": "c26-s0175",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "We're here to apply timeless principles, not get swayed in every direction by crowds of people getting angry in the moment.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 40)\">“没看。得了吧，格拉迪亚斯，你知道法官不该读每日新闻，这是规矩。我们是来适用永恒原则的，不是被一群当场发怒的人推着东倒西歪的。”</c>",
+      "problem": "“推着东倒西歪”不成句：“东倒西歪”是状态补语，前面要用“推得”；用“推着”会让读者以为是被人一路推着走。另外“适用永恒原则”是 apply 的硬译，法官说这话时更像“我们依据的是恒久的原则”。",
+      "suggestion": "“没看。得了吧，格拉迪亚斯，你知道法官不该读每日新闻，这是规矩。我们依据的是恒久的原则，不是被一群正在气头上的人推得东倒西歪。”"
+    },
+    {
+      "id": "c26-s0191",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "\"Why are you bringing this up? Gladias said it himself, we're required to perform our duties without undue influence.\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 40)\">“你提这个干什么？格拉迪亚斯自己说了，我们被要求不受不当影响地履行职责。”</c>",
+      "problem": "“我们被要求不受不当影响地履行职责”一句话里“被”字句加长状语，“不受不当影响地”修饰“履行职责”，是英文被动式加方式状语的直搬；凯隆此刻正发火质问，说话该更口语、更短。",
+      "suggestion": "“你提这个干什么？格拉迪亚斯自己说了，我们履行职责不能受不当影响。”"
+    },
+    {
+      "id": "c26-s0198",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "A case takes a minimum of thirty days from start to finish, and that's if the judges don't decide that it needs to take longer.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 253.33333333333334)\">“就算我们真这么干，你也想想程序。一个案子从开始到结案最少要三十天，而且这还是在法官不认为需要更长的情况下。然后他们还能上诉，可以上诉多次。上诉可以更快，但只有从第三轮起才行。所以这一整套要走完得花好几个月。而在这期间，维里迪亚会陷入混乱，北极人只要扑进来接管就行了。”</c>",
+      "problem": "“而且这还是在法官不认为需要更长的情况下”为了保住 if 从句，把否定塞进“在……情况下”，读者得先做一次双重转换（法官不认为需要更长，才有三十天）才能明白；中文直接说“前提是法官不要求延期”更省力。",
+      "suggestion": "“就算我们真这么干，你也想想程序。一个案子从立案到结案最少要三十天，前提是法官不要求延期。然后他们还能上诉，可以上诉多次。上诉可以更快，但只有从第三轮起才行。所以这一整套要走完得花好几个月。而在这期间，维里迪亚会陷入混乱，北极人只要扑进来接管就行了。”"
+    },
+    {
+      "id": "c26-s0008",
+      "severity": "low",
+      "type": "生硬",
+      "source": "Gladias scrambled in his mind to understand the words quickly enough to give the answer before the next sentence began.",
+      "zh": "格拉迪亚斯在脑子里拼命赶时间，想赶在下一句开始前听懂、答上来。过了片刻，他脱口而出：",
+      "problem": "“在脑子里拼命赶时间”搭配不成立——赶时间是外在的行为，脑子里只能“飞快地转”；“听懂、答上来”用顿号把“理解”和“作答”并排，也不像中文的说法。",
+      "suggestion": "格拉迪亚斯脑子里拼命地转，想赶在下一句开始前听明白、答得上来。"
+    },
+    {
+      "id": "c26-s0155",
+      "severity": "low",
+      "type": "生硬",
+      "source": "\"Our car reached the shore without incident. Targets now entering the seaborne drone.\"",
+      "zh": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“我们的车平安到了海边。目标正在进入海上无人机。”</c>",
+      "problem": "“进入海上无人机”是 entering 的直译：中文上交通工具用“登上／上”，说“进入”会让人先想到钻进机器内部。",
+      "suggestion": "“我们的车平安到了海边。目标正在登上海上无人机。”"
+    },
+    {
+      "id": "c26-s0168",
+      "severity": "low",
+      "type": "生硬",
+      "source": "But now it's time for the Kungaupei to stand up and take its share of the credit. And then see if the Veridians are up for giving Veridia the defense that it deserves.",
+      "zh": "<c st=\"color:oklch(0.7 0.15 53.33333333333333)\">“眼下，他们以为这不过是自由城的防务公司干的。但现在该轮到昆高培站出来，领下属于自己的那份功劳了。然后就看维里迪亚人愿不愿意给维里迪亚它应得的防务了。”</c>",
+      "problem": "“领下……功劳”搭配不当，功劳是“分／拿／揽”的，中文不说“领下功劳”；“给维里迪亚它应得的防务”把两个宾语叠在一起，读着别扭。",
+      "suggestion": "“眼下，他们以为这不过是自由城的防务公司干的。但现在该轮到昆高培站出来，分走属于自己的那份功劳了。然后就看维里迪亚人愿不愿意让维里迪亚得到它应得的防务了。”"
+    }
+  ]
+}

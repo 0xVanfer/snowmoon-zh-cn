@@ -1,0 +1,53 @@
+{
+  "chapter": 16,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "本章一致性基本过关：160 段与原文一一对应、顺序一致，颜色标签（9 种颜色）逐条同色闭合；人名（格拉迪亚斯、格拉德、德尔瓦特、莫夫、费布里克、兹文、莉莉、塞拉、泽、白、佩洛、维尔、黛雅、埃菲里昂勋爵）、地名（梅尔丹、维里迪亚、卡利马尔、泽国、红郡）、机构与术语（掌则人、掌舵会、合议庭、议会、评则、税率档、图谱资助、银聊、蓝鲸、海德菲尔、恐结、民本棋、全国赛、公民课、手持终端、颈带、隐私袍、保险库、齐普币、嘀嗒、翔球）逐条与术语表及第 1、3、5、6、8、10、11、13、15 章吻合；记分板算术自洽（11×7×23=1771、1540→1771、6×10×31=1860），面板体例（西方面板译中文表头「来自／消息／时间」「消息／收件人」＋按钮「发送」、半角方括号与半角三点「[钱包 0x8f62... ]」）与第 1、3、5、8、10、13、15 章同款，日期体例「3724年火月25日」与全书一致。脚本扫描未见半角标点、多余空格、破折号／省略号违例；本章无 locked 段、无 <f> 虚构语言片段，不存在泽国语被误译。共报 5 条，其中 2 条 medium 全在术语表侧：pin（球瓶）被 merge_terms.py 误判为 conlang 并套上「不得译成中文」样板说明；social recovery mode 的社会／社交两种译名在术语表内并存（本章 new_terms 与正文也已不一致）。其余 3 条为 low：表次期限用汉字数字、翔球场景器物用语与第 11 章分叉、记分板表头「黄队／紫队」漏登记。注：复核期间译文于 10:02:45 被上游修订过一版，本报告依据修订后状态（md5 53cf84788a02edceabe243b4cd1e3809）。",
+  "issues": [
+    {
+      "id": "c16-newterms-pin-conlang",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "术语表条目：{\"en\": \"pin\", \"zh\": \"球瓶\", \"kind\": \"conlang\", \"note\": \"（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）翔球场上立于圆板上的目标（knockdown → 击倒）\", \"from\": \"chapter-16.zh\"}；而本章 new_terms 同一条登记为 kind=\"term\"、note 无前缀；第 24 章另有 conlang 条目 \"mi cin pin fe lo kin do\"",
+      "zh": "正文 c16-s0058「板上立着十个排成三角形的黄色球瓶」、c16-s0060「撞倒了三个球瓶」、c16-s0098「开局很早就敲倒一堆球瓶」、c16-s0099「把人都挤到球瓶周围一个点上」；面板行标签 c16-s0070／c16-s0087「蓝球击倒球瓶」",
+      "problem": "术语表把 pin＝球瓶 归成虚构语言，并加上「正文保留罗马字原样，不得译成中文」的前缀，与本章 new_terms 的 kind=term、以及正文／面板共 6 处「球瓶」直接冲突。根因在 pipeline/merge_terms.py 的 is_conlang_entry()：它把 en 拆成单词逐个查泽国语词表 sources/work/conlang_vocab.json（159 条），而「pin」恰好是第 24 章 conlang 条目「mi cin pin fe lo kin do」里的一个音节词，于是单词术语 pin 被误判——与第 15 章已报的 LLM／Su／XOR 是同一根因。任何按 conlang 处理的下游（等宽／装饰字体渲染、保罗马字的规范化脚本、后续章节译者的术语检索）都会据此得出「球瓶应保留罗马字 pin」的错误结论。此外本章 new_terms 的「Helisport redball → 红球」与术语表已有条目「redball → 红球（from chapter-11.zh）」重复登记，同一概念留下两条 en 不同的条目（blueball／greenball 为新增，无重复）。",
+      "suggestion": "只改术语表与脚本，正文不动：pin 条改为 {\"en\": \"pin\", \"zh\": \"球瓶\", \"kind\": \"term\", \"note\": \"翔球场上立于圆板上的目标（knockdown → 击倒）\"}；并在 merge_terms.py 的 is_conlang_entry() 加守卫，例如「en 只有单个单词且 zh 不含罗马字时不判为 conlang」或「要求 en 至少含 2 个泽国语词」，避免单词术语继续被误判。本章 new_terms 里的 Helisport redball 可删（术语表已有 redball），或把三条统一写成 redball／blueball／greenball。"
+    },
+    {
+      "id": "c16-newterms-social-recovery",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "c16-s0124 面板文案 \"[Wallet 0x8f62... social recovery mode transaction request]\"；术语表同时收有两条：{\"en\": \"social recovery\", \"zh\": \"社交恢复\", \"from\": \"chapter-06.zh\"} 与 {\"en\": \"social recovery mode\", \"zh\": \"社会恢复模式\", \"from\": \"chapter-16.zh\"}",
+      "zh": "正文 c16-s0124 现作「[钱包 0x8f62... 社交恢复模式交易请求]」，而本章 new_terms 仍作 {\"en\": \"social recovery mode\", \"zh\": \"社会恢复模式\"}，术语表该条与 docs/glossary.md 第 512 行也都是「社会恢复模式」",
+      "problem": "同一个钱包恢复机制在全书出现两种译名：第 6 章正文作「社交恢复」（c06「要么万不得已时走社交恢复——六把密钥由预先选定的家人和朋友保管」），术语表 social recovery 条也作「社交恢复」；本章正文刚统一为「社交恢复模式」，但本章 new_terms 与术语表条目仍是「社会恢复模式」。中文里「社会恢复」读作「社会层面的恢复」，与「由预先指定的家人朋友共同签名、凑齐阈值即可找回资金」不是一回事。只要再跑一次 merge_terms.py，术语表就会保留／强化「社会恢复模式」这条，与正文及术语表另一条「社交恢复」长期并存，后续涉及钱包恢复的章节（第 22、28 章等）失去唯一依据。",
+      "suggestion": "三处统一为「社交恢复模式」：本章 new_terms 改 \"zh\": \"社交恢复模式\"；术语表 social recovery mode 条改 \"zh\": \"社交恢复模式\"，note 改「由预先指定的家人朋友共同签名（社交恢复）找回钱包的模式，与 social recovery 同族」；再重跑 merge_terms.py 生成 docs/glossary.md。"
+    },
+    {
+      "id": "c16-s0047",
+      "severity": "low",
+      "type": "标点体例",
+      "source": "\"Well, the votes on the rubrics are in eight, twelve and sixteen days, so you have that time to think through it no matter what happens.\"；同章 c16-s0033 \"...preserved food that was sufficient for thirty days of survival.\"",
+      "zh": "c16-s0047「那几条评则的表决分别在八天后、十二天后和十六天后，所以不管怎样，你都有这段时间可以想。」；c16-s0033「足够撑过三十天」",
+      "problem": "体例规范 §3 规定「年份、日期、数量、序数、度量、百分比、分数值用阿拉伯数字」，全书同类「天数」也有阿拉伯数字的判例：第 1 章「再过4天，维尔叔叔和黛雅婶婶就要来接走4个孩子」、第 32 章「大概10天后，他和几个人真的要来维里迪亚」。本章三处表决期限与三十天口粮全用汉字数字，同一章却又写「考了70分」「5.5齐普币」「从20涨到23」、记分板数值 1674／1771／1860，两套数字体系并行。同类还有 c16-s0056／c16-s0060「五米」、c16-s0098「三十嘀嗒」（第 11 章翔球场景写的是「五米。四米。三米。」，若要保留汉字则两章须同口径）。",
+      "suggestion": "c16-s0047 改「那几条评则的表决分别在8天后、12天后和16天后，所以不管怎样，你都有这段时间可以想。」；c16-s0033 改「足够撑过30天」；c16-s0056／c16-s0060「五米」改「5米」、c16-s0098「三十嘀嗒」改「30嘀嗒」。若全书决定沿用汉字小数字，则应回改第 1、32 章同类天数，两方案只能取一，不能两套并行。"
+    },
+    {
+      "id": "c16-s0055",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "c16-s0055 \"the lead player wearing a yellow shirt\"／c16-s0056 \"a player ... wearing a purple shirt\"／c16-s0057 \"Two other players wearing yellow shirts\"（同句式共 6 段）；c16-s0099 \"People on copters can only pack together so tightly\"",
+      "zh": "c16-s0055「领先的那名黄衣球员」、c16-s0056「一名紫衣球员……黄衣球员翻滚出去」、c16-s0057「另外两名黄衣球员」、c16-s0058「一名黄衣球员」、c16-s0059「另一名黄衣球员」、c16-s0060「守瓶的黄衣球员」，共 7 处「黄衣／紫衣」；c16-s0099「人在小型飞行器上」",
+      "problem": "同一项运动、同一处原文句式（wearing a yellow／purple shirt）在第 11 章译作「黄衫／紫衫」：c11「一半穿黄衫，一半穿紫衫」「两个穿紫衫的孩子也看到了那个红球」，本章却改作「黄衣／紫衣」，两章并读像两套队服，术语表也未收这类球衣写法。同理，翔球选手乘坐的 copter 在第 11 章已定为「个人飞行器」（术语表 personal copter 条，note 直指「翔球选手乘坐的单人小型飞行器」，并注明「第 5 章 copter 作小型飞行器」），本章讲翔球选手挤成一团防守时却用「小型飞行器」，读者会读成另一种载具。",
+      "suggestion": "统一采用第 11 章已确立的说法：c16-s0055「领先的那名黄衫球员」、c16-s0056「一名紫衫球员……黄衫球员翻滚出去」、c16-s0057「另外两名黄衫球员」、c16-s0058「一名黄衫球员」、c16-s0059「另一名黄衫球员」、c16-s0060「守瓶的黄衫球员」；c16-s0099「翔球选手在个人飞行器上再挤也挤不到哪儿去」（或最低限度「人在个人飞行器上」）。"
+    },
+    {
+      "id": "c16-newterms-teams",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "记分板表头 \"Yellow\"／\"Purple\"（c16-s0062／c16-s0063、c16-s0079／c16-s0080）；第 11 章同一转播语境作「黄队／紫队」（c11「黄队得第一分」「紫队两分」「黄队赢下比赛」）",
+      "zh": "面板表头「黄队」「紫队」（两处记分板共 4 格）；本章 new_terms 收录了同一张记分板的「红球接获／绿球击人／蓝球击倒球瓶／合计得分」四条，却没有登记这两个表头，术语表里也查不到 Yellow／Purple（黄队／紫队）任何一条",
+      "problem": "同一张记分板的行标签全部登记入表，两个表头却漏登记，术语表因此没有翔球队名的译法依据；而第 13、21、28、29 章都还会出现翔球转播／比赛，后续章节没有唯一事实源，可能出现「黄队／紫队／黄衫队／紫衣队」等新写法（第 11 章已固定为「黄队／紫队」）。",
+      "suggestion": "在本章 new_terms 补两条：{\"en\": \"Helisport Yellow team\", \"zh\": \"黄队\", \"kind\": \"term\", \"note\": \"翔球转播记分板表头／队名，与第 11 章一致\"} 与 {\"en\": \"Helisport Purple team\", \"zh\": \"紫队\", \"kind\": \"term\", \"note\": \"翔球转播记分板表头／队名，与第 11 章一致\"}（沿用本章 \"Helisport redball\" 的命名式，避免用过于泛化的 Yellow／Purple 作键）；合并后重跑 merge_terms.py 生成 docs/glossary.md。"
+    }
+  ]
+}

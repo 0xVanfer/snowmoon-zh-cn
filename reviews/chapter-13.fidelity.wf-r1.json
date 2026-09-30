@@ -1,0 +1,71 @@
+{
+ "chapter": 13,
+ "lens": "fidelity",
+ "reviewer": "wf-r1",
+ "overall": "第 13 章的忠实度整体很高：117 个片段与原文一一对应，颜色标记与说话人归属无一处张冠李戴（德尔瓦特／格拉迪亚斯／塞拉／赫雷达／莫夫／十三／零／十八／一各自的对白都对得上），面板表头与时间戳、获月8日／9日的日期、翔球／掌则人／评则／隐私袍／隔信等专名术语以及第4档／第3档等数字均与术语表和全书一致，也没有整句漏译或否定、因果颠倒的硬伤。问题集中在细部的范围与程度走样：一顿家庭晚餐被写成「饭局」，宣言里 <e>all</e> 那一句「同一批人在所有维度上占优」被摊薄成「总有人好、总有人差」，disincentive／in the middle／pressed against 一类词的语义被轻微挪动；都不影响通读，按下表改完即可定稿。另需提请注意（属一致性视角，未计入下表）：掌则人编号在本章内不统一（s0088「六」与 s0089「六号」并存，s0091「十八」、s0092「十三」、s0096 与 s0115「零」、s0112「一」均为裸数字），而术语表已统一为「六号／十三号／零号／一号／十八号」，第 10 章同样全部写作「N号」。",
+ "issues": [
+  {
+   "id": "c13-s0075",
+   "severity": "low",
+   "type": "误译",
+   "source": "Even if there are, some people perform better, and others perform worse, across <e>all</e> the dimensions that matter.",
+   "zh": "即便真有，在<e>所有</e>真正重要的维度上，总有人做得更好，也总有人做得更差。",
+   "problem": "原文靠 <e>all</e> 强调的是：确实存在一些人「在所有维度上都更好」、另一些人「在所有维度上都更差」——这正是驳倒「好有许多维度，所以没法比较高下」的支点。中文「总有人……也总有人……」读起来更像「每个维度上都有人好有人差」的分布陈述，把「同一批人处处占优」这层意思摊薄了，攻防力度随之减弱。",
+   "suggestion": "即便真有，在所有真正重要的维度上，也总有一些人处处做得更好，另一些人处处做得更差。"
+  },
+  {
+   "id": "c13-s0022",
+   "severity": "low",
+   "type": "误译",
+   "source": "\"I'm sorry, I have to leave for a dinner with my family.\"",
+   "zh": "“抱歉，我得走了，家里有个饭局。”",
+   "problem": "原文是与家人吃的一顿晚饭；「饭局」在中文里默认指应酬性聚餐（多为工作、社交场合），读者容易理解成格拉迪亚斯要去赴一场外人的局，紧接着德尔瓦特那句「家人才是最重要的」就接不上（下一场戏也正是他和塞拉、四个孩子的家庭晚餐）。",
+   "suggestion": "“抱歉，我得走了，约了家里人吃饭。”"
+  },
+  {
+   "id": "c13-s0077",
+   "severity": "low",
+   "type": "误译",
+   "source": "Those that give you both the incentive, and the disincentive.",
+   "zh": "既能给你激励，也能给你戒惧。",
+   "problem": "disincentive 是与 incentive 成对出现的机制（输了就要承担后果，即下一句的「输时给你冷脸」），译文「戒惧」说的是受激励者一方的心理状态，与「激励」不成对；读者得到的是「让你害怕」，而原文讲的是同一套奖惩机制的正反两面。",
+   "suggestion": "既给你正向的激励，也给你反向的惩戒。"
+  },
+  {
+   "id": "c13-s0004",
+   "severity": "low",
+   "type": "误译",
+   "source": "By now, he was very familiar with the style: a table, a decorated lamp and two flowers at the end, and an air filter pressed against a corner on the floor.",
+   "zh": "这种隔间他如今已经熟得不能再熟：一张桌子，尽头是一盏彩绘灯和两枝花，地板角落里还顶着一台空气过滤器。",
+   "problem": "一处描述句里叠了三处走样：①very familiar 只是「很熟悉」，译文「熟得不能再熟」把程度提到极限，属增译；②decorated lamp 是「装饰过的灯」，译文「彩绘灯」把「彩绘」这一具体工艺坐实了；③pressed against a corner 是「紧贴在墙角」，译文「角落里还顶着一台」——「顶」在中文里是向上支撑或抵住，读者会以为过滤器悬在角上或竖顶在那里，空间关系反而说不清。另外 the style（隔间的陈设样式）也没有落地。",
+   "suggestion": "这种隔间的陈设他如今已经再熟悉不过：一张桌子，尽头是一盏装饰灯和两枝花，地板角落里还紧贴墙角放着一台空气过滤器。"
+  },
+  {
+   "id": "c13-s0082",
+   "severity": "low",
+   "type": "误译",
+   "source": "Zven was looking at the onscreen message with curiosity, his mind jumping between the paragraphs, and occasionally moving his attention to watching Seila try to turn the screen off.",
+   "zh": "兹文好奇地盯着屏幕上的消息，目光在段落之间跳来跳去，偶尔转去看塞拉怎么关屏幕。",
+   "problem": "his mind jumping 是「脑子在几段之间跳」（孩子在费力理解内容），译文换成「目光……跳来跳去」，变成视线扫读；后半句「偶尔转去看塞拉」同样是注意力的移动，前后本应一致。",
+   "suggestion": "兹文好奇地盯着屏幕上的消息，脑子在几段话之间跳来跳去，偶尔又把注意力转去看塞拉怎么关屏幕。"
+  },
+  {
+   "id": "c13-s0104",
+   "severity": "low",
+   "type": "误译",
+   "source": "Thirteen was in the middle, and only Eighteen and One were against.",
+   "zh": "十三摇摆不定，只有十八和一反对。",
+   "problem": "in the middle 指立场居中——既没倒向赞成，也没倒向反对；「摇摆不定」是拿不定主意、反复变卦，语气更重，把格拉迪亚斯数票时的一个中性判断译成了对十三性格的负面评价。",
+   "suggestion": "十三则立场居中，只有十八和一反对。"
+  },
+  {
+   "id": "c13-s0112",
+   "severity": "low",
+   "type": "增译",
+   "source": "I remember you were also of the mindset that we should take the Arctics seriously as a threat. What's your timeline?",
+   "zh": "我记得你也认为我们该把北极当成真正的威胁。你估的时间是？",
+   "problem": "原文说的是「该认真把北极当作威胁来看待」（态度问题），译文加「真正的」，把议题挪到「这个威胁是否真实存在」上。格拉迪亚斯正是在用「你既然主张认真对待威胁，那你估个时间」来把十八和一逼到墙角，态度与时间线之间这一扣被换掉了。",
+   "suggestion": "我记得你也主张该认真把北极人当成威胁看待。你估的时间是？"
+  }
+ ]
+}

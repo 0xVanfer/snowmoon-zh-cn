@@ -1,0 +1,44 @@
+{
+  "chapter": 27,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 27 章的忠实度整体很高，可按现稿定稿：143 个片段与原文一一对应，无缺段、无整句增译，114 处 <c> 颜色标记与 7 处 <e> 强调标记的位置、st 值与原文逐一相同（说话人结构上不可能张冠李戴），逐条核对对话归属也全部正确。数字与逻辑关系与原文一致：3724年霜期7日／8日、150／50／10 嘀嗒、九十万→三百万→一百万齐普币（原文本身即如此跳变）、0.1%、20%／26%／50%、数百万、九个月、二十天延迟、一百米／五十米等均未搞反；否定与条件（「这几个人一个都救不出来——除非北极人把我们彻底征服」「除非套利者要么完全风险中性，要么有无限多的钱，否则操纵者总能……」「不是要最大化经济总产出，而是最大化自己掌控之下的那部分产出」「这不会让他们相信……行得通」）、时态（「世界会重新变得可逆」「我们都已经让所有人清楚看到」）都站得住。比喻基本落地：「把底牌全亮给北极人」「被永远乘以零」「直接开后门」「一级一级往上爬」「说得公道」；术语全部合表（银聊／银聊预测／昆高培／红郡／海德菲尔／北岸／评则／混淆电路／可验证混淆电路／可验证两方计算／共同知识／风险中性／套利者／掩护问题／手持终端／隐私袍／颈带／嘀嗒／长时／齐普币），人名地名与术语表逐一对上。未加 <f> 的泽国语罗马字（MU GU GEI HUI ZIU FA、LE MU GEI HUI ZIU FA、倒计时串）与第 26 章「Fi le gei tau fa」的处理一致，原样保留、未误译；三张插图的标签与百分比也与英文 SVG 的 title/desc 完全一致（39/25/15/12/9、13/21/10/16/38/2、6/8/16/13/52/5）。问题只有四处，严重度全为 low：一处增译（s0005「推门」）、一处人数指代（s0036「她领着三人」）、一处语义偏移（s0051「把军权换掉」）、一处程度偏移（s0141「大同小异」）。四处都是一句话就能改好的文字层面小偏差，无需重译，其中 s0051 与第 28 章「撤掉的是整个军方领导层」的措辞相呼应，最值得顺手统一。",
+  "issues": [
+    {
+      "id": "c27-s0051",
+      "severity": "low",
+      "type": "误译",
+      "source": "A small fraction of the questions are getting at the thing that we actually care about - replacing the military even if the parliament doesn't want to - and the rest are decoys.",
+      "zh": "其中一小部分问题直指我们真正在意的那件事——就算议会不愿意，也要把军权换掉——其余的都是掩护。",
+      "problem": "「replacing the military」指的是把军队（及其领导层）换掉、让昆高培接手：本章 s0055 的民调选项问的就是「你更希望谁来掌管维里迪亚的军队？」，第 28 章原文 we don't actually want to zero out the top three levels of the Veridian military hierarchy 译为「我们其实没打算把维里迪亚军方的高层三级全部清零」，Lektor 接手的方案也指向此。译成「把军权换掉」，字面读作「把军事权力易手／把军方的权拿掉」，中文读者可能理解成撤销军方的权力，与「换掉这批人、由昆高培接管」的方向相反；且全书其余 25 处 the military 一律译「军方」，此处用「军权」是孤例。",
+      "suggestion": "其中一小部分问题直指我们真正在意的那件事——就算议会不愿意，也要把军方（的领导层）换掉——其余的都是掩护。"
+    },
+    {
+      "id": "c27-s0036",
+      "severity": "low",
+      "type": "误译",
+      "source": "She led the three of them down a path: turning left, then right and up a slope, then right again, then up a staircase.",
+      "zh": "她领着三人沿一条路往里走：先左转，再右转上一段坡，又右转，然后登上一道楼梯。",
+      "problem": "「the three of them」就是本场景的这三个人（s0029 原文是 Gladias, Seila and Zei walked forward together），塞拉本人也在其中；而中文「她领着三人」的标准读法是「她＋另外三个人」＝四个人，人数与上一段自相矛盾（后文 s0037「另一名男子已经等在那里」说明第四个人是埃维洛尔，且他并非被领着走的人）。",
+      "suggestion": "她带着另外两人沿一条路往里走：先左转，再右转上一段坡，又右转，然后登上一道楼梯。"
+    },
+    {
+      "id": "c27-s0141",
+      "severity": "low",
+      "type": "误译",
+      "source": "The other four are saying vaguely similar things. The most pessimistic one says the chances are the same in the status quo and Kungaupei scenarios.",
+      "zh": "另外四个说的也大同小异。最悲观的那个说，现状情形和昆高培情形下，概率一样。",
+      "problem": "「vaguely similar」是「大体相近、但说法含糊」，程度明显弱于「大同小异」（基本一致、只差在细节）。译文把另外四个机器人的结论说得比原文更一致，抹掉了原文对它们措辞含糊的保留，与紧接着「最悲观的那个说……一样」这种「先笼统、后举特例」的节奏也不合。",
+      "suggestion": "另外四个说的也大致相近。最悲观的那个说，现状情形和昆高培情形下，概率一样。"
+    },
+    {
+      "id": "c27-s0005",
+      "severity": "low",
+      "type": "增译",
+      "source": "Before he could respond, he heard a buzzing sound, and the door opened. / Seila walked in through the door.",
+      "zh": "他还没来得及应声，就听见一阵嗡嗡声，门开了。／塞拉推门走了进来。",
+      "problem": "上一段已交代门是响过蜂鸣后自动打开（呼应 s0035 的感应式手持终端门禁、s0041「按下一个按钮，屋顶开始合拢」的自动化设定），塞拉只是 walked in through the door。译文「推门走了进来」凭空添了一个推门动作，读者会以为门本来关着、得由人推开，与自动门设定相抵。",
+      "suggestion": "塞拉走了进来。"
+    }
+  ]
+}

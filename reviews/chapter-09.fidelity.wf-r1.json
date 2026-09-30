@@ -1,0 +1,62 @@
+{
+  "chapter": 9,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 9 章的忠实度整体很好：139 个片段逐条对照后，没有发现误译到读不懂、漏译整句、否定／因果／数量搞反或说话人张冠李戴的地方，颜色标记与英语原文的说话人归属逐段一致（芬＝80、白＝26.67、登＝53.33、泽＝346.67），虚构语言与术语（昆高培、民本棋祭司、隔信箔、混网、光尺、嘀嗒、晶圆厂、算力盒、元程序、物理不可克隆函数）均与术语表相符，密码学段落（s0064、s0069～s0071、s0084、s0114～s0123、s0132）的技术逻辑也对得上。挑出的都是局部细节：一处把原文中性的 aunt 定为“姑妈”，与第 24 章白的同一段身世自述“姨妈”自相矛盾；另有几处分寸被挪动（What drives you→“图什么”、more than half→“一半以上”、has a right to→“可以”、friendly→“安全”、right back through the system→“原路”）。按条替换即可，无高风险问题。",
+  "issues": [
+    {
+      "id": "c09-s0018",
+      "severity": "medium",
+      "type": "增译",
+      "source": "\"I stayed in my aunt's place. But she basically ignored me, just gave me a room, and two meals a day, and that's basically it.\"",
+      "zh": "“我住在我姑妈家。可她基本不管我，给我一间房，一天两顿饭，就这么多了。”",
+      "problem": "原文只说 aunt，没有交代是父系还是母系；译文用“姑妈”（父亲的姐妹）替读者补上了原文没有的亲属关系。更麻烦的是第 24 章白回顾同一段身世时写的是“我跟着姨妈长大，她基本上不管我”——同一个人在两章里成了父系和母系两种亲戚，细心的读者会以为白有两个不同的抚养人。",
+      "suggestion": "“我住在姨妈家。可她基本不管我，给我一间房，一天两顿饭，就这么多了。”（与第 24 章统一；若想回避亲属系别，可写“我寄住在亲戚家”。）"
+    },
+    {
+      "id": "c09-s0024",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"I do want to understand you guys better. What drives you, how you think.\"",
+      "zh": "“我确实想更懂你们。你们图什么，你们怎么想。”",
+      "problem": "What drives you 问的是“是什么在驱动你们／你们的动力是什么”，是中性的探问；中文“你们图什么”却带质问、算计得失的味道（“你到底图什么”），把白的诚恳请教改成了审视追问，与前半句“确实想更懂你们”的语气相抵。",
+      "suggestion": "“我确实想更懂你们。你们是被什么驱动的，是怎么想的。”"
+    },
+    {
+      "id": "c09-s0037",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"If all you know are the 256 roots, you can understand more than half of what people are saying.\"",
+      "zh": "“只要你掌握那256个词根，人们说的话你就能听懂一半以上。”",
+      "problem": "more than half 不含“正好一半”，而中文“一半以上”习惯把一半也算进去，掌握 256 个词根者的理解门槛被放宽了一档（与第 6 章 more than 20 译成“20人以上”属同类问题）。",
+      "suggestion": "“只要你掌握那256个词根，人们说的话你就能听懂超过一半。”"
+    },
+    {
+      "id": "c09-s0082",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"Do you know how chip verification works? Like, how I'm automatically verifying that all your electronic devices are friendly right now?\"",
+      "zh": "“你知道芯片验证是怎么做的吗？比方说，我现在是怎么自动把你身上所有电子设备都验成‘安全’的？”",
+      "problem": "芯片验证语境里的 friendly 指“出处可信、不是敌方伪造的设备”（第 2 章同一概念译作“友方的安保无人机……运行的是友方算法”）；译成“安全”把“来源可信、非敌对”泛化成一般意义上的“安全”，与登接下来讲厂商签名、检查员核验来源的整段主旨对不上。",
+      "suggestion": "“你知道芯片验证是怎么做的吗？比方说，我现在是怎么自动确认你身上所有电子设备都是友方的？”"
+    },
+    {
+      "id": "c09-s0098",
+      "severity": "low",
+      "type": "漏译",
+      "source": "\"Every Dzegojan has a right to occasionally randomly pick one, unscrew it and analyze it themselves.\"",
+      "zh": "“每个泽国人都可以时不时随机挑一个，拧下来自己分析。”",
+      "problem": "has a right to 是制度赋予的权利，译文“可以”只表示许可／允许，把“公民有权自行检查公共设备”这条制度设计降格成“谁都能上手”，紧接着 s0099 讲“随机检查机制要靠真有人随机挑”的制度意味也被削弱。",
+      "suggestion": "“每个泽国人都有权时不时随机挑一个，拧下来自己分析。”"
+    },
+    {
+      "id": "c09-s0120",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"And if you're paranoid, you can make the inner payload be yet another envelope, requesting to send the message right back through the system in the next round.\"",
+      "zh": "“如果你特别多疑，还可以把最内层的载荷做成又一个信封，要求把消息在下一轮原路送回系统里再走一遍。”",
+      "problem": "原文只说要让消息“再送回系统里走一轮”，强调的是重新绕混网（下一轮重新随机选节点）；“原路”在中文里是“沿原来的路线”，会被读成沿同一批节点退回，而这恰好与混网匿名性赖以成立的“每轮重新随机选路”相矛盾。",
+      "suggestion": "“如果你特别多疑，还可以把最内层的载荷做成又一个信封，要求下一轮把消息再送回系统里走一遍。”"
+    }
+  ]
+}

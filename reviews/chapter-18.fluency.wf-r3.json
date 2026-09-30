@@ -1,0 +1,188 @@
+{
+ "chapter": 18,
+ "lens": "fluency",
+ "reviewer": "wf-r3",
+ "overall": "本章的重头是芬的长篇演讲，信息量大、抽象概念多，译文整体跟得住，意思也都落到了位；问题不是读不懂，而是翻译腔密度偏高——长定语前置、插入语切断主干、主谓搭配生硬，集中在 s0026／s0060／s0129／s0131 这几处需要回读的句子。另一类是口语味道失准（「该惊讶一下」「我也幸会」「为了活下去而拼」），以及两处陈述引语后漏逗号，引语和提示语黏成一句。改动量不大，属于「能读懂但不顺」这一层。",
+ "issues": [
+  {
+   "id": "c18-s0026",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "There were people outside, though fewer than Gladias was used to seeing in Veridia - despite the visibly greater density of Pafogai Du compared to his own hometown.",
+   "zh": "街上有人，但比他看惯的维里迪亚要少——尽管帕佛盖都的密度明显高过他的家乡。",
+   "problem": "「比他看惯的维里迪亚要少」把「人」和「维里迪亚」（一个地方）直接相比，中文里主客不搭，读者得自己补出「在维里迪亚看惯的人」才通；「看惯的维里迪亚」作定语也容易被读成「他看惯的那个维里迪亚」。",
+   "suggestion": "街上有人，但比他往常在维里迪亚见到的人要少——尽管帕佛盖都的密度明显高过他的家乡。"
+  },
+  {
+   "id": "c18-s0005",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Zei on a backward-facing seat and Bai facing him on a forward-facing seat.",
+   "zh": "泽和白都已经坐在车里：泽坐的是倒向的座位，白坐在他对面，朝前。",
+   "problem": "「倒向的座位」不成词——「倒向」是动词（倒向某处），不能修饰座位；中文里这种座位叫「倒座」，说「背朝车头／背对车头」的座位更清楚。句末孤零零一个「朝前」也缺主语和动词，读着像没写完。",
+   "suggestion": "泽和白都已经坐在车里：泽坐的是背朝车头的座位，白坐在他对面，面朝前方。"
+  },
+  {
+   "id": "c18-s0016",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Can't let light pass through windows directly, because that would be bi-directional even if it was dimmed - a good camera could see that we're inside.",
+   "zh": "不能直接让光透进车窗，因为就算调暗，光也是双向的——一台好相机就能看出我们在里面。",
+   "problem": "「让光透进车窗」搭配别扭（光不会「透进车窗」这个物件，是玻璃透光）；「光也是双向的」是 bi-directional 的直搬，中文读者第一反应是「光有两个方向？」很难接住后面的推论。此处是设定说明，读不顺会直接卡住理解。",
+   "suggestion": "车窗不能直接透光，因为就算调暗，玻璃也是双向透的——外面拿一台好相机就能看出我们坐在里面。"
+  },
+  {
+   "id": "c18-s0020",
+   "severity": "medium",
+   "type": "本土化",
+   "source": "Many of the stores had cartoon animals on the sides, with speech bubbles saying various things in Dzegoban",
+   "zh": "许多店铺的侧面都画着卡通动物，对话框里用泽国语写着各种话，格拉迪亚斯一句也看不懂。",
+   "problem": "「对话框」在中文里默认指软件界面里的输入／弹窗，用在墙上的卡通动物旁边，读者会先想到电子界面而瞬间出戏；漫画、壁画上的那个圈叫「气泡框／对话气泡」。",
+   "suggestion": "许多店铺的侧面都画着卡通动物，气泡框里用泽国语写着各种话，格拉迪亚斯一句也看不懂。"
+  },
+  {
+   "id": "c18-s0039",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "Heh, everyone says that. Actually we carved it out of a pre-existing mountain.",
+   "zh": "“嘿，人人都这么说。其实我们是把一座现成的山挖出来的。”",
+   "problem": "「把一座现成的山挖出来」在中文里读起来是把整座山从地里挖走／挖出来一座山，与「依山凿建」正好相反；后面的「内部有九成都是实心岩石」虽然能补救，但这一句已经先把人带偏了。",
+   "suggestion": "“嘿，人人都这么说。其实是我们就着一座现成的山凿出来的。”"
+  },
+  {
+   "id": "c18-s0060",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "He had only taken forty minutes to rest; he had another sixty left before Zei and Bai would be expecting him.",
+   "zh": "他只休息了四十分钟，离泽和白等他的时间还有六十分钟。",
+   "problem": "「离……等他的时间还有六十分钟」是 before sb. would be expecting him 的逐字搬运：「离……的时间还有」后面本该接一个时间点（离出发还有十分钟），这里接的是「泽和白等他」这件事，中文不成立，必须回读。",
+   "suggestion": "他只休息了四十分钟，离泽和白来找他还有六十分钟。"
+  },
+  {
+   "id": "c18-s0076",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "about half the time polished and professional and the other half the time improvised and hand-made from neon lights …… about half the space was now taken up by hastily-added privacy robes.",
+   "zh": "几乎每家店窗子上方都挂着招牌，一半是打磨精致、专业做的，另一半是拿霓虹灯临时手工拼出来的。……店里大约一半的空间已经被匆匆加上的隐私袍占去。",
+   "problem": "「打磨精致」不能形容招牌（打磨用于金属、玉石，或比喻打磨作品），「专业做的」是形容词语序照搬（professional）；「匆匆加上的隐私袍」也不成话——衣服是「添置」不是「加上」。两处都让这段街景扫描读起来像机翻。",
+   "suggestion": "几乎每家店窗子上方都挂着招牌，一半做得精致专业，另一半是用霓虹灯临时手工拼出来的。……店里大约一半的空间已经被匆匆添置的隐私袍占去。"
+  },
+  {
+   "id": "c18-s0090",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "He was pleased by the beautiful path covered with trees that seemed to surrounding the whole perimeter of the city.",
+   "zh": "一条绿树覆盖的漂亮小路似乎绕着整座城的周界，让他很是喜欢。",
+   "problem": "「周界」是几何／军事用词，用来描述城市边缘很出戏，中文说「环绕整座城市／城的边缘」；「让他很是喜欢」把 He was pleased by 的被动结构硬留在句末，主语在前半句已经消失，读起来像一句话没了落脚点。",
+   "suggestion": "一条绿树覆盖的漂亮小路似乎环绕着整座城市，他很是喜欢。"
+  },
+  {
+   "id": "c18-s0128",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "The last month had been intense for everyone - hardly a good time to get everyone across the country to learn a whole new version of their language.",
+   "zh": "过去一个月对谁都很紧张——这时候让全国人都去学一门语言的新版本，实在不是好时机。",
+   "problem": "「过去一个月对谁都很紧张」主谓不搭：一段时间不会「对谁紧张」，中文说「谁的日子都不好过」「大家都绷得很紧」。后一句本身译得不错。",
+   "suggestion": "过去一个月，谁的日子都不好过——这时候让全国人都去学一门语言的新版本，实在不是好时机。"
+  },
+  {
+   "id": "c18-s0129",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "Instead, they decided to use the exact same machinery, though with less public participation and more secrecy because of the unique circumstances and the time constraint, to coordinate a totally different set of changes across Dzego.",
+   "zh": "“他们转而决定动用完全相同的一套机制，只是因为情况特殊、时间又紧，公众参与更少、保密更多，用它来协调泽国全国另一整套完全不同的变化。”",
+   "problem": "英文把让步状语插在动词和目的状语之间还站得住，中文照搬后主干被切断：「决定动用……机制」和「用它来协调……」之间塞进四个短句，读者读到「用它来协调」时要回头找「它」指什么。中文该把原因前置、主句收束。",
+   "suggestion": "“他们转而决定用完全相同的一套机制，只是情况特殊、时间又紧，所以公众参与更少、保密更多，用它来协调泽国全国另一整套完全不同的变化。”"
+  },
+  {
+   "id": "c18-s0131",
+   "severity": "medium",
+   "type": "欧化",
+   "source": "Instead, the Bansunpei just released its new privacy and security recommendations, through the channel where all the people who follow them were expecting news about Dzegoban version nine.",
+   "zh": "“三天前，这些都还不存在。班孙培只是把它新的隐私与安全建议，从关注者等着泽国语第九版消息的那个渠道发了出去。……”",
+   "problem": "「关注者等着泽国语第九版消息的那个渠道」是三层套叠的长定语前置（关注者／等着……消息／那个渠道），中文得先吞下整串才知道是「渠道」；「它新的隐私与安全建议」也少了「那套」，读着像「它新的」是个名词。这是芬演讲的收束段，最不该让人卡壳。",
+   "suggestion": "“三天前，这些都还没有发生。班孙培只是把它那套新的隐私与安全建议，从那个渠道发了出去——关注它的人本来都在那儿等着泽国语第九版的消息。……”"
+  },
+  {
+   "id": "c18-s0133",
+   "severity": "medium",
+   "type": "生硬",
+   "source": "though they always have a hard time getting people to actually do anything beyond just nodding along to that statement.",
+   "zh": "“北极人总在讲一个人的智力分，讲社会该由分数最高的人来治理。维里迪亚有几位学者说，情商分也该被认真对待——可除了让人点头称是，他们从来很难让大家真的做点什么。”",
+   "problem": "「他们从来很难……」不是中文说法（要么「一向很难」，要么「从来没能」）；一句里连用两个「让」（让人点头称是／让大家真的做点什么），后半句力气全泄了。",
+   "suggestion": "“北极人总在讲一个人的智力分，讲社会该由分数最高的人来治理。维里迪亚有几位学者说，情商分也该被认真对待——可除了让人点头称是，他们从来没能让大家真的做点什么。”"
+  },
+  {
+   "id": "c18-s0044",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Maybe you're right we should be impressed. It is the largest one of these in all of Dzego.",
+   "zh": "“也许你说得对，我们该惊讶一下。它<e>确实</e>是全泽国这类建筑里最大的一座。”",
+   "problem": "「我们该惊讶一下」把 be impressed 直译成「惊讶」，方向不对：泽是顺着格拉迪亚斯的话承认这建筑值得佩服，「惊讶」在中文里是出乎意料，不是叹服；「一下」也让庄重的让步变得轻飘。",
+   "suggestion": "“也许你说得对，我们确实该佩服一下。它<e>确实</e>是全泽国这类建筑里最大的一座。”"
+  },
+  {
+   "id": "c18-s0064",
+   "severity": "low",
+   "type": "生硬",
+   "source": "He saw a black car pass by him, and then almost immediately slow to a stop.",
+   "zh": "他过了马路。一辆黑色轿车从他身边驶过，随即几乎立刻减速停下。",
+   "problem": "「随即」和「几乎立刻」是同一层意思叠加（随即＝紧跟着，几乎立刻＝马上），两个词挤在一处，句子被拖慢，原文只有一处 almost immediately。",
+   "suggestion": "他过了马路。一辆黑色轿车从他身边驶过，随即减速停下。"
+  },
+  {
+   "id": "c18-s0067",
+   "severity": "low",
+   "type": "生硬",
+   "source": "The driver took out a tray containing the top row, and put it on the ground, on a staircase.",
+   "zh": "司机取出一只盛着最上排的托盘，放到地上的台阶上。",
+   "problem": "「盛着最上排」把「最上排」当货物名，缺了中心词，要读者自己补「货」；「放到地上的台阶上」是 on the ground, on a staircase 的照搬——台阶本身就在地面上，多出「地上的」反而让人去找另一块地面。",
+   "suggestion": "司机取出一只装着最上面一排货的托盘，放到台阶上。"
+  },
+  {
+   "id": "c18-s0106",
+   "severity": "low",
+   "type": "生硬",
+   "source": "Indeed. Although you're blazing trails, and we're fighting here to survive.",
+   "zh": "“没错。只不过你们是在开辟道路，而我们在这儿是为了活下去而拼。”",
+   "problem": "「为了活下去而拼」句子收在单音节动词「拼」上，前面又用了「而」，读起来气不够；中文口语里要么说「在拼命」，要么说「拼了」，不会孤零零一个「拼」。",
+   "suggestion": "“没错。只不过你们是在开辟道路，而我们在这儿，是为了活命在拼。”"
+  },
+  {
+   "id": "c18-s0111",
+   "severity": "low",
+   "type": "本土化",
+   "source": "\"And nice to meet you too, Gladias. Anyone Zei brings is a friend to me.\"",
+   "zh": "“我也幸会，格拉迪亚斯。泽带来的人，就是我的朋友。”",
+   "problem": "「幸会」在中文里是见面时的客套话（「幸会，幸会」），不能像形容词一样被「也」修饰，「我也幸会」不成立。上一句格拉迪亚斯用了「幸会，芬」，芬的回应该换说法。",
+   "suggestion": "“我也很高兴认识你，格拉迪亚斯。泽带来的人，就是我的朋友。”"
+  },
+  {
+   "id": "c18-s0121",
+   "severity": "low",
+   "type": "欧化",
+   "source": "Think about what we're doing each time we release a new iteration of Dzegoban.",
+   "zh": "“想想我们每发布一版新的泽国语，做的到底是什么。”",
+   "problem": "「想想我们每……，做的到底是什么」是把 what we're doing each time… 的从句结构整块搬过来，中间没有停顿标记，读者第一次读会把「我们每发布一版新的泽国语」当成「想想」的宾语。中文用「想想看……到底是在做什么」更顺。",
+   "suggestion": "“想想看，我们每发布一版新的泽国语，到底是在做什么。”"
+  },
+  {
+   "id": "c18-s0135",
+   "severity": "low",
+   "type": "生硬",
+   "source": "And we are going to WIN.",
+   "zh": "现在，我们就要凭这样一个无首之身去迎战北极人。而且我们会赢。”",
+   "problem": "原文把 WIN 全大写作结，是全篇演讲的落点；中文用「而且」起句是追加语气（顺带再说一件事），把最重的一句说轻了。体例规范不允许用引号或全角大写模拟，但可以用「而」「一定」把重音落回来。",
+   "suggestion": "现在，我们就要凭这样一个无首之身去迎战北极人。而我们一定会赢。”"
+  },
+  {
+   "id": "c18-s0038",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "\"That ... is an impressive structure\"</c>, Gladias said. ／ \"Not yet. I only know like five Dzegoban roots\"</c>, Gladias laughed.",
+   "zh": "“那……真是座了不起的建筑”</c>格拉迪亚斯说。／“还不知道。我只认得五个泽国语词根”</c>格拉迪亚斯笑了。",
+   "problem": "本章两处陈述语气的引语后面直接接提示语，中间没有任何标点，引语和「某某说」黏成一句，朗读时没有换气点；体例规范第4节要求提示语在句末时用「，」收尾（疑问、感叹句已加「？」「！」，不受影响）。",
+   "suggestion": "“那……真是座了不起的建筑，”格拉迪亚斯说。／“还不知道。我只认得五个泽国语词根，”格拉迪亚斯笑了。（s0027 是罗马字引语，可保留原样不加标点。）"
+  }
+ ]
+}

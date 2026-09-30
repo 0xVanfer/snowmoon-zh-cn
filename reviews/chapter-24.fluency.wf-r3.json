@@ -1,0 +1,170 @@
+{
+  "chapter": 24,
+  "lens": "fluency",
+  "reviewer": "wf-r3",
+  "overall": "第24章中文整体可读，质量偏上：图书馆里白与格拉迪亚斯那段对话（「没有人无条件地爱我」「爱是赢来的奖赏——那就是我的童年」）语感到位，情绪落得住，是本章最好的部分。问题集中在两类：一是英文句式的直搬，凡长句或判断句（c24-s0045 的「所谓……全是胡说」、c24-s0043 的「……是……的」问句、c24-s0050 的平行结构、c24-s0078 的长主语）都要读第二遍；二是搭配与词义没落地，c24-s0024 的「侧室」（中文第一义是「妾」）、c24-s0086 的「掌则人的人脉」、c24-s0083 的「信任会损失很多」都会让读者停一下。对话另有两处语气误置：c24-s0094／c24-s0096 的「是啊？」被读成反问，与说话人立场冲突。按条替换后可达出版级语感。",
+  "issues": [
+    {
+      "id": "c24-s0045",
+      "severity": "high",
+      "type": "生硬",
+      "source": "So the whole idea that we're all equal, that the most important thing about us is our equal humanity, is total nonsense.",
+      "zh": "所以所谓我们人人平等、我们最重要的共通之处是平等的人性，全是胡说。",
+      "problem": "「所谓」后面挂的应该是一个名词性说法，这里却接了整整一个主谓句（我们最重要的共通之处是平等的人性）；两个并列命题全挤在「所谓」和「全是胡说」之间，读者读到「全是胡说」才知道主语在哪儿结束，中间那半句还会被读成一个独立的判断。这是全章最需要回头重读的一句。",
+      "suggestion": "所以，说什么我们人人平等、说什么我们身上最重要的是那份平等的人性——全是胡说。"
+    },
+    {
+      "id": "c24-s0024",
+      "severity": "high",
+      "type": "本土化",
+      "source": "taking many breaks to stare at the wall and at any side rooms that he walked past on his way to the library",
+      "zh": "格拉迪亚斯走得很慢，去图书馆的路上常常停下来，盯着墙面，或是盯着经过的侧室看。",
+      "problem": "「侧室」在中文里的第一义是「妾」（侧室／正室），放在山体金字塔的走廊场景里，读者会先愣一下再改口，这是典型的出戏点；另外「盯着墙面，或是盯着经过的侧室看」两个「盯着」重复，句尾的「看」又悬着，节奏发闷。",
+      "suggestion": "格拉迪亚斯走得很慢，去图书馆的路上常常停下，盯着墙面，或是打量经过的侧边房间。"
+    },
+    {
+      "id": "c24-s0039",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Well, I know enough to know that you're not fine. Though I also know enough to know that forcing you to divulge the source of your darkness if you're not comfortable will make you feel even worse.",
+      "zh": "“不过，我知道的够多，足以看出你并不好。我也知道，如果你不情愿，还逼你说出心里那片阴影的来由，只会让你更难受。”",
+      "problem": "「你并不好」在中文里首先读成「你这人不好／你不行」，接在格拉迪亚斯那句「我没事」后面，读者要停一下才能改口成 you're not fine；「我知道的够多，足以看出」也比原文的 I know enough to know 更绕。白是明察又不点破的口气，落点应该是「不好受」。",
+      "suggestion": "“不过，我了解得够多，看得出你心里并不好受。我也知道，你要是自己不愿意说，还逼你交代心里那片阴影的来由，只会让你更难受。”"
+    },
+    {
+      "id": "c24-s0027",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "giving the people sitting inside a feeling of calm from seeing nature, reducing CO2 levels, and splitting up different sections of the cafeteria to improve privacy",
+      "zh": "这些绿植似乎身兼三职：让坐在里面的人看着自然心生平静，降低 CO2浓度，还隔开食堂的不同区域，增添几分私密。",
+      "problem": "「看着自然心生平静」会在「看着自然」处断成「看着很自然」，读者得折回重读；「增添几分私密」把私密当名词用，中文只说「私密感」或「更私密」。三项并列里唯独这一项读不顺，整段的说明性就散了。",
+      "suggestion": "这些绿植似乎身兼三职：让坐在里面的人看着绿意心生平静，降低 CO2 浓度，还把食堂的不同区域隔开，多一分私密。"
+    },
+    {
+      "id": "c24-s0050",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "The only appreciation from other human beings that I got, was when I provided something of value to them, or when I impressed them with my success.",
+      "zh": "我从别人那里得到的唯一欣赏，就是我给他们提供了有价值的东西，或者我的成功让他们佩服的时候。",
+      "problem": "原文两个 when 从句是对称的（when I provided…, or when I impressed…），中文前半落成「就是＋我给他们提供了……」，后半却落成「……的时候」，一句里两个时间结构不对称，读到「或者」会以为换了话题。前一句「我的社交能力全是从那里面学来的」的「那里面」也指代含糊（指的是十二岁起自己挣钱这件事）。这段是白的自剖，句子一散，情绪就断。",
+      "suggestion": "我从别人那里得到的唯一欣赏，就是在我给他们提供了有价值的东西，或者用成功让他们佩服的时候。我的社交本事，也全是那几年练出来的。"
+    },
+    {
+      "id": "c24-s0078",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Den briefly stared at Gladias in surprise. His face almost immediately smoothed, as though remembering that it was not compatible with his self-image to be openly expressing any excitement or other unplanned emotion.",
+      "zh": "登惊讶地盯了格拉迪亚斯一眼，随即几乎立刻恢复了平静，仿佛想起公开流露兴奋或其他计划外的情绪，与他的自我形象不符。",
+      "problem": "三处磕绊：①「盯了……一眼」搭配不成立（盯是持续地看，瞬间的一下说「看了一眼」）；②「随即几乎立刻」两个同义副词叠用；③「仿佛想起＋二十来字的长主语＋与他的自我形象不符」把判断压在句尾，读者读到「不符」才知道「想起」的宾语是什么。",
+      "suggestion": "登有些意外地看了格拉迪亚斯一眼，几乎立刻又恢复了平静，仿佛这才想起：公开流露兴奋或其他计划外的情绪，与他的自我形象不符。"
+    },
+    {
+      "id": "c24-s0042",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "I just learned that Lily has been eating up Arctic propaganda for the last year… And less than a minute later, I learned that she ran away from home. And a minute after that, I learned that Seila now hates me",
+      "zh": "“我刚刚才知道，莉莉这一年一直在照单全收北极的宣传……不到一分钟，我又知道她离家出走了。再过一分钟，我知道塞拉现在恨我，不想跟我说话。”",
+      "problem": "原文三个 I learned 是同句式层层推进，中文用「知道」会让「我又知道」读成「我早就知道／我又懂了」，这一句式中文该用「得知」。另外「照单全收」带一次性收货的意味，与「这一年一直」相冲，说「全盘接受」才顺。",
+      "suggestion": "“我刚刚才得知，莉莉这一年来对北极的宣传全盘接受，而埃菲里昂勋爵的布道让她觉得自己被重视、被欣赏，比我给她的多得多。不到一分钟，我又得知她离家出走了。又过一分钟，我得知塞拉现在恨我，不想跟我说话。”"
+    },
+    {
+      "id": "c24-s0021",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "This was now his eighth day living entirely underground, inside the mountain pyramid at the south end of Pafogai Du… The new recommendations were for all \"important business\" to move to underground locations",
+      "zh": "这是他完全住在地下的第八天，地点是帕佛盖都南端的山体金字塔里。他刚到泽国不久，就被从原先的旅馆迁到了这里。新的建议要求所有“重要事务”都转到地下，而格拉迪亚斯作为事实上的昆高培顾问，当然够格。",
+      "problem": "「第八天，地点是……里」把书面语的「地点是」和方位短语「……里」套在一起，像在填表；「完全住在地下」是 entirely underground 的直搬；「建议要求」主谓不合（建议不能「要求」）；「被从原先的旅馆迁到了这里」拿「迁」说人也不自然。这是本章开场的环境交代，四句里有三处卡顿。",
+      "suggestion": "到今天，他住在地下已经整整八天，就住在帕佛盖都南端的山体金字塔里。他刚到泽国不久，就被安排从原先的旅馆搬到了这里。新出台的建议要求所有“重要事务”一律迁入地下，而格拉迪亚斯作为事实上的昆高培顾问，当然够格。"
+    },
+    {
+      "id": "c24-s0016",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "Then here's what I want you to do. Stay in touch with her.",
+      "zh": "“那我要你做的是这些。跟她保持联系。……”",
+      "problem": "「那我要你做的是这些」把 here's what I want you to do 的语序原样搬来，「是这些」收尾像清单的小标题，不像父亲在电话里交代事情的开头；后面几句都是短促的口语句，第一句却端着，语气不接。",
+      "suggestion": "“那接下来，我要你做这么几件事。跟她保持联系。主动找她，问问她最近怎么样。……”"
+    },
+    {
+      "id": "c24-s0007",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "anyone he could hug for emotional support was thousands of kilometers away",
+      "zh": "而这两件事同时压在他身上，能让他抱一抱、借点情感支撑的人却在几千公里之外，他绝对睡不着。",
+      "problem": "「借点情感支撑」是 emotional support 的名词直搬：「情感支撑」是心理学术语，中文叙述里不会说「借情感支撑」，只会说「讨点安慰」「找个人靠一靠」。这一句是排比的收尾，也是全章情绪的顶点，用语一学术就走空了。",
+      "suggestion": "而这两件事同时压在他身上，能让他抱一抱、讨点安慰的人却在几千公里之外——他绝对睡不着。"
+    },
+    {
+      "id": "c24-s0043",
+      "severity": "medium",
+      "type": "欧化",
+      "source": "What do the Arctics say that someone like her would find compelling?",
+      "zh": "“北极人说的那些话里，有什么是像她这样的人会觉得有说服力的？”",
+      "problem": "「有什么是像她这样的人会觉得有说服力的」是 what is it that… 的判断句套中文，读者得绕一层才明白是在问「哪些话」。白是埃尔菲昂那套说辞的实操者，问句该更直接。",
+      "suggestion": "“北极人说的那些话里，有哪些能让像她这样的人觉得有说服力？”"
+    },
+    {
+      "id": "c24-s0086",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "as well as connections to a whole bunch of Keepers that we're now in contact with, so you can better track the Arctics down",
+      "zh": "还有我们如今联系上的一大批掌则人的人脉，好让你们能更好地追踪北极人。",
+      "problem": "「掌则人的人脉」会被读成「掌则人自己的人脉关系网」，而原文说的是「我们与一批掌则人之间的联系，可以交给你们用」；中文里「人脉」是属于个人的东西，不能这样连着定语使用。登是在开条件，这句话是三条理由之一，含糊就等于没给。",
+      "suggestion": "还有——我们可以帮你们搭上最近联系上的一批掌则人，好让你们能更好地追踪北极人。"
+    },
+    {
+      "id": "c24-s0083",
+      "severity": "medium",
+      "type": "生硬",
+      "source": "If you get caught, a lot of trust between Veridia and Dzego is lost.",
+      "zh": "“如果你们被抓住，维里迪亚和泽国之间的信任会损失很多。……”",
+      "problem": "「信任会损失很多」动宾搭配不成立，中文说「大打折扣」「损失惨重」「荡然无存」。这里是登在替泽国权衡风险，动词一虚，后面的「我们就彻底分裂」也失去了分量。",
+      "suggestion": "“如果你们被抓住，维里迪亚和泽国之间的信任会大打折扣。那样我们就彻底分裂，北极人赢了。”"
+    },
+    {
+      "id": "c24-s0094",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "\"Yes?\"",
+      "zh": "“是啊？”",
+      "problem": "英文的 Yes? 是「对（怎么）」，是确认；中文写成「是啊？」会先被读成「是吗？（我可不信）」。紧接着泽的问句「已经渗透了吗？」说明他是没听懂才追问的，语气一乱，读者会以为登在反问、泽在怀疑，两人的立场就串了。",
+      "suggestion": "“是啊，怎么了？”"
+    },
+    {
+      "id": "c24-s0096",
+      "severity": "medium",
+      "type": "本土化",
+      "source": "\"Yes? That's what I've been trying to tell you all along!\"",
+      "zh": "“是啊？这一直就是我想告诉你们的啊！”",
+      "problem": "与 s0094 同一个 Yes?：这里是确认加无奈的「对呀！」，写成「是啊？」读者读成反问，跟后半句「这一直就是我想告诉你们的啊」的急躁拧着，收尾的这句吐槽落不了地。",
+      "suggestion": "“是啊，这一直就是我想告诉你们的啊！”"
+    },
+    {
+      "id": "c24-s0006",
+      "severity": "low",
+      "type": "生硬",
+      "source": "He could not go to sleep after Seila gave him that kind of vote of non-confidence",
+      "zh": "塞拉给了他那样一记不信任票，然后切断了联系，连让他道个歉的机会都不给——这之后，他也睡不着。",
+      "problem": "「一记」是打（一记耳光、一记重拳）的量词，配「票」不成立；中文说「投了他一张不信任票」。「给了他那样一记」还带着英文 that kind of 的绕，直接把动作写出来更有劲。",
+      "suggestion": "塞拉投了他一张不信任票，然后切断了联系，连让他道个歉的机会都不给——这之后，他也睡不着。"
+    },
+    {
+      "id": "c24-s0071",
+      "severity": "low",
+      "type": "欧化",
+      "source": "By the way, please sit down.",
+      "zh": "“顺便说，请坐。”",
+      "problem": "「顺便说」是 By the way 的直搬，中文口语引出下文用「对了」；而且「请坐」是一个请求，不是顺便补的一句题外话，用「顺便说」打头格外别扭。",
+      "suggestion": "“对了，请坐。”"
+    },
+    {
+      "id": "c24-s0059",
+      "severity": "low",
+      "type": "欧化",
+      "source": "If I was motivated by curiosity, I would probably have just directly asked you what's wrong",
+      "zh": "“如果我是被好奇驱动，我大概会直接问你出了什么事，而那只会惹你反感。”",
+      "problem": "「被好奇驱动」是 motivated by 的被动直搬，中文更常说「出于好奇」；白这一整段自剖里连着出现被动式，读起来就是译文腔。",
+      "suggestion": "“如果我是出于好奇，我大概会直接问你出了什么事，而那只会惹你反感。”"
+    }
+  ]
+}

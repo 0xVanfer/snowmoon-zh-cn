@@ -1,0 +1,44 @@
+{
+ "chapter": 31,
+ "lens": "consistency",
+ "reviewer": "wf-r4",
+ "overall": "本章在一致性上整体干净：全部专名（北林／维里迪亚／红郡／琉璃冠／塔尔杜尔／北岸／埃莱纳森林／萨祖都／大梅港／自由城／泽国／德鲁因／塔芬德尔／格拉迪亚斯／塞拉／扬／兹文／维尔／黛雅／登／伊查拉）与术语表逐条吻合，日期「3725年雨月2日」、章节标题、面板表头「来自／消息／时间」与第 15／20／23 章体例一致，数字用阿拉伯数字且数字与汉字间无空格，拉丁罗马字诗句「mi fu zo de tei ka ciu pin」按虚构语言原样保留（本章无 locked 段），全角标点、`<c>` 颜色与 `<e>` 标记逐段与原文标签完全对应。问题集中在术语层：正文把 defense company 写成「防卫公司」（全书作「防务公司」），以及 new_terms 里一条与词表冲突、一处人名笔误，均为可直接替换的小修。",
+ "issues": [
+  {
+   "id": "c31-s0077",
+   "severity": "medium",
+   "type": "术语不一致",
+   "source": "The fourth appeared to be an open public concert hosted in a parking lot. In the background was a giant factory building, on the side of which there was a prominently displayed logo of Ichara - one of the now famous Freetown defense companies.",
+   "zh": "第四张像是在停车场里办的一场露天公开演唱会。背景里是一座巨大的厂房，侧面醒目地挂着伊查拉的标志——这是自由城如今有名的防卫公司之一。",
+   "problem": "「defense company」在术语表里定为「防务公司」（源自第 22 章，note：自由城的私营防务企业），第 22／26／28／29 章正文一律用「防务公司」；本章 s0077、s0078 两处改写成「防卫公司」，与词表及全书不一致。更麻烦的是同章紧接着就有「自由城防卫队」（Freetown defense corps），原文里这是两个不同概念（私营防务企业 vs. 与昆高培合作的防卫组织），中文只差一个字后容易被读成同一家机构。此外本章 new_terms 里 Ichara 的 note 也写成「防卫公司」，该条已并入 glossary.json（docs/glossary.md 同名条目），错误写法会随词表扩散。",
+   "suggestion": "两处均改为「防务公司」：「……侧面醒目地挂着伊查拉的标志——这是自由城如今有名的防务公司之一。」「最后一张是扬本人和一个人的自拍，那人看着像是那家防务公司的经理之一。」同时把 new_terms 里 Ichara 的 note 由「自由城如今有名的防卫公司之一」改为「自由城如今有名的防务公司之一」，并同步修正 glossary.json／docs/glossary.md 中 Ichara 的 note。"
+  },
+  {
+   "id": "c31-newterm-freetown-defense-corps",
+   "severity": "medium",
+   "type": "术语不一致",
+   "source": "Freetown defense corps are reporting that the Arctic garrison in Redshire has tripled.",
+   "zh": "new_terms 条目：{\"en\": \"Freetown defense corps\", \"zh\": \"自由城防卫部队\", \"kind\": \"org\"}（同文件正文 s0059 作「自由城防卫队」）",
+   "problem": "同一份文件自相矛盾：正文 s0059 用「自由城防卫队」，与术语表 Freetown defense corps → 自由城防卫队 一致（第 23 章起沿用），术语表 aliases 也已把「自由城防卫部队」列为应替换的写法；但 new_terms 仍写「自由城防卫部队」。该 zh 值会被再次合并进词表并继续生成同名 alias，等于把已被否定的译名反复回灌。另外这条与 Su／supervirus／Ichara 一样，术语表里其实都已收录，属重复登记。",
+   "suggestion": "把 new_terms 中该条 zh 改为「自由城防卫队」，note 与词表统一为「愿意与昆高培合作的自由城防务组织」；若只需登记新词，这条可整条删除（术语表已有 Freetown defense corps）。"
+  },
+  {
+   "id": "c31-newterm-supervirus",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "...though if I could shut one of the things down, it would be the research on superviruses.",
+   "zh": "new_terms 条目：{\"en\": \"supervirus\", \"zh\": \"超级病毒\", \"note\": \"德尔因称北极帝国最该关停的研究项目\"}",
+   "problem": "人物名写成「德尔因」。全书与术语表统一是「德鲁因」（Deluin，第 12／14／15 章起沿用），本章正文 9 处也都是「德鲁因」，只有这条 note 是「德尔因」。该 note 已并入 glossary.json 与 docs/glossary.md，笔误名字随词表与文档扩散。",
+   "suggestion": "note 改为「德鲁因称北极帝国最该关停的研究项目」，并同步修正 glossary.json／docs/glossary.md 中 supervirus 条目的 note。"
+  },
+  {
+   "id": "c31-s0004",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "the staircase itself because it was being regularly plowed and salted by a drone that they could see about thirty meters further above them.",
+   "zh": "阶梯本身露着，则是因为有台无人机在定期清雪、撒盐，他们能看见那台无人机就在上方约30米处。",
+   "problem": "无人机用「台」作量词与全书惯例不一致：其余各章一律用「架」（「一架无人机」「七架无人机」「四架无人机」及「无人机已经有三架」等，共 20 余处，含第 15／20／29／30 章），本章是唯一用「台」的章节，且 s0004 一段内连用两次。同一器物在全书换量词，会让读者觉得像换了另一种东西。",
+   "suggestion": "改为「阶梯本身露着，则是因为有架无人机在定期清雪、撒盐，他们能看见那架无人机就在上方约30米处。」"
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "chapter": 29,
+ "lens": "consistency",
+ "reviewer": "wf-r4",
+ "overall": "本章一致性层面基本干净：专名（泽／穆／白／莱克托／加洛瓦／特尔波／登／瓦卡里亚／德鲁因／德尔瓦特／格拉迪亚斯／莫夫／昆高培）与地名（埃莱纳森林、埃尔迪尔、特尔滕、北岸、北林、塔尔杜尔岛）逐条与术语表及第 28、30、31 章对齐；新增术语（雪地无人机、海上无人机、警戒小队、固定陷阱、微观战术、原始权重、梯度下降、隐写信道、后方基地3号、北／中／南／海上集群）与合并后的术语表正字及 new_terms 完全一致，无「无人机机群」式元数据冲突；日期体例（3725年雪月29日／30日，与第 28 章 3724年霜期18日、第 31 章 3725年雨月2日接续）、数字与汉字间不加空格、拉丁词（ID、AI）两侧一个空格、全角标点、…… 与 —— 全部合规，我的脚本逐段扫描未发现半角标点或空格违例；两句泽国语（s0041「Fi le gei fa」、s0079「Dze go ba fau gie」）均按术语表 conlang 条目（Dze go ba fau gie、MU GU GEI FA）保留罗马字未误译，且与第 19 章「dze go ba fau gie」、第 26 章「Fi le gei tau fa」的既有做法一致；本章无 device-view 面板，两处系统消息（s0101–0103）与德鲁因来信（s0109–0113）作普通段落处理，与第 30 章同类文本体例一致。逐条核对全部 60 余处对话色标，除已知的源结构缺陷外均与全书人物色一致（泽347、穆173、白27、莱克托160、加洛瓦93、登53、特尔波267、瓦卡里亚293、翡翠67）。剩余问题为 1 条元数据归属错误与 3 条低度不一致。另说明：s0024／s0028 加洛瓦与登的说话色标互换（简报段加洛瓦=53.33、登=93.33，与战斗段 s0058／s0079 及全书「登=53.33」相反）属 sources/work/segments/chapter-29.src.json 的源结构缺陷，译文 <c st> 与源文逐字一致，reviews/chapter-29.applied.json 已记录转 sources 侧修正，本轮不重复计入 issues。",
+ "issues": [
+  {
+   "id": "c29-newterms-gradient-descent",
+   "severity": "medium",
+   "type": "术语不一致",
+   "source": "c29-s0131 Bai: \"Send us the raw weights from the Arctic drones' AI model.\"；c29-s0133 Bai: \"...if we have the raw weights, we can run simulations in parallel and optimize attacks that will trick them.\"；c29-s0135 Zei（色标 346.67）: \"It's actually much easier than running simulations in parallel. You use gradient descent.\"（c29-s0135–0137 三段的色标均为泽）",
+   "zh": "本章 new_terms 条目：{\"en\": \"gradient descent\", \"zh\": \"梯度下降\", \"kind\": \"term\", \"note\": \"白提出的对抗攻击优化方法\"}",
+   "problem": "元数据归属与正文矛盾：正文里提出「并行跑模拟优化攻击」的是白（s0131／s0133），而「梯度下降」这一招是泽在 s0135–0137 说出来的（三段色标均为泽的 346.67，白在 s0138 才回「哇」）。该 note 已随本章合并进 pipeline/glossary.json 的 gradient descent 条（from: chapter-29.zh），后续章节若照抄注文，会把方法提出者写成白，形成新的跨章不一致。",
+   "suggestion": "把 new_terms 该条的 note 改为「泽在第 29 章提出的对抗攻击优化方法（白先提出并行跑模拟优化）」，并请主进程在合并稿 pipeline/glossary.json 的 gradient descent 条同步订正。"
+  },
+  {
+   "id": "c29-s0063",
+   "severity": "low",
+   "type": "误译",
+   "source": "\"Not good, Zei thought - the Arctic drone fleet was larger. They would have to make up for it with better micro-tactics.\"（They＝维里迪亚一方）",
+   "zh": "不妙，泽想——北极的无人机机队规模更大。他们只能靠更好的微观战术来弥补。",
+   "problem": "人称指代错位：前一句的主语是「北极的无人机机队」，紧接着的「他们」最自然的回指对象是北极人，读者会读成「规模更大的北极一方要靠微观战术来弥补」，与原文「（我们）维里迪亚只能靠更好的微观战术弥补规模劣势」相反。泽的内心独白里指本方用第三人称「他们」，也与全章「我们」的立场不一致。",
+   "suggestion": "改为「不妙，泽想——北极的无人机机队规模更大。我们只能靠更好的微观战术来弥补。」"
+  },
+  {
+   "id": "c29-s0026",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "\"I'm leading Group Center, our task is to cross the forest directly east. We are expecting to be fighting the primary Arctic drone group.\"",
+   "zh": "“我带中集群，任务是直接向东穿过森林。预计会撞上北极的主力无人机群。……”",
+   "problem": "「无人机群」是本章孤例：术语表正字为 drone fleet →「无人机机队」（aliases 已把异名「无人机机群」规范化为「无人机机队」），第 28、30 章及本章 s0063、s0064、s0065、s0071、s0073、s0081 共 8 处也都作「无人机机队」或「集群」。同一章里中集群任务简报用「无人机群」、其余叙述用「机队」，读者会以为是两种不同编制。",
+   "suggestion": "改为「预计会撞上北极的主力无人机机队。」并把 drone group →「无人机机队」补进本章 new_terms，锁死后续章节用法。"
+  },
+  {
+   "id": "c29-s0001",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "\"Chapter 29\"（role: title）",
+   "zh": "第29章",
+   "problem": "章题数字体例与全书不齐：第 1–28 章的 title 片段统一用汉字（「第二十八章」），本章到第 32 章改成阿拉伯数字；渲染脚本 pipeline/build_markdown.py 用自己的 cn_num() 生成标题，实际输出是「# 第二十九章」，即本章片段里的「第29章」既与已定稿的 28 章不一致，也与自己的渲染结果不一致（属未被使用的死数据，故影响限于文件层）。",
+   "suggestion": "把本章 title 片段改为「第二十九章」，与第 1–28 章及 book/chapters/chapter-29.md 的实际渲染保持一致（第 30–32 章同样处理）；若项目决定章题改用阿拉伯数字，则应回改第 1–28 章与渲染脚本，不能只留 29–32 章为孤例。"
+  }
+ ]
+}

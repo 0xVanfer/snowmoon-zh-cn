@@ -1,0 +1,80 @@
+{
+  "chapter": 10,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第10章译文忠实度整体很高：逐段对照未发现整句漏译、说话人张冠李戴，也没有否定、数量、因果关系被搞反的情况；对话着色、<e> 强调点、器物面板（From/Message/Time、39500）、编号体系（四号/六号/九号/十一号/十八号/二十号）与全部数字（3%、12%、90%、40/50/90分贝、75+25分钟、4个月后/6个月后）都与原文一一对应，前后两次会议的人数也对得上。问题集中在“程度与态度”的细微偏移：discouraging 被译成“阻止”、influence 被译成“决定”、encouraging 被译成“逼得”、I'm glad we are 被译成“我倒不反对”，另外有一处惯用语指称偏移（Good game → 好棋）和两处小漏字/漏词。按 fidelity 视角看完全可读，不需要整段重写，按条微调即可。",
+  "issues": [
+    {
+      "id": "c10-s0082",
+      "severity": "medium",
+      "type": "误译",
+      "source": "I don't think we should be discouraging Veridians completely from engaging with such a central part of our human nature.",
+      "zh": "我不认为我们该彻底阻止维里迪亚人去接触人性中如此核心的一部分。",
+      "problem": "discouraging 是“不鼓励／劝退”，不是“阻止”。原文这里格拉迪亚斯反对的是“用轻一点的税把创作者往远离暴力题材的方向推”，译成“彻底阻止……去接触”之后，论点被换成了“反对禁止接触”，等于替人物立了一个比原文更强、也更容易被驳倒的主张；同一段后半句“steer the public media away from violence”（让公共媒体避开暴力）也只是“引导”这一档力度，前后本应一致。",
+      "suggestion": "我不认为我们该让维里迪亚人完全回避人性中如此核心的一部分。"
+    },
+    {
+      "id": "c10-s0169",
+      "severity": "medium",
+      "type": "误译",
+      "source": "\"Good game\", Zei said, not yet with total sincerity, but with more sincerity than he had in any game where he had lost to Bai before.",
+      "zh": "“好棋。”泽说。语气还不算完全真心，但已经比以往任何一盘输给白之后都要真诚。",
+      "problem": "Good game 是对整盘棋的评价（“这盘下得好”），中文“好棋”默认指“一着好棋／这步棋好”。泽刚点下认输按钮就说“好棋”，读者会以为他在夸白的某一步，指称从“整局”落到“单着”，原文那种“勉强、但已比以往任何一盘都真诚地承认对手整盘下得好”的意思就丢了。",
+      "suggestion": "“这盘下得好。”泽说。语气还不算完全真心，但已经比以往任何一盘输给白之后都要真诚。"
+    },
+    {
+      "id": "c10-s0022",
+      "severity": "low",
+      "type": "误译",
+      "source": "Why us? I'm glad we are, but like half the United Cities are closer to Redshire than we are, they should be worrying more!",
+      "zh": "为什么是我们？我倒不反对，可联合城邦里差不多有一半离红郡比我们近，他们才该更担心！",
+      "problem": "I'm glad we are 是“（自由城也认真起来了）我很高兴”，是对本城态度的正面肯定；“我倒不反对”把它降成中性容忍，扬的立场从“乐见”变成“无所谓地接受”，人物语气被抹平了一档。",
+      "suggestion": "为什么是我们？我们这么上心，我倒挺高兴，可联合城邦里差不多有一半离红郡比我们近，他们才该更担心！"
+    },
+    {
+      "id": "c10-s0046",
+      "severity": "low",
+      "type": "误译",
+      "source": "And the rubrics influence how much of the secret sauce we keep to ourselves.",
+      "zh": "而评则会决定我们把多少看家本领留给自己。",
+      "problem": "influence 是“影响／左右”，不是“决定”。格拉迪亚斯是在向塞拉解释评则的分量，原文特意留了余地（评则起作用，但不是它拍板）；译成“决定”把评则的作用说死，也抹掉了“我们自己还留着裁量空间”这层意思。",
+      "suggestion": "而评则会左右我们把多少看家本领留给自己。"
+    },
+    {
+      "id": "c10-s0033",
+      "severity": "low",
+      "type": "误译",
+      "source": "In the chat I mentioned how I thought the rubric was encouraging people to be too bland to not offend anyone.",
+      "zh": "我在群里说过，我觉得这条评则逼得大家一味平淡，只为不冒犯任何人。",
+      "problem": "encouraging 是“诱导／鼓励（大家往平淡上靠）”，主语是评则的激励方向；“逼得”是强迫。原文的意思是评则的激励把创作者主动推向平淡，译文变成评则强制创作者平淡，与后文“想推一把把这点改掉”（改的是激励）也不是同一件事。",
+      "suggestion": "我在群里说过，我觉得这条评则是在把大家往一味平淡上引，好谁也别冒犯。"
+    },
+    {
+      "id": "c10-s0024",
+      "severity": "low",
+      "type": "漏译",
+      "source": "Remember, the government here is constitutionally banned from collecting more than the basic land tax and some rent from its natural resource holdings.",
+      "zh": "别忘了，这里的政府在宪法上被禁止征收基础土地税和自然资源租金之外的任何税。",
+      "problem": "原文的合法财源是两项：基础土地税，以及“从自有自然资源资产上收取的部分租金”（some rent from its natural resource holdings）。译文把第二项压成“自然资源租金”（等于全部租金），又用“任何税”把它一并算成税，some 与 holdings 两个限定都丢了，宪法禁令的边界被说宽。",
+      "suggestion": "别忘了，按宪法，这里的政府只能收基础土地税，再加上从自有自然资源资产上收的一点租金，不能多收。"
+    },
+    {
+      "id": "c10-s0116",
+      "severity": "low",
+      "type": "漏译",
+      "source": "Eighteen and Nine watched silently as Eighteen did his scan, and two more Keepers arrived and quietly joined them.",
+      "zh": "十八做扫描时，九默默看着。又有两个掌则人到了，悄悄站到他们身边。",
+      "problem": "原文点名“Eighteen and Nine watched silently”，译文只留了九，把“十八和”漏掉了；后句“悄悄站到他们身边”的“他们”也因此少了一个明确在场的人。原文这里自己有点重复（十八边扫边看），但漏译是可以避免的。",
+      "suggestion": "十八和九默默看着扫描，又有两个掌则人到了，悄悄站到他们身边。"
+    },
+    {
+      "id": "c10-s0127",
+      "severity": "low",
+      "type": "漏译",
+      "source": "My hand device caught it too with the nonlinear junction detector, but I may well have missed it if the drone did not tell me where to look.",
+      "zh": "我的手终端也用非线性结检测器捕捉到了，可要是无人机没告诉我该往哪儿看，我很可能就漏掉了。",
+      "problem": "“手终端”漏了“持”字（hand device 的定译是“手持终端”，全书其余九十余处均作“手持终端”）。读者会当成另一种设备，或直接读磕；这是漏字，不是可选的简称。",
+      "suggestion": "我的手持终端也用非线性结检测器捕捉到了，可要是无人机没告诉我该往哪儿看，我很可能就漏掉了。"
+    }
+  ]
+}

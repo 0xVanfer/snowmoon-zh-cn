@@ -1,0 +1,98 @@
+{
+  "chapter": 30,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "整体忠实度良好：对白密集的技术段落（s0026～s0032 的对抗攻击流程、s0038～s0042 的迭代过程、s0077 之后的战果数字）基本逐句对得上，数量、因果与说话人色彩标签均无错乱，未发现漏译整句或张冠李戴。主要问题集中在两类：一是把原文的军事语汇按治理术语误译，最典型的是 s0044 的 sentries 被译成术语表里的「监审官」；二是若干修饰性成分被压缩或加码，如 s0053 的 queries to the simulator、s0068 的 in a giant font、s0093 的 completely、s0082/s0097 的 some/over。建议按条目修一轮，即可达到可发布水准。",
+  "issues": [
+    {
+      "id": "c30-s0044",
+      "severity": "high",
+      "type": "误译",
+      "source": "if I can see it, the sentries might be able to as well",
+      "zh": "如果我看得到，监审官大概也看得到",
+      "problem": "sentries 在这里是北极一方的军事岗哨／警戒人员，指可能监看模拟平台流量的对手；译文却用了术语表 Sentinel 的固定译名「监审官」——那是维里迪亚掌舵会里负责审计企业的角色。读者会以为是维里迪亚的审计员在盯着泽他们，人物阵营直接搞反，也与上一句德鲁因（北极叛徒）的立场冲突。",
+      "suggestion": "如果我看得到，他们的哨兵大概也看得到。"
+    },
+    {
+      "id": "c30-s0053",
+      "severity": "medium",
+      "type": "误译",
+      "source": "to learn how to construct queries to the simulator that would better match real-world situations",
+      "zh": "从而学会怎样构造更贴近真实战场情况的模拟器查询",
+      "problem": "to the simulator 是 construct queries 的间接宾语（「向模拟器发出的查询」），译文把它压成了「模拟器查询」这一偏正结构，中文最自然的读法是动词性的「查询模拟器」。同时 that would better match real-world situations 的语义落点被挪到了「构造」上，原意是让查询结果更贴合实战。",
+      "suggestion": "从而学会怎样构造向模拟器发出的查询，让结果更贴近真实战场情况。"
+    },
+    {
+      "id": "c30-s0068",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "each paper containing many colorful and squiggly patterns - and in a giant font, the word \"DOG\".",
+      "zh": "每张纸上都有许多彩色、弯弯曲曲的图案——而在正中，用硕大的字体印着一个词：狗。",
+      "problem": "原文只说这个「DOG」是用 giant font（巨大字号）印的，并没有说它在版面中央；「在正中」是凭空加进去的位置信息，反过来削弱了原文的着眼点（字号之大）。",
+      "suggestion": "每张纸上都有许多彩色、弯弯曲曲的图案——还有一个硕大字体印出的词：狗。"
+    },
+    {
+      "id": "c30-s0093",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "Over the next longhour she managed to completely surround the remaining Arctic drone fleet",
+      "zh": "接下来一个长时里，她成功把残余的北极无人机机队彻底包围",
+      "problem": "completely surround（完成合围、彻底围住）的分量被「彻底包围」保住了，但牺牲了原文的完成体意味——「接下来一个长时里」在中文里读起来像整个长时都处在包围动作之中，而后半句「并在日出后差不多整整一个长时的时候，与特尔波最北端的侧翼会合」又给出确切时点，两句叠在一起时间线读不通。建议把完成、达成的意味显化。",
+      "suggestion": "接下来一个长时里，她把残余的北极无人机机队彻底围住，正好在日出后差不多一个长时的那一刻，与特尔波最北端的侧翼会合。"
+    },
+    {
+      "id": "c30-s0082",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "My next message will contain exact coordinates of some of our units on the southern flank, and recommended weak points to attack through.",
+      "zh": "我下一条消息会给出我们南翼部分部队的精确坐标，以及建议的突破口。",
+      "problem": "「几点建议的突破口」被并成「建议的突破口」，单数的限定丢失，读起来像只有唯一一个突破口。原文的 weak points 是复数、recommended 是修饰它的，应把数量和「建议」两层都留住。",
+      "suggestion": "我下一条消息会给出我们南翼部分部队的精确坐标，以及建议的几个可攻击的薄弱点。"
+    },
+    {
+      "id": "c30-s0097",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "For the first time in over fourteen longhours, he went to sleep.",
+      "zh": "14个长时以来，他第一次睡了过去。",
+      "problem": "over（超过）被丢掉，变成恰好 14 个长时；这是本章结尾的收束句，数字精度被改变。同章 s0093 的「一个长时」也丢掉了 over，两处宜一并处理。",
+      "suggestion": "整整14个长时以来，他第一次睡了过去。"
+    },
+    {
+      "id": "c30-s0004",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "he had given the recommendation that all groups do a slow retreat",
+      "zh": "他建议各集群缓慢后撤",
+      "problem": "all groups（四路作战集群：北／中／南／海上，见第 29 章）被泛化成「各集群」，读者看不出指的是哪几支部队，也失去了与后文 s0063～s0066 四路陆续报告「已贴装完毕」的呼应。",
+      "suggestion": "他建议四路集群全部缓慢后撤，砍倒树木拖慢雪地无人机，沿途布设陷阱，首要目标就是把战事尽量拖长。"
+    },
+    {
+      "id": "c30-s0032",
+      "severity": "low",
+      "type": "漏译",
+      "source": "you will need I don't know how many minutes to actually print the attack patterns on the sides of the drones",
+      "zh": "把攻击图案真正打印到无人机侧面",
+      "problem": "sides 是复数（机体各面），「无人机侧面」在中文里默认是一侧；后文 s0062 与 s0068 都强调「各个面」「四面都糊着大纸」，这里丢复数会与下文对不上。",
+      "suggestion": "把攻击图案真正打印到无人机各个面上"
+    },
+    {
+      "id": "c30-s0074",
+      "severity": "low",
+      "type": "增译",
+      "source": "As soon as he felt he had celebrated enough, Zei turned to a visual view of the statistic that really mattered: the casualty ratios. They had already dropped to six to one.",
+      "zh": "觉得自己庆祝得差不多了，泽就调出那个真正要紧的统计数字：伤亡比。它已经降到6比1。……而他们很快就会适应，泽心里清楚。",
+      "problem": "本段并未交代这个统计视图是「在一个长时后」才出现，译文「在一个长时后，伤亡比……」把时间推进写实了；同段后半的「而他们很快就会适应」又把原文紧随其后的 And they would adapt soon 挪到了段末，与「但他们已经摆出应急防御阵位」的对比关系变弱。两处都是原文没有的确定性／时序信息。",
+      "suggestion": "觉得庆祝得差不多了，泽就调出那个真正要紧的统计数字：伤亡比。它已经降到6比1。北极军队到现在还没能适应，只是摆出了应急防御阵位，每一小队无人机都绕成环形结阵，好争取时间。可他们很快就会适应——泽心里清楚。"
+    },
+    {
+      "id": "c30-s0026",
+      "severity": "low",
+      "type": "增译",
+      "source": "start with one pattern, run it inside the simulator, have our drone slowly approach the target and see how long it takes for the target to detect it.",
+      "zh": "先取一个图案，放进模拟器里跑，让我们的无人机慢慢靠近目标，看目标需要多久才能发现它。",
+      "problem": "原文说我们把图案跑进模拟器、再让无人机逼近目标；译文「先取一个图案，放进模拟器里跑」把图案说成了跑的对象，「把图案放进模拟器」在中文里是个有歧义的搭配（图案本身不运行）。整句流程的施动关系有点乱，且「需要多久才能发现它」偏口语、与同段末「衡量我们藏得好不好」的术语气不搭。",
+      "suggestion": "先拿一个图案，在模拟器里跑一遍：让我们的无人机慢慢靠近目标，看目标要多久才发现它。"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "chapter": 8,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 8 章的忠实度整体很高：170 个片段与原文一一对应，颜色标记与说话人归属全部对得上（西尔卡／埃菲里昂／主席／帕普利／安库斯／格拉迪亚斯无一处张冠李戴），数字（34125、第94百分位、二十位参议员、十比十、59分、75、59063 等）、日期地名、评则／掌则人／宣谕使等专名与术语表一致，没有发现漏译整句或因果、否定颠倒的硬伤。问题集中在细部：一处作者有意为之的双关（主持人接话的 Order）在中文里没有了、一处指代被译成了会引起误解的“两边”、一处分数线被放宽，另有三四处定语归属、否定强度和限定词上的细微走样。这些都不到影响通读的程度，按下表就地改完即可定稿。",
+  "issues": [
+    {
+      "id": "c08-s0047",
+      "severity": "medium",
+      "type": "误译",
+      "source": "Sylka: \"The Order members are chosen by a sophisticated-\" / Moderator: \"Order, please. Ephelion has the floor.\"",
+      "zh": "西尔卡：“掌舵会成员是由一套精密的——” / 主持人：“请注意秩序。轮到埃菲里昂发言了。”",
+      "problem": "原文是一处有意为之的双关：西尔卡刚说出 The Order members，主持人立刻用 Order 打断她，这个词既指“遵守议事秩序”，又回扣刚被打断的“掌舵会”，机锋和接话的因果关系都在这个重复里。中文只译出“秩序”这一层，读者看到的是主持人毫无来由地突然喊秩序，跟上一句完全脱钩，笑点和“主持人硬掐话头”的味道都没有了。",
+      "suggestion": "主持人：“掌舵会的事，稍后再议；先请注意秩序。轮到埃菲里昂发言了。”（用“掌舵会”回扣上一句，保住双关；若不愿加字，至少写成“秩序——请注意秩序。”）"
+    },
+    {
+      "id": "c08-s0078",
+      "severity": "low",
+      "type": "误译",
+      "source": "Isn't this why citizens' assemblies and broad listen reports exist, and why a Keeper group has months to listen to both before it makes its decision on a rubric?",
+      "zh": "公民大会和广泛聆听报告不就是为了这个吗？掌则人小组在就一条评则做决定之前，不都有几个月时间去听两边的意见？",
+      "problem": "both 指的是前半句点名的两种机制（公民大会、广泛聆听报告）；中文“听两边的意见”默认指“争执双方各自的意见”，把“听取这两类意见来源”读成了“听取对立两方”，读者会以为掌则人裁决前要开一轮正反辩论。",
+      "suggestion": "公民大会和广泛聆听报告不就是为了这个吗？掌则人小组在就一条评则做决定之前，不都有几个月时间听取这两方面的意见吗？"
+    },
+    {
+      "id": "c08-s0141",
+      "severity": "low",
+      "type": "误译",
+      "source": "If you get above seventy-five on your next civics test",
+      "zh": "下次公民课测验你要是考到75分以上",
+      "problem": "above seventy-five 不含 75，而中文“75分以上”习惯上把 75 分算在内，维尔许诺的门槛被放宽了一分（与第 6 章“20人以上”同类问题）。",
+      "suggestion": "下次公民课测验你要是考过75分"
+    },
+    {
+      "id": "c08-s0043",
+      "severity": "low",
+      "type": "误译",
+      "source": "these 'softer' traits that people are targeting, they're chosen by committees of priests - selected not for competence, but for echoing whatever ideology strikes people's fancy at the time.",
+      "zh": "人们盯着的这些‘软性’特质，是由一群祭司式的委员会挑出来的——挑人看的不是能力，而是谁附和当时流行的意识形态。",
+      "problem": "selected 与前面的 chosen 并列，被挑的对象是这些“特质／指标”，意思是这类指标不是照“测不测得准”挑的，而是照“合不合当时口味”挑的；译文“挑人看的不是能力”把宾语换成了人，变成委员会选委员只看意识形态，埃菲里昂“软指标本身就是意识形态产物”的指控被挪了靶子。",
+      "suggestion": "人们盯着的这些‘软性’特质，是由一群祭司式的委员会挑出来的——挑的标准不是它管不管用，而是它合不合当时流行的意识形态。"
+    },
+    {
+      "id": "c08-s0068",
+      "severity": "low",
+      "type": "误译",
+      "source": "That was when I realized just how much value Silverchat's openness was bringing to me that Silverchat itself would never capture.",
+      "zh": "那一刻我才意识到，银聊的开放给我带来的价值，远超过银聊自己能拿到的。",
+      "problem": "原文 would never capture 是全盘否定：这部分价值银聊自己根本拿不到；译文改成“远超过……能拿到的”这种比较级，等于承认银聊也拿到了其中一部分、只是少些，恰好削弱了这段话要论证的“开放的外部性”。",
+      "suggestion": "那一刻我才意识到，银聊的开放带给我的价值有多大——那部分价值，银聊自己永远拿不到。"
+    },
+    {
+      "id": "c08-s0136",
+      "severity": "low",
+      "type": "误译",
+      "source": "We just have to find some way to engage with the material that you can relate to.",
+      "zh": "我们能帮你。只要找到一种你能产生共鸣的方式来学这些内容。",
+      "problem": "that you can relate to 修饰的是 the material（得是你能搭上关系的内容），译文把“你能产生共鸣”挂到了“方式”上，变成“找一种合你胃口的教学法”，与原文“从她能有共鸣的内容入手”不是一回事。",
+      "suggestion": "我们能帮你。只要找到一种办法，让你能跟这些内容接上关系。"
+    },
+    {
+      "id": "c08-s0140",
+      "severity": "low",
+      "type": "漏译",
+      "source": "I only went down my path to become an Acolyte because I saw how the Steering incentives were helping to open up the online world so I could participate and write code for it.",
+      "zh": "我当初走上见习官这条路，就是因为看见掌舵会的激励在帮着把网络世界打开，让我能参与进去、给它写代码。",
+      "problem": "only 是限定词——他走上这条路“仅仅因为”那一件事；译文“就是因为”只剩因果，听起来像原因之一，格拉迪亚斯对莉莉说“你也会有属于你的那一刻”这层现身说法的说服力被冲淡。",
+      "suggestion": "我当初之所以走上见习官这条路，仅仅是因为看见掌舵会的激励在帮着把网络世界打开，让我能参与进去、给它写代码。"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": 26,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 26 章的忠实度整体很高：202 个片段逐条对得上，没有漏段，没有整句增译，颜色标记与说话人（粉＝泽、黄＝格拉迪亚斯、蓝＝登、橙＝白、紫＝韦尔多、绿＝穆、黄褐＝凯隆、蓝紫＝塞尔沃特）与原文完全一致，对话归属没有一处张冠李戴；数字与时间关系（74000／7度、110万、6%×50＝3、最少三十天、1公里、两百米、二十／三十／五十嘀嗒、又过十分钟／三十分钟／五十分钟）全部准确，法律条文（第十四条／第二十一条根本法）与术语（大梅港、北林、北岸、隔热斗篷、海上无人机、诉讼资格、共同家长、帕佛盖都）与术语表及第 23、25 章一致，泽国语罗马字与「Veridia ba fau gie」均按原文保留，未误译任何 locked 文本。挑出的问题只有 5 处，其中 1 处中等（漏掉「操纵」这一关键词，使那句格言失去主语与「操纵／说服」的分界），其余 4 处都是可改可不改的轻微语义漂移（否定强度被削弱、程度增译、动作强度被压低、以及把整体态度写成「都」与上一段矛盾）。按下面各条就地小改即可，不需要重译。",
+  "issues": [
+    {
+      "id": "c26-s0082",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "\"What was your line, Zei? Manipulating someone to do something by just showing them how it's in their interest, is just convincing?\"",
+      "zh": "“你那句话怎么说的来着，泽？只要让人看清一件事符合自己的利益，从而促使他去做，这只能算说服？”",
+      "problem": "原文的主语是 Manipulating someone…：把「靠让人看清利害来驱使人行动」这件事叫作操纵，整句追问的是「这算操纵，还是只算说服」。译文把「操纵」整个丢掉，只剩「这只能算说服？」——「这」没有明确指代，读者看不出被议论的对象是什么，句子的力度也从「界定操纵」塌成一句没头没尾的反问；紧接着韦尔多拿埃菲里昂／西尔卡对「隐瞒隐性代价」的分歧来回答，那场争论正是在分辨「摆出好处」与「操纵」的界线，前一句丢了「操纵」，后一句的落点就悬空了。",
+      "suggestion": "“你那句话怎么说的来着，泽？如果操纵一个人，靠的只是让他看清这件事符合自己的利益，那这还算操纵吗，还是只能算说服？”"
+    },
+    {
+      "id": "c26-s0046",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"This was only a small part of the many interesting things in Meldan. Even if a person lives for years in Meldan, they will not know the city completely.\"",
+      "zh": "“这只是梅尔丹众多有趣之处的一小部分。哪怕一个人在梅尔丹住上许多年，也未必能把这座城了解透。”",
+      "problem": "they will not know the city completely 是确定断言（住多少年也了解不全），译文「也未必能……了解透」把它降成「有可能了解得透」，从笃定变成留有余地，与前半句「只是一小部分」的确定语气不一致。这句是格拉迪亚斯翻译练习的收尾，两句话应当是同样的断言口吻。",
+      "suggestion": "“这只是梅尔丹众多有趣之处的一小部分。哪怕一个人在梅尔丹住上许多年，也了解不透这座城。”"
+    },
+    {
+      "id": "c26-s0129",
+      "severity": "low",
+      "type": "增译",
+      "source": "Arctic surveillance was more powerful than he had thought, he realized.",
+      "zh": "他意识到，北极人的侦察能力比他想的要强得多。",
+      "problem": "原文只做比较：比他原先以为的更强（more powerful than he had thought），没有任何程度量词；译文「强得多」凭空加了「得多」，把一次基于四架无人机被击落的即时判断抬成「明显强出一大截」的结论。这是原文没有的强化。",
+      "suggestion": "他意识到，北极人的侦察能力比他原先预想的要强。"
+    },
+    {
+      "id": "c26-s0131",
+      "severity": "low",
+      "type": "误译",
+      "source": "Zei screamed with despair. The evasion tricks that they had learned from their previous missions were not helping.",
+      "zh": "泽绝望地喊了一声。他们此前几次任务里学来的规避技巧都不管用。",
+      "problem": "screamed 是失声尖叫／放声大吼，译文「喊了一声」把动作降为一次普通发声，读者感受不到他刚损失四架无人机、连主方案都失效时的崩溃程度。下一句是「任务要失败了——也许昆高培的信誉也会跟着一起完」，情绪强度本该更高，这一压会让人物反应与处境不匹配。",
+      "suggestion": "泽绝望地尖叫起来。他们此前几次任务里学来的规避技巧都不管用。"
+    },
+    {
+      "id": "c26-s0201",
+      "severity": "low",
+      "type": "增译",
+      "source": "\"Understood\", Gladias said softly. If this sample of judges was that hostile to his pitch, the sample of judges that he would get if he launched a real case would almost certainly be quite hostile too.",
+      "zh": "“明白了”，格拉迪亚斯轻声说。如果这一批抽到的法官都对他的方案这么敌视，那他真立案后随机抽到的那批法官，几乎肯定也会相当敌视。他得换个策略。",
+      "problem": "上一段刚写明「另外四名法官里有三人」跟着塞尔沃特点头，而剩下的泽温对格拉迪亚斯是同情的（只是不敢开口）。原文 this sample of judges was that hostile 说的是这一组人的整体态度，译文加「都」变成「每一个法官都敌视」，与上一段的泽温直接冲突，也让格拉迪亚斯接下来的推论显得比原文更绝对。",
+      "suggestion": "“明白了”，格拉迪亚斯轻声说。如果这一批法官对他的方案如此敌视，那他真立案后随机抽到的那批法官，几乎肯定也会相当敌视。他得换个策略。"
+    }
+  ]
+}

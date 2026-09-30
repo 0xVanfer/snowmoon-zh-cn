@@ -1,0 +1,71 @@
+{
+ "chapter": 10,
+ "lens": "consistency",
+ "reviewer": "wf-r4",
+ "overall": "本章一致性整体较好：人名（扬、乌塔库、塞拉、格拉迪亚斯、德尔瓦特、白、泽、芬、登、穆）、地名（自由城、联合城邦、梅尔丹、维里迪亚、帕佛盖都、泽国、哈普顿、红郡、德文维尔、德普莱西、翁达克、因伯、贝尔帕基、大梅港、北林）、日期体例（3724年风月24日）、场景分隔（地点＋全角逗号＋国名）、面板（来自／消息／时间、个人提醒、「39500」、→）、机构与技术术语（掌舵会、掌则人、评则、第4档、掌舵税、图谱资助、巨型企业、手持终端、隐私袍、颈带、隔信箔、非线性结检测器、基础土地税、美学税、蓝鲸、银聊、翡翠、民本棋、滑翔机、飞船、载符飞船、符记、干预回合、地牢、全国赛、基于哈希的签名、形式化验证、熵）逐条与术语表及相邻章节吻合，评则条文与第1章逐字相同，锁定虚构语言（Veridia ba ‘fun’ gie／Dze go ba fau gie）保留罗马字未误译，标签结构经 validate_translation.py 校验通过。问题集中在少数术语与体例：一处词典级术语偏离（岩层），一处术语漏字（手终端），掌则人编号称呼同章混用，另有三处百分比空格、一处制度名、两处罗马字台词引号体例与一条 new_terms 登记与术语表冲突。",
+ "issues": [
+  {
+   "id": "c10-s0164",
+   "severity": "high",
+   "type": "术语不一致",
+   "source": "Suddenly, as the spaceship hit a rock formation and was in the process of reflecting, gliders from Bai hit it.",
+   "zh": "突然，那艘飞船撞上岩层、正在反射的时候，白的滑翔机撞了上来。",
+   "problem": "rock formation 是术语表收录的民本棋术语，规范译名「石阵」（pipeline/glossary.json：rock formation → 石阵，note：棋场上的岩石结构，可与滑翔机互动、提供负熵；docs/glossary.md 同）。第4章首现即登记为「石阵」，第4、7、12、14章正文一律作「石阵」（第4章「滑翔机飞出去，径直撞上附近的石阵」；第7章「由滑翔机用附近的石阵实时搭建」；第12章「他试过的每一种滑翔机、每一种可能的石阵形状」；第14章同）。本章译成「岩层」，是全书唯一一处在民本棋语境里给 rock formation 换名的段落；同段/相邻段又照常用「飞船」「滑翔机」「符记」等民本棋术语，读者会以为「岩层」是与石阵不同的另一种地形，破坏棋场术语体系。",
+   "suggestion": "突然，那艘飞船撞上石阵、正在反射的时候，白的滑翔机撞了上来。"
+  },
+  {
+   "id": "c10-s0127",
+   "severity": "medium",
+   "type": "术语不一致",
+   "source": "My hand device caught it too with the nonlinear junction detector, but I may well have missed it if the drone did not tell me where to look.",
+   "zh": "“无人机就是靠这个发现的——红外光在摄像头镜片上反射。我的手终端也用非线性结检测器捕捉到了，可要是无人机没告诉我该往哪儿看，我很可能就漏掉了。”",
+   "problem": "hand device 术语表作「手持终端」，本章其余 11 段（c10-s0004、s0058、s0076、s0092、s0093、s0115、s0119、s0129、s0131、s0160、s0163）全部正确写作「手持终端」，仅此一处漏掉「持」字写成「手终端」。既与唯一事实源不一致，也是明显错字，后续若按写法比对或抽取术语会被当成另一种设备。",
+   "suggestion": "“无人机就是靠这个发现的——红外光在摄像头镜片上反射。我的手持终端也用非线性结检测器捕捉到了，可要是无人机没告诉我该往哪儿看，我很可能就漏掉了。”（把「我的手终端」改为「我的手持终端」）"
+  },
+  {
+   "id": "c10-s0056",
+   "severity": "medium",
+   "type": "术语不一致",
+   "source": "\"I'm number Twenty in this circle, a third-year. We have two second-years - though Eleven has not arrived yet - ...\"; 另见 \"I'm Six.\" / \"And I'm Nine.\" / \"I'm Eighteen.\" / \"Zero heard his number\" / \"Zero continued\"",
+   "zh": "自称一律带「号」：c10-s0054「你一定就是四号」、c10-s0108「我是十八号」、c10-s0109「我是六号」、c10-s0110「我是九号」；叙事里却时带时不带：c10-s0056「不过十一还没到」（同场景 c10-s0088 又作「十一号插话道」）、c10-s0129「十八号把窃听装置掰成两半」（紧接的 c10-s0130 作「十八带着大家」）、c10-s0137「我跟那边的零聊过几次」「零听到自己的编号」（c10-s0153 又作「零号接着说」）、c10-s0111「十八想了片刻」、c10-s0113「格拉迪亚斯和九都站了起来」、c10-s0116「十八做扫描时，九默默看着」、c10-s0119「十八拿着手持终端」、c10-s0121「十八答道」、c10-s0123「九走上前」、c10-s0144「九插话」、c10-s0149「十八又举起手」",
+   "problem": "同一个人在同一场景里出现两种称呼：本章叙事部分「十八／九／零／十一」与「十八号／九号／零号／十一号」混用，最直接的矛盾是 c10-s0056 与 s0088（同一场会议，一处「十一」一处「十一号」）、c10-s0129 与 s0130（紧邻两段的「十八号」与「十八」）、c10-s0137/0138 与 s0153（同一场发言，前文两处「零」，后文「零号」）。术语表及文档版术语表把这类编号统一列为带「号」的形式（docs/glossary.md：number Four｜四号｜掌则人圈内的编号称呼；同类：二十号、十一号、一号、六号、九号、十八号、零号；glossary.json：Eleven→十一号、Six→六号、Nine→九号、Zero→零号、Eighteen→十八号），而本章自称也一律带「号」（「我是十八号」「我是六号」「我是九号」「你一定就是四号」）。因此至少叙事里的简称应当统一，不该在同一场景里两种写法并存。此外本章 new_terms 又把 Eleven/Six/Nine/Zero/Eighteen 登记成不带「号」的「十一／六／九／零／十八」，与术语表登记（带「号」）以及本章正文的自称写法同时冲突。",
+   "suggestion": "统一为带「号」的称呼（与术语表一致）：c10-s0056「不过十一号还没到」；c10-s0111「十八号想了片刻」；c10-s0113「格拉迪亚斯和九号都站了起来」；c10-s0115「十八号把手持终端切到另一种模式」；c10-s0116「十八号做扫描时，九号默默看着」；c10-s0119「十八号拿着手持终端扑到那个位置」；c10-s0121「十八号答道」；c10-s0123「九号走上前」；c10-s0130「十八号带着大家」；c10-s0137「我跟那边的零号聊过几次」；c10-s0138「零号听到自己的编号」；c10-s0144「九号插话」；c10-s0149「十八号又举起手」；同时把 new_terms 的 Eleven、Six、Nine、Zero、Eighteen 各条 zh 分别改为「十一号」「六号」「九号」「零号」「十八号」。"
+  },
+  {
+   "id": "c10-s0023",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "Redshire chooses twelve percent of the seats in Devanvil's parliament ... donating three percent of their revenues to defense ... ninety percent of charging stations across Freetown",
+   "zh": "「有12% 的席位是红郡选的」（c10-s0023）、「把营收的3% 捐给国防」「自由城90% 的充电站」（c10-s0026）",
+   "problem": "「%」与其后的汉字之间多了一个半角空格，违反体例规范第3节「数字与汉字之间不加空格」（规范示例即「31%」「约2公里」）。全书其余各章的百分比一律紧贴汉字：第1章「就当20%吧」「有20%到30%的概率」「冒那10%的风险」，第3章「6%的人口」。pipeline/normalize_zh.py 的 T3 只处理「数字＋汉字」与「数字＋%」，消不掉「%＋汉字」之间的空格，因此这三处不会被脚本自动修好。",
+   "suggestion": "去掉「%」后的空格：「有12%的席位是红郡选的」「把营收的3%捐给国防」「自由城90%的充电站」。"
+  },
+  {
+   "id": "c10-s0087",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "Can we get Emerald to do a broad listen report on what people have been saying about Dreadknot on Bluewhale or Silverchat in the past year?",
+   "zh": "能让翡翠做一份大范围的聆听报告吗？",
+   "problem": "broad listen report 在本项目里是维里迪亚的固定制度名：第8章「公民大会和广泛聆听报告不就是为了这个吗？」、第11章「看看我们一个月前做的那份广泛聆听报告」，术语表也收有 broad listen reports → 广泛聆听报告（from chapter-08.zh）。本章唯一一处却译成「大范围的聆听报告」，使同一制度在第8、10、11章出现两个名字；本章 new_terms 只登记了 listening report → 聆听报告，漏掉 broad 这一定语，异体写法有被当成新术语合并的风险。",
+   "suggestion": "能让翡翠做一份广泛聆听报告吗？听听过去一年人们在蓝鲸或银聊上是怎么说恐结的。"
+  },
+  {
+   "id": "c10-s0214",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Dze go ba fau gie\"</c>, Mu added. / <c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Dze go ba fau gie.\"</c>",
+   "zh": "c10-s0214：「<c …>\"Dze go ba fau gie\"</c>，穆补充道。」；c10-s0215：「<c …>\"Dze go ba fau gie.\"</c>」",
+   "problem": "罗马字本身保留不译是对的，但引号与句末标点沿用了原文的半角直引号「\" \"」，违反体例规范第3节「一律使用全角标点……引号用“ ”」。同一章同类泽国语台词 c10-s0034 用的是全角「“Veridia ba ‘fun’ gie！”」，第2章「“Dze go ba fau gie。”芬和泽齐声说」、第12、26、29 章的同类罗马字台词也都用全角引号，本章这两句成为同章内自相矛盾的例外（第7章有同样遗留写法，建议一并统一）。",
+   "suggestion": "c10-s0214 改为「“Dze go ba fau gie”，穆补充道。」；c10-s0215 改为「“Dze go ba fau gie。”」（罗马字照旧，只把引号与句末句点改为全角，与第2章一致）。"
+  },
+  {
+   "id": "c10-new_terms-symbol",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "symbol（本章正文：I had a symbol along the path ... both of his remaining symbols）",
+   "zh": "new_terms 条目：{ \"en\": \"symbol\", \"zh\": \"符\", \"kind\": \"term\", \"note\": \"民本棋得分标志物，与第 7 章一致\" }",
+   "problem": "术语表把 symbol 定为「符记」（note：民本棋中玩家的点阵标记，复制散落棋盘可提供视野与落子点，from chapter-04.zh；第4、7、12、14章正文一律作「符记」）。本章正文也全部正确作「符记」（c10-s0166「我在那条路线上留了一个符记」、c10-s0167「把他西南角仅剩的两个符记也撕碎了」），只有 new_terms 登记成单字「符」。若按此合并，术语表内同一英文术语会出现「符记」与「符」两个中文名，而正文从未使用「符」；第7章复核已报过同一问题，属重复登记。",
+   "suggestion": "把该条改为 { \"en\": \"symbol\", \"zh\": \"符记\", \"kind\": \"term\", \"note\": \"民本棋中玩家的点阵标记，复制散落棋盘可提供视野与落子点\" }（与术语表及本章正文一致）。"
+  }
+ ]
+}

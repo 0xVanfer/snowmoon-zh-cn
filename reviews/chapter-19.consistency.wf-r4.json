@@ -1,0 +1,71 @@
+{
+ "chapter": 19,
+ "lens": "consistency",
+ "reviewer": "wf-r4",
+ "overall": "第19章一致性整体过关，没有会绊住阅读的问题：195 段与原文一一对应、顺序一致，`<c>` 颜色标签、`<f>`、`<sub>`、`<e>`、`<br/>` 与原文逐条完全相同（黄 93.33＝格拉迪亚斯、粉 346.66＝泽、绿 160＝图书管理员、蓝 240＝机器人）；日期体例正确（3724 Grapetime 15 → 3724年葡期15日，火月10日与第14章「3724 Firemoon 10」对得上）；人名、地名、机构与术语（登／白／贡／德鲁因／昆高培／最高评议会／萨祖都／帕佛盖都／红郡／维里迪亚／齐普币／嘀嗒／长时／民本棋／山体金字塔／去中心化大学／班孙培／掌舵会／密码学网络）全部落在术语表上，本章 new_terms（伦苏街、美丽植物美食广场、帕佛盖都大图书馆、北极暗影行动、数字档案节点、纠删码、二级混淆、日志式文件系统）与术语表现有条目逐字一致；面板表头体例与第3、11章完全一致（Air→空气、Devices→设备、Attested ✓→已证 ✓、Unknown, increased risk!→未知，风险升高！，数值 994／30.1／1015／31.2／21／25 原样保留）；两处 locked 泽国语口号与全部罗马字（含「sen hu ?」「cau tie zen ✓」及 s0194 的 dze go ba fau gie）按原文原样保留，无一处虚构语言被误译。共 7 条问题，2 medium、5 low，集中在三类：面板与术语未与全书统一（未本地化的英文面板串、象形符号、隐写编码、食堂／餐厅）、数字与单位体例、标点体例；按下面逐条小改即可定稿，无需重译。",
+ "issues": [
+  {
+   "id": "c19-s0023-panel",
+   "severity": "medium",
+   "type": "本土化",
+   "source": "\"ten min\"（泽的手表面板单元格，前后为 \"cau tie zen ✓\"、\"25\"、\"sen hu ?\"）",
+   "zh": "ten min",
+   "problem": "本章同一面板的英文表头全部已本地化（Air→空气、Devices→设备、Attested ✓→已证 ✓、Unknown, increased risk!→未知，风险升高！），第22章同类面板也照译（9 min→9分钟、5.65 km→5.65公里），全书正文不留英文界面串；此处是本章唯一残留的英文。它夹在泽国语罗马字单元格（cau tie zen、mo fan lai）之间，读者会误以为它也是没译出的虚构语言，而它其实只是「十分钟」的界面显示。",
+   "suggestion": "10分钟"
+  },
+  {
+   "id": "c19-s0171",
+   "severity": "medium",
+   "type": "术语不一致",
+   "source": "The robot. A/B testing the new proposed hieroglyphs for Dzegoban.",
+   "zh": "那台机器人。给泽国语拟定的新象形字做 A/B测试。",
+   "problem": "术语表 hieroglyph → 象形符号（note「第九版为单个词根恢复的图形符号」，来自第14章），第14章译文亦作「象形符号」；本章改作「象形字」，与术语表（唯一事实源）不一致。同一概念在第4章还作过「象形文字」，全书写法已有三套，本章应回到术语表定名。",
+   "suggestion": "那台机器人。给泽国语拟定的新象形符号做 A/B测试。"
+  },
+  {
+   "id": "c19-s0179",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "Each of those pieces, in turn, was a steganographic encoding: they used language models to find bits to flip …",
+   "zh": "每一块又是一层隐写术编码：他们用语言模型找出可以翻转的比特……",
+   "problem": "术语表把 steganographic encoding 定为「隐写编码」、steganography 定为「隐写术」，note 明写「steganographic encoding → 隐写编码」；本章 new_terms 登记的也是「隐写编码」。第15章同一处已按复核意见由「隐写术编码」改为「隐写编码」，本章多出的「术」字成了全书唯一的写法。",
+   "suggestion": "每一块又是一层隐写编码：他们用语言模型找出可以翻转的比特……"
+  },
+  {
+   "id": "c19-s0069-co2",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "\"Huh, you're measuring CO2 and PM2.5 on there as well?\" / \"some other source bringing that extra CO2 in\" / \"that the CO2 numbers are so poor here\"",
+   "zh": "“咦，你这表上还测 CO2和 PM2.5？” / “把这些额外的 CO2送了进来” / “这里的 CO2数字这么差”",
+   "problem": "体例规范要求「含字母的混合 token」（如 PM2.5）与汉字之间加一个半角空格，只有数字与汉字之间才不加；CO2 属含字母的混合 token，这三处却紧贴后面的汉字（和／送／数）。pipeline/normalize_zh.py 的 T3 规则只处理「汉字＋CO2」这一方向，反向的「CO2＋汉字」不会自动修（对本章干跑该脚本，这三处原样不变），所以需要手工统一。",
+   "suggestion": "“咦，你这表上还测 CO2 和 PM2.5？”；“把这些额外的 CO2 送了进来”；“这里的 CO2 数字这么差”"
+  },
+  {
+   "id": "c19-s0004-numbers",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "rather than thirty meters below ground / about five meters tall / go inwards for three to six meters / Wow, only eight minutes!",
+   "zh": "而不是地下三十米 / 约五米高 / 大约三到六米 / “哇，只要八分钟！”",
+   "problem": "体例规范要求年份、数量、度量用阿拉伯数字（示例「约2公里」）。本章其余数量都照此写（12公斤、400齐普币、60 GB、10.7 GB、18岁、80%），只有米／分钟这几处用汉字，章内不统一；同一句式的说法在第22章作「地下10米」（c22-s0009：10 meters underground → 地下10米），第15章复核也按此把「五」改成阿拉伯数字。",
+   "suggestion": "s0004 改作「而不是地下30米」；s0116 改作「约5米高」（同句「约一米」可不动）；s0117 改作「大约3到6米」；s0135 改作「哇，只要8分钟！」"
+  },
+  {
+   "id": "c19-s0004-cafeteria",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "Gladias and Zei were sitting at a table in a cafeteria, deep inside the mountain pryamid. / They exited the cafeteria / \"'mo fan' is eating room, so something to do with the cafeteria.\"",
+   "zh": "格拉迪亚斯和泽坐在山体金字塔深处一间餐厅的桌旁。 / 两人出了餐厅 / “‘mo fan’是吃饭的房间，所以跟餐厅有关。”",
+   "problem": "同一间「山体金字塔深处的地下餐厅」，第23章一律作「食堂」（c23-s0004「格拉迪亚斯、白和芬坐在山体金字塔深处一间食堂的桌旁」，c23-s0005～c23-s0101 共 5 处），第24章 c24-s0027 同词亦作「食堂」；本章作「餐厅」，读者会把同一间屋子当成两个地方。注意本章 s0161 的 cafeteria 指萨祖都那家「美丽植物美食广场」，那一处保留「餐厅」即可。",
+   "suggestion": "山体金字塔这处改作「食堂」：s0004「格拉迪亚斯和泽坐在山体金字塔深处一间食堂的桌旁」；s0108「两人出了食堂，在隧道织成的网络里往前走」；s0039「‘mo fan’是吃饭的房间，所以跟食堂有关」。"
+  },
+  {
+   "id": "c19-s0144-title",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "Gladias found a book about Dzego architecture, titled \"zui fia pai dan\".",
+   "zh": "格拉迪亚斯找到一本讲泽国建筑的书，书名是“zui fia pai dan”。",
+   "problem": "中文里书名用书名号《》（体例规范标点一项列出书名号；第10章书目即作《大典》），引号「“…”」表示引语，用它标书名不合体例。罗马字书名本身按原样保留是对的，只需换标点。",
+   "suggestion": "格拉迪亚斯找到一本讲泽国建筑的书，书名是《zui fia pai dan》。"
+  }
+ ]
+}

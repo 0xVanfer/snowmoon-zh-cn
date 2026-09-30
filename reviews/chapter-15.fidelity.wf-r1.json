@@ -1,0 +1,53 @@
+{
+  "chapter": 15,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 15 章的忠实度整体很高：218 个片段与原文一一对应，颜色标记、<e> 强调与 <br/> 换行零差异，说话人归属（扬／乌塔库／格拉迪亚斯／莫夫／泽／德鲁因／苏／登）无一处张冠李戴，数字（15,500、另外三十人、两名参议员、2倍／1000倍、分桶区间 0～199／20～219／40～239／200～239／220～239／240～259）、时间与货币单位（长时、嘀嗒、齐普币）以及掌舵会／掌则人／密钥分配组／混淆电路／隐写等术语都与术语表对得上，也没有整句漏译或因果、否定颠倒的硬伤。问题都在细部：一处 this morning 被漏掉且时刻写法与第 20 章同句式不一致，一处技术限定（“只能由混淆电路解密”）被译成了纯条件句，另有两三处猜测量词、措辞和术语词形上的细微走样。改掉即可定稿，完全不影响通读。",
+  "issues": [
+    {
+      "id": "c15-s0011",
+      "severity": "medium",
+      "type": "漏译",
+      "source": "At 15,500 this morning, a large number of Arctic drones and aircraft landed all across the major cities and military bases in Redshire, timed simultaneously with a massive land invasion from the north...",
+      "zh": "今天15,500，大批北极无人机与飞行器在红郡各大城市和军事基地降落，同一时刻，北方发动大规模地面入侵……",
+      "problem": "this morning 整个没译，而且时刻只写成“今天15,500”，既没有时间后缀，也没有沿用全书已有的写法——第 20 章同一句式 At 5,250 this morning 译作“今天早上5,250时”。句子紧接着就是“大批……”，中文读者第一眼容易把 15,500 读成人数或架数而不是时刻，这是播报里最要命的一句，读错就等于读错了入侵规模。",
+      "suggestion": "今天早上15,500时，大批北极无人机与飞行器在红郡各大城市和军事基地降落；同一时刻，北方发动大规模地面入侵，数千辆载具从前所未见的地下隧道里涌出。"
+    },
+    {
+      "id": "c15-s0064",
+      "severity": "low",
+      "type": "漏译",
+      "source": "Once that's done, the information of which keys are and are not valid is only decryptable by the obfuscated circuit under the conditions that it specifies.",
+      "zh": "这一步做完之后，哪些密钥有效、哪些无效，只有在混淆电路指定的条件下才能解密出来。",
+      "problem": "原文的限定是“只有混淆电路（本身）能解密”，解密主体被锁死在电路上；译文只剩“只有在……条件下才能解密”，读者完全可以理解成“条件满足后谁都能解”，正是这段论证要立的机制前提被说弱了一半（下一句“连我自己也不知道”虽然补了结论，但机制本身已经走样）。",
+      "suggestion": "这一步做完之后，哪些密钥有效、哪些无效，只有混淆电路能在它指定的条件下解密出来。"
+    },
+    {
+      "id": "c15-s0143",
+      "severity": "low",
+      "type": "增译",
+      "source": "Optimizing which bits to flip is really smart but it's maybe a 2x gain, finding a better data stream might be a 1000x gain.",
+      "zh": "优化翻哪些位确实很聪明，但顶多也就2倍收益；找到一个更好的数据流，可能是1000倍收益。",
+      "problem": "maybe a 2x gain 是留了余地的猜测（“也许 2 倍”），译文“顶多也就2倍收益”把它改成了原文没有的上限断言，和后半句“可能是1000倍收益”的对称猜测口吻也对不上了——德鲁因是在估量优先级，不是在下结论。",
+      "suggestion": "优化翻哪些位确实很聪明，但也许只有2倍收益；找到一个更好的数据流，却可能是1000倍收益。"
+    },
+    {
+      "id": "c15-s0193",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"I can think of a few answers, but I'm not sure if any of them are what you had in mind.\"",
+      "zh": "“我能想出几个答案，但不确定有没有你想听的那个。”",
+      "problem": "what you had in mind 是“你心里想的那个（答案）”，泽说的是不确定自己想到的是不是登要的那个；译成“你想听的那个”把标准从“登预设的答案”换成了“登的偏好”，登并不是在等一句顺耳的话，这层张力和谦逊都被带偏了。",
+      "suggestion": "“我能想出几个答案，但不确定里面有没有你心里想的那个。”"
+    },
+    {
+      "id": "c15-s0152",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "Zei felt more optimistic about how much of an improvement a better steganographic encoding would be, but decided not to press the point further.",
+      "zh": "泽对更好的隐写术编码能带来多大改进，心里更乐观了些，但还是决定不再纠缠这一点。",
+      "problem": "术语表（正是由本章 new_terms 合并而来）把 steganographic encoding 定为“隐写编码”，“隐写术”对应的英文是 steganography；本章自己新增的条目也写的是“隐写编码”，正文这里却写成了“隐写术编码”，同一术语在同一章内两种词形（第 19 章正文亦有同样写法，可一并统一）。",
+      "suggestion": "泽对更好的隐写编码能带来多大改进，心里更乐观了些，但还是决定不再纠缠这一点。"
+    }
+  ]
+}

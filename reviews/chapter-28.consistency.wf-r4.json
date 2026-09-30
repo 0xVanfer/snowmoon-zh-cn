@@ -1,0 +1,53 @@
+{
+  "chapter": 28,
+  "lens": "consistency",
+  "reviewer": "wf-r4",
+  "overall": "本章专名与术语整体干净：莱克托／韦尔多／泽、登、白、穆／昆高培／塔芬德尔／北岸／梅尔丹／红郡、霜期日期体例、全角标点、数字与汉字间不加空格、拉丁词间一个空格、<c>/<e> 标记与颜色值均与原文及术语表逐条对齐，未发现误译的 locked 虚构语言或面板文案（本章无 <f>、无 device-view）。问题集中在元数据层：译文文件 new_terms 把 drone fleet 写成已被术语表列为别名的「无人机机群」，与正文及术语表正字「无人机机队」冲突；另有「评议员」头衔被绕开、同一英文短语 Helisport copters 与第 29 章译法不一致等轻微项。总体可读、可用于交付，只需统一这处术语。",
+  "issues": [
+    {
+      "id": "c28-newterms-drone-fleet",
+      "severity": "medium",
+      "type": "术语不一致",
+      "source": "glossary.json: {\"en\": \"drone fleet\", \"zh\": \"无人机机队\", \"kind\": \"term\", \"from\": \"chapter-28.zh\"}；同文件 aliases 另有 \"无人机机群\": \"无人机机队\"。原文 c28-s0034 \"take control of the Veridian drone fleet\"、c28-s0039 \"pilot all your drone fleets\"",
+      "zh": "new_terms 条目：{\"en\": \"drone fleet\", \"zh\": \"无人机机群\", \"kind\": \"term\", \"note\": \"维里迪亚军方的无人机作战集群\"}；正文 c28-s0034「亲自接管维里迪亚的无人机机队」、c28-s0039「操控你们所有无人机机队」",
+      "problem": "术语表的唯一正字是「无人机机队」（第 29、30 章正文亦用「机队」），且术语表 aliases 明确把「无人机机群」列为应被规范化掉的旧写法。译文正文写对了，但同一文件的 new_terms 仍写「机群」，与事实源及本书其它章节冲突；若被主进程合并进术语表，会重新制造已被清理的异名。",
+      "suggestion": "把 new_terms 中该条的 zh 改为「无人机机队」，与正文和术语表保持一致（note 可保留「维里迪亚军方的无人机作战集群」）。"
+    },
+    {
+      "id": "c28-s0031",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"Dozens of us. I'm one of the High Council members. Zei and Mu over there personally commanded the operation with me.\"",
+      "zh": "“几十个。我是最高评议会成员之一。那边的泽和穆两位，是跟我一起亲自指挥这次行动的人。”",
+      "problem": "术语表为 High Council 成员这一头衔立了专条：councilor →「评议员」，注「昆高培最高评议会成员的头衔（登）」，第 10 章即译作「昆高培的评议员登」。登在本章自报身份时改用描述性的「最高评议会成员之一」，与全书已固定的头衔不一致（读者会以为这是另一类身份）。",
+      "suggestion": "改为「我是评议员之一。那边的泽和穆两位，是跟我一起亲自指挥这次行动的人。」或「我是最高评议会的评议员之一。……」"
+    },
+    {
+      "id": "c28-s0036",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"They know how many new drones we can produce, what that would take, what you can do with Helisport copters if you had to turn <e>those</e> into drones.\"（第 29 章 c29-s0066 同一短语 \"A large fleet of Helisport copters and delivery copters\"）",
+      "zh": "“要是非得把<e>那些</e>翔球用的小型飞行器改成无人机，又能做到什么程度。”／第 29 章作「一大群翔球小型飞行器」",
+      "problem": "同一个英文短语 Helisport copters 在两章里译法不同：本章「翔球用的小型飞行器」，第 29 章「翔球小型飞行器」。术语表只收了 copter →「小型飞行器」、personal copter →「个人飞行器」，没有 Helisport copter 条目，于是两章各译各的，属于跨章术语漂移。",
+      "suggestion": "统一为「翔球小型飞行器」（与相邻的第 29 章一致），并把 Helisport copters →「翔球小型飞行器」补进术语表，锁死后续章节用法。"
+    },
+    {
+      "id": "c28-s0018",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "\"I'm Den, this is Zei, Mu and Bai. Welcome.\"",
+      "zh": "“我是登，这位是泽、穆、白。欢迎。”",
+      "problem": "人称／数不一致：指示代词「这位」是单数，后面却并列三个人（泽、穆、白），与原文 this is + 三人复指不匹配，也与全书其它章节介绍多人时的复指体例不齐。",
+      "suggestion": "改为「我是登，这几位是泽、穆、白。欢迎。」"
+    },
+    {
+      "id": "c28-glossary-lektor",
+      "severity": "low",
+      "type": "术语不一致",
+      "source": "glossary.json: {\"en\": \"Lektor\", \"zh\": \"莱克托\", \"kind\": \"person\", \"note\": \"昆高培行动负责人\"}；本章 c28-s0016 起莱克托自报为维里迪亚将军，c28-s0096 \"So Lektor is the head general now.\"，第 29、30 章他指挥维里迪亚军方",
+      "zh": "“我是莱克托。”……“于是莱克托现在是最高将领了。”",
+      "problem": "术语表把莱克托注为「昆高培行动负责人」，但他在全书首次登场（本章）就是维里迪亚的将军：登向他介绍时说明昆高培是新人，他随后经闭门会议接任维里迪亚最高将领（术语表 head general 条自己也记为「莱克托经闭门会议接任此位」）。人物设定与术语表 note 自相矛盾，后续章节若按注文处理会把维里迪亚军方一把手写成昆高培成员。",
+      "suggestion": "把术语表 Lektor 的 note 改为「维里迪亚将军；第28章闭门会议后接任最高将领，与昆高培合作」，与 head general 条保持一致。"
+    }
+  ]
+}

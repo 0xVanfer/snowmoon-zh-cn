@@ -1,0 +1,71 @@
+{
+  "chapter": 18,
+  "lens": "fidelity",
+  "reviewer": "wf-r1",
+  "overall": "第 18 章的忠实度整体很好。135 个片段逐条对得上，颜色标记与说话人归属（泽／白／芬／送货人，含 0107 的「她」＝白）全部正确，数字与时间关系无一出错（96.7%、三十分之一、约三十个白盒、又重复五次、四十分钟＋六十分钟＝一个长时、256 个词根、五个词根＝百分之二、百分之五／百分之二点五、八次改进），五处 locked 泽国语罗马字（招牌箴言、诗句、入住面板）与原文完全一致，没有漏段、没有整句增译，也没有因果／否定／时态搞反。问题集中在个别词的词义和一处比较级上：最重的是把 impressed 译成「惊讶」，其次是 motivate 译成带贬义的「鼓动」、carve it out of a pre-existing mountain 译成「把一座现成的山挖出来」。按下面 7 条就地小改即可定稿，无需重译。",
+  "issues": [
+    {
+      "id": "c18-s0044",
+      "severity": "medium",
+      "type": "误译",
+      "source": "\"Maybe you're right we should be impressed. It <e>is</e> the largest one of these in all of Dzego.\"",
+      "zh": "“也许你说得对，我们该惊讶一下。它<e>确实</e>是全泽国这类建筑里最大的一座。”",
+      "problem": "impressed 是「佩服／赞叹」，泽此前一直淡化这座金字塔（上一句还在说「其实我们是把一座现成的山……挖出来的」），被格拉迪亚斯用「还是很了不起！」顶回去后才让步承认「也许你说得对，这确实值得赞叹」。译成「我们该惊讶一下」把赞叹换成了意外／吃惊，泽这句让步的语气和上下文的机锋都偏了：中文读者会以为他们在讨论某个令人意外的事实，而不是在承认建筑值得称奇。",
+      "suggestion": "“也许你说得对，是该惊叹一下。它<e>确实</e>是全泽国这类建筑里最大的一座。”"
+    },
+    {
+      "id": "c18-s0004",
+      "severity": "low",
+      "type": "误译",
+      "source": "Gladias exited the air harbor, stepping through a sealed opening that opened immediately into a large black car.",
+      "zh": "格拉迪亚斯走出空港，穿过一道密封的出口，出口一开，外面就是一辆黑色大轿车。",
+      "problem": "opened immediately into a large black car 说的是这道密封出口「直接通进」那辆黑色大轿车的车厢（全书同一意象：第 9 章「出口直通一辆长方形黑色汽车的内部」、第 12 章「门那边是一辆黑色轿车的内部」）。译成「外面就是一辆黑色大轿车」变成了「他走到外面，外面停着一辆车」，两步变三步，也丢掉了密封出口「不必暴露在外」的安保要点。",
+      "suggestion": "格拉迪亚斯走出空港，穿过一道密封的出口，门一开，直通一辆黑色大轿车的车厢。"
+    },
+    {
+      "id": "c18-s0039",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"Heh, everyone says that. Actually we carved it out of a pre-existing mountain.\"",
+      "zh": "“嘿，人人都这么说。其实我们是把一座现成的山挖出来的。”",
+      "problem": "carve A out of B 是「从 B 里凿出 A」，挖的对象是金字塔而不是山。中文「把一座现成的山挖出来」字面是「把整座山挖出来、搬出来」，读者容易理解成他们挖走了一座山，而不是在山体里开凿出这座建筑；「挖」也不如「凿」贴合 carve 的雕刻义。",
+      "suggestion": "“嘿，人人都这么说。其实这座金字塔是我们从一座现成的山里凿出来的。”"
+    },
+    {
+      "id": "c18-s0122",
+      "severity": "low",
+      "type": "误译",
+      "source": "\"First, we A/B test many different versions of it. We motivate different people to try different things, and report back on their experiences.\"",
+      "zh": "“首先，我们拿许多不同的版本做 A/B 测试。我们鼓动不同的人去试不同的方案，再把各自的体验反馈回来。”",
+      "problem": "motivate 是中性的「激励、动员」，芬这里是正面介绍班孙培怎么让公众参与；「鼓动」在中文里带贬义（煽动、怂恿，如「鼓动闹事」），读起来像在忽悠人去做试验，与整段的赞赏口吻冲突。",
+      "suggestion": "“首先，我们拿许多不同的版本做 A/B 测试。我们鼓励不同的人去试不同的方案，再把各自的体验反馈回来。”"
+    },
+    {
+      "id": "c18-s0124",
+      "severity": "low",
+      "type": "误译",
+      "source": "Anyone who disagrees with some part of it almost always knows someone who likes it more, and can at least hear their perspective.",
+      "zh": "对其中某一部分不满的人，几乎总能找到一个更喜欢它的人，至少也能听听对方的看法。",
+      "problem": "两处走偏：①disagrees with 是「有异议、不认同」，译成「不满」把它变成了情绪；②knows someone who likes it more 是「本来就认识一个更喜欢它的人」，靠的是各自的社会关系网，译成「总能找到一个」变成了主动去搜寻，芬想说的「分歧双方原本就互为熟人、所以听得进对方」这层意思被冲淡。",
+      "suggestion": "对其中某一部分有异议的人，几乎总认识某个更喜欢它的人，至少也能听听对方的看法。"
+    },
+    {
+      "id": "c18-s0130",
+      "severity": "low",
+      "type": "漏译",
+      "source": "\"Have you seen how many more people are wearing and having conversations through neck bands now? Or wearing privacy robes? Or going between places in black cars? Or buying products online, through the physical-delivery mixnets, instead of going to stores.\"",
+      "zh": "“你们看见了吗，现在有多少人戴颈带、用颈带讲话？多少人穿隐私袍？多少人坐黑色轿车来往？多少人在网上下单，走实物投递混网，不再去实体店。”",
+      "problem": "原文四问都是 how many more（比以前多了多少人），比较级是这段话的论点所在（下一段才说「三天前这些都还没有发生」）。译文一律作「有多少人」，比较级全部丢掉，芬「变化之大之快」的说服力被削弱，四个排比也退化成普通问句。",
+      "suggestion": "“你们看见了吗，现在多了多少人戴颈带、用颈带讲话？多了多少人穿隐私袍？多了多少人坐黑色轿车来往？多了多少人在网上下单、走实物投递混网，不再去实体店。”"
+    },
+    {
+      "id": "c18-s0131",
+      "severity": "low",
+      "type": "漏译",
+      "source": "\"None of that was happening three days ago. Instead, the Bansunpei just released its new privacy and security recommendations, through the channel where all the people who follow them were expecting news about Dzegoban version nine.\"",
+      "zh": "“三天前，这些都还不存在。班孙培只是把它新的隐私与安全建议，从关注者等着泽国语第九版消息的那个渠道发了出去。”",
+      "problem": "①None of that was happening 说的是这些事当时都还没发生，译文「还不存在」把行为说成了事物；②句首 Instead 承接上一段「把第九版搁置」，是「不是推第九版，而是转而发布隐私建议」的对照，译文整句丢掉，逻辑转折只剩一个轻飘飘的「只是」。",
+      "suggestion": "“三天前，这些都还没有发生。班孙培转而做的，只是把它新的隐私与安全建议，从关注者等着泽国语第九版消息的那个渠道发了出去。”"
+    }
+  ]
+}

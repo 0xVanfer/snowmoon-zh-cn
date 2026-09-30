@@ -1,0 +1,62 @@
+{
+ "chapter": 18,
+ "lens": "consistency",
+ "reviewer": "wf-r4",
+ "overall": "本章一致性总体过关，且是干净利落的一章：人名（格拉迪亚斯／泽／白／芬／塞拉）、地名（帕佛盖都／泽国／维里迪亚／自由城／红郡／檀凯街／津戈街／宰贡街／十七街／零街）、术语（空港／黑色轿车／仿真窗／车厢／混网／实物投递混网／手持终端／算力盒／山体金字塔／颈带／隐私袍／绿色圆圈／手表／大堂餐厅／长时／词根／泽国语第九版／班孙培／蓝鲸通讯／智力分／情商分／协调分／协调训练／正和／零和／不良均衡／托盘）与术语表及全书逐条吻合；编号与专名体例正确（第十八章、3724年果月18日、帕佛盖都，泽国、檀凯街1565号、256个泽国语词根、约三十个、五次，数字与汉字间无空格，拉丁词与汉字间一个空格）；颜色标签、<e> 着重、<br/> 与所有标记与原文逐条同构，全章脚本扫描无一例半角标点、单破折号、三点省略号或全角空格违例；5 条 locked 虚构语言片段（s0078–s0081、s0097）与原文逐字节一致，非 locked 的罗马字（MIN KUI／GUI SAU／hun fe bin jin zo de jan li gi／gie fe kiu kai ci bin hu／面板里的 sen hen zi li die fe 100、zo lia kin、man dun li jie hu、cau tie zen ci fan zi li 448）全部原样保留，无一处被误译成中文。问题集中在三类：一是数字体例——普通统计百分比全章写成汉字（s0131 百分之五／百分之二点五、s0102 百分之二、s0042 百分之十），与全书（含对话）一律「阿拉伯数字＋%」的惯例及体例规范相抵，是全书唯一这样写的一章；二是同一句维里迪亚格言在第11章与本章面板里译法不同，跨章引文不统一；三是 s0033「两人」与前文车上三人（格拉迪亚斯、泽、白）的设置不一致。另有两处低severity 的用词统一问题（A/B 测试的空格、实物投递混网的三种说法）。附注（不计入问题）：本章 new_terms 共 19 条，经比对全部已存在于术语表且 zh 字段逐字相同（from: chapter-18.zh，合并后可跳过，无冲突）；但「simulated window → 仿真窗」「cabin swap → 车厢互换」这两个本章首创、且第19章已沿用（「其中大约一半做了仿真窗」）的概念未登记进 new_terms／术语表，建议补登以免后续章节漂移。",
+ "issues": [
+  {
+   "id": "c18-s0131",
+   "severity": "medium",
+   "type": "标点体例",
+   "source": "\"About five percent of the population saw the recommendations at the same time.\" …… \"The majority of those people have already changed their behavior in at least one major way, and even that two and a half percent was already enough to start a trend that's now sweeping across all of Dzego.\"（另见 c18-s0102 \"Two percent of the language already\"、c18-s0042 \"If a normal building is ten percent solid\"）",
+   "zh": "c18-s0131「全国大约百分之五的人同时看到了这份建议。……而哪怕只有百分之二点五，也足以掀起一股如今正席卷整个泽国的潮流。」／c18-s0102「已经是这门语言的百分之二了」／c18-s0042「普通建筑要是百分之十实心」",
+   "problem": "全书（对话里也一样）的百分比一律用「阿拉伯数字＋%」，例如第1章「就当20%吧」、第2章「自由城在德文维尔占5%的投票权」、第24章「至少有10%到20%像北极人」、第26章「维里迪亚有6%的人口住在北岸」；体例规范第3节也明确「百分比……用阿拉伯数字（……20%）」。全书写成「百分之X」的只有固定说法或相对表述（「低百分之十」「百分之百」「百分之几」），本章却把芬整段论证里的普通统计百分比全部写成汉字，是全书唯一一处；同一章内还夹着「256个泽国语词根」这样的阿拉伯数字写法，体例不统一。",
+   "suggestion": "按全书体例改为：s0131→「全国大约5%的人同时看到了这份建议。……而哪怕只有2.5%，也足以掀起一股如今正席卷整个泽国的潮流。」；s0102→「已经是这门语言的2%了」；s0042→「普通建筑要是10%实心」（「三十分之一」「三分之一」是全书通用的中文分数写法，可保留）。"
+  },
+  {
+   "id": "c18-s0096",
+   "severity": "medium",
+   "type": "术语不一致",
+   "source": "c18-s0096（面板内）\"He took the path less traveled, and that blazed a trail for all.\" ／同句在第11章 c11-s0087 出现过：\"He took the path less traveled\", she quietly recited, quoting an old Veridian author, \"and that blazed a trail for all.\"",
+   "zh": "本章 c18-s0096：「他走了一条少有人走的路，也为所有人开出了一条路。」；第11章现行译法：「他选了人迹更少的那条路，……为众人开出一条道来。」",
+   "problem": "这是同一位维里迪亚老作家的同一句格言，全书出现两次：第11章由塞拉轻声念出，第18章由泽的手表界面呈现，紧接着 s0099「第一行是维里迪亚人写的」、s0105「这意思跟我们那句差得不太远」、s0106「你们是在开辟道路」都指着它。两处译法不同（「少有人走的路／为所有人开出了路」对「人迹更少的那条路／为众人开出一条道来」），读者难以认出是同一句引文，也与体例规范「同一专名在全书中必须完全一致」的精神相抵。",
+   "suggestion": "本章面板内统一为第11章的既定译法：「他选了人迹更少的那条路，为众人开出一条道来。」若主进程认为第18章的说法更好，则须反向把第11章 c11-s0087 一并改成同一句，两者只能取一。"
+  },
+  {
+   "id": "c18-s0033",
+   "severity": "medium",
+   "type": "误译",
+   "source": "\"They continued riding silently.\"（上文 c18-s0005 \"Zei and Bai were both already sitting inside\"、c18-s0010 \"Gladias sat down to the left of Zei\"，下文 c18-s0034 仍是格拉迪亚斯的视角）",
+   "zh": "两人继续默不作声地坐车前行。",
+   "problem": "此时车里是三个人：泽、白，加上刚上车的格拉迪亚斯（s0005 泽和白已在车里，s0010 格拉迪亚斯在泽左边坐下），下一句 s0034 也是格拉迪亚斯看窗外。「两人」与前文的人数设置不一致，读者会以为指的是泽和白、把格拉迪亚斯排除在外。",
+   "suggestion": "改为「三人继续默不作声地坐车前行。」（或「车里的人继续默不作声地前行。」）"
+  },
+  {
+   "id": "c18-s0122",
+   "severity": "low",
+   "type": "标点体例",
+   "source": "\"First, we A/B test many different versions of it.\"",
+   "zh": "“首先，我们拿许多不同的版本做 A/B 测试。我们鼓动不同的人去试不同的方案，再把各自的体验反馈回来。”",
+   "problem": "术语表（唯一事实源）登记为「A/B testing → A/B测试」（文档版 glossary.md 第264行同），第4章正文也写作「全泽国做A/B测试」；本章与第14章写成「A/B 测试」，在 A/B 与「测试」之间多了一个半角空格。规范里「单个拉丁字母与汉字紧邻不加空格」以及规范化脚本的规则（要求 ≥2 个连续字母才加空格）都支持写成「A/B测试」而不加空格。",
+   "suggestion": "改为「首先，我们拿许多不同的版本做A/B测试。」（与第4章写法一致；第14章 c14 处同类写法也应一并统一）"
+  },
+  {
+   "id": "c18-s0074",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "\"A mixnet for physical objects, Gladias realized - Zei had told him about it once.\"（同一概念在本章 c18-s0130 作 \"the physical-delivery mixnets\"，第9章 c09-s0121 作 \"It's a mixnet, but for delivery of physical goods.\"）",
+   "zh": "c18-s0074：「格拉迪亚斯明白了，这是给实体物品用的混网——泽跟他讲过一次。」／c18-s0130：「走实物投递混网」／第9章 c09-s0121：「这是混网，只不过送的是实物。」",
+   "problem": "同一概念（physical-delivery mixnet，术语表已登记「实物投递混网」，from: chapter-18.zh）在本章出现两种说法（s0074「给实体物品用的混网」、s0130「实物投递混网」），第9章又是第三种（「混网，只不过送的是实物」）。s0074 是本章这一概念的首现处，不用登记名会让读者以为和 s0130 是两个东西。",
+   "suggestion": "s0074 改为「格拉迪亚斯明白了，这就是实物投递混网——泽跟他讲过一次。」（第9章那句是讲解语气，可保留「混网，只不过送的是实物」；若求更严，可在其后补一次「也就是实物投递混网」。）"
+  },
+  {
+   "id": "c18-newterm-simulated-window",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "\"So it's a simulated window now, picking up the view with cameras.\"（c18-s0016）；\"Swapped cabins. The system waits for ten cars to come, swaps the cabins around randomly\"（c18-s0036）",
+   "zh": "c18-s0016「所以现在用的是仿真窗，靠摄像头把外面的景象拍进来。」；c18-s0036「换的是车厢。系统等十辆车到齐，把车厢随机互换」（本章 new_terms 只登记了 black car，note 里带过「车窗为仿真窗，并参与车厢互换」）",
+   "problem": "「仿真窗」（simulated window）与「车厢互换」（cabin swap）是本章首创的世界设定术语，第19章已经沿用了同一种写法（「其中大约一半做了仿真窗，假装外面就是户外」），但两条都没有作为独立条目登记进本章 new_terms／术语表（只藏在 black car 的 note 里）。按体例规范第5节，术语表未收录的新术语应写入 new_terms 再由主进程合并；不登记则后续章节（已到第19章）容易漂移成「模拟窗」「车厢交换」等异体。",
+   "suggestion": "在 new_terms 补两条：{\"en\": \"simulated window\", \"zh\": \"仿真窗\", \"kind\": \"tech\", \"note\": \"黑色轿车等用的摄像头仿真车窗；第19章沿用此写法\"}、{\"en\": \"cabin swap\", \"zh\": \"车厢互换\", \"kind\": \"tech\", \"note\": \"黑色轿车进城前的例行安保动作：十辆车到齐后随机互换车厢\"}，并在 glossary.json 的 aliases 中把「模拟窗」「车厢交换」指回规范译名。"
+  }
+ ]
+}

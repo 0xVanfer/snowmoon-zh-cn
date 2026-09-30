@@ -1,0 +1,62 @@
+{
+ "chapter": 30,
+ "lens": "consistency",
+ "reviewer": "wf-r4",
+ "overall": "本章一致性层面整体干净：专名（泽／白／芬／穆／德鲁因／莱克托／登／加洛瓦／特尔波／瓦卡里亚／翡翠）与地名（埃莱纳森林、维里迪亚、北林、北岸、塔尔杜尔、红郡、北极核心领土）逐条与术语表及第 29、31 章对齐；新增术语（空中无人机、世界模型、侦测时间、攻击图案、代理端点、伤亡比）与合并后的术语表正字完全一致；日期体例（3725年雪月30日，接第 29 章 29日与第 31 章 3725年雨月2日）、数字与汉字间不加空格（40分钟、约2公里、10比1、1.5比1）、拉丁词两侧一个空格（API、AI）、全角标点、…… 与 —— 全部合规，脚本逐段扫描未发现半角标点或空格违例；s0011–s0019／s0045–s0050 的 15 处哈希与密钥串原样保留，只把分隔冒号改为全角「：」，与第 6 章面板「作废符：」的既有体例一致；泽国语消息 s0083「jie fe hen dzi.」按术语表 conlang 条目保留罗马字未误译；全章 22 处 <c st> 色标与源文逐字一致（泽346.67、穆173.33、莱克托160、加洛瓦93.33、登53.33、特尔波266.67、瓦卡里亚293.33、芬80），说话人提示语与源文无一处张冠李戴。问题是 1 条高危术语回归、1 条标点体例（与 wf-r3 已报条目重合、现行文本未修复）与 4 条低度不一致：s0044 的 sentries 仍写作维里迪亚机构名「监审官」——本条 wf-r1 已判为误译并写入 reviews/chapter-30.applied.json，现行译文属回归，建议本轮一并改回。",
+ "issues": [
+  {
+   "id": "c30-s0044",
+   "severity": "high",
+   "type": "术语不一致",
+   "source": "I can see you are starting to run queries! Though you want to be more careful - if I can see it, the sentries might be able to as well. Here are some more proxy endpoints.",
+   "zh": "我能看到你们开始跑查询了！不过你们得再小心点——如果我看得到，他们的监审官大概也看得到。这里还有几个代理端点。",
+   "problem": "sentries（北极一方的岗哨／警戒人员）被译成术语表 Sentinel 的固定译名「监审官」，而该词在全书里专指维里迪亚掌舵会中审计企业的角色（术语表 Sentinel → 监审官，注「审计企业者」）。第 29 章已把同类词 sentry units 定为「警戒小队」，并在该章 new_terms 里明确写「与术语表 Sentinel『监审官』区分」；这里照抄机构名，读者会以为是维里迪亚的审计员在盯泽他们，阵营直接搞反。另外 reviews/chapter-30.applied.json 已记录过本条修正（sentries 误用「监审官」，改为「他们的哨兵」），但现行译文仍是「他们的监审官」，属fix 回归，本轮应一并落回。",
+   "suggestion": "我能看到你们开始跑查询了！不过你们得再小心点——如果我看得到，他们的哨兵大概也看得到。这里还有几个代理端点。"
+  },
+  {
+   "id": "c30-s0036",
+   "severity": "medium",
+   "type": "标点体例",
+   "source": "\"We have some early good news\", a Bansunpei researcher exclaimed. / \"It's definitely working\", another researcher interjected. / \"Agreed\", Zei replied. / \"Then let's do it\", Mu added. / \"Alright then\", Lektor spoke up softly but firmly.",
+   "zh": "c30-s0036「我们有了点初步的好消息」一名班孙培研究员喊道。／c30-s0042「确实起效了」另一名研究员插话。／c30-s0060「同意」泽答道。／c30-s0061「那就动手吧」穆补了一句。／c30-s0067「那就这样」莱克托轻声却坚定地开口。",
+   "problem": "五处（s0036／s0042／s0060／s0061／s0067）引语收尾的句读整个丢失：台词既没有句末的「。」，引号与提示语之间也没有逗号，中文里成了「……好消息」一名……喊道」这种黏连写法，读者要自己判断哪几个字是台词。体例规范 §4 的示例（「我赢了！」男孩喊道。）要求引语本身以终止标点收在引号内；全章只有 s0029（「这东西多快能跑起来？」泽插话道。）合规，可见不是有意体例。本条与 wf-r3 的 c30-s0036 条目重合，现行文件中尚未修复，故横向视角再记录一次：若已采纳，可只按 id 合并去重。",
+   "suggestion": "逐条改为：「我们有了点初步的好消息。」一名班孙培研究员喊道。／「确实起效了。」另一名研究员插话。／「同意。」泽答道。／「那就动手吧。」穆补了一句。／「那就这样。」莱克托轻声却坚定地开口。"
+  },
+  {
+   "id": "c30-s0066",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "\"Group North reporting: all non-forward drones have been equipped.\" / \"Group Center reporting: all non-forward drones have been equipped.\" / \"Group South reporting: all non-forward drones have been equipped.\" / \"Group Naval reporting: ... Most non-forward drones have been equipped.\"",
+   "zh": "s0063–s0065「北／中／南集群报告：除前锋外，所有无人机已贴装完毕。」；s0066「海上集群报告：……大部分非前锋无人机已经贴装完毕。」",
+   "problem": "同一串并列报告里，同一个说法 non-forward drones 出现了两种译法：北、中、南三路作「除前锋外」，海上集群一路作「非前锋」。四条本应逐字平行的汇报，只有最后一条换了措辞，四路通报的整齐感被打破。",
+   "suggestion": "s0066 改为「海上集群报告：我们在北林外围的村庄征用了设备，当地人好得没话说，很多人半夜起来帮我们。除前锋外，大部分无人机已贴装完毕。」（与 s0063–s0065 统一为「除前锋外」）"
+  },
+  {
+   "id": "c30-s0054",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "c30-s0054 \"sheets of paper containing squiggles and messages\"; c30-s0068 \"each paper containing many colorful and squiggly patterns\"; c30-s0072 \"optimize squiggles that you could draw on a piece of paper\"",
+   "zh": "s0054「一张张纸上满是扭曲的线条和文字」；s0068「每张纸上都有许多彩色、弯弯曲曲的图案」；s0072「只为优化几个随手就能画在纸上的涂鸦」",
+   "problem": "同一个贯穿全章的意象 squiggles／squiggly 被写成三种说法：「扭曲的线条」「弯弯曲曲的图案」「涂鸦」。三处说的是同一批对抗攻击图案，其中 s0072 是本章收束的玩笑落点（把高深攻击降格为「涂鸦」），措辞不统一会让读者以为是三种不同的东西。",
+   "suggestion": "统一到「弯弯曲曲的线条」这一说法（保留 s0072 的轻贬语气）：s0054「一张张纸上满是弯弯曲曲的线条和文字」；s0068 保持「许多彩色、弯弯曲曲的图案」（图案为纸张整体，可留）；s0072「只为优化几笔随手就能画在纸上的弯曲线条」。"
+  },
+  {
+   "id": "c30-s0034",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "About a third of the Veridian drone fleet was already lost, but casualty rates had decreased considerably.",
+   "zh": "维里迪亚无人机机队已经损失了大约三分之一，但损失速度明显降了下来。",
+   "problem": "casualty 一词在全书已成体系：第 29 章 casualty counts →「伤亡数」、casualty ratios →「伤亡比」，术语表 casualty ratio 条亦注明「沿用第 29 章译法」。本章 s0069／s0074／s0076／s0077／s0090 全部沿用「伤亡比」，只有 s0034 的 casualty rates 另起了「损失速度」，与同一段前后的伤亡体系统一性不足（同一章内「损失」已专用于 losses，如第 29 章 drone losses →「损失」）。",
+   "suggestion": "维里迪亚无人机机队已经损失了大约三分之一，但伤亡速度明显降了下来。"
+  },
+  {
+   "id": "c30-s0095",
+   "severity": "low",
+   "type": "术语不一致",
+   "source": "In the meantime, the second trip of seaborne drones went directly to Thaldur - the island east of Northshore that was core Arctic territory - and landed a fleet of air and snow drones...",
+   "zh": "与此同时，第二批海上无人机直奔塔尔杜尔——北岸以东那座属于北极核心领土的岛屿——卸下了一支由空中无人机和雪地无人机组成的机队……",
+   "problem": "原文是同一批海上无人机的「第二趟」（second trip），第 29 章对应的说法是「去装第二轮载荷」（They had begun to return to base to load up a second payload）；本章改成「第二批海上无人机」，容易被读成新调来的一批载具，与「返回基地装第二趟载荷」的时间线不再接得上，措辞也与第 29 章不统一。",
+   "suggestion": "与此同时，海上无人机第二趟出动，直奔塔尔杜尔——北岸以东那座属于北极核心领土的岛屿——卸下了一支由空中无人机和雪地无人机组成的机队……"
+  }
+ ]
+}

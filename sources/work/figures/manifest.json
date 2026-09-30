@@ -199,25 +199,25 @@
  },
  "chapter-25-fig-01": {
   "status": "ok",
-  "caption": "四个虚线框中蓝色圆点的数量与排列对比",
+  "caption": "四个虚线格中蓝色圆圈的数量与排列对比",
   "errors": [],
   "chars": 1521
  },
  "chapter-25-fig-03": {
   "status": "ok",
-  "caption": "四个虚线框中不同数量的蓝色圆点排列",
+  "caption": "四个虚线格中不同数量的蓝色圆圈排列",
   "errors": [],
   "chars": 1421
  },
  "chapter-25-fig-02": {
   "status": "ok",
-  "caption": "四个虚线框展示不同数量与排列的蓝色圆点。",
+  "caption": "四个虚线格展示不同数量与排列的蓝色圆圈。",
   "errors": [],
   "chars": 1483
  },
  "chapter-25-fig-05": {
   "status": "ok",
-  "caption": "四个虚线框内分别排列不同数量的蓝点",
+  "caption": "四个虚线格内分别排列不同数量的蓝色圆圈",
   "errors": [],
   "chars": 930
  },
@@ -229,13 +229,13 @@
  },
  "chapter-25-fig-04": {
   "status": "ok",
-  "caption": "四个虚线框中分别排列着2、4、7、12个蓝点",
+  "caption": "四个虚线格中分别排列着2、4、7、12个蓝色圆圈",
   "errors": [],
   "chars": 1312
  },
  "chapter-25-fig-06": {
   "status": "ok",
-  "caption": "四个虚线方框中，右侧两框各有一个蓝点。",
+  "caption": "四个虚线格中，右侧两框各有一个蓝色圆圈。",
   "errors": [],
   "chars": 498
  },
@@ -253,7 +253,7 @@
  },
  "chapter-27-fig-01": {
   "status": "ok",
-  "caption": "公众对维里迪亚军队的信心分布。",
+  "caption": "公众对维里迪亚军方的信心分布。",
   "errors": [],
   "chars": 4914
  },
@@ -265,7 +265,7 @@
  },
  "chapter-27-fig-02": {
   "status": "ok",
-  "caption": "维里迪亚军队领导人选的民意分布。",
+  "caption": "维里迪亚军方领导人选的民意分布。",
   "errors": [],
   "chars": 5732
  },
