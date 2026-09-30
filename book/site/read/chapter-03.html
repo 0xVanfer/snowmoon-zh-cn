@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第三章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第三章 · Chapter 3 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-02.html">
+  <link rel="next" href="chapter-04.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="3">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第三章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第三章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 3</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年雪月8日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Snowmoon 8</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯沿着人行道往前走。路两侧一家挨着一家的小店，卖什么的都有，从鲜花、衣服到电子设备。他穿过一条街。</p>
+<p class="dialog">街对面，路面缓缓下沉，无缝接进一条隧道。里面的光刚好够人舒服地看清路、看清字，再多一点也没有。</p>
+<p class="dialog">格拉迪亚斯走到一个 Y 字形路口。墙上贴着一张海报，四角用四段胶带粘住。他停在海报正前方看了看。</p>
+<div class="device-view wide-device-view device-view-left" style="background-color:#633; font-size:93.75%; color:#fee; --dv-ink:#fee;"><b>从安逸的维里迪亚，到强大的维里迪亚</b><hr style="background:#fee; margin-top: 10px"><p>学校告诉你，维里迪亚是个美丽的国家。这些你每天都看得见：树木、山峦、房屋和楼宇，全都在拼命再挤出几个基点的土地税减免。</p><p>但你心里清楚，问题确实存在。维里迪亚上一次上太空是什么时候？二十年前。维里迪亚最高的楼是什么时候建的？四十年前。为什么？因为你所有的制度——掌舵会体系、图谱资助机制，还有<em>文化</em>本身——都是围绕让人在当下过得舒服、开心建起来的，没人管明天。</p><p>再看看北极帝国。住房、交通、工业，哪里建得最快？北极帝国。那些想办法让人活得更久的科学家呢？都在北极帝国。</p><p>维里迪亚怎么回应这些科学家？活得久没那么重要。死亡和出生都没什么，那是生命的自然循环。没错，他们就是这么信的。生命的自然循环，已经是他们道德观里最拿得出手的东西了——照这套歪理，任何不义都可以是自然的，比如老虎吃兔子。</p><p>维里迪亚眼中的自然像一株植物。美丽，却永远长不过自己的身量。我们眼中的自然像一头狮子。如果你认同这种眼光，如果你希望维里迪亚更强，伸手去够星辰，不再只盯着公共卫生那点增量，而是去追求永生，那么维里迪亚需要你们——下一代的领袖——<em>负起责任</em>。别管那群乌合之众。去建设未来。加入我们，我们一起把它建起来。</p><p>顺致敬意</p><p>埃菲里昂勋爵</p><p>北极帝国驻维里迪亚领事。</p></div>
+<p class="dialog">“好啊，又一份北极宣传品”，格拉迪亚斯想。当然，北极帝国和所有人一样有言论自由，但他很好奇，什么样的维里迪亚人才会乐意破坏公共环境，把这份东西打印出来贴在维里迪亚的隧道里。他开始盘算怎么把海报撕下来。</p>
+<p class="dialog">突然，格拉迪亚斯感觉肩膀被人拍了一下。</p>
+<p class="dialog">格拉迪亚斯转过头。</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#be9b00">“哦，是你吗，莫夫？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“不，我是北极皇帝。我这次来，就是要实打实地把你的灵魂吸出来。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“好吧好吧……等等。往大梅港走的人里，穿隐私袍的上百号，我不过是其中一个，你怎么找到我的？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“一年前你把我加进了信任列表，一直没删，所以我们各自的本地 AI 有权开启位置共享。你的 AI 知道我们本来就该先碰个头——之后你见那位神秘先生时我再跟着你——所以它今天对你我开放了位置共享。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“啊，原来如此……什么什么情境亲密，反正就是那个新流行词。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“对，做这个大概连两方混淆电路那功能都用不上。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那你最近在琢磨什么？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“今年我被分派负责网络媒体开放度评则里的一项。我们掌则人小组一直在讨论，要不要把 API 限制这一项的税再往上提。一个月前我跟一个公民大会谈过这事，他们对现状非常不满。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“为什么现在成了这么大的问题？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“蓝鲸一个月前宣布要砍掉 API，只允许经过验证的硬件接入平台。他们说是为了防止自动化垃圾信息，但大会里几乎所有人都觉得，他们只是想封掉替代接口，好更多地控制人们的注意力，榨出更多钱。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我们知道他们具体在做什么吗？他们的算法有公开的吗？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“没有，他们的算法完全不透明，而他们早就按最高档税率缴税了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“原来如此……”</span></p>
+<p class="dialog"><span style="color:#00bc96">“所以呢，很多掌则人都觉得，该对这种做法再多加税。要么他们收手，要么，嗯，他们继续干，互联网越来越烂，但政府能拿到足够的钱，让每个人都能享受到更好的医疗。问题是，蓝鲸一直在拼命游说反对。有一位掌则人不小心暴露了自己的隐私，她和她的观点最近被人挖了出来，事情公开了，几天后她丈夫就丢了工作。不知道两者有没有关系，但，嗯，这就是我们为什么要用这一整套税制，配上这些随机抽选掌则人的密码学网络、匿名讨论和投票，还有隐私袍。”</span></p>
+<p class="dialog">提到蓝鲸，格拉迪亚斯想起了自己年轻的时候。那时他学着写程序，给另一家大型社交平台银聊写了一个替代客户端。他知道，那件事能做成，只因为银聊的 API 是开放的，平台允许开发者做替代客户端，也允许用户导出和迁移自己的数据——这些决定无疑都是为了在硬件与软件开放度评则上把税率压下来，或者说，至少对财务部门是这么交代的。正是那段经历，让格拉迪亚斯想回报点什么，也让他自己投身掌舵会。</p>
+<p class="dialog"><span style="color:#00bc96">“对了，说到隐私，你那位信誉分200的匿名朋友，你打算怎么办？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“他说他觉得整个掌舵机制从根本上就是坏的。我打算先听他说完。就算是疯子，也常至少有一成是对的，而且那一成还挺有意思。顺便看看能不能找出他是怎么找到我的？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“那……万一这是个陷阱，想套你更多把柄呢？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“如果他真想害我，直接把我的身份和任务提交进网络，就能让我今年一整年都失去监审官资格。不过说到底，这种事不就是该你来查吗？”</span></p>
+<p class="dialog">莫夫解开隐私袍，从内侧口袋里掏出一个大包裹。</p>
+<p class="dialog"><span style="color:#00bc96">“来，在谈正事之前，先换一件新的隐私袍。万一你袍子上有什么脏东西能被追踪。北极人把监控设备偷运进来的本事，比我们查出它们的本事长进得更快。我们得把疑心再提高一档。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“都到这个程度了，我们当初压根就不该见面。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“别这样，格拉德，你不只是要跟我一起当监审官的人，你还是朋友。趁我们还能见面，我喜欢多见见你。”</span></p>
+<hr class="rule">
+<p class="dialog">隧道向上倾斜，外面的光又一次照进格拉迪亚斯的眼睛。路两侧都覆着树木。</p>
+<p class="dialog">他路过两个站在饮水台旁聊天的孩子。他能听出其中一个在说最近和家人去了趟北林，另一个提到自己喜欢那儿的翔球队。</p>
+<p class="dialog">又走出一段，再也听不见他们说话之后不久，他的手表震了一下。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">[4张图片]</span></td><td>44029</td></tr></tbody></table></div>
+<p class="dialog">他看了一眼。</p>
+<p class="dialog">塞拉从自由城发来几张照片。第一张是市中心。第二张是一座大公园，从入口大门前拍的。左边能看到一张带字的海报。他把手表凑到眼前，才辨认出是一张价目表。</p>
+<p class="dialog">格拉迪亚斯按下一个按钮，回了一个爱心符号。</p>
+<p class="dialog">他的目光从表盘上落回街上，发现自己已经走进了梅尔丹更都市化、也更商业的一片区域。</p>
+<p class="dialog">他的右手边是一排办公楼。远处的那些是通透的玻璃与钢结构，在光下发亮，不过隔着树冠，只能看见一部分。近处的正在施工，四周立着高大的围挡，把工地遮得严严实实。</p>
+<p class="dialog">第一块围挡上有一张海报，提醒维里迪亚人对家人和社区要友善。</p>
+<p class="dialog">第二块围挡上是另一则海德菲尔广告。广告左侧是那款经典的海德菲尔水瓶，裹着黄绿两色。</p>
+<p class="dialog">右侧则写着：</p>
+<blockquote><p>氢氧化氢：</p><ul><li>一种常见于有毒污水中的物质</li><li>大剂量可致死</li><li>审讯囚犯时，常拿来给他们灌下去</li><li>以固态长时间接触会造成皮肤损伤</li></ul><p>但你知道吗？新鲜可饮用的氢氧化氢，今天你就能买到自己的一瓶！</p><p>海德菲尔，立即购买。</p></blockquote>
+<p class="dialog">格拉迪亚斯又笑了。施工已经持续了很久，他很感激这两张海报把工地遮了起来。比起施工吊车和建了一半的水泥楼，他宁可看海德菲尔的广告<em>或</em>维里迪亚的美德海报。</p>
+<p class="dialog">然后他把目光转向左边那道长长的、城堡似的墙，灰紫两色相间。</p>
+<p class="dialog">墙前有两排树，中间夹着一条人行道。</p>
+<p class="dialog">树后，墙上挂着一张大海报：</p>
+<p class="dialog">“了解大梅港正在为你的社区做些什么！”</p>
+<p class="dialog">文字衬着一幅背景画，画的是机器人在捡垃圾，用的是适合孩子的卡通风格。右下角有一个二维码。格拉迪亚斯出于好奇扫了一下。</p>
+<div class="device-view wide-device-view"><h3 style="color:#d4d">大梅港公共活动</h3><table style="width:75%"><tbody><tr><td>环境</td><td><ul><li>清洁行动</li><li>污染监测（水、空气）</li><li>动物福利研究</li></ul><td><button>了解更多</button></td></td></tr><tr><td>健康与医疗</td><td><ul><li>食品、环境与清洁空气改善效果的大规模研究</li><li>健康饮食、运动及其他行为与生活方式研究</li></ul></td><td><button>了解更多</button></td></tr><tr><td>教育</td><td><ul><li>编写面向4至18岁的进阶教育课程</li><li>青少年数学与编程竞赛</li></ul></td><td><button>了解更多</button></td></tr><tr><td>艺术</td><td><ul><li>“美丽城市”研究</li><li>面向公众开放的展览与博物馆</li><li>电影与剧集，去年有三部进入维里迪亚前20</li></ul></td><td><button>了解更多</button></td></tr><tr><td colspan="3"><button>加载更多</button></td></tr></tbody></table><div><b>大梅港的所有研究成果与工具均开源！<br>部分资金来自维里迪亚二次方资助</b></div></div>
+<p class="dialog">格拉迪亚斯看见两个人坐在长椅上，各自喝着茶，望着那块广告牌，其中一人腿上放着一台手持终端。</p>
+<p class="dialog"><span style="color:#ed756b">“你进去过吗？”</span>，第一个男人问。</p>
+<p class="dialog"><span style="color:#a38af2">“没去过，一直没弄到签证”</span>，第二个男人回答。</p>
+<p class="dialog"><span style="color:#ed756b">“那地方很有意思，里面和维里迪亚其他地方完全不一样，简直像国中之国。”</span></p>
+<p class="dialog">格拉迪亚斯停下脚步，面朝广告牌，免得引人起疑。偷听别人说话有点失礼，但了解民意是他这个未来监审官的职责之一。公民大会有用，可永远比不上那种以为没人听着的真实闲聊。</p>
+<p class="dialog">第二个男人低头看两人共用的那台手持终端。<span style="color:#a38af2">“哎哟，看看他们交的税。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“他们交什么税？”</span>，格拉迪亚斯问翡翠，用几乎无声的气声说话，只有他的颈带能辨认出他在讲什么。</p>
+<p class="dialog">翡翠立刻回答。</p>
+<p class="dialog"><span style="color:#db8916">“销售税平均5.2%，是全市平均水平的一半。土地税总计1.48%，略高于全市平均。图谱资助、尤其是二次方资助带来的收入，能补回其中大约一半。”</span></p>
+<p class="dialog">格拉迪亚斯又留意起那场谈话。</p>
+<p class="dialog"><span style="color:#a38af2">“我不明白。这些人只是安安静静待在角落里，自己过自己的。我没去过那儿，他们也从没来找过我麻烦。他们还在环境、教育、医疗、博物馆上做了这么多事。他们甚至没法只做自己真正擅长的科学研究，还得做这些讨好大众的事，好把税压下去，从二次方资助里拿回点钱——这些事他们根本不擅长。可就算做到这个地步呢？还是有那么多人恨他们，硬说他们的墙难看，只为了把他们的土地税抬上去。我们这么擅长当自己最大的敌人，还操心北极人干什么？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“至少在这里，这已经是我们能为难他们的极限了。要是在德文维尔或者英格尔沃，大梅港得拼命争取才不至于被整个关停。”</span></p>
+<p class="dialog">格拉迪亚斯已经快十年没进过大梅港了，这让他更想再进去看看。他继续往前走。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯把手表贴近大门上的绿色圆圈，等了大约一个嘀嗒。</p>
+<p class="dialog"><span style="color:#00bc96">“证明已验证，欢迎”</span>，机器用机械却带着赞许的语气回答。</p>
+<p class="dialog">他穿过大门。</p>
+<p class="dialog">他立刻明白了，为什么长椅上那两个人说大梅港和维里迪亚其他地方如此不同。</p>
+<p class="dialog">大梅港里的建筑比外面统一得多，都是相似的圆形和矩形，白、灰、紫三色相间，高度大约五到十米。树木只有那么几种，在人行道旁等距精心栽种。商店和餐馆除了各有各的名字和四分之一米宽的标志，压根没打算显得与众不同，甘愿当大梅港整体里的一个小部件。这些建筑明显更有未来感，玻璃与钢材用得更多，棱角也比维里迪亚常见的建筑更锋利。</p>
+<p class="dialog">格拉迪亚斯照着表上的指引继续往前走。五分钟后，他来到一处隧道入口，走下去，短暂穿过一段人很多的通道。</p>
+<p class="dialog">刚穿过人群，他的手表就震了一下。</p>
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%" colspan="2">空气</td></tr><tr><td style="font-size:150%">CO<sub>2</sub></td><td style="font-size:150%; color: yellow">965</td></tr><tr><td style="font-size:150%">PM2.5</td><td style="font-size:150%; color: yellow">22.1</td></tr></table><table><tr><td style="font-size:150%" colspan="2">设备</td></tr><tr><td style="font-size:150%; color: #8f8">已证 ✓</td><td style="font-size:150%; color: #8f8">55</td></tr><tr><td style="font-size:150%; color: #fc8">未知 ?</td><td style="font-size:150%; color: #fc8">6</td></tr></table></div>
+<p class="dialog">两个问题，格拉迪亚斯想。</p>
+<p class="dialog">第一，人太多，通风和过滤不够。格拉迪亚斯拉了拉隐私袍面罩上的带子，把鼻子上下的两片罩布分开。</p>
+<p class="dialog">第二，不知道那些未认证的设备是什么。如今几乎每台设备都带零知识证明，验明它由某家厂商的某个批次生产。55台里有6台没有认证，未认证的数量高得不寻常。可惜没时间细查。可能只是孩子的科学课作业，格拉迪亚斯想；也可能在大梅港，设备没有认证本来就是常态——毕竟从维里迪亚的角度看，这块地整片都只是一家大企业的私有财产——还可能是隐藏的间谍摄像头，或者更糟。他稍微加快脚步，继续往前走。</p>
+<p class="dialog">又在迷宫里拐了几道弯之后，他再次来到室外，这次是在一个隐蔽的庭院中央。院里摆着几张桌椅，有人在吃东西、喝水。格拉迪亚斯找到一处带布帘遮挡的隔间，走进去在桌边坐下。</p>
+<p class="dialog">桌子远端中央有一盏装饰灯，两侧各有一朵大花。他注意到地板上紧挨着隔间角落有个白盒子。他俯身细看，手表震了一下。PM2.5 读数低于1。应该是空气过滤器，他想。他把隐私袍的兜帽摘了下来。</p>
+<p class="dialog">他把手表轻碰桌子中央的绿色圆圈，片刻后听到一声确认音。</p>
+<p class="dialog">两分钟后，一个笑脸机器人滑到桌边，端着水和一份沙拉。格拉迪亚斯把两样都接过来放到桌上，机器人滑走了。</p>
+<p class="dialog">五分钟后，另一个穿隐私袍的男人走了进来。</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#e58137">“我们终于见面了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你查出我的行踪，告诉我你知道我需要听的事，却只肯当面说，还把我带到大梅港一个我根本不知道存在的偏僻角落。到现在我连你叫什么都不知道。”</span></p>
+<p class="dialog"><span style="color:#e58137">“啊，我叫德尔瓦特。幸会。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我是格拉迪亚斯。”</span></p>
+<p class="dialog"><span style="color:#e58137">“我知道。你妻子是塞拉，你孩子的名字是——”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你是想吓唬我吗？”</span></p>
+<p class="dialog"><span style="color:#e58137">“其实不是。现在回想一下，那更像是在炫耀。抱歉。”</span></p>
+<p class="dialog">两人沉默了几分钟。都摘下了隐私袍的面罩和兜帽。格拉迪亚斯开始喝水、吃沙拉。德尔瓦特把自己的手表碰了碰桌上的绿色圆圈，一分钟后，他的茶、一根长方形的营养棒，还有一把叉子，送了过来。</p>
+<p class="dialog">格拉迪亚斯又往前倾了倾身。</p>
+<p class="dialog"><span style="color:#be9b00">“那你想要什么？”</span></p>
+<p class="dialog"><span style="color:#e58137">“最近你对掌舵会这套体系还满意吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“任何体系都有毛病，但总体来说还行吧？”</span></p>
+<p class="dialog"><span style="color:#e58137">“明白了，我还没敲开你的墙。好，就拿恐结的演唱会举例。他们是不错的乐队，很好玩，对吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“对，我喜欢他们。”</span></p>
+<p class="dialog"><span style="color:#e58137">“但有一批监审官正设法把他们推到第4档，因为他们的歌词不够温和。”</span></p>
+<p class="dialog">格拉迪亚斯点头同意。</p>
+<p class="dialog"><span style="color:#e58137">“你投票选第3档，很勇敢。大多数见习官都会顺着自己揣摩的监审官的意思投票。你没有。这很少见。”</span></p>
+<p class="dialog"><span style="color:#e58137">“不过再举个例子。你觉得大梅港怎么样？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“显然是个好地方。和维里迪亚不同，但自有它的美和气势。它不适合所有人，但我能理解为什么很多人喜欢来这里。”</span></p>
+<p class="dialog"><span style="color:#e58137">“那你知道他们的掌舵税是多少吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“掌舵税还算可以，但他们在土地税上被扣得很惨。”</span></p>
+<p class="dialog"><span style="color:#e58137">“正是。一篇论证周密、说明这地方对维里迪亚有多大好处的文章，还不如一句随口冒出来的‘我不喜欢你’值钱。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那你有什么主张？”</span></p>
+<p class="dialog"><span style="color:#e58137">“自由。真正的自由。别再想着去推着每个人往前走，让人们真实的样子露出来。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那我能帮上什么？”</span></p>
+<p class="dialog"><span style="color:#e58137">“两个月后如果通过，你打算当监审官还是掌则人？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“目前想的是监审官。”</span></p>
+<p class="dialog"><span style="color:#e58137">“去当掌则人。然后见一条评则就投删一条。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“就这样？这就是你的计划？”</span></p>
+<p class="dialog"><span style="color:#e58137">“你看，如今监审官比掌则人多得多。而监审官才是所有人想影响的对象。为什么？因为监审官能直接对接世上具体的事物。掌则人调整的是全局规则。可任何一条规则对任何一家企业的影响都有上限，何况每条规则大约有二十个掌则人在决定。当监审官，你的影响力实在得多。也更有意思。”</span></p>
+<p class="dialog"><span style="color:#e58137">“我的路子不一样。我在尽量把掌则人聚起来，因为我要的是系统性变革。不是为了某场演唱会，或者某块紫色太多的飞地。而是要把维里迪亚人从他人偏见的暴政里解放出来，让他们做自己。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“图谱资助你也要废掉吗？”</span></p>
+<p class="dialog"><span style="color:#e58137">“我觉得图谱资助在很多方面确实也管得太宽，但我的重点是掌舵会。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“图谱资助支持的很多开放技术，对泽国现代化、能自保起了关键作用。你不觉得这很重要吗？”</span></p>
+<p class="dialog"><span style="color:#e58137">“听着，我喜欢他们的人，但我们这样几乎等于资助一场潜在的战争，是在玩危险的游戏。我们该先管好自己的问题。”</span></p>
+<p class="dialog">德尔瓦特不再说话，开始喝自己的茶、吃营养棒。格拉迪亚斯趁这个空当琢磨德尔瓦特的话，一边继续喝水，把沙拉吃完。</p>
+<p class="dialog"><span style="color:#be9b00">“这个想法有意思——掌舵会确实把人操纵得太过了。但我不确定自己完全同意把它直接砍到零，尤其是废掉图谱资助——掌舵税要真归零，我们就不得不那么做。”</span></p>
+<p class="dialog">格拉迪亚斯停了几嘀嗒，看着德尔瓦特。德尔瓦特也看着他。两人又各自抿了一口饮料。</p>
+<p class="dialog"><span style="color:#be9b00">“不过好吧，就算我可能同意其中一部分，我凭什么听你的？”</span></p>
+<p class="dialog"><span style="color:#e58137">“因为我了解你，知道你住哪儿，知道你怎么想。如果这些我都能查出来，想想蓝鲸都能对你做些什么。换了北极人，也是一样。我可以帮你挡住这些。但我也需要你的帮助。”</span></p>
+<p class="dialog"><span style="color:#e58137">“总之，你提交最终路线选择的截止日期还有大约一个月。别去当监审官，当掌则人。先从这个开始。”</span></p>
+<p class="dialog">德尔瓦特站起身，走出了隔间。</p>
+<p class="dialog">格拉迪亚斯把帘子中间那道缝留开一点，看着德尔瓦特离去。就在德尔瓦特快要走出视线时，另一个穿隐私袍的人从隔壁隔间出来，跟上了他。</p>
+<p class="dialog">格拉迪亚斯看了看手表。</p>
+<figure class="fig"><img src="../assets/images/chapter-03-fig-01.svg" alt="格拉迪亚斯与莫夫的位置及移动方向" title="格拉迪亚斯与莫夫的位置及移动方向" loading="lazy" decoding="async"></figure>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-02.html">上一章 · 第二章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-04.html">下一章 · 第四章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias was walking forward along a sidewalk. On each side of the road, there were small shops one after the other, selling various goods from flowers to clothing to electronic equipment. He crossed a street.</p>
+<p class="dialog">On the other side of the street, the road sloped down, and transitioned seamlessly into a tunnel, lit just enough that it was possible to comfortably see and read, but not more.</p>
+<p class="dialog">Gladias got to a Y-shaped intersection. Pasted on the wall, there was a poster, attached at the corners with four pieces of tape. He stopped right in front of the poster to take a look.</p>
+<div class="device-view wide-device-view device-view-left" style="background-color:#633; font-size:93.75%; color:#fee; --dv-ink:#fee;"><b>From a comfortable Veridia to a strong Veridia</b><hr style="background:#fee; margin-top: 10px"><p>Veridia is a beautiful country, you are told in school. You see it every day: the trees, the mountains, the houses and buildings all trying to eke out another few basis points reduction in land tax.</p><p>But you know, in your heart, that there is a problem. When did Veridia last go to space? Twenty years ago. When was Veridia's tallest building built? Forty years ago. Why? Because all your institutions - the Steering system, the Graph Funding mechanism, and the very <em>culture</em> - are built around making people comfortable and happy in the present, with no concern for tomorrow.</p><p>Meanwhile, look at the Arctic Empire. Where is the housing, the transportation, the industry being built the fastest? In the Arctic Empire. All the scientists working to make people live longer? In the Arctic Empire.</p><p>What does Veridia say to those scientists? Living longer is not that important. Death and birth are okay, they are the natural cycle of life. Yes, that's what they believe. The natural cycle of life is the best they have for morality - by that same twisted logic, any injustice could be natural, like a tiger eating a rabbit.</p><p>Veridia's vision of nature is like a plant. Beautiful, but never rising up above its stature. Our vision of nature is like a lion. If this vision appeals to you, if you want Veridia to be stronger, to reach for the stars, to aim beyond incremental public health and seek eternal life, then Veridia needs you, the next generation of leaders, to <em>take charge</em>. Don't mind the mob. Build the future. Join us, and we will build it together.</p><p>With regards,</p><p>Lord Ephelion</p><p>Arctic Empire consul to Veridia.</p></div>
+<p class="dialog">"Yay, more Arctic propaganda", Gladias thought. Of course, the Arctic Empire is free to speak just like everyone else, but he wondered what kind of Veridian would feel inclined to vandalize the public environment and put up a printout of their message in the Veridian tunnels. He started mulling over ways to rip the poster down.</p>
+<p class="dialog">Suddenly, Gladias felt a tap on his shoulder.</p>
+<p class="dialog">Gladias turned his head.</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#be9b00">"Oh, is it you, Mov?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"No, it's the Arctic Emperor. I'm here to literally suck out your soul."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Okay fine... Wait, I'm like one of a hundred people walking toward the Greater Plum Harbor wearing a privacy robe, how did you figure out where I am?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"You put me on your trust list a year ago and never took me off, so our local AIs had permission to enable location sharing. Your AI knew that we were supposed to meet before I shadow you when you go see the mysterious gentleman, so it unlocked location sharing with me for today."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Aaaah, I see ... something something contextual intimacy or whatever the new buzzword is."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Yep, probably didn't even need the two-party garbled circuit feature to do that."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what's been on your mind?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Well, I'm assigned to one of the openness rubrics on internet media this year. We've been talking a lot in our Keeper group about bumping up the taxes on API restrictions. I talked to a citizens' assembly about the topic a month ago, and they're really unhappy about how things are going."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Why is it such a big issue now?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Bluewhale announced a month ago that they're cutting their API and are only letting verified hardware interface with the platform. They say it's to prevent automated spam, but basically everyone in the assembly thought they just want to block alternative interfaces so they can control people's attention more and extract more money."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do we know exactly what kinds of things they are doing? Are any of their algorithms public?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Nah, their algorithms are totally opaque, and they're already paying the max tax bracket for that."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I see..."</span></p>
+<p class="dialog"><span style="color:#00bc96">"So yeah, many of the Keepers think we should bump up more taxes on that kind of behavior. So either they stop, or, well, they keep going and the internet sucks more, but the gov gets enough money that we can pay for everyone to get better healthcare. The problem is, Bluewhale has been driving a hard campaign against it. One Keeper was not careful about their privacy, she and her views got found out recently, it went public, and her husband lost his job only a few days later. No idea if it's connected, but, well, this is why we gotta run this whole tax system with all these cryptographic networks randomly selecting Keepers, anonymous discussion and voting, and privacy robes."</span></p>
+<p class="dialog">The mention of Bluewhale brought Gladias back to his younger days, when he had learned programming by writing an alternative client for the other major social platform, Silverchat. That had only been possible, he knew, because the API was open, and the platform allowed developers to make alternative clients and users to export and migrate their data - all decisions that had undoubtedly been motivated, or at least justified to the bean counters, by trying to lower their tax rate on the hardware and software openness rubric. That experience had been what motivated Gladias to contribute back, and get involved in Steering himself.</p>
+<p class="dialog"><span style="color:#00bc96">"Anyway, speaking of privacy, what's the plan with your 200 rep anon friend?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, he told me that he thinks the whole Steering mechanism is fundamentally broken. I figured I would hear him out. Often even people who are crazy are at least ten percent right in some way that's interesting. And hopefully figure out some clue about how he found me?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"And... what if this is a trap, to get even more compromising info on you?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, if he really wanted to hurt me, he could have just submitted my identity and task into the network and pulled me out of the running for Sentinel status for this whole year. But anyway, figuring out this kind of thing is what you're here for."</span></p>
+<p class="dialog">Mov then opened up his privacy robe, and took out a large package from an inside pocket.</p>
+<p class="dialog"><span style="color:#00bc96">"Here, before we get into the rest of the business, put on a fresh privacy robe. Just in case there's some piece of dirt that makes yours trackable. The Arctics are getting better at smuggling their surveillance devices in here, faster than we're getting better at detecting them. We gotta step up our paranoia."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Surely if it's at this level we should have just not met in person at all."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Come on Glad, you're not just someone about to join me as a Sentinel, you're a friend. I enjoy it when we see each other - while we still can."</span></p>
+<hr class="rule">
+<p class="dialog">The tunnel sloped up, and the outdoor light once again shone into Gladias's eyes. Both sides of the path were covered by trees.</p>
+<p class="dialog">He passed by two children standing beside a water fountain and talking. He could make out one of them saying something about a recent visit to Northglade with his family, and the other mentioning that he liked their Helisport team.</p>
+<p class="dialog">Soon after he had walked far enough that he could no longer hear their conversation, his watch buzzed.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Seila</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">[4 images]</span></td><td>44029</td></tr></tbody></table></div>
+<p class="dialog">He took a look.</p>
+<p class="dialog">Seila was sending some photos from Freetown. The first was of the downtown of the city. The second was of a major park, taken from in front of an entrance gate. On the left, he could see a poster with some writing. Bringing his watch closer to his eyes, he could make out a price list.</p>
+<p class="dialog">Gladias pressed a button, responding back with a heart symbol.</p>
+<p class="dialog">Turning his attention away from his watch screen back to the street, he noticed that he had now entered a more urban and more commercial part of Meldan.</p>
+<p class="dialog">To his right, he saw a series of office buildings. The ones further away shone with a clear glass and steel construction, though at that distance they were only partially visible behind the tree cover. The ones close by were under construction, all covered with large tall barriers shielding the construction site from public view.</p>
+<p class="dialog">On the first barrier, he saw a poster reminding Veridians to be kind toward their families and their community.</p>
+<p class="dialog">On the second barrier, he saw another Hydrafill advertisement. On the left side, the advertisement showed the classic Hydrafill water bottle, covered with yellow and green colors.</p>
+<p class="dialog">And on the right side, it showed the text:</p>
+<blockquote><p>Hydrogen hydroxide is:</p><ul><li>A commonly found substance in toxic sewage water</li><li>Deadly in large doses</li><li>Frequently administered to prisoners undergoing torture</li><li>A source of skin damage if held for a prolonged time in its solid form</li></ul><p>But did you know that you can buy YOUR OWN BOTTLE of fresh drinkable hydrogen hydroxide today?</p><p>Hydrafill, buy it now.</p></blockquote>
+<p class="dialog">Gladias smiled again. The construction had been going on for a long time, and he was grateful for both posters that were covering up the construction sites. He vastly preferred looking at Hydrafill advertisements <em>or</em> Veridian virtue posters to construction cranes and half-built concrete buildings.</p>
+<p class="dialog">He then turned his attention to the long castle-like wall, mixing grey and purple colors, that was on his left.</p>
+<p class="dialog">In front of the wall, there were two rows of trees, with a sidewalk in between them.</p>
+<p class="dialog">Behind them, a large poster mounted on the wall:</p>
+<p class="dialog">"Learn about what Greater Plum Harbor is doing for your community!"</p>
+<p class="dialog">The text was in front of a background that featured robots picking up garbage, drawn in a child-friendly cartoon aesthetic. On the bottom right corner there was a two-dimensional barcode. Gladias scanned it out of curiosity.</p>
+<div class="device-view wide-device-view"><h3 style="color:#d4d">Greater Plum Harbor Public Activities</h3><table style="width:75%"><tbody><tr><td>Environment</td><td><ul><li>Cleanup</li><li>Pollution monitoring (water, air)</li><li>Animal welfare research</li></ul><td><button>Learn more</button></td></td></tr><tr><td>Health and medicine</td><td><ul><li>Large-scale studies in effects of food, environment and clean air improvements</li><li>Healthy eating, exercise, other behavior and lifestyle research</li></ul></td><td><button>Learn more</button></td></tr><tr><td>Education</td><td><ul><li>Writing advanced education curricula targeting ages 4-18</li><li>Youth math and programming competitions</li></ul></td><td><button>Learn more</button></td></tr><tr><td>Art</td><td><ul><li>Beautiful Cities research</li><li>Publicly available exhibitions and museums</li><li>Movies and shows, three in Veridian Top 20 last year.</li></ul></td><td><button>Learn more</button></td></tr><tr><td colspan="3"><button>Load more</button></td></tr></tbody></table><div><b>All research outputs and tooling done by GPH are open source! <br> Partially funded by Veridian Quadratic Funding</b></div></div>
+<p class="dialog">Gladias saw two people sitting on a bench, each drinking a tea and looking at the billboard, one with a hand device on his lap.</p>
+<p class="dialog"><span style="color:#ed756b">"Have you ever been in there?"</span>, the first man asked.</p>
+<p class="dialog"><span style="color:#a38af2">"No I haven't, never managed to get a visa"</span>, the second replied.</p>
+<p class="dialog"><span style="color:#ed756b">"It's a fascinating place, it looks totally different inside than the rest of Veridia, it's almost like a country inside a country."</span></p>
+<p class="dialog">Gladias stopped, and faced the billboard to avoid arousing suspicion. Overhearing a conversation was slightly impolite, but understanding public sentiment was part of his duty as a future Sentinel. Citizens' advisory assemblies helped, but they were never quite as good as an authentic conversation by people who did not realize that anyone was listening.</p>
+<p class="dialog">The second man looked down at the hand device that the two were sharing. <span style="color:#a38af2">"Oof, check what taxes they pay."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What taxes do they pay?"</span>, Gladias asked Emerald, whispering silently so only his neck band could make out what he was saying.</p>
+<p class="dialog">Emerald immediately replied.</p>
+<p class="dialog"><span style="color:#db8916">"Sales tax, averaging 5.2%, half of the city average. Total land tax is 1.48%, slightly greater than the city average. Graph Funding and especially Quadratic Funding revenue recovers roughly half of this."</span></p>
+<p class="dialog">Gladias turned his attention back to the conversation.</p>
+<p class="dialog"><span style="color:#a38af2">"I don't get it. These guys are just peacefully off in a corner, by themselves. I've never been there, and they've never bothered me. And they even do all this work on the environment, education, healthcare, their museums. They can't even just work on the science they're actually good at, they have to do all these populistic things to push their taxes down and get some of the money back from Quadratic Funding, things that they're not even good at. And even after all this? So many people hate them, and pretend their wall is ugly just to push their land taxes up. What's the point of worrying so much about the Arctics when we're so good at being our own worst enemy?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"At least here that's the worst we can do to them. If this was Devanvil or Inglewore, GPH would be fighting to not get shut down entirely."</span></p>
+<p class="dialog">Gladias had not been inside Greater Plum Harbor for nearly a decade, so this made him all the more curious to see it again. He kept walking.</p>
+<hr class="rule">
+<p class="dialog">Gladias held his watch near the green circle on the entrance gate, and waited for about one tick.</p>
+<p class="dialog"><span style="color:#00bc96">"Proof verified, welcome"</span>, the machine answered in a robotic but approving tone.</p>
+<p class="dialog">He walked through the gate.</p>
+<p class="dialog">He could immediately see why the two people on the bench had described Greater Plum Harbor as being so different from the rest of Veridia.</p>
+<p class="dialog">The buildings inside Greater Plum Harbor were more uniform than those outside, all with similar circular and rectangular shapes, a mixture of white, grey and purple colors, and roughly five to ten meters in height. The trees were all of a few types, and carefully planted an equal distance apart on the sidewalk. Beyond having distinct names and distinct quarter-meter-wide logos, the stores and restaurants were not trying at all to distinguish themselves, instead accepting their visual role as small elements of the Greater Plum Harbor's whole. The buildings were noticeably more futuristic, more glass-and-steel, and with more sharp edges than the usual structures in Veridia.</p>
+<p class="dialog">Gladias kept walking forward, following the directions on his watch. After five minutes, he arrived at a tunnel entrance, and went down, briefly passing through a space where there were a large number of people walking.</p>
+<p class="dialog">Just after he passed through the crowd, his watch buzzed.</p>
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%" colspan="2">Air</td></tr><tr><td style="font-size:150%">CO<sub>2</sub></td><td style="font-size:150%; color: yellow">965</td></tr><tr><td style="font-size:150%">PM2.5</td><td style="font-size:150%; color: yellow">22.1</td></tr></table><table><tr><td style="font-size:150%" colspan="2">Devices</td></tr><tr><td style="font-size:150%; color: #8f8">Attested ✓</td><td style="font-size:150%; color: #8f8">55</td></tr><tr><td style="font-size:150%; color: #fc8">Unknown ?</td><td style="font-size:150%; color: #fc8">6</td></tr></table></div>
+<p class="dialog">Two problems, Gladias thought.</p>
+<p class="dialog">First, too many people, not enough ventilation or filtration. Gladias pulled on the strap on his privacy robe's front face cover, separating the areas above and below his nose.</p>
+<p class="dialog">Second, no idea what those unattested devices are. These days, almost every device was attested with a zero-knowledge proof verifying that it was produced in a particular batch by a particular manufacturer. Six out of fifty five was an unusually high number unattested. Unfortunately, there was no time to figure things out. It could be a kid's science project, Gladias thought, it could be that it was simply normal in Greater Plum Harbor to have devices without attestation - after all, from Veridia's perspective, the land was all just one giant business's private property - or it could be a hidden spy camera, or worse. He increased his speed slightly, and kept walking.</p>
+<p class="dialog">After taking several more turns through the maze, he was once again outside, this time in the middle of a hidden courtyard. There were several tables and chairs, with people eating and drinking water. Gladias found a table in a booth that had a cloth curtain protecting it. He went in and sat down.</p>
+<p class="dialog">There was a decorated lamp in the middle of the far end of the table, with one large flower on each side. On the floor, pressed against the corner of the booth, Gladias noticed a white box. He leaned in to look more closely, and his watch buzzed. PM2.5 readings were below 1. Must be an air filter, he thought. He took the hood off his privacy robe.</p>
+<p class="dialog">He tapped his watch against a green circle in the middle of a table, and a moment later heard a confirmation sound.</p>
+<p class="dialog">Two minutes later, a robot with a smiley face slid up to the table, carrying water and a salad. Gladias took both and put them on the table, and the robot slid away.</p>
+<p class="dialog">Five minutes later, another man wearing a privacy robe stepped in.</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#e58137">"So, we meet at last."</span></p>
+<p class="dialog"><span style="color:#be9b00">"You track me down, you tell me you know things I need to hear but only want to tell me in person, and you bring me to a far corner of GPH that I did not even know existed. And so far I don't even know your name."</span></p>
+<p class="dialog"><span style="color:#e58137">"Ah, my name is Delwart. Pleased to meet you."</span></p>
+<p class="dialog"><span style="color:#be9b00">"And I'm Gladias."</span></p>
+<p class="dialog"><span style="color:#e58137">"I knew that. And your wife is Seila, your children's names are-"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Are you trying to intimidate me?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Actually no, I guess now that I think about it, that was more showing off than anything else. I do apologize."</span></p>
+<p class="dialog">The two went quiet for a couple minutes. Both took off the face covers and hoods from their privacy robes. Gladias started to drink his water and eat his salad. Delwart tapped his own watch against the green circle on the table, and a minute later his own tea, and some kind of rectangular nutrition bar along with a fork, arrived.</p>
+<p class="dialog">Gladias leaned forward again.</p>
+<p class="dialog"><span style="color:#be9b00">"So what do you want?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Do you feel happy with the Steering system lately?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"It has its flaws like any system, but in general it feels fine?"</span></p>
+<p class="dialog"><span style="color:#e58137">"I see, I haven't broken your wall yet. Okay, let's take the Dreadknot concert for example. They're a nice band, they're great fun, right?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yeah, I like them."</span></p>
+<p class="dialog"><span style="color:#e58137">"But a bunch of the Sentinels are trying to push them up into Tier 4, because their lyrics are not gentle enough."</span></p>
+<p class="dialog">Gladias nodded in agreement.</p>
+<p class="dialog"><span style="color:#e58137">"You were brave, voting Tier 3. Most Acolytes would cave to what they think the Sentinels want. You didn't. That's rare."</span></p>
+<p class="dialog"><span style="color:#e58137">"But let's take another example. What do you think about GPH?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"It's clearly a nice place. Not like Veridia, but beautiful and impressive in its own way. It's not for everyone, but I can see why a lot of people like coming here."</span></p>
+<p class="dialog"><span style="color:#e58137">"Well, do you know what their Steering taxes are?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"The Steering taxes are okay, but they really get dinged on the land tax."</span></p>
+<p class="dialog"><span style="color:#e58137">"Exactly. A well-considered argument about how much this place benefits Veridia is worth less than a barely thought-through 'I don't like you'."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what do you propose?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Freedom. Actual freedom. Stop trying to nudge everyone, and let people's true selves come out."</span></p>
+<p class="dialog"><span style="color:#be9b00">"And how can I help?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Are you planning to be a Sentinel or a Keeper if you get accepted in two months?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Was thinking Sentinel so far."</span></p>
+<p class="dialog"><span style="color:#e58137">"Be a Keeper. And just vote to delete every rubric you see."</span></p>
+<p class="dialog"><span style="color:#be9b00">"That's it? That's your plan?"</span></p>
+<p class="dialog"><span style="color:#e58137">"See, there's a lot more Sentinels these days than Keepers. And Sentinels are the people everyone is trying to influence. Why? Because Sentinels get direct connections to specific things in the world. Keepers adjust the global rules. But there's a limit to how much any single rule can affect any single business, and there's like twenty Keepers deciding each on each rule. Being a Sentinel, you have a much more tangible impact. And it's more fun."</span></p>
+<p class="dialog"><span style="color:#e58137">"My program is different. I'm trying to round up as many Keepers as I can, because what I want is systemic change. It's not about one concert or one enclave that has too much purple in it. It's about releasing Veridians from this tyranny of people's prejudices and letting them be themselves."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do you want to remove Graph Funding too?"</span></p>
+<p class="dialog"><span style="color:#e58137">"I think Graph Funding definitely overreaches in a bunch of ways too, but my focus is Steering."</span></p>
+<p class="dialog"><span style="color:#be9b00">"A lot of the open tech Graph Funding supports has been pretty key to helping Dzego modernize to defend itself, do you not think that's important?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Look, I like their people, but really we're playing a dangerous game cutting so close to funding a potential war. We should focus on our own problems first."</span></p>
+<p class="dialog">Delwart stopped speaking, and began to drink his own tea and eat his nutrition bar. Gladias took the moment to ponder Delwart's words, while continuing to drink his water and finishing his salad.</p>
+<p class="dialog"><span style="color:#be9b00">"It's an interesting thought, that the Steering is just manipulating people too much. I don't know if I fully agree with just dropping it all to zero, and especially killing the Graph Funding - which we would have to do, if the Steering taxes went to zero."</span></p>
+<p class="dialog">Gladias paused for a few ticks, and looked at Delwart. Delwart looked back. They each took another sip of their respective drinks.</p>
+<p class="dialog"><span style="color:#be9b00">"But okay, even if I might agree on some parts, why should I listen to you?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Well, I know you, I know where you live, I know how you think. And if I can find out all that, imagine what kinds of things Bluewhale might be able to do. Or, for that matter, the Arctics. I can help protect you. But I will need your help too."</span></p>
+<p class="dialog"><span style="color:#e58137">"Anyway, the deadline for you to submit your final track decision is in about a month. Don't go for being a Sentinel, be a Keeper. Let's just start with that."</span></p>
+<p class="dialog">Delwart stood up, and exited the booth.</p>
+<p class="dialog">Gladias kept the crack in the middle of the curtain slightly open, and watched Delwart go. Just before Delwart disappeared from view, another person wearing a privacy robe exited the adjacent booth, and followed Delwart.</p>
+<p class="dialog">Gladias checked his watch.</p>
+<figure class="fig"><img src="../assets/images/chapter-03-fig-01.svg" alt="格拉迪亚斯与莫夫的位置及移动方向" title="格拉迪亚斯与莫夫的位置及移动方向" loading="lazy" decoding="async"></figure>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-02.html">上一章 · 第二章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-04.html">下一章 · 第四章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第三章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

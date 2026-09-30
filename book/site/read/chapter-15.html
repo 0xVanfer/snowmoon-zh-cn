@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第十五章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第十五章 · Chapter 15 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-14.html">
+  <link rel="next" href="chapter-16.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="15">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第十五章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第十五章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 15</p>
+    <p class="chapter-heading__dateline">自由城，联合城邦 · 3724年火月17日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Freetown, United Cities · 3724 Firemoon 17</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">扬刷过自由城经济研究所的闸机，朝餐厅走去。</p>
+<p class="dialog">天还早，扬刻意没去看当天的任何新闻——让脑子清静些，也好安心享受餐厅屏幕上那场讲座，管它讲什么。</p>
+<p class="dialog">走了一分钟，他到了。</p>
+<p class="dialog">看到屏幕上的内容，他吓得眼睛都直了。</p>
+<blockquote><p>特别播报</p><p>北极帝国入侵并吞并红郡</p></blockquote>
+<p class="dialog">扬开始凝神听记者讲述事情的经过。</p>
+<blockquote><p>今天早上15,500时，大批北极无人机与飞行器在红郡各大城市和军事基地降落；同一时刻，北方发动大规模地面入侵，数千辆载具从前所未见的地下隧道里涌出。</p><p>红郡军方完全没有防备，许多人怀疑高层存在腐败。</p><p>主要战斗持续不到两长时，伤亡非常有限。红郡的驻军如今几乎已全部投降。</p></blockquote>
+<p class="dialog">他看见餐厅里坐着十来个人，乌塔库也在，她看起来和扬一样震惊。</p>
+<blockquote><p>三架政府飞机载着阿尔博总统、总理塞莱迪尔和议会大部分成员试图起飞。三架全被击落。目前的迹象显示无人生还。</p><p>总统之子塔芬德尔据信已被北极俘获。</p></blockquote>
+<p class="dialog">记者停顿片刻，又开口了。</p>
+<blockquote><p>最新消息：</p><p>红郡南部最后一处驻军已同意有条件投降。驻军人员连同另外三十人（包括两名参议员）将获准飞往德文维尔，条件是驻军停止一切自卫抵抗。</p><p>这三架飞机将在五分钟后起飞，也是唯一获准离开的飞机。北极当局不允许任何其他载具进出红郡。他们已切断所有通讯，并正在积极架设干扰设备。</p></blockquote>
+<p class="dialog"><span style="color:#78b249">“现在我们怎么办？”</span>扬低声咕哝道。他这时已经站到了乌塔库的桌边。</p>
+<p class="dialog"><span style="color:#8d92f9">“得把这个威胁当回事。”</span>乌塔库回答。</p>
+<p class="dialog">扬还没来得及移开视线，乌塔库已经在她手持终端上疯狂打起字来。</p>
+<p class="scene-break">梅尔丹，维里迪亚</p>
+<p class="dialog">格拉迪亚斯和塞拉盯着屏幕，费布里克和赫雷达在他们身旁。他们刚在日出时醒来，阳光清透地照进屋来，外面人行道上的树已经拖出长长的晨影。他们睁眼看到的第一件事，就是这条新闻。</p>
+<p class="dialog">兹文还在睡，莉莉还在自己房里。</p>
+<p class="dialog">塞拉掏出手持终端，手忙脚乱地打起字来。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>消息</th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#54a1f9">快告诉我你还在自由城，你没事吧。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>扬</center></td></tr></tbody></table><button>发送</button></div>
+<p class="dialog">她点了发送。</p>
+<p class="dialog">几个嘀嗒后：</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">别担心，我在自由城。</span></td><td>32117</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">我们这边居然还一直挺重视防务的，而且在联合城邦里，自由城离红郡差不多是最远的了，也就银滩和马布利更远一点。</span></td><td>32124</td></tr></tbody></table></div>
+<p class="dialog">塞拉松了口气。</p>
+<p class="dialog">格拉迪亚斯看见塞拉在给扬发消息，把手搭在她肩上安慰她，没有再多说什么。</p>
+<p class="dialog">他的心思很快转到评则上。下个月肯定不会去调整硬件开放度评则了，他想。说不定还得把税率档往上调。</p>
+<p class="dialog">过了一会儿，一股怒火从他心里窜起，直冲德尔瓦特。</p>
+<p class="dialog">塞拉离开房间去叫醒兹文、接上莉莉。不到二十分钟，四个孩子已经在去学校的路上，家里只剩格拉迪亚斯和塞拉。</p>
+<p class="dialog">格拉迪亚斯下到地下室，关上门。</p>
+<p class="dialog"><span style="color:#be9b00">“莫夫，现在怎么办？”</span>他对着颈带低声说。</p>
+<p class="dialog"><span style="color:#00bc96">“显然德尔瓦特在很多事上都错了。下次跟他谈，我们<em>真的</em>有一大堆问题要问。我们要的是直截了当的回答，不是借口。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“记住，问题不只是他在政治上的判断错得离谱。还有我一个半月前查到的东西——他背后那摊事的组织程度之高。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那之后你还追到过他别的行踪吗？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“那之后又只跟到两次。第一次是和一个穿隐私袍的人碰面，不知道是谁，两人聊了很多银聊的事。第二次是和一个掌则人见面，我听出一些关于恐结的谈话。大约一个月前之后就再没有动静了，他要么换了地方，要么藏得高明多了。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“那投票是什么时候？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“第一场大概二十天后。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“德尔瓦特可能会动手，想‘核实’一下你投票的方式对不对。记住掌舵会为此搭起来的那套机制——就是专门防他这一手的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“只有用有效密钥签名的票才算数。”</span>格拉迪亚斯背了出来。<span style="color:#be9b00">“你得跟密钥分配组里5个人中的至少3个碰面，把投票密钥的每一份盲化份额在他们那里登记，才能生成自己的投票密钥。这一步做完之后，哪些密钥有效、哪些无效，只有混淆电路能在它指定的条件下解密出来。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“所以无论是德尔瓦特还是别的什么人——严格说，连我自己也算上——都不会知道是哪个密钥、几个密钥，或者到底有没有密钥成功登记。只有投票结果会被解密。所以德尔瓦特分不出我提交的票哪些是真的、哪些是假的。就算我想向他证明，我也没这个能力。德尔瓦特要想操纵我投的票，就得顶替我的身份，那意味着跑一趟密钥分配组，<em>当面冒充我本人</em>——这很难，因为密钥分配组的意义恰恰在于，里面都是我当面见过的人。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“人——终极的可信硬件。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“你功课做得不错。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“可我也<em>希望</em>这一切都不必用上，德尔瓦特会给我一个说得过去的解释。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“希望不是策略。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“确实不是。”</span></p>
+<p class="scene-break">帕佛盖都，泽国</p>
+<p class="dialog">泽焦急地戳着手持终端上的按键，第五次把消息发出去。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">你还好吗？？？？！<br><br>快告诉我你在哪儿。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">他坐在酒店大堂餐厅的一张桌子旁哭。面前摆着一杯茶和一份米饭配蔬菜。茶他喝得很快，机器人已经续了四次。那份米饭和蔬菜摆在那儿快一长时了，他一口没动。</p>
+<p class="dialog">终于，他收到了回信。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">别担心，我还活着。<br><br>不过看样子我一时半会儿回不了泽国了。</span></td><td>84690</td></tr></tbody></table></div>
+<p class="dialog">这不是泽想要的结果，但比他害怕的结果好太多了。他松了口气。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我找到往外发消息的办法了。<br><br>有个北极士兵，跟他的朋友——也可能是他的 AI，或者别的什么——一起捣鼓出一套办法，能把隐藏的文本消息嵌进他实时回传给指挥部的健康数据里。<br><br>指挥部里另有一个人把这个信号转接进天气数据流，再往上传到卫星。<br><br>他靠匿名替人转发消息，挣了一大堆齐普币。</span></td><td>84714</td></tr></tbody></table></div>
+<p class="dialog">泽擦掉眼泪，开始专注地打字。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">哇。你……跟那个士兵有联系？</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我有个匿名联系的渠道。</span></td><td>84723</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">问问他往健康数据里塞消息，用的是什么编码方式。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">泽想了想，意识到也许轮到自己当老师了。他掏出一块键盘，开始飞快地敲。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">或者说——再一想，他不会回答的。不过你告诉他：随机翻最低有效位，是所有人第一次碰到这个问题时都会先想到的那套办法，但它不是理想解。有时候高位完全可以翻，有时候连翻一个最低有效位都有危险。<br><br>你要做的是：<br><br>* 在实际分布上训练一个语言模型，让它以其余所有位为条件，给出某一位应当是0还是1的概率<br><br>* 把数据切成一个个分桶——分桶务必用解密密钥本身来随机决定——并要求第 i 个分桶内所有位异或的结果等于密文第 i 位。在每个分桶里，用模型找出哪些位的概率最接近50/50——也就是在那个语境里，这一位取0取1都“自然”——然后翻掉那一位，让分桶的异或值对上。<br><br>也就是说，由语言模型来判断哪些位“最不重要”、可以放心翻，而不是永远只动每个数字里最低的那一位二进制数。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">泽往后靠了靠，心里得意：他不仅弄懂并讲清了一个复杂概念，而且是<em>这份活儿恰恰需要的那个复杂概念</em>。</p>
+<p class="dialog">他决定继续说下去，一半出于对自己理解力的得意，一半出于想让更多红郡人把消息偷偷从北极审查者眼皮底下送出去的愿望。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">想走得更远，你可以让分桶部分重叠。比如说：<br><br>* 第一个分桶是0～199<br>* 第二个是20～219<br>* 第三个是40～239<br><br>以此类推，不过记住整个顺序应当是一个伪随机排列。<br><br>另外，每个分桶里只随机挑一半的位置参与异或，这样总能找到一些位，翻掉其中某一位只影响某一个分桶，而不影响它前一个或后一个分桶。比如说，204可以属于第二个分桶，却不属于第三个。<br><br>顺利情况下的算法是：<br><br>* 在0～199里挑一位翻掉，让第一个分桶的异或值对上<br>* 在200～219里挑一位翻掉，让第二个分桶的异或值对上<br>* 在220～239里挑一位翻掉，让第三个分桶的异或值对上<br><br>以此类推……<br><br>但假如说，240～259连续给你20个位，这20个位一个都不适合翻——想象一幅非常清晰的夜空图，连续20个像素本来就该是纯黑——换成健康数据也一样——那你就往回退，在220～239里找一组可翻的位，让最后两个分桶的异或同时对上；如果还不行，就再往回退，在200～239里找一组位，让最后三个分桶的异或都对上，依此类推。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">他随即意识到，上一条消息可能太像是在逞能，于是又补发了一条。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">这招是我从登的密码学教材里学来的。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">我会转给他的。<br><br>不过我猜，他的首要任务会是找到带宽更高的通道来藏数据。优化翻哪些位确实很聪明，但也许只有2倍收益；找到一个更好的数据流，却可能是1000倍收益。<br><br>永远先去拿笨办法带来的1000倍收益，别去追那个聪明绝顶的2倍。</span></td><td>85190</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">这句是我在商学院学的。</span></td><td>85200</td></tr></tbody></table></div>
+<p class="dialog">泽心里对更好的隐写编码更乐观了些：改进幅度说不定真不小。但他还是决定不再纠缠这一点。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">好，那你注意安全。<br><br>要是有什么事我能帮上忙，或者我认识的那些聪明人能帮上忙，只要能让你安全脱身，就跟我说一声。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>德鲁因</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">泽本来想说‘或者昆高培能做的’，甚至想说‘或者泽国那些高明的秘密社团能做的’。但他意识到：第一，让一个外人——尤其是在敌占区的外人——知道这些东西的存在，就是泄密；第二，他并不能完全信任这条联系通道——他甚至还没问过德鲁因一个安全问题。于是说出口的就成了‘我这边认识的聪明人’。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">好。谢谢你这么关心我。</span></td><td>84821</td></tr></tbody></table></div>
+<p class="dialog">泽放下手持终端，呼出一口气。他的目光在餐厅里扫了一圈，发现这时已经没别人了。他终于开始吃那份米饭配蔬菜。</p>
+<hr class="rule">
+<p class="dialog">泽感觉有人把手搭在他肩上。</p>
+<p class="dialog">泽转过身。是苏。</p>
+<p class="dialog"><span style="color:#54a1f9">“听说德鲁因的事，我很难过。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我猜昆高培正在想办法把他弄出来？”</span></p>
+<p class="dialog">泽意识到，严格说，他刚犯了个错：他并没有确认过苏是否知道、或者是否应该知道昆高培的事——在此之前，他只知道登和穆知情。</p>
+<p class="dialog"><span style="color:#54a1f9">“这是我问登的第一件事。”</span>苏开口回答。泽轻轻舒了口气，几乎听不见。<span style="color:#54a1f9">“目前他们弄到了一批能通进红郡的网络链路，一分钟前还收到了德鲁因的消息，所以他至少暂时安全。要是有任何可行的营救方案，我们会告诉你。”</span></p>
+<p class="dialog">泽默默点头。</p>
+<p class="dialog"><span style="color:#54a1f9">“决赛取消了。”</span>苏补充道。</p>
+<p class="dialog"><span style="color:#df74b1">“取消？不是延期？万一他明天就回来了呢？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“就算他回来了，到这个时候也不该再比下去了。我们也不想给观众虚假的希望，也不想让大家分心。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“今年的冠军是你。如果德鲁因真的回来了，我们会给他和你一样的奖杯、一样的奖金。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“不……”</span>泽恳求道。<span style="color:#df74b1">“我不想这样赢。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我知道今天已经晚了，但你还是该去找登谈谈。他这会儿在萨祖都，南边那座山体金字塔里。他可能想让你留在这儿，也可能想让你去帕佛盖。他比我清楚。”</span></p>
+<p class="dialog">泽点头。他明白，这一切当然都比比赛重要。他希望登把他派去帕佛盖，这样就能再见到芬和妈妈。</p>
+<hr class="rule">
+<p class="dialog">泽的车开到山体金字塔一处他从没来过的入口。那是金字塔侧面的一排门，比通常的入口离地面近得多，离城区却更远。车停下来，车门正对着其中一扇。两扇门同时滑开。</p>
+<p class="dialog">泽下车，沿着走廊往前走。</p>
+<p class="dialog">走了一百米，左拐一次、右拐一次，他来到一扇门前。</p>
+<p class="dialog">他把手表贴到一个绿色圆圈上。门开了。</p>
+<p class="dialog">泽看见一个狭长的房间，尽头摆着一张桌子。登独自坐在对面。</p>
+<p class="dialog">泽坐下。</p>
+<p class="dialog"><span style="color:#e58137">“谢谢你来，泽。”</span></p>
+<p class="dialog">泽默默点头。</p>
+<p class="dialog"><span style="color:#e58137">“我觉得，能帮泽国挺过接下来这一年的人少之又少，你是其中之一。”</span></p>
+<p class="dialog">泽睁大了眼睛。他现在是全国民本棋冠军，靠登的密码学教材自学也进展不小，没错，可是……他还是不明白，这些怎么就让他在此刻变得有价值。</p>
+<p class="dialog"><span style="color:#e58137">“上一场民本棋对局，你做了两件事，对取胜至关重要。还记得是什么吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我能想出几个答案，但不确定里面有没有你心里想的那个。”</span></p>
+<p class="dialog"><span style="color:#e58137">“第一，你稳住阵脚打防守，把对手耗到了最后。”</span></p>
+<p class="dialog"><span style="color:#e58137">“第二，你把一条带宽极低的信息通道用到了极致：先把大部分数据预先发布出去——那艘载符飞船——最后只用几个比特的操作，就投放了你战略里最关键的部分。”</span></p>
+<p class="dialog"><span style="color:#e58137">“其实跟你几个月前另一盘棋用的战术很像：你先放出一艘飞船，把几乎所有可能的滑翔机进攻路线都编码进去，再用另一架滑翔机去指定你到底要用哪一条。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“这有什么关系？”</span></p>
+<p class="dialog"><span style="color:#e58137">“我们已经和德鲁因联系上了。你知道我们是怎么做到的吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“其实是他先联系我，告诉我的。有个北极士兵在收齐普币，替人把消息藏进他的健康数据里。”</span></p>
+<p class="dialog"><span style="color:#e58137">“没错。于是所有人都退回到他们能用的最高效、带宽最低的通信形式——纯文本——再把这些全都从他那条通道挤过去。一个士兵的健康数据，撑着几千人的通信。”</span></p>
+<p class="dialog"><span style="color:#e58137">“四分之一长时前，他收的费用突然降了三分之二——我们猜他找到了更高效的数据编码方式。有意思的是，到目前为止，无论他还是别人，都没找到比健康数据更好的通道。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“好吧，那说不定是我干的。我让德鲁因转告那个士兵：拿他自己的健康数据训练一个语言模型，然后在飞行途中往外发健康数据时，按模型的判断翻那些最安全的位，再用分桶异或来编码消息，这么一来，他挑哪一位来翻就有很大自由度，每比特隐藏数据的‘可疑度’也能大大降低，同样的掩护流量里就能塞进更多数据。”</span></p>
+<p class="dialog">登睁大了眼睛。</p>
+<p class="dialog"><span style="color:#e58137">“不过我们没法知道他用的是不是这一招——”</span></p>
+<p class="dialog">泽想起该看一眼手表。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>德鲁因</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">那个北极士兵说谢谢，帮了大忙。</span></td><td>92115</td></tr></tbody></table></div>
+<p class="dialog"><span style="color:#df74b1">“看来就是这一招。”</span></p>
+<p class="dialog"><span style="color:#e58137">“你看，你已经帮上反北极抵抗的忙了。”</span></p>
+<p class="dialog"><span style="color:#e58137">“听着，泽。现在的情况是，我们已经被逼到这一步了。我们不能再继续悄悄提升实力。泽国社会必须从暗处走出来。”</span></p>
+<p class="dialog"><span style="color:#e58137">“影子社会必须变成社会本身，影子政府必须变成政府本身。我们得全速把已经搞出来的所有东西铺遍整个泽国——赶在北极人有机会对我们动手之前。”</span></p>
+<p class="dialog"><span style="color:#e58137">“跟你最相关的那部分——我们需要的那套密码学基础设施，好让我们的协同机制继续运转、该保密的东西继续保密——是由帕佛盖都那边运作的。所以我想让你坐火车回去——苏可以把你的票改到明天——接下来该联系谁，我会发消息告诉你。”</span></p>
+<p class="dialog"><span style="color:#e58137">“眼下，你不妨再想想，还能给那个士兵出什么主意，让他多卖些数据包。这对你的密码学训练，好像比我的教材还管用。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-14.html">上一章 · 第十四章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-16.html">下一章 · 第十六章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Jahn passed through the turnstile in the Freetown Economics Institute, and walked toward the restaurant.</p>
+<p class="dialog">It was still early morning, and Jahn had intentionally not yet looked at any of the news on that day - better to clear his mind, and enjoy whatever the lecture on the restaurant screen would end up being.</p>
+<p class="dialog">After a minute of walking, he arrived.</p>
+<p class="dialog">When he saw what was on the screen, his eyes froze with horror.</p>
+<blockquote><p>Special broadcast</p><p>ARCTIC EMPIRE INVADES AND ANNEXES REDSHIRE</p></blockquote>
+<p class="dialog">Jahn began to listen intently to the reporter relaying the details of what happened.</p>
+<blockquote><p>At 15,500 this morning, a large number of Arctic drones and aircraft landed all across the major cities and military bases in Redshire, timed simultaneously with a massive land invasion from the north with thousands of vehicles coming out of never-before-seen underground tunnels.</p><p>The Redshire military was caught completely unprepared, and many suspect corruption at the highest ranks.</p><p>Major battles lasted less than two longhours, with very limited casualties. Almost all Redshire garrisons have by now surrendered.</p></blockquote>
+<p class="dialog">He saw about ten people sitting in the restaurant, including Utaku, who seemed just as shocked as Jahn was.</p>
+<blockquote><p>Three government aeroplanes containing President Albor, Prime Minister Celedil and most of the parliament attempted to take off. All three were shot down. Current indications suggest no survivors.</p><p>The president's son, Tafindel, is believed to be in Arctic captivity.</p></blockquote>
+<p class="dialog">The reporter paused briefly, and then began speaking again.</p>
+<blockquote><p>JUST IN:</p><p>The last Redshire garrison in the south has agreed on a conditional surrender. The garrison staff, plus thirty other personnel including two senators, will be allowed to fly to Devanvil, in exchange for the garrison discontinuing all attempts to defend itself.</p><p>The three aeroplanes will leave in five minutes, and will be the only aeroplanes allowed to leave. Arctic authorities are not allowing any other vehicles to enter or leave Redshire. They have cut off all communications and are already actively setting up jamming equipment.</p></blockquote>
+<p class="dialog"><span style="color:#78b249">"What do we do now?"</span>, Jahn, by this point standing beside the table with Utaku, mumbled.</p>
+<p class="dialog"><span style="color:#8d92f9">"Take the threat seriously"</span>, Utaku replied.</p>
+<p class="dialog">Before Jahn could look away, Utaku had already begun typing frantically on her hand device.</p>
+<p class="scene-break">Meldan, Veridia</p>
+<p class="dialog">Gladias and Seila stared at the screen with Febric and Hreda beside them. They had just woken up at sunrise, light coming in clean through the window, the trees on the footpath outside already throwing long morning shadows. The news was the first thing they saw.</p>
+<p class="dialog">Zven was still asleep, and Lily was still in her room.</p>
+<p class="dialog">Seila took out her hand device, and began frantically typing.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>Message</th><th>To</th></tr></thead><tbody><tr><td><span style="color:#54a1f9">Please tell me you're in Freetown and you're okay.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Jahn</center></td></tr></tbody></table><button>Send</button></div>
+<p class="dialog">She clicked send.</p>
+<p class="dialog">A few ticks later:</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Jahn</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">Don't worry, I am in Freetown.</span></td><td>32117</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Jahn</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">We've somehow been taking defense seriously here, and Freetown is about as far from Redshire as you can get in the United Cities, except for Silverbeach and Mabuli.</span></td><td>32124</td></tr></tbody></table></div>
+<p class="dialog">Seila sighed with relief.</p>
+<p class="dialog">Gladias saw Seila messaging Jahn, and put his hand on her shoulder to comfort her. He did not respond further.</p>
+<p class="dialog">His mind soon shifted to the rubrics. Now we're definitely not adjusting the hardware openness rubric next month, he thought. Maybe we'll even be increasing the tax brackets.</p>
+<p class="dialog">A moment after that, he flashed with anger toward Delwart.</p>
+<p class="dialog">Seila left the room to wake up Zven and get Lily. Within twenty minutes, the four of them were on their way to school, and Gladias and Seila were alone in the house.</p>
+<p class="dialog">Gladias went down to the basement and closed the door.</p>
+<p class="dialog"><span style="color:#be9b00">"What do we do now, Mov?"</span>, he whispered through his neck band.</p>
+<p class="dialog"><span style="color:#00bc96">"Well clearly Delwart was wrong about a lot of things. And next time we talk to him, we <em>really</em> have a lot of questions to ask. We need a straight answer, not excuses."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Remember, it's not just him turning out to be so wrong on the politics. It's about what I learned a month and a half ago - the sheer level of organization of whatever it is that he's doing."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Did you manage to track him down any more after that time?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Only two more times after that. First was a meeting with someone in a privacy robe, not sure who, and they were talking a bunch about Silverchat. Second was a meeting with a Keeper, I made out some conversation about Dreadknot. Nothing more since about a month ago, he either changed his location or he got much better at hiding."</span></p>
+<p class="dialog"><span style="color:#00bc96">"So when is the vote?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"First one is in about twenty days."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Delwart might make a move to try to 'verify' that you voted in the correct way. So remember the machinery that the Order set up to make sure he can't do that."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Only votes signed with a valid key count"</span>, Gladias recited. <span style="color:#be9b00">"You generate your voting key by meeting at least 3 of 5 people from your Key Allocation Group and registering each blinded share of the voting key with them. Once that's done, the information of which keys are and are not valid is only decryptable by the obfuscated circuit under the conditions that it specifies."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So neither Delwart nor anyone else - technically, not even I - will know which key, how many keys or if any key actually got successfully registered. Only the result of the vote gets decrypted. So Delwart can't tell which votes I submit are real or fake. I don't have the ability to prove that to him, even if I wanted to. For Delwart to be able to take over my votes, he would have to take over my identity, which means going to the KAG and <em>pretending to be me in person</em> - difficult because the whole point of the KAG is that it includes people I've met in person."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Humans - the ultimate trusted hardware."</span></p>
+<p class="dialog"><span style="color:#00bc96">"You've studied well."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But I <em>hope</em> that this all won't be necessary, and Delwart is going to give me some sensible explanation for all this."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Hope is not a strategy."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Indeed it's not."</span></p>
+<p class="scene-break">Pafogai Du, Dzego</p>
+<p class="dialog">Zei anxiously tapped buttons on his hand device, and sent off a message for a fifth time.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">Are you okay????! <br><br> Please tell me where you are.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Deluin</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">He sat crying at a table in the lobby restaurant of his hotel. There was a tea and a rice and vegetable dish on the table in front of him. He had drunk the tea quickly; the robot had already refilled it four times. The rice and vegetables were uneaten for almost a longhour.</p>
+<p class="dialog">Finally, he got a message in response.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Deluin</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">Don't worry, I am alive. <br><br> Though it looks like I'm not going to be getting back to Dzego anytime soon.</span></td><td>84690</td></tr></tbody></table></div>
+<p class="dialog">It was not the outcome Zei wanted, but still much better than the outcome he feared. He breathed a sigh of relief.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Deluin</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">I found a way to send messages out. <br><br> Some Arctic soldier and his friend, or his AI, or something, coded up a way to embed hidden text messages inside real-time health data that he is sending back home to command. <br><br> And someone else in command is relaying that signal into a weather feed, which is then going up to the satellites. <br><br> He's making a whole bunch of zipcoins anonymously rebroadcasting messages for people.</span></td><td>84714</td></tr></tbody></table></div>
+<p class="dialog">Zei wiped off his tears, and started typing intently.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">Wow. Are you ... in touch with this soldier?</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Deluin</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Deluin</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">I have an anonymous link.</span></td><td>84723</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">Ask him how he's encoding the messages that he's putting into his health data.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Deluin</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">Zei thought for a moment, and realized that perhaps the time had arrived for him to become the instructor. He took out a keyboard and started typing furiously.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">Or actually, on second thought, he won't answer. But tell him that randomly flipping the least-significant bits, the strategy that everyone always reaches for when they encounter this problem for the first time, is not the ideal solution. Sometimes higher-order bits are totally fine to flip, and sometimes flipping even a least-significant bit is dangerous.<br><br> What you want to do is: <br><br> * Train a language model on the actual distribution, so that conditional on what all the other bits are, it can give you probabilities for whether a given bit should be 0 or 1<br><br> * Split the data up into buckets - make sure to use the decryption key itself to choose the buckets randomly - and require the bits in the i'th bucket to XOR to the i'th bit in the ciphertext. Within each bucket, use the model to determine which bit's probabilities are closest to 50/50 - meaning both values are "natural" for that bit to have in that context - and flip that bit to make the bucket XOR correct.<br><br>So you're letting the LLM decide which bits are "least significant" and okay to flip, instead of just always taking the lowest-order binary digit in each number.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Deluin</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">Zei sat back briefly, proud that he had managed to understand and explain not just a complicated concept, but <em>the exact complicated concept that was needed for this exact job</em>.</p>
+<p class="dialog">He decided to keep going, out of a feeling of personal pride in his understanding as much as out of a desire to let more people in Redshire sneak information past the Arctic censors.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">If you want to go even further, you can make the buckets partially overlap. Say:<br><br>* the first bucket is 0...199<br>* the second is 20...219<br>* the third is 40...239<br><br>and so on, though remember the whole order should be a pseudorandom permutation.<br><br>Also, choose only a random half of the positions in each bucket to go into the XOR, so there are always bits to flip that affect one bucket but not the bucket before or after it. So say, 204 might be part of the second bucket _but not_ the third.<br><br>The happy-path algorithm is:<br><br>* choose a bit to flip in 0...199 to make the first bucket XOR correctly<br>* choose a bit to flip in 200...219 to make the second bucket XOR correctly<br>* choose a bit to flip in 220...239 to make the third bucket XOR correctly<br><br> and so on... <br><br>But if, let's say, 240...259 gives you 20 bits in a row where _none of them_ are reasonable to flip - think, a very clear picture of a night sky, so you get 20 pixels in a row that are really supposed to be exactly black - or the equivalent of that for health data - then you walk back and try to find a combination of bits to flip in 220...239 that makes both of the last two buckets XOR correctly, and if that fails, you walk back further and try to find a combination of bits to flip in 200...239 to make the last three buckets XOR correctly, and so on.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Deluin</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">He then realized that his last message might have come off too much as him trying to be a hotshot, so he sent a followup.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">I learned that from Den's cryptography textbooks.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Deluin</center></td></tr></tbody></table><button>be</button></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Deluin</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">I'll forward that to him. <br><br> But I suspect that for him, first priority is going to be finding higher-bandwidth channels to hide data inside. Optimizing which bits to flip is really smart but it's maybe a 2x gain, finding a better data stream might be a 1000x gain. <br><br> Always take the dumb 1000x gain before the super-clever 2x gain.</span></td><td>85190</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Deluin</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">I learned that in business school.</span></td><td>85200</td></tr></tbody></table></div>
+<p class="dialog">Zei felt more optimistic about how much of an improvement a better steganographic encoding would be, but decided not to press the point further.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>tie</th><th>dun</th></tr></thead><tbody><tr><td><span style="color:#df74b1">Alright, well stay safe. <br><br>And let me know if there's anything that I can do, or that smart people in my network could do, to help you get out of there safely.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Deluin</center></td></tr></tbody></table><button>be</button></div>
+<p class="dialog">Zei thought about saying "or that the Kungaupei could do", or even "or that advanced Dzegojan secret societies could do", instead. But he realized that first, it would be a breach of confidentiality to let an outsider, especially an outsider now in hostile occupied territory, know about the existence of those things, and second, he couldn't fully trust the connection - he hadn't even asked Deluin a security question yet. And so "smart people in my network" it was.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Deluin</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">Will do. Thank you for caring about me.</span></td><td>84821</td></tr></tbody></table></div>
+<p class="dialog">Zei put down his hand device, and breathed out. His eyes briefly wandered around the restaurant, and he saw that by this point there was no one else there. He finally began eating his rice and vegetable dish.</p>
+<hr class="rule">
+<p class="dialog">Zei felt someone put their hands on his shoulder.</p>
+<p class="dialog">Zei turned around. It was Su.</p>
+<p class="dialog"><span style="color:#54a1f9">"So sorry to hear about Deluin."</span></p>
+<p class="dialog"><span style="color:#df74b1">"I assume the Kungaupei are figuring out how to get him out?"</span></p>
+<p class="dialog">Zei realized that technically he had just committed an error: he had not actually confirmed that Su knew or was supposed to know about the Kungaupei - so far that was just Den and Mu.</p>
+<p class="dialog"><span style="color:#54a1f9">"That was the first thing I asked Den"</span>, Su began to reply. Zei gave out a barely audible sigh of relief. <span style="color:#54a1f9">"So far they've acquired a bunch of internet links into Redshire, and they got a message from Deluin a minute ago, so at least he's safe for now. We'll let you know if there's any kind of rescue plan possible."</span></p>
+<p class="dialog">Zei nodded silently.</p>
+<p class="dialog"><span style="color:#54a1f9">"The finals are cancelled"</span>, Su added.</p>
+<p class="dialog"><span style="color:#df74b1">"Cancelled? Not postponed? What if he comes back tomorrow?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Even if he does, at this point it's just not right to have more games. Also we don't want to give the audience false hope, and we don't want to distract people."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"You're the champion this year. And if Deluin does come back, we'll give him the same trophy and the same prize money that we're giving you."</span></p>
+<p class="dialog"><span style="color:#df74b1">"No..."</span>, Zei pleaded. <span style="color:#df74b1">"I don't want to win like this."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I know it's already late today, but you should go talk to Den. He's in Sadzu Du, in the southern mountain pyramid right now. He might want you here, or maybe in Pafogai. He will know better than me."</span></p>
+<p class="dialog">Zei nodded. Of course this was all more important than the game, he understood. He hoped that Den would put him in Pafogai, so that he could see Fin and his mom again.</p>
+<hr class="rule">
+<p class="dialog">Zei's car arrived at an entrance to the mountain pyramid that he had not been at before. This was a series of doors on the side of the mountain pyramid, much nearer to ground level than the usual entrance, though further from the city. The car stopped, its door lined up perfectly with one of the mountain pyramid doors. The car door and the mountain pyramid door slid open simultaneously.</p>
+<p class="dialog">Zei stepped out, and walked down the hallway.</p>
+<p class="dialog">A hundred meters and a left and right turn later, he arrived at a door.</p>
+<p class="dialog">He put his watch against a green circle. The door opened.</p>
+<p class="dialog">Zei saw a long room, with a table at the end. Den was sitting on the other side, alone.</p>
+<p class="dialog">Zei sat down.</p>
+<p class="dialog"><span style="color:#e58137">"Thank you for coming, Zei."</span></p>
+<p class="dialog">Zei nodded silently.</p>
+<p class="dialog"><span style="color:#e58137">"I think you're one of the very few people who is in a position to help Dzego get through this next year."</span></p>
+<p class="dialog">Zei's eyes opened wide. He was now the national Minpentai champion, and he was getting far in his studies from Den's cryptography books, yes, but ... he still did not know how that made him valuable at this exact moment.</p>
+<p class="dialog"><span style="color:#e58137">"In your last Minpentai game, you did two things that were crucial to winning. Do you remember what they are?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I can think of a few answers, but I'm not sure if any of them are what you had in mind."</span></p>
+<p class="dialog"><span style="color:#e58137">"First, you hunkered down and played defense, and outlasted your opponent."</span></p>
+<p class="dialog"><span style="color:#e58137">"Second, you made the most out of a very limited-bandwidth information channel, by pre-publishing most of the data - the symbol-carrying spaceship - and then using only a few bits of manipulation at the end to deploy the most important parts of your strategy."</span></p>
+<p class="dialog"><span style="color:#e58137">"Actually a very similar tactic to what you used in your other game months earlier, when you sent out a spaceship that encoded basically every possible glider attack strategy, and then another glider to choose which specific one you wanted to use."</span></p>
+<p class="dialog"><span style="color:#df74b1">"How is this related?"</span></p>
+<p class="dialog"><span style="color:#e58137">"We have contact with Deluin. Do you know how we accomplished that?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Actually, he got in touch with me and he told me. Some Arctic soldier is charging people zipcoins to hide their messages in his health data."</span></p>
+<p class="dialog"><span style="color:#e58137">"Correct. And so everyone is dropping down to the most efficient, lowest-bandwidth form of communication they can use - raw text - and pushing all that through him. One soldier's health data, communications for thousands of people."</span></p>
+<p class="dialog"><span style="color:#e58137">"A quarter longhour ago the rates he was charging suddenly dropped by two thirds - we suspect he found some more efficient way to encode data. Interestingly enough neither he nor anyone else has found any better channel than health data so far."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Okay, now I wonder if that was me. I told Deluin to tell the soldier to train an LLM on his own health data and then modify the health data that he is sending out in-flight by flipping the bits that the LLM says are safest to flip, and using XOR over buckets to encode the message so he has a lot of freedom in choosing which bit to flip. Much better for reducing the 'suspiciousness' per bit of hidden data encoded, so he could afford to hide more data inside the same cover traffic."</span></p>
+<p class="dialog">Den's eyes opened up.</p>
+<p class="dialog"><span style="color:#e58137">"Well we have no way to know if he used that specific trick-"</span></p>
+<p class="dialog">Zei remembered to check his watch.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Deluin</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#e58137">Arctic soldier says thanks, it helped a lot.</span></td><td>92115</td></tr></tbody></table></div>
+<p class="dialog"><span style="color:#df74b1">"Looks like he did."</span></p>
+<p class="dialog"><span style="color:#e58137">"See, you've helped the anti-Arctic resistance already."</span></p>
+<p class="dialog"><span style="color:#e58137">"Look, Zei. What's happening now is, our hand has been forced. We can't just keep improving our capabilities secretly anymore. Dzegojan society has to come out of hiding."</span></p>
+<p class="dialog"><span style="color:#e58137">"The shadow society has to become the society. The shadow government has to become the government. We have to sprint to deploy everything that we have figured out across all of Dzego - before the Arctics can make any moves on us."</span></p>
+<p class="dialog"><span style="color:#e58137">"The part of this most relevant to you - the cryptographic infrastructure we need so that our coordination can keep functioning and we what needs to be secret can stay secret - is run out of Pafogai Du. So I want you to take the train back - Su can reschedule your ticket for tomorrow - and I'll message you about whom you should reach out to next."</span></p>
+<p class="dialog"><span style="color:#e58137">"For now, maybe see if you can come up with any more ideas for that soldier to sell more packets. That seems to be even better cryptography training for you than my textbooks."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-14.html">上一章 · 第十四章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-16.html">下一章 · 第十六章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第十五章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

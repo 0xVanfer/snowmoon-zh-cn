@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第三十二章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第三十二章 · Chapter 32 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-31.html">
+  <link rel="next" href="../toc.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="32">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第三十二章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第三十二章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 32</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3725年雨月12日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3725 Rainmoon 12</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯和塞拉并肩走在卡利马尔的那条小路上。到这时候，这条路他们已经走过几百遍了。小路被树木罩着，两侧都是石头房子。</p>
+<p class="dialog">左边，一名男子正爬上一架靠在树上的高梯。爬到梯顶，他开始拧下装在那里的监控摄像头。拧完，他随手把摄像头朝地上的箱子一扔——箱子在他下方好几米处。这一扔不偏不倚，正好落进箱里。摄像头撞上箱里已有的几十台摄像头，发出哐的一声脆响，格拉迪亚斯和塞拉听得清清楚楚。男子随即下梯。</p>
+<p class="dialog">他们继续往前走。路过一家商店——格拉迪亚斯记得，就在几个月前，这家店还匆匆把大半货品换成了应急储备口粮。这一次，占住前排货架的是一种北林特有的红花，居民们买它来庆祝该省解放。</p>
+<p class="dialog">店旁贴着一张广告：</p>
+<blockquote><p>本店现供应鲜水中的鲜水，直接从北极帝国核心领土缴获！</p><p>今天就尝尝最新的海德菲尔水，灌装自塔尔杜尔的泉眼！</p><p>尽享胜利的战利品。今天就买海德菲尔。</p></blockquote>
+<p class="dialog">路渐渐钻进茂密的灌木丛，再往前是一条空中步道，底下是繁忙的高速公路。左侧能看见一座覆满树木的山。几栋约15层高的公寓楼从树梢上高高探出，外形和装饰像放大的中世纪城堡塔楼，只是侧面窗户多得多。</p>
+<p class="dialog">过了空中步道，路钻进了隧道，格拉迪亚斯和塞拉来到一个 Y 字形路口。他们向左拐，往前走，直到小路重新回到地面，再向右拐。格拉迪亚斯看了看手表上的导航。他其实从没<em>走着</em>去过议会。</p>
+<p class="dialog">20分钟后，他们到了那栋巨大的圆形建筑。格拉迪亚斯把手表贴上绿色圆圈，门开了。楼里的路线他记得很清楚：直走，右拐，再直走，左手第三扇门。</p>
+<p class="dialog">他又贴了一次手表，门开了。</p>
+<p class="dialog">韦尔多和泽都坐在办公室里。两人一齐转头看向格拉迪亚斯和塞拉。</p>
+<p class="dialog"><span style="color:#a38af2">“格拉迪亚斯，塞拉，欢迎回来！”</span>韦尔多热络而亲切地招呼道。</p>
+<p class="dialog"><span style="color:#be9b00">“韦尔多，又见到你真好！”</span></p>
+<p class="dialog"><span style="color:#a38af2">“请坐，请坐。”</span></p>
+<p class="dialog">一台机器人滑进房间。</p>
+<p class="dialog">格拉迪亚斯转头看了机器人一眼。<span style="color:#be9b00">“dia jie fe kai ja cu dze kai lin pan”</span>，他一字一句、刻意咬清字音地对机器人说。</p>
+<p class="dialog">机器人嗡了一声，出了房间。</p>
+<p class="dialog"><span style="color:#a38af2">“厉害，格拉迪亚斯。连我都做不到。”</span></p>
+<p class="dialog">韦尔多沉默了片刻，又开口。</p>
+<p class="dialog"><span style="color:#a38af2">“好吧，我承认我露怯了。dze kai lin pan 到底是什么？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“菜和饭。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“啊对，绿植线面包。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“对了，泽，我们什么时候开始用光尺取代米？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“芬跟我说，班孙培正忙着把泽国的隐私和安全习惯全面提到新标准上。大概10天后，他和几个人真的要来维里迪亚，看看能不能帮你们也把这一块补上。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“不过我猜也不用等他们。你要是喜欢光尺，今天就可以用起来。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“看来他们说得对。换成光尺不是眼下最要紧的事。”</span></p>
+<p class="dialog">韦尔多的语气忽然严肃起来。</p>
+<p class="dialog"><span style="color:#a38af2">“这个月有很多人在庆祝。一个世纪以来，北极帝国第一次被打败。北林解放了。塔尔杜尔也已经有不少人接受了我们的条件，帮我们把缴获的北极技术开放出来，好让我们真正从中受益、学到东西。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“但别忘了——这只是第一个回合。而且就算这一个回合，我们也没有全赢。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“北极人丢了北岸，丢了塔尔杜尔，但保住了红郡。他们在技术上失去了一些领先，可过去这几个月我们看清了，他们在别的技术领域进步飞快。”</span></p>
+<p class="dialog">韦尔多叹了口气，接着往下说他那番提醒。</p>
+<p class="dialog"><span style="color:#a38af2">“我们以为自己拥有的隐私，其实并不存在。数字世界里还行——网络安全和密码学如今非常强，但别忘了，语言模型永远存在普通软件没有的攻击面。物理世界就难得多。物理世界里的信息，从根上就更容易漏出去。就连我们在键盘上敲下的一次按键，也有几十种途径泄漏到外面的世界。我们可以努力去对抗这一点——尤其在自己的私人空间里——但能做到什么程度，是有上限的。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“听说已经有一批泽国的新摄像头在运来的路上，内置了硬性保证，能传什么、不能传什么都写死在里面。维里迪亚国立大学正在琢磨检查它们的方法，好像想直接照搬泽国的做法。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“哦，原来是这么回事？我们来的时候在卡利马尔看见有人拆了一百台摄像头。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“看来是。”</span></p>
+<p class="dialog">格拉迪亚斯决定换个话题。</p>
+<p class="dialog"><span style="color:#be9b00">“你觉得我们的政府怎么样？”</span>他问韦尔多。</p>
+<p class="dialog"><span style="color:#a38af2">“掌舵会管用，合议庭管用，图谱资助一直也没问题。可凡是更透明的那部分，全都垮了。照这个趋势，我猜政府往后做的每件事都会变得更私密。更数字优先，更多封死的隔信室，更多隐私袍。”</span></p>
+<p class="dialog">韦尔多叹了口气，对他所预言的这番局面，显然至少有些不满。</p>
+<p class="dialog"><span style="color:#a38af2">“这里有一种根本性的张力，我们的政府体制从它诞生的第一天起就在跟它较劲。在一个彼此连通的世界里，一个政府怎么可能既对本国公民负责，又不必同时对内有钱有势的利益集团、对外部的敌人也‘负责’？这两拨人都盯着最薄弱的环节下手，把它孤立起来，施压、扭弯，让它为自己的目的服务。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“我们得不断改进自己对透明和问责到底意味着什么的理论。在政府眼下这一版里，答案是一端的遴选程序，加上另一端的宣谕使。到了下一版，也许就得换别的了。我觉得那一定会牵扯到类似银聊民调的东西，或者某种带宽更高的机制，用来搞清人们的目标；还要有涉及 AI 的机制，来想清楚怎么达成那些目标。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“泽，你怎么看？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“AI 是这场讨论的起点，不是答案。什么样的 AI？怎么训练？谁来训练？我们给它什么指令？谁给 AI 喂信息，谁又介入 AI 的思考过程去帮它？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“那你会怎么回答？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我会先退一步，想想问题到底出在哪儿。我想我已经发现了一个。维里迪亚这些机构按今天的样子，并没有真正内置‘预测未来’这个概念。它们谈的全是当下，是当下的民意。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“没有任何一个位置要求你站起来说——如果我们做 X，那么就会发生 Y——说对了你就往上升，说错了你就往下掉。最接近的是见习官，他们必须预测监审官。可就算在那儿，他们预测的也不是真实世界，而是监审官。所以那还是在预测别人的看法。你把人和人对齐了，却没有把人和现实对齐。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那正是 AI 能做得很好的地方——也正是 AI 已经为我们<em>做到</em>的地方。但我觉得不该只挑一个 AI，而应该让它们之间有某种公开竞争。AI 应该是棋手，不是棋局。让不同的人选不同的 AI、用不同的方式跟它们协作，再让它们为目标负责。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“一个社会该有目标吗？”</span></p>
+<p class="dialog">泽盯着韦尔多。</p>
+<p class="dialog"><span style="color:#df74b1">“什么意思？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“说到有目标，北极人比我们任何一个国家都强。他们清楚知道自己要什么，一心一意去实现。你要是造一台完美的目标执行机器，造出来的就是北极人。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“所以才需要另外那个部件——能把不同人的目标汇集起来、加在一起，这样你才知道自己实现的是人民真正的目标，而不是某一个皇帝的目标。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“可要是你想出来、写在纸上的任何目标，最后都长成那副样子呢？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“什么意思？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“要是人本来就是这样呢——我们并不完全知道自己想要什么，而任何想把它定死成一块的尝试，只要推得够远，终究会崩掉？我们的评则就是这样：它们能管用一阵子，最后总会被人钻空子；我们就调整评则，然后再来一遍。要是这根本躲不掉呢？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那还有什么别的办法？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“想一个装满水的湖。湖里的每一个水分子都各自行动。没有总体规划，只有万亿个分子做着万亿个梦。这个湖自有它的和谐与平衡，我们都看得见。但那不是因为有人在强迫这种平衡发生，而是因为只要湖面的任何一处哪怕短暂地低于别处，重力就会把水引过去，各处的高度便又齐平了。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“但同样地，冬天来临时，这些分子会聚到一起，结成厚厚的晶体，变成无法穿透的冰。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你物理学得不错。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“我女儿刚开始学化学，跟我讲了不少。她的朋友觉得她太用功，我倒一直鼓励她——我跟她说，只要肯下功夫，有一天她也能像你一样。”</span></p>
+<p class="dialog">泽脸红了。</p>
+<p class="dialog"><span style="color:#a38af2">“所以我想，理想就是这样：一个能行日常之善、而不行帝国与征服之恶的社会。既能抵抗北极帝国，又不至于自己变成那样的帝国，而是一步一步和平地繁荣起来。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“想要什么，很难有一致意见；不想要什么，就容易一致得多。我觉得我们的一切都建立在这份不对称上。冬天，我们朝同一个方向对齐，能结成晶体，能防御、能反击。夏天，我们像水一样流动。去中心化的力量——市场、开放的思想讨论、开放的科学、文化与法律——在无人主导的情况下，让我们那万亿个梦想的万亿份力量相加多于相减。我们会去调整它们的规则，但只小心翼翼地、慢慢地调。这样几十年又几十年下来自然而然取得的温和进步，比满足任何目标都更值钱。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那要是有时候，湖的不同部分必须同时既是水又是冰呢？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“也许吧。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“那要是湖面每一点都跟别处完全等高，本身也是一种我们不想要的整齐划一，有时候我们不如结成雪球、让它们漂着，反倒更好呢？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“那也可能。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“塞拉，你觉得我们该往哪方面多使点劲？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“北极人有竞争——他们在意谁强谁弱，鼓励人们互相挑战、拼命往上爬——但他们不懂合作。他们是冰，却没有水。维里迪亚有合作，可我们也许不懂竞争。我们能当水，却还不知道怎么当冰——就连我们的水，也不总是流得如我们所愿。其实我觉得，真正想明白怎么同时拥有两者、并让它们彼此服务的，是泽国。我们该多向他们学。”</span></p>
+<p class="dialog">她深深叹了口气。过了一会儿，韦尔多又开口。</p>
+<p class="dialog"><span style="color:#a38af2">“这些都是好想法。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“泽，你愿意留下来，帮我们琢磨琢磨其中一些问题吗？”</span></p>
+<p class="dialog">泽想了一会儿。</p>
+<p class="dialog"><span style="color:#be9b00">“穆和苏肯定能把昆高培打理得很好”</span>，格拉迪亚斯插话道。</p>
+<p class="dialog"><span style="color:#df74b1">“当然愿意！不过你也许会发觉，芬比我更能帮上忙。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“那就多谢了。你知道，议会现在明白了，他们现有那套思路已经到头了。很多参议员辞了职。还留在里面的——比如我——想要新想法。我们愿意听。”</span></p>
+<p class="dialog">韦尔多站起身，慢慢走到办公室侧墙上印着的一幅世界地图前。</p>
+<p class="dialog"><span style="color:#a38af2">“这就是我们的世界。9000万人。格拉迪亚斯、塞拉、泽，你们有没有想过，如果这里有9亿人，或者90亿人，会是什么样子？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“没想过。你为什么这么问？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“人口越多，新技术的发明就越快。中世纪之所以那么停滞，今天之所以走得这么快，原因都在这里。但不管人口多大，每个人适应技术的速度还是一样的。也许我们之所以能适应得这么好——根除计算机病毒，给一切加上这么多隐私和可验证性，把社会优化得这么美、这么健康——只是因为这里没有90亿人把技术推得更快、把那个必须接受技术的社会搞得更加复杂。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“有意思。你觉得有一天我们会有90亿人吗？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“不是有一天，是很快。而且不是人，是机器人。也不是90亿，是9万亿。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“我担心的就是这个。AI 真的会改变一切。到目前为止，进步还算温和，没有人失业，感觉更像是所有人都被提拔成了管理者——有时是修理工。但到了某个时刻，一旦 AI 几乎能做人类能做的一切，哪怕效率只有百分之几，我们的人口就不再是约束了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那我们怎么办？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“这个嘛，如果北极人一直领先下去，我们其实没多少实力来回答那个问题。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“要想重新回到平衡，我们就得更擅长渗进<em>他们</em>那边。对他们的社会和技术多看出些门道，确保他们每有一点进展，我们都能知道。弱者要隐私，强者要透明。有塔尔杜尔那些人帮忙很好，也希望红郡那边假装投靠北极人、其实愿意多给我们递情报的，远不止德鲁因一个。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“博弈论里有个已知的结论”</span>，泽插话道。<span style="color:#df74b1">“如果两个玩家困在一局既有合作又有竞争的博弈里，那么只要他们至少能部分读懂对方的心思，就能把双方的合作抬到比原来更高的层次。也许那才是该指望的结果。随着时间过去，我们会更了解彼此，会互相学习，最后真正更懂对方。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“我没这么乐观。北极皇帝很不痛快。他现在拿我们没办法，但肯定在盘算。会有下一个回合。可能是5年后，也可能是20年后。只要我们在技术上至少不掉队，就能活下去。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你觉得我们该设法拖慢<em>他们</em>吗？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“把他们一个世纪以来对泽国做的事，照样对他们做一遍？倒也不算最坏的主意。”</span></p>
+<p class="dialog">泽叹了口气。</p>
+<p class="dialog"><span style="color:#df74b1">“我们能在他们的压力下继续前进，他们就一定能在我们施加的任何压力下继续前进。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你知道，这一切走到后期会变得很疯。到了某个时候，我们终究会有虫子、苍蝇那么大的无人机，在地下钻、在空中飞、在海里游。我们会有现在根本想象不出的新型基因工程生命——既为和平，也为战争。我们中的一些人也许会被上传，住在计算机里。不是今年，也不是接下来几年，但一百年内一定会。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“也许两百年后就会稳定下来。到那时我们已经弄清每一种尺度上最理想的无人机形态：最大的有飞机那么大，甚至是漂浮在太空里的空心小行星；最小的则小到跟病毒之间再没有空隙。一旦我们顶到天花板，就不会再有更强的力量能打败它们。只剩下庞大的分布式免疫系统，保护我们的星球、我们的动物、我们的树木，还有我们自己。我们会更明智，几乎所有人都会选择和平而不是战争，不肯选的人也没有任何途径把意志强加于人。每个人就过自己想过的生活。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我只盼着能有和平”</span>，塞拉补了一句。<span style="color:#54a1f9">“这一大堆问题：基因工程、上传、走向星辰——要是我们因为害怕，每一步都赶着走，我不觉得能得出对的答案。我不确定自己想不想上传。但一年前，我也不确定自己想不想活过一百岁。这些事都该是我们深思熟虑后的选择，也该尊重那些跟我们选得不一样的人，而不是为了在战争里活下去而仓促做出的决定。”</span></p>
+<p class="dialog">韦尔多又接上了话。</p>
+<p class="dialog"><span style="color:#a38af2">“我们也许会有那种和平，也许不会。可以盼望最好的结果，但也得为所有可能做好准备。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你知道，几天前白跟我说，她在考虑去塔尔杜尔待一年——正是为了更好地理解北极人怎么想，看看能不能找到通往那种和平的路。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“这听着比德鲁因干的事让人放心多了。我支持她。”</span></p>
+<p class="dialog">门开了。一台机器人滑到格拉迪亚斯身边，端着他的茶，还有米饭和蔬菜。格拉迪亚斯双手接了过来。他向机器人道了谢，机器人又滑出了房间。</p>
+<p class="dialog"><span style="color:#a38af2">“想上楼去屋顶看看吗？”</span>韦尔多问。</p>
+<p class="dialog"><span style="color:#df74b1">“好啊”</span>，泽答道。</p>
+<p class="dialog">格拉迪亚斯、塞拉和泽站起身。韦尔多出了房间，沿着走廊往前走。三人跟在后面，格拉迪亚斯仍是一手端着茶，一手端着他的饭。</p>
+<p class="dialog">韦尔多领他们上了一段楼梯，走到一扇自动打开的门前。他们走了出去。</p>
+<p class="dialog">左边是梅尔丹的主要商业区。各式风格的建筑都有：有些在美学上模仿某种更古老、近乎中世纪的东西，另一些则明明白白地现代、未来。那栋像飞机的建筑在楼群里格外扎眼，稍微煞了点风景。只有你自己站在地面上的时候，树木才遮得住它，格拉迪亚斯想。</p>
+<p class="dialog">商业区再往左，是灰紫色的大梅港。整个大梅港是块将近1公里见方的区域，从他们站的地方能清楚看到里面许多建筑。而在商业区的右缘，格拉迪亚斯辨认出了那座大型演唱会场馆。</p>
+<p class="dialog">正前方是卡利马尔区。从他们站的地方看去，那跟一片森林差不了多少。高大的树木盖住了大半区域，只有几栋建筑勉强从树顶探出一点。格拉迪亚斯飞快扫了一圈，认出了银聊的总部。</p>
+<p class="dialog">右边是那座覆满树木的山。他们已经上到半山，比梅尔丹大部分地方高出约40米。但在他们右侧约200米处，山势才开始真正向上攀升。从他们所在的位置，那种仿中世纪城堡塔楼的公寓楼只能看见大约一半。格拉迪亚斯想，山凑近了看，要大得多、也压人得多。</p>
+<p class="dialog"><span style="color:#a38af2">“大概没有北林的景色那么美吧？”</span>韦尔多问。</p>
+<p class="dialog"><span style="color:#be9b00">“我喜欢这里的绿。要我在北边待着，几个月见不到绿、只有雪，我大概受不了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“再说，梅尔丹是我的家。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-31.html">上一章 · 第三十一章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="../toc.html">返回目录</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias and Seila walked together along the same path through Kalimar that they had by this point taken hundreds of times. The path was covered with trees and surrounded by stone houses on both sides.</p>
+<p class="dialog">To their left, they saw a man climbing a tall ladder leaning against a tree. Once he reached the top of the ladder, he began unscrewing a security camera that was located there. Once he finished, he unceremoniously threw the camera into a box that was several meters below him on the ground. The throw landed perfectly. Gladias and Seila heard a loud clang as the camera crashed against the dozens of other cameras that were already in the box. The man immediately proceeded to climb down the ladder.</p>
+<p class="dialog">They continued walking. They passed by a store, one that Gladias had remembered seeing hastily replace much of its inventory with emergency preserved food rations only months earlier. This time, the inventory item that took up the front shelves was a particular type of red flower that was native to Northglade, that residents were buying to celebrate the province's liberation.</p>
+<p class="dialog">Taped to the side of the store, there was an advertisement:</p>
+<blockquote><p>We are now offering the freshest of fresh water SEIZED from the CORE TERRITORY of the ARCTIC EMPIRE.</p><p>Get the latest Hydrafill water, bottled at the springs of Thaldur, today!</p><p>Enjoy the spoils of victory. Buy Hydrafill.</p></blockquote>
+<p class="dialog">The road transitioned to dense shrubbery, and then to a sky bridge overlooking a busy highway. To the left, they could see a mountain covered with trees. A few apartment buildings about fifteen storeys tall, decorated and shaped like oversized medieval castle towers though with far more windows on the sides, poked up high above the trees.</p>
+<p class="dialog">After crossing the sky bridge, the road transitioned into a tunnel, and Gladias and Seila arrived at a Y-shaped intersection. They turned left, walked forward until the path came back up above ground, and then turned right. Gladias checked his watch for directions. He had never actually <em>walked</em> all the way to parliament before.</p>
+<p class="dialog">Twenty minutes later, they arrived at the large circular building. Gladias tapped his watch against the green circle, and the doors opened. Inside the building, he remembered the directions well. Forward, then right turn, then forward, then third door on the left.</p>
+<p class="dialog">He tapped his watch again, and the door opened.</p>
+<p class="dialog">Verdow and Zei were both sitting inside the office. They both turned their heads toward Gladias and Seila.</p>
+<p class="dialog"><span style="color:#a38af2">"Gladias, Seila, welcome back!"</span>, Verdow exclaimed with a warm friendly tone.</p>
+<p class="dialog"><span style="color:#be9b00">"Verdow, good to see you again!"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Please, please sit down."</span></p>
+<p class="dialog">A robot slid into the room.</p>
+<p class="dialog">Gladias briefly turned to face the robot. <span style="color:#be9b00">"dia jie fe kai ja cu dze kai lin pan"</span>, he told the robot in a deliberately clear tone.</p>
+<p class="dialog">The robot buzzed, and left the room.</p>
+<p class="dialog"><span style="color:#a38af2">"Impressive, Gladias. Even I would not have been able to do that."</span></p>
+<p class="dialog">Verdow briefly went silent, and then spoke up again.</p>
+<p class="dialog"><span style="color:#a38af2">"Okay, I'm embarrassed. What is dze kai lin pan?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Vegetable and rice."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Ah right, green plant line bread."</span></p>
+<p class="dialog"><span style="color:#a38af2">"By the way Zei, when are we going to start switching over from meters to lightfeet?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Fin tells me the Bansunpei is completely busy on getting Dzego's privacy and security habits fully up to the new standards. In about ten days he and some others are actually going to come here to Veridia, and see if they can help you guys get up to speed on those things too."</span></p>
+<p class="dialog"><span style="color:#df74b1">"But I guess we don't have to wait for them, if you like lightfeet you can just start using lightfeet today."</span></p>
+<p class="dialog"><span style="color:#a38af2">"I guess they're right. Switching over to lightfeet isn't the highest priority right now."</span></p>
+<p class="dialog">Verdow's tone suddenly became more serious.</p>
+<p class="dialog"><span style="color:#a38af2">"A lot of people are celebrating this month. For the first time in a century, the Arctic Empire has been defeated. Northglade is free. And we already have many people in Thaldur taking up our offers and helping open up the Arctic technologies we captured so that we can properly benefit and learn from them."</span></p>
+<p class="dialog"><span style="color:#a38af2">"But we have to remember - this was only the first round. And even this round, we did not fully win."</span></p>
+<p class="dialog"><span style="color:#a38af2">"The Arctics lost Northshore and lost Thaldur, but they kept Redshire. They lost some of their lead in technology, but we've learned over the past few months that they are rapidly gaining in other kinds of technology."</span></p>
+<p class="dialog">Verdow sighed, and then continued giving his cautionary note.</p>
+<p class="dialog"><span style="color:#a38af2">"The privacy that we thought we had, we do not actually have. In the digital world, we're okay - cybersecurity and cryptography are amazing now, though we have to remember that language models will always be attackable in ways that regular software is not. In the physical world, it's much harder. Information in physical reality is fundamentally much more leaky. There are dozens of ways even our keystrokes on our keyboards leak out into the world outside. We can make an effort to fight this - especially in our private spaces - but there's a limit to how much we can succeed."</span></p>
+<p class="dialog"><span style="color:#df74b1">"I hear there's already a batch of the new cameras from Dzego flying in, with built-in hard guarantees of what information they can and can't transmit. VNU is figuring out the process for inspecting them. They seem to want to just copy the way that Dzego has been doing it."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Ooh, so that's what it was? We saw someone unscrewing a hundred cameras in Kalimar when we were walking to get here."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Looks like it."</span></p>
+<p class="dialog">Gladias decided to change to a different topic.</p>
+<p class="dialog"><span style="color:#be9b00">"What do you think about our government?"</span>, he asked Verdow.</p>
+<p class="dialog"><span style="color:#a38af2">"The Order of Steering worked, the Courts worked, Graph Funding has been fine. But everything more transparent has been broken. By default, I expect that everything the government does is going to become even more private going forward. More digital-first, more sealed anti-transmission rooms, more privacy robes."</span></p>
+<p class="dialog">Verdow sighed, clearly at least somewhat unhappy with the state of affairs that he was predicting.</p>
+<p class="dialog"><span style="color:#a38af2">"There's a fundamental tension here that our system of government has been grappling with since the day it was first created. In an interconnected world, how is it even possible for a government to be accountable to its own citizens, without also being 'accountable' to powerful financial interests on the inside and adversaries on the outside, both of which are trying to press at the weakest point, isolate it and pressure and twist it to serve their own ends?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"We need to keep improving our theory of what transparency and accountability even mean. In this current iteration of our government, the answer has been the selection process from one end, and Heralds from the other end. In the next iteration, it might have to be something else. I think it will have to involve something like Silverchat polls, or maybe something even higher bandwidth, to understand people's goals, and something involving AI to figure out how to achieve those goals."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Zei, what do you think?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"AI is the start of the conversation, not the answer. What kind of AI is it? How do we train it? Who trains it? What instructions do we give it? Who feeds the AI information, and who intervenes in the AI's thought process to assist it?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"How would you answer that?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I would first take a step back and ask what the problems are. And I think I have noticed one. Veridian institutions, as they exist today, don't really have a built-in concept of predicting the future. It's all about the present, and public opinion in the present."</span></p>
+<p class="dialog"><span style="color:#df74b1">"There's no position where you have to stand up and say - if we do X, then Y will happen - and you rise up if you're right, and fall if you're wrong. The closest is Acolytes, that have to predict the Sentinels. But even there, they're not predicting the real world. They're predicting Sentinels. So they're still just predicting other people's opinions. You've aligning people to each other, but you're not aligning people to reality."</span></p>
+<p class="dialog"><span style="color:#df74b1">"That's where AI could do very well - it's where AI already <em>has</em> done very well for us. But I don't think we should pick one AI, we should have some kind of open competition of them. AI should be a player, not the game. Let different people choose different AIs and different ways of working with them, and hold them accountable to the goals."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Should a society have goals?"</span></p>
+<p class="dialog">Zei stared at Verdow.</p>
+<p class="dialog"><span style="color:#df74b1">"What do you mean?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"The Arctics are better at having goals than any of our nations. They know exactly what they want, and are single-minded about achieving it. If you make a perfect goal-executing machine, the Arctics are what you get."</span></p>
+<p class="dialog"><span style="color:#df74b1">"That's why you need the other piece - being able to gather together different people's goals and add them up, so you know that you're achieving the actual goals of the people, and not just one emperor."</span></p>
+<p class="dialog"><span style="color:#a38af2">"But what if any goal you come up with and write down on a piece of paper ends up looking like that?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"What do you mean?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"What if part of the human condition is that we don't fully know what we want, and any attempt to crystallize it into one piece breaks down if you push it far enough? We see this with our rubrics: they work for some time, then eventually they get gamed, and then we adjust the rubrics, and repeat. What if that's unavoidable?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Then what's the alternative?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Think of a lake, full of water. Every molecule of water in the lake acts independently. There is no master plan. There are only trillions of molecules dreaming trillions of dreams. The lake has a harmony and balance to it, we can all see that. But it's not because anyone forces that balance to happen, it's because if any one part of the lake's surface ends up lower than the other parts for even a brief moment, then gravity will attract water to flow in, and the height everywhere will be the same again."</span></p>
+<p class="dialog"><span style="color:#a38af2">"But also, when winter comes, the molecules come together, into thick crystalline structures of impenetrable ice."</span></p>
+<p class="dialog"><span style="color:#df74b1">"You understand physics well."</span></p>
+<p class="dialog"><span style="color:#a38af2">"My daughter is starting to study chemistry, she has been telling me a lot about it. Her friends think she's over-working, but I've been encouraging her - I told her that if she studies hard, one day she can be just like you."</span></p>
+<p class="dialog">Zei blushed.</p>
+<p class="dialog"><span style="color:#a38af2">"So that's what I think the ideal is. A society that can do the good of ordinary life but not the evil of empire and conquest. One that can both resist the Arctic Empire, and avoid becoming one, and instead prosper peacefully one step at a time."</span></p>
+<p class="dialog"><span style="color:#a38af2">"It's hard to agree on what we want, it's easier to agree on what we don't want. I think that's the asymmetry that we build everything on top of. In the winter, we all align in the same direction, and we can form the crystal, and defend and strike back. In the summer, we flow like water. Decentralized forces - markets, open intellectual discourse, open science, culture and law - passively make the trillion forces of our trillion dreams add more often than they subtract. We adjust their rules over time, but only carefully and slowly. The natural, gentle progress we make from decades upon decades of that is worth more than satisfying any goal."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What if sometimes different parts of the lake have to be water and ice at the same time?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"That may be."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"And what if a lake where every point is at the exact same height as every other point is also a kind of uniformity that we don't want, and sometimes it's better if we form snowballs and let them float?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"That too may be."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Seila, what do you think we should do more?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"The Arctics have competition - they care about who's better and who's worse, and they encourage people to challenge each other and strive and try to rise to the top - but they do not understand cooperation. They are ice without the water. Veridia has cooperation, but maybe we do not understand competition. We can be water, but we don't yet know how to be ice - and even our water does not always flow as well as we would like. Actually I think it's Dzego that's figured out how to have both, and make them serve each other. We should learn from them more."</span></p>
+<p class="dialog">She sighed deeply. After a few moments, Verdow replied again.</p>
+<p class="dialog"><span style="color:#a38af2">"These are all good thoughts."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Zei, would you be interested in staying back and helping us figure out some of these issues?"</span></p>
+<p class="dialog">Zei thought for a moment.</p>
+<p class="dialog"><span style="color:#be9b00">"I'm sure Mu and Su can handle the Kungaupei well"</span>, Gladias interjected.</p>
+<p class="dialog"><span style="color:#df74b1">"Of course! Though you might find Fin will be even more helpful than I am."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Well I appreciate it. You know, Parliament realizes now that their current ways of thinking have hit their limits. Many senators have resigned. The ones who are still there - like me - we want new ideas. We're open to listening."</span></p>
+<p class="dialog">Verdow stood up, and walked over slowly to a map of the world that was printed on the side of the office wall.</p>
+<p class="dialog"><span style="color:#a38af2">"This is our world. Ninety million people. Gladias, Seila, Zei, have you ever wondered what things might be like if it was nine hundred million, or nine billion?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I have not. Why do you ask?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"The larger the population, the faster new technologies get invented. That's why the medieval era was so stagnant, and why things are moving so much faster today. But no matter how large the population, everyone still adapts to the technology at the same rate. Maybe we've done so well at adapting - eradicating computer viruses, adding so much privacy and verifiability to everything, optimizing our society to be so beautiful and healthy - only because we don't have nine billion people pushing technology forward even faster and increasing the complexity of the society that has to accept it."</span></p>
+<p class="dialog"><span style="color:#be9b00">"That's interesting. Do you think we will have nine billion people one day?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Not one day. Very soon. And not people. Bots. And not nine billion. Nine trillion."</span></p>
+<p class="dialog"><span style="color:#a38af2">"That's what I worry about. AI is going to really change everything. So far, progress has been moderate, nobody has lost their jobs, it feels more like everyone has been promoted to being a manager - or sometimes a repairman. But at some point, once the AI can do almost everything that humans can do, even if at a few percent the efficiency, our human population won't be a constraint anymore."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what do we do?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Well, we don't really have much power to be the ones to answer that question if the Arctics continue to stay further ahead."</span></p>
+<p class="dialog"><span style="color:#a38af2">"If we want to get back into balance, we have to get better at penetrating <em>them</em>. Have more of a view into their society and their technology, make sure that for any advance they make, we learn about it. Privacy for the weak, transparency for the powerful. Having those people from Thaldur helping us is great, and hopefully Deluin is far from the only person from Redshire who pretended to join the Arctics but would be interested in passing more information to us."</span></p>
+<p class="dialog"><span style="color:#df74b1">"There's a known result from game theory"</span>, Zei interjected. <span style="color:#df74b1">"If two players are locked in a game that has some mixture of cooperation and competition, then you can unlock strictly higher levels of cooperation if those players can at least partially read each others' minds. Maybe that's the right outcome to hope for. As time passes, we'll learn more about each other, we'll learn from each other, and we'll come to actually understand each other better."</span></p>
+<p class="dialog"><span style="color:#a38af2">"I'm not so optimistic. The Arctic Emperor is upset. He can't do anything to us right now, but he's definitely scheming. There will be a next round. It could be five years from now, it could be twenty years from now. If we can at least keep pace on technology, we can survive."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do you think we should try to slow <em>them</em> down?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Do the same thing to them that they have been doing to Dzego for a century? It's not the worst idea."</span></p>
+<p class="dialog">Zei sighed.</p>
+<p class="dialog"><span style="color:#df74b1">"If we were able to keep advancing under their pressure, they'll definitely be able to keep advancing under any pressure we can bring to bear against them."</span></p>
+<p class="dialog"><span style="color:#df74b1">"You know, the later stages of all this are going to get crazy. At some point, eventually we'll have drones the size of worms and flies burrowing under the ground, flying through the air and swimming under the sea. We'll have new forms of genetically engineered life that we can't even imagine - both for peace and for war. Some of us might be uploaded and living inside computers. Not this year. Not the next few years. But definitely in the next hundred years."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Maybe in two hundred years it will be stable. We'll have figured out exactly the ideal type of drone at every scale, the largest as large as aeroplanes or even hollowed-out asteroids floating in space, and the smallest so tiny that there's no more gap between them and viruses. Once we hit the ceiling, there would be nothing else even stronger that could defeat them. Just big distributed immune systems protecting our planets, our animals and our trees, and ourselves. We will be wiser, almost everyone will choose peace over war, and those who don't will have no path to impose their will. And everyone will just live the kind of life they want to live."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I just hope we have peace"</span>, Seila added. <span style="color:#54a1f9">"All these questions: genetic engineering, uploading, going to the stars, I don't think we can get the right answers if we take every step in a rush because we're scared. I'm not sure I want to upload. But a year ago I was not sure if I wanted to live for more than a hundred years. These things should all be a choice we make carefully, and have respect for people who choose not to take the same choice as we do, not an urgent decision we make to survive in a war."</span></p>
+<p class="dialog">Verdow rejoined the conversation.</p>
+<p class="dialog"><span style="color:#a38af2">"We might have that peace, we might not. We can hope for the best, but we have to be ready for all possibilities."</span></p>
+<p class="dialog"><span style="color:#df74b1">"You know, a few days ago Bai mentioned to me that she was thinking of spending a year in Thaldur - precisely to better understand how the Arctics think, and see if she can find a path to that peace."</span></p>
+<p class="dialog"><span style="color:#a38af2">"That sounds a lot less scary than what Deluin did. I support her."</span></p>
+<p class="dialog">The door opened. A robot slid up to Gladias, carrying his tea and rice and vegetable dish. Gladias picked up both with his hands. He thanked the robot, and the robot slid back out of the room.</p>
+<p class="dialog"><span style="color:#a38af2">"Do you want to go upstairs and check out the roof?"</span>, Verdow asked.</p>
+<p class="dialog"><span style="color:#df74b1">"Sure"</span>, Zei answered.</p>
+<p class="dialog">Gladias, Seila and Zei stood up. Verdow walked out of the room and began to walk through the corridor. The three of them followed, Gladias still holding his tea in one hand and his food in the other.</p>
+<p class="dialog">Verdow led them up a staircase, and reached a door which opened automatically. They stepped out.</p>
+<p class="dialog">To their left, they could see the main commercial district of Meldan. There were buildings of various styles, some that were aesthetic imitations of something older and almost medieval, and others that were openly modern and futuristic. The building that looked like an aeroplane stood out from among the others, slightly spoiling the view. The trees are only good at covering it up when you're at ground level yourself, Gladias thought.</p>
+<p class="dialog">Further left of the commercial district, they could see the grey and purple Greater Plum Harbor. The whole thing was a square nearly a kilometer wide, and they could see many of its buildings clearly from where they were. And on the right edge of the commercial district, Gladias could make out the large concert venue.</p>
+<p class="dialog">In front of them, they could see the Kalimar district. From where they stood, it looked not too different from a forest. Tall trees covered up most of the area, with only a few buildings poking up just barely above them. After scanning the area quickly, Gladias spotted the headquarters of Silverchat.</p>
+<p class="dialog">To their right, they could see the mountain covered with trees. They were already partway up the mountain, about forty meters higher than most of the rest of Meldan. But about two hundred meters to their right, the mountain began sloping upward properly. Only about half of the apartment buildings shaped like oversided medieval-style castle towers were visible from where they were. The mountain looked much larger and more imposing from close up, Gladias thought.</p>
+<p class="dialog"><span style="color:#a38af2">"Probably not as beautiful as the views in Northglade?"</span>, Verdow asked.</p>
+<p class="dialog"><span style="color:#be9b00">"I like the green here. I don't think I could handle being up north and dealing with several months of no green and only snow."</span></p>
+<p class="dialog"><span style="color:#be9b00">"And besides, Meldan is my home."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-31.html">上一章 · 第三十一章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="../toc.html">返回目录</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第三十二章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

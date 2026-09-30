@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第七章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第七章 · Chapter 7 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-06.html">
+  <link rel="next" href="chapter-08.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="7">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第七章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第七章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 7</p>
+    <p class="chapter-heading__dateline">帕佛盖都，泽国 · 3724年雨月23日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Pafogai Du, Dzego · 3724 Rainmoon 23</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">泽独自坐在院子里的一张桌旁，喝着茶，吃一份米饭配蔬菜。他左手拿着手持终端，翻看民本棋的棋路。</p>
+<p class="dialog">一个机器人滑到他跟前。</p>
+<p class="dialog"><span style="color:#26a9f1">"mo da cu ja li hen ma?"</span>，它问道。“吃的喝的还好吗？”</p>
+<p class="dialog">机器人屏幕切换成了投票界面。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>mo da cu ja li hen ma?</th></tr></thead><tbody><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span style="font-size:200%">🙁<sup><sup>2</sup></sup></span> <span style="font-size:200%">🙁<sup><sup></sup></sup></span> <span style="font-size:200%">😐<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup>2</sup></sup></span> </div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
+<p class="dialog">泽想了一会儿，把滑块往右推到大约四分之三的位置。</p>
+<p class="dialog">机器人哔了一声，慢慢滑走了。</p>
+<p class="dialog">泽再次抬起头时，看见芬正朝他跑来。芬到了，坐下。</p>
+<p class="dialog"><span style="color:#df74b1">“你去哪儿了？”</span>，泽问。</p>
+<p class="dialog"><span style="color:#ce9200">“又是语言学训练，”</span>芬答道。<span style="color:#ce9200">“看来班孙培还真觉得我挺适合他们。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“大赛练得怎么样了？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“上一个长时跟机器人下了大概五盘，”</span>泽答道。<span style="color:#df74b1">“我感觉已经撞上收益递减了。最后全看这次改的规则是什么。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“所以最近两盘，我让机器人随机想出新规则，然后照着下。问题是两盘我都轻松赢了：标准民本棋上机器人比我强，可一碰到训练数据里没有的新局面，它们的适应力就差得多。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“你不能搭条流水线吗——它们想出新规则之后先自对弈微调，练熟了，你再跟那一版下？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那要是你能在接下来两个长时里帮我把这套搭起来，我真感激不尽。别忘了，比赛就在明天！”</span></p>
+<p class="dialog">芬想了想。<span style="color:#ce9200">“我要这么做，就得跟班孙培说我今晚不去了。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“‘Po so dze go ban’可以等，跟白的比赛是明天。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“求你了？”</span></p>
+<p class="dialog">芬又想了几个嘀嗒。<span style="color:#ce9200">“行吧，我去跟他们说今晚不去了。不过下个月我得补上。”</span></p>
+<p class="scene-break">3724年雨月24日</p>
+<p class="dialog">芬和泽沿着斜坡往上走，朝那座山体金字塔去。泽在脑子里过民本棋的棋路；这段累人的攀爬反倒帮他集中精神，压住了心里想往别处飘的念头。</p>
+<p class="dialog">忽然，他感觉有人拍了下他的肩膀。</p>
+<p class="dialog">泽转过身。是白。</p>
+<p class="dialog"><span style="color:#ed756b">“怎么样，期待今天这盘吗？”</span>，她问。<span style="color:#ed756b">“我觉得这对你是个不错的收尾。你妈大概还没太意识到，你能拿到全城第二有多了不起。”</span></p>
+<p class="dialog">泽脑子里飞快地转着，想找话回敬。</p>
+<p class="dialog"><span style="color:#ce9200">“你要对泽好一点，”</span>芬顶了回去，<span style="color:#ce9200">“等他赢了全国赛，说不定他会拿奖金请<em>你</em>去红郡或者自由城玩一趟。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“也许还能捎上你妈。”</span></p>
+<p class="dialog">白的笑僵了一瞬，又回来了。</p>
+<p class="dialog"><span style="color:#df74b1">“谢谢你，芬。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“不过说真的，咱们还是专心给大家下一盘好棋吧。”</span></p>
+<p class="dialog">忽然，地面轻轻晃了一下。片刻之后，他们此时已爬到山的三分之一处，凭高望去，只见远处城郊某处冒起一团烟。</p>
+<p class="dialog"><span style="color:#ce9200">“哇，那是什么？”</span>，芬问。</p>
+<p class="dialog">泽掏出他的手持终端，对准那团烟。</p>
+<p class="dialog"><span style="color:#df74b1">“看一下。”</span></p>
+<p class="dialog">泽举着手持终端，对着那团烟和下方的区域停了一会儿，然后放下。<span style="color:#df74b1">“定位出来了。那是全城最大的计算机芯片制造厂。记得吧，北极人一直拼命拦着我们，不让科技再往前一步。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“看样子这家厂是国营的。我猜他们只会说是什么事故之类的。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“哼。”</span>芬咧嘴一笑。</p>
+<p class="dialog"><span style="color:#ce9200">“这些人到底懂不懂‘gie fe kiu kai ci bin hu’里的‘bin hu’？无首。这种东西本来就不该这么集中。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“还是那句话，这是政府。他们一半人根本不知道自己在干什么，剩下的人里恐怕还有不少，多少都拿着北极人的钱。几十年来，泽国真正聪明、真正有用的东西，都在政府<em>或者</em>大企业之外。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“不过话说回来，如今我们有很多更小的分布式地下芯片厂。我们没事的。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“好了，两位，”</span>白插话。<span style="color:#ed756b">“我们真得去比赛了。”</span></p>
+<p class="dialog">三人继续往上爬。又过了几分钟，他们到了正门，走进隧道。到第三个拐弯处，芬向左去观众席，白和泽向右。他们穿过门，看见穆在等他们。</p>
+<p class="dialog"><span style="color:#00bc96">“欢迎你们俩回来，”</span>穆说。<span style="color:#00bc96">“很期待看你们俩的表现。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“希望这次改的规则能有点意思。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“哦，会的。你等着看。”</span></p>
+<p class="dialog">一个机器人滑过来，端给他们三杯水。泽、白和穆各拿了一杯。</p>
+<p class="dialog">穆举起杯子。<span style="color:#00bc96">“为我们的未来，”</span>她说。<span style="color:#00bc96">"Dze go ba fau gie."</span></p>
+<p class="dialog">泽有点困惑——“Dze go ba fau gie”意思是“泽国将再度崛起”，这是句很美的话，但用在真正的战斗，或者某种工业、教育活动上，似乎都比用在民本棋锦标赛上更合适。可他还是本能地回应了，跟白同时开口。</p>
+<p class="dialog"><span style="color:#df74b1">"Dze go ba fau gie."</span></p>
+<p class="dialog">三人把水喝了。</p>
+<p class="dialog">他们坐下歇了几分钟。随后，两扇电梯门开了。</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#23ba7d">"MU GU GEI FA"</span>，响亮的自动语音播报道。五十嘀嗒后开始。</p>
+<p class="dialog">泽深吸一口气，再缓缓吐出，最后一次在心里默背自己的棋路。</p>
+<p class="dialog"><span style="color:#23ba7d">"LE MU GEI FA"</span>。</p>
+<p class="dialog">泽用目光扫过观众席。大部分人他几乎看不清，但整体上，他能感觉到的兴奋比前两盘都足。</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU GEI FA"</span>。</p>
+<p class="dialog">泽又吸了一口气，屏住呼吸，撑过最后剩下的十个嘀嗒，等着那声宣告。</p>
+<p class="dialog"><span style="color:#ec7383">“欢迎来到帕佛盖都民本棋锦标赛第十八年、决赛。今晚，我们将见证全城最具决定性的一盘棋；两位选手的棋力，经 AI 评定，都强过仅仅五年之前的国家冠军。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“今天到场的两位决赛选手，是两位才华横溢的头脑——一个月前，我们见过他们作为队友并肩作战：泽雷民和白嘉恒。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“今天，我也很高兴宣布本轮的新规则。两位选手都将拥有一个强大的个人 AI，在对局中协助他们。”</span></p>
+<p class="dialog">泽的显示界面上忽然弹出一个新标签页。</p>
+<p class="dialog"><span style="color:#ec7383">“不过，选手和他们的 AI 都能完整读取彼此 AI 的思考记录。”</span></p>
+<p class="dialog">泽消化着这条信息，很快开始琢磨该怎样用这个 AI。他让 AI 按他惯用的风格摆出标准的滑翔机与墙阵型。让他意外的是， AI 竟然知道他的风格是什么。</p>
+<p class="dialog">他在旁边另一个标签页里看到了白的 AI 记录；白在做同样的事，而白的 AI 也知道她的风格。</p>
+<p class="dialog"><span style="color:#23ba7d">"MU GU GEI TAU FA"</span>，响亮的自动语音炸响。战斗将在五十嘀嗒后开始。</p>
+<p class="dialog">两个 AI 继续优化各自的滑翔机与墙阵型。到这一步，双方的 AI 都开始针对对方记录里的策略设计反制。</p>
+<p class="dialog">泽开始亲手摆下几处结构，一边复制粘贴 AI 已经做好的部分来提速，一边盯着白的记录，看白的 AI 还没有针对哪些策略做出反制。</p>
+<p class="dialog"><span style="color:#23ba7d">"LE MU GEI TAU FA"</span></p>
+<p class="dialog">泽开始亲手布下最后一件重要结构：一艘载符飞船。他的 AI 已经造了四艘，但他想自己单独造一艘，这样白就看不到，而且前面配一道走法不同的移动墙。他给载符飞船定好路线，让它从 AI 已经建好的一面墙上反射出去，然后沿着棋盘中央向上飞。</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU……"</span></p>
+<p class="dialog">快啊，泽心想，把载符飞船造完。</p>
+<p class="dialog"><span style="color:#23ba7d">"SO …… BI …… ZE …… HA ……"</span></p>
+<p class="dialog">泽放下最后几格。</p>
+<p class="dialog"><span style="color:#23ba7d">"MU …… FO ……"</span></p>
+<p class="dialog">然后……成了。</p>
+<p class="dialog">泽长长地吐出一口气。</p>
+<p class="dialog"><span style="color:#23ba7d">"SHI …… LE …… PA …… TAU FA"</span></p>
+<p class="dialog">滑翔机开始飞起来。泽的载符飞船从东南角出发向西移动。泽能看到的棋盘范围变大了。</p>
+<p class="dialog">两份 AI 记录里，双方都在全神贯注地开发自己的领地，造出更多滑翔机、飞船和墙，不断扩张。</p>
+<p class="dialog">几百回合之后，泽和白的滑翔机开始互相撞上，接着又撞上彼此的飞船和墙。</p>
+<p class="dialog">又过了几百回合，两人的载符飞船彼此进入了视野。</p>
+<p class="dialog">不久之后，泽的载符飞船从南面的墙上反射出去，开始向北移动。</p>
+<p class="dialog">观众们都盯着大屏幕。</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-01.svg" alt="浅蓝圆点与紫色方块分布在蓝紫色背景上。" title="浅蓝圆点与紫色方块分布在蓝紫色背景上。" loading="lazy" decoding="async"></figure>
+<p class="dialog">第一次干预回合到了。泽让 AI 去调整前线附近的结构，反正这些变化白马上就能看到。</p>
+<p class="dialog">他在白的 AI 记录里搜寻弱点。找到一个：它压根没想到沿对角线下来的滑翔机攻击。他调低分配给 AI 的资源比例，用这些资源手动向两条对角线各送出一大批滑翔机，掐准时机让一批紧接另一批，去打白的两个基地。他还送出一艘载符飞船，让它比两批滑翔机晚几百回合经过中央。</p>
+<p class="dialog">对局继续。</p>
+<p class="dialog">中路前线的交锋出乎意料地势均力敌。两个 AI 都下得近乎最优，而且双方都能看到对方的落子和思路，几乎没什么使诈的余地。不过白确实把更多资源投向了前线，尤其是西侧；随着几百回合过去，棋盘上开始显出来了。不久，泽在西侧的一艘载符飞船被打穿，炸成一团四散的滑翔机风暴。</p>
+<p class="dialog">泽继续下，一点点打磨棋盘的细节。他知道，自己那次进攻的结果要很久以后才能看到。</p>
+<p class="dialog">第二次干预回合到了。</p>
+<p class="dialog">泽能想出的最好办法，是在他沿场地中央缓缓北飞的那艘载符飞船旁边多建几座工厂。除了沿对角线的进攻，这是唯一一个白无从得知的结构——除非他的 AI 决定无视泽让它只专注被分配领域的指令，在记录中途把飞船的位置说漏嘴。泽决定不去想这种可能；真发生了他也做不了什么。他在西侧又添了几道墙。</p>
+<p class="dialog">又过了许多回合。西侧，白继续推进。白的一些滑翔机闯进泽在西南的基地，毁掉了他两个符记。泽看着自己的载符飞船一路朝西北去。</p>
+<p class="dialog">然后，滑翔机忽然从西、北、东三面朝那艘飞船扑来。它很快崩解，炸成一片残骸和十几架滑翔机。到那一刻，泽才明白发生了什么。白的 AI 没考虑对角线，根本不是失误。是白故意让 AI 专注其他方向，而她自己在对角线上布下了纵深的多层防御。那是个陷阱，泽结结实实地踩了进去。</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-02.svg" alt="圆点与方块在平面上的分布。" title="圆点与方块在平面上的分布。" loading="lazy" decoding="async"></figure>
+<p class="dialog">穆对泽生出一阵失望。十七比二十二，她想。他怎么会踩进那个陷阱，自己又想不出任何有意思的东西？他在中央有一艘飞船向北飞，可那又怎样？白的基地对沿对角线的进攻防得很好，泽那艘飞船到达北侧的胜算也不大。除非泽拿出什么完全出人意料的东西，她想，这盘会变成一场消耗战，而消耗战只会越来越偏向白。</p>
+<p class="dialog">一组意料之外的滑翔机又打掉了泽的两个符记，一个在场地中央略偏西南，另一个在中央偏西、靠近南端。还有一组滑翔机出人意料地打向泽东南的基地，却撞在如今已准备充分的墙上，没能得手。</p>
+<p class="dialog">房间另一侧，芬坐在条件差些的普通观众席上，也惊恐地盯着棋盘。</p>
+<p class="dialog">终于，泽脑子里有什么咔哒一声对上了。</p>
+<p class="dialog"><span style="color:#df74b1">“取我最西边的第四个符记，”</span>他吩咐 AI。<span style="color:#df74b1">“取你能想出的最好的十六种策略。在那个符记附近造一座能执行其中每一种策略的工厂。让它由一架从西南飞来的滑翔机触发，具体选中哪种策略，取决于滑翔机的类型和撞上的时刻。然后，在我西边第二个符记附近，造出那架滑翔机。这次干预回合，把八成资源投到这上面。”</span></p>
+<p class="dialog">AI 开始细致地推演，动手实现那座工厂和那架滑翔机。</p>
+<p class="dialog">白的 AI 开始推演针对全部十六种策略的反制，但很快撞上了极限：它没法同时对全部十六种都做出最优防御。</p>
+<p class="dialog">白的 AI 也把精力放在加强她自己西翼的防御上。泽的<em>第一次</em>豪赌奏效了，他意识到：白本人没意识到她在西侧造成了多大破坏，也没意识到泽为此补救得多么少。所以她和她的 AI 都没意识到，到这时，泽西边第四个符记可能已经在场地中央了。</p>
+<p class="dialog">接着，泽开始动手布局他的<em>第二次</em>豪赌。他用没有分配给 AI 的资源，在工厂南边加了一块砖，挡住 AI 正要送出的那架滑翔机，又添了两架从南面来的自己的滑翔机。</p>
+<p class="dialog">干预回合结束。工厂的一部分在干预回合里建成，剩下的继续由滑翔机用附近的石阵实时搭建。</p>
+<p class="dialog">几百回合后，泽的 AI 从西边送出的那架滑翔机被泽放下的那块砖挡了下来。在<em>那</em>之后又过了几百回合，泽手动送出的滑翔机撞上工厂，把它激活了。</p>
+<p class="dialog">工厂选中的策略，不在白的 AI 重点谋划过的那四种之内。而且它出现的位置也是白没料到的：棋盘中央和北缘之间的中点。工厂迅速开始产出载符飞船，朝东移动，同时涌出一片向北去的滑翔机风暴，再从石阵和白自己的墙上弹开，转向西边。白和她的 AI 完全被打了个措手不及。</p>
+<p class="dialog">等下一次干预回合到来时，泽的飞船已经深深插到白在东侧的防线之后。泽的 AI 借机设计出一片滑翔机风暴，从背后攻击白的侧翼；泽又添了几架自己的滑翔机去打白东北的基地——这些他亲手造，免得出现在记录里。</p>
+<p class="dialog">又过了五百回合，棋盘已经大不一样。</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-03.svg" alt="圆点与方块在平面上的分布" title="圆点与方块在平面上的分布" loading="lazy" decoding="async"></figure>
+<p class="dialog">到这时，穆不再凝重地摇头，芬脸上的惊恐也变成了兴奋的笑容。</p>
+<p class="dialog">十四比十一。泽又领先了。而且他的局面更好。</p>
+<p class="dialog">很快，下一次干预回合到了。泽想，这回只要照搬同样的策略，只是要打得更近更快：立刻在东北造出许多滑翔机工厂，至于它们确切的样式和方向，交给一个十回合后才会出现的触发器来决定。白看不到触发器的内部逻辑，而那一块是泽亲手设计的，所以不会出现在记录里。</p>
+<p class="dialog">白试图照搬泽的策略。泽把一半资源平摊着加固防御，不去刻意耍聪明算计白。他知道自己相当安全：白在他防线后面没有任何布置，而他在白的防线后面有。</p>
+<p class="dialog">五百回合后，双方的攻势都见了分晓。泽的成了，白的没成。白唯一值得一提的战果，是毁掉了泽在西南的基地里剩下的符记。</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-04.svg" alt="圆点与方块在平面上的分布。" title="圆点与方块在平面上的分布。" loading="lazy" decoding="async"></figure>
+<p class="dialog">十二比六。</p>
+<p class="dialog">白认输了。</p>
+<p class="dialog">观众欢呼起来。</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#00bc96">“恭喜你们俩——”</span>穆开口说话，她和泽、白一同站在休息室里。</p>
+<p class="dialog"><span style="color:#ed756b">“恭喜你，泽。你非得等到我们最后一个赛季才赢我。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“白，你今天下出了这辈子最好的一盘棋。”</span></p>
+<p class="dialog">穆停了一会儿。</p>
+<p class="dialog"><span style="color:#00bc96">“祭司们都不知道你们俩会想出什么来。他们告诉我，他们想让这盘棋稍微……<em>真实</em>一点——但他们也和别人一样好奇，那到底意味着什么。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“真实？”</span>白难以置信地叫道。<span style="color:#ed756b">“AI 能互相读心，这哪里真实了？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“我一开始也觉得这说法疯得离谱。但越想，我越觉得他们有道理。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“比如看维里迪亚的掌舵会体系。那是政府里最不透明的一块——连掌则人彼此都不知道对方是谁——可正因如此，它也是最值得信任、最没法被腐蚀的一块。合议庭也一样：匿名、从大池子里随机抽出的委员会。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“但议会是透明的，所以一到议会的直接决策——大型基础设施、外交、医疗，所有它出钱的事——人人都来钻空子、算计它。二次方资助也一样，其实更糟。掌则人、监审官和合议庭法官并非完全独立——批准他们的还是参议院委员会——但至少中间隔了一层，而且这些职位还由预测分数把关。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“这就是这盘棋教给我们的道理。在真实世界里，光会思考还不够，还得会藏住自己的想法——有时候，甚至要对自己的盟友、或你本该服务的人藏住。”</span></p>
+<p class="dialog">泽和白都盯着穆。</p>
+<p class="dialog"><span style="color:#00bc96">“总之，你们俩今天都表现得极其出色。”</span></p>
+<p class="dialog">一个机器人滑进来，拎着两个包，其中一个侧面写着数字1，另一个写着数字2。</p>
+<p class="dialog">穆把第一个包递给泽，第二个递给白。</p>
+<p class="dialog">泽和白都坐下，开始看包里的东西。一块纪念牌，一张刮开后只能扫一次的码券，里面装着一些密码学代币和凭证，还有几件小礼物：一只杯子、一支手写笔，和一支臭氧电动水消毒笔。</p>
+<p class="dialog">白开始仔细研究每一件礼物。泽则立刻动手刮掉码券的覆盖层，掏出他的手持终端准备扫。他想给妈妈买一台新的算力盒，已经盼了好几个月，到现在还不敢相信自己终于真的能买了。</p>
+<p class="dialog">穆站起身。</p>
+<p class="dialog"><span style="color:#00bc96">“希望你们俩好好休息，”</span>她说，转身往门外走。</p>
+<p class="dialog">穆一走，泽就发现他多收到了一件白没有的礼物：一封深紫色的信，正面写着一行字。</p>
+<center><div class="dz-card dz-mono" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">dun</span></span> <span style="white-space:nowrap"><span class="dz-script">fe</span> <span style="white-space:nowrap"><span class="dz-script">tin di zei</span></span></span> <span style="white-space:nowrap"><span class="dz-script">de</span> <span style="white-space:nowrap"><span class="dz-script">kin kie</span></span></span></div></div></center>
+<p class="dialog">“仅供泽本人阅看”</p>
+<p class="dialog">泽停下手里的刮码动作，把信收进了口袋。</p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-06.html">上一章 · 第六章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-08.html">下一章 · 第八章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Zei was sitting alone at a table in a courtyard, drinking a tea and eating a rice and vegetable dish. In his left hand, he held his hand device, reviewing Minpentai strategies.</p>
+<p class="dialog">A robot slid up to him.</p>
+<p class="dialog"><span style="color:#26a9f1">"mo da cu ja li hen ma?"</span>, it asked. "Is the food and drink good?"</p>
+<p class="dialog">The screen on the robot turned into a voting view.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>mo da cu ja li hen ma?</th></tr></thead><tbody><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span style="font-size:200%">🙁<sup><sup>2</sup></sup></span> <span style="font-size:200%">🙁<sup><sup></sup></sup></span> <span style="font-size:200%">😐<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup>2</sup></sup></span> </div></td></tr><tr><td><button>Select</button></td></tr></tbody></table></div>
+<p class="dialog">Zei thought for a few moments, and moved the bar about three quarters of the way to the right.</p>
+<p class="dialog">The robot beeped, and slowly slid away.</p>
+<p class="dialog">When Zei looked up again, he could see Fin running up to him. Fin arrived, and sat down.</p>
+<p class="dialog"><span style="color:#df74b1">"Where have you been?"</span>, Zei asked.</p>
+<p class="dialog"><span style="color:#ce9200">"More linguistics training"</span>, Fin replied. <span style="color:#ce9200">"Looks like the Bansunpei think I'm actually a good fit for them."</span></p>
+<p class="dialog"><span style="color:#ce9200">"How is training for the big game?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Did about five games against the bots in the past longhour"</span>, Zei replied. <span style="color:#df74b1">"I feel like this is already hitting diminishing returns. It's all going to hinge on what the rule change this time is."</span></p>
+<p class="dialog"><span style="color:#df74b1">"So in my last two games I asked the bots to come up with random rule changes, and played against them. Problem is, I won easily both times: the bots play better than me on stock Minpentai, but they are much worse at adapting to any new situation they don't have training data for."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Can't you make a pipeline where once they come up with the new rule, they self-play finetune to get good at it, and then you play against that?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Well if you can go help spin that up for me in the next two longhours, I'd much appreciate it. Game is tomorrow, remember!"</span></p>
+<p class="dialog">Fin thought briefly. <span style="color:#ce9200">"If I do that I'll have to tell the Bansunpei I am skipping tonight then."</span></p>
+<p class="dialog"><span style="color:#df74b1">"'Po so dze go ban' can wait, the game against Bai is tomorrow."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Please?"</span></p>
+<p class="dialog">Fin thought for a few ticks more. <span style="color:#ce9200">"Okay fine, I'll tell them I'm skipping. But I'll have to make it up with them next month."</span></p>
+<p class="scene-break">3724 Rainmoon 24</p>
+<p class="dialog">Fin and Zei walked up the slope toward the mountain pyramid. Zei went through Minpentai strategies in his mind, as the tiring climb helped him concentrate, suppressing his mind's desire to wander toward anything else.</p>
+<p class="dialog">Suddenly he felt a tap on his shoulder.</p>
+<p class="dialog">Zei turned around. It was Bai.</p>
+<p class="dialog"><span style="color:#ed756b">"So, excited about today's game?"</span>, she asked. <span style="color:#ed756b">"I think it'll be a good finish for you, I don't think your mom quite realizes how impressive it is that you are going to come in second across the whole city."</span></p>
+<p class="dialog">Zei's mind raced for a retort.</p>
+<p class="dialog"><span style="color:#ce9200">"You know if you were nicer to Zei"</span>, Fin snapped back, <span style="color:#ce9200">"he might pay for <em>your</em> next trip to Redshire or Freetown from the prize money when he wins the nationals."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Maybe bring along your mom too."</span></p>
+<p class="dialog">Bai's grin faltered for a moment, then returned.</p>
+<p class="dialog"><span style="color:#df74b1">"Thank you, Fin."</span></p>
+<p class="dialog"><span style="color:#df74b1">"But seriously, let's just concentrate on giving everyone a good game."</span></p>
+<p class="dialog">Suddenly, the ground shook slightly. A few moments later, from their high vantage point already a third of the way up the mountain, they could see a cloud of smoke emerging in the distance, somewhere in the outskirts of the city.</p>
+<p class="dialog"><span style="color:#ce9200">"Whoa, what is that?"</span>, Fin asked.</p>
+<p class="dialog">Zei took out his hand device, and pointed it at the cloud of smoke.</p>
+<p class="dialog"><span style="color:#df74b1">"Let's check."</span></p>
+<p class="dialog">Zei held his hand device pointed at the cloud of smoke and the area below for a moment, and then put it down. <span style="color:#df74b1">"Geolocated it. It's the largest computer chip manufacturing facility in the city. Remember, the Arctics have been trying hard to stop us from progressing any more in our technology."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Looks like this facility was government-run. I imagine they'll just say it was an accident or something."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Heh"</span>, Fin smirked.</p>
+<p class="dialog"><span style="color:#ce9200">"What part of the 'bin hu' in 'gie fe kiu kai ci bin hu' do these people not get? No head. You're not supposed to centralize stuff this much."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Again, this is government. Half of them don't understand what they're doing, and many of the rest are probably on the payroll of the Arctics themselves in some form. All of the actually smart and effective stuff in Dzego has been outside of government <em>or</em> the big corporations for decades."</span></p>
+<p class="dialog"><span style="color:#df74b1">"But anyway, we have lots of smaller, distributed underground fabs these days. We'll be fine."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Okay, guys"</span>, Bai interjected. <span style="color:#ed756b">"We have to actually get to the game."</span></p>
+<p class="dialog">The three of them resumed climbing. After a few more minutes, they arrived at the main door, and entered the tunnels. On the third turn, Fin turned left to go to the audience section, and Bai and Zei turned right. They walked through the door, and saw Mu waiting for them.</p>
+<p class="dialog"><span style="color:#00bc96">"Welcome back to you both"</span>, Mu said. <span style="color:#00bc96">"Excited to see how you both perform."</span></p>
+<p class="dialog"><span style="color:#df74b1">"I hope the rule change this time is going to be good."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Oh, it will be. You'll see."</span></p>
+<p class="dialog">A robot slid toward them, and gave them three glasses of water. Zei, Bai and Mu each took a glass.</p>
+<p class="dialog">Mu raised the glass. <span style="color:#00bc96">"To our future,"</span> she said. <span style="color:#00bc96">"Dze go ba fau gie."</span></p>
+<p class="dialog">Zei felt slightly confused - "Dzego will rise again" was a beautiful thing to say, but it seemed more appropriate for either an actual battle or some kind of industrial or educational activity than for a Minpentai championship game. But he nevertheless instinctively replied back, at the same time as Bai.</p>
+<p class="dialog"><span style="color:#df74b1">"Dze go ba fau gie."</span></p>
+<p class="dialog">The three of them drank their water.</p>
+<p class="dialog">They sat down and rested for a few minutes. Then, two elevator doors opened.</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#23ba7d">"MU GU GEI FA"</span>, the loud automated voice announced. Starting in fifty ticks.</p>
+<p class="dialog">Zei breathed in and out, and recited his strategies in his head for the last time.</p>
+<p class="dialog"><span style="color:#23ba7d">"LE MU GEI FA"</span>.</p>
+<p class="dialog">Zei scanned the audience with his eyes. He could barely see most of them, but in the aggregate he could make out more excitement than he saw in both of his previous two games.</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU GEI FA"</span>.</p>
+<p class="dialog">Zei breathed in again, and held his breath for the last remaining ten ticks until the announcement.</p>
+<p class="dialog"><span style="color:#ec7383">"Welcome to the final round of the eighteenth year of the Minpentai tournaments in Pafogai Du. Tonight, we will witness the most decisive game in our entire city, between contestants whose playing skills have both been rated by AI as better than the national champions of only five years before."</span></p>
+<p class="dialog"><span style="color:#ec7383">"Today, we have our two finalists, two brilliant minds whom we saw fight side by side as teammates a month earlier: Zei Leimin and Bai Jahen."</span></p>
+<p class="dialog"><span style="color:#ec7383">"And today, I am also pleased to announce the new rule for this round. Both players will have access to a powerful personal AI, which will be able to assist them in their gameplay."</span></p>
+<p class="dialog">A new tab suddenly opened up on Zei's display.</p>
+<p class="dialog"><span style="color:#ec7383">"However, the players and their AIs will have full read access to the thought transcripts of each other's AI."</span></p>
+<p class="dialog">Zei took in the information, and quickly began to formulate his thoughts about how he would use the AI. He asked it to set up standard glider and wall formations, in his own style. To his surprise, the AI knew what his style was.</p>
+<p class="dialog">He saw Bai's AI transcript in a separate tab to the side; Bai was doing the same, and Bai's AI also knew her style.</p>
+<p class="dialog"><span style="color:#23ba7d">"MU GU GEI TAU FA"</span>, the loud automated voice blared. The battle begins in fifty ticks.</p>
+<p class="dialog">The AIs kept optimizing their glider and wall formations. At this point, both AIs started designing countermeasures to the strategies in the other's transcripts.</p>
+<p class="dialog">Zei started planting a few structures by hand, speeding up his work by copying and pasting pieces of what the AI had already made, looking attentively at Bai's transcript to see what strategies Bai's AI had not yet built countermeasures to.</p>
+<p class="dialog"><span style="color:#23ba7d">"LE MU GEI TAU FA"</span></p>
+<p class="dialog">Zei started planting one last major structure by hand: a symbol-carrying spaceship. There were already four created by his AI, but he figured that he would make one all on his own, so that Bai would not see it, and with a different style of moving wall in front of it. He aimed the symbol-carrying spaceship so that it would reflect off a wall that his AI had already constructed, and then move upwards along the middle of the game field.</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU..."</span></p>
+<p class="dialog">Come on, Zei thought, finish the symbol-carrying spaceship.</p>
+<p class="dialog"><span style="color:#23ba7d">"SO ... BI ... ZE ... HA ..."</span></p>
+<p class="dialog">Zei put down a few last squares.</p>
+<p class="dialog"><span style="color:#23ba7d">"MU ... FO ..."</span></p>
+<p class="dialog">And... done.</p>
+<p class="dialog">Zei let out a long breath.</p>
+<p class="dialog"><span style="color:#23ba7d">"SHI ... LE ... PA ... TAU FA"</span></p>
+<p class="dialog">Gliders started flying. Zei's symbol-carrying spaceship started moving west from the southeast corner. The portion of the game field that Zei could see increased.</p>
+<p class="dialog">Both AI transcripts were focused intensely on exploiting their territories, building more gliders, spaceships and walls, and expanding.</p>
+<p class="dialog">After a few hundred turns, Zei and Bai's gliders began to crash into each other, and then into each other's spaceships and walls.</p>
+<p class="dialog">And a few hundred turns after that, their symbol-carrying spaceships got within sight of each other.</p>
+<p class="dialog">Shortly after that, Zei's symbol-carrying spaceship reflected off the wall in the south, and began moving north.</p>
+<p class="dialog">On the big screen, the audience watched.</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-01.svg" alt="浅蓝圆点与紫色方块分布在蓝紫色背景上。" title="浅蓝圆点与紫色方块分布在蓝紫色背景上。" loading="lazy" decoding="async"></figure>
+<p class="dialog">The first intervention turn came. Zei let his AI do the work adjusting structures near the frontline, as the consequences would be immediately visible to Bai anyway.</p>
+<p class="dialog">He scanned Bai's AI's transcript for weak points. He found one: it was not thinking at all about glider attacks coming down the diagonals. He toned down the amount of resources allocated to the AI, and used those resources to manually send a large number of gliders down both diagonals, targeted so that one would pass right after the other, to strike both of Bai's home bases. He also sent a symbol-carrying spaceship, targeted to pass the center hundreds of turns after both sets of gliders.</p>
+<p class="dialog">The game continued.</p>
+<p class="dialog">The battle along the front lines in the middle was surprisingly even-handed. Both AIs were playing near-optimally, and there was little opportunity for trickery because both sides could see each other's moves and thoughts. However, Bai did put more resources toward the frontline especially on the west side, and as the hundreds of turns went on, it began to show on the board. Soon, one of Zei's symbol-carrying spaceships on the west was breached, and it exploded into a storm of gliders flying in all directions.</p>
+<p class="dialog">Zei kept playing, optimizing the minutiae of the game board. He knew that he would not get to see the results of his attack for a long time.</p>
+<p class="dialog">The second intervention turn came.</p>
+<p class="dialog">The best that Zei could come up with was constructing more factories beside his symbol-carrying spaceship that was slowly flying north along the middle of the field. Aside from the attack down the diagonal, this was the one structure that Bai had no way of knowing about - unless his AI decided to ignore Zei's instruction to focus exclusively on the domain it was assigned to, and blurted out the spaceship's position mid-transcript. Zei decided to ignore that possibility; not much he could do about it anyway. He put up more walls along the west side.</p>
+<p class="dialog">More turns passed. On the west side, Bai continued to advance. Some of Bai's gliders got into Zei's base in the southwest, and destroyed two of his symbols. Zei watched as his symbol-carrying spaceship made its way toward the northwest.</p>
+<p class="dialog">Then, suddenly, gliders flew at the spaceship from the west, north and east side. It quickly crumbled, and exploded into rubble and a dozen gliders. At that point, Zei realized what had happened. Bai's AI's lack of thought about the diagonals had not been a mistake at all. Rather, Bai had deliberately directed the AI to focus on the other directions, and she had put up a strong multilayered defense along the diagonals herself. It had been a trap, and Zei had fallen squarely into it.</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-02.svg" alt="圆点与方块在平面上的分布。" title="圆点与方块在平面上的分布。" loading="lazy" decoding="async"></figure>
+<p class="dialog">Mu felt a pang of disappointment in Zei. Seventeen symbols to twenty-two, she thought. How could he have fallen into that trap, and not come up with anything interesting himself? He had one spaceship going north in the middle, but so what? Bai's bases were well protected against attacks along the diagonals, and Zei's spaceship did not have excellent chances of reaching the north side. Unless Zei came up with something totally unexpected, she figured, this would turn into a game of attrition, which would only shift further in Bai's favor.</p>
+<p class="dialog">An unexpected set of gliders knocked out another two of Zei's symbols, one slightly southwest of the center of the field, and another slightly west of the center near the south end. Another set of gliders unexpectedly hit Zei's southeast base, but bounced off harmlessly against now well-prepared walls.</p>
+<p class="dialog">Sitting on the other side of the room, in less comfortable public seating, Fin gazed with fear at the gameboard as well.</p>
+<p class="dialog">Finally, something inside of Zei's mind clicked.</p>
+<p class="dialog"><span style="color:#df74b1">"Take my fourth westernmost symbol"</span>, he told the AI. <span style="color:#df74b1">"Take the best sixteen strategies that you can come up with. Construct near that symbol a factory capable of executing each of those strategies. It should be activated by a glider coming in from the southwest, and the exact strategy chosen should depend on the type of glider and the time it hits. Then, near my second westernmost symbol, make that glider. Allocate eighty percent of resources this intervention turn to this."</span></p>
+<p class="dialog">The AI started thinking in detail, implementing the factory, and the glider.</p>
+<p class="dialog">Bai's AI started thinking about countermeasures to all sixteen strategies, but soon hit a limit: it could not optimize defenses against all of them at the same time.</p>
+<p class="dialog">Bai's AI also focused on increasing defenses across her own western flank. Zei's <em>first</em> gamble paid off, he realized: Bai herself did not realize just how much damage she had done on the west side, and just how little Zei had done to compensate. And so neither she nor her AI realized that by this point, Zei's fourth westernmost symbol could be in the middle of the field.</p>
+<p class="dialog">Then, Zei went to work on his <em>second</em> gamble. He used the resources he had not allocated to the AI to add a brick south of his factory to block the glider that the AI was sending, and add two of his own gliders coming in from the south.</p>
+<p class="dialog">The intervention turn ended. Part of the factory had been built during the intervention turn, the rest continued to be constructed in real time out of nearby rock formations by gliders.</p>
+<p class="dialog">A few hundred turns later, the glider sent by Zei's AI from the west was blocked by the brick that Zei had put in place. A few hundred turns after <em>that</em>, the gliders that Zei sent manually crashed into the factory, and activated it.</p>
+<p class="dialog">The factory picked a strategy that was none of the four that Bai's AI had focused on planning for. And it was coming from a place that Bai had not expected: the halfway point between the center of the board and the northern edge. The factory quickly started generating symbol-carrying spaceships that began to move toward the east, and a storm of gliders that moved north, and then bounced off of rock formations and Bai's own walls to move toward the west. Bai, and her AI, were caught completely by surprise.</p>
+<p class="dialog">By the time the next intervention turn came, Zei's spaceships had gotten well behind Bai's lines on the east. Zei's AI took the opportunity to design a storm of gliders to attack Bai's flanks from behind, and Zei added a few of his own gliders to attack Bai's northeastern base - building them himself so that they would not appear in the transcript.</p>
+<p class="dialog">Five hundred turns after that, the game board looked very different.</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-03.svg" alt="圆点与方块在平面上的分布" title="圆点与方块在平面上的分布" loading="lazy" decoding="async"></figure>
+<p class="dialog">By this point, Mu's solemn head shaking and Fin's expression of fear had both turned into excited smiles.</p>
+<p class="dialog">Fourteen to eleven. Zei was winning again. And he had a better position.</p>
+<p class="dialog">Soon, the next intervention turn came. At this point, Zei figured, he would just repeat the same strategy, though a more near-term version of it: immediately create many glider factories in the northeast, and have their exact style and direction be set off by a trigger that would only appear in ten turns. Bai could not see the exact internal logic of the trigger, and Zei designed that piece himself, so that it would not appear in the transcript.</p>
+<p class="dialog">Bai attempted to copy Zei's strategy. Zei spent half his resources generically shoring up his defenses, without attempting to be particularly clever in outsmarting Bai. He was reasonably safe, he knew: Bai simply did not have any positions behind his lines the way he had behind Bai's.</p>
+<p class="dialog">Five hundred turns later, both attacks came to fruition. Zei's succeeded, Bai's failed. Bai's only significant accomplishment was destroying the remaining symbols in Zei's southwestern base.</p>
+<figure class="fig"><img src="../assets/images/chapter-07-fig-04.svg" alt="圆点与方块在平面上的分布。" title="圆点与方块在平面上的分布。" loading="lazy" decoding="async"></figure>
+<p class="dialog">Twelve to six.</p>
+<p class="dialog">Bai resigned.</p>
+<p class="dialog">The audience cheered.</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#00bc96">"Congratulations, you two-"</span>, Mu began to speak, standing in the waiting room along with Zei and Bai.</p>
+<p class="dialog"><span style="color:#ed756b">"Congratulations, Zei. You only had to wait until our last season to beat me."</span></p>
+<p class="dialog"><span style="color:#00bc96">"You played the best game of your life today, Bai."</span></p>
+<p class="dialog">Mu paused for a few moments.</p>
+<p class="dialog"><span style="color:#00bc96">"The priests did not even know what you two would come up with. They told me that they wanted to make the game a little more ... <em>realistic</em> - but they were as curious as anyone else to find out what that means."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Realistic?"</span>, Bai exclaimed incredulously. <span style="color:#ed756b">"How is it at all realistic that AIs can read each other's minds?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"It sounded crazy to me too. But the more I think about it, the more I've come to see their point."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Look at the Veridian Steering system, for example. It's one of the most opaque parts of the government - even the Keepers don't know who each other are - and yet one of the most trustworthy and incorruptible parts precisely for that reason. Similar for the Courts - anonymous, randomly selected committees out of a large pool."</span></p>
+<p class="dialog"><span style="color:#00bc96">"But the Parliament is transparent, and so when it comes to the Parliament's direct decisions - large-scale infrastructure, foreign policy, healthcare, all the things that it's funding - everyone keeps exploiting and outsmarting it. Same with the quadratic funding - actually, it's even worse. Keepers, Sentinels and Court judges are not fully insulated - it is still Parliament committees that are approving them - but at least there's a layer of indirection there, and those positions are also gated by prediction scores."</span></p>
+<p class="dialog"><span style="color:#00bc96">"That's the lesson. In the real world, it's not just thinking well that matters, it's also hiding your thoughts - sometimes, even hiding your thoughts from your allies or the people you're meant to serve."</span></p>
+<p class="dialog">Zei and Bai both stared at Mu.</p>
+<p class="dialog"><span style="color:#00bc96">"Anyway, you've both performed extremely well today."</span></p>
+<p class="dialog">A robot slid in carrying two bags, one with the number 1 on the side and the other with the number 2.</p>
+<p class="dialog">Mu handed the first bag to Zei and the second bag to Bai.</p>
+<p class="dialog">Zei and Bai both sat down and started looking at the contents inside their bags. A plaque, a scratch-off one-time-scannable code containing some cryptographic tokens and credentials, and smaller gifts: a cup, a handwriting instrument, and an ozone-based electric water disinfection pen.</p>
+<p class="dialog">Bai began studying all of the gift items in detail. Zei immediately started to scratch off the cover from the scannable code, and took out his hand device to prepare to scan it. He had been hoping to be able to buy his mom a new compute box for many months now, and he still could not believe that now he could finally actually get it.</p>
+<p class="dialog">Mu stood up.</p>
+<p class="dialog"><span style="color:#00bc96">"I hope you both have a good rest"</span>, she said, as she turned and began to leave the room.</p>
+<p class="dialog">As soon as Mu was gone, Zei noticed that he got one gift that Bai did not: a dark purple letter, with an inscription on the front.</p>
+<center><div class="dz-card dz-mono" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">dun</span></span> <span style="white-space:nowrap"><span class="dz-script">fe</span> <span style="white-space:nowrap"><span class="dz-script">tin di zei</span></span></span> <span style="white-space:nowrap"><span class="dz-script">de</span> <span style="white-space:nowrap"><span class="dz-script">kin kie</span></span></span></div></div></center>
+<p class="dialog">"For Zei's eyes only"</p>
+<p class="dialog">Zei stopped scratching the cover on the scannable code, and instead put the letter into his pocket.</p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-06.html">上一章 · 第六章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-08.html">下一章 · 第八章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第七章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

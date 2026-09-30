@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第二十四章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第二十四章 · Chapter 24 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-23.html">
+  <link rel="next" href="chapter-25.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="24">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第二十四章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第二十四章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 24</p>
+    <p class="chapter-heading__dateline">帕佛盖都，泽国 · 3724年雾期27日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Pafogai Du, Dzego · 3724 Mistime 27</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯看了一眼手表。时间刚跳到20,000。和塞拉通完电话后，他一整夜都没睡。他试了两次去睡，每次都撑了二十分钟就放弃了。</p>
+<p class="dialog">他深爱的四个孩子里，如今有三个以这样那样的方式落入了北极人手中——知道这一点，他就怎么也睡不着。</p>
+<p class="dialog">塞拉投了他一张不信任票，然后切断了联系，连让他道个歉的机会都不给——这之后，他也睡不着。</p>
+<p class="dialog">而这两件事同时压在他身上，能让他抱一抱、讨点安慰的人却在几千公里之外——他<em>绝对</em>睡不着。</p>
+<p class="dialog">最后，他既想着女儿的安全，也想着在塞拉眼里挽回自己，于是决定做一件不合常规的事：他打给了兹文。</p>
+<p class="dialog">兹文立刻就接了。</p>
+<p class="dialog"><span style="color:#df74b1">“爸？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你还在和莉莉联系吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“她的头像四十分钟前变绿了。我想她是用新设备登录的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“好。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“兹文，你愿意帮我们把莉莉救回来吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“当然！为了我妹妹，什么都行。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那接下来，我要你做这么几件事。跟她保持联系。主动找她，问问她最近怎么样。别流露出半点不赞同她决定的意思，甚至要表现出同情。总之保持联系，想办法弄清她在哪儿。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“爸……”</span></p>
+<p class="dialog"><span style="color:#be9b00">“怎么了？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“这简直……跟妈妈一个长时前让我做的<em>一模一样</em>。她还教了我很多该说和不该说的话。”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯打开门，穿过走廊，走出酒店区域，然后左转，继续沿隧道往前走。</p>
+<p class="dialog">到今天，他住在地下已经整整八天，就住在帕佛盖都南端的山体金字塔里。他刚到泽国不久，就被安排从原先的酒店搬到了这里。新出台的建议是让所有“重要事务”一律转入地下，而格拉迪亚斯作为事实上的昆高培顾问，当然够格。</p>
+<p class="dialog">两个多月来，他每天都沿着山体金字塔半山腰的环山树林散步二十分钟，有时还会往下走得更远，进到附近的森林里。最近这些天，他白天都待在图书馆，了解泽国的方方面面，几乎每天都和韦尔多通话，琢磨怎么说服维里迪亚军方与昆高培合作。</p>
+<p class="dialog">而今天，经历了昨晚那些事，又只睡了一个长时，他连出门的力气都提不起来了。</p>
+<p class="dialog">格拉迪亚斯走得很慢，去图书馆的路上常常停下，盯着墙面，或是打量经过的侧边房间。</p>
+<p class="dialog">他注意到，自他搬进来以后，各类高科技产业——生物医药、芯片制造，甚至汽车生产的一部分——都迁进了山体金字塔。再一琢磨，自从北林被吞并之后，新闻里就再没出现过一起北极对泽国的成功袭击。</p>
+<p class="dialog">他还注意到，散落各处的空气过滤器和紫外线灯多了十倍以上。至少泽国的厂商和班孙培干得不错，他想。</p>
+<p class="dialog">他经过一间食堂的入口，看见里面多了几棵树，种在陶盆里，约两米高，还摆着各色灌木。这些绿植似乎身兼三职：让坐在里面的人看着绿意心生平静，降低 CO2 浓度，还把食堂的不同区域隔开，多一分私密。</p>
+<p class="dialog">慢吞吞走了大约十五分钟，他终于来到图书馆门口。</p>
+<p class="dialog">他发现门楣上的标语和上次来时不一样了。</p>
+<center><div class="dz-card" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">sun jan</span></span> <span style="white-space:nowrap"><span class="dz-script">li</span> <span style="white-space:nowrap"><span class="dz-script">shai</span></span></span> <span class="dz-script">fe</span> <span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span class="dz-script">to</span> <span style="white-space:nowrap"><span class="dz-script">dzan dzie</span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">jie dau</span></span></span> <span style="white-space:nowrap"><span class="dz-script">fe</span> <span style="white-space:nowrap"><span class="dz-script">sei sui</span></span></span> <span style="white-space:nowrap"><span class="dz-script">ji</span> <span style="white-space:nowrap"><span class="dz-script">cen hai zun</span></span></span></span></div><div class="dz-line" style="margin:3px 0;padding-left:0ch"><span class="dz-script">ci</span> <span style="white-space:nowrap"><span class="dz-script">sun gau jan</span></span> <span style="white-space:nowrap"><span class="dz-script">li</span> <span style="white-space:nowrap"><span class="dz-script">gei shai</span></span></span> <span class="dz-script">fe</span> <span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span class="dz-script">to</span> <span style="white-space:nowrap"><span class="dz-script">dzan dzie</span></span> <span style="white-space:nowrap"><span class="dz-script">de</span> <span style="white-space:nowrap"><span class="dz-script">mia</span></span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">ti dzie</span></span></span> <span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">pu</span> <span style="white-space:nowrap"><span class="dz-script">she</span></span></span></span></div></div></center>
+<p class="dialog">他停下脚步，花了一会儿工夫读那行字。</p>
+<p class="dialog">“学生说：明天，我想去一个神奇而遥远的地方。老师答道：为了明天，你今天做了什么？”</p>
+<p class="dialog">让格拉迪亚斯意外的是，这句训诫给了他一点力气，让他能抬手贴上绿色圆圈开门，走进图书馆。</p>
+<p class="dialog">他穿过门，慢慢向右转，朝其中一台计算机终端走去。</p>
+<p class="dialog">白注意到了他，走上前来。</p>
+<p class="dialog"><span style="color:#ed756b">“怎么了？”</span>，她问。</p>
+<p class="dialog"><span style="color:#be9b00">“我没事”</span>，格拉迪亚斯用低沉而平淡的语气答道。</p>
+<p class="dialog"><span style="color:#ed756b">“不过，我了解得够多，看得出你心里并不好受。我也知道，如果你不情愿，还逼你说出心里那片阴影的来由，只会让你更难受。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“所以别担心，我什么都不会问。”</span></p>
+<p class="dialog">她走到格拉迪亚斯面前，轻轻抱住了他。</p>
+<p class="dialog"><span style="color:#be9b00">“我刚刚才得知，莉莉这一年来对北极的宣传全盘接受，而埃菲里昂勋爵的布道让她觉得自己被重视、被欣赏，比我给她的多得多。不到一分钟，我又得知她离家出走了。又过一分钟，我得知塞拉现在恨我，不想跟我说话。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“北极人说的那些话里，有哪些能让像她这样的人觉得有说服力？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“无条件的爱毫无意义。爱只有在你爱对方身上某种品质时才值钱。所以要得到爱，你就得配得上它，得去挣。爱不能像恒定的背景辐射那样白白照着你，只能是赢来的奖赏。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“最重要的是永远努力提升自己。可如果你能提升，就说明你能比过去的自己更好——那你就等于承认了，一个人可以比另一个人更好。所以，说什么我们人人平等、说什么我们身上最重要的是那份平等的人性——全是胡说。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“你知道……我其实有点同意。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“什么？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我不是说在什么绝对意义上，这种想法对每个人都健康。绝对不是。要是你真觉得它健康，那当然，一旦你认定自己最强，就会想去征服所有人，只为了证明这一点。我的意思是……这种想法对我有好处。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你是什么意思？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我父母在我很小的时候就死了。一场爆炸，北极人引发的。我跟着姨妈长大，她基本上不管我。没有人无条件地爱我。我十二岁就得自己想办法挣钱。我的社交能力全是从那段经历里学来的。我从别人那里得到的唯一欣赏，就是在我给他们提供了有价值的东西、或者用成功让他们佩服的时候。你说的埃菲里昂那套循环——爱是赢来的奖赏——那就是我的童年。也正因为这样，我在帕佛盖都民本棋赛上拿了第二名。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“第一名是谁？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“泽。而他要赢的动机，比我那种要向世界证明‘我因为强，所以值得被爱’的求胜心，还要更纯粹、更漂亮。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那是什么动机？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“好奇。”</span></p>
+<p class="dialog">对话停了一会儿。然后格拉迪亚斯又开口了。</p>
+<p class="dialog"><span style="color:#be9b00">“几分钟前你抱我的时候，你给的难道不正是埃菲里昂说的那种毒药吗？把爱当作对软弱的奖赏？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“一年前我不会那么做。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“可它管用了。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我很想说，我那么做是因为我抛弃了贪婪这个假神，改信了真正的宗教——看重好奇。可连这也是假的。如果我是出于好奇，我大概会直接问你出了什么事，而那只会惹你反感。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那倒是肯定的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“所以你的结论是什么？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“也许真的没有什么万能公式。不同的人适用不同的招数。我不会说我对人类可能有的各种动机全都无所谓——我今天可以很坦然地说，好奇几乎总是比贪婪更好的动机。而怨恨可能是最糟的。但我不认为有哪一套能适合所有人。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那我要怎么救莉莉？还有，费布里克和赫雷达呢？还有，我怎么才能让塞拉不再恨我？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“嗯，也许这正是你唯一需要变得至少有10%到20%像北极人的地方。如果我们能赢，你的家人就能完完整整地重聚。你从塞拉的角度想一想。<em>她</em>唯一能快乐的办法，就是能再抱一抱费布里克、赫雷达和莉莉。可光靠情感支撑和爱，没有任何办法把这三个人带回来。唯一<em>能</em>把他们带回来的，就是你赢——帮维里迪亚战胜北极人。所以，让这件事推着你更拼命一点，好让你在下一场战斗里成为赢家。”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯和泽沿隧道往下走，又下了楼梯。几分钟后，他们来到一扇密封的门前。泽把手表贴上门边的绿色圆圈。门缓缓打开了。</p>
+<p class="dialog">他们看见一个狭长的房间，房间尽头有一张大桌子。桌边坐着一个男人，披着一件暗影般的斗篷。</p>
+<p class="dialog"><span style="color:#e58137">“欢迎你们两位！”</span>，登高声说。</p>
+<p class="dialog"><span style="color:#df74b1">“很高兴再见到你，登”</span>，泽答道。</p>
+<p class="dialog">格拉迪亚斯清了清嗓子。<span style="color:#be9b00">“mi cin pin fe lo kin do”</span>，他补了一句。</p>
+<p class="dialog"><span style="color:#e58137">“哇，你的口音现在都这么好了。我也很高兴见到你，格拉迪亚斯。”</span></p>
+<p class="dialog"><span style="color:#e58137">“对了，请坐。”</span></p>
+<p class="dialog">格拉迪亚斯和泽一起上前，在登对面的两把椅子上坐下。</p>
+<p class="dialog"><span style="color:#e58137">“那么，格拉迪亚斯。这次会面是你召集的。你想谈什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，到目前为止，我们还没想出什么好办法，能说服维里迪亚军方与你们合作。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“不过，我倒有个不太常规的想法，可以让你们在过渡期里先做起来。”</span></p>
+<p class="dialog"><span style="color:#e58137">“什么想法？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“监视我们。”</span></p>
+<p class="dialog">登有些意外地看了格拉迪亚斯一眼，几乎立刻又恢复了平静，仿佛这才想起：公开流露兴奋或其他计划外的情绪，与他的自我形象不符。</p>
+<p class="dialog"><span style="color:#e58137">“我想我能看出其中的道理。不过我想听你说。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“北极人对维里迪亚社会的渗透非常深。他们腐蚀了许多政客，也腐蚀了军方。似乎只有那些内建隐私保护更强的机构还在抵抗：掌舵会、图谱资助和合议庭。不过即便在掌舵会内部，渗透也已经钻得很深。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“所以，如果你们能监视维里迪亚，也许就能监视那些间谍。尽可能查清北极人对维里迪亚的渗透落在哪里，甚至试着反制。也许还可以把这些信息更直接地交到人们手里，让他们不必经过中央机构就能自己去解决。”</span></p>
+<p class="dialog"><span style="color:#e58137">“你知道风险吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“如果你们被抓住，维里迪亚和泽国之间的信任会大打折扣。那样我们就彻底分裂，北极人赢了。”</span></p>
+<p class="dialog"><span style="color:#e58137">“那我们凭什么该接受这个风险？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，首先，这局棋我们已经下到很后面了，局面很绝望。用你或者泽的话说，第九次干预回合。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“第二，我不是只丢给你们一句‘去当间谍’就完了。我愿意提供关于北极人如何运作的许多具体细节，也能帮你们搭上我们最近联系上的一批掌则人，好让你们能更好地追踪北极人。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“第三，我觉得我们应该告诉韦尔多，说服他和我一起担起责任：万一这事泄露出去，由我们两个人出面认下，说项目是我们提的，甚至是我们主持的。”</span></p>
+<p class="dialog"><span style="color:#e58137">“我喜欢这个方案。泽？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你在问我？”</span></p>
+<p class="dialog"><span style="color:#e58137">“当然。你已经是我们最好的密码学家之一，还一直在协调与自由城防卫队的合作。你觉得呢？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“十五年来，数字设备上的安全一直非常牢固。间谍活动主要是物理世界的事，而物理世界要守住难得多。我觉得应该带格拉迪亚斯去看看一些店铺和晶圆厂，比如你很久以前带我看过的那家，然后我们可以一起想，有什么不太惹眼的办法能弄到更多关于维里迪亚的情报。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“其实……我记得维里迪亚的监控摄像头是从泽国买的。就是已经装在不少地方、他们还想装到所有地方的那种。维里迪亚过去要求，摄像头装在公共场所时，必须用密码学手段强制执行数据用途限制，但几年前这一条被稀释了，是交通部一次没人注意的行政调整。你们能不能就……给那些摄像头留个后门？”</span></p>
+<p class="dialog"><span style="color:#e58137">“如果真有这么容易，那北极人肯定早就大规模渗透维里迪亚了吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“是啊，怎么了？”</span></p>
+<p class="dialog"><span style="color:#e58137">“已经渗透了吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“是啊，这一直就是我想告诉你们的啊！”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-23.html">上一章 · 第二十三章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-25.html">下一章 · 第二十五章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias checked his watch. The time just hit 20,000. He had been awake all night after his call with Seila. He had tried to go to sleep twice, but gave up after twenty minutes each time.</p>
+<p class="dialog">He could not go to sleep knowing that three of the four children he loved dearly were now, in one way or another, in the hands of the Arctics.</p>
+<p class="dialog">He could not go to sleep after Seila gave him that kind of vote of non-confidence, and then cut off communication without giving him any chance to even apologize.</p>
+<p class="dialog">And he <em>definitely</em> could not go to sleep when both of those things were happening to him at the same time, and anyone he could hug for emotional support was thousands of kilometers away.</p>
+<p class="dialog">Finally, thinking as much about redeeming himself in Seila's eyes as about his daughter's safety, he decided to do something unorthodox: he called Zven.</p>
+<p class="dialog">Zven picked up immediately.</p>
+<p class="dialog"><span style="color:#df74b1">"Dad?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Are you still in contact with Lily?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Her icon went green about forty minutes ago. I think she logged in from a new device."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Good."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Zven, are you willing to help us save Lily?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Of course! Anything for my sister."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Then here's what I want you to do. Stay in touch with her. Reach out, ask her what's up. Don't give any indication that you disapprove of her decision. Even show sympathy for her. Just stay in contact, and try to learn where she is."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Dad..."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What is it?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"That's like ... <em>exactly</em> what Mom told me to do a longhour ago. She gave me a lot of good advice for things I should and shouldn't say."</span></p>
+<hr class="rule">
+<p class="dialog">Gladias opened the door, walked through the hallways until he left the hotel area, and then turned left and kept going through the tunnel.</p>
+<p class="dialog">This was now his eighth day living entirely underground, inside the mountain pyramid at the south end of Pafogai Du. Soon after he first arrived in Dzego, he had been relocated there from his original hotel. The new recommendations were for all "important business" to move to underground locations, and as a de-facto Kungaupei advisor, Gladias certainly qualified.</p>
+<p class="dialog">For over two months, he would take daily twenty minute walks every day along the trees around the perimeter halfway up the mountain pyramid, and sometimes a longer walk down and into the nearby forest. For the past few days, he had been spending each day in the library, learning about different aspects of Dzego and having almost daily calls with Verdow to think through how to convince the Veridian military to cooperate with the Kungaupei.</p>
+<p class="dialog">And today, after what happened last night, and after only getting one longhour of sleep after it, he did not have the will to go outside at all.</p>
+<p class="dialog">Gladias walked slowly, taking many breaks to stare at the wall and at any side rooms that he walked past on his way to the library.</p>
+<p class="dialog">High-tech industry of all kinds - biomedical, chip manufacturing, even parts of car production - had moved into the mountain pyramid since he came in, he noticed. And now that he thought about it, there had not been a single successful Arctic attack on Dzego in the news since Northglade had been annexed.</p>
+<p class="dialog">He also noticed that the number of air filters and ultraviolet lamps scattered around various locations had increased more than tenfold. At least the Dzegojan manufacturers and the Bansunpei are doing a good job, he thought.</p>
+<p class="dialog">He passed by the entrance to a cafeteria. Trees about two meters tall growing inside clay pots were now inside, he saw, along with various shrubs. The greenery seemed to play a triple role of giving the people sitting inside a feeling of calm from seeing nature, reducing CO2 levels, and splitting up different sections of the cafeteria to improve privacy.</p>
+<p class="dialog">After about fifteen minutes of slow walking, he finally arrived at the entrance to the library.</p>
+<p class="dialog">He noticed that the slogan at the top of the door had changed since the last time he had been there.</p>
+<center><div class="dz-card" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">sun jan</span></span> <span style="white-space:nowrap"><span class="dz-script">li</span> <span style="white-space:nowrap"><span class="dz-script">shai</span></span></span> <span class="dz-script">fe</span> <span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span class="dz-script">to</span> <span style="white-space:nowrap"><span class="dz-script">dzan dzie</span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">jie dau</span></span></span> <span style="white-space:nowrap"><span class="dz-script">fe</span> <span style="white-space:nowrap"><span class="dz-script">sei sui</span></span></span> <span style="white-space:nowrap"><span class="dz-script">ji</span> <span style="white-space:nowrap"><span class="dz-script">cen hai zun</span></span></span></span></div><div class="dz-line" style="margin:3px 0;padding-left:0ch"><span class="dz-script">ci</span> <span style="white-space:nowrap"><span class="dz-script">sun gau jan</span></span> <span style="white-space:nowrap"><span class="dz-script">li</span> <span style="white-space:nowrap"><span class="dz-script">gei shai</span></span></span> <span class="dz-script">fe</span> <span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span class="dz-script">to</span> <span style="white-space:nowrap"><span class="dz-script">dzan dzie</span></span> <span style="white-space:nowrap"><span class="dz-script">de</span> <span style="white-space:nowrap"><span class="dz-script">mia</span></span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">ti dzie</span></span></span> <span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">pu</span> <span style="white-space:nowrap"><span class="dz-script">she</span></span></span></span></div></div></center>
+<p class="dialog">He stopped, and took a moment to read.</p>
+<p class="dialog">"The student says: tomorrow I want to go to a magical and far away place. The teacher replies: for the sake of tomorrow, what have you done today?"</p>
+<p class="dialog">To Gladias's surprise, the admonishment gave him a small burst of energy, allowing him to raise his hand against the green circle to open the door, and enter the library.</p>
+<p class="dialog">He walked through the door, and then slowly turned right and started walking toward one of the computer terminals.</p>
+<p class="dialog">Bai noticed him, and walked up.</p>
+<p class="dialog"><span style="color:#ed756b">"What's the matter?"</span>, she asked.</p>
+<p class="dialog"><span style="color:#be9b00">"I'm fine"</span>, Gladias replied in a quiet and flat tone.</p>
+<p class="dialog"><span style="color:#ed756b">"Well, I know enough to know that you're not fine. Though I also know enough to know that forcing you to divulge the source of your darkness if you're not comfortable will make you feel even worse."</span></p>
+<p class="dialog"><span style="color:#ed756b">"So don't worry, I won't ask any questions."</span></p>
+<p class="dialog">She walked up to Gladias, and gently hugged him.</p>
+<p class="dialog"><span style="color:#be9b00">"I just learned that Lily has been eating up Arctic propaganda for the last year, and Lord Ephelion's sermons made her feel valued and appreciated more than I ever did. And less than a minute later, I learned that she ran away from home. And a minute after that, I learned that Seila now hates me and doesn't want to talk to me."</span></p>
+<p class="dialog"><span style="color:#ed756b">"What do the Arctics say that someone like her would find compelling?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"That unconditional love is meaningless. Love is only worth anything if you love some quality that the object of your love has. And so to receive love, you have to deserve it, you have to earn it. Love has to come not as a constant background radiation, but as a reward for winning."</span></p>
+<p class="dialog"><span style="color:#be9b00">"The most important thing is to always strive to improve yourself. But if you can improve, that means you can be better than your former self - and at that point, you've basically admitted that one person can be better than another. So the whole idea that we're all equal, that the most important thing about us is our equal humanity, is total nonsense."</span></p>
+<p class="dialog"><span style="color:#ed756b">"You know ... I kind of agree."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"I don't mean in some absolute sense, that that way of thinking is healthy for everyone. It definitely isn't. If you think it does, then of course once you think you're the best, you're going to want to start conquering everyone just to prove it. I meant more ... that that kind of thinking was good for me."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What do you mean?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"My parents died when I was very young. In an explosion, triggered by the Arctics. I grew up with my aunt, who basically just ignored me. No one loved me unconditionally. I had to start figuring out how to earn money on my own when I was twelve. I learned all my social skills from that. The only appreciation from other human beings that I got, was when I provided something of value to them, or when I impressed them with my success. The loop that you said Ephelion talks about, of love as a reward for winning, that was my childhood. And, I got second place in the Pafogai Du Minpentai games because of that."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Who got first place?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Zei. And he had a motivation to succeed that was even more pure, even more beautiful, than my desire to succeed in order to prove to the world that I deserve love because I am strong."</span></p>
+<p class="dialog"><span style="color:#be9b00">"And what motivation was that?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Curiosity."</span></p>
+<p class="dialog">The conversation paused for a moment. Then Gladias spoke up again.</p>
+<p class="dialog"><span style="color:#be9b00">"When you hugged me a few minutes ago, were you not offering exactly the thing that Ephelion says is poison? Love as a reward for weakness?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"I would not have done that a year ago."</span></p>
+<p class="dialog"><span style="color:#be9b00">"And yet it worked."</span></p>
+<p class="dialog"><span style="color:#ed756b">"I would love to say that I did that because I gave up the false god of greed and converted to the true religion, that of valuing curiosity. But even that is false. If I was motivated by curiosity, I would probably have just directly asked you what's wrong, and that would have triggered your resentment."</span></p>
+<p class="dialog"><span style="color:#be9b00">"It definitely would have."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what's your conclusion?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"That maybe there really is no master formula. There are different bags of tricks that work for different people. I'm not going to say I'm fully unopinionated between all the different motivations that human beings might have - I'm very comfortable saying, today, that curiosity is almost always a better motivation than greed. And resentment might be the worst of all. But I don't think there's a one size fits all for everyone."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So how do I save Lily? And, for that matter, Febric and Hreda? And how do I get Seila to stop hating me?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Well, maybe that's the one place where you do need to become at least ten or twenty percent Arctic. Your family will be back together, fully, if we can win. Think about it from Seila's perspective. The only way <em>she</em> can be happy, is if she can hug Febric, Hreda and Lily again. And there is no way to use emotional support and love alone to bring the three of them back. The only thing that <em>will</em> bring them back, is if you win - by helping Veridia win against the Arctics. So let that motivate you to try harder, so that in this next battle you can be a winner."</span></p>
+<hr class="rule">
+<p class="dialog">Gladias and Zei walked down the tunnel, and down the stairs. After a few minutes, they got to a sealed door. Zei tapped his watch against the green circle beside the door. The door slowly opened.</p>
+<p class="dialog">They saw a long room, and at the end of the room there was a large table. At the table, a man was sitting wearing a shadowy cloak.</p>
+<p class="dialog"><span style="color:#e58137">"Welcome to you both!"</span>, Den exclaimed.</p>
+<p class="dialog"><span style="color:#df74b1">"Good to see you again, Den"</span>, Zei replied.</p>
+<p class="dialog">Gladias cleared his throat. <span style="color:#be9b00">"mi cin pin fe lo kin do"</span>, he added.</p>
+<p class="dialog"><span style="color:#e58137">"Wow, even your accent is good now. And I'm happy to see you too, Gladias."</span></p>
+<p class="dialog"><span style="color:#e58137">"By the way, please sit down."</span></p>
+<p class="dialog">Gladias and Zei both stepped forward, and sat down on two chairs opposite Den.</p>
+<p class="dialog"><span style="color:#e58137">"So, Gladias. You called this meeting. What did you want to talk about?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, so far we have not figured out any amazing plan for how to convince the Veridian military to cooperate with you."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But, I have a somewhat unorthodox idea for what you can do in the interim."</span></p>
+<p class="dialog"><span style="color:#e58137">"And what is that?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Spy on us."</span></p>
+<p class="dialog">Den briefly stared at Gladias in surprise. His face almost immediately smoothed, as though remembering that it was not compatible with his self-image to be openly expressing any excitement or other unplanned emotion.</p>
+<p class="dialog"><span style="color:#e58137">"I think I see the reasoning. But I want to hear yours."</span></p>
+<p class="dialog"><span style="color:#be9b00">"The Arctics have made a very deep infiltration into Veridian society. They've corrupted many of the politicians. They've corrupted the military. The only institutions that seem to be resisting are the ones that have some stronger privacy built in: the Order of Steering, Graph Funding and the Courts. Though even within the Order, the intrusion got in pretty deep."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So if you can spy on Veridia, you might be able to spy on the spies. Figure out as much as you can about where the intrusion into Veridia is, and perhaps even try to counteract it. Maybe even put that information more directly into people's hands, and empower them to try to solve it without going through the central institutions."</span></p>
+<p class="dialog"><span style="color:#e58137">"You know the risk, right?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"If you get caught, a lot of trust between Veridia and Dzego is lost. And then we're divided completely and the Arctics win."</span></p>
+<p class="dialog"><span style="color:#e58137">"So why should we be okay with that risk?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, first of all, we're already pretty late in the game and this is a desperate situation. A ninth intervention turn, as you or Zei might put it."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Second, I'm not just giving you the one-word suggestion 'spy'. I'm offering to give some very detailed specifics about how the Arctics operate, as well as connections to a whole bunch of Keepers that we're now in contact with, so you can better track the Arctics down."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Third, I think we should tell Verdow, and convince him to take responsibility, along with me, for proposing and even running the project if this all gets out."</span></p>
+<p class="dialog"><span style="color:#e58137">"I like this plan. Zei?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"You're asking me?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Of course. You're already one of our best cryptographers. You've been coordinating the work with the Freetown corps. What do you think?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"For the past fifteen years now, security on digital devices has been very strong. Spying is primarily a physical-world thing, the physical world is much harder to secure. I think we should take Gladias on a tour of some of the stores and the fabs, like the one you showed me way back then, and we can try to think, what would be a reasonably unobtrusive way to get more information on Veridia."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Actually ... I think Veridia buys its security cameras from Dzego. The ones that are already in a bunch of places, and that they wanted to put everywhere else too. Veridia used to require cryptographically enforced limits on what the data gets used for if the cameras are in public places, but that got watered down a few years back, an administrative change by the Transportation Ministry no one paid attention to. Could you just ... backdoor those?"</span></p>
+<p class="dialog"><span style="color:#e58137">"If it was that easy, then surely the Arctics must have massively infiltrated Veridia already?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yes?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Have they?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yes? That's what I've been trying to tell you all along!"</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-23.html">上一章 · 第二十三章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-25.html">下一章 · 第二十五章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第二十四章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

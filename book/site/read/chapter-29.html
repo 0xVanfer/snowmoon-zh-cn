@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第二十九章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第二十九章 · Chapter 29 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-28.html">
+  <link rel="next" href="chapter-30.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="29">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第二十九章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第二十九章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 29</p>
+    <p class="chapter-heading__dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Elenar Forest, Veridia · 3725 Snowmoon 29</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">泽和穆站在一座积雪的山丘顶上。四周是覆着厚厚白雪的翠绿松林，一直铺到目力所及之处。一股强劲的冷风迎面扑来。身上其余部位裹在白灰相间的外套里，厚度足以让他们从容欣赏这片景色，却又刻意差着一点，始终暖和不起来。远处树梢正上方，是一轮刚从东方升起的太阳。</p>
+<p class="dialog"><span style="color:#00bc96">“这里就是决定我们未来的地方了。”</span>穆平静地说。</p>
+<p class="dialog"><span style="color:#df74b1">“你觉得我们准备好了吗？”</span>泽问。</p>
+<p class="dialog"><span style="color:#00bc96">“没有。”</span>穆答。<span style="color:#00bc96">“可有意义的事，从来不在人准备好的时候发生。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“我们指望的是，北极人比我们更没准备好。”</span></p>
+<p class="dialog">身后传来缓缓上坡的脚步声，每一步都比前一步大约晚一个嘀嗒，艰难地踏过深雪。过了片刻，泽感觉有人从背后抱住了他。</p>
+<p class="dialog"><span style="color:#ed756b">“不管今天发生什么，泽，我很高兴认识了你。”</span></p>
+<p class="dialog">是白。泽转过身，抓住她的手，把她拉上最后一级台阶，让她和自己、穆站到同一高度。</p>
+<p class="dialog"><span style="color:#df74b1">“我也很高兴认识了你。”</span></p>
+<p class="dialog">三个人沉默地等了一会儿，望着雪从东边的林间吹过、越过树梢。</p>
+<p class="dialog"><span style="color:#ed756b">“那计划是什么？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“开往埃尔迪尔的末班列车今天到站。事到如今，北极人不可能不知道我们在这里集结了一支规模不小的部队。所以他们肯定已经在集结军队来迎我们了。这片森林难走，但不是走不通。所以我们最好的机会就是今晚动手，从西面插进北岸北部，完全绕过北林，然后把它切断、包围。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“你对这个计划有信心吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我上一次和北极人交手，彻底搞砸了，是穆救的场。所以，没有，我没信心。但这是我们最好的机会。”</span></p>
+<p class="dialog">白又从侧面抱了抱泽。</p>
+<p class="dialog"><span style="color:#ed756b">“我相信你。”</span></p>
+<p class="dialog">穆打破了沉默。<span style="color:#00bc96">“我也相信你，泽。”</span></p>
+<p class="dialog">他们沉默地望着那片积雪厚厚的松林，又看了5分钟，然后开始慢慢往山下走，回他们临时搭建的掩体。</p>
+<hr class="rule">
+<p class="dialog">登、穆、泽和另外几十名维里迪亚将领与昆高培领导人坐在一间逼仄的屋子里，莱克托站在最前面做汇报。</p>
+<p class="dialog"><span style="color:#23ba7d">“好，每个人都知道自己的任务吗？”</span>莱克托大声问。<span style="color:#23ba7d">“加洛瓦？”</span></p>
+<p class="dialog"><span style="color:#e58137">“我带北集群，任务是穿过森林，一路向东北，直到海岸，然后拉出防线，把北极人和整个半岛隔绝开。这要求我在南翼与北岸的北极部队交战并将其包围，同时在北翼挡下来援。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“好！你呢，特尔波？”</span></p>
+<p class="dialog"><span style="color:#7499fb">“我带中集群，任务是直接向东穿过森林。预计会撞上北极的主力无人机机队。没有必须攻占的阵地目标，我们的任务是拖住他们，确保他们突不破。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“那你呢，登？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我带南集群，任务是穿过森林，向东南推进，然后在北林外围拉起防线。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“瓦卡里亚？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“我带海上集群，主要任务是用海上无人机从南面攻击北林以东的北岸。尽我所能地牵制、包围。更远的目标是继续向东，攻击塔尔杜尔岛上的北极核心领土。”</span></p>
+<p class="dialog">瓦卡里亚答完，沉默了片刻。最后，莱克托又开口了。</p>
+<p class="dialog"><span style="color:#23ba7d">“泽？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“监督各条战线，找出无人机作战中必要的战略与战术调整。”</span></p>
+<p class="dialog">莱克托转回去，又看了一眼屏幕。</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-01.svg" alt="北林周边各编队的位置与行动路线" title="北林周边各编队的位置与行动路线" loading="lazy" decoding="async"></figure>
+<p class="dialog">各位集群指挥说的，似乎和地图上的计划都对得上。</p>
+<p class="dialog"><span style="color:#23ba7d">“好，很好。看来大家都知道自己该做什么了。解散。你们有3个长时做最后的准备。日落时出发。”</span></p>
+<hr class="rule">
+<p class="dialog">泽、白和穆又一次站在山丘顶上。太阳此刻在他们身后，只比地平线高出一点，再过几分钟就要落下。松林和先前一样覆着雪。但景色已经彻底变了。林子边缘停着成千上万台像雪地摩托一样的装置，许多明显装上了武器。泽能辨认出大量细细的银线在阳光下反光，从许多最大的雪地无人机尾部牵出，一直延伸到目力尽头。是光纤电缆，他明白了。今晚它们会铺开数百公里——也正是它们，能让泽在战线推进时始终可靠地跟无人机保持联络。</p>
+<p class="dialog"><span style="color:#ed756b">“等等，那架无人机顶上是不是一箱<em>打印机</em>？”</span>白突然问。</p>
+<p class="dialog"><span style="color:#df74b1">“对。还有些无人机运的是贴纸和衬衫。一大堆教室设备。以防我们需要快速对北极无人机的算法发起视觉攻击。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“原来如此……”</span></p>
+<p class="dialog">泽的手表震了一下。他转过身，看见太阳的底部已经沉到地平线以下。他心想：“Fi le gei fa”——距开始还有100个嘀嗒。他回想起过去十年下过的所有民本棋对局，从练习到锦标赛。他这才意识到，那些时间全都是在为唯一一场真正重要的对局做准备：今晚。</p>
+<p class="dialog"><span style="color:#00bc96">“该回指挥所了。”</span>穆轻声说。</p>
+<p class="dialog">泽转过身。太阳已经有一半沉到地平线以下了。</p>
+<p class="dialog"><span style="color:#df74b1">“是啊，该走了。”</span></p>
+<p class="dialog">三个人慢慢走回山下那座掩体。他们推开门，走进去，脱下雪鞋，关上门。</p>
+<p class="dialog">他们刚一进屋，一台机器人就滑到他们面前，端来了茶。</p>
+<p class="dialog"><span style="color:#00bc96">“谢谢。”</span>穆轻声说，拍了拍机器人的头，接过自己的茶。机器人轻轻嘀了一声。</p>
+<p class="dialog">泽和白也各自端起了茶。</p>
+<p class="dialog">泽的手表震了一下。</p>
+<p class="dialog">他听到外面雪地无人机加速的声响。</p>
+<p class="dialog">行动开始了。</p>
+<p class="scene-break">3725年雪月30日</p>
+<p class="dialog">泽和穆待在相邻却彼此隔开的房间里，各坐一把椅子。两人能看见同一块指挥屏幕，左上角是时钟。刚过午夜。</p>
+<p class="dialog">三支陆军集群都在快速推进。海上集群则推迟了出动，好让它的突袭在主战事打响后不久发起。到目前为止，三个主力集群轻松击溃了几支北极警戒小队，正继续全速前进。</p>
+<p class="dialog">警报响起。</p>
+<p class="dialog">泽立刻在地图上看到了原因。</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-02.svg" alt="北林周边地点与虚线路线示意图" title="北林周边地点与虚线路线示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">泽能听到加洛瓦和特尔波在频道里协调。</p>
+<p class="dialog"><span style="color:#be9b00">“转入防御阵位，散开，防止被包围。”</span>加洛瓦喊道。</p>
+<p class="dialog"><span style="color:#7499fb">“派中集群一部分北上，从背后攻击。”</span>特尔波答。</p>
+<p class="dialog">泽放大地图。维里迪亚与北极的无人机集群正迅速逼近。双方都开了几发远程武器，北集群已有10架无人机失能——这还不算先前在森林各处被北极固定陷阱干掉的那几十架——但到目前为止，主力交锋还没有开始。</p>
+<p class="dialog">过去一个半月里，他演练过数百次森林雪地无人机作战的模拟，知道在侦测、隐蔽、攻击和找掩护上什么策略最好。这些策略已经载入无人机的 AI 模型。</p>
+<p class="dialog">屏幕上出现了一幅图像。正是北极雪地无人机的设计图。它和他以前看过的图略有不同——更快、更灵活，对固定陷阱的防护更好，侧面和背面的防御也更强。他明白过来：北极人一直在为又一场快速攻势做准备。这些改进的代价，是牺牲了传统固定战线正面交战的效能。维里迪亚雪地无人机机队也做过一些类似的改动，但幅度小得多。因此，对他们最有利的打法，似乎就是……摆开固定战线，正面硬碰硬。</p>
+<p class="dialog">不妙，泽想——北极的无人机机队规模更大。我们只能靠更好的微观战术来弥补。</p>
+<p class="dialog">几分钟后，双方的无人机机队靠近到可以交火的距离。维里迪亚机队抢先砍倒了大量树木，以防被包围，尤其是在北翼。加洛瓦的策略很简单：北边拖，东边打。大约20分钟后，特尔波的机队将从南面攻击东侧的北极集群，希望能将其包围并歼灭。</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-03.svg" alt="红色与浅蓝色散点的分布示意图" title="红色与浅蓝色散点的分布示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">泽仔细看着。双方的无人机伤亡数开始迅速攀升。很快，维里迪亚和北极的损失都突破了100。</p>
+<p class="dialog">泽继续翻看所有画面。他看到加洛瓦最大的几架雪地无人机顶上有些大箱子打开了。一大群翔球赛场用的飞行器和送货飞行器飞了出来，似乎改装过，挂载着更危险的载荷。对了——北极的雪地无人机顶部同样是弱点。民用设施改造得不错，泽想。</p>
+<p class="dialog">每支集群里都编入了一批泽国最优秀的民本棋选手——这批人由昆高培悄悄空运而来——以及一些维里迪亚最出色的翔球选手，他们都坐在远离前线、安全无虞的指挥中心里。这两拨人最懂空中对决的实战门道。</p>
+<p class="dialog">泽继续看着。眼下加洛瓦的策略似乎进展顺利。他这路集群在北翼一边砍树、一边留下陷阱，成功缓慢后撤；东翼的战斗也推进得很顺。确切的伤亡比不好判断，但从屏幕上跳出的数字看，明显对维里迪亚人有利。</p>
+<p class="dialog">40分钟后，他看到了真正重要的好消息：加洛瓦的部队已经从北极的北翼与东翼之间突了进去，特尔波的机队也开始从南面攻击北极东翼。</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-04.svg" alt="两组不同颜色的散点分布示意图" title="两组不同颜色的散点分布示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">很快，东面的北极雪地无人机接连失能，而加洛瓦的西翼继续缓慢后撤，拖住北极的北翼。北极无人机试图照搬这种缓退战术，却没有成功：此时特尔波几乎已经把它们完全包围，它们无处可去。</p>
+<p class="dialog">几分钟后，加洛瓦宣布北极无人机机队已被基本击溃。他命令东翼绕开残骸，免得那些半瘫的残兵或它们留下的陷阱造成损失，随后全速向东北继续推进。</p>
+<p class="dialog">泽缩小地图，又看了一遍全局。</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-05.svg" alt="北林及周边地点与路线示意图" title="北林及周边地点与路线示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">又过了一个半长时，维里迪亚的四支无人机机队继续推进——只有加洛瓦留下拖延其北面那支北极无人机部队的小股分队例外。</p>
+<p class="dialog">警报再次响起。这一次，中集群和南集群同时受到威胁。</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-06.svg" alt="北林及周边地点分布示意图" title="北林及周边地点分布示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#23ba7d">“好了，各位。”</span>莱克托喊道。<span style="color:#23ba7d">“这才是真正的硬仗。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“中路转入防御，缓慢后撤；两翼尝试包抄。小心，把我们的损失压到最低，让他们的损失尽可能大。别让他们突破我们的阵地。”</span></p>
+<p class="dialog">片刻之后，他又补了一句：</p>
+<p class="dialog"><span style="color:#23ba7d">“为了维里迪亚！”</span></p>
+<p class="dialog"><span style="color:#e58137">“Dze go ba fau gie”</span>登紧跟着喊了出来。</p>
+<p class="dialog">泽指挥无人机开始动用全部战术，包括几个月前他在红郡那些秘密战斗里学到的。他知道，这些战术在北极人适应之前只能管一小段时间，但此时不用，就再没机会了。</p>
+<p class="dialog">双方的无人机机队铺开，拉出防线。地图缩到全览时，泽能看见两条线缓缓靠近。几分钟后，交锋开始。双方的损失迅速攀升到数百。</p>
+<p class="dialog">加洛瓦留在北面的小股分队突然由退转进，开始使用同样的战术。</p>
+<p class="dialog">泽屏住呼吸，仔细看着。他不停翻看一张张小比例尺的战术地图和实时画面。</p>
+<p class="dialog">他意识到，情况有些不对。</p>
+<p class="dialog"><span style="color:#df74b1">“翡翠，分析所有微观战术和画面，判断哪些战术有效。”</span></p>
+<p class="dialog"><span style="color:#db8916">“分析中……”</span></p>
+<p class="dialog">大约20个嘀嗒后，翡翠回应了。</p>
+<p class="dialog"><span style="color:#db8916">“战术一和战术五效果中等。战术二、三、四、六效果为零或略为负面，北极方似乎已完全适应。”</span></p>
+<p class="dialog">泽呻吟了一声。他知道，尽管自己已经尽力，北极人一定还是从红郡那些无人机上成功取回了一部分画面——而那些画面，正是他和自由城几家防务公司原本拿来训练的素材。</p>
+<p class="dialog"><span style="color:#df74b1">“各单位停止使用战术二、三、四、六。使用战术一和五。ID 末尾是0或5的单位，随机试各种改动。”</span></p>
+<p class="dialog">接下来几分钟，伤亡比又朝维里迪亚一方倾斜。随后，北极人再次缓慢而稳定地占了上风。</p>
+<p class="dialog"><span style="color:#df74b1">“翡翠，哪些改良成功了？”</span>他问。</p>
+<p class="dialog"><span style="color:#db8916">“共尝试了8项。只有第7项成功，已经并入战术五的标准版本投入使用。建议淘汰战术一。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“照办。”</span></p>
+<p class="dialog">泽又惊又急，开始冒汗。他没料到北极人能如此有效地抵挡他们的战术。</p>
+<p class="dialog">快想啊，泽在心里催自己。想个办法。</p>
+<p class="dialog">海上无人机似乎得手了，至少在突袭初期是这样。它们在北林以东，以及再往东数百公里、属于北极核心领土的特尔滕，都投下了地面载具。海上无人机已经开始返回基地，去装第二轮载荷。</p>
+<p class="dialog">泽有一瞬间感到欣慰。但这还远远不够。</p>
+<p class="dialog">一台机器人进了房间，悄悄滑到泽身边，送来一罐能量饮料。泽拿起来，灌了大约一半，把剩下的放在桌上。片刻之内，它就起了作用——可唯一的功效，似乎是让泽更加绝望。</p>
+<p class="dialog">又过了一会儿，屏幕上跳出一条消息，把泽眼里最后一点光也吸干了。</p>
+<div class="device-view wide-device-view device-view-left"><p>后方基地3号似乎已被北极导弹的高精度打击彻底摧毁。</p><p>最可能的原因：内部叛徒泄露了基地位置。</p><p>目前的估计是，基地内几乎所有人员都没能生还。南集群指挥登生还的概率估计不足10%。</p></div>
+<p class="dialog">泽哭了出来。</p>
+<p class="dialog">接下来的几分钟里，他有气无力地对着话筒低声说话，提出一些无人机战术上的小调整，试图在阵地态势和伤亡比上多争一点。穆当即接任了南集群指挥。但他心里清楚，这场仗已经输了。</p>
+<p class="dialog">就在那一刻，泽的手表震了一下。</p>
+<p class="dialog">这不是标准的军事通信频道。而且，这是翡翠认为足够重要、可以越过他严格的“勿扰”指令的事。</p>
+<p class="dialog">泽对着颈带低声说话，把手表连到眼镜的显示屏上。一条消息出现在屏幕上。</p>
+<div class="device-view wide-device-view device-view-left"><p>我是德鲁因。</p><p>这几个月，我一直在执行我的计划。我赢得了北极人的信任；凭我出色的民本棋战绩，再加上我父母的身份地位，要做到这一点并不难。如今，我是北极一方的指挥官之一。</p><p>我们被严密监控，在不暴露自己的前提下，我能对北极无人机机队做的事非常有限。不过，我设法为你们留下了一个可利用的弱点。</p><p>这个文件里写的是专门针对南翼有效的战术，南翼由我指挥。如果你用上它们，应该能在海岸以北约20公里处突破，然后向北、向南扩大缺口，把突破口撑成南线的一场完胜。</p><p>接下来，就要靠你们从南面包围残余部队，夺回北林。</p></div>
+<p class="dialog">几乎立刻，一股劲头重新回到了泽身上。为登哀悼的事，只能留到改天了。</p>
+<p class="dialog"><span style="color:#df74b1">“翡翠，确认这条消息的真实性。”</span></p>
+<p class="dialog"><span style="color:#db8916">“消息用的密钥，与你在葡期15日收到的那条德鲁因原始消息中嵌入的密钥相同。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“分析这些战术，看起来可信吗？”</span></p>
+<p class="dialog"><span style="color:#db8916">“战术极具攻击性。看起来不合常规，但可信。若对手正好有相应弱点，它们会非常有效；若对手没有，我们反而会输得更快。正在跑模拟。”</span></p>
+<p class="dialog">大约20个嘀嗒后，翡翠又开口了。</p>
+<p class="dialog"><span style="color:#db8916">“若用来对付维里迪亚、昆高培或自由城的 AI，这些战术反而会让我们输得更快。它们的有效性完全取决于德鲁因所说的那个前提是否成立——北极 AI 是否真有他所指的那个特定弱点；而那个弱点既可能是被发现的，也可能是被人为植入的。”</span></p>
+<p class="dialog">泽想了一会儿，决定找真人帮忙。</p>
+<p class="dialog"><span style="color:#df74b1">“白，我把德鲁因的一条消息转给你。告诉我你怎么看。”</span></p>
+<p class="dialog">白几乎立刻回了。</p>
+<p class="dialog"><span style="color:#ed756b">“正在看。”</span></p>
+<p class="dialog">大约30个嘀嗒后，她又回了话。</p>
+<p class="dialog"><span style="color:#ed756b">“我不知道我们能不能信德鲁因。我们唯一的依据就是他自己说的话。连他当初在葡期发给你的那条消息，都可能是别人种下的。北极人完全干得出这种事，德尔瓦特就曾连着几个月给格拉迪亚斯和莫夫栽赃。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“不过我有个别的想法。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你说。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我们没有好理由信德鲁因。但德鲁因有充分的理由信我们。所以，这次把球踢回给他。该由他先迈出信任的第一步。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那你想让他做什么？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“把北极无人机 AI 模型的原始权重发给我们。”</span></p>
+<p class="dialog">白停了一下，又说下去。</p>
+<p class="dialog"><span style="color:#ed756b">“AI 模型不像普通软件，你可以把整个东西分析一遍，找出安全属性，再用数学证明它安全。它们是无法预测的野兽——是养出来的，不是锻造出来的。它们没有围墙，只有免疫系统。所以，只要拿到原始权重，我们就能并行跑模拟，优化出能骗过它们的攻击。”</span></p>
+<p class="dialog">泽的情绪再次明朗起来。</p>
+<p class="dialog"><span style="color:#df74b1">“其实比并行跑模拟简单得多。用梯度下降就行。你可以拿模型在模拟器里的输出结果，对我们在战场上能改的所有变量求导——我们贴在无人机侧面的图案、无人机的动作方式。系统会自动找出那个能把‘它们的模型漏掉我们的无人机’这一概率抬到最高的小改动。哪怕只是一小步，把‘漏掉我们某架无人机’的概率从百万分之一提高到百万分之二，也能立刻被找到。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你要不断找出能把成功概率最大化的调整。换不同参数的模拟器去试——记住，最后的攻击会出现在真实世界里，而不是模拟器里，所以我们能做到的，只是筛出在不同模拟器上都稳健的改动。跑个100万轮之后，希望我们能得到一套在现实中相当管用的东西。在我们人类看来，那大概是一堆看不懂的鬼画符。而对我们要用这套攻击去针对的 AI 来说，它就像一条魔法蛇，用致命的目光直直盯着你的脸。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我们大概没法让它们的无人机反戈一击或者关机，但我们可以让它们看不见我们的无人机，甚至让它们朝自己脚上开火，过热失能。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“哇。那好，我们回一条消息问德鲁因。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“翡翠，起草一条消息给德鲁因，把白刚才说的意思写进去。用他来时用的那条隐写信道发回去。但愿德鲁因能明白。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-28.html">上一章 · 第二十八章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-30.html">下一章 · 第三十章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Zei and Mu were standing on top of a snowy hill. Green pine trees covered with thick white snow lined the surroundings as far as their eyes could see. A strong cold wind blew into their faces. The rest of their bodies were shielded by jackets covered in a mixture of white and grey, thick enough to allow them to enjoy the surroundings but deliberately not quite thick enough for them to feel warm. Just above the trees in the distance was the sun that had just risen in the east.</p>
+<p class="dialog"><span style="color:#00bc96">"So this is where our future will be decided"</span>, Mu said calmly.</p>
+<p class="dialog"><span style="color:#df74b1">"Do you think we're ready?"</span>, Zei asked.</p>
+<p class="dialog"><span style="color:#00bc96">"No"</span>, Mu replied. <span style="color:#00bc96">"But nothing meaningful ever happens when people are ready."</span></p>
+<p class="dialog"><span style="color:#00bc96">"What we hope is that the Arctics are less ready than we are."</span></p>
+<p class="dialog">Behind them, they could hear footsteps slowly walking up the hill, each step coming about a tick after the previous, fighting the deep snow. After a few moments, Zei felt someone hugging him from behind.</p>
+<p class="dialog"><span style="color:#ed756b">"Whatever happens today, Zei, I am happy that I got to know you."</span></p>
+<p class="dialog">It was Bai. Zei turned around and grabbed her hand, pulling her up the final step so that she could be at the same height as him and Mu.</p>
+<p class="dialog"><span style="color:#df74b1">"I am happy that I got to know you too."</span></p>
+<p class="dialog">For a few moments, the three of them waited in silence, observing the snow blowing through and over the trees to their east.</p>
+<p class="dialog"><span style="color:#ed756b">"So what's the plan?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Last train to Eldil is arriving today. At this point, there's no way the Arctics don't know that we have some kind of large contingent here. So I'm sure they're already starting to prepare their army to meet us. These forests are hard to navigate through, but not infinitely hard. So our best chance is to strike tonight, push into the northern part of Northshore from the west, completely bypass Northglade and then cut off and surround it."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Are you confident in the plan?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"In my last battle against the Arctics, I screwed up completely and Mu saved the day. So no, I'm not confident. But this is the best chance we have."</span></p>
+<p class="dialog">Bai hugged Zei again from the side.</p>
+<p class="dialog"><span style="color:#ed756b">"I believe in you."</span></p>
+<p class="dialog">Mu broke her silence. <span style="color:#00bc96">"I believe in you too, Zei."</span></p>
+<p class="dialog">They silently stared at the thick snowy forest of pine trees for another five minutes, and then started to slowly walk back down toward their makeshift bunker.</p>
+<hr class="rule">
+<p class="dialog">Den, Mu, Zei and several dozen other Veridian generals and Kungaupei leaders were sitting inside of a cramped room, where Lektor was standing at the front presenting.</p>
+<p class="dialog"><span style="color:#23ba7d">"Alright, does everyone know their tasks?"</span>, Lektor asked loudly. <span style="color:#23ba7d">"Gallowar?"</span></p>
+<p class="dialog"><span style="color:#e58137">"I'm leading Group North, our task is to cross the forest, move far northeast until we get to the coast, and set up a perimeter cutting the Arctics off from the whole peninsula. This will require fighting and surrounding the Arctic force in Northshore on my southern flank, as well as warding off any reinforcements on my northern flank."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"Good! You, Telpo?"</span></p>
+<p class="dialog"><span style="color:#7499fb">"I'm leading Group Center, our task is to cross the forest directly east. We are expecting to be fighting the primary Arctic drone group. No offensive positional objective, our job is to keep them occupied and make sure they don't break through."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"And you, Den?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I'm leading Group South, our task is to cross the forest, move toward the southeast, and then set up a perimeter on the outskirts of Northglade."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"Vakaria?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"I'm leading Group Naval, our main task is to attack Northshore east of Northglade from the south with seaborne drones. Distract and surround to the best of my ability. Stretch goal is to also attack the Arctic core territory further east on Thaldur Island."</span></p>
+<p class="dialog">After Vakaria finished answering, there was a moment of silence. Finally, Lektor spoke again.</p>
+<p class="dialog"><span style="color:#23ba7d">"Zei?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Supervise all fronts, identify any necessary changes to strategy and tactics in the drone combat."</span></p>
+<p class="dialog">Lektor turned back to look at the screen again.</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-01.svg" alt="北林周边各编队的位置与行动路线" title="北林周边各编队的位置与行动路线" loading="lazy" decoding="async"></figure>
+<p class="dialog">Everything that the group leaders had said seemed to match the plan that was on the map.</p>
+<p class="dialog"><span style="color:#23ba7d">"Alright, very good. Sounds like we all know what we need to do. Everyone, dismissed. You all have three longhours to make your final preparations. We launch at sundown."</span></p>
+<hr class="rule">
+<p class="dialog">Zei, Bai and Mu were standing once again at the top of the hill. The sun was by this point just barely above the horizon behind them, minutes away from setting. The pine trees were snowy as before. But the landscape had radically changed. There were thousands of snowmobile-like contraptions sitting at the edge of the forest. Many were visibly equipped with weapons. Zei could make out a large number of thin silver lines glimmering in the sunlight, starting from the rear of many of the largest snow drones and stretching back as far as he could see. Fiber optic cables, he realized. They would stretch for hundreds of kilometers tonight - and they are what would allow Zei to reliably stay in contact with the drones as the front advanced.</p>
+<p class="dialog"><span style="color:#ed756b">"Wait, is that a box of <em>printers</em> on top of one of the drones?"</span>, Bai suddenly asked.</p>
+<p class="dialog"><span style="color:#df74b1">"Yep. There's also other drones that are carrying stick-on paper and shirts. A lot of classroom equipment. Just in case we need to rapidly apply visual attacks on the Arctic drones' algorithms."</span></p>
+<p class="dialog"><span style="color:#ed756b">"I see..."</span></p>
+<p class="dialog">Zei's watch buzzed. He turned around, and saw that the bottom of the sun had already begun receding below the horizon. "Fi le gei fa", he thought - one hundred ticks until it begins. He reminisced about all of the Minpentai games, from practice to championship, that he had played over the past decade. Without realizing it, all that time he had been training for the one game that really mattered: tonight.</p>
+<p class="dialog"><span style="color:#00bc96">"Time to get back to our command post"</span>, Mu said softly.</p>
+<p class="dialog">Zei turned around. The sun was already halfway below the horizon.</p>
+<p class="dialog"><span style="color:#df74b1">"Indeed, we should."</span></p>
+<p class="dialog">The three of them walked back slowly to their bunker at the bottom of the hill. They opened the door, walked in, took off their snowshoes and closed the door.</p>
+<p class="dialog">As soon as they were inside, a robot slid up to them, bringing tea.</p>
+<p class="dialog"><span style="color:#00bc96">"Thank you"</span>, Mu gently whispered, patting the robot on its head and taking her tea. The robot beeped softly.</p>
+<p class="dialog">Zei and Bai also picked up their teas.</p>
+<p class="dialog">Zei's watch buzzed.</p>
+<p class="dialog">He heard noises of snow drones accelerating outside.</p>
+<p class="dialog">The mission had begun.</p>
+<p class="scene-break">3725 Snowmoon 30</p>
+<p class="dialog">Zei and Mu were sitting on their chairs in adjacent but separate rooms. They could each see the same command screen. On the top left, the clock was showing the time. It had just struck midnight.</p>
+<p class="dialog">All three land army groups were advancing forward quickly. The launch of the Naval group was delayed, so that its assault would come shortly after the beginning of the main battle. So far, the three main army groups had easily defeated a few small Arctic sentry units, and were continuing to proceed at full speed.</p>
+<p class="dialog">An alarm blared.</p>
+<p class="dialog">Zei immediately saw the cause on the map.</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-02.svg" alt="北林周边地点与虚线路线示意图" title="北林周边地点与虚线路线示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">Zei could hear Gallowar and Telpo coordinating in the chat.</p>
+<p class="dialog"><span style="color:#be9b00">"Adopting defensive positions, spreading out to prevent encirclement"</span>, Gallowar shouted.</p>
+<p class="dialog"><span style="color:#7499fb">"Sending part of Group Center northward to attack from behind"</span>, Telpo replied.</p>
+<p class="dialog">Zei zoomed in. The Veridian and Arctic drone army groups were quickly closing in on each other. They were firing a few long-range weapons, and ten drones from Group North had already been disabled - on top of the few dozen that had already been lost to stationary Arctic traps scattered throughout the forest - but so far the main hostilities had not yet begun.</p>
+<p class="dialog">Over the past month and a half, he had played simulations of forest snow drone combat hundreds of times, and he knew what the best strategies were for detection, hiding, attacking and taking cover. The strategies had already been loaded into the drones' AI models.</p>
+<p class="dialog">A visual image appeared onscreen. It was the exact design of the Arctic snow drone. It was slightly different from the images he had seen before - faster and more agile, better protected against stationary traps, and with better defenses on the sides and back. The Arctics had been anticipating another rapid offensive campaign, he realized. These improvements came at the expense of effectiveness in traditional fixed face-to-face combat. The Veridian snow drone fleet had made some similar modifications, but to a significantly lesser extent. Hence the battle style that was most to their advantage seemed to be ... direct face-to-face combat with fixed battle lines.</p>
+<p class="dialog">Not good, Zei thought - the Arctic drone fleet was larger. They would have to make up for it with better micro-tactics.</p>
+<p class="dialog">A few minutes later, the drone fleets came close enough to clash. The Veridian drone fleet pre-emptively cut down a large number of trees to prevent encirclement, particularly on its north flank. Gallowar's strategy was simple: delay in the north, fight in the east. In about twenty minutes, Telpo's fleet would attack the eastern Arctic group from the south, and hopefully surround and defeat it.</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-03.svg" alt="红色与浅蓝色散点的分布示意图" title="红色与浅蓝色散点的分布示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">Zei watched carefully. Drone casualty counts were starting to increase rapidly on both sides. Soon, both the Veridian and Arctic losses spiked above a hundred.</p>
+<p class="dialog">Zei continued scrolling through all of the visual feeds. He saw some large boxes on top of Gallowar's largest snow drones open up. A large fleet of Helisport copters and delivery copters, seemingly modified to carry more dangerous payloads, flew out. Ah right - the Arctic snow drones were also vulnerable from the top. Good job converting civilian infrastructure, Zei thought.</p>
+<p class="dialog">Embedded in each of the army groups, sitting in the command centers safely far behind the front, were a large number of Dzego's best Minpentai players, which had been quietly flown in by the Kungaupei, as well as some of Veridia's best Helisport players - the two groups with the best hands-on experience understanding airborne duels.</p>
+<p class="dialog">Zei continued watching. For the moment, Gallowar's strategy seemed to be going well. His army group was successfully slowly retreating on the northern flank while cutting down trees and leaving traps, and the battle on the eastern flank was progressing smoothly. Exact casualty ratios were difficult to determine, but from the numbers that appeared onscreen, it was significantly in the Veridians' favor.</p>
+<p class="dialog">Forty minutes later, he saw the good news that mattered: Gallowar's forces had broken through between the Arctic north and east flanks, and Telpo's fleet had begun engaging the Arctic east flank from the south.</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-04.svg" alt="两组不同颜色的散点分布示意图" title="两组不同颜色的散点分布示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">Soon, Arctic snow drones in the east began to get rapidly disabled, while Gallowar's western flank continued its slow retreat to slow the Arctic northern flank down. The Arctic drones attempted to replicate the slow retreat strategy, but without success: by that point, Telpo had succeeded at almost completely surrounding them, and they had nowhere to go.</p>
+<p class="dialog">A few minutes later, Gallowar declared the Arctic drone fleet sufficiently defeated. He ordered his eastern flank to go around them to avoid any risk that partially disabled remnants or their traps would cause damage, and then continue northeastward full speed ahead.</p>
+<p class="dialog">Zei zoomed out, and looked at the big-picture view again.</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-05.svg" alt="北林及周边地点与路线示意图" title="北林及周边地点与路线示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">Another one and a half longhours passed, and all four Veridian drone fleets continued advancing - except for the small offshoot that Gallowar had left behind to delay the contingent of Arctic drones to its north.</p>
+<p class="dialog">An alarm blared again. This time, it was Group Center and Group South that were both under threat.</p>
+<figure class="fig"><img src="../assets/images/chapter-29-fig-06.svg" alt="北林及周边地点分布示意图" title="北林及周边地点分布示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#23ba7d">"Alright everyone"</span>, Lektor shouted. <span style="color:#23ba7d">"This is the real deal."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"Defensive positions, slow retreat in the center and attempt flanking on the sides. Be careful, minimize our losses and maximize theirs. Do not let them break our positions."</span></p>
+<p class="dialog">A few moments later, he added:</p>
+<p class="dialog"><span style="color:#23ba7d">"For Veridia!"</span></p>
+<p class="dialog"><span style="color:#e58137">"Dze go ba fau gie"</span>, Den shouted immediately after.</p>
+<p class="dialog">Zei directed the drones to begin using all their tactics, including the ones that he had learned from the clandestine battles in Redshire months earlier. They would only work for a short time before the Arctics adapted, he knew, but it was now or never.</p>
+<p class="dialog">Both sides' drone fleets spread out and created defensive lines. On the fully zoomed-out map, Zei could see the lines slowly come closer. A few minutes later, the clash began. Losses quickly pushed into the hundreds on both sides.</p>
+<p class="dialog">Gallowar's northern group suddenly switched from retreat to advance and began using the same tactics.</p>
+<p class="dialog">Zei watched carefully, holding his breath. He scrolled through small-scale tactical maps and real-time visual feeds.</p>
+<p class="dialog">Something was wrong, he realized.</p>
+<p class="dialog"><span style="color:#df74b1">"Emerald, analyze all micro-tactical and visual fields, determine which tactics are effective."</span></p>
+<p class="dialog"><span style="color:#db8916">"Analyzing..."</span></p>
+<p class="dialog">About twenty ticks later, Emerald responded.</p>
+<p class="dialog"><span style="color:#db8916">"Tactics one and five working with medium effectiveness. Tactics two, three, four, six have zero or slightly negative effect, Arctics appear fully adapted."</span></p>
+<p class="dialog">Zei groaned. Despite his best efforts, he knew, the Arctics must have successfully recovered at least some of the visual feeds from the drones in Redshire that he and the Freetown defense companies had trained on.</p>
+<p class="dialog"><span style="color:#df74b1">"All units, cease using tactics two, three, four and six. Use tactics one and five. Units with IDs ending in 0 or 5, explore random modifications."</span></p>
+<p class="dialog">For a few minutes, the casualty ratios moved in favor of the Veridian armies again. Then, slowly but surely, the Arctics again started to gain the upper hand.</p>
+<p class="dialog"><span style="color:#df74b1">"Emerald, which modifications are successful?"</span>, he asked.</p>
+<p class="dialog"><span style="color:#db8916">"Eight were attempted. Only number seven was successful, and has already been introduced as the mainline version of tactic five. Recommend retiring tactic one."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Do it."</span></p>
+<p class="dialog">Zei began to sweat with consternation. He had not anticipated the Arctics being able to resist their tactics so effectively.</p>
+<p class="dialog">Come on, Zei thought. Think of something.</p>
+<p class="dialog">The seaborne drones appeared to have been successful, at least in the early stages of their assault. They had landed ground craft, both east of Northglade and in Arctic core territory in Telten hundreds of kilometers further east. The seaborne drones had already begun returning to base, to receive their second round of payloads.</p>
+<p class="dialog">For a moment, Zei was pleased. But it was still far from enough.</p>
+<p class="dialog">A robot entered the room, and quietly slid up to Zei with an energy drink. Zei picked it up, gulped about half of it, and set the rest down on the table. Within moments, it took effect - but the only effect seemed to be to make Zei despair even harder.</p>
+<p class="dialog">And a moment later, a message appeared onscreen that drained away all of the remaining light in Zei's eyes.</p>
+<div class="device-view wide-device-view device-view-left"><p>Rear base #3 appears to have been completely destroyed by highly accurate hits from Arctic missiles.</p><p>Most likely cause: internal traitors revealed the location of the base.</p><p>Current expectation is that almost all personnel in the base did not survive. Probability that Den, commander of Group South, survived is estimated at under 10%.</p></div>
+<p class="dialog">Zei began to cry.</p>
+<p class="dialog">For the next few minutes, he half-heartedly whispered into his microphone, proposing minor adjustments to drone tactics, trying to optimize positional advantage and casualty ratios. Mu had immediately taken over as the commander of Group South. But in his heart, he knew that the battle was lost.</p>
+<p class="dialog">And at that moment, Zei's watch buzzed.</p>
+<p class="dialog">This was not a standard military communication channel. And this was something that Emerald deemed important enough to override his strict "do not disturb" instruction.</p>
+<p class="dialog">Zei whispered into his neck band to connect the watch to the display in his glasses. A message appeared onscreen.</p>
+<div class="device-view wide-device-view device-view-left"><p>This is Deluin.</p><p>Over these past months, I have been executing on my plan. I have earned the Arctics' trust; with the combination of my successful Minpentai background and my parents' status, this proved to be easy. As a result, I am now one of the commanders on the Arctic side.</p><p>We are being heavily surveilled, and there are great limits to what I can do to the Arctic drone fleet without blowing my cover. However, I have managed to set up an exploitable weakness for you.</p><p>This file contains descriptions of tactics that should be effective specifically against the southern flank, which I control. If you apply them, you should be able to break through about twenty kilometers north of the shore, and then proceed north and south to expand the rupture into a complete victory on the southern front.</p><p>From there, it will be up to you to surround the remaining forces from the south, and recover Northglade.</p></div>
+<p class="dialog">Almost immediately, a burst of energy returned to Zei's mind. He would have to mourn the loss of Den another day.</p>
+<p class="dialog"><span style="color:#df74b1">"Emerald, confirm the authenticity of this message."</span></p>
+<p class="dialog"><span style="color:#db8916">"Message was signed by the same key that was embedded in Deluin's original message that you received on Grapetime 15."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Analyze the tactics, do they seem plausible?"</span></p>
+<p class="dialog"><span style="color:#db8916">"Tactics are highly aggressive. They seem unorthodox, but plausible. They will be very effective against an opponent that is vulnerable to them, but will lead to much faster defeat against an opponent that is not. Running a simulation."</span></p>
+<p class="dialog">About twenty ticks later, Emerald spoke again.</p>
+<p class="dialog"><span style="color:#db8916">"Tactics would lead to faster defeat if used against Veridian, Kungaupei or Freetown AI. Their effectiveness hinges entirely on Deluin being correct that the Arctic AI has the particular weakness that he is positing, which could be either discovered or planted."</span></p>
+<p class="dialog">Zei thought for a moment, and then decided to ask for human help.</p>
+<p class="dialog"><span style="color:#df74b1">"Bai, I'm sending you a message from Deluin. Please tell me what you think of it."</span></p>
+<p class="dialog">Bai responded almost immediately.</p>
+<p class="dialog"><span style="color:#ed756b">"Reading now."</span></p>
+<p class="dialog">About thirty ticks later, she responded again.</p>
+<p class="dialog"><span style="color:#ed756b">"I don't know if we can trust Deluin. All that we have to go on is his word. Even his message to you back in Grapetime could have been planted. The Arctics are fully capable of these kinds of strategies, Delwart had planted evidence for months against Gladias and Mov."</span></p>
+<p class="dialog"><span style="color:#ed756b">"But I have a different idea."</span></p>
+<p class="dialog"><span style="color:#df74b1">"I'm listening."</span></p>
+<p class="dialog"><span style="color:#ed756b">"We have no good reason to trust Deluin. But Deluin has every reason to trust us. So we flip it around on him. It's his responsibility to take the first leap of faith."</span></p>
+<p class="dialog"><span style="color:#df74b1">"And what do you want him to do?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Send us the raw weights from the Arctic drones' AI model."</span></p>
+<p class="dialog">Bai paused for a moment, and continued.</p>
+<p class="dialog"><span style="color:#ed756b">"AI models are not like regular software, where you can analyze the whole thing and identify safety properties and mathematically prove them secure. They're unpredictable beasts - they are grown, not forged. They don't have walls, they have immune systems. And so if we have the raw weights, we can run simulations in parallel and optimize attacks that will trick them."</span></p>
+<p class="dialog">Zei's mood once again became brighter.</p>
+<p class="dialog"><span style="color:#df74b1">"It's actually much easier than running simulations in parallel. You use gradient descent. You can take the derivative of the outcome of the model in the simulator against all of the variables that we can change in the field - drawings that we stick on the side of the drone, the way the drone acts. You automatically identify the small change that will maximize the increase in the probability that their model fails to notice our drone. Even a small step that increases the chance they don't notice one of our drones from one in a million to two in a million can immediately be found."</span></p>
+<p class="dialog"><span style="color:#df74b1">"You keep finding adjustments that maximize the likelihood of success. Try different simulators with different parameters - remember, the final attack would appear in the real world, not inside a simulator, so the best we can do is filter for changes that are robust across different simulators. And after a million rounds, hopefully we will have something that works quite well, and in real life. To us humans, it will probably be a bunch of squiggles that look incomprehensible and weird. To the AI that we're optimizing this attack for, it's like a magical snake with a deadly stare looking at you right in your face."</span></p>
+<p class="dialog"><span style="color:#df74b1">"We probably can't convince their drones to turn against their masters or shut down, but we can get them to not notice our drones, maybe even shoot their own feet and overheat and become disabled."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Wow. Alright then, let's send back a message to Deluin and ask."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Emerald, draft a message to Deluin expressing what Bai just said. And send it back through the same steganographic channel that he used. Hopefully, Deluin will understand."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-28.html">上一章 · 第二十八章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-30.html">下一章 · 第三十章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第二十九章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

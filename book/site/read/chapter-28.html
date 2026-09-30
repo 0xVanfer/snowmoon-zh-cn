@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第二十八章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第二十八章 · Chapter 28 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-27.html">
+  <link rel="next" href="chapter-29.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="28">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第二十八章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第二十八章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 28</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年霜期15日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Frostime 15</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">泽、登、白、穆四人围坐在会议室的一张桌旁。</p>
+<p class="dialog">门口传来一声蜂鸣。他们立刻停住话头，等着看是谁进来。</p>
+<p class="dialog">门开了。是韦尔多。</p>
+<p class="dialog"><span style="color:#a38af2">“有位访客。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“是谁？”</span>泽问。</p>
+<p class="dialog"><span style="color:#a38af2">“一位将军。准确说，是我少数几个敬重的将军之一。我用翡翠跑了一遍分析，回来的结果全是对他的好评。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“他想干什么？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“谈谈。关于眼下这桩案子。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“当然，我们很乐意跟他谈。”</span>白回答。<span style="color:#ed756b">“他现在就在外面？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“在。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“那就让他进来。”</span></p>
+<p class="dialog">一个中年男人走进房间。他穿的衬衫几乎像是专门设计来拿捏这个分寸的：看着既像维里迪亚的传统军装，又舒服得能当日常衣服穿。</p>
+<p class="dialog"><span style="color:#23ba7d">“我是莱克托。”</span>他朗声说道，<span style="color:#23ba7d">“很高兴见到各位。”</span></p>
+<p class="dialog">泽正要开口回应，登却示意他别说话。</p>
+<p class="dialog"><span style="color:#e58137">“我是登，这几位是泽、穆、白。欢迎。”</span></p>
+<p class="dialog">莱克托走进来，在一把空椅子上坐下。</p>
+<p class="dialog"><span style="color:#23ba7d">“听着，”</span>他开口道，<span style="color:#23ba7d">“我想弄明白，你们到底在想什么。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“维里迪亚历史上，头一回有人想让合议庭把政府高层官员免职。这看着像疯了一样。我明白民众有情绪，可你们想撤掉的是整个军方领导层。这么干，拿不到一支能打的军队。”</span></p>
+<p class="dialog">他停顿了一下。</p>
+<p class="dialog"><span style="color:#23ba7d">“但话说回来……我明白民众有情绪。那些银聊民调，我们也和大家一样看到了。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“所以，你们是怎么想的？”</span></p>
+<p class="dialog">登开口了。</p>
+<p class="dialog"><span style="color:#e58137">“营救塔芬德尔的那次行动，你了解吗？”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“当然。这段时间我们一直在拼凑事情的经过。”</span></p>
+<p class="dialog"><span style="color:#e58137">“是我们干的——昆高培。我们和两家自由城防务公司合作，把他救了出来。”</span></p>
+<p class="dialog">莱克托惊得张大了嘴。</p>
+<p class="dialog"><span style="color:#23ba7d">“等等，你们人就在<em>这里</em>？来了多少？”</span></p>
+<p class="dialog"><span style="color:#e58137">“几十个。我是最高评议会的评议员之一。那边的泽和穆两位，当初都跟我一起亲自指挥了这次行动。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“原来如此……”</span></p>
+<p class="dialog">莱克托顿了顿。</p>
+<p class="dialog"><span style="color:#23ba7d">“那你们的计划是什么？亲自接管维里迪亚的无人机机队，拿它把北岸夺回来？”</span></p>
+<p class="dialog"><span style="color:#e58137">“我知道这计划不太<em>体面</em>。但你得明白，我们走投无路了。北极帝国在扩张。他们显然打算先拿你们开刀，再对付我们：你们技术更先进，我们防守准备更充分。所以我们判断，北极人想在一年内把维里迪亚彻底打垮，也许还更快。接着他们会逐个拿下联合城邦，然后南下清掉梅萨利亚和哈拉格米尔，或者干脆炸平了省时间。到那之后就只剩他们对我们。凭现有家底，我们能守得不错，可最先进的技术，我们实在依赖你们太深。所以我们必须站出来——一起站出来，就现在。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“军队不是一辆新车——不能你想开走就直接开走。我们的士兵，包括各级指挥官和将军，在一起共事、一起训练了多年。维里迪亚的后勤，他们摸得门儿清：我们能造多少新无人机，造这些要什么条件，要是非得把<em>那些</em>翔球小型飞行器改成无人机，又能做到什么程度。他们有一千多名无人机飞手，还有成千上万的各种保障人员。就凭你们这几十个顾问，几乎每架无人机都得靠 AI 自己飞。它们会迷航，一有机会就会被北极人骗得团团转。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“我知道我们在北岸彻底失败了，但你们不能把我们已经建起来的一切全扔掉。连指挥体系也一样——那是他们干了多年、早已长在里面的东西。你不能一把撕掉、再换一套，还指望结果能好。”</span></p>
+<p class="dialog">白觉得话题正在跑偏，看到机会插了进来。</p>
+<p class="dialog"><span style="color:#ed756b">“莱克托，”</span>白开口道。<span style="color:#ed756b">“我们其实没打算把维里迪亚军方的最高三级全部清零。就算我们<em>真能</em>明天就把一千名顶尖的民本棋选手全带过来，让他们成功操控你们所有无人机机队，后勤也莫名其妙自己理顺了，这桩官司光走完程序也要三个多月。我们没那么多时间。所以那从来不是我们的计划。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“那你们<em>原本</em>的计划是什么？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“嗯，我们想要一个像你这样的人站出来帮忙。”</span></p>
+<p class="dialog">莱克托没有作声。</p>
+<p class="dialog"><span style="color:#ed756b">“哪怕是挨骂最多、最招人恨的机构，也从来不像社交媒体渲染的那样无可救药、一无是处。这点我们明白。但与此同时，它们<em>确实会</em>卡在有害的状态里。而你们的处境最难：眼下正是要做平战转换的时候，偏偏又赶上不少将军很可能正被北极人收买或要挟。我们知道这是真的——我们动过手脚的那些监控摄像头，已经抓到好几个了。所以我们不想把军方清零，但也清楚，它不能照原样待着。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“所以我觉得，这里有个让你站出来的机会。各方都敬重你。你和泽说话的时候我查过了：不同政治立场的人、军方和议会里的人、各种性格类型的人，给你的评价都一致地高。我觉得你可以考虑向议会提议，由你接手、掌管全局。我们可以在你的体系里跟你配合。”</span></p>
+<p class="dialog">登、泽、穆立刻点头。这番话不在他们原本的计划里，但他们都看得出，这才是该顺势转向的正路。</p>
+<p class="dialog">莱克托沉吟片刻，又开口了。</p>
+<p class="dialog"><span style="color:#23ba7d">“你们在这儿这件事，一直捂得很严。就连那些盼着昆高培来掌管维里迪亚军方、在民调里投了赞成票的人，也都只当这是个幻想。要是我开始主张，自己能在你们的支持下掌管全局，这不会暴露你们吗？就算是闭门会议，如果议会真像你们说的那么腐败，消息一样会漏回北极人那里。”</span></p>
+<p class="dialog">这次是穆开口。</p>
+<p class="dialog"><span style="color:#00bc96">“别跟他们提我们。我们手上有几个针对北极无人机的漏洞利用，可以给你们。这些漏洞对北极人自己早就过时了——所以就算北极人知道了，反而<em>更好</em>，能让他们放松警惕。但这些漏洞用在两个月前你们从北岸弄回来的那架受损无人机上，会很灵。功劳都算你的。”</span></p>
+<p class="dialog">莱克托又愣住了。他们连那架受损无人机都知道？他们是怎么把维里迪亚渗透得这么……彻底的？如果昆高培能做到这一步，那北极人……</p>
+<p class="dialog"><span style="color:#00bc96">“哦，我们还能告诉你其中一个收受贿赂的将军是谁。我们有确凿证据——他和北极间谍谈话的监控录像。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“他们谈得太勤，还挑错了隔间。”</span>穆咧嘴一笑。</p>
+<p class="dialog"><span style="color:#ed756b">“我们会把手上掌握的信息打包给你。计划你自己定。毕竟那将是<em>你的</em>军队，<em>你的</em>计划”</span>，白补充道。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯和塞拉听见有人敲她的房门。</p>
+<p class="dialog"><span style="color:#54a1f9">“是谁？”</span>塞拉问。</p>
+<p class="dialog"><span style="color:#df74b1">“是我，妈妈！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“兹文！”</span></p>
+<p class="dialog">她跑到门口把门打开。兹文冲进来，抱着手持终端兴奋地跳上沙发。</p>
+<p class="dialog"><span style="color:#54a1f9">“怎么了，兹文？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我有好消息。是莉莉的事！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“什么事？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“她说，她现在有点想回来了！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“怎么回事？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“她说在北极的公民课上，老师讲到翔球，说它的计分规则很蠢，是维里迪亚人爱把简单事情搞复杂的典型例子。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“她一直用颈带跟我通话。我还把费布里克接了进来。我们把翔球的历史捋了一遍。她站起来跟老师讲：可以证明，如果计分方式是给每种球各定一个分值再相加，那几乎总是只专注一种球最好。但如果是相乘，那么你用某一种球得分时拿到的分数，会随着你靠另一种球已经得到的分数一起涨。所以均衡才划算。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“可老师不想听。他把手一摊，说这在现实生活里根本无所谓：现实生活里，你只专注一件事就能赢，北极人懂这一点，维里迪亚不懂，所以北极人赢。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“莉莉回他：可你想想个人生活和工作。如果你几乎每天从早到晚拼命干活，你能挣更多钱，能买更大的房子，可这房子，你只有不干活的那点时间才享受得到。这笔账一模一样！所以现实生活也需要均衡！”</span></p>
+<p class="dialog"><span style="color:#df74b1">“然后她就被罚留堂了。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“所以她现在觉得北极人又差劲又蠢。他们嘴上说着追求最好，其实只在乎自己的权威。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“北极人中有些人是聪明的，”</span>格拉迪亚斯插话。<span style="color:#be9b00">“他们确实能造出很好的技术。可那个老师听上去就是个十足的废物。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“一个废物要是碰巧生在赢的队里，表现就正是这样。他们把全部自我认同都寄托在队上，全盘接受那些说法：自己的队为什么了不起，自己是哪个队的人就等于自己有多大的价值。然后他们根本不会察觉，那份了不起其实一点也不在他们自己身上，里面只是个可怜的空壳。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“格拉德，别教兹文这样看人！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“兹文，对伤害别人的人刻薄一点，没关系。”</span>格拉迪亚斯继续说，语气越来越自以为是。<span style="color:#be9b00">“如果有人正遇上难处，或者只是不懂，那就帮他，对他好些。可要是有人拿自己根本不配的权威去敲别人的头，那就直接打回去。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“格拉德！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“想打败北极人，我们就得学会有时至少让自己也带一点北极味。但一定把这股劲用在正道上。”</span></p>
+<p class="dialog">塞拉叹了口气。</p>
+<p class="dialog"><span style="color:#54a1f9">“这么说，我倒是能理解。毕竟我们找到莉莉，用的正是北极人那套——监视一切。这算不算也带了一点北极味？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“大概算吧。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“不过我相信，要把亲人接回家，我们并不需要对自己全国的青少年搞无限制的摄像头监视。无限制的摄像头帮我们找到了莉莉，可也帮北极人差点把我们打垮。我相信泽已经知道某种更好的办法，既能拿到好处，又不用付那些代价。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“等等……”</span></p>
+<p class="dialog"><span style="color:#be9b00">“怎么了？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我觉得泽也许正是莉莉最合适的导师。她需要一个好榜样，让她知道真正的赢家是什么样——不是骑在别人头上、把别人按下去，而是愿意把别人托起来，希望别人也跟他一起赢。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“妈，爸？”</span>兹文插嘴。<span style="color:#df74b1">“那我们现在能为莉莉做点什么？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“莉莉能自己离开北岸吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我问过了。她说北岸的边境是开放的，可她在寄宿学校里，学校不放她走。”</span></p>
+<p class="dialog">格拉迪亚斯哀叹一声。</p>
+<p class="dialog"><span style="color:#be9b00">“我想，别的先不说，等我们把北岸夺回来，三个孩子就都能回来了。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“格拉德，莉莉那边该怎么建议，让我和白来想。她现在知道北极人有多差劲了，她想回家。但在把她接回来之前，她需要的是不会把她害死的建议。”</span></p>
+<p class="dialog">格拉迪亚斯哼了一声，算是认了。</p>
+<p class="scene-break">3724年霜期18日</p>
+<p class="dialog"><span style="color:#be9b00">“嗯，我刚收到莱克托的回音。”</span>格拉迪亚斯对塞拉说，她正在酒店房间里给自己倒茶。</p>
+<p class="dialog"><span style="color:#54a1f9">“他怎么说？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“他们昨天开了一次特别闭门会议。韦尔多也在。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“莱克托摆出了另一位将军受贿的证据。他把改革军方领导层的话题挑了起来。他采纳了白给的一条建议：把讨论引向一个方向，让反对者自己先去替现任最高将领说话，然后又说如果非得换人，另一位将军才是显而易见的人选。接着他亮出底牌，拿出更多证据——那位最高将领一直在跟一个人定期见面，后来查明那人是北极间谍；而他们提出的那位替代人选，也正被人要挟。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“之后，他提出了一套对付北极人的新思路：拿他们对 AI 的依赖做文章。他展示了一些针对北极无人机的漏洞利用，包括一段来自红郡的昆高培录像——不过他搪塞过去，说那是他在红郡认识的线人送给他的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“成了，比他或白预想的容易得多。结果发现，对那些只是懒、只是累的参议员来说，让莱克托照自己的意思去做才是阻力最小的路——因为那意味着官司立刻就能结束。而那些正被要挟的参议员，只需要一个‘抵抗不现实’的借口；莱克托的论证，加上他们知道这桩官司早晚可能查到自己的处境，正好给了他们这个借口。于是莱克托现在是最高将领了。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“这听起来是个完美的收尾。昆高培可以介入军方，可以和莱克托合作，而他和体系里其余大部分人还都在原位。所以我们不是进去把一切换掉，我们保住了连续性。这正是预测机器人想要的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“一点没错。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“那就这样，我们赢了？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“梅尔丹议事厅之战已经结束。北岸之战即将开始。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-27.html">上一章 · 第二十七章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-29.html">下一章 · 第二十九章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Zei, Den, Bai and Mu were sitting around a table inside a conference room.</p>
+<p class="dialog">They heard the door buzz. They immediately paused their conversation, and waited to see who was coming inside.</p>
+<p class="dialog">The door opened. It was Verdow.</p>
+<p class="dialog"><span style="color:#a38af2">"You have a visitor."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Who is it?"</span>, Zei asked.</p>
+<p class="dialog"><span style="color:#a38af2">"One of the generals. Actually one of the few that I respect. I ran an analysis through Emerald, everything I got back is very positive about him."</span></p>
+<p class="dialog"><span style="color:#df74b1">"What does he want?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"To talk. About the ongoing case."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Sure, we're happy to talk to him"</span>, Bai replied. <span style="color:#ed756b">"Is he here now?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"He is."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Then let him in."</span></p>
+<p class="dialog">A middle-aged man entered the room. He was wearing a shirt that seemed almost perfectly designed to strike the balance of looking like traditional Veridian military attire while being comfortable for everyday wear.</p>
+<p class="dialog"><span style="color:#23ba7d">"I'm Lektor"</span>, he exclaimed. <span style="color:#23ba7d">"Nice to meet you."</span></p>
+<p class="dialog">Zei was about to start with a response, but Den motioned for him to stay quiet.</p>
+<p class="dialog"><span style="color:#e58137">"I'm Den, this is Zei, Mu and Bai. Welcome."</span></p>
+<p class="dialog">Lektor walked in, and sat down on one of the empty chairs.</p>
+<p class="dialog"><span style="color:#23ba7d">"Look"</span>, he began, <span style="color:#23ba7d">"I want to understand what in the world you guys are thinking."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"This is the first time in Veridian history we've seen someone try to get a court to fire high-ranking government officials. It seems like madness. I get that people are upset, but you're trying to fire the entire military leadership. You don't get a competent military that way."</span></p>
+<p class="dialog">Then he paused.</p>
+<p class="dialog"><span style="color:#23ba7d">"But also ... I get that people are upset. We saw the same Silverchat polls as everyone else."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"So what are you thinking?"</span></p>
+<p class="dialog">Den began to speak.</p>
+<p class="dialog"><span style="color:#e58137">"Are you familiar with the operation that rescued Tafindel?"</span></p>
+<p class="dialog"><span style="color:#23ba7d">"Of course. We've been trying to piece together what happened this whole time."</span></p>
+<p class="dialog"><span style="color:#e58137">"That was us - the Kungaupei. We rescued him, working together with two Freetown defense companies."</span></p>
+<p class="dialog">Lektor's jaw dropped.</p>
+<p class="dialog"><span style="color:#23ba7d">"Wait, you're <em>here</em>? How many of you?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Dozens of us. I'm one of the High Council members. Zei and Mu over there personally commanded the operation with me."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"I see..."</span></p>
+<p class="dialog">Lektor paused.</p>
+<p class="dialog"><span style="color:#23ba7d">"So what's your plan? Personally take control of the Veridian drone fleet and use it to take back Northshore?"</span></p>
+<p class="dialog"><span style="color:#e58137">"I know it's not a very <em>polite</em> plan. But you have to understand. We're desperate. The Arctic Empire is expanding. They're clearly planning to target you before they target us: you're more advanced, and we're better prepared defensively. So we think the Arctics want to knock out Veridia completely within the next year, maybe sooner. Then they will take down the United Cities one by one, and then they will go south and clear out Messalia and Haragmir, or just bomb them to save time. After that it's just them versus us. We can defend well with what we have, but really we've depended on you so much for the most advanced technology. So we have to take a stand. Together, now."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"You can't just commandeer a military the same way you just pick up and drive a new car. Our soldiers, including our commanders and generals, have spent years working together, training together. They know Veridian logistics inside and out. They know how many new drones we can produce, what that would take, what you can do with Helisport copters if you had to turn <em>those</em> into drones. They have over a thousand drone pilots, and thousands of support staff of every kind. With your dozens of advisors, you would have to let almost every drone fly on AI alone. They would get lost, and get tricked by the Arctics at the first opportunity."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"I know we've failed completely at Northshore, but you can't just go throw everything we've built away. Even the command structure - that's something they've spent years working inside. You can't just rip that up and replace it and expect to get a good result."</span></p>
+<p class="dialog">Bai felt that the conversation was going off track, and saw her chance to intervene.</p>
+<p class="dialog"><span style="color:#ed756b">"Lektor"</span>, Bai began. <span style="color:#ed756b">"We don't actually want to zero out the top three levels of the Veridian military hierarchy. Even if we <em>could</em> bring over all of our top thousand Minpentai players tomorrow and get them to pilot all your drone fleets successfully, and somehow all the logistics solve themselves, the court case would take over three months to finalize. We don't have that time. So that was never our plan."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"So what <em>was</em> your plan?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Well, we wanted someone like you to step in and help."</span></p>
+<p class="dialog">Lektor responded with silence.</p>
+<p class="dialog"><span style="color:#ed756b">"Even the most criticized and hated institutions are never quite as irredeemable and talentless as social media makes them seem. We know that. But at the same time, they <em>can</em> get stuck in unhealthy places. And your situation is the toughest: you have to shift paradigms from peacetime to wartime, at the exact moment that many of the generals are probably being bribed or blackmailed by the Arctics. We know that's true - the surveillance cameras that we backdoored already caught several. So we don't want to zero out the military, but we also know it can't stay as it was."</span></p>
+<p class="dialog"><span style="color:#ed756b">"So I think there's an opportunity for you to step up here. You're respected by all sides. I checked that while you and Zei were talking. High ratings uniformly across different people of different political persuasions, inside the military and in parliament, and across different personality types. I think you should consider proposing to parliament that you take over and run things. And we can work with you, inside your structure."</span></p>
+<p class="dialog">Den, Zei and Mu immediately nodded. That line of argument was not part of their plan, but they could all recognize that it was the right plan to switch to.</p>
+<p class="dialog">Lektor pondered for a moment, and then responded again.</p>
+<p class="dialog"><span style="color:#23ba7d">"You've been very quiet about the fact that you're here. Even among all the people who are excited about the idea of the Kungaupei running the Veridian military, and who voted that way in the poll, everyone thinks it's just a fantasy. If I start making the argument that I can run things with your support, would that not blow your cover? Even in a closed door session, if the parliament is as corrupt as you say, the information will leak back to the Arctics."</span></p>
+<p class="dialog">This time, Mu spoke up.</p>
+<p class="dialog"><span style="color:#00bc96">"Don't tell them about us. We have a few exploits against Arctic drones that we can share with you. Those exploits are already outdated against the Arctics themselves - so if the Arctics find out, that's actually <em>better</em>, it would help keep their guard down. But the exploits will work great against the damaged drone that you guys managed to recover from Northshore two months ago. You can take the credit for them."</span></p>
+<p class="dialog">Lektor stared again. They knew about the damaged drone? How did they penetrate Veridia so ... completely? And if the Kungaupei could do that, then the Arctics...</p>
+<p class="dialog"><span style="color:#00bc96">"Oh we can also tell you about one of the generals that's taking bribes. We have clear evidence, security camera footage of his conversations with an Arctic spy."</span></p>
+<p class="dialog"><span style="color:#00bc96">"They used the wrong kind of booth for too many discussions"</span>, Mu grinned.</p>
+<p class="dialog"><span style="color:#ed756b">"We'll give you a dump of the info we have. You can figure out the plan. After all, it's going to be <em>your</em> army, and <em>your</em> plan"</span>, Bai added.</p>
+<hr class="rule">
+<p class="dialog">Gladias and Seila heard a knock on the door of her room.</p>
+<p class="dialog"><span style="color:#54a1f9">"Who is it?"</span>, Seila asked.</p>
+<p class="dialog"><span style="color:#df74b1">"It's me, Mom!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Zven!"</span></p>
+<p class="dialog">She ran to the door and opened it. Zven ran in, and excitedly jumped onto a sofa with his hand device.</p>
+<p class="dialog"><span style="color:#54a1f9">"What's up, Zven?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I have some good news. It's Lily!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What is it?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"She says that she is starting to feel like she wants to come back now!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What happened?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"She says that in the Arctic civics class, the instructor was talking about Helisport and how the scoring rules were stupid and an example of how Veridians like to overcomplicate things."</span></p>
+<p class="dialog"><span style="color:#df74b1">"She was talking with me through her neck band the whole time. I got Febric on the line too. We went through the history of Helisport. She got up and told the instructor how you can prove that if you score by giving each type of ball some number of points and adding those points up, then almost always the best strategy is to just focus on one type of ball. But if you multiply, then the number of points you get from scoring with one type of ball goes up with the number of points you've already scored with the other type. So it makes sense to balance."</span></p>
+<p class="dialog"><span style="color:#df74b1">"But the instructor did not want to listen. He threw up his hands and said that it doesn't matter in real life, in real life you win by focusing on only one thing, the Arctics understand that and Veridia doesn't, and that's why the Arctics win."</span></p>
+<p class="dialog"><span style="color:#df74b1">"And Lily replied: but think about personal life and work. If you work really hard for almost the whole day every day, you get paid more and you can get a bigger house, but you can only enjoy the house during the time that you're not working. It's exactly the same math! So real life needs balance too!"</span></p>
+<p class="dialog"><span style="color:#df74b1">"And then she got thrown in detention."</span></p>
+<p class="dialog"><span style="color:#df74b1">"So now she thinks the Arctics are lame and stupid. They talk about striving for the best, but really they just care about their own authority."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Some of the Arctics are smart"</span>, Gladias interjected. <span style="color:#be9b00">"They do make very good technology. But that teacher sounds like a total loser."</span></p>
+<p class="dialog"><span style="color:#be9b00">"That's exactly how anyone would behave if they were a loser that happened to be born on a winning team. They put their entire identity into the team, they buy into all the ideas about why their team is great, and how it's a big sign of your worth which team you're from. And then they don't even notice that they don't actually carry any of that greatness themselves, and they're just a pathetic shell on the inside."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Glad, don't teach Zven to think about people like that!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Zven, it's okay to be mean to people who hurt people"</span>, Gladias continued, his tone becoming increasingly self-righteous. <span style="color:#be9b00">"If someone is struggling or doesn't understand, then help them and be kind. But if someone is whacking others over the head with authority that they do not even deserve, then hit them right back."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Glad!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"If we want to beat the Arctics, then we have to know how to sometimes be at least a little bit Arctic ourselves. But make sure to channel that energy for good."</span></p>
+<p class="dialog">Seila sighed.</p>
+<p class="dialog"><span style="color:#54a1f9">"I guess I can see it from that perspective. After all, we did find Lily by doing exactly what the Arctics do - surveiling everything. Does that count as being a little bit Arctic?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I suppose it does."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Though I'm sure we don't need unrestricted camera surveillance of our whole country's teenagers to bring our loved ones home. Unrestricted cameras helped us find Lily, but they also helped the Arctics almost break us. I'm confident Zei already knows of some better way to get the good without the bad."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Wait..."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What is it?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I think Zei might be the perfect mentor for Lily. She needs to have a good role model of what a real winner is like - someone who doesn't lord over others and push them down, but helps lift other people up and wants others to win along with him."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Mom, Dad?"</span>, Zven interjected. <span style="color:#df74b1">"What do we do for Lily now?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Can Lily leave Northshore on her own?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I asked. She says the borders of Northshore are open but she is in a boarding school, they will not let her leave."</span></p>
+<p class="dialog">Gladias groaned.</p>
+<p class="dialog"><span style="color:#be9b00">"I guess if nothing else, we'll get all three of our kids back when we take back Northshore."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Let me and Bai figure out the advice for Lily, Glad. She knows that the Arctics are lame now, she wants to come home. But until we get her back, she needs advice that's not going to get her killed."</span></p>
+<p class="dialog">Gladias grunted with resigned acceptance.</p>
+<p class="scene-break">3724 Frostime 18</p>
+<p class="dialog"><span style="color:#be9b00">"Well, I just heard back from Lektor"</span>, Gladias said to Seila as she was pouring herself a tea in their hotel room.</p>
+<p class="dialog"><span style="color:#54a1f9">"What did he say?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"They convened a special closed session yesterday. Verdow was there."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Lektor presented the evidence that one of the other generals was taking bribes. He opened the topic of reforming the military leadership. He took some advice that Bai gave: he led the conversation in a direction that led the detractors themselves to first defend the existing top general, and then propose another general as the obvious leader if there had to be a change. Then he flipped over his cards, and showed more evidence - that the top general had been having regular meetings with someone who turned out to be an Arctic spy, and the other candidate they were proposing as an alternative was being blackmailed."</span></p>
+<p class="dialog"><span style="color:#be9b00">"After that, he proposed a different strategy that they could use against Arctics that involved using their dependence on AI against them. He showed some exploits against Arctic drones including some Kungaupei footage from Redshire - though he explained it away as being sent to him through spies that he knows in Redshire."</span></p>
+<p class="dialog"><span style="color:#be9b00">"It worked, far more easily than he or Bai expected. It turned out that among the senators who were just lazy and tired, letting Lektor do what he wanted was the path of least resistance - because that meant that the legal case would immediately end. And among the senators who were being blackmailed, they just needed to have an excuse that it would not be feasible to resist, and Lektor's arguments, together with the knowledge that the legal case might at some point start poking into their situations, provided that. So Lektor is the head general now."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"That sounds like a perfect resolution. The Kungaupei can be involved in the military, they can work with Lektor, and he and much of the rest of the structure is still there. So we're not going in and replacing everything, we're preserving continuity. It's exactly what the forecaster bots wanted."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Exactly."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"So that's it, we won?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"The battle for the halls of Meldan is over. The battle of Northshore is about to begin."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-27.html">上一章 · 第二十七章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-29.html">下一章 · 第二十九章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第二十八章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

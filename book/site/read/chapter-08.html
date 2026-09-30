@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第八章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第八章 · Chapter 8 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-07.html">
+  <link rel="next" href="chapter-09.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="8">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第八章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第八章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 8</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年雨月26日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Rainmoon 26</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯沿街走着，手表震了一下。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">［5张图片］</span></td><td>34125</td></tr></tbody></table></div>
+<p class="dialog">他打开手持终端，想把图片看得清楚些。</p>
+<p class="dialog">塞拉从伊普塔克发来了照片。格拉迪亚斯顿时来了兴致。维里迪亚人把翁达克、伊普塔克、曼塔克和贝尔帕基这一片叫作“诸阿克”，而他和塞拉都还没去过。这里的建筑明显不一样，砖木更多，色调偏红偏棕——不光维里迪亚，连泽国的照片、他去过或看过照片的联合城邦里，都见不到这种颜色。</p>
+<p class="dialog">招牌上的文字一半是字母，一半是图形——泽国语当初为了精简把这些删掉之前，也曾离这个样子不远。</p>
+<p class="dialog">他按下一个按钮，用一个心形符号回了塞拉。</p>
+<p class="dialog"><span style="color:#be9b00">“期待你的博客”</span>，格拉迪亚斯对着颈带低声说，让翡翠自动把这条消息发给塞拉。</p>
+<p class="dialog"><span style="color:#54a1f9">“我过几天就回来！”</span>，塞拉答道。</p>
+<p class="dialog">走到小路尽头时，正好接上一条街的人行道。正前方立着一块站牌，列着在此停靠的巴士线路。格拉迪亚斯找到了自己要坐的那路车号，便站定等着。</p>
+<p class="dialog">格拉迪亚斯的手表震了一下，屏幕上弹出一条通知。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">记住，你今天的考核不只看知识，还得让那些参议员看得上你。</span></td><td>34576</td></tr></tbody></table></div>
+<p class="dialog">格拉迪亚斯叹了口气，把胳膊垂回腰边，继续等着。</p>
+<hr class="rule">
+<p class="dialog">几分钟后，下一班巴士到了。格拉迪亚斯对了对车号，正是他要坐的那趟。他赶紧上车，车门在他身后合上。</p>
+<p class="dialog">他余光瞥见，那一刻盯着自己手持终端看的人比平时多。他起了好奇，往前挪了一步，悄悄看旁边一位乘客在看什么。</p>
+<p class="dialog">那位乘客的手持终端顶端写着“维里迪亚国立大学”。往下是“维里迪亚国立大学校长西尔卡教授与北极驻维里迪亚大使埃菲里昂勋爵的直播辩论”。</p>
+<p class="dialog">西尔卡正在发言，格拉迪亚斯勉强能看清字幕。</p>
+<p class="dialog"><span style="color:#54a1f9">“单看经济总产出，只能衡量人类进步的一部分”</span>，她说——不过格拉迪亚斯只看得到，听不见。<span style="color:#54a1f9">“可一旦把它当成全部目标，这个视角就变得非常狭隘而贫瘠。”</span></p>
+<p class="dialog">格拉迪亚斯实在好奇，便对着颈带小声让翡翠调出这场辩论的音频直播。</p>
+<p class="dialog"><span style="color:#54a1f9">“还有太多东西同样重要。公民的健康、他们的情绪状态，还有社会里各种纽带是否牢固。”</span></p>
+<p class="dialog">西尔卡说完，音频直播也接上了。格拉迪亚斯从那位乘客身边退开，有点难堪——刚才盯着人家的屏幕，算是短暂侵犯了他的隐私；也松了口气——现在他收听直播的方式完全合乎道德。</p>
+<p class="dialog"><span style="color:#54a1f9">“如果人们因为生活没有目标而不快乐，再大的车又有什么用？如果人们在社会里感到疏离，连个能请到家里来的朋友都没有，再大的房子又有什么用？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“最新的电子产品又有什么用——底层的人拿它去入侵和偷窃，上层的人拿它去侵犯隐私、搞监控，而所有人时时刻刻拿它在社交平台上发脾气？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“正是这些问题，才让维里迪亚有了掌舵会这样的机制。”</span></p>
+<p class="dialog">西尔卡顿了顿。埃菲里昂勋爵开口了。</p>
+<p class="dialog"><span style="color:#db8916">“一百年来，一直有人想做出比经济总产出更好的指标。但我们看到的是，尤其放到长期来看，在那些指标上表现最好的国家，恰恰就是经济产出最高的国家。”</span></p>
+<p class="dialog"><span style="color:#db8916">“这背后有很深的原因。历史学家早就明白，社会上的许多现象都是循环的。古人讲过一个循环：兴盛、骄傲、傲慢、衰败、苦难、重生，然后再次兴盛。他们也是这样讲治理的——技术官僚、民主、混乱、强人，周而复始，无可避免。”</span></p>
+<p class="dialog"><span style="color:#db8916">“每当我们谈论兴衰的必然性，会这样起落循环的，恰恰是‘社会凝聚力’‘自由’‘福祉’这类‘软性’特质。在这些维度上，主导的变化是一种轮转：好会催生出坏的因素，坏的因素生出坏，坏又催生出好的因素。”</span></p>
+<p class="dialog"><span style="color:#db8916">“而且说句实话：人们盯着的这些‘软性’特质，是由一群祭司式的委员会挑出来的——挑的标准不是它管不管用，而是它合不合当时流行的意识形态。”</span></p>
+<p class="dialog"><span style="color:#db8916">“唯一能跳出这个模式、带来真正持久改善的只有一件事：经济持续增长，靠的是科学、技术与资本积累不间断的进步。一个社会的情绪会在成功的骄傲与崩溃失败的绝望之间循环，但每一轮循环之后，人都比从前更聪明、更富有。”</span></p>
+<p class="dialog">格拉迪亚斯看得出，巴士上有几个人听得眼睛亮了起来。</p>
+<p class="dialog"><span style="color:#54a1f9">“掌舵会成员是由一套精密的——”</span></p>
+<p class="dialog"><span style="color:#00bc96">“掌舵会的事，稍后再议；先请注意秩序。轮到埃菲里昂发言了。”</span>，主持人插话道。</p>
+<p class="dialog"><span style="color:#db8916">“所以，你要是真想改善一个社会，而且是奔着长期、持久的好处去的，那就别去盯那些循环的东西，也别给这个轮子加速。你要做的是把最大的特征向量做大，去影响那个一千年来一直在自我复利的东西——那条只要出现好的东西，就会稳稳生出更多好东西的向量。其余的，就让它顺着自然规律去吧。”</span></p>
+<p class="dialog">埃菲里昂停下，西尔卡清了清嗓子，准备发言。这时格拉迪亚斯才发现车门已经开了，车早就到了他要下的站。他赶紧跑下去，翡翠自动暂停了直播，好让他集中精神。</p>
+<p class="dialog">他脑子里还绕着那场辩论，隐约有些烦躁地发现，埃菲里昂那几句话轻轻松松就拼成了一套自成逻辑的说辞。他得出结论：这是个煽动人心的高手。随后他把注意力收回到眼前。</p>
+<p class="dialog">格拉迪亚斯沿着两侧满是树木的小路往前走。几分钟后，他看见前方一座巨大的圆形建筑。那是议会。这栋楼和掌舵会那刻意疏远、神秘莫测的总部很不一样：它就在地面上，中世纪的样式和现代审美混在一起，四面都有好几个入口。</p>
+<p class="dialog">他一直往前走，很快就到了入口。</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#eb7a52">“欢迎你，格拉迪亚斯，来参加你的遴选听证会。”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“你做了四年见习官，预测分数已经排到第94百分位。你申请正式加入掌舵会——至于你申请的是监审官还是掌则人，这件事只有你自己，或许还有你最信任的顾问才会知道。”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“今天我们要进行准入考核的第二部分：参议院委员会的批准。你准备好开始听证了吗？”</span></p>
+<p class="dialog">一个机器人滑到房间中央格拉迪亚斯坐的椅子旁，端着一杯水。格拉迪亚斯接过杯子，把它放进椅子侧面的杯架。</p>
+<p class="dialog"><span style="color:#be9b00">“我准备好了。”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“那么，开始提问吧。”</span></p>
+<p class="dialog">二十位参议员坐在一圈大椅子上，沿圆形房间的整面墙排开，彼此间隔约两米。有些椅子之间摆着空气过滤器。他们头顶是朝下照的亮灯，几盏明黄色的照亮房间，几盏微弱的紫灯则用来净化空气。</p>
+<p class="dialog">一个格外显眼的座位上坐着委员会主席。大约五位参议员按下桌上的按钮，请求发言。</p>
+<p class="dialog">系统自动选了一位，他座位边缘的灯带变成了绿色。</p>
+<p class="dialog"><span style="color:#eb7a52">“韦尔多参议员，你可以提问了。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“格拉迪亚斯，讲讲你的出身背景。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“呃”</span>，格拉迪亚斯结结巴巴地说。<span style="color:#be9b00">“我今年三十九岁。家里算中产，没什么特别的。上的是普通学校，成绩不错，但从没拿过班里第一什么的。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“为什么没有？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我想只是我没那个动力。我有一年拼得很凶，平均分97。可后来我发现，我心里最主要的情绪是害怕——怕只要有一次搞砸，那份漂亮的成绩单就没了。我甚至连难一点的课都躲着不选。那年年底，我觉得这游戏不值得玩。于是我就不那么用力了，开始写代码，又在空闲时学法律，因为我对这些感兴趣，后来在编程竞赛里成绩也算不错。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“你为什么选择当见习官？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我成年后真正开始认真编程时，给自己找的第一个业余项目，是给银聊写一个第三方客户端。做完之后，我又想给蓝鲸也做一个，结果难得多，因为它在很多方面更封闭、更专有。那一刻我才意识到，银聊的开放带给我的价值有多大——那部分价值，银聊自己永远拿不到。而我那几天正好在读评则，一下就通了——一个好的社会里那些光靠市场照顾不到的东西，正是掌舵会如此重要的原因。所以我有了动——”</span></p>
+<p class="dialog">计时器响了。</p>
+<p class="dialog"><span style="color:#eb7a52">“下一个问题！帕普利。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“你最喜欢的乐队是哪个？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“呃……我真没有。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“最喜欢的游戏？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“也没有。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“最喜欢的运动？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我记得小时候挺喜欢玩彩球？就是后来翔球照它改的那个校园游戏。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“你跟我们维里迪亚普通人的日常生活这么脱节，我们凭什么信你能代表社会做判断？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“公民大会和广泛聆听报告不就是为了这个吗？掌则人小组在就一条评则做决定之前，不都有几个月时间听取这两方面的意见吗？监审官和掌则人可以各有专精，不也是为了这个？我大概不会去裁定任何跟体育有关的事。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“你怎么看泽国？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我喜欢他们的菜。他们的历史我最近才开始多了解一些。我妻子遇到过几个泽国孩子，看起来都挺不错。总的来说，我同情他们的处境，希望能找到办法多支持他们一些。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“啊哈，所以你想让我们支持泽国，又想让我们把社交网络做得更开放，好让某些特别聪明的孩子玩起来更方便。可我没听你提过一次普通维里迪亚人会在乎、会影响他们生活的事。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你不觉得，硬件更开放会让更多修理工进入市场，从而让大家买东西更便宜——”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“那修理工自己的工资呢！”</span></p>
+<p class="dialog">格拉迪亚斯开始在脑子里组织回应。经济学是见习官培训的基础课程，他立刻认出了这个谬误。</p>
+<p class="dialog">一方面，维修价格上涨的每一块钱，都是从顾客手里拿走、交到修理工手里的，从这个角度看，好处和坏处正好相抵。但另一方面还有二阶效应：东西变便宜了，人们就能把省下的钱拿去买别的，别处就会多出一些工作岗位。无视这一点，正是所有借政治之名搞的幼稚经济干预共同的毛病：只顾看得见的，牺牲看不见的。</p>
+<p class="dialog">他大约用了三嘀嗒在心里搭好这套论证的骨架。但他随即意识到，要讲出来大约得花二十嘀嗒——而时钟上的计时只剩四嘀嗒。格拉迪亚斯放弃了，干脆没有回答。</p>
+<p class="dialog">计时器响了。</p>
+<p class="dialog">格拉迪亚斯紧张得开始出汗。</p>
+<p class="dialog"><span style="color:#eb7a52">“安库斯参议员？”</span></p>
+<p class="dialog"><span style="color:#ec7383">“你最近一次为美学税投票，投的是什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“巴德拉街上的一栋蓝灰色建筑。很难决定：它普普通通，谈不上扎眼，也没什么出彩的地方。我每次经过，总有一家家人进进出出，甚至有人坐在外面的长椅上。偶尔有小孩在卖自己做的东西。不过这在如今的梅尔丹算常态。所以我只投了很小的一点赞成。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“你最近一次<em>希望</em>自己能投上一票的是什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“海德菲尔的一块广告牌。就是讲他们的饮料不含两千多种毒物和不推荐物质的那块。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“为什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那广告挺有意思。我还记得小时候，所有广告都又无聊又难看。它们只想钻进你脑子里，别的什么都不在乎。这种事放在公共交通上尤其糟糕；公共交通的体验一差，就有更多人去开车，污染和拥堵随之加重，对谁都不好。我很高兴海德菲尔肯花这么大力气做得比那更好。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“帕普利”</span>，安库斯猛地扭头朝帕普利喊。<span style="color:#ec7383">“你不觉得，一家人享受户外环境、好的公共交通、还有乐趣，都是普通维里迪亚人非常看重的东西吗？”</span></p>
+<p class="dialog">帕普利没有回答。</p>
+<p class="dialog"><span style="color:#eb7a52">“提问的参议员请与申请人单独对话”</span>，主席插话道。</p>
+<p class="dialog"><span style="color:#be9b00">“我觉得是。也许帕普利会说，海德菲尔那种幽默，是自命不凡的聪明人爱的那一路。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“但我觉得他低估了维里迪亚人，也低估了他们中有多少人有多聪明。我坐巴士过来的时候，西尔卡正和埃菲里昂辩论怎么衡量社会进步，她说话时大家听得相当投入。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“那不过是自命不凡的聪明人看人打架取乐罢了。翔球其实<em>更</em>和平”</span>，帕普利插嘴道。<span style="color:#00b5d6">“至少二次方资助还出钱办翔球比赛。我们干脆把你们这号人废了，搞一个反向的二次方资助，拿去算所有大企业的税。”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“肃静！”</span>，主席喊道。<span style="color:#eb7a52">“下一个问题。”</span></p>
+<p class="dialog">提问接着持续了半个长时，每位参议员都轮上了一次。</p>
+<p class="dialog">最后一位参议员问完格拉迪亚斯，计时器响过，主席站了起来。</p>
+<p class="dialog"><span style="color:#eb7a52">“该表决了！”</span></p>
+<p class="dialog">桌上“赞成”和“反对”两个表决按钮一目了然，格拉迪亚斯只要看一眼，就能知道每位参议员投了什么。</p>
+<p class="dialog">参议员们开始按下按钮。每投出一票，就响起一声不同的提示音。几嘀嗒之内，所有票都投完了。格拉迪亚斯望向房间上方那块屏幕。</p>
+<figure class="fig"><img src="../assets/images/chapter-08-fig-01.svg" alt="格拉迪亚斯的接纳投票分布" title="格拉迪亚斯的接纳投票分布" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#eb7a52">“哇”</span>，主席叹道。<span style="color:#eb7a52">“十比十，正好。按准入表决的规则，由我来投决定票。那么我投……”</span></p>
+<p class="dialog">他按下了桌上两个按钮中的一个。</p>
+<p class="dialog"><span style="color:#eb7a52">“赞成。”</span></p>
+<figure class="fig"><img src="../assets/images/chapter-08-fig-02.svg" alt="格拉迪亚斯的接纳投票示意图" title="格拉迪亚斯的接纳投票示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#eb7a52">“欢迎加入掌舵会，格拉迪亚斯。”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯一走出大楼就看了看手表。准入表决进行的时候，手表一直在响，他一直没理会。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">不好意思打扰你，是关于莉莉的事。她刚在公民课上考砸了。我觉得她见见你和塞拉会好一些。</span></td><td>45183</td></tr></tbody></table></div>
+<p class="dialog">塞拉还在伊普塔克，格拉迪亚斯想。他只能自己去。</p>
+<p class="dialog">格拉迪亚斯懒得让翡翠规划去维尔家的路线。路他自己认得，也不算远。他动身步行，脑子里多半是担心莉莉的状态，还有一丝懊恼——也许比他愿意承认的还重：他刚尝到的得意这么快就被不安取代了，那感觉像是撞上了一个他完全不知道怎么解的问题。</p>
+<p class="dialog"><span style="color:#be9b00">“我这就来”</span>，格拉迪亚斯对着颈带低声说——又一次，不是那一刻他有多想藏住隐私，只是到这时候他已经习惯了小声说话。<span style="color:#be9b00">“给我点我常点的那份吃食。我刚从准入听证会出来，会饿。”</span></p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">你至少被录取了吧？</span></td><td>45501</td></tr></tbody></table></div>
+<p class="dialog"><span style="color:#be9b00">“录取了。不过险得很。”</span></p>
+<p class="dialog">走了二十分钟，格拉迪亚斯到了维尔家。维尔给他开了门，随后又坐回自己的椅子。莉莉坐在沙发上哭。</p>
+<p class="dialog">格拉迪亚斯在莉莉旁边坐下，抱住她。</p>
+<p class="dialog">格拉迪亚斯等了一会儿，才开口。</p>
+<p class="dialog"><span style="color:#be9b00">“没事的”</span>，他低声说。<span style="color:#be9b00">“分数不是一切。维尔、黛雅、塞拉和我都知道，你心里是个多美好的人，我们都爱你。”</span></p>
+<p class="dialog">莉莉不太高兴地把脸扭到一边。</p>
+<p class="dialog"><span style="color:#be9b00">“我们能帮你。只要找到一种办法，让你能跟这些内容接上关系。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“你们已经试过了”</span>，莉莉抽噎着轻声回答。<span style="color:#23ba7d">“这次测验我拿了59分。五十九分。全班倒数第三。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那你说，你们班最聪明的那个孩子，能像你六个月前那样给塞拉烤一个生日蛋糕吗？他能像你当年那样，在赫雷达出事故养伤的那个月里，天天给她送吃的吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你要明白，你已经是个很美好的人了。自信就是从这儿来的，你想变好的动力也是从这儿来的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“这些学校真该把公民课这样的内容，跟你生活里真正在乎的事连起来。我当初之所以走上见习官这条路，仅仅是因为看见掌舵会的激励在帮着把网络世界打开，让我能参与进去、给它写代码。你也会有属于你的那一刻。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“下次公民课测验你要是能考得比75分高”</span>，维尔说，<span style="color:#a38af2">“我下回上北林，就带你一起去。”</span></p>
+<p class="dialog">这激励粗暴得很，格拉迪亚斯微微皱眉——不过他心里也想着，不妨一试。</p>
+<p class="dialog">这时门铃响了。维尔起身走到门口开了门，是吃的到了。</p>
+<p class="dialog">维尔把吃食拿起来放到桌上，和格拉迪亚斯一起拆开。</p>
+<p class="dialog">莉莉慢慢站起来，也凑到桌边。三个人开始吃饭。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯的手表响了。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">［请求通话］</span></td><td>59063</td></tr></tbody></table></div>
+<p class="dialog">他接通了。</p>
+<p class="dialog"><span style="color:#be9b00">“莫夫，你怎么样？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“我这儿有个挺有意思的消息要跟你说。不过先说，你进去了吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“勉强算进去了。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“进去就是进去了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那你有什么新消息？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“看来我们终究当不成掌则人了。密码学随机之神抽中我，下个任期开始当宣谕使。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“哇。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“对。所以从今天起，我手上再没有正式的权力了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你打算当宣谕使做什么？我想不出你真去主持那些大会或者发表演讲之类的样子。你就打算去银聊上做个分区版主？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“你太了解我了。不过还有一点，我会有更多时间帮你。”</span></p>
+<hr class="rule">
+<p class="dialog">那天晚上，格拉迪亚斯给塞拉打了电话。</p>
+<p class="dialog"><span style="color:#be9b00">“我进去了！”</span>，他兴奋地说。</p>
+<p class="dialog"><span style="color:#54a1f9">“我就知道你能行！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“其实悬得很。十比十，主席破了平局。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“赢了就是赢了。自从你跟我说要去做掌则人，我就一直特别兴奋——你在那个位置上能做多少好事啊。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我会尽力的！”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-07.html">上一章 · 第七章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-09.html">下一章 · 第九章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias's watch buzzed as he was walking along the street.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Seila</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">[5 images]</span></td><td>34125</td></tr></tbody></table></div>
+<p class="dialog">He opened up his hand device to see the images more clearly.</p>
+<p class="dialog">Seila was sending photos from Iptak. Gladias was immediately curious. Neither he nor Seila had ever before been to "the aks", as the Veridians liked to call the cluster of Ondak, Iptak, Mantak and Belpaki. The architecture was visibly different, more brick and wood, the colors more red and brown than what he was used to seeing not just in Veridia, but even in pictures of Dzego, or for that matter any of the United Cities that Gladias had been to or seen pictures of.</p>
+<p class="dialog">The signs were in a language that was half alphabet, half pictorial - the sort of thing that Dzegoban had been not too far from before they stripped that out in order to streamline the language.</p>
+<p class="dialog">He pressed a button, responding to Seila with a heart symbol.</p>
+<p class="dialog"><span style="color:#be9b00">"I'm looking forward to your blog"</span>, Gladias whispered through his neck band, letting Emerald automatically route that message to Seila.</p>
+<p class="dialog"><span style="color:#54a1f9">"I'll be back in a few days!"</span>, Seila replied.</p>
+<p class="dialog">At that point, Gladias arrived at the end of the path, at an intersection with the sidewalk along a street. Right in front, there was a sign listing the autobuses that stopped at that point. Gladias saw the number of the autobus that he was meant to take. He stood and began to wait.</p>
+<p class="dialog">Gladias's watch buzzed, and a notification appeared onscreen.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 15%"><center>Mov</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">Remember that your trial in today is not just about knowledge. It's also about making sure the senators like you.</span></td><td>34576</td></tr></tbody></table></div>
+<p class="dialog">Gladias sighed, and let his arm drop back down to beside his waist. He continued to wait.</p>
+<hr class="rule">
+<p class="dialog">A few minutes later, the next autobus arrived. Gladias checked the number. It was exactly the autobus that he needed. He quickly got on, and the door closed behind him.</p>
+<p class="dialog">Out of the corner of his eye, he saw more people than usual looking intently at their hand devices at that moment. Curious, he stepped forward and quietly looked at what one of the other passengers was looking at.</p>
+<p class="dialog">"Veridia National University", the header at the top of the view on the passenger's hand device said. "Live debate between Professor Sylka, president of VNU, and Lord Ephelion, Arctic ambassador to Veridia".</p>
+<p class="dialog">Sylka was speaking, and Gladias could make out the subtitles.</p>
+<p class="dialog"><span style="color:#54a1f9">"Gross economic output alone measures one part of human progress"</span>, she said - though Gladias could only see and not hear. <span style="color:#54a1f9">"But it becomes a very limiting and impoverished perspective if you start viewing it as the entire goal."</span></p>
+<p class="dialog">Gladias was curious enough that he whispered to Emerald through his neck band to put up an audio livestream of the debate.</p>
+<p class="dialog"><span style="color:#54a1f9">"There is so much more that matters. There is the citizens' health, their emotional well-being, and how healthy the bonds in the society are."</span></p>
+<p class="dialog">As Sylka finished speaking, the audio livestream connected. Gladias stepped back from the passenger, somewhat embarrassed that he had momentarily violated the passenger's privacy by looking at his screen, and relieved that he was now receiving the feed in a completely ethical way.</p>
+<p class="dialog"><span style="color:#54a1f9">"What good is a large car if people feel unhappy because they have no purpose in life? What good is a large house if people feel alienated in their society, and don't have friends to invite to it?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What good are the latest electronics, if the people at the bottom use them to hack and steal, the people at the top use them to invade people's privacy and surveil, and everyone all the time uses them to get outraged on social media platforms?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Such questions are the entire reason why Veridia has mechanisms like Steering."</span></p>
+<p class="dialog">Sylka paused. Lord Ephelion started speaking.</p>
+<p class="dialog"><span style="color:#db8916">"There has now been a century-long tradition of people trying to make better metrics than gross economic output. But what we have seen is that especially over the long term, the countries that perform best on any of those metrics are precisely the ones whose economic output is highest."</span></p>
+<p class="dialog"><span style="color:#db8916">"And there is a deep reason for this. Historians have long understood that many phenomena in society move in cycles. The ancients talked about a cycle: flourishing, pride, arrogance, downfall, suffering, rebirth, and then flourishing once again. They said the same thing about governance, and how it inevitably cycles between technocratic, democratic, chaotic and strongman."</span></p>
+<p class="dialog"><span style="color:#db8916">"Whenever we talk about the inevitability of rises and falls, it is precisely these 'softer' traits like 'societal cohesion', 'freedom' and 'well-being' that move in this fashion. On those dimensions, the dominant transformation is a rotation: good creates the generator of the bad, which creates the bad, which creates the generator of the good once more."</span></p>
+<p class="dialog"><span style="color:#db8916">"And let us be real: these 'softer' traits that people are targeting, they're chosen by committees of priests - selected not for competence, but for echoing whatever ideology strikes people's fancy at the time."</span></p>
+<p class="dialog"><span style="color:#db8916">"There is only one thing that stands out from this pattern and offers a truly lasting improvement: the relentless march of economic growth, enabled by the unceasing progress of science, technology, and capital accumulation. While the emotional vibrations in a society cycle between the pride of success, and the desperation of collapse and defeat, with every cycle, people are smarter and richer than before."</span></p>
+<p class="dialog">Gladias could see the eyes of a few of the people on the autobus watching perking up.</p>
+<p class="dialog"><span style="color:#54a1f9">"The Order members are chosen by a sophisticated-"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Order, please. Ephelion has the floor."</span>, the moderator interjected.</p>
+<p class="dialog"><span style="color:#db8916">"And so if you want to truly improve a society, in a way that provides lasting value for the long term, you do not focus on the thing that moves in cycles. You do not focus on accelerating the rotation. Instead, you focus on increasing the largest eigenvector. You focus on affecting the thing that has a thousand-year record of compounding on itself, the vector on which good reliably leads to more good. And you let the rest follow the natural laws as it may."</span></p>
+<p class="dialog">Ephelion stopped, and Sylka cleared her throat, preparing to speak. At that point, Gladias realized that the autobus door was open, and it was already at his destination. He quickly ran out, and Emerald automatically paused the livestream to help him concentrate.</p>
+<p class="dialog">His mind lingered on the debate for a moment longer, and he noticed with faint irritation how easily Ephelion's sentences arranged themselves into an argument that seemed to make sense on its own terms. A gifted demagogue, he concluded. He then refocused on what lay ahead.</p>
+<p class="dialog">Gladias started walking forward along a path covered with trees on both sides. After a few minutes, he saw a large circular building ahead. This was the parliament. The structure was notably different from the intentionally distant and mysterious headquarters of the Order of Steering: it was on ground level, the construction mixing medieval and modern aesthetics, with multiple entrances on all sides.</p>
+<p class="dialog">He kept walking forward, and soon arrived at the entrance.</p>
+<hr class="rule">
+<p class="dialog"><span style="color:#eb7a52">"Welcome, Gladias, to your selection hearing."</span></p>
+<p class="dialog"><span style="color:#eb7a52">"You have been an Acolyte for four years, and you have reached the ninety-fourth percentile in your prediction score. You have applied to join the Order of Steering in full standing - though whether you're applying to be a Sentinel or a Keeper, that's something that only you and perhaps your most trusted advisors will ever know."</span></p>
+<p class="dialog"><span style="color:#eb7a52">"Today, we will administer the second part of the admissions test: the approval of the Parliament committee. Are you ready to begin the hearing?"</span></p>
+<p class="dialog">A robot slid up to the chair in the middle of the room where Gladias was sitting, carrying a cup of water. Gladias took the cup, and moved it to the cup holder on the side of the chair.</p>
+<p class="dialog"><span style="color:#be9b00">"I am ready."</span></p>
+<p class="dialog"><span style="color:#eb7a52">"Then let the questions begin."</span></p>
+<p class="dialog">Twenty senators were sitting on large chairs arranged along the whole edge of the circular-shaped room, spread about two meters apart from each other. In between some of the chairs, there were air filters. Above them, there were bright lights aimed downward, some bright yellow lights to light up the room, and a few faint violet-looking lights to keep the air clean.</p>
+<p class="dialog">In a particularly distinguished seat was the Chairman of the committee. About five senators pressed down on the buttons on their table, requesting to speak.</p>
+<p class="dialog">The system automatically selected one, and lighting around the edge of his seat turned green.</p>
+<p class="dialog"><span style="color:#eb7a52">"Senator Verdow, you may ask your question."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Gladias, tell us about your background."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well"</span>, Gladias stammered. <span style="color:#be9b00">"I was born thirty-nine years ago. Fairly middle class family, nothing too fancy. I went to a normal school, got good grades, but never got top of the class or anything."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Why not?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I think I was just not motivated to. I tried very hard for one year, got an average of ninety-seven percent. But then I realized that the main emotion I was feeling, was the fear that if I screwed up even once, my beautiful record would be gone. I even avoided taking the harder classes. At the end of that year, I just felt like that was a game not worth playing. So I put in less effort, and started programming, and then studying law, in my spare time, because those things interested me, and I ended up doing decently well in the programming competitions."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Why did you choose to become an Acolyte?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"The first hobby project I gave myself when I seriously got into programming as an adult was writing an alternative client for Silverchat. After I finished, I tried to do the same for Bluewhale. And it was so much harder, because they were more closed and proprietary in many ways. That was when I realized just how much value Silverchat's openness was bringing to me that Silverchat itself would never capture. And I had been studying rubrics only a few days before, and it clicked - this, the aspects of a good society that the market alone misses, is exactly why Steering is so important. And so I felt motiv-"</span></p>
+<p class="dialog">A timer buzzed.</p>
+<p class="dialog"><span style="color:#eb7a52">"Next question! Papli."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"What's your favorite band?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Err... I don't really have one."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"Favorite game?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Don't have one either."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"Favorite sport?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I remember enjoying playing Colorball when I was a kid? The school game that Helisport ended up being based on."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"How can we possibly trust you to judge on our society's behalf, when you're so out of touch with so much of regular Veridian people's lives?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Isn't this why citizens' assemblies and broad listen reports exist, and why a Keeper group has months to listen to both before it makes its decision on a rubric? And isn't this why Keepers and Sentinels are allowed to specialize? I probably won't be deciding on anything that has to do with sports."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"What do you think of Dzego?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I like their food. I only started learning more about their history recently. My wife met a couple of Dzegojan kids and they seemed nice. In general, I feel for their plight, I hope we could find a way to support them more."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"Aha, so you want us to support Dzego, and you want us to make our social networks more open so that some super smart kids can play with them more easily. But I haven't seen you talk once about something that a regular Veridian would care about, that affects their lives."</span></p>
+<p class="dialog"><span style="color:#be9b00">"You don't think increasing hardware openness allows more mechanics to join the market, which makes owning things cheaper-"</span></p>
+<p class="dialog"><span style="color:#00b5d6">"Well what about the salaries of the mechanics themselves!"</span></p>
+<p class="dialog">Gladias started formulating a response in his head. Economics was a basic part of the curriculum for anyone training to be an Acolyte, and so he could immediately recognize the fallacy.</p>
+<p class="dialog">On the one hand, every dollar of price increase in repair was a dollar taken from a customer but given to a mechanic, so from that view the good and the bad balanced out. But on the other hand there were second order effects: reducing the cost of ownership of goods means that people can use the money they saved to buy other things, which means more jobs get created somewhere else. Ignoring this was the fallacy of all naive economic interventionism done in the name of politics: favoring the seen at the expense of unseen.</p>
+<p class="dialog">It took him about three ticks to formulate the structure of this argument in his head. But then he realized that it would take him about twenty ticks to speak it - when the timer on the clock had only four ticks left. Gladias gave up, and simply did not respond.</p>
+<p class="dialog">The timer buzzed.</p>
+<p class="dialog">Gladias began to sweat nervously.</p>
+<p class="dialog"><span style="color:#eb7a52">"Senator Ancus?"</span></p>
+<p class="dialog"><span style="color:#ec7383">"What was the last thing you voted on for the aesthetics tax?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"A blue and grey building on Badra street. It was hard to decide, it was just average, nothing out of character in a bad way, but also nothing exceptional. Whenever I pass by it, there were always families coming in and out, people even sitting on the benches outside. Children occasionally selling food they make. But that's normal for Meldan these days. So I just gave it a very tiny vote of approval."</span></p>
+<p class="dialog"><span style="color:#ec7383">"What was the last thing you <em>wished</em> you could have voted on?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"A Hydrafill billboard. The one that talked about their drinks being free of over 2,000 poisons and anti-recommended substances."</span></p>
+<p class="dialog"><span style="color:#ec7383">"Why?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"The ad was fun. I still remember when I was young, and all the ads were boring or just painful to look at. They were just trying to get inside your head, that's all they cared about. It's especially bad when they do that on public transit; if the public transit experience is bad then even more people switch over to cars and we get more pollution and congestion and that's bad for everyone. I was glad that Hydrafill tries so hard to be better than that."</span></p>
+<p class="dialog"><span style="color:#ec7383">"Papli"</span>, Ancus shouted, whipping his head toward Papli. <span style="color:#ec7383">"Don't you think families enjoying the outdoor environment, good public transit, and fun are all things that regular Veridians value a lot?"</span></p>
+<p class="dialog">Papli did not answer.</p>
+<p class="dialog"><span style="color:#eb7a52">"Keep the conversation between the asking Senator and the applicant"</span>, the Chairman interjected.</p>
+<p class="dialog"><span style="color:#be9b00">"I think so. Maybe Papli would say Hydrafill's style of humor is pretentious smart people humor or something like that."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But I think he underestimates Veridians, and just how smart many of them are. I was on the autobus coming here, when Sylka was debating Ephelion on how to measure social progress, and people seemed really engaged when she was speaking."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"That's just the smug smart people's version of enjoying watching people fight. Helisport is actually <em>more</em> peaceful"</span>, Papli interjected. <span style="color:#00b5d6">"At least the Quadratic Funding funds Helisport games. We should get rid of you guys and just make a negative version of Quadratic Funding and use that to calculate the taxes on all the big businesses."</span></p>
+<p class="dialog"><span style="color:#eb7a52">"Order!"</span>, the Chairman shouted. <span style="color:#eb7a52">"Next question."</span></p>
+<p class="dialog">The questioning continued for another half longhour, as each Senator got a chance to ask.</p>
+<p class="dialog">After the last Senator asked Gladias his question, and the timer buzzed, the Chairman stood up.</p>
+<p class="dialog"><span style="color:#eb7a52">"Time for the vote!"</span></p>
+<p class="dialog">The YES and NO voting buttons were clearly visible on the table, so Gladias could make out any Senator's vote just by looking at them.</p>
+<p class="dialog">The Senators started pressing down on their buttons. A different noise buzzed every time a vote was made. Within ticks, every vote had been cast. Gladias looked toward the screen near the top of the room.</p>
+<figure class="fig"><img src="../assets/images/chapter-08-fig-01.svg" alt="格拉迪亚斯的接纳投票分布" title="格拉迪亚斯的接纳投票分布" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#eb7a52">"Wow"</span>, the Chairman exclaimed. <span style="color:#eb7a52">"Ten to ten, exactly. By the rules of Acceptance voting, I am the deciding vote. And so I vote..."</span></p>
+<p class="dialog">He pressed down on one of the two buttons on his desk.</p>
+<p class="dialog"><span style="color:#eb7a52">"Yes."</span></p>
+<figure class="fig"><img src="../assets/images/chapter-08-fig-02.svg" alt="格拉迪亚斯的接纳投票示意图" title="格拉迪亚斯的接纳投票示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#eb7a52">"Welcome to the Order, Gladias."</span></p>
+<hr class="rule">
+<p class="dialog">Once Gladias left the building, he checked his watch. There had been loud buzzing while the acceptance session was in progress, and he had been ignoring it.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 15%"><center>Vil</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">Sorry to bother you, but it's about Lily. She just failed a test in civics class. I think she would benefit from seeing you and Seila.</span></td><td>45183</td></tr></tbody></table></div>
+<p class="dialog">Seila's still in Iptak, Gladias thought. He would have to go himself.</p>
+<p class="dialog">Gladias did not bother asking Emerald for a route to Vil's house. He knew it himself, it was not too far. He started walking, his mind filled mostly with concern for Lily's wellbeing, and slightly - perhaps more than he was willing to admit - frustration that his triumph was so quickly replaced by dread, a feeling that he was faced with a problem he had no idea how to solve.</p>
+<p class="dialog"><span style="color:#be9b00">"I'm coming"</span>, Gladias whispered into his neck band - once again, not out of any strong desire to conceal his privacy at that moment, but because by that point he was simply accustomed to whispering. <span style="color:#be9b00">"Get me the usual food I get. I just got out of my acceptance hearing so I'll be hungry."</span></p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 15%"><center>Vil</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">Did you at least get accepted?</span></td><td>45501</td></tr></tbody></table></div>
+<p class="dialog"><span style="color:#be9b00">"I did. Just barely though."</span></p>
+<p class="dialog">After twenty minutes of walking, Gladias arrived at Vil's house. Vil opened the door for him, and then sat back down in his chair. Lily was sitting on the couch, crying.</p>
+<p class="dialog">Gladias sat down on the couch beside Lily, and hugged her.</p>
+<p class="dialog">Gladias waited for a few moments, and began to speak.</p>
+<p class="dialog"><span style="color:#be9b00">"It's all right"</span>, he whispered. <span style="color:#be9b00">"Scores aren't everything. Vil, Daia, Seila and I all know the beautiful person that you are inside, and we love you."</span></p>
+<p class="dialog">Lily turned her face away, unhappy.</p>
+<p class="dialog"><span style="color:#be9b00">"We can help you. We just have to find some way to engage with the material that you can relate to."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"You've already tried"</span>, Lily replied softly, sobbing. <span style="color:#23ba7d">"I got fifty-nine percent on this test. FIFTY-NINE PERCENT. Third-worst in the class."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, do you think the smartest kid in your class can bake a birthday cake for Seila the way you did six months ago? Would he bring food to Hreda every day for a month the way you did when she was recovering from that accident years ago?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"You need to realize that you're a beautiful person already. That's where self-confidence comes from, and that's where you can get your motivation to improve."</span></p>
+<p class="dialog"><span style="color:#be9b00">"These schools really need to get better at connecting these topics like civics to topics that matter in your life. I only went down my path to become an Acolyte because I saw how the Steering incentives were helping to open up the online world so I could participate and write code for it. You will have your moment too."</span></p>
+<p class="dialog"><span style="color:#a38af2">"If you get above seventy-five on your next civics test"</span>, Vil said, <span style="color:#a38af2">"I'll take you on my next trip up to Northglade."</span></p>
+<p class="dialog">Gladias winced slightly at the crudeness of the incentive - though he figured in the back of his mind that it was worth a try.</p>
+<p class="dialog">At that moment, the doorbell buzzed. Vil stood up and walked toward the door, and opened it. It was the food.</p>
+<p class="dialog">Vil picked up the food, and put it down on the table. Vil and Gladias together began to open it.</p>
+<p class="dialog">Lily slowly stood up, and also joined the table. The three of them began to eat.</p>
+<hr class="rule">
+<p class="dialog">Gladias's watch buzzed.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Mov</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">[call requested]</span></td><td>59063</td></tr></tbody></table></div>
+<p class="dialog">He picked up.</p>
+<p class="dialog"><span style="color:#be9b00">"Mov, how are you?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"I have some interesting news to share. But first of all, you got in, right?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Just barely."</span></p>
+<p class="dialog"><span style="color:#00bc96">"In is in."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what's your update?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Looks like we're not going to be Keepers after all. The cryptographic random gods selected me to become a Herald starting next term."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Wow."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Yep. So as of today, I have no more formal power."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What do you expect you will do as a Herald? I can't imagine you actually running those assemblies or giving speeches or anything like that. Are you just going to go moderate a sub-forum on Silverchat?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"You know me too well. But also, I'll have more time to help you."</span></p>
+<hr class="rule">
+<p class="dialog">That evening, Gladias called Seila.</p>
+<p class="dialog"><span style="color:#be9b00">"I got in!"</span>, he said excitedly.</p>
+<p class="dialog"><span style="color:#54a1f9">"I knew you would!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"It came quite close. Ten to ten, the Chairman broke the tie."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"A win is a win. Ever since you told me you were going to go Keeper, I've been so excited about all the good you can do from that role."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I'll try my best!"</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-07.html">上一章 · 第七章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-09.html">下一章 · 第九章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第八章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第十二章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第十二章 · Chapter 12 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-11.html">
+  <link rel="next" href="chapter-13.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="12">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第十二章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第十二章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 12</p>
+    <p class="chapter-heading__dateline">萨祖都，泽国 · 3724年草期22日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Sadzu Du, Dzego · 3724 Grasstime 22</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">火车开始减速，泽向车窗外望去。</p>
+<p class="dialog">起初，他看到的是树。接着，建筑开始出现，越来越密。最后，几分钟后，他看到了车站。</p>
+<p class="dialog">一块招牌缓缓从车窗外掠过。</p>
+<center><div class="dz-card dz-mono" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">sa dzu du</span></span></div></div></center>
+<p class="dialog">“主城”——泽国这座名字起得十分贴心的首都。</p>
+<p class="dialog">火车停了下来，泽听见车门打开。其他乘客纷纷起身，开始收拾自己的东西。</p>
+<p class="dialog">泽决定不急着抢先下车，不如把这段时间用得值一点。大约两分钟里，他把和机器人下到一半的那盘民本棋收了尾。</p>
+<p class="dialog">芬一直没腾出手写那套训练框架——用来微调 AI，让它在自定义规则下也下得好——所以泽对上的仍然是原装 AI。</p>
+<p class="dialog">就在这时，其他 AI 认输了。泽一个人赢了三个。为了弥补它们水平不够，他调整过规则：只给自己一个角，另外三个角给三个 AI，还让它们三个组成一队来对付他。即便这样，泽还是赢了。他发现三打一其实也没帮上 AI 多少忙——这种打法不在它们的训练数据里，于是它们犯了低级错误，还互相蚕食对方的负熵。</p>
+<p class="dialog">泽收起手持终端，叹了口气。</p>
+<p class="dialog">到这时，其他乘客几乎都下车了。泽抓起行李，起身，也开始往车外走。</p>
+<p class="dialog">他走出来时，六个人穿着民本棋祭司的袍子，正等着他。</p>
+<p class="dialog"><span style="color:#54a1f9">“欢迎来到萨祖都，泽”</span>，领头的祭司——一位年长女性，年纪和穆相仿——对他说。</p>
+<p class="dialog"><span style="color:#df74b1">“能来这里，我很兴奋”</span>，泽很快答道。<span style="color:#df74b1">“这才是我第二次到首都。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“对了，我叫苏。我是全国赛的组织者之一。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“幸会，苏。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那接下来几天，我都有什么安排？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“先去酒店办入住，明天早上是开幕式。三十二位选手，全泽国最聪明的民本棋年轻头脑。你会见到他们所有人的。”</span></p>
+<p class="dialog">苏把泽带到一间满是门的房间。其中一扇门滑开，门后停着一辆黑色轿车，和几个月前登带他去晶圆厂时坐的那辆一模一样。</p>
+<p class="dialog"><span style="color:#54a1f9">“抱歉，泽，我只能送你到这儿了。半个长时后还有一位选手坐火车到这儿。路上顺风，好好休息。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“太谢谢您了。”</span></p>
+<p class="dialog">泽上了车，车门合上。车开动了。</p>
+<p class="dialog">泽望着车窗外，惊叹于城里的建筑和树木。有些地方看起来和帕佛盖都差别不大，只是这里的电子产品店更少，取而代之的是种类更杂的场所。还有些药店。</p>
+<p class="dialog">一家店铺的橱窗上，泽看到一块招牌：</p>
+<center><div class="dz-card dz-mono" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">ti</span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">dia shu</span></span></span> <span style="white-space:nowrap"><span class="dz-script">fe</span> <span style="white-space:nowrap"><span class="dz-script">cen su jui hui</span></span></span></div></div></center>
+<p class="dialog">“长寿套餐，此处有售”</p>
+<p class="dialog">很快，这些药店换成了卖艺术家具和其他家居用品的店。</p>
+<p class="dialog">再往后，是几家样式仿泽国中古时代的餐馆和茶馆。</p>
+<p class="dialog">有一瞬间，右侧的建筑忽然断了，泽看见一座公园。公园后面立着好几座山体金字塔，每一座大约只有帕佛盖都南边那座的一半高。</p>
+<p class="dialog">一分钟后，公园到了尽头，车驶过一座横跨小河的桥。泽能看见前方的建筑越来越密。</p>
+<p class="dialog">路面缓缓沉入地下，变成一条隧道。</p>
+<p class="dialog">几分钟、几个转弯之后，车停了。车门打开时，正紧紧贴着另一扇门，外面的人——无论从车外还是从那栋楼外——都看不到泽。</p>
+<p class="dialog">泽下了车，人已经在一家酒店里了。</p>
+<p class="dialog">他走到最近的绿色圆圈前，用手表碰了一下。</p>
+<div class="device-view narrow-device-view"><table><tbody><tr><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">sen hen zi li die fe 150<br/>zo lia kin<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">man dun li jie hu<b style="font-size: 150%; color: #8f8">✓</b></div></center></td></tr></tbody></table><b>cau tie zen<br>ci fan zi li 304</b></div>
+<p class="dialog">信誉分高于150，已验证。无需付款。已批准，房间号304。</p>
+<p class="dialog">泽的手表震了一下，确认了房间钥匙。</p>
+<p class="dialog">泽进了房间，冲了个澡。</p>
+<p class="dialog">他随即睡下了。</p>
+<hr class="rule">
+<p class="dialog">闹铃响了。</p>
+<p class="dialog">泽点了点手表，看现在是什么时间。30,003，手表显示。距离开幕式只剩半个长时。他在客房服务的菜单上按了几个按钮，点了一杯果蔬汁。</p>
+<p class="dialog">他穿好衣服。</p>
+<p class="dialog">三分钟后，果汁送到，泽很快喝完。他立刻觉得精神起来了——至少，精神足够支撑他去场馆跑一趟。</p>
+<p class="dialog">他没再多耽搁，开门下楼。</p>
+<p class="dialog">一辆黑色轿车已经等在那儿。泽穿过大堂，径直从已经敞开、紧紧抵在一起的酒店门和车门之间跨进车里。门合上了。</p>
+<p class="dialog">车一动，泽就掏出那本密码学教材——登在之前一次见面时推荐给他的——从上次停下的地方接着读。</p>
+<p class="dialog">这一节讲的是哈希函数。书页中间有一幅大图。</p>
+<figure class="fig"><img src="../assets/images/chapter-12-fig-01.svg" alt="多层网络中的交叉连接与跳跃连接示意图" title="多层网络中的交叉连接与跳跃连接示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">“哈希算法的构想”。</p>
+<p class="dialog">泽读起旁边的文字。</p>
+<p class="dialog">书上说，哈希算法的作用，是为一大块信息生成一个缩小后的指纹，而这个指纹仍然能唯一标识原来的信息。它的目标是：要想找出两段哈希相同、内容不同的数据，在计算上难到不可行。</p>
+<p class="dialog">哈希天然会销毁信息——用一个更小的东西表示一个更大的东西，本来就是它的全部目的。但这里有个悖论：在我们造出的所有最好的哈希函数内部，最大的一块部件却是一个<em>保熵</em>变换：一个置换。</p>
+<p class="dialog">这个核心部件把输入一一映射到输出。不仅如此，正着跑、倒着跑，它都能<em>高效</em>执行。收缩和不可逆，则来自顶层薄薄的一层：一次删除，再加上把原输入的一部分异或之后附在末尾。</p>
+<p class="dialog">为什么要这么做？为什么要把不可逆建在可逆之上？原因很微妙。如果你直接把不可逆做进去，就控制不了熵在什么时候被销毁。一个不可逆的轮函数只要反复应用足够多次，大约一半的熵就会坍缩，协议的安全性也跟着一起垮掉。所以，哪怕销毁信息就是你最终的目的，最好也把负责这件事的那一块干干净净地单独分出来——按照你自己的意愿，在算法里一个精确的位置上销毁信息。</p>
+<p class="dialog">泽收起手持终端，向后靠去。</p>
+<p class="dialog">这一切都是熵，对吧，他暗自想。</p>
+<p class="dialog">一分钟后，车突然减速，向左拐。泽从右侧看到一片被警戒带围起来的区域，里面深处停着各式大型车辆。</p>
+<p class="dialog"><span style="color:#df74b1">“出什么事了？”</span>，泽问，声音放得足够大，司机绝不会听不出这是在问他。</p>
+<p class="dialog"><span style="color:#e58137">“一家尖端生物学研究实验室炸了。多半又是北极人干的。他们得花好几天清理，确保一切安全。”</span></p>
+<p class="dialog">几分钟后，车减速停下。车门打开，正对一条走廊。</p>
+<hr class="rule">
+<p class="dialog">泽穿过通道，走下楼梯。</p>
+<p class="dialog">他看见面前有一扇门。门的样子和帕佛盖都那座山体金字塔里民本棋房间的门很像：一排排石砖，靠近顶部弯成拱形，顶上刻着那个标志——两条横向伸出的手臂，在中间以拳头相撞。</p>
+<p class="dialog">不过这扇门明显更大，维护得更好，装饰也更气派。</p>
+<p class="dialog">泽用手表碰了碰绿色圆圈，门开了。他走了进去。</p>
+<p class="dialog">他走进一间摆了约五十把椅子的房间，已经有大约二十名选手落座。台上，他认出了苏。她身边还站着另外三位祭司。</p>
+<p class="dialog">泽坐下。接下来十五分钟里，其他选手陆续在自己的椅子上落座。</p>
+<p class="dialog">一个年纪偏大的少年在泽旁边坐下。</p>
+<p class="dialog"><span style="color:#e58137">“你好，我是德鲁因”</span>，他说。</p>
+<p class="dialog">这名字一听就不像泽国名字，泽想。</p>
+<p class="dialog"><span style="color:#df74b1">“我是泽。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你从哪儿来？”</span></p>
+<p class="dialog"><span style="color:#e58137">“啊，我是红郡人。名字就露馅了吧？”</span></p>
+<p class="dialog">泽笑了。<span style="color:#df74b1">“大家的反应都这样吗？”</span></p>
+<p class="dialog">德鲁因也跟着泽笑了。</p>
+<p class="dialog"><span style="color:#e58137">“在这儿他们叫我 De lu hin。‘一副叉子的模样。’名字挺可爱吧，你不觉得？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你在这儿念书吗？你父母移民过来的？”</span></p>
+<p class="dialog"><span style="color:#e58137">“啊，我是外籍选手。这次他们请了四位外籍选手进来，让比赛更有意思。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你兴奋吗？”</span></p>
+<p class="dialog"><span style="color:#e58137">“当然。其实我这还是第一次来泽国，地方太酷了。”</span></p>
+<p class="dialog">铃声响了，选手们很快安静下来。</p>
+<p class="dialog"><span style="color:#54a1f9">“欢迎来到民本棋全国锦标赛”</span>，苏开口道。<span style="color:#54a1f9">“很荣幸今年能见到这么多出色的选手。希望每一位抵达的选手，都度过了愉快的夜晚和早晨。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我很高兴向大家介绍我们的总负责人——督赛官金。”</span></p>
+<p class="dialog">另一位祭司走上前，开始讲话。</p>
+<p class="dialog"><span style="color:#78b249">“对我们在泽国的所有人来说，这都是一个特殊的时刻。这不只是为我们，也不只是为你们，而是为全国千千万万观看比赛的泽国人——他们将看到泽国新一代最聪慧的头脑在这里彼此交锋。”</span></p>
+<p class="dialog"><span style="color:#78b249">“我也很荣幸地宣布，今年有四位尊贵的外国来宾与我们同场竞技。”</span></p>
+<p class="dialog"><span style="color:#78b249">“今天，我们会在这座山体金字塔里参观民本棋博物馆。明天，我们会带你们游览萨祖都的几个地方，晚上你们可以休息。游览结束再过两天，锦标赛的第一批对局就将开始。”</span></p>
+<p class="dialog"><span style="color:#78b249">“资格赛共六轮，每场之间都有八天的长休。”</span></p>
+<p class="dialog"><span style="color:#78b249">“你们三十二个人里，胜场最多的四名选手将进入半决赛。如果找不到一个胜场数刚好只有四个人达到，我们就按两项的几何平均值来排名：一是在败局里撑过的回合数，二是在胜局里所用回合数的倒数（两项都最多计到八千回合）。这样一来，八千回合之前认输就没有任何好处。如果还是分不出高下，就再加赛一轮资格赛。”</span></p>
+<p class="dialog"><span style="color:#78b249">“我希望你们享受比赛，享受萨祖都的一切，但同样重要的是，也享受彼此的相处。在这里，你们不是敌人，只是暂时的对手。离开棋场，你们应当把彼此当作朋友，记住我们所有人都在做同一件事。Dze go ba fau gie。”</span></p>
+<p class="dialog">“Dze go ba fau gie”，所有选手齐声回应。</p>
+<p class="dialog"><span style="color:#78b249">“现在，请大家跟着苏走。她会带大家参观博物馆。”</span></p>
+<p class="scene-break">3724年草期25日</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>白</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ed756b">[dia lau shau]</span></td><td>23098</td></tr></tbody></table></div>
+<p class="dialog">泽醒了。白在请求通话。</p>
+<p class="dialog">泽点了点手表。</p>
+<p class="dialog"><span style="color:#ed756b">“你那边的进展怎么样？”</span>，白问。</p>
+<p class="dialog"><span style="color:#df74b1">“这个点打电话有点早吧？闹铃还有19分钟才响呢。”</span></p>
+<p class="dialog">泽顿了顿，决定还是回答白的问题。</p>
+<p class="dialog"><span style="color:#df74b1">“一切顺利。三天前在博物馆看了个特别有意思的展览，第二天又在萨祖都逛了不少地方。还遇见了一个红郡来的人。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“选手？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“对，他们今年打算办得国际化一点。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“帕佛盖那边怎么样？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“问点我答得上来的。过去这一个长时，我一直在河对岸盯着你即将比赛的那座山体金字塔。”</span></p>
+<p class="dialog">泽坐了起来。</p>
+<p class="dialog"><span style="color:#df74b1">“你在这儿？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“登的人找上我，让我过来把选手们的战术都记录下来。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“你今天第一盘，对吧？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“确实。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“要不要我过去帮你一把，或者至少看着？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我……觉得不用。而且我怀疑你弄不到现场场馆的票。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“你放我进去，不就有票了。”</span></p>
+<p class="dialog">泽无奈地叹了口气。</p>
+<p class="dialog"><span style="color:#ed756b">“那我就远远看着。我们都给你加油！”</span></p>
+<p class="dialog"><span style="color:#df74b1">“芬怎么样？我已经好几天没他的消息了。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“大概在忙班孙培的事。他也好几天没跟我说过话。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那好吧。我得开始准备了。祝你今天过得开心！”</span></p>
+<p class="dialog"><span style="color:#ed756b">“也祝你好运，你会需要的！”</span></p>
+<p class="dialog"><span style="color:#ed756b">“哦，还有，明天我们下一盘练习棋吧。”</span></p>
+<p class="dialog">泽又叫了一杯果蔬汁，穿好衣服。几分钟后，果汁送到，泽很快喝完。他开门下楼，坐进等在那儿的车里。</p>
+<p class="dialog">二十分钟后，车到了金字塔的一个入口。</p>
+<p class="dialog">泽下车，开始沿隧道往前走。</p>
+<p class="dialog">走了几百米，拐了几个弯，他又一次来到那扇巨大的石砖门前。他走进去，这次径直向右，拐进一条三天前第一次来时根本没注意到的走廊。他跟着指示牌走，很快就到了一间等候室。</p>
+<p class="dialog">他看见了苏，还有另一位选手。</p>
+<p class="dialog"><span style="color:#54a1f9">“欢迎你，泽！来见见博。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“幸会，泽。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“也幸会，博。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“今天会是一盘有意思的棋，我敢肯定。”</span></p>
+<p class="dialog">一个机器人过来，给他们三人各送了一杯茶。三人各自喝完了。</p>
+<p class="dialog"><span style="color:#df74b1">“那现在呢？我们就在这儿断网坐一个长时，看着别人先下，就为了不让我们提前知道新规则？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“正是。而且手持终端和手表都不许带。机器人马上会来收。你们可以用那边那块屏幕看去年的对局。”</span></p>
+<hr class="rule">
+<p class="dialog">一个长时后，电梯门开了，泽和博各自走进自己要坐的那部电梯。苏朝他们挥手道别。门合上了。</p>
+<p class="dialog">又过了四分之一分钟，泽的电梯门再次打开，露出一间比帕佛盖都那间大得多的巨型房间。大约五千到一万人在观看。一条小路亮了起来，指向一张巨大的控制台和一把椅子。</p>
+<p class="dialog">泽往前走。远处，他隐约辨出博的轮廓也在往前走。他走到椅子前，坐下。</p>
+<p class="dialog">无人机嗡嗡作响，围着泽飞，机身约莫手持终端那么大，检查有没有任何作弊设备。这一次，无人机的数量大约是帕佛盖都那场的三倍，形状和大小也更加五花八门。它们嗡嗡地飞了大约二十嘀嗒，然后退回了各自的停靠位置。</p>
+<p class="dialog">一个响亮的自动语音播报——这次听着更偏女声：<span style="color:#23ba7d">"MU GU GEI FA"</span>。五十嘀嗒后开始。</p>
+<p class="dialog">泽闭上眼睛，吸气、呼气，尽力让自己平静下来。他知道，这一盘并非决定性的一局：就算输了，他还能在后面的比赛里补回来。可换个角度想，这反而让他更怕：既然有了“输了也没关系”这个借口，他还能不能提起那股劲，把全部注意力和心力都压在棋盘上，去赢下这一局？</p>
+<p class="dialog"><span style="color:#23ba7d">"LE MU GEI FA"</span></p>
+<p class="dialog">泽又睁开了眼睛。</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU GEI FA"</span></p>
+<p class="dialog">泽耐心等着。</p>
+<p class="dialog"><span style="color:#ec7383">“欢迎来到今天北场馆的第四场资格赛。各位，来认识本轮的两位选手：来自帕佛盖都的泽雷民，以及就来自萨祖都的博祖梅。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“我也很高兴宣布今天的规则变动——这种话，观众们或许已经听过太多遍，但对我们的选手还是头一回。今天，民本棋将在六边形网格上进行。”</span></p>
+<p class="dialog">泽惊讶地张大了嘴。</p>
+<p class="dialog"><span style="color:#ec7383">“你们有二十分钟时间，尽可能把自己要用的结构——滑翔机、飞船、墙——都设计出来。然后，一场在雪花之野上展开的静谧之战就要开始。”</span></p>
+<p class="dialog">泽的显示屏亮了，他看见面前那张六边形网格。</p>
+<p class="dialog"><span style="color:#23ba7d">"LE FI SHI GEI TAU FA"</span>，响亮的自动语音喊道。战斗将在两千嘀嗒后开始。</p>
+<p class="dialog">泽先在沙盒里随手乱涂些乱七八糟的东西，看哪些能保持稳定、哪些会变成滑翔机。一分钟内，他就找出了几种滑翔机和几种可以用作墙的静态结构。让他意外的是，跑得最快的滑翔机是朝……正东方向移动的。</p>
+<p class="dialog">接下来，他刻意画出各种形状的墙，再把滑翔机朝它们放过去，看哪种能奏效。</p>
+<p class="dialog">他仔细盯着那些滑翔机，想尽快凭直觉弄明白：什么样的形状能在移动时保持自身形状不变。他反复定义了好几轮滑翔机和墙。</p>
+<p class="dialog"><span style="color:#23ba7d">"PA MU GU GU GEI TAU FA."</span>战斗将在一千五百嘀嗒后开始。</p>
+<p class="dialog">泽开始拿形状和他那枚符记类似的图样做实验，看有没有哪个能当滑翔机用。他必须想出<em>点名堂</em>——否则他只能推进得极慢：每到干预回合，就在已有的符记旁边再造一枚新符记。</p>
+<p class="dialog">他意识到，要真正取得突破，就得学会跟石阵打交道。他猜了几种民本棋六边形版本里石阵可能的形状，再一次次观察滑翔机撞上去时的表现。</p>
+<p class="dialog"><span style="color:#23ba7d">"FI SHI GEI TAU FA."</span>战斗将在一千嘀嗒后开始。</p>
+<p class="dialog">泽开始冒汗。到现在为止，一无所获。他试过的每一种滑翔机、每一种可能的石阵形状和每一种偏移量，都没能让他复制出自己的符记。</p>
+<p class="dialog">他更仔细地回想自己那枚符记的确切形状。</p>
+<p class="dialog">又白试了两分钟后，泽忽然想起不到两个长时前读过的那本教材。</p>
+<blockquote><em>核心部件把输入一一映射到输出。不仅如此，它无论正着跑还是倒着跑，都能高效执行。</em></blockquote>
+<p class="dialog">但和哈希函数不同，这里末尾没有那层先截断再异或的包装。所以，只要他知道自己想要的终态是什么，把那个终态丢进沙盒、倒着放就行了。</p>
+<p class="dialog">可是……怎么倒着放？</p>
+<p class="dialog">在哈希函数的内部置换里，你要从最后一层往回走到第一层，每走一步就把那一步取反。</p>
+<p class="dialog">可这里……泽这辈子第一次接触的这套六边形规则，它的逆是什么？</p>
+<p class="dialog">泽拿他看到的那些滑翔机，试了最基础的几种变换：翻转、旋转60度、晚一个时间步发射。全都不奏效。</p>
+<p class="dialog"><span style="color:#23ba7d">"MU FI LE GEI TAU FA."</span>战斗将在五百嘀嗒后开始。</p>
+<p class="dialog">泽把每一步都放得更慢，一步步看过去。然后他看破了。每个步骤里，棋盘都会划分成三角形，六边形在各自所在的三角形内部旋转——三角形里填了一个六边形，就顺时针转；填了两个，就逆时针转。</p>
+<p class="dialog">所以要倒放时间，他只需要……让每一个时间步发生两次。毕竟，120度旋转的反向就是两次120度旋转。可还有个问题：每走一个时间步，三角形的划分方式就会错开。所以要把一个时间步倒放，他得……先前进一步，再把时间往回拨一步，好让下一步能在同一套划分下继续往前走；然后再往前走一步，把这套划分下每个三角形里的累计旋转凑到240度；接着把时间往回拨<em>两</em>步，让棋盘切回<em>上一套</em>划分。把每一步都取反，再按相反的顺序播放——就跟在哈希里求一个置换的逆一样。</p>
+<p class="dialog">他确认了一下：界面上有一个按钮可以让时间前进一步，还有两个按钮可以把时间往前或往后拨。那就只能这么办了。A、B、A、B、B。像是某种电子游戏的作弊码。而从某种意义上说，它在这里真的就是作弊码。</p>
+<p class="dialog">行吧，他想。</p>
+<p class="dialog">他把一架滑翔机放进沙盒，试了一下。过程很折腾，手指很快就酸了。但成了。滑翔机倒着动了。</p>
+<p class="dialog">基础测试通过。</p>
+<p class="dialog">泽试了真正的检验：用同样的手法，从一块石阵旁边正在成形的符记、以及一架飞出去的滑翔机开始，倒着放。</p>
+<p class="dialog">第一次失败了：时间倒退时，滑翔机和那枚符记撞在一起，可随后同一枚符记在几步之外重新成形，滑翔机也飞走了。也就是说，在他刚刚抽到的这一段历史里，碰撞之前，那枚符记一直都在。</p>
+<p class="dialog">他换了一架滑翔机再试。这一次成了。时间倒退着越过碰撞的那一刻，石阵加符记变成了一块光秃秃的石阵，两架滑翔机倒着飞了出来。</p>
+<p class="dialog"><span style="color:#23ba7d">"FI LE GEI TAU FA."</span>战斗将在一百嘀嗒后开始。</p>
+<p class="dialog">泽迅速用其他几种可能的石阵形状重复同样的实验。他完全没理会那个播报倒计时的声音，一直试到为另外两种最自然的候选形状也各找到了一个方案。</p>
+<p class="dialog"><span style="color:#23ba7d">"MU GU GEI TAU FA."</span></p>
+<p class="dialog">泽飞快地布下符记、墙和滑翔机——它们撞上合适的石阵时就能生成符记。</p>
+<p class="dialog">他自己都惊讶于这一步有多快，毕竟前面别的事花了那么久。但他几乎立刻就在心底明白，这很合理：想清楚要部署什么才是难的部分，部署只是复制粘贴。</p>
+<p class="dialog">把棋盘上的基本布局做好之后，他呼出一口气。就在他重新吸气、开始最后一遍打磨结构时，最后的倒计时开始了。</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……"</span></p>
+<p class="dialog"><span style="color:#23ba7d">"TAU FA."</span></p>
+<p class="dialog">滑翔机开始飞出。起初，什么也没发生。</p>
+<p class="dialog">五百回合后，棋盘的一角露了出来。他的一架滑翔机成功造出了一枚符记，也探开了一片棋盘，让人看清了石阵的样子。</p>
+<p class="dialog">泽立刻转向下一个任务：弄清怎么造滑翔机工厂。</p>
+<p class="dialog">第一次干预回合到来时，泽还没想明白这件事。不过，他确实又送出好几架滑翔机，从自己的主基地飞出，只等撞上位置合适的石阵，就能再造出几枚符记。他还从新符记附近放出滑翔机，一路快速向东。</p>
+<p class="dialog">观众专注地看着。河对岸，白也专注地看着。远处，芬、穆和登同样在看着。</p>
+<figure class="fig"><img src="../assets/images/chapter-12-fig-02.svg" alt="六边形内上方分布圆点，下方分布方块。" title="六边形内上方分布圆点，下方分布方块。" loading="lazy" decoding="async"></figure>
+<p class="dialog">观众很意外。他们发现，两位选手都没能弄出任何纵向移动的滑翔机。</p>
+<p class="dialog">第二次干预回合，泽从棋盘两侧放出滑翔机，直指博的主基地。</p>
+<p class="dialog">就在第三次干预回合之前，泽的一架滑翔机撞上了博的主基地旁边的一块石阵，让泽看清了博的全部符记。</p>
+<p class="dialog">泽利用那次干预回合，直接把滑翔机送往他能看见的三枚博的符记，又朝附近几处地点多送了几架，以防万一。</p>
+<p class="dialog">三百回合之内，博的符记全部被毁，泽被宣布为胜者。</p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-11.html">上一章 · 第十一章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-13.html">下一章 · 第十三章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Zei looked out of the window of the train, as the train began to slow down.</p>
+<p class="dialog">At first, he saw trees. Then, he began to see buildings with greater and greater density. Finally, after a few minutes, he saw the station.</p>
+<p class="dialog">A sign slowly passed across the window.</p>
+<center><div class="dz-card dz-mono" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">sa dzu du</span></span></div></div></center>
+<p class="dialog">"Main city", Dzego's helpfully-named capital city.</p>
+<p class="dialog">The train came to a stop, and Zei could hear the doors open. The other passengers stood up, and started to gather their belongings.</p>
+<p class="dialog">Zei decided he was not in a rush to leave first, and would maximize the quality of his time instead. For about two minutes, he finished his game of Minpentai against a bot.</p>
+<p class="dialog">Fin had never gotten around to writing the harness to fine-tune the AI to play well on custom rulesets, and so Zei was still playing against the stock AI.</p>
+<p class="dialog">At that moment, the other AIs resigned. Zei had beaten them one-on-three. To compensate for their lack of skill, he had adjusted the game to only give him one corner and three other AIs the other three corners, and put them all on the same team against him. Even despite this, Zei had won. He realized that the three-on-one did not even help the AIs that much - playing in that style was not in their training data, so they made basic mistakes and cannibalized each other's negentropy.</p>
+<p class="dialog">Zei put away his hand device and sighed.</p>
+<p class="dialog">By this point, the other passengers were almost all off the train. Zei grabbed his bag, and stood up and began to walk out of the train as well.</p>
+<p class="dialog">When he stepped out, there were six people wearing Minpentai priest robes waiting for him.</p>
+<p class="dialog"><span style="color:#54a1f9">"Welcome to Sadzu Du, Zei"</span>, the lead priest, an older woman about the same age as Mu, said to him.</p>
+<p class="dialog"><span style="color:#df74b1">"Excited to be here"</span>, Zei quickly replied. <span style="color:#df74b1">"Only my second time to the capital."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I'm Su by the way. I'm one of the organizers of the nationals."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Well nice to meet you, Su."</span></p>
+<p class="dialog"><span style="color:#df74b1">"So what's on my itinerary these next few days?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Check in to the hotel, then orientation tomorrow morning. Thirty-two contestants, the brightest young minds in Minpentai across all of Dzego. You'll get to meet them all."</span></p>
+<p class="dialog">Su led Zei to a room that contained many doors. One of the doors slid open, and on the other side Zei could see the inside of a black car, identical to the one that Den had used to take him to the chip fab a few months earlier.</p>
+<p class="dialog"><span style="color:#54a1f9">"Unfortunately, I'll have to leave you here, Zei. There's another contestant arriving here on a train in half a longhour. But have a good ride and have a good rest."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Thank you so much."</span></p>
+<p class="dialog">Zei got into the car, and the door closed. The car started moving.</p>
+<p class="dialog">Zei stared outside the window of the car, marveling at the buildings and trees in the city. Parts of it looked not too different from Pafogai Du, though here there were fewer electronics stores, and instead a wider variety of venues. Some medicine stores.</p>
+<p class="dialog">On the window of one of the stores, Zei saw a sign:</p>
+<center><div class="dz-card dz-mono" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="white-space:nowrap"><span class="dz-script">ti</span></span> <span style="white-space:nowrap"><span class="dz-script">ka</span> <span style="white-space:nowrap"><span class="dz-script">dia shu</span></span></span> <span style="white-space:nowrap"><span class="dz-script">fe</span> <span style="white-space:nowrap"><span class="dz-script">cen su jui hui</span></span></span></div></div></center>
+<p class="dialog">"Get your longevity package here"</p>
+<p class="dialog">Soon the health stores gave way to some stores selling artistic furniture and other household items.</p>
+<p class="dialog">And after that a few traditional-looking restaurants and tea houses, in a style mimicking Dzego's own medieval era.</p>
+<p class="dialog">For a moment, the buildings on the right side stopped completely, and Zei could see a park. Behind the park, Zei could see several mountain pyramids, each about half as tall as the mountain pyramid south of Pafogai Du.</p>
+<p class="dialog">A minute later, the park ended, and the car crossed a bridge across a small river. Zei could see the buildings get denser further ahead.</p>
+<p class="dialog">The road slowly descended underground, and turned into a tunnel.</p>
+<p class="dialog">A few minutes and a few turns later, the car stopped. When the car's door opened, it was pressed tightly against another door, completely shielding Zei from being visible from outside the car and the building he was entering.</p>
+<p class="dialog">Zei stepped out. He was in a hotel.</p>
+<p class="dialog">He walked over to the nearest green circle, and tapped his watch against it.</p>
+<div class="device-view narrow-device-view"><table><tbody><tr><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">sen hen zi li die fe 150<br/>zo lia kin<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">man dun li jie hu<b style="font-size: 150%; color: #8f8">✓</b></div></center></td></tr></tbody></table><b>cau tie zen <br> ci fan zi li 304</b></div>
+<p class="dialog">Reputation above 150 verified. Payment not needed. Approved, room number is 304.</p>
+<p class="dialog">Zei's watch buzzed, confirming his room key.</p>
+<p class="dialog">Zei entered his room, and took a shower.</p>
+<p class="dialog">He promptly went to sleep.</p>
+<hr class="rule">
+<p class="dialog">An alarm buzzed.</p>
+<p class="dialog">Zei tapped on his watch to check what time it was. 30,003, the watch said. Only half a longhour before the commencement ceremony. He tapped a few buttons on the room service menu, and ordered a fruit and vegetable juice.</p>
+<p class="dialog">He put on his clothes.</p>
+<p class="dialog">Three minutes later, the juice arrived, and Zei quickly drank it. He immediately felt energized - or at least, energized enough to take the trip to the venue.</p>
+<p class="dialog">Without wasting any more time, he opened the door, and went downstairs.</p>
+<p class="dialog">A black car was already waiting for him. Zei walked through the lobby, and immediately stepped through the hotel door and car door that were already open and pressed tightly against each other. The door closed.</p>
+<p class="dialog">As the car began to move, Zei took out the cryptography textbook that Den had recommended to him in one of their meetings, and continued reading it where he had left off.</p>
+<p class="dialog">The section was on hash functions. In the middle of the page, there was a large diagram.</p>
+<figure class="fig"><img src="../assets/images/chapter-12-fig-01.svg" alt="多层网络中的交叉连接与跳跃连接示意图" title="多层网络中的交叉连接与跳跃连接示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">"Conception of a hash algorithm".</p>
+<p class="dialog">Zei read the accompanying text.</p>
+<p class="dialog">Hash algorithms, it said, were there to create a shrunken fingerprint of a large piece of information, that still uniquely identifies the original. The goal is for it to be infeasibly hard to find two different pieces of data that have the same hash.</p>
+<p class="dialog">Hashes inherently destroy information - representing a larger thing with a smaller thing is their entire goal. But there is a paradox: in the internal workings of all the best hash functions that we build, the largest component is an <em>entropy-preserving</em> transformation: a permutation.</p>
+<p class="dialog">The core building block maps inputs to outputs one-to-one. And not only that, it can be <em>efficiently</em> run both forwards and backwards. The shrinking, and the irreversibility, comes from a simple layer on top: a deletion, and an xor of part of the original input, added to the end.</p>
+<p class="dialog">Why do this? Why build irreversibility on top of reversibility? The reason is subtle. If you build irreversibility directly, then you cannot control when entropy is destroyed. If you apply an irreversible round function enough times, then about half the entropy collapses, bringing the protocol's security down along with it. And so even when destroying information is your final goal, it's best to cleanly separate out the piece that's going that - destroy information in one precise spot in the algorithm, on your own terms.</p>
+<p class="dialog">Zei put away his hand device, and leaned back.</p>
+<p class="dialog">It's all entropy, isn't it, he thought to himself.</p>
+<p class="dialog">A minute later, the car suddenly slowed down, and turned left. To his right, Zei could see an area blocked off by safety tape with various large vehicles further inside.</p>
+<p class="dialog"><span style="color:#df74b1">"What happened?"</span>, Zei asked in a voice loud enough that the driver would unambiguously recognize that the question was meant for him.</p>
+<p class="dialog"><span style="color:#e58137">"Explosion in an advanced biology research lab. Probably the Arctics, as usual. They're going to spend days cleaning up to make sure everything is safe."</span></p>
+<p class="dialog">A few minutes after that, the car slowed down and came to a stop. The door opened, leading straight into a hallway.</p>
+<hr class="rule">
+<p class="dialog">Zei walked through the tunnel, and down the stairs.</p>
+<p class="dialog">He saw a door in front of him. The door looked similar to the door to the Minpentai room inside the mountain pyramid in Pafogai Du: a series of stone bricks, curving near the top into an arch, and the symbol at the top: two horizontal arms, meeting in the middle with clashing fists.</p>
+<p class="dialog">However, this door was noticeably larger, more well-maintained, and the decorations more grand.</p>
+<p class="dialog">Zei tapped his watch against the green circle, and the door opened. He walked through.</p>
+<p class="dialog">He entered a room with about fifty chairs, with about twenty contestants already sitting down. On the stage, he recognized Su. Beside her, there were three other priests.</p>
+<p class="dialog">Zei sat down. Over the next fifteen minutes, other contestants sat down in their own chairs.</p>
+<p class="dialog">An older teenage boy sat down beside Zei.</p>
+<p class="dialog"><span style="color:#e58137">"Hi, I'm Deluin"</span>, he said.</p>
+<p class="dialog">That's not a very Dzegojan name, Zei thought.</p>
+<p class="dialog"><span style="color:#df74b1">"I'm Zei."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Where are you from?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Ah, I'm from Redshire. My name gave me away, didn't it?"</span></p>
+<p class="dialog">Zei laughed. <span style="color:#df74b1">"Do you get that reaction from everyone?"</span></p>
+<p class="dialog">Deluin laughed along with Zei.</p>
+<p class="dialog"><span style="color:#e58137">"De lu hin, they call me here. 'A fork with the appearance of'. Lovely name, don't you think?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Are you studying here? Did your parents immigrate?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Ah, I'm a foreign contestant. They brought in four foreign contestants this time, to make things more fun."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Are you excited?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Absolutely. Actually my first time in Dzego, super cool place."</span></p>
+<p class="dialog">A bell rang, and the contestants quickly quieted down.</p>
+<p class="dialog"><span style="color:#54a1f9">"Welcome to the national Minpentai championship"</span>, Su began. <span style="color:#54a1f9">"I am honored to see so many brilliant contestants this year, and I hope that everyone arriving had a good evening and a good morning."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I am pleased to introduce our lead organizer, Taskmaster Jin."</span></p>
+<p class="dialog">One of the other priests stepped forward, and began speaking.</p>
+<p class="dialog"><span style="color:#78b249">"This is a special moment for all of us in Dzego, not just for us and for you, but for millions of Dzegojan who watch the games from across the country, as they will get to watch the brightest minds from Dzego's new generation face off against each other."</span></p>
+<p class="dialog"><span style="color:#78b249">"I'm also honored to announce that this year, we have four distinguished foreign guests participating along with us."</span></p>
+<p class="dialog"><span style="color:#78b249">"Today, we will have a walk through the Minpentai museum, right here inside this mountain pyramid. Tomorrow, we will have some tourist excursions around Sadzu Du, and in the evening you will get a chance to rest. Two days after, the first championship games will begin."</span></p>
+<p class="dialog"><span style="color:#78b249">"There will be six rounds of qualifying games, with an eight-day-long break in between each game."</span></p>
+<p class="dialog"><span style="color:#78b249">"Out of the thirty-two of you, the four players who win the most games will advance to the semifinals. If there is no win threshold that exactly four players pass, we will break ties by the geometric average of the number of turns that you survived before losing your losing games and the inverse of the number of turns that you needed to win your winning games, counted up to a maximum of eight thousand turns. Thus, there is no incentive to resign before eight thousand turns. If there are still ties, we will insert an additional qualifying round."</span></p>
+<p class="dialog"><span style="color:#78b249">"I hope you can enjoy the games, enjoy everything that Sadzu Du has to offer, but also, just as importantly, enjoy each other. Here you are not enemies, you are temporary competitors. Off the arena, you should consider each other friends, and remember that we are all part of a shared project together. Dze go ba fau gie."</span></p>
+<p class="dialog">"Dze go ba fau gie", all the contestants replied in unison.</p>
+<p class="dialog"><span style="color:#78b249">"Now, please follow Su. She will lead the excursion through the museum."</span></p>
+<p class="scene-break">3724 Grasstime 25</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>zan</th><th>tie</th><th>tei</th></tr></thead><tbody><tr><td style="width: 25%"><center>Bai</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ed756b">[dia lau shau]</span></td><td>23098</td></tr></tbody></table></div>
+<p class="dialog">Zei woke up. Bai was requesting to call.</p>
+<p class="dialog">Zei tapped the watch.</p>
+<p class="dialog"><span style="color:#ed756b">"How are things going over there?"</span>, Bai asked.</p>
+<p class="dialog"><span style="color:#df74b1">"This is a bit early for a call, isn't it? It's still 19 minutes before my alarm was supposed to wake me up."</span></p>
+<p class="dialog">Zei paused for a moment, and decided to answer Bai's question.</p>
+<p class="dialog"><span style="color:#df74b1">"Things have been well. Very fascinating exhibition at the museum three days ago, and got to see a bunch of Sadzu Du the next day. Met someone from Redshire too."</span></p>
+<p class="dialog"><span style="color:#ed756b">"A contestant?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Yep, they've decided to internationalize it a bit this year."</span></p>
+<p class="dialog"><span style="color:#df74b1">"So how's Pafogai?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Ask me something I can answer. I've been staring at the mountain pyramid you'll be playing in from across the river for the last longhour."</span></p>
+<p class="dialog">Zei sat up.</p>
+<p class="dialog"><span style="color:#df74b1">"You're HERE?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Den's people got hold of me and told me to come and take notes on all the contestants' strategies."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Your first game is today, right?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"It is indeed."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Want me to come over and help you out, or at least watch?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I... think I'm fine. And I doubt you can get a ticket to the live stadium."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Not if you let me in."</span></p>
+<p class="dialog">Zei groaned.</p>
+<p class="dialog"><span style="color:#ed756b">"I'll watch from afar then. We're all rooting for you!"</span></p>
+<p class="dialog"><span style="color:#df74b1">"How is Fin? I haven't heard from him in days now."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Busy with Bansunpei stuff I guess. He hasn't said anything to me in days either."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Alright then. Well, I gotta start preparing. I hope you enjoy your day!"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Best of luck to you in yours, you'll need it!"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Oh, and, let's play a practice game tomorrow."</span></p>
+<p class="dialog">Zei once again ordered a fruit and vegetable juice, and put on his clothes. A few minutes later, the juice arrived, and Zei quickly drank it. He opened the door, went downstairs, and entered the car that was waiting for him.</p>
+<p class="dialog">Twenty minutes later, the car arrived at an entrance to the pyramid.</p>
+<p class="dialog">Zei stepped out, and began walking through the tunnels.</p>
+<p class="dialog">After a few hundred meters of walking, and a few turns, he once again arrived at the large stone brick door. He entered, and this time immediately turned right, into a hallway that he had not even noticed when he was first there three days ago. He followed the signs, and soon got to a waiting room.</p>
+<p class="dialog">He saw Su, and the other contestant.</p>
+<p class="dialog"><span style="color:#54a1f9">"Welcome Zei! Meet Bo."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Nice to meet you, Zei."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Nice to meet you too, Bo."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"It will be a fun game today, I'm sure of it."</span></p>
+<p class="dialog">A robot arrived, and gave all three of them a cup of tea. They each drank their cup.</p>
+<p class="dialog"><span style="color:#df74b1">"So what now? We sit here for a longhour without internet while the others play, so we don't learn the new rule ahead of time?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Exactly. And no hand devices or watches allowed either. The robot will be coming to pick them up in a minute. You can watch last year's matches on that screen over there."</span></p>
+<hr class="rule">
+<p class="dialog">A longhour later, the elevator doors opened, and Zei and Bo each stepped in to their respective elevators. Su waved them goodbye. The doors closed.</p>
+<p class="dialog">A quarter minute after that, Zei's elevator door opened once again, exposing a giant room much larger than the room in Pafogai Du. About five to ten thousand people seemed to be watching. A path lit up, showing the way to a giant console with a chair.</p>
+<p class="dialog">Zei walked forward. He could make out Bo's silhouette walking forward in the distance. He got to the chair, and sat down.</p>
+<p class="dialog">Drones about the size of a hand device buzzed as they flew around Zei, scanning for any kind of cheating equipment. This time, there were about three times more drones than there were in Pafogai Du, and with even more shapes and sizes. The drones buzzed around for about twenty ticks, and then retreated back to their resting positions.</p>
+<p class="dialog">A loud automated voice, this time sounding more female, announced: <span style="color:#23ba7d">"MU GU GEI FA"</span>. Starting in fifty ticks.</p>
+<p class="dialog">Zei closed his eyes, and breathed in and out, trying his best to calm himself. This match was not decisive, he knew: if he lost, he could still make it up in the others. But in another way, that fact made him more scared: armed with the excuse that it's okay to lose, will his mind have the motivation needed to keep his full attention and mindpower on the game and win?</p>
+<p class="dialog"><span style="color:#23ba7d">"LE MU GEI FA"</span></p>
+<p class="dialog">Zei opened his eyes again.</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU GEI FA"</span></p>
+<p class="dialog">Zei patiently waited.</p>
+<p class="dialog"><span style="color:#ec7383">"Welcome to the fourth qualifying match of the north stadium for today. Everyone, meet our players for this round: Zei Leimin from Pafogai Du, and Bo Zume, from right here in Sadzu Du."</span></p>
+<p class="dialog"><span style="color:#ec7383">"I am also pleased to announce - perhaps one time too many for the audience, but for the first time, for our contestants - today's rule change. Today, Minpentai will be played on a hex grid."</span></p>
+<p class="dialog">Zei opened his mouth in shock.</p>
+<p class="dialog"><span style="color:#ec7383">"You will have twenty minutes to figure out your structures, any gliders, spaceships and walls, to the best of your ability. And then the serene battle over a field of snowflakes will begin."</span></p>
+<p class="dialog">Zei's display turned on, and he could see the hexagonal grid in front of him.</p>
+<p class="dialog"><span style="color:#23ba7d">"LE FI SHI GEI TAU FA"</span>, the automated loud voice shouted. The battle begins in two thousand ticks.</p>
+<p class="dialog">Zei began by quickly drawing random junk in his sandbox, seeing what stayed stable and what turned into a glider. Within one minute, he identified a few gliders and a few static structures that could be used for walls. To his surprise, the gliders that moved the fastest moved ... directly east.</p>
+<p class="dialog">His next move was to deliberately draw different kinds of walls, fly gliders at them, and see what sticks.</p>
+<p class="dialog">He watched the gliders carefully, to try to quickly get an intuition for what kinds of shapes can move while preserving their shape. He did several rounds of defining both the gliders and the walls.</p>
+<p class="dialog"><span style="color:#23ba7d">"PA MU GU GU GEI TAU FA."</span> The battle begins in fifteen hundred ticks.</p>
+<p class="dialog">Zei began experimenting with shapes that were similar to his symbol, seeing if any of them could function as a glider. He needed to come up with <em>something</em> - otherwise he would be able to progress only very slowly, by repeatedly building a new symbol beside his existing symbol during each intervention turn.</p>
+<p class="dialog">He realized that to make actual headway, he would need to interact with the rock formations. He made a couple of guesses about what shape the rock formations in the hexgrid version of Minpentai might look like, and examined the behavior of gliders as they crashed into them.</p>
+<p class="dialog"><span style="color:#23ba7d">"FI SHI GEI TAU FA."</span> The battle begins in a thousand ticks.</p>
+<p class="dialog">Zei began to sweat. So far, no luck. No combination of a glider, a plausible rock shape and an offset that he tried led to a copy of his symbol.</p>
+<p class="dialog">He thought more about the exact shape of his symbol.</p>
+<p class="dialog">After another two minutes of fruitless exploration, Zei's mind flashed back to the textbook he had been reading less than two longhours before.</p>
+<blockquote><em>The core building block maps inputs to outputs one-to-one. And not only that, it can be efficiently run both forwards and backwards.</em></blockquote>
+<p class="dialog">But unlike the hash function, here there was no truncate-and-xor wrapper at the end. And so if he knew his desired end state ... he just had to put that end state into the sandbox, and play it backwards.</p>
+<p class="dialog">But ... how do you play it backwards?</p>
+<p class="dialog">In the internal permutation of a hash function, you walk backwards from the last layer to the first layer, and invert each step as you go.</p>
+<p class="dialog">Here ... what was the inverse of the hexgrid rules that Zei was interacting with for the first time in his life?</p>
+<p class="dialog">Zei took the gliders he saw, and tried the most basic transformations: flipping them, rotating them 60 degrees, launching them one timestep later. None worked.</p>
+<p class="dialog"><span style="color:#23ba7d">"MU FI LE GEI TAU FA."</span> The battle begins in five hundred ticks.</p>
+<p class="dialog">Zei stepped through each step more slowly. And then he saw it. During each step, the game board split up into triangles, and the hexagons rotated inside each triangle - clockwise if it had one hex filled, counterclockwise if it had two hexes filled.</p>
+<p class="dialog">And so in order to time reverse, he just had to ... let each time step happen twice. The opposite of a 120-degree rotation is, after all, two 120-degree rotations. But there was a problem: after each time step, the split into triangles shifted. So to play a time step backward, he had to... play one step forward, then shift time back one step so that he could play the next step forward under the same tiling, then play a second step forward to bring the total rotation under that tiling to 240 degrees within each triangle, then shift time back <em>two</em> steps so that the game would shift to the <em>previous</em> tiling. Invert each step, and play the steps in reverse order, just like inverting a permutation in a hash.</p>
+<p class="dialog">He confirmed: there was a button to play one step forward, and two buttons to shift time - either forward or backward. So that's what he would have to do. A, B, A, B, B. Like some kind of video game cheat code. Which, in some sense, here it literally was.</p>
+<p class="dialog">Fine, he thought.</p>
+<p class="dialog">He put a glider into the sandbox, and tried it. It was an arduous process, and his fingers quickly tired. But it worked. The glider moved backwards.</p>
+<p class="dialog">Basic test passed.</p>
+<p class="dialog">Zei tried the real test: using the same technique, starting with a symbol forming beside a rock formation and a glider flying out.</p>
+<p class="dialog">The first time, it failed: as time went backwards, the glider and the symbol crashed, but then the same symbol re-formed a few steps away, and the glider flew away. So in that particular history that Zei had just sampled, before the crash, the symbol had been there all along.</p>
+<p class="dialog">He tried again, with a different glider. This time, it succeeded. As time moved backwards, past the moment of the crash, the rock-formation-plus-symbol turned into a bare rock formation, and two gliders flew back out.</p>
+<p class="dialog"><span style="color:#23ba7d">"FI LE GEI TAU FA."</span> The battle begins in one hundred ticks.</p>
+<p class="dialog">Zei quickly repeated the same experiment with other candidates for a rock formation. He paid no attention to the voice announcing the countdown, and kept trying until he found one for the two other most natural options.</p>
+<p class="dialog"><span style="color:#23ba7d">"MU GU GEI TAU FA."</span></p>
+<p class="dialog">Zei quickly put up symbols, walls, and gliders that would create symbols if they crashed into favorable rock formations.</p>
+<p class="dialog">He was surprised at his own speed doing this, given how much longer everything else had taken. But almost immediately he realized in the back of his mind that this made sense: figuring out what to deploy is the hard part, deployment is just copy and paste.</p>
+<p class="dialog">After making a basic setup on the board, he breathed out. Just as he breathed back in and started doing a final pass refining his structures, a final countdown began.</p>
+<p class="dialog"><span style="color:#23ba7d">"PA GU ... SO ... BI ... ZE ... HA ... MU ... FO ... SHI ... LE ... PA ..."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"TAU FA."</span></p>
+<p class="dialog">Gliders started flying out. At first, nothing happened.</p>
+<p class="dialog">Five hundred turns later, a part of the board came into view. One of his gliders had successfully created a symbol, and revealed a part of the board that showed what the rock formations look like.</p>
+<p class="dialog">Immediately, Zei switched to the next task: figuring out how to build glider factories.</p>
+<p class="dialog">When the first intervention turn hit, Zei had not yet figured this out. However, he did send out several more gliders that flew from his home base, ready to create more copies of his symbol if they collided into a rock formation in the right place. He also sent gliders from nearby his new symbol, rapidly heading east.</p>
+<p class="dialog">The audience watched intently. From across the river, Bai was also watching intently. And from afar, so were Fin, Mu and Den.</p>
+<figure class="fig"><img src="../assets/images/chapter-12-fig-02.svg" alt="六边形内上方分布圆点，下方分布方块。" title="六边形内上方分布圆点，下方分布方块。" loading="lazy" decoding="async"></figure>
+<p class="dialog">The audience was surprised. Neither player had managed to figure out any gliders that move vertically, they realized.</p>
+<p class="dialog">On the second intervention turn, Zei launched gliders from the sides of the board, aiming straight toward Bo's home base.</p>
+<p class="dialog">And just before the third intervention turn, one of Zei's gliders hit a rock formation right beside Bo's home base, allowing Zei to see all of Bo's symbols.</p>
+<p class="dialog">Zei used that intervention turn to send gliders directly toward the three of Bo's symbols that he could see, and more toward some locations nearby just in case.</p>
+<p class="dialog">Within three hundred turns, all of Bo's symbols were destroyed, and Zei was announced the winner.</p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-11.html">上一章 · 第十一章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-13.html">下一章 · 第十三章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第十二章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

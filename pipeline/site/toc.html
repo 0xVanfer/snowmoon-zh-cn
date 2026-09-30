@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="《雪月》Snowmoon 非官方中译本目录。选择章节，阅读 Vitalik Buterin 的太阳朋克科幻作品。">
+  <title>目录 · 雪月 Snowmoon 中译本</title>
+  <link rel="canonical" href="{{SITE_URL}}toc.html">
+  <link rel="stylesheet" href="{{ASSET_PREFIX}}style.css">
+  <script src="{{ASSET_PREFIX}}reader.js" defer></script>
+</head>
+<body data-page="toc">
+  <a class="skip-link" href="#main-content">跳转到章节目录</a>
+
+  <header class="site-header">
+    <div class="site-container">
+      <nav class="site-nav" aria-label="站点导航">
+        <a class="back-link" href="{{HOME_HREF}}">
+          <span aria-hidden="true">←</span> 返回主页
+        </a>
+        <span class="site-name">雪月 <span lang="en">Snowmoon</span></span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="site-container toc-page" tabindex="-1">
+    <header class="page-heading">
+      <p class="eyebrow">雪月 · 非官方中译本</p>
+      <h1 id="toc-title">目录</h1>
+      <p class="book-stats">全书 {{CHAPTER_COUNT}} 章 · {{TOTAL_WORDS}} 汉字</p>
+      <p id="toc-progress" class="reading-status" role="status" aria-live="polite" aria-atomic="true">选择一章开始阅读；启用 JavaScript 后，可在此查看本机保存的阅读进度。</p>
+    </header>
+
+    <!--
+      构建条目结构约定：
+      li[data-chapter] > a.chapter-link[href]
+      链接内依次为 .chapter-title-zh、.chapter-title-en[lang="en"]、
+      .chapter-dateline（地点与日期）、.chapter-status（供 JS 填充）。
+      JS 在当前章链接上设置 aria-current="location"，状态同时以文字呈现。
+      .toc-list 使用响应式网格：宽屏三列、窄屏单列，保持章号的 DOM 顺序。
+    -->
+    <ol id="toc-list" class="toc-list" aria-labelledby="toc-title">
+      {{TOC_ITEMS}}
+    </ol>
+
+    <nav class="toc-actions" aria-label="阅读导航">
+      <a class="button button-primary" href="read/chapter-01.html">开始阅读 · 第一章</a>
+      <a class="button button-secondary" href="{{HOME_HREF}}">返回主页</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <nav class="footer-links" aria-label="项目与反馈">
+        <a href="{{REPO_URL}}">GitHub 仓库</a>
+        <a href="{{REPO_URL}}/issues">报告问题 / 提出建议</a>
+        <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>
+      </nav>
+      <p>原作 <a href="{{UPSTREAM_URL}}" lang="en">Snowmoon</a>，作者 <span lang="en">Vitalik Buterin</span>。本站为非官方中文译本，与原作者无隶属关系。</p>
+      <p>许可：<a href="{{REPO_URL}}/blob/main/LICENSE">GPL-3.0-only</a> · 构建日期：<time datetime="{{BUILD_DATE}}">{{BUILD_DATE}}</time></p>
+    </div>
+  </footer>
+</body>
+</html>

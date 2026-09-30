@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第十六章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第十六章 · Chapter 16 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-15.html">
+  <link rel="next" href="chapter-17.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="16">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第十六章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第十六章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 16</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年火月25日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Firemoon 25</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯拉开隔间的挡板走了进去，又反手把挡板拉上。他气冲冲地在德尔瓦特对面的长凳上坐下。</p>
+<p class="dialog"><span style="color:#be9b00">“你要解释的事情可不少。”</span></p>
+<p class="dialog">德尔瓦特低头看着桌面，一脸懊悔。</p>
+<p class="dialog"><span style="color:#e58137">“听着，格拉迪亚斯，你是对的，我错了。我恨维里迪亚政府和文化里无处不在的干预主义，结果被这份恨蒙住了眼，忘了有些事本来就是政府该管的，国防就是其中之一。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我生气不是因为这件事。”</span></p>
+<p class="dialog">德尔瓦特一惊，抬起头。</p>
+<p class="dialog"><span style="color:#be9b00">“我是说，那算一个原因，但远远不是主要的。”</span></p>
+<p class="dialog"><span style="color:#e58137">“那主要的是什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“到底出什么事了？你是什么人？你在跟谁干？”</span></p>
+<p class="dialog">德尔瓦特叹了口气，沉默了片刻，然后往前探身。</p>
+<p class="dialog"><span style="color:#e58137">“好，我解释。”</span></p>
+<p class="dialog"><span style="color:#e58137">“干这件事的教条主义者不止我一个。我和另外一群人——我并不认识他们——在替银聊做事。”</span></p>
+<p class="dialog"><span style="color:#e58137">“那些评则让我们很窝火——就因为一群人在我们平台上讲粗俗笑话，我们的税就往上涨。我们想让银聊成为一处避难所，躲开那股正在吞掉维里迪亚大部分地方的平庸乏味。我们想让它成为一个连海德菲尔、甚至恐结都能受到欢迎的地方。”</span></p>
+<p class="dialog"><span style="color:#e58137">“于是我们决定自己动手。有组织地做点事，把政治往更好的方向拽一拽。直接向掌则人陈情。”</span></p>
+<p class="dialog"><span style="color:#e58137">“现在我才明白，这一切有多天真。如果我们挡住了乏味，代价却是让北极帝国得以接管，并造成严重得多的祸害——先落在红郡，之后落到全世界——那这件事就不只是不值，而是彻底的灾难。”</span></p>
+<p class="dialog">格拉迪亚斯叹了口气。他对德尔瓦特仍然气极了，只是这股怒气里，如今掺进了一丝同情。</p>
+<p class="dialog">一个机器人滑到他们跟前，端来一份沙拉、一根长方形的营养棒和水，供两人吃喝。</p>
+<p class="dialog">格拉迪亚斯和德尔瓦特都先端起自己那盘食物，放到桌上。然后格拉迪亚斯拿起杯子，一口气喝掉大约半杯水。德尔瓦特也一样。</p>
+<p class="dialog">两人默默吃起来。几分钟后，话头又续上了。</p>
+<p class="dialog"><span style="color:#be9b00">“你现在想让我做什么？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#e58137">“显然，现在别让那条评则把军事相关产品排除在外。你甚至可以提高税率档，不过你这么调也只能起一点小作用——真正重要的杠杆在图谱资助那边。”</span></p>
+<p class="dialog"><span style="color:#e58137">“不过我还有个主意，你可以去做。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“什么主意？”</span></p>
+<p class="dialog"><span style="color:#e58137">“我觉得你该去一趟泽国。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我？去泽国？为什么？”</span></p>
+<p class="dialog"><span style="color:#e58137">“北极这一整套问题，他们显然比我们维里迪亚人看得清楚得多。去研究他们，跟他们学，看看你能带什么东西回维里迪亚。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你都已经这么不可信了，我凭什么听你的？”</span></p>
+<p class="dialog"><span style="color:#e58137">“嗯，千万别只听我的。去问问你最亲近的朋友和顾问，看他们怎么说。”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯走在卡利马尔那条他常走的路上。路两旁照例是石屋，头顶树冠成荫。可那天热得不寻常，阳光透过树冠漏下几缕，把他连人带隐私袍都晒得暖烘烘的，他也微微出了汗。</p>
+<p class="dialog">他路过其中一幢房子，记得那家卖维里迪亚传统食品。这一次，海报上又匆匆贴了一张告示，推销几款套装：味道好、营养全面、能长期保存，足够撑过三十天。</p>
+<p class="dialog">他点了点手表，打给莫夫。</p>
+<p class="dialog"><span style="color:#be9b00">“我跟德尔瓦特谈过了。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“谈得怎么样？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你说对了，确实有人在有组织地做这事。原来——至少他现在这么说——他一直在替银聊做事。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“银聊？我还以为会是个更邪恶的公司，比如蓝鲸。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“想想也说得通，一个半月前我偷听到的那段对话，对方多半就是银聊的人。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“所以他现在想让我去泽国。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“泽国？去干什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“他说我们维里迪亚人能从他们身上学到很多东西。你觉得这话对吗？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“你知道，红郡被占的那天，我有个朋友跟我提过类似的话。他觉得该去的是<em>我</em>，去看看他们的秘密社团是怎么运作的之类的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你知道，塞拉现在有个从那儿来的朋友，她上次跟我说，那人在民本棋排名里升得飞快，已经打进全国赛了。所以我要真去了，说不定还真能学到点东西。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“是啊，我完全能理解这事的吸引力。维里迪亚人确实该更了解外面的世界，尤其机构里的人——掌舵会、合议庭、议会，所有这些。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“给我几天时间想清楚。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，那几条评则的表决分别在八天后、十二天后和十六天后，所以不管怎样，你都有这段时间可以想。”</span></p>
+<p class="dialog">格拉迪亚斯顿了顿。</p>
+<p class="dialog">这时，他正走过离家不远的那家餐馆——他平时常在这儿吃点东西、喝两杯。透过窗户，他看见费布里克在吃饭。</p>
+<p class="dialog"><span style="color:#be9b00">“我也会想想，”</span>他终于说出口，然后挂断了通话。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯走进餐馆，几乎立刻摘掉隐私袍的面罩，把前襟的拉链拉开一半。反正吃饭时也遮不住多少，何况他在大太阳底下走得一身汗。他在费布里克身边坐下。</p>
+<p class="dialog"><span style="color:#ce9200">“哦，格拉德叔叔，又在这儿见到你，真高兴！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我也高兴见到你！”</span></p>
+<p class="dialog">格拉迪亚斯注意到费布里克一直在看屏幕。上面正直播一场翔球比赛。</p>
+<p class="dialog">格拉迪亚斯由着自己看了一分钟比赛。镜头正跟着领先的那名黄衫球员，他正在追一颗红球。</p>
+<p class="dialog">突然，不知从哪儿冒出一名紫衫球员，一下把他撞到一边。黄衫球员翻滚出去，随后在五米开外自动稳住身形。</p>
+<p class="dialog">镜头切到那名紫衫球员。他在半空中接住一颗蓝球。另外两名黄衫球员朝他飞扑过来。还没等他们贴近，他就把蓝球抛向队友。队友稳稳接住，开始向前飞。</p>
+<p class="dialog">镜头转向一根高高矗立的杆子，杆顶架着一块圆板，板上立着十个排成三角形的黄色球瓶。持球的那名紫衫球员进入画面。一名黄衫球员急速飞到位，卡在他和球瓶之间。</p>
+<p class="dialog">紫衫球员突然把蓝球高高抛向空中，与此同时另一名黄衫球员撞了上来。</p>
+<p class="dialog">蓝球从守瓶的黄衫球员头顶约五米高处飞过，落在圆板上，撞倒了三个球瓶。</p>
+<p class="dialog">屏幕上的记分板跳了一下。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">9</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1674</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<p class="dialog">紫队的蓝球得分刚从20涨到23，合计得分从1540涨到1771——足以反超对手。</p>
+<p class="dialog">突然，就在那名刚击倒球瓶的球员还在庆祝时，一颗绿球砸在他后背上，颜料在他身上炸开。</p>
+<p class="dialog">记分板又变了。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">黄队</th><th style="font-size:150%; color: #808">紫队</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">红球接获</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">绿球击人</td><td style="font-size:150%; color: #8f8">10</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">蓝球击倒球瓶</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">合计得分</td><td style="font-size:150%; color: #fff">1860</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<p class="dialog"><span style="color:#ce9200">“你得承认，现在的计分系统是真好，”</span>费布里克大声说。</p>
+<p class="dialog"><span style="color:#ce9200">“我记得我比现在小得多的时候，他们一直在调红球、击倒球瓶、击中球员三种得分的比例。可怎么调都跳不出一个局面：理性的做法就是只盯着其中一项。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“就算调对了，不到一年，打法又跟着变，局面再次失衡。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“我觉得唯一的出路是把得分改成相乘。这样一来，三种得分你基本都得顾上。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“或者拼尽全力，让对手其中一项一分都拿不到，”</span>格拉迪亚斯插了一句。</p>
+<p class="dialog"><span style="color:#ce9200">“啊对，一开始就有几个人试过，”</span>费布里克回答。<span style="color:#ce9200">“抓着红球超过三十嘀嗒早就被禁了很多年，那招在还是按加法计分的年代，对红球较弱的一方来说就已经很好用。但有支队伍试的是：开局很早就敲倒一堆球瓶，然后把大部分球员都派去守自己的球瓶，守到终场。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“结果根本不管用。人在小型飞行器上，再挤也挤不到哪儿去，不管你怎么弄，对面总能偷偷塞几个蓝球进来。你要是真把人都挤到球瓶周围一个点上，就成了绿球的活靶子。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你是想上场打？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#ce9200">“没有，不过我刚跟兹文聊了一堆这个。这里面的数学，几乎跟真打一场一样好玩！”</span></p>
+<p class="dialog">格拉迪亚斯和费布里克都把注意力转回了食物。</p>
+<p class="dialog"><span style="color:#be9b00">“对了，莉莉最近怎么样？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#ce9200">“这几个月她其实好转了一些。几天前她跟我说，最近一次公民课测验考了70分。她好像开心了点，玩手持终端上那个游戏也更投入了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你知道是什么游戏吗？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#ce9200">“她也不给我看。”</span></p>
+<p class="dialog">格拉迪亚斯和费布里克都接着吃了起来。几分钟后，两人都吃完了。</p>
+<p class="dialog"><span style="color:#ce9200">“这次你记得把齐普币拿出来了？”</span>费布里克打趣地问。</p>
+<p class="dialog"><span style="color:#be9b00">“嘿，我可能犯很多错，但同样的错我不会犯两次，”</span>格拉迪亚斯回了一句。</p>
+<p class="dialog"><span style="color:#be9b00">“对了，费布里克，谢谢你提醒我——我得试一下我那笔钱的恢复流程，”</span>他对着颈带低声说。</p>
+<p class="dialog"><span style="color:#ce9200">“要我帮你签一笔测试交易吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“好啊！你想拿什么当测试？”</span></p>
+<p class="dialog"><span style="color:#ce9200">“不知道，买一瓶海德菲尔？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“买一瓶海德菲尔？直接从毕生积蓄的钱包里掏？”</span>格拉迪亚斯难以置信地问。<span style="color:#be9b00">“那些广告也真把你拿下了，是吧？”</span></p>
+<p class="dialog"><span style="color:#ce9200">“嘿，是你先问我的！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“行吧……我来发起操作。”</span></p>
+<p class="dialog">格拉迪亚斯对着颈带低声说起来。眼角余光里，他看见费布里克跑去了什么地方，不过他太忙，没空去想是哪儿。</p>
+<p class="dialog">几个嘀嗒后，费布里克的手表震了。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">[钱包 0x8f62... 社交恢复模式交易请求]</span></td><td>65129</td></tr></tbody></table></div>
+<p class="dialog">费布里克打开手持终端，一笔交易的详细视图弹了出来。他让翡翠上网查收款地址。几个嘀嗒后，翡翠回话确认，那确实是海德菲尔的收款地址。他接着看金额——5.5齐普币。一个水瓶加运费，这价钱算合理，不过费用的大头肯定在运费上。他又看了交易的数据字段。对，看上去是格拉迪亚斯住址的一段编码，格式符合标准的网购协议。</p>
+<p class="dialog">在处理这类交易的密码学网络里，这些数据当然全程加密。</p>
+<p class="dialog">费布里克点了“确认”。</p>
+<p class="dialog">格拉迪亚斯的手表立刻震了。</p>
+<p class="dialog">不到一分钟，格拉迪亚斯的手表又震了。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">安全问题：孩子们从维尔和黛雅那儿回来的那天晚上，我做过的最不寻常的事是什么？</span></td><td>73105</td></tr></tbody></table></div>
+<p class="dialog">格拉迪亚斯立刻对着颈带低声回了一句。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>消息</th><th>收件人</th></tr></thead><tbody><tr><td><span style="color:#be9b00">你在餐馆里把屏幕的插头拔了，当时正在播埃菲里昂勋爵的演讲。</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>塞拉</center></td></tr></tbody></table><button>发送</button></div>
+<p class="dialog">片刻之后，格拉迪亚斯的手表又震了。包括他自己在内，已经签好三个。还差一个。要么是莫夫，要么是佩洛——当然，真到了万不得已，他就得自己跑去保险库取第二把钥匙。</p>
+<p class="dialog"><span style="color:#ce9200">“我显然不会问刚才是谁，也不会问你还得找谁确认，”</span>费布里克补了一句。<span style="color:#ce9200">“不过祝你好运！”</span></p>
+<hr class="rule">
+<p class="dialog"><span style="color:#be9b00">“塞拉，我回来了！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“格拉德！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我有个挺有意思的消息。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“什么消息？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我有可能很快要去一趟泽国。”</span></p>
+<p class="dialog">塞拉盯着他。</p>
+<p class="dialog"><span style="color:#54a1f9">“为什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我跟莫夫聊过这事。他觉得维里迪亚人——尤其是掌则人、掌舵会以及整个体制里的人——都能从那边学到很多东西。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“这事我说不好……眼下时机不好。这趟泽国之行，你来跑未必能用得最值。而且接下来这几个月，掌则人正需要有强手替他们引路。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“北极的事，其实更多是军方和议会的责任，也许还有图谱资助。而且……要是你能把我引见给泽，我这趟说不定就不算白跑？”</span></p>
+<p class="dialog">塞拉沉默下来，想了片刻。</p>
+<p class="dialog"><span style="color:#54a1f9">“如果莫夫觉得这主意好，那就行。但请你先做功课。在图谱资助或者议会里找个人——谁都行——聊聊，好让你大致知道这趟值不值得去；要是真去，又该怎么让这趟行程尽量有用。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“不过说真的，这事你得好好想。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“你要真去，我当然会把你引见给泽，还有白。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-15.html">上一章 · 第十五章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-17.html">下一章 · 第十七章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias pulled open the barrier on the booth, walked in, and slid the barrier shut behind him. He sat down angrily on the bench across from Delwart.</p>
+<p class="dialog"><span style="color:#be9b00">"You have a lot of explaining to do."</span></p>
+<p class="dialog">Delwart looked downwards toward the table, with a sorry expression on his face.</p>
+<p class="dialog"><span style="color:#e58137">"Look, Gladias, you were right, I was wrong. I let my hate for all this interventionism in Veridia's government and culture blind me to the fact that there are things government has always been for, and defense is one of them."</span></p>
+<p class="dialog"><span style="color:#be9b00">"That's not why I'm angry."</span></p>
+<p class="dialog">Delwart looked up, startled.</p>
+<p class="dialog"><span style="color:#be9b00">"I mean, it's one of the reasons, but far from the primary."</span></p>
+<p class="dialog"><span style="color:#e58137">"What is the primary then?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"What the hell is going on? Who are you? Who are you working with?"</span></p>
+<p class="dialog">Delwart sighed. For a few moments he was silent. Then he leaned forward.</p>
+<p class="dialog"><span style="color:#e58137">"Fine, I will explain."</span></p>
+<p class="dialog"><span style="color:#e58137">"I'm not just one ideologue who is doing this alone. I, and a group of others - I don't know them - are working for Silverchat."</span></p>
+<p class="dialog"><span style="color:#e58137">"We were frustrated by these rubrics that were increasing our taxes just because a bunch of people were putting crude jokes on our platform. We wanted Silverchat to be a refuge from the blandness that's taking over so much of the rest of Veridia. We wanted to be a place where Hydrafill and even Dreadknot could be welcome."</span></p>
+<p class="dialog"><span style="color:#e58137">"And so we decided to take matters into our own hands. Make an organized effort to try to pull the politics in a better direction. Appeal to the Keepers directly."</span></p>
+<p class="dialog"><span style="color:#e58137">"And now I realize just how naive this all was. If we manage to ward off blandness, but at the price of the Arctic Empire being able to take over and inflict things far worse - first on Redshire and later on the whole world - then this whole thing was not just not worth it - it was ruinous."</span></p>
+<p class="dialog">Gladias sighed. He was still extremely angry at Delwart, but the anger was now mixed with a dose of sympathy.</p>
+<p class="dialog">A robot slid up to them, carrying a salad, a rectangular nutrition bar and water for the two of them to eat and drink.</p>
+<p class="dialog">Gladias and Delwart both first picked up their plates of food, and put them down on the table. Gladias then picked up his cup and drank about half the water in one gulp. Delwart did the same.</p>
+<p class="dialog">They began eating, silently. After a few minutes, the conversation resumed.</p>
+<p class="dialog"><span style="color:#be9b00">"What do you want me to do now?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#e58137">"Obviously don't make the rubric exclude military now. You could even increase the tax brackets, though you doing that would only help a tiny bit - the most important levers there are on the Graph Funding side."</span></p>
+<p class="dialog"><span style="color:#e58137">"But I also have another idea for what you could do."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What is it?"</span></p>
+<p class="dialog"><span style="color:#e58137">"I think you should go to Dzego."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Me? Dzego? Why?"</span></p>
+<p class="dialog"><span style="color:#e58137">"They clearly have this whole Arctic question figured out much better than we do in Veridia. Study them. Learn from them. See what you can bring back to Veridia."</span></p>
+<p class="dialog"><span style="color:#be9b00">"And why should I listen to you when you've been so untrustworthy?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Well definitely don't just listen to me. Ask your closest friends and advisors. See what they think."</span></p>
+<hr class="rule">
+<p class="dialog">Gladias walked along the same path through Kalimar that he would usually pass through. As usual, it was covered with trees and surrounded by stone houses on both sides. But on that day, it was unusually hot, and Gladias sweated slightly as some of the sunlight managed to shine through the tree cover and warm up his entire body inside of his privacy robe.</p>
+<p class="dialog">He passed by one of the houses that he remembered for selling traditional Veridian food products. This time, an additional note was hastily taped on to the poster, advertising packages that offered tasty, nutritionally complete and long-lasting preserved food that was sufficient for thirty days of survival.</p>
+<p class="dialog">He tapped his watch, and called Mov.</p>
+<p class="dialog"><span style="color:#be9b00">"So I had my chat with Delwart."</span></p>
+<p class="dialog"><span style="color:#00bc96">"How did it go?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"You're right. There was an organized effort. Turns out - at least he now says - he's been working for Silverchat this whole time."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Silverchat? And here I was expecting some more evil company, like Bluewhale."</span></p>
+<p class="dialog"><span style="color:#00bc96">"I guess it makes sense, probably that conversation I overheard a month and a half ago was with a Silverchat guy."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So he wants me to go to Dzego now."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Dzego? What for?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"He says we in Veridia have a lot to learn from them. Do you think that's true?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"You know, one of my friends mentioned something like that to me the day Redshire got taken over. He thought <em>I</em> should go, and see how their secret societies work or something."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well you know, Seila has a friend from there now, and the last thing she told me was that he's been climbing up the Minpentai ranks really well, gotten into the nationals. So if I go, maybe I will actually be able to learn a few things."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Yeah I can certainly see the appeal. Veridians really need to know the outside world better. Especially the people in the institutions - the Order, the Courts, the parliament, all of them."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Give me a few days to think through this."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, the votes on the rubrics are in eight, twelve and sixteen days, so you have that time to think through it no matter what happens."</span></p>
+<p class="dialog">Gladias paused for a moment.</p>
+<p class="dialog">At that moment, he was walking past the restaurant near his home where he would often stop for food and drinks. Through the window, he could see Febric eating.</p>
+<p class="dialog"><span style="color:#be9b00">"I'll think about it too"</span>, he finally said, and ended the call.</p>
+<hr class="rule">
+<p class="dialog">Gladias entered the restaurant, and almost immediately took off the face cover from his privacy robe, and partially unzipped the front. He could not be that private while eating anyway, and he had been sweating in the hot sun. He sat down beside Febric.</p>
+<p class="dialog"><span style="color:#ce9200">"Oh uncle Glad, happy to see you here again!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"And I'm happy to see you!"</span></p>
+<p class="dialog">Gladias noticed that Febric had been watching the screen. A game of Helisport was actively broadcasting.</p>
+<p class="dialog">Gladias let himself watch the action for a minute. The screen was following the lead player wearing a yellow shirt chasing a redball.</p>
+<p class="dialog">Suddenly, out of nowhere, a player from the other team, wearing a purple shirt, whacked him off to the side. The player in the yellow shirt tumbled, and then automatically regained his bearings about five meters further down.</p>
+<p class="dialog">The screen shifted view to the player wearing the purple shirt. He caught a blueball in midair. Two other players wearing yellow shirts started flying towards him. Before they could get to him, he threw the blueball toward a teammate. That teammate successfully caught it, and began flying forward.</p>
+<p class="dialog">The screen shifted view toward ten yellow standing pins arranged in a triangle on a circular board mounted on a pole high above the ground. The player wearing the purple shirt holding the blueball came into view. A player wearing a yellow shirt zoomed into position between him and the pins.</p>
+<p class="dialog">The player wearing the purple shirt suddenly threw the blueball up high into the air, just as a different player wearing a yellow shirt crashed into him.</p>
+<p class="dialog">The blueball passed about five meters over the player wearing the yellow shirt protecting the pins, and then landed on the board. It knocked three of the pins down.</p>
+<p class="dialog">A scoreboard onscreen adjusted.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">Yellow</th><th style="font-size:150%; color: #808">Purple</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">Redball captures</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">Greenball player hits</td><td style="font-size:150%; color: #8f8">9</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">Blueball pin knockdowns</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">Combined score</td><td style="font-size:150%; color: #fff">1674</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<p class="dialog">Purple's blueball score had just increased from 20 to 23, and their combined score from 1540 to 1771 - enough to push them ahead of their opponents.</p>
+<p class="dialog">Suddenly, while the player who had just taken down those pins was celebrating, a greenball hit him in the back and splatted its paint over him.</p>
+<p class="dialog">The score adjusted again.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th style="font-size:150%; color: yellow">Yellow</th><th style="font-size:150%; color: #808">Purple</th></tr></thead><tbody><tr><td style="font-size:150%; color: red">Redball captures</td><td style="font-size:150%; color: red">6</td><td style="font-size:150%; color: red">11</td></tr><tr><td style="font-size:150%; color: #8f8">Greenball player hits</td><td style="font-size:150%; color: #8f8">10</td><td style="font-size:150%; color: #8f8">7</td></tr><tr><td style="font-size:150%; color: #88f">Blueball pin knockdowns</td><td style="font-size:150%; color: #88f">31</td><td style="font-size:150%; color: #88f">23</td></tr><tr><td style="font-size:150%; color: #fff">Combined score</td><td style="font-size:150%; color: #fff">1860</td><td style="font-size:150%; color: #fff">1771</td></tr></tbody></table></div>
+<p class="dialog"><span style="color:#ce9200">"You have to admit, the scoring system is really good now"</span>, Febric exclaimed.</p>
+<p class="dialog"><span style="color:#ce9200">"I remember when I was much younger, they kept adjusting the ratios between what a redball gives you, versus a pin knockdown or a player hit. And they just couldn't get out of having a situation where the rational thing is to just focus all your attention on one."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Even when they got it right, within a year the strategies adjusted, and it became lopsided again."</span></p>
+<p class="dialog"><span style="color:#ce9200">"I think making the score multiplicative was the only way out. That way you pretty much have to care about all three of the point types."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Or try really hard to make sure your opponent can't get any of one type"</span>, Gladias interjected.</p>
+<p class="dialog"><span style="color:#ce9200">"Ah yeah that was the first thing a few people tried"</span>, Febric replied. <span style="color:#ce9200">"Holding onto redballs for more than thirty ticks had already been banned for ages, that had been a good cheat for whichever side was worse at redballs even back when the scores were additive. But what one team did try, is knock down a bunch of pins very early in the game, and then use most of their players to protect their pins for the rest of the game."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Turns out it doesn't actually work. People on copters can only pack together so tightly, no matter what you do, the other team always manages to sneak a few blueballs through. And then if you do pack tightly in one place around the pins, you're a sitting duck for the greenballs."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Are you thinking of playing?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#ce9200">"No, but I just had a bunch of conversations with Zven about this. The math is almost as fun as the actual game!"</span></p>
+<p class="dialog">Gladias and Febric both turned their attention to the food.</p>
+<p class="dialog"><span style="color:#be9b00">"How's Lily doing by the way?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#ce9200">"She actually started getting a little better over the last couple of months. She mentioned to me a few days ago that she got seventy on her latest civics test. She seems happier. And she's even more engaged playing that game on her hand device."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do you know what game?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#ce9200">"She doesn't show me either."</span></p>
+<p class="dialog">Gladias and Febric both returned to eating. A few minutes later, they were both finished.</p>
+<p class="dialog"><span style="color:#ce9200">"Did you remember to take out your zipcoins this time?"</span>, Febric asked playfully.</p>
+<p class="dialog"><span style="color:#be9b00">"Hey, I may make lots of mistakes, but I don't make the same mistake twice"</span>, Gladias snapped back.</p>
+<p class="dialog"><span style="color:#be9b00">"By the way, Febric, thanks for reminding me - I need to test my recovery procedure for my coins"</span>, he whispered through his neck band.</p>
+<p class="dialog"><span style="color:#ce9200">"Want me to help you sign a test operation?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Sure! What do you want the test to be?"</span></p>
+<p class="dialog"><span style="color:#ce9200">"I dunno, buy a Hydrafill bottle?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Buy a Hydrafill bottle? Straight out of a life savings wallet?"</span>, Gladias asked incredulously. <span style="color:#be9b00">"Those ads really have been getting to you too, haven't they?"</span></p>
+<p class="dialog"><span style="color:#ce9200">"Hey, you're the one who asked me!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Okay fine ... let me start the operation."</span></p>
+<p class="dialog">Gladias began whispering into his neck band. Out of the corner of his eye, he saw Febric run off somewhere, though he was too busy to wonder where.</p>
+<p class="dialog">A few ticks later, Febric's watch buzzed.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Gladias</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">[Wallet 0x8f62... social recovery mode transaction request]</span></td><td>65129</td></tr></tbody></table></div>
+<p class="dialog">Febric opened up his hand device, and a more detailed view of the transaction appeared. He asked Emerald to search for the receiving address online. A few ticks later, Emerald replied with a confirmation that it was, in fact, the Hydrafill purchase address. He then checked the amount - 5.5 zipcoins. It seemed reasonable for a water bottle plus shipping, though the bulk of the cost was definitely the shipping. He checked the transaction data field. Yep, looked like an encoding of Gladias's home address, in the correct format according to the standard online shopping protocol.</p>
+<p class="dialog">In the cryptographic network that processed these transactions, all of this data was, of course, encrypted.</p>
+<p class="dialog">Febric clicked "Confirm".</p>
+<p class="dialog">Gladias's watch immediately buzzed.</p>
+<p class="dialog">Less than a minute later, Gladias's watch buzzed again.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Seila</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">Security question: what was the most unusual thing I did on the evening the kids came back from Vil and Daia's?</span></td><td>73105</td></tr></tbody></table></div>
+<p class="dialog">Gladias immediately whispered into his neck band a reply.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>Message</th><th>To</th></tr></thead><tbody><tr><td><span style="color:#be9b00">You unplugged the screen in the restaurant when it was showing Lord Ephelion's speech.</span></td><td style="width: 6%; text-align:center">→</td><td style="width: 25%"><center>Seila</center></td></tr></tbody></table><button>Send</button></div>
+<p class="dialog">A few moments later, Gladias's watch buzzed again. Three signatures done, including his own. One to go. Either Mov or Pelow - or, of course, if he really had to, himself running to the vault and picking up his second key.</p>
+<p class="dialog"><span style="color:#ce9200">"I'm obviously not gonna ask who that was, or who else you need to confirm it"</span>, Febric added. <span style="color:#ce9200">"But good luck!"</span></p>
+<hr class="rule">
+<p class="dialog"><span style="color:#be9b00">"Seila, I'm home!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Glad!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"So I have interesting news."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What is it?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"There's some chance I'll be going to Dzego soon."</span></p>
+<p class="dialog">Seila stared.</p>
+<p class="dialog"><span style="color:#54a1f9">"Why?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I talked to Mov about this. He thinks that Veridians, especially Keepers, the Order, the institutions generally, have a lot to learn from what's going on over there."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I'm not sure about this ... it's a difficult time. You're not really the best person to make good use of a Dzego trip. And the Keepers would benefit from having a strong hand guide them these next few months."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Arctic stuff is really much more of a military and parliament responsibility, maybe Graph Funding too. And ... maybe I can make good use of a trip if you introduce me to Zei?"</span></p>
+<p class="dialog">Seila retreated into her thoughts for a few moments.</p>
+<p class="dialog"><span style="color:#54a1f9">"If Mov thinks it's a good idea, then fine. But please do your homework first. Find someone, anyone, in Graph Funding or in parliament to talk to, so you get some idea of whether this trip will be useful, and if you do go, how to make it as useful as possible."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"But really, think hard about this."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"If you go, then yes, of course I'll introduce you to Zei. And Bai too."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-15.html">上一章 · 第十五章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-17.html">下一章 · 第十七章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第十六章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

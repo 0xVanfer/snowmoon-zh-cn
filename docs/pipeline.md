@@ -32,6 +32,9 @@ book/images/*.svg            中文插图（视觉模型重绘）
 - 用标准库 `html.parser` 建 DOM；`<nav>`、`<script>`、`<style>`、装饰性 `<br>` 丢弃。
 - 不可译的虚构语言（泽国语 `dz-line`、`<pre>`）标记 `locked: true`。
 - 内联文字转成受限 mini-markup（`<c st="…">` 颜色、`<e>`、`<b>`、`<sup>`、`<a>`、`<br/>`、`<f>` 等）。
+- **布局容器单独处理**：`style` 里带 `display:flex|grid`／`justify-content` 的容器，其直接子元素各自是
+  独立布局项（`space-between` 靠项数分位），因此不拍平成一条文本，而是逐个保留元素、各自成一条片段。
+  容器内第一条片段占用正常自增编号，其余用 `基准id#2`、`#3`…，所以容器外的片段编号与既有译文 id 完全不动。
 - SVG 是 XML：HTMLParser 会把 `viewBox`/`clipPath` 等转小写，脚本按映射表还原大小写。
 - `verify_extract.py` 做还原比对：把抽取值回填成纯文本，与原文纯文本逐章 diff（排除 SVG 内部文字），
   当前 32 章仅剩 `·`（分隔号）与 entity 归一化差异。
@@ -83,11 +86,27 @@ book/images/*.svg            中文插图（视觉模型重绘）
 
 - `build_markdown.py`：把骨架里的占位符替换成译文，并做 mini-markup → Markdown 转换
   （颜色 span 的 `oklch()` 会换算成 `#rrggbb` 以兼容旧渲染器）。
-- `build_html.py`：同一份结构渲染成单页 HTML，中文排版规则（首行缩进 2em、`line-break: strict`、
-  1.75 行高、32em 行长、深色模式、设备面板样式）都在这里的 CSS 落地。
-- 色彩可用性：原文用颜色区分说话人。HTML 版除了保留颜色，还给纯对话段落加了同色左侧色条作为
-  非颜色线索，并在书首说明「颜色仅作辅助」。
-- `qa_book.py`：书级体检（章节数、插图引用与存在性、占位符残留、中文标点/空格体例、HTML 标签配对）。
+- `build_site.py`：把同一份骨架渲染成**多页阅读站点**（主页 `index.html`、目录 `toc.html`、
+  逐章 `read/chapter-NN.html`，产物在 `book/site/`）。每一章同时注入中文与英文两份正文，
+  分别放在 `data-lang="zh"` / `data-lang="en"` 的正文栏里，由前端决定分栏还是标签页。
+  所需的插图会复制到 `book/site/assets/images/`。
+- 前端（HTML 模板 + `style.css` + `reader.js`）由 **视觉模型** 设计，源文件在 `pipeline/site/`，
+  任务书见 `pipeline/prompts/design-reader-site.md`；`build_site.py` 只做占位符替换，
+  不参与视觉设计。占位符契约（`{{CONTENT_ZH}}`、`{{TOC_ITEMS}}`、`{{REPO_URL}}` 等）
+  写在该任务书里，模板与构建脚本必须保持一致。
+- 色彩可用性：原文用颜色区分说话人。阅读页除了保留颜色，还给纯对话段落加了同色左侧色条作为
+  非颜色线索，并在主页说明「颜色仅作辅助」。
+- `qa_book.py`：书级体检（章节数、插图引用与存在性、占位符残留、中文标点/空格体例）。
+- `qa_site.py`：站点结构体检（页面齐全、占位符清空、双语两栏在位、站内链接与插图可解析，
+  以及**布局容器（flex/grid）子项与原文逐项一致**——见 [lessons.md](lessons.md) 第 6 节）。
+
+## 5.1 部署
+
+站点是纯静态的，构建期唯一的“后端”就是这一串 Python 脚本。仓库用
+`.github/workflows/pages.yml` 在 `main` 分支推送时重新组装 `book/site/` 并用
+GitHub Actions 发布到 Pages（仓库 Settings → Pages → Source 选 “GitHub Actions”）。
+`book/site/` 同时提交进仓库，因此本地 `file://` 直接打开 `book/site/index.html`
+也能完整阅读（站点不 fetch 任何数据文件）。
 
 ## 6. 复现步骤
 
@@ -108,9 +127,25 @@ python3 pipeline/vision_api.py --batch sources/work/jobs/figures.jsonl \
 python3 pipeline/make_figures.py apply        # 校验 + 落盘 book/images
 python3 pipeline/render_previews.py           # 渲染「原图 | 中文版」供视觉复核
 python3 pipeline/build_markdown.py            # 组装 Markdown
-python3 pipeline/build_html.py                # 组装单页 HTML
+python3 pipeline/build_site.py                # 组装阅读站点
 python3 pipeline/qa_book.py                   # 书级体检
+python3 pipeline/qa_site.py                   # 站点结构体检
+python3 pipeline/probe_site.py                # 站点几何/交互探针（headless Chrome）
+python3 pipeline/render_site_previews.py      # 各视口截图，供人工/视觉模型复核
 ```
+
+前端需要重新设计时（任务书见 `pipeline/prompts/design-reader-site.md`）：
+
+```bash
+# 1) 让视觉模型产出前端文件（结果落 JSONL，带磁盘缓存）
+python3 pipeline/vision_api.py --batch sources/work/design/jobs.jsonl \
+    --out sources/work/design/out.jsonl --concurrency 5
+# 2) 剥掉围栏，落到 pipeline/site/
+python3 pipeline/extract_design_files.py
+# 3) 重新组装站点
+python3 pipeline/build_site.py && python3 pipeline/qa_site.py
+```
+
 
 ## 7. 编辑决策（与市场调研建议的差异）
 

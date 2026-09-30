@@ -35,7 +35,23 @@
   },
   {
    "id": "c07-s0009",
-   "text": "<c st=\"font-size:200%\">🙁<sup><sup>2</sup></sup></c><c st=\"font-size:200%\">🙁<sup><sup></sup></sup></c><c st=\"font-size:200%\">😐<sup><sup></sup></sup></c><c st=\"font-size:200%\">😊<sup><sup></sup></sup></c><c st=\"font-size:200%\">😊<sup><sup>2</sup></sup></c>"
+   "text": "🙁<sup><sup>2</sup></sup>"
+  },
+  {
+   "id": "c07-s0009#2",
+   "text": "🙁<sup><sup></sup></sup>"
+  },
+  {
+   "id": "c07-s0009#3",
+   "text": "😐<sup><sup></sup></sup>"
+  },
+  {
+   "id": "c07-s0009#4",
+   "text": "😊<sup><sup></sup></sup>"
+  },
+  {
+   "id": "c07-s0009#5",
+   "text": "😊<sup><sup>2</sup></sup>"
   },
   {
    "id": "c07-s0010",

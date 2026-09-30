@@ -1,0 +1,157 @@
+/* 集成补充样式（本文件不属于视觉模型的原始产出，理由见 docs/pipeline.md「集成修正」）。
+   只做「接口对齐」与「视觉复核发现的问题」两类修补，不改动设计语言。 */
+
+/* 1) 插图是「中文重绘版」：对照分栏时只在中文栏显示一次，避免同一张图左右各出一份。
+      分栏时英文栏只看文字；窄屏标签页切到 English 时仍然有图。 */
+html[data-lang-mode="dual"][data-dual-layout="columns"] #pane-en figure.fig {
+  display: none;
+}
+
+/* 2) 第 3 段 CSS 用 `html.js`（class）判断「JS 可用」，而核心 JS 按契约写的是 `data-js` 属性。
+      这里用属性选择器补上同样的三条规则，保持「无 JS 时控件不出现」的原始意图。 */
+html[data-js] #bottombar { display: flex; }
+html[data-js][data-lang-mode="dual"][data-dual-layout="tabs"] #lang-tabs { display: flex; }
+html[data-js][data-lang-mode="dual"][data-dual-layout="tabs"] .reader-page {
+  padding-top: 100px;
+}
+
+/* 3) 顶栏容器：CSS 只给了 `.reader-topbar__actions`（模板里并不存在这个类），
+      于是导航项按行内元素排布，间距挤成一坨、窄屏还会横向溢出。这里把真正使用的容器
+      定义成弹性行，并保证品牌名可收缩。 */
+.reader-topbar__navigation {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.reader-topbar__navigation > * { flex: 0 0 auto; }
+.reader-brand {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#topbar .reader-control__short { display: none; }
+
+@media (max-width: 767px) {
+  .reader-topbar__chapter { display: none; }
+  .reader-topbar__navigation { gap: 6px; }
+  #topbar { padding-inline: 12px; }
+  #topbar a, #topbar button { min-width: 40px; min-height: 40px; padding-inline: 4px; }
+  #topbar .reader-control__label { display: none; }
+  #topbar .reader-control__short { display: inline; }
+}
+
+@media (max-width: 460px) {
+  .reader-brand span[lang="en"] { display: none; }
+  #topbar { font-size: 13px; }
+}
+
+/* 4) 对照分栏时，章标题区要与两栏同宽，否则它按单栏 38em 居中，右侧留一大块空白。 */
+html[data-lang-mode="dual"][data-dual-layout="columns"] .chapter-heading {
+  width: min(calc(100% - 80px), calc(76em + 32px));
+  max-width: none;
+}
+html[data-lang-mode="dual"][data-dual-layout="columns"] .chapter-heading h1 {
+  font-size: 28px;
+}
+
+/* 5) 章标题区随语言模式收敛：中文模式不再重复显示英文标题与英文日期，反之亦然
+      （原来三种模式都显示中英两套，窄屏要占掉半屏）。 */
+html[data-lang-mode="zh"] .chapter-heading__english,
+html[data-lang-mode="zh"] .chapter-heading__dateline--en { display: none; }
+html[data-lang-mode="en"] .chapter-heading h1,
+html[data-lang-mode="en"] .chapter-heading__dateline:not(.chapter-heading__dateline--en) { display: none; }
+html[data-lang-mode="en"] .chapter-heading__english { color: var(--text); font-size: 24px; }
+/* 对照 + 窄屏标签页时，标题区跟随当前激活的那一栏，不再中英各来一份 */
+html[data-lang-mode="dual"][data-dual-layout="tabs"][data-active-pane="en"] .chapter-heading h1,
+html[data-lang-mode="dual"][data-dual-layout="tabs"][data-active-pane="en"] .chapter-heading__dateline:not(.chapter-heading__dateline--en) { display: none; }
+html[data-lang-mode="dual"][data-dual-layout="tabs"][data-active-pane="zh"] .chapter-heading__english,
+html[data-lang-mode="dual"][data-dual-layout="tabs"][data-active-pane="zh"] .chapter-heading__dateline--en { display: none; }
+
+/* 设置面板：1440×900 这类常见窗口高度下要能一屏放下七组控件（原来「同步滚动」被切在屏幕外），
+   这里把分组间距与按钮高度压紧一点，并给底部留出内边距。 */
+#settings-panel { padding-bottom: 24px; scrollbar-width: thin; }
+#settings-panel .setting-group { margin-bottom: 14px; }
+#settings-panel .setting-group legend,
+#settings-panel .setting-group h3 { margin-bottom: 6px; }
+#settings-panel .setting-options { gap: 6px; }
+#settings-panel .setting-options button { min-height: 36px; padding: 4px 12px; }
+#settings-panel .settings-note { margin-bottom: 8px; }
+#settings-panel .setting-help { margin-top: 4px; }
+#settings-panel .reader-shortcuts { margin-top: 8px; }
+
+/* 底栏「上一屏 / 上一页」随翻页模式切换 */
+html[data-page-mode="scroll"] .flip-label[data-mode="paged"],
+html[data-page-mode="paged"] .flip-label[data-mode="scroll"] { display: none; }
+
+/* 6) 终端面板表头：原来整行反色成 --terminal-text（浅蓝实心块），四套主题下都是全屏最扎眼的一块，
+      看起来像未加载的占位块。改为同色系弱化底 + 底部亮蓝描边，保留「终端表头」的分区感。 */
+.device-view thead {
+  background: rgba(156, 194, 255, 0.16);
+  color: var(--terminal-text);
+}
+.device-view thead th { font-weight: 700; }
+.device-view th,
+.device-view td { border-color: rgba(156, 194, 255, 0.45); }
+
+/* 7) 投票/评分滑块的轨道在深色面板上仍是浏览器默认浅灰，显式给轨道与手柄上色。 */
+.device-view input[type="range"] {
+  accent-color: var(--terminal-text);
+}
+.device-view input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(156, 194, 255, 0.33);
+}
+.device-view input[type="range"]::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: var(--terminal-text);
+}
+.device-view input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(156, 194, 255, 0.33);
+}
+.device-view input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--terminal-text);
+}
+
+/* 8) 插图底板不要强撑满栏宽：图片本身比栏宽窄时，左右会留出大片深色空带。 */
+.chapter-content figure.fig {
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* 9) 主页统计卡：宽屏下「约 14.6 万」「幅中文重绘插图」会被拆行，出现「万」「图」单字孤行。 */
+.book-facts strong,
+.book-facts dd,
+.book-facts dt,
+.book-facts span { white-space: nowrap; }
+.book-facts > * { align-items: flex-start; }
+
+/* 10) 主页两个 CTA 按钮高度不一致、右端与卡片行不齐。 */
+.reading-actions { align-items: stretch; }
+.reading-actions .button { display: inline-flex; align-items: center; justify-content: center; }
+
+/* 11) 目录页提示条：已读 0 章时如果仍然写「继续阅读 第X章」，与「已读 0 / 32 章」看着矛盾；
+      这里让两者在排版上分层，并把「继续阅读」交给页头按钮，避免并排出现。 */
+.reading-status { line-height: 1.7; }
+
+/* 12) 分页模式：第 4 段把 `.chapter-content` 设成 `height:100%`，在定高的多列容器里
+      正好等于「一列高」，于是正文只占第 1 列、后面全部溢出到后续列，
+      紧跟其后的章末导航被挤到第 2 列（表现为「章末导航出现在正文中间」）。改回 auto 让内容自然分列。 */
+html[data-page-mode="paged"] .reader-flow > .chapter-content { height: auto; }
+
+/* 13) 主页 hero：左栏原来 `align-self: center`，宽屏下与右栏首行错开约 200px，左上角留一大块空白。
+       改成两栏顶对齐，视觉重心一致。 */
+.home-hero .hero-heading { align-self: start; }

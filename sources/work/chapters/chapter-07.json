@@ -55,10 +55,14 @@
   {
    "id": "c07-b0007",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c07-s0008}}</th></tr></thead><tbody><tr><td><input type=\"range\" style=\"width:100%\"><div style=\"display: flex; justify-content: space-between; width:100%\">{{S:c07-s0009}}</div></td></tr><tr><td><button>{{S:c07-s0010}}</button></td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view wide-device-view\"><table><thead><tr><th>{{S:c07-s0008}}</th></tr></thead><tbody><tr><td><input type=\"range\" style=\"width:100%\"><div style=\"display: flex; justify-content: space-between; width:100%\"> <span style=\"font-size:200%\">{{S:c07-s0009}}</span> <span style=\"font-size:200%\">{{S:c07-s0009#2}}</span> <span style=\"font-size:200%\">{{S:c07-s0009#3}}</span> <span style=\"font-size:200%\">{{S:c07-s0009#4}}</span> <span style=\"font-size:200%\">{{S:c07-s0009#5}}</span> </div></td></tr><tr><td><button>{{S:c07-s0010}}</button></td></tr></tbody></table></div>",
    "segs": [
     "{{S:c07-s0008}}",
     "{{S:c07-s0009}}",
+    "{{S:c07-s0009#2}}",
+    "{{S:c07-s0009#3}}",
+    "{{S:c07-s0009#4}}",
+    "{{S:c07-s0009#5}}",
     "{{S:c07-s0010}}"
    ]
   },

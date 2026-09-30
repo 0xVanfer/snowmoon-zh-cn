@@ -144,7 +144,21 @@
   {
    "id": "c01-s0021",
    "role": "div",
-   "text": "-5 0 5",
+   "text": "-5",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c01-s0021#2",
+   "role": "div",
+   "text": "0",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c01-s0021#3",
+   "role": "div",
+   "text": "5",
    "locked": false,
    "note": ""
   },
@@ -368,7 +382,21 @@
   {
    "id": "c01-s0053",
    "role": "div",
-   "text": "-5 0 5",
+   "text": "-5",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c01-s0053#2",
+   "role": "div",
+   "text": "0",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c01-s0053#3",
+   "role": "div",
+   "text": "5",
    "locked": false,
    "note": ""
   },

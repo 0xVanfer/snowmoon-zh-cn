@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第二十六章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第二十六章 · Chapter 26 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-25.html">
+  <link rel="next" href="chapter-27.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="26">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第二十六章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第二十六章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 26</p>
+    <p class="chapter-heading__dateline">维里迪亚 · 3724年霜期5日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Veridia · 3724 Frostime 5</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">泽、白、格拉迪亚斯和登坐在飞机上一间封闭的小舱里，泽和白面朝前，格拉迪亚斯和登面朝后。四人都默默望着窗外，欣赏着这片一望无际、大体平坦的绿色原野。视野里最显眼的是一排小山，再往远处就是梅尔丹城。</p>
+<p class="dialog">广播提示音嗡嗡响起。四人一下从出神的状态里惊醒，准备聆听。</p>
+<blockquote><p>jo hen jei fe fei go de di mei dan du</p></blockquote>
+<p class="dialog"><span style="color:#df74b1">“该你翻译了，格拉迪亚斯！”</span>，泽催道。</p>
+<p class="dialog">格拉迪亚斯脑子里拼命地转，想赶在下一句开始前听明白、答得上来。过了片刻，他脱口而出：</p>
+<p class="dialog"><span style="color:#be9b00">“各位，欢迎来到维里迪亚的梅尔丹。”</span></p>
+<blockquote><p>ti zun no tei li ze fo fi shi ci cin ho li ze ci bia tei gei ka fiu den min ba fia zui</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“当地时间是74,000，气温7度。再过一小会儿，飞行器就会降落地面。”</span></p>
+<blockquote><p>ti tei li dzai hen fe lo kin fe hai bun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“现在正是欣赏外面美景的大好时机。”</span></p>
+<blockquote><p>hai ka sho kin ce fe fei go de bun ji dze kai zui liu</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“此刻窗外，你可以看到维里迪亚那片美丽的、绿色植物铺成的大地。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“绿色植物构成的风景。”</span>，泽温和地纠正。</p>
+<blockquote><p>biu ka di ge le bo gai dei li lia</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“右边是格勒博尔山脉。”</span></p>
+<blockquote><p>cen hai ka ge le bo gai dei de dziu hai ka ce kin fe di mei dan du ci ti li sa dzu du fe fei go</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“更远处，越过格勒博尔山脉继续往前，你能看到梅尔丹城。它是维里迪亚的首都。”</span></p>
+<blockquote><p>di mei dan du li bai</p><p>ci di mei dan du de jan zi li pa pi pa fi ha</p><p>ci dzen fe gi hie pen</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“梅尔丹是座大城，人口110万，下辖许多不同的城区。”</span></p>
+<blockquote><p>dzu ka kin ce fe bia gai dei</p><p>ci fia sai pen ka dan fe gi jan</p><p>ci sei sai pen ka jen bin pei de pen li pai</p><p>ci mui dau fe ti li cin pin cu bun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“城区正中有一座小山。山的下半截住着许多人家，上半截有一部分政府机构在办公。爬上山去，心情愉快，风景也美。”</span></p>
+<blockquote><p>gai dei de zei biu ka pai hui pen li bia</p><p>ci pai hui pen fei ka fei go de gi bai pai hui li lia</p><p>ci sa dzu pai hui li dzen fe ten min de bin dai cu man jei cu su kun gau</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“山的东边是商务区。商务区里有许多大公司，主要产业包括计算机软件、金融和健康防护。”</span></p>
+<blockquote><p>gai dei de zei gei ka di ka lia mai pen li lia</p><p>ci ti pen li lu fe bai kai zun</p><p>ko ti dzen fe gi pui gau ji dan</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“山的南边是卡利马尔城区。这一片看着像森林，里面却藏着许多住宅。”</span></p>
+<blockquote><p>gai dei de zei dzun ka gi dan pen li lia</p><p>co ti ka gi jan li san cu sun cu mo</p><p>ci ti ju fe gi kai de sai hui cu gi dau kin zun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“山的西边是一片大型居住区。许多人在那里睡觉、学习、吃饭。那里食物种类繁多，还有很多值得一看的地方。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“也就是旅游景点。”</span></p>
+<blockquote><p>ti li tin bia pen fe di mei dan du de ce kin ji gi mui sun jui</p><p>ci di mei dan du fei ka ji gi shan jin tei ka jan ki su</p><p>te zen hu ka ki kia sin fe ti du</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“这只是梅尔丹众多有趣之处的一小部分。哪怕一个人在梅尔丹住上许多年，也了解不透这座城。”</span></p>
+<blockquote><p>jie fe lo cin pin fe lo di mei dan du cu fei go li bun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">“希望你们喜欢梅尔丹，喜欢维里迪亚的美景。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“说得好。才两个月，你都快成本地人了。”</span></p>
+<p class="dialog">泽顿了顿，又开口，慢慢地说。</p>
+<p class="dialog"><span style="color:#df74b1">"ci jie fe lo cin pin fe di pa fo gai du"</span></p>
+<p class="dialog"><span style="color:#be9b00">“我很喜欢帕佛盖都。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“希望你再来。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“当然会来！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“等等，我刚反应过来……帕佛盖的意思就是‘十四块石头’？这名字是怎么来的？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“想想元素周期表。”</span></p>
+<hr class="rule">
+<p class="dialog">飞机停了下来。透过窗户，他们看见十几辆大型巴士和轿车正朝这边驶来。</p>
+<p class="dialog"><span style="color:#e58137">“大一点的那辆黑色轿车是我们的。为了不引人注意，我们最后下车。”</span>，登说。</p>
+<p class="dialog">泽、格拉迪亚斯和白点了点头。四人靠在椅背上等着。</p>
+<p class="dialog">大约十分钟后，舱门自动打开。四人立刻起身，从座位下取出随身行李，朝飞机前部走去。穿过机舱时，他们看见其他舱门全都敞开、空无一人，用过的毯子和空瓶空杯丢得到处都是，散落在许多小桌和座椅上。</p>
+<p class="dialog">他们从一扇门走出飞机，门直接连着一道楼梯，通往一个狭长的房间——显然也是某辆巴士的内部。房间一头是入口，他们刚从那进来；另一头是出口；中间有两道闸机挡着路。</p>
+<p class="dialog">泽和格拉迪亚斯先上前。两人各自把手表贴到所过闸机侧面的绿色圆圈上，又看向前方的摄像头。过了几个嘀嗒，两道闸机几乎同时开口：<span style="color:#db8916">“欢迎来到维里迪亚。”</span></p>
+<p class="dialog">闸机打开，泽和格拉迪亚斯走了过去。房间另一头的出口径直通向一辆黑色轿车的内部——正是他们先前从飞机窗口望见的那几辆之一。两人走进去，发现里面已经坐着一个男人。</p>
+<p class="dialog"><span style="color:#be9b00">“韦尔多参议员！”</span></p>
+<p class="dialog"><span style="color:#a38af2">“欢迎回家，格拉迪亚斯！”</span>，韦尔多答道，脸上的表情和语气比他记忆中的任何时候都更暖。他立刻看向格拉迪亚斯身旁。<span style="color:#a38af2">“那你一定就是泽了。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“幸会，参议员。”</span></p>
+<p class="dialog">泽和格拉迪亚斯正要坐下，泽已经听见白和登走近的脚步声。两人也穿过舱口，进了车里。</p>
+<p class="dialog"><span style="color:#a38af2">“那你们一定就是白和登了！”</span></p>
+<p class="dialog"><span style="color:#ed756b">“正是”</span>，白答道。</p>
+<p class="dialog"><span style="color:#a38af2">“好，都坐下吧。我们有很多事要做。”</span></p>
+<p class="dialog">四人在各自的座位上坐下。连接车厢与入口房间的舱门关上了。几乎立刻，他们就感觉车开始加速。</p>
+<p class="dialog"><span style="color:#a38af2">“那么首先，格拉迪亚斯，我有个非常好的消息要告诉你。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“哦？什么消息？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“我们好像知道莉莉在哪儿了。”</span></p>
+<p class="dialog">格拉迪亚斯睁大了眼睛。</p>
+<p class="dialog"><span style="color:#a38af2">“塞拉费了很大劲才联系上我，把事情的前前后后都跟我说了。兹文一直和莉莉有联络，她自己跟兹文说了在哪儿：她已经越过边界，进了北极占领区，人在北林。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“接着我们把所有监控画面都筛了一遍——当初你出了个绝妙的主意，让泽国人黑进了那些摄像头。找了几天，我们找到了她。她待在北极人办的一所寄宿学校里，离大梅港大约1公里。”</span></p>
+<p class="dialog">格拉迪亚斯叹了口气。<span style="color:#be9b00">“至少我们知道她在哪儿了。要把她从北林弄出来会很难，但至少费布里克和赫雷达也在那儿，可以一趟把他们都带出来。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“确实。你要是真想，现在就可以去北林——不过大梅港的门还关着。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“北极人最近开始允许北岸与维里迪亚其他地区之间双向通信和往来了。他们在北林开了诊所，提供他们最先进的一些疗法，既能延寿，也能增强体能。看来他们决定试着让维里迪亚人自愿加入北极帝国，办法就是把他们的亮眼技术摆到我们眼前。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“这招很好。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你那句话怎么说的来着，泽？靠让人看清一件事符合自己的利益来驱使人去做，这到底算操纵，还是只能算说服？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“埃菲里昂肯定会这么看。当然，西尔卡会不高兴，说他们在隐瞒隐性代价——你能活得更久，靠的却是持续注射北极的专有药物，那你的命就捏在他们手里，你就成了他们的奴隶。可埃菲里昂会说，死了——躺在棺材里，连动一块肌肉、想一个念头都不自由——那才是最彻底的奴役。而且这不只是对一个人如此，对一个文明也是一样。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“想让维里迪亚成功、兴旺，我们就得找到那条融合之路。我们可以承认北极人有些事做得非常好，承认他们追求一个彻底更好的未来这件事本身可以是健康的。维里迪亚的北极星不能只是‘保持现在这样，但少一点贪婪、社会结构好一点’。我们得有真正的进步，并且取其精华、去其糟粕。我们要认可成就，并给予回报。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“但首先，我们得给自己挣出喘息的空间。这意味着要在北岸打败北极人。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“正是。要做到这一点，我们就得愿意向外面学——向北极帝国里的敌人学，也向自由城和泽国的朋友学。”</span></p>
+<p class="dialog">车缓缓停下。片刻之后，车门打开，外面径直通向一家看起来像政府经营的酒店内部。</p>
+<p class="dialog"><span style="color:#a38af2">“好好睡一觉，朋友们。泽、登，你们俩明天一早有件大事。等那件事办完，我们再碰头谈我们的大计划。Veridia ba fau gie。”</span></p>
+<p class="dialog">格拉迪亚斯和泽先下了车。几乎立刻，格拉迪亚斯就看见房间远角有个女人在等。她转过身，张开双臂朝他跑来。</p>
+<p class="dialog">是塞拉。</p>
+<p class="scene-break">梅尔丹，维里迪亚</p>
+<p class="dialog">泽在一把椅子上坐下，面前是一台控制台，跟他历次参加民本棋锦标赛时用的那些控制台惊人地相似。他能看出的最大不同是：这一次，没有防作弊侦测无人机在周围嗡嗡打转。</p>
+<p class="dialog">他戴上耳机和眼镜，对着麦克风说话。</p>
+<p class="dialog"><span style="color:#df74b1">“登，能听见我吗？”</span></p>
+<p class="dialog"><span style="color:#e58137">“嗯，又清楚又响。我想我就在你正下方那间屋里。”</span></p>
+<p class="dialog">泽玩心一起，跺了跺脚。</p>
+<p class="dialog"><span style="color:#df74b1">“听见了吗？”</span></p>
+<p class="dialog"><span style="color:#e58137">“我只能从耳机里听到你说话。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“看来你这儿的隔音做得真好！”</span></p>
+<p class="dialog"><span style="color:#e58137">“好，泽，我们把整个行动再从头过一遍。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“地点：红郡，总统官邸。目标：救出目标人物——总统之子塔芬德尔。方案：我们安插在里面的人让目标走到阳台上。我们飞进去，放下绳索，让他系在腰间、抓紧，然后在北极人反应过来之前飞走。”</span></p>
+<p class="dialog"><span style="color:#e58137">“没错，这是主线方案。备用方案呢？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“如果北极人出现——士兵或无人机——就开火。如果他不走到阳台上，没有备用方案，那就完了——我们的无人机要是不得不直接落在楼顶上，根本撑不住。如果带绳索的无人机被击落，我们还有第二架，甚至其他战斗无人机也可能把目标再接回来，虽然它们不是为这个设计的。唯一危险的窗口，是无人机接住他之后没过几个嘀嗒就被击落——这个空当太短，备用无人机来不及扑过去抓住他，人就摔到地上了。”</span></p>
+<p class="dialog"><span style="color:#e58137">“我负责什么？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“监督主线方案。”</span></p>
+<p class="dialog"><span style="color:#e58137">“你呢？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“监督战斗和备用方案。”</span></p>
+<p class="dialog"><span style="color:#e58137">“穆，你在吗？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“在。我负责监督侦察，保证任何意外一出现，我们第一时间就知道。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“穆，你怎么会在这儿！？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“我昨天跟你坐同一架飞机，泽。只是不同舱，进城也是不同的车。隐私上的防范措施。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“能见到你我很高兴！或者说，至少能听见你。”</span></p>
+<p class="dialog">眼镜把显示画面直接投进他眼里，泽逐一核对上面的各项数字。</p>
+<p class="dialog"><span style="color:#df74b1">"Fi le gei tau fa"</span>，他模仿着每场民本棋开赛前倒计时播报员的声音，喊了一句。</p>
+<p class="dialog">随后，他刻意收拢心神，让自己完全专注于那场即将开始的战斗。</p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-01.svg" alt="蓝色背景上的圆点、虚线与几何图形" title="蓝色背景上的圆点、虚线与几何图形" loading="lazy" decoding="async"></figure>
+<p class="dialog">无人机渐渐逼近议会大楼，屏幕上出现的无人机也越来越多，泽紧紧盯着屏幕。</p>
+<p class="dialog">二十个嘀嗒后，屏幕上那个暗黄色的三角形变成了一个更亮的黄色对勾。塔芬德尔按原定时间走上了阳台。</p>
+<p class="dialog">又过了三十个嘀嗒。</p>
+<p class="dialog"><span style="color:#df74b1">"mu gu gei tau fa"</span>，他轻声说。五十嘀嗒后开战。某种意义上，战斗早就开始了，但他等的那个时刻，是塔芬德尔抓住绳索的时刻。他想，那才是真正考验开始的时候。</p>
+<p class="dialog">又过了二十个嘀嗒。</p>
+<p class="dialog">突然，那个对勾又变回了暗黄色的三角形。</p>
+<p class="dialog">泽把视频画面放大。有人抓住了塔芬德尔，把他拽回了室内。</p>
+<p class="dialog">几乎就在同一刻，北极无人机开火了。</p>
+<p class="dialog">泽立刻听见登的声音在耳机里炸响。</p>
+<p class="dialog"><span style="color:#e58137">“我来查清目标出了什么事。泽，你来指挥战斗。”</span></p>
+<p class="dialog">泽下意识地点了点头。头戴设备自动把这个动作转成一个对勾图标，闪现在登和穆的显示画面上。</p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-02.svg" alt="点阵、虚线连接与红色叉号标记示意图" title="点阵、虚线连接与红色叉号标记示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">泽闷哼一声。他的无人机已经有三架被击中。</p>
+<p class="dialog"><span style="color:#df74b1">“规避机动，向敌机还击。所有受损无人机，只要还能动，就降落到地面装死。”</span></p>
+<p class="dialog">他意识到，北极人的侦察能力比他原先预想的要强。</p>
+<p class="dialog">就在那时，他的第四架无人机上方出现了一个叉号——那架本该去接目标的无人机。一个嘀嗒后，那架无人机从显示地图上彻底消失了。泽查看原始视觉画面：它被直接命中，在半空中炸开。</p>
+<p class="dialog">泽绝望地尖叫起来。他们此前几次任务里学来的规避技巧都不管用。看来这次任务要失败了——也许昆高培的信誉也会跟着一起完。</p>
+<p class="dialog">下一刻，耳机里传来穆急促的声音。</p>
+<p class="dialog"><span style="color:#00bc96">“换方案。所有人低飞，贴着楼房和树底下飞。穿过街道飞。那里是它们火力最弱的地方。然后我还有一招。”</span></p>
+<p class="dialog">泽点头，把指令转发给所有无人机。十个嘀嗒之内，四架完好可用的无人机全都降到接近地面的高度。另有一架受损的无人机——泽早已下令让它装死——本来就贴着地面，已经待了半分多钟。</p>
+<p class="dialog">突然，泽在视觉画面里看到，路灯和楼内的灯光全都开始混乱地闪烁。北极无人机搞不清对手在哪，开始朝四面八方开火。</p>
+<p class="dialog">他的无人机继续向前飞。第一架刚进入距总统官邸一百米以内，登就开口了。</p>
+<p class="dialog"><span style="color:#e58137">“让一架无人机撞在这个坐标上。”</span></p>
+<p class="dialog">楼的一侧出现了一个新的黄色三角形。泽立刻指挥无人机全速撞向那里。四个嘀嗒后，它撞了上去，激起一大团爆炸和烟雾。</p>
+<p class="dialog">又过了十个嘀嗒，黄色三角形变成了两个亮黄色的对勾。</p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-03.svg" alt="点位、虚线与勾叉标记示意图" title="点位、虚线与勾叉标记示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">泽有些困惑，但还是立刻做了唯一说得通的事。无人机飞得太低，绳索用不上。于是他把三架剩余无人机中的两架调到总统官邸正前方，减速停住。</p>
+<p class="dialog">两个对勾都变绿了。无人机重新加速，向前飞驰。泽指挥第三架无人机留在后面，向它能侦测到的一切北极无人机开火。</p>
+<p class="dialog">他查看画面。两架飞离的无人机背上，各有一人紧紧抓着。一个是塔芬德尔，另一个是他们的内线——他的助理。两人都披着隔热斗篷。干得好，登，泽心想。</p>
+<p class="dialog">泽继续紧盯着屏幕。不知怎的，明明希望渺茫，他们似乎真的做成了？</p>
+<p class="dialog">登清了清嗓子，开口说话。</p>
+<p class="dialog"><span style="color:#e58137">“这样不行”</span>，他低声说。<span style="color:#e58137">“我看到更多北极无人机在过来。它们更快，会追上来的。”</span></p>
+<p class="dialog">穆立刻回应。</p>
+<p class="dialog"><span style="color:#00bc96">“已经在办了。目标很快就会跳下无人机，无人机继续往前飞。会通知目标跑两百米到一条路上——不是离他们最近的那条路。我有辆车去接他们。运气好的话，等北极人搞清楚怎么回事，他们已经在几十公里外了。他们一到海边，就会有一架海上无人机过来，把他们带出红郡。”</span></p>
+<p class="dialog">泽叹了口气。<span style="color:#df74b1">“我信你，穆。”</span></p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-04.svg" alt="两个点的虚线指引与勾选标记示意图" title="两个点的虚线指引与勾选标记示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">泽重新坐回椅子上，叹了口气，对自己深感失望。他闭上眼。</p>
+<p class="dialog">一分钟后，第一条好消息：</p>
+<p class="dialog"><span style="color:#00bc96">“接人成功。”</span></p>
+<p class="dialog">又过了十分钟：</p>
+<p class="dialog"><span style="color:#00bc96">“我们的无人机在多利纳尔一处大型商业综合体降落。北极人正在合围。但愿这场搜捕能拖久一点。”</span></p>
+<p class="dialog">又过了三十分钟：</p>
+<p class="dialog"><span style="color:#00bc96">“我们的车平安到了海边。目标正在登上海上无人机。”</span></p>
+<p class="dialog">再过十分钟：</p>
+<p class="dialog"><span style="color:#00bc96">“北极人发觉上当了。他们正在扩大搜索范围。”</span></p>
+<p class="dialog">泽看着屏幕，此时画面上是那架海上无人机一路向西、缓慢艰难地驶离红郡海岸。</p>
+<p class="dialog">五十分钟后：</p>
+<p class="dialog"><span style="color:#00bc96">“目标已顺利抵达阿图里亚海岸。”</span></p>
+<hr class="rule">
+<p class="dialog"><span style="color:#df74b1">“实在抱歉，各位”</span>，泽低声说。<span style="color:#df74b1">“我彻底搞砸了。要不是穆不知怎么用一个全新的方案救了我们，这次就失败了，我们计划的其他事多半也都会跟着失败。”</span></p>
+<p class="dialog"><span style="color:#e58137">“欢迎见识真实的战场，泽”</span>，登答道。<span style="color:#e58137">“这跟民本棋不一样。有时候想赢，唯一的办法就是让思路整个跳出框框。不是把一整台计算机编码进滑翔机骨架里那种跳出框框，而是从控制台椅子上蹿起来、冲过去照对手脸上来一拳那种跳出框框。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那么……穆，你刚才到底做了什么？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“这里不是北极帝国，这里是红郡。那里有很多人暗暗支持我们，很多技术基础设施也还没完全转到北极控制之下。所以眼下，还能黑进一些东西。我从红郡的人手里拿到了一批管理员密码。用这些密码，我先控制了路灯，接着又征用了几十辆自动驾驶汽车。其实还布置了好几路诱饵，飞行器在好几个地方停了又起飞。这方案我们一开始就该用，只是——我和你一样，低估了北极侦察的力度。”</span></p>
+<p class="dialog"><span style="color:#e58137">“穆，这活儿干得真漂亮。”</span></p>
+<p class="dialog"><span style="color:#e58137">“但重要的是我们赢了。塔芬德尔安全到了阿图里亚。北极人丢了脸。现在全世界都知道，他们是可以被打败的。”</span></p>
+<p class="dialog">登顿了顿，又开口。</p>
+<p class="dialog"><span style="color:#e58137">“眼下，他们以为这不过是自由城的防务公司干的。但现在该轮到昆高培站出来，分走属于自己的那份功劳了。然后就看维里迪亚人愿不愿意让维里迪亚得到它应得的防务了。”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯拉开隔间的门，走了进去。五名法官已经坐在里面——能把这五个人找出来，莫夫和塞拉出了力，泽国黑进的那些监控摄像头更是帮了大忙。</p>
+<p class="dialog"><span style="color:#eb7a52">“那么，你想谈什么？”</span>，第一位法官问。</p>
+<p class="dialog">格拉迪亚斯坐下，随手拉上身后的隔间门。</p>
+<p class="dialog"><span style="color:#be9b00">“我打算对维里迪亚军方领导层提起诉讼。按照第十四条根本法，维里迪亚军方有义务保卫维里迪亚。从北林发生的事可以看出，他们完全没有做到。所以我的主张是：他们违法了，应该被免职。”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“这太荒唐了。没错，我们在北岸被打了个措手不及，输得很难看。但维里迪亚军方在艰难时局里已经尽了最大努力。我们不能就这么从外面进来，说我们不喜欢他们的干法，就把他们换掉，而我们连拿什么标准来衡量他们都说不清——”</span></p>
+<p class="dialog"><span style="color:#be9b00">“凯隆”</span>，格拉迪亚斯打断他。<span style="color:#be9b00">“今天的新闻你看了吗？”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“没看。得了吧，格拉迪亚斯，你知道法官不该读每日新闻，这是规矩。我们依据的是恒久的原则，不是被一群正在气头上的人推得东倒西歪。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“一个泽国人的小组飞进红郡，成功救出了总统的儿子。”</span></p>
+<p class="dialog">几乎立刻，另一位法官开口了。</p>
+<p class="dialog"><span style="color:#54a1f9">“所以你是想让我们用某个泽国人去换掉维里迪亚军方的领导层？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“对，正是。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“抱歉，这太离谱了。这不是合议庭该干的事。维里迪亚是民主国家。掌管军队、有权改变军队构成的是议会。所以你要搞你那个疯狂的计划，就该去找他们谈。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“得了吧，塞尔沃特，你跟我一样清楚，议会已经烂了。他们要么已经待在北极人精心炮制的宣传气泡里，要么收了贿赂，要么因为北极人黑进了我们的监控系统，自己和家人正被威胁。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我们是合议庭。我们没有权力径直去判定整个议会都腐败了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“其实你有。第二十一条根本法：维里迪亚政府官员必须以诚实、善意、不受不当影响的方式履行职责；一旦受到任何不当影响，必须上报并辞职。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“所以你还想把议会也一起免职？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“如果有必要，对。”</span></p>
+<p class="dialog">格拉迪亚斯看得出自己说不进去。于是他决定换一条路试。</p>
+<p class="dialog"><span style="color:#be9b00">“你们有谁的家人住在北岸吗？”</span></p>
+<p class="dialog">第三位法官开口了。</p>
+<p class="dialog"><span style="color:#df74b1">“我有，一个儿子。他在大梅港——那是唯一一个他们还在封锁、不许人离开的地方。”</span></p>
+<p class="dialog">凯隆愤怒地转向他。</p>
+<p class="dialog"><span style="color:#eb7a52">“你提这个干什么？格拉迪亚斯自己说了，我们履行职责不能受不当影响。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“维里迪亚有6%的人口住在北岸。每个人大约有十位近亲——父母、兄弟姐妹、子女、配偶、其他近亲、共同家长。那么你们五个人加起来就是五十位，所以按统计，你们当中总共该有三名亲属在北岸。如果你们一个都没有，那你们就没有感受到许多其他维里迪亚人正在感受的东西。也就是说，你们的利益是错位的。你们错位到了麻木自满那一边——可这难道不也是一种不当影响吗？”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“那些法律不是这么运作的，这方面有先例。”</span></p>
+<p class="dialog"><span style="color:#eb7a52">“那<em>你</em>在北岸有家人吗？如果有，那<em>你</em>才是受不当影响的那一个。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“这回是你不懂法了。原告本来就允许与案件结果有利害关系——事实上，是必须有利害关系。这个法律术语叫<em>诉讼资格</em>。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“而且没错，我有三个孩子在那里。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“听着，格拉迪亚斯。再说一遍，维里迪亚是民主国家。我们不会因为一帮泽国小天才救了个王子、你又觉得自己比整个议会更聪明、道德更纯洁，就对着我们的民主跺脚撒泼。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“就算我们真这么干，你也想想程序。一个案子从立案到结案最少要三十天，前提是法官不要求延期。然后他们还能上诉，可以上诉多次。上诉可以更快，但只有从第三轮起才行。所以这一整套要走完得花好几个月。而在这期间，维里迪亚会陷入混乱，北极人只要扑进来接管就行了。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“所以我们不干。”</span></p>
+<p class="dialog">格拉迪亚斯环顾四周。另外四名法官里有三人正跟着塞尔沃特的话点头。剩下那位法官泽温，看起来对格拉迪亚斯同情得多——无疑很大程度上是因为他也有个儿子困在北林——但他似乎不太愿意把话说出口。</p>
+<p class="dialog"><span style="color:#be9b00">“明白了”</span>，格拉迪亚斯轻声说。如果这一批法官对他的方案如此敌视，那他真立案后随机抽到的那批法官，几乎肯定也会相当敌视。他得换个策略。</p>
+<p class="dialog">他拉开隔间的门，慢慢走了出去。</p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-25.html">上一章 · 第二十五章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-27.html">下一章 · 第二十七章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Zei, Bai, Gladias and Den were sitting in a small enclosed cabin in an aeroplane, with Zei and Bai facing forward and Gladias and Den facing backward. All four were looking silently out the window, enjoying the view of a mostly flat, green landscape. The main visible features were a row of small mountains and the city of Meldan further in the background.</p>
+<p class="dialog">An announcement alarm buzzed. The four of them snapped out of their trance-like state, and prepared to listen.</p>
+<blockquote><p>jo hen jei fe fei go de di mei dan du</p></blockquote>
+<p class="dialog"><span style="color:#df74b1">"Your turn to translate, Gladias!"</span>, Zei prodded.</p>
+<p class="dialog">Gladias scrambled in his mind to understand the words quickly enough to give the answer before the next sentence began. After a few moments, he blurted out:</p>
+<p class="dialog"><span style="color:#be9b00">"Everyone, welcome to Meldan, Veridia."</span></p>
+<blockquote><p>ti zun no tei li ze fo fi shi ci cin ho li ze ci bia tei gei ka fiu den min ba fia zui</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"The local time is 74,000 and the temperature is seven degrees. After a short time, the flying machine will descend to the ground."</span></p>
+<blockquote><p>ti tei li dzai hen fe lo kin fe hai bun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"Now is a great time to look at the beauty outside."</span></p>
+<blockquote><p>hai ka sho kin ce fe fei go de bun ji dze kai zui liu</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"Outside right now, you can see Veridia's beautiful earth sheet of green plants."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Landscape of green plants"</span>, Zei corrected gently.</p>
+<blockquote><p>biu ka di ge le bo gai dei li lia</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"On the right, there are the Gelebor mountains."</span></p>
+<blockquote><p>cen hai ka ge le bo gai dei de dziu hai ka ce kin fe di mei dan du ci ti li sa dzu du fe fei go</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"Far outside, continuing beyond the Gelebor mountains, you can see the Meldan city. This is the capital city of Veridia."</span></p>
+<blockquote><p>di mei dan du li bai</p><p>ci di mei dan du de jan zi li pa pi pa fi ha</p><p>ci dzen fe gi hie pen</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"Meldan is a large city. The population of Meldan is 1.1 million. It has many different districts."</span></p>
+<blockquote><p>dzu ka kin ce fe bia gai dei</p><p>ci fia sai pen ka dan fe gi jan</p><p>ci sei sai pen ka jen bin pei de pen li pai</p><p>ci mui dau fe ti li cin pin cu bun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"In the center there is a small mountain. In the lower half there are many people's homes. In the upper half part of the government works. Hiking up it is happy and beautiful."</span></p>
+<blockquote><p>gai dei de zei biu ka pai hui pen li bia</p><p>ci pai hui pen fei ka fei go de gi bai pai hui li lia</p><p>ci sa dzu pai hui li dzen fe ten min de bin dai cu man jei cu su kun gau</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"East of the mountain, there is the business district. In the business district there are many large companies. The main industries include computer software, finance and health protection."</span></p>
+<blockquote><p>gai dei de zei gei ka di ka lia mai pen li lia</p><p>ci ti pen li lu fe bai kai zun</p><p>ko ti dzen fe gi pui gau ji dan</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"South of the mountain, there is Kalimar district. This part looks like a forest, but it contains many hidden homes."</span></p>
+<blockquote><p>gai dei de zei dzun ka gi dan pen li lia</p><p>co ti ka gi jan li san cu sun cu mo</p><p>ci ti ju fe gi kai de sai hui cu gi dau kin zun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"West of the mountain, there is a large residential district. Many people sleep, learn and eat here. It has many categories of food and many go-and-see places."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Tourist attractions."</span></p>
+<blockquote><p>ti li tin bia pen fe di mei dan du de ce kin ji gi mui sun jui</p><p>ci di mei dan du fei ka ji gi shan jin tei ka jan ki su</p><p>te zen hu ka ki kia sin fe ti du</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"This was only a small part of the many interesting things in Meldan. Even if a person lives for years in Meldan, they will not know the city completely."</span></p>
+<blockquote><p>jie fe lo cin pin fe lo di mei dan du cu fei go li bun</p></blockquote>
+<p class="dialog"><span style="color:#be9b00">"We hope you enjoy Meldan and the beauty of Veridia."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Well done. Only two months and you're almost a local already."</span></p>
+<p class="dialog">Zei paused for a moment, and then opened his mouth again to speak slowly.</p>
+<p class="dialog"><span style="color:#df74b1">"ci jie fe lo cin pin fe di pa fo gai du"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I enjoyed Pafogai Du very much."</span></p>
+<p class="dialog"><span style="color:#df74b1">"I hope you come back."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Of course I will!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Wait, I just realized ... Pafogai means 'fourteen stone'? Where did that name come from?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Think of the periodic table."</span></p>
+<hr class="rule">
+<p class="dialog">The aeroplane came to a stop. Through the window, they could see over a dozen large autobuses and cars approaching.</p>
+<p class="dialog"><span style="color:#e58137">"The larger black one is ours. We'll exit last, for our privacy"</span>, Den stated.</p>
+<p class="dialog">Zei, Gladias and Bai nodded. The four of them reclined back in their seats and waited.</p>
+<p class="dialog">About ten minutes later, the door to their cabin automatically opened. The four of them immediately stood up, grabbed their carry-on bags from under their seats, and walked toward the front of the aeroplane. As they passed through the aeroplane, they could see all of other cabin doors already open and empty, with used blankets and empty bottles and cups littering many of the tables and seats.</p>
+<p class="dialog">They exited the aeroplane though a doorway that was directly connected to a staircase, and then to a narrow room that was clearly also the inside of an autobus. The room had an entrance, which they had just passed through, an exit on the other side, and two passage gates blocking the way in the middle.</p>
+<p class="dialog">Zei and Gladias stepped forward first. They each put their watches against the green circle on the side of the gate they were passing through, and looked at the camera in front. A few ticks later, almost in unison, both gates announced: <span style="color:#db8916">"Welcome to Veridia."</span></p>
+<p class="dialog">The gates opened, and Zei and Gladias stepped through. The exit at the other end of the room led straight into the interior of one of the large black cars that they had seen earlier through the window of the aeroplane. They both stepped in, and found another man already sitting inside.</p>
+<p class="dialog"><span style="color:#be9b00">"Senator Verdow!"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Welcome home, Gladias!"</span>, Verdow replied, with a facial expression and tone warmer than Gladias had ever heard him. He immediately looked to Gladias's side. <span style="color:#a38af2">"And you must be Zei."</span></p>
+<p class="dialog"><span style="color:#df74b1">"It's a pleasure to meet you, Senator."</span></p>
+<p class="dialog">As Zei and Gladias were sitting down, Zei could already hear the footsteps of Bai and Den approaching. They also stepped through the opening and entered the car.</p>
+<p class="dialog"><span style="color:#a38af2">"And you must be Bai and Den!"</span></p>
+<p class="dialog"><span style="color:#ed756b">"We are indeed"</span>, Bai replied.</p>
+<p class="dialog"><span style="color:#a38af2">"Well, let's sit down. We have a lot of work to do."</span></p>
+<p class="dialog">All four of them sat down in their seats. The opening linking the car to the entrance room closed. Almost immediately they could feel the car start to accelerate.</p>
+<p class="dialog"><span style="color:#a38af2">"So first of all, Gladias, I have some very good news for you."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Oh, what is that?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Looks like we know where Lily is."</span></p>
+<p class="dialog">Gladias's eyes opened.</p>
+<p class="dialog"><span style="color:#a38af2">"Seila pushed really hard and got in touch with me, she told me the whole situation. Zven stayed in touch with Lily, and she admitted to him where she was: she had crossed over into Arctic-occupied territory and was in Northglade."</span></p>
+<p class="dialog"><span style="color:#a38af2">"We then scanned through all the feeds the security cameras that you so brilliantly suggested the Dzegojan should hack into. After a few days, we found her. She is in some kind of boarding school that the Arctics set up. About one kilometer away from the GPH."</span></p>
+<p class="dialog">Gladias sighed. <span style="color:#be9b00">"At least we know where she is. It's going to be difficult to get her out of Northglade, but at least that's also the place Febric and Hreda are, so we can get them all together."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Indeed. If you really wanted to, you could even go to Northglade now - though the doors to the GPH are still closed."</span></p>
+<p class="dialog"><span style="color:#a38af2">"The Arctics recently started allowing communication and travel both ways between Northshore and the rest of Veridia. They opened up clinics in Northglade offering some of their most advanced treatments, for both longevity and performance enhancement. Looks like they've decided to try to get Veridians to join the Arctic Empire voluntarily, by offering us their shiny technology."</span></p>
+<p class="dialog"><span style="color:#df74b1">"It's a good strategy."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What was your line, Zei? Manipulating someone to do something by just showing them how it's in their interest, is just convincing?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"That's definitely how Ephelion would see it. Of course, Sylka would get upset and say they're hiding the hidden cost - if you can live longer but it depends on ongoing infusions of proprietary Arctic medicine, you become dependent on them for your life, you become their slave. Though Ephelion would say that being dead - being inside a coffin where you are not free to move a single muscle or think a single thought - is the worst slavery of all. And that that's not just true for a person, it's true for a civilization."</span></p>
+<p class="dialog"><span style="color:#a38af2">"If we want Veridia to succeed and thrive, we have to find the synthesis. We can admit that the Arctics do some things very well, and that their striving for a radically better future can be healthy. Veridia's north star cannot be to just stay the same as we are but with less greed and a better social fabric. We need to have actual progress, and take the good parts of it without the bad. We need to recognize success, and reward it."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But first, we have to give ourselves breathing room. And that means defeating the Arctics in Northshore."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Exactly. And to do that, we have to be willing to learn from the outside - learn from our enemies in the Arctic Empire, and from our friends in Freetown and Dzego."</span></p>
+<p class="dialog">The car slowly came to a stop. A few moments later, the doors opened, leading straight into the inside of what looked to be a government-run hotel.</p>
+<p class="dialog"><span style="color:#a38af2">"Get a good sleep, friends. Zei, Den, the two of you have a big day tomorrow morning. And then once that's done, we'll meet and talk about our big plans. Veridia ba fau gie."</span></p>
+<p class="dialog">Gladias and Zei stepped out of the car first. Almost immediately, Gladias could see a woman waiting in the far corner of the room. She turned toward him, and began running toward him with outstretched arms.</p>
+<p class="dialog">It was Seila.</p>
+<p class="scene-break">Meldan, Veridia</p>
+<p class="dialog">Zei sat down on a chair, in front of a console that looked remarkably similar to the consoles on which he had played all of his championship Minpentai games. The main difference that he could see was that this time, there were no anti-cheating detection drones buzzing around.</p>
+<p class="dialog">He put on the earpiece and glasses, and spoke into the microphone.</p>
+<p class="dialog"><span style="color:#df74b1">"Can you hear me, Den?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Yep, loud and clear. I think I'm in the room right below you."</span></p>
+<p class="dialog">Zei playfully stomped his feet.</p>
+<p class="dialog"><span style="color:#df74b1">"Can you hear that?"</span></p>
+<p class="dialog"><span style="color:#e58137">"I'm only hearing your voice through the earpiece."</span></p>
+<p class="dialog"><span style="color:#df74b1">"I guess your soundproofing is very good!"</span></p>
+<p class="dialog"><span style="color:#e58137">"Okay, Zei, let's go through the whole operation again."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Location: Redshire, presidential residence. Goal: rescue our target - Tafindel, the president's son. Strategy: our man on the inside asks the target to step out onto the balcony. We fly in, drop down a rope for him to tie around his waist and hold on to, fly out before the Arctics can do anything."</span></p>
+<p class="dialog"><span style="color:#e58137">"Exactly, that's the mainline plan. Now what are the contingency plans?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"If Arctics appear - soldiers or drones - we shoot them. If he doesn't step out onto the balcony, no backup plan, we're screwed - our drones won't survive if they have to land directly on the building. If the drone with the rope gets shot down, we have a second drone, and potentially even the other combat drones could pick the target back up, though they're not as well-designed for it. The only dangerous window is if the drone gets shot down within a few ticks after it picks him up - too soon for the backup drones to swoop in and grab him before he hits the ground."</span></p>
+<p class="dialog"><span style="color:#e58137">"What's my responsibility?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Supervising the mainline plan."</span></p>
+<p class="dialog"><span style="color:#e58137">"What's yours?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Supervising the combat and the contingency plans."</span></p>
+<p class="dialog"><span style="color:#e58137">"Mu, are you here?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"I am indeed. I'm supervising the surveillance, I'll make sure we learn about anything unexpected as soon as possible."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Mu, how did you get here!?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"I was on the same aeroplane as you yesterday, Zei. Just in a different cabin, and different car going into the city. Privacy precautions."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Well I'm happy to see you! Or, at least, hear you."</span></p>
+<p class="dialog">Zei checked the various numbers in the display that was being blasted into his eyes through the glasses he was wearing.</p>
+<p class="dialog"><span style="color:#df74b1">"Fi le gei tau fa"</span>, he exclaimed, mimicking the voice of the announcer that would count down to the beginning of each Minpentai game.</p>
+<p class="dialog">He then consciously switched his mood to be entirely focused on the battle that was very soon to begin.</p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-01.svg" alt="蓝色背景上的圆点、虚线与几何图形" title="蓝色背景上的圆点、虚线与几何图形" loading="lazy" decoding="async"></figure>
+<p class="dialog">Zei stared intently at the screen as the drones came closer to the parliament building and more drones appeared onscreen.</p>
+<p class="dialog">Twenty ticks later, the dark yellow triangle onscreen turned into a brighter yellow checkmark. Tafindel stepped out onto the balcony, exactly on schedule.</p>
+<p class="dialog">Thirty more ticks passed.</p>
+<p class="dialog"><span style="color:#df74b1">"mu gu gei tau fa"</span>, he said softly. Battle starts in fifty ticks. In some sense, the battle had started already, but the moment he was waiting for was the moment Tafindel would grab hold of the rope. That is when the real challenge would begin, he thought.</p>
+<p class="dialog">Twenty more ticks passed.</p>
+<p class="dialog">Suddenly, the checkmark turned back into a dark yellow triangle.</p>
+<p class="dialog">Zei zoomed in to the video feed. Someone had grabbed Tafindel, and pulled him back inside.</p>
+<p class="dialog">And almost at that same moment, Arctic drones started shooting.</p>
+<p class="dialog">Zei could immediately hear Den's words blasting through his earpiece.</p>
+<p class="dialog"><span style="color:#e58137">"I'll figure out what happened to the target. Zei, supervise the battle."</span></p>
+<p class="dialog">Zei subconsciously nodded. The headset automatically translated the nod into a checkmark icon, which flashed onto Den and Mu's displays.</p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-02.svg" alt="点阵、虚线连接与红色叉号标记示意图" title="点阵、虚线连接与红色叉号标记示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">Zei groaned. Three of his drones had already been hit.</p>
+<p class="dialog"><span style="color:#df74b1">"Evasive action, return fire at hostiles. All damaged drones, if you are still functional, descend to ground and play dead."</span></p>
+<p class="dialog">Arctic surveillance was more powerful than he had thought, he realized.</p>
+<p class="dialog">At that moment, an X appeared above a fourth one of his drones - the drone that had been intended to grab the target. A tick later, that drone disappeared completely from the display map. Zei checked the raw visual feed. It had been directly hit, and exploded in midair.</p>
+<p class="dialog">Zei screamed with despair. The evasion tricks that they had learned from their previous missions were not helping. It looked like the mission was going to fail - and perhaps with it, the Kungaupei's credibility.</p>
+<p class="dialog">The next moment, through his earpiece, he heard Mu speaking intensely.</p>
+<p class="dialog"><span style="color:#00bc96">"New plan. Everyone fly low, under the buildings and trees. Fly through the streets. That's where their firing ability is weakest. Then I have a trick up my sleeve."</span></p>
+<p class="dialog">Zei nodded, and passed along the instruction to all drones. Within ten ticks, the four surviving and fully functional drones were all near ground level. An additional damaged drone, which Zei had instructed to play dead, was already at ground level - it had been there for over half a minute.</p>
+<p class="dialog">Suddenly, Zei could see in his visual feed the streetlights and the lights inside the buildings all blinking chaotically. Arctic drones started firing in all directions, confused about where their adversaries were.</p>
+<p class="dialog">His drones kept flying forward. As soon as one got within a hundred meters of the presidential residence, Den spoke up.</p>
+<p class="dialog"><span style="color:#e58137">"I need a crash at these coordinates."</span></p>
+<p class="dialog">A new yellow triangle appeared on the side of the building. Zei immediately directed his drone to crash there at full speed. Four ticks later, it did, and there was a large explosion and smoke.</p>
+<p class="dialog">Ten ticks after that, the yellow triangle turned into two bright yellow checkmarks.</p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-03.svg" alt="点位、虚线与勾叉标记示意图" title="点位、虚线与勾叉标记示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">Zei was confused, but immediately did the only thing that made sense. The drones were too low for the rope to work. Instead, he directed two of the three remaining drones to slow to a stop, right in front of the presidential residence.</p>
+<p class="dialog">Both checkmarks turned green. The drones accelerated again, and sped ahead. Zei directed the third drone to hold back, and fire on all Arctic drones that it could detect.</p>
+<p class="dialog">He checked the visual. On each of the two drones that were flying off, someone was holding on tightly to their backs. One was Tafindel, and the other was their man on the inside - his assistant. They were both wearing thermal cloaks. Good job Den, Zei thought.</p>
+<p class="dialog">Zei continued to watch the screen intently. Somehow, against all odds, they seemed to have done it?</p>
+<p class="dialog">Den cleared his throat and began to speak.</p>
+<p class="dialog"><span style="color:#e58137">"This is not going to work"</span>, he muttered. <span style="color:#e58137">"I see more Arctic drones coming in. They are faster, they will catch up."</span></p>
+<p class="dialog">Mu immediately responded.</p>
+<p class="dialog"><span style="color:#00bc96">"Already on it. The targets will jump off the drones soon, the drones will keep going. The targets will be told to run two hundred meters to a road - NOT the road closest to them. I have a car coming to pick them up. With luck, they will be tens of kilometers away before the Arctics know what's going on. Once they get to the shore, a sea drone will come and take them out of Redshire."</span></p>
+<p class="dialog">Zei sighed. <span style="color:#df74b1">"I trust you, Mu."</span></p>
+<figure class="fig"><img src="../assets/images/chapter-26-fig-04.svg" alt="两个点的虚线指引与勾选标记示意图" title="两个点的虚线指引与勾选标记示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog">Zei sat back down on his chair and sighed, feeling deep disappointment at himself. He closed his eyes.</p>
+<p class="dialog">A minute later, the first good news:</p>
+<p class="dialog"><span style="color:#00bc96">"Pickup successful."</span></p>
+<p class="dialog">Another ten minutes later:</p>
+<p class="dialog"><span style="color:#00bc96">"Our drones touched down at a large shopping complex in Dolinar. Arctics are closing in on them. Hopefully the manhunt will take as long as possible."</span></p>
+<p class="dialog">Another thirty minutes later:</p>
+<p class="dialog"><span style="color:#00bc96">"Our car reached the shore without incident. Targets now entering the seaborne drone."</span></p>
+<p class="dialog">Ten more minutes after that:</p>
+<p class="dialog"><span style="color:#00bc96">"The Arctics realized that we tricked them. They are broadening their search."</span></p>
+<p class="dialog">Zei watched the screen, which was at this point showing the slow grinding progress of the seaborne drone making its way westward away from the Redshire coast.</p>
+<p class="dialog">Fifty minutes after that:</p>
+<p class="dialog"><span style="color:#00bc96">"The targets have successfully arrived on the coast of Arturia."</span></p>
+<hr class="rule">
+<p class="dialog"><span style="color:#df74b1">"I'm so sorry guys"</span>, Zei muttered softly. <span style="color:#df74b1">"I failed completely, and if it weren't for Mu somehow saving us with a completely new plan, we would have failed, and probably everything else we're planning would have failed too."</span></p>
+<p class="dialog"><span style="color:#e58137">"Welcome to real life warfare, Zei"</span>, Den replied. <span style="color:#e58137">"It's not like Minpentai. Sometimes the only way to win is to think completely outside the box. Not outside the box as in figuring out some clever way to encode an entire computer inside of a glider structure, but outside the box as in, jumping out of your console chair and running over and bashing the other player in the face."</span></p>
+<p class="dialog"><span style="color:#df74b1">"So ... Mu, what did you do there?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"This is not the Arctic Empire, this is Redshire. There are lots of people there who quietly support us, and a lot of the technical infrastructure has still not been shifted over to full Arctic control. So for the moment, it's still possible to break into some things. I have a bunch of admin passwords that people from Redshire gave me. I used them to first take control of the streetlights, and then to commandeer a few dozen automated cars. There were actually multiple decoys, the planes stopped and restarted in a few places. We should have done this plan all along, but - I underestimated the extent of Arctic surveillance as much as you did."</span></p>
+<p class="dialog"><span style="color:#e58137">"It was truly an amazing job, Mu."</span></p>
+<p class="dialog"><span style="color:#e58137">"But what matters is that we won. Tafindel is safe in Arturia. The Arctics have been humiliated. The whole world now knows that they can be defeated."</span></p>
+<p class="dialog">Den paused, and then began to speak again.</p>
+<p class="dialog"><span style="color:#e58137">"For the moment, they think it's just Freetown's defense companies. But now it's time for the Kungaupei to stand up and take its share of the credit. And then see if the Veridians are up for giving Veridia the defense that it deserves."</span></p>
+<hr class="rule">
+<p class="dialog">Gladias slid open the door to the booth, and stepped in. Five judges that Mov and Seila had helped to identify - with significant help from surveillance cameras that had been backdoored by Dzego - were already sitting inside.</p>
+<p class="dialog"><span style="color:#eb7a52">"So what is it that you wanted to talk about?"</span>, the first judge asked.</p>
+<p class="dialog">Gladias sat down, and slid the booth door behind him.</p>
+<p class="dialog"><span style="color:#be9b00">"I am planning to open a case against the Veridian military leadership. Under the fourteenth Ground Law, the Veridian military is required to defend Veridia. As we have seen from what happened in Northglade, they have completely failed to do this. And so I am arguing that they have broken the law, and should be fired."</span></p>
+<p class="dialog"><span style="color:#eb7a52">"That's crazy. Yes, we were caught by surprise in Northshore and lost pretty badly. But the Veridian military are doing the best job they can in a difficult time. We can't just come in from the outside and say we don't like how they're doing their job and replace them, when we don't even know what standard we're comparing them to-"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Caeron"</span>, Gladias interrupted. <span style="color:#be9b00">"Did you see in the news what happened today?"</span></p>
+<p class="dialog"><span style="color:#eb7a52">"I did not. Come on, Gladias, you know it's a rule that judges should not read the daily news. We're here to apply timeless principles, not get swayed in every direction by crowds of people getting angry in the moment."</span></p>
+<p class="dialog"><span style="color:#be9b00">"A Dzegojan group flew into Redshire and successfully rescued the president's son."</span></p>
+<p class="dialog">Almost immediately, another judge began to reply.</p>
+<p class="dialog"><span style="color:#54a1f9">"So you want us to replace the Veridian military leadership with some Dzegojan?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yes, exactly."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I'm sorry, this is insane. That's not the court's job. Veridia is a democracy. The people in charge of the military, who can change the composition of the military, are the parliament. So if you want to try your crazy scheme, you should go talk to them."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Come on, Sewlert, you know as well as I do that the parliament is corrupt. They're either already inside an Arctic-engineered bubble of propaganda, or bribed, or have them or their families threatened thanks to the Arctics having broken into our surveillance systems."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"We're a court. We don't have the right to just go and decide the entire parliament is corrupt."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Actually, you do. Twenty-first Ground Law. Veridian government officials are required to perform their duties honestly, in good faith and without undue influence, and report and resign if any undue influence befalls them."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"So you want us to fire the parliament too?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"If necessary, yes."</span></p>
+<p class="dialog">Gladias could feel that he was not getting through. So he decided to try a different line.</p>
+<p class="dialog"><span style="color:#be9b00">"Do any of you have family in Northshore?"</span></p>
+<p class="dialog">A third judge spoke up.</p>
+<p class="dialog"><span style="color:#df74b1">"I do, a son. He's in the GPH, that's the one place that they are still blockading and not letting people leave from."</span></p>
+<p class="dialog">Caeron turned angrily toward him.</p>
+<p class="dialog"><span style="color:#eb7a52">"Why are you bringing this up? Gladias said it himself, we're required to perform our duties without undue influence."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Six percent of the Veridian population is in Northshore. Each person has about ten close family members - parents, siblings, children, spouse, other close relations, co-parents. So among the five of you, that's fifty total, so statistically, there should be three of your family members total in Northshore. If you have none, then you're not feeling something that many other Veridians are feeling. So your interests are misaligned. You're misaligned toward compacency, but is that not also a form of undue influence?"</span></p>
+<p class="dialog"><span style="color:#eb7a52">"That's not how those laws work, there are precedents about it."</span></p>
+<p class="dialog"><span style="color:#eb7a52">"Do <em>you</em> have family in Northshore? If so, then <em>you</em> are the one with the undue influence."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Now you're getting the law wrong. Plaintiffs are allowed to have a stake in the outcome - in fact, they're required to. The legal term for that is <em>standing</em>."</span></p>
+<p class="dialog"><span style="color:#be9b00">"And yes, I have three children there."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Look, Gladias. Again, Veridia is a democracy. We are not going to stomp our feet over our democracy just because a bunch of Dzego-man whiz kids rescued a prince and you think you're smarter and more morally pure than the entire parliament."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"And even if we did, just think about the procedure. A case takes a minimum of thirty days from start to finish, and that's if the judges don't decide that it needs to take longer. And then they can appeal, multiple times. Appeals can be shorter, but only from the third round. So it will take months for all this to resolve. And in the meantime, Veridia will be in chaos, and the Arctics will just swoop in and take over."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"So we're not doing this."</span></p>
+<p class="dialog">Gladias looked around. Three of the other four judges were nodding along to what Selwert was saying. The remaining judge, Zevin, seemed much more sympathetic to Gladias - no doubt in no small part because he also had a son stuck in Northglade - but he did not seem to feel comfortable expressing his opinion.</p>
+<p class="dialog"><span style="color:#be9b00">"Understood"</span>, Gladias said softly. If this sample of judges was that hostile to his pitch, the sample of judges that he would get if he launched a real case would almost certainly be quite hostile too. He needed a different strategy.</p>
+<p class="dialog">He slid open the door to the booth, and slowly exited.</p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-25.html">上一章 · 第二十五章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-27.html">下一章 · 第二十七章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第二十六章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第十七章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第十七章 · Chapter 17 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-16.html">
+  <link rel="next" href="chapter-18.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="17">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第十七章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第十七章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 17</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年果月11日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Fruitmoon 11</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯沿着一条两侧树荫覆盖的小路往前走，前方是那座巨大的圆形议会大厦。</p>
+<p class="dialog">走到大厦的一扇侧门，他把手表往那个绿色圆圈上一贴。</p>
+<p class="dialog">圆圈嗡地响了一声。</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: green; margin: -20px; border-radius: 10px; padding: 10px"><table><thead><tr><th>维里迪亚议会</th></tr></thead><tbody><tr><td>邀请凭证已验证</td></tr></tbody></table></div></div>
+<p class="dialog">门开了。格拉迪亚斯走进去，跟着手表转达的指示往前走：向前，右转，再向前，左边第三扇门。</p>
+<p class="dialog">格拉迪亚斯走到那扇门前，又贴了一下手表。</p>
+<p class="dialog">门开了。</p>
+<p class="dialog">屋里有个穿维里迪亚议员长袍的男人。</p>
+<p class="dialog"><span style="color:#a38af2">“格拉迪亚斯，谢谢你跑这一趟！”</span>参议员高声说。</p>
+<p class="dialog"><span style="color:#be9b00">“也谢谢您肯见我，韦尔多参议员！”</span></p>
+<p class="dialog"><span style="color:#a38af2">“请坐。”</span></p>
+<p class="dialog">一台机器人滑进房间。</p>
+<p class="dialog"><span style="color:#26a9f1">“jie mo kai tu jie hei ja ma？”</span>机器人问。</p>
+<p class="dialog">格拉迪亚斯愣了一下，有些吃惊。</p>
+<p class="dialog">韦尔多笑了。</p>
+<p class="dialog"><span style="color:#a38af2">“几个月前我调了设置，让它这么做。算是个小提醒：这世上还有别的国家，而且它们也很重要。”</span></p>
+<p class="dialog">韦尔多在机器人的屏幕上点了几下，把屏幕转向格拉迪亚斯。</p>
+<p class="dialog">屏幕上全是泽国语。格拉迪亚斯一脸茫然，目光四处游移。</p>
+<p class="dialog"><span style="color:#a38af2">“哦，想要水就说 ja，想要茶就说 kai ja，字面意思就是‘植物水’。”</span></p>
+<p class="dialog">格拉迪亚斯点了 kai ja。要是真在泽国待上几个月，不如早点适应，先从喝茶开始——顺便记住本地话怎么说。机器人嘀了一声，表示收到订单，然后悄无声息地滑开。房门短暂地开了一下，机器人出去了。</p>
+<p class="dialog"><span style="color:#be9b00">“所以您觉得我该去泽国？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“你显然很聪明。你们的秘密会议说了什么，我当然不知道，但从听证会上你说的那些话，还有你几年前最初递交给掌舵会的申请来看，我觉得你是个善良又聪明的人。我们国家需要像你这样的人多出来做事。当掌则人是不错，可话又说回来，你也就是一千多人里的一个。我觉得去泽国亲身经历一番，再带点东西回来，可能更有意义。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“您觉得是好主意，我就乐意去。可到了那边该找谁聊？这才是我今天想听您意见的地方。”</span></p>
+<p class="dialog">格拉迪亚斯故意没提泽——不是想隐瞒这层间接关系，而是想先听听韦尔多完全独立的判断。</p>
+<p class="dialog"><span style="color:#a38af2">“我关系最硬的是他们那边一些作家和音乐人。”</span>他说着，轻轻笑了。<span style="color:#a38af2">“不过我也认识几个他们政府里的人，尤其是安全和卫生部门。我把联系方式发给你，再跟他们打个招呼。别只停在这些人身上，但我想他们能帮你开个头。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“多谢，那太有帮助了！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那边的人我只间接认识两个；我妻子在自由城经济研究所偶遇过他们。泽和白，两人都下民本棋。”</span></p>
+<p class="dialog">韦尔多睁大了眼睛。<span style="color:#a38af2">“说实话，你手上的门路可能比我还硬。你看泽国的民本棋比赛就知道，那些棋手，还有训练他们的人，明显都是顶尖的。要是让我找人护着我对付北极人，比起泽国正规军，我几乎更信他们。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“泽和白水平有多高？打进过什么锦标赛吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“塞拉上次跟我说，泽赢了半决赛，然后红郡被入侵，决赛就取消了。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“半决赛？是市级那种吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“是全国赛。”</span></p>
+<p class="dialog">韦尔多盯着他，又惊又喜。</p>
+<p class="dialog"><span style="color:#a38af2">“那你的关系肯定比我强。等你回来，可得跟我多讲讲泽国！”</span></p>
+<p class="dialog"><span style="color:#a38af2">“总之，我把刚才提到的那几位介绍给你，等你过去就能见着他们。多听几种说法总没坏处。”</span></p>
+<p class="dialog">格拉迪亚斯感激地点点头。</p>
+<p class="dialog"><span style="color:#a38af2">“哦，对了，说到多听几种说法，图谱资助的一位理事马上就要来见我。你也想跟他聊聊吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“聊什么？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“哦，聊他的工作，聊他对图谱资助的看法，当然还有泽国。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“行，那就聊聊。”</span></p>
+<hr class="rule">
+<p class="dialog">几分钟后，门开了，另一个男人走进来。他穿着维里迪亚的隐私袍，但没戴面罩和兜帽。</p>
+<p class="dialog"><span style="color:#a38af2">“贝尔戈尔，又见面了，真好！”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我也很高兴见到你，韦尔多！”</span></p>
+<p class="dialog"><span style="color:#a38af2">“来认识一下格拉迪亚斯，他是掌则人。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“幸会，贝尔戈尔。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“幸会，格拉迪亚斯！”</span></p>
+<p class="dialog"><span style="color:#a38af2">“格拉迪亚斯在考虑近期去泽国。我们想，也许你可以多给他讲讲图谱资助，再就他在泽国该做什么、该学什么给他些建议。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“行，乐意之至。你对图谱资助怎么运作，了解多少？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“老实说，不太了解。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“那太好了。”</span></p>
+<p class="dialog">他掏出手持终端，按了几个键。屏幕上展开一张图，他拿给格拉迪亚斯看。</p>
+<figure class="fig"><img src="../assets/images/chapter-17-fig-01.svg" alt="空气传播疾病的防治措施及占比" title="空气传播疾病的防治措施及占比" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#ed756b">“这是空气传播疾病防治的子图。图上每一个节点，密码学网络都会随机抽一个委员会，由它决定这个节点正下方那些边的权重。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“所以它的安全性和合议庭、掌舵会是一个路子。现在给资助配上这么一套东西尤其重要——北极人刚刚对二次方资助发动了和蓝鲸一样的那套攻击，规模却是十倍；至于更传统的那种分配方式，他们当然也会照样去插手。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你说得一点没错。最近连掌则人都在挨打，不过靠着各种保密措施和内部通讯壁垒，至少眼下这套体系还撑得住。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“哦，是这样吗？那还好。不过我挺遗憾的，我们还没什么好办法让这两套东西更民主。听取公民大会的意见是好事，宣谕使也是好事，可它们都替代不了真正的公众问责。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“总之，图谱资助的设计跟合议庭、掌舵会的运作有一个不同：它能容下更细的专业分工。毕竟分配资金是件相当技术性的事。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“目标是尽量把每一次资金分配的决定拆成更好处理的小块。别问‘维里迪亚全部公共资金里，该有多大比例给这项紫外线灯研究’，而要问：多大比例给卫生，然后在卫生里，多大比例给空气传播疾病，这样一层层往下分。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“要是一个项目同时有利于两个领域——比如某种灯，不知怎么的对紫外线灯和防务都有用——那这张图就不再是树，而成了正经的有向无环图。一个节点可以有多个父节点，沿各条路径拿到的资金会累加。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“所以，每个节点分到的资金，由委员会负责在它的直接子节点之间分配？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“对。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“他们能删掉子节点，或者新建子节点吗？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“当然能。这图本来就是这么做出来的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“这太有意思了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我是说，这一切完全取决于这些委员会管不管用，对吧？专业化程度越高，越可能被特殊利益集团把持；随机化程度越高，就越容易让一群对自己要决定的事一无所知的人来做决定？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“当然，权衡永远都在。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“还有另一个权衡。事实证明，让委员会达到能分辨项目好坏的水平相当容易，但要它们分辨好项目和极好的项目就非常难。所以近来，针对图里较低的层级，出现了一种主张：干脆在排名顶端直接随机化。如果委员会说你进了前10%，那不管你排91还是99，入选的机会都一样。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“所以一个人越是排在90以上，基本上就越不用操心去迎合委员会，只管做自己觉得对的事就行。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“正是。有时候你其实并不想要问责，而是想给人的内在动机留出空间。站在最顶端的人，可能比委员会还聪明。‘截线以上随机化’做的就是这件事：没有问责就成不了事的人，给他问责；最优秀的人，则让他不必受激励驱使——他们几乎不用费什么力气，就能让委员会相信自己的工作足够好。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“总之，放大到单个项目的层级，就是这样。”</span></p>
+<figure class="fig"><img src="../assets/images/chapter-17-fig-02.svg" alt="紫外线研究项目及其资源分配网络" title="紫外线研究项目及其资源分配网络" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#be9b00">“让这些随机抽出的图谱资助委员会在这么细的层级上做决定，明智吗？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我自己也不确定。这个设计的好处是，它总能自己演化，而不用改结构。委员会大可以决定把整个类别‘交给’维里迪亚国立大学材料科学实验室，让实验室内部自行分配。其实开源社交媒体分析那一项，我们差不多就是这么干的，80%直接给了银聊。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“蓝鲸不太高兴，不过，嘿，谁让他们什么都非得封闭、专有呢。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那这一切跟泽国有什么关系？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“啊，其实这些技术有很多都传到了泽国，他们开始更认真地对待空气过滤器和紫外线灯——有少数人已经在疑神疑鬼，怕北极人哪天故意放出一场瘟疫来打他们。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“北极人有没有可能对他们发动一场瘟疫，而这场瘟疫最终不会反弹到北极人自己身上？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“嗯，如果北极的抗疫技术远远领先于世界其他地方，那他们就能放出一场瘟疫，而只有他们能有效保护自己的人不受其害。这也是为什么把这一切开源——至少是防御性的那些东西——如此有价值：让整个世界站在同一条水平线上，谁也甭想一边放火，一边当唯一有防火服的人。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“总之，你要是真去了泽国，回来一定得跟我讲讲你了解到的公共卫生情况——我很好奇！”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯推开家门，走了进去。</p>
+<p class="dialog">塞拉和孩子们已经在吃晚饭了。</p>
+<p class="dialog"><span style="color:#54a1f9">“今天是你第一次投票，对吧？”</span>塞拉问。</p>
+<p class="dialog"><span style="color:#be9b00">“是啊，难得你还记得！”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那你今晚又要出去吗？”</span>兹文问。</p>
+<p class="dialog"><span style="color:#be9b00">“哦，不用。要本人到场的是几个月前的讨论，还有密钥登记——那是我在议会开完会之后马上就办了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“后来我们掌则人的线上讨论组也聊过几次，不过那个群在投票前七天就自动关闭了——理由是要留一段静默期，给独立思考多腾点空间。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“唉，那静默期开始时，红郡已经被吞并了。当时大家是什么反应？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那些说该把军用硬件从评则最优的几档里剔除的人，我看全都沉默了。后来十八提了一条新修正案，要提高税率档，把开放的激励再往上推。这条我大概会投赞成。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“那就好。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“你在议会的会开得怎么样？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“很顺利。参议员和图谱资助那边的一位都挺支持我去。不过他们说，要论帮我在那边跑这一趟，泽可能比他们认识的任何人都更合适！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“这倒说得通。谁都知道，有意思的事从来不在泽国官方政府那儿发生。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“那我回头跟泽说说，让你们俩联系上！”</span></p>
+<p class="dialog">格拉迪亚斯、塞拉和孩子们各自吃了几口。很快，餐桌上的话头又接了起来。</p>
+<p class="dialog"><span style="color:#54a1f9">“费布里克、赫雷达，你们的消息要不要说说？”</span></p>
+<p class="dialog"><span style="color:#aaa300">“冬季学期我们要去北林交换！”</span>赫雷达骄傲地喊道。</p>
+<p class="dialog"><span style="color:#be9b00">“哇，那地方偏东北挺远的，几乎贴着北极边界了。”</span>格拉迪亚斯答道。</p>
+<p class="dialog"><span style="color:#aaa300">“可好玩了，我们能穿着小型飞行器从山上滑雪冲下去，再一路滑翔下来！”</span>赫雷达兴奋地说。<span style="color:#aaa300">“而且那儿也不真的贴着边界，北林离边界有200多公里。我还是第一次去呢！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那你们去那儿干什么？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#aaa300">“维里迪亚最好的数学大学就在那儿，”</span>赫雷达答道。<span style="color:#aaa300">“我在班里数学排前5%，所以被选去那边上专门的课程。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“我也一样，”</span>费布里克接话。<span style="color:#ce9200">“不过我是计算机方向。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“莉莉不是也想去北林吗？”</span></p>
+<p class="dialog">莉莉在洗手间，没法回答。</p>
+<p class="dialog"><span style="color:#54a1f9">“维尔说，只要她考试考到75%，夏天就带她去。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“她更喜欢夏天，没那么喜欢冷。”</span></p>
+<p class="dialog">格拉迪亚斯的手持终端震了一下。</p>
+<p class="dialog"><span style="color:#be9b00">“嗯，硬件开放度评则的表决开始了。”</span></p>
+<div class="device-view wide-device-view"><b style="font-size:150%">评则：硬件开放度</b><hr><table><thead><tr><th>动议</th><th>表决</th></tr></thead><tbody><tr><td style="width: 75%">在第1档第3行、第2档第3行之后增加：<br><br>“军事、监视及反监视用途的产品不适用本档”</td><td style="text-align:center"><button>赞成</button><br/><br/><button>反对</button></td></tr><tr><td style="width: 75%">税率档从<br><br>0 / 6 / 12 / 18 / 24<br><br>提高到<br><br>0 / 10 / 20 / 26 / 32</td><td style="text-align:center"><button>赞成</button><br/><br/><button>反对</button></td></tr><tr><td style="width: 75%">将第4档第4行、第5档第4行的<br><br>“以硬件手段阻止第三方维修”<br><br>改为<br><br>“以硬件或软件手段阻止第三方维修”</td><td style="text-align:center"><button>赞成</button><br/><br/><button>反对</button></td></tr></tbody></table></div>
+<p class="dialog">有点虎头蛇尾，格拉迪亚斯想。投票前的几个月里，那么多仪式、当面会议、辩论和工作。结果投票本身不过是在屏幕上……点几个按钮。</p>
+<p class="dialog">这倒也合理，格拉迪亚斯想。按密码学的运作方式，只要密钥登记是安全的，这一步完全可以在自己家里、自己的设备上完成。就算德尔瓦特真来敲门，非要在他背后盯着他，从头到尾看完那15个长时的投票窗口，他也没法证明自己设备上的密钥就是登记过的那把——说不定那只是个幌子，真正投票的是莫夫、塞拉，甚至兹文。</p>
+<p class="dialog">格拉迪亚斯最后看了一眼屏幕，若无其事地按下：<code>反对</code>、<code>赞成</code>、<code>赞成</code>。</p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-16.html">上一章 · 第十六章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-18.html">下一章 · 第十八章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias walked forward along a path covered with trees on both sides, toward the large circular parliament building in front.</p>
+<p class="dialog">When he arrived at a side door of the building, he tapped his watch on the green circle.</p>
+<p class="dialog">The circle buzzed.</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: green; margin: -20px; border-radius: 10px; padding: 10px"><table><thead><tr><th>Veridian Parliament</th></tr></thead><tbody><tr><td>Proof of invitation verified.</td></tr></tbody></table></div></div>
+<p class="dialog">The door opened. Gladias walked in, and followed the instructions that were being relayed by his watch. Forward, then right turn, then forward, then third door on the left.</p>
+<p class="dialog">Gladias got to the door, and tapped his watch again.</p>
+<p class="dialog">The door opened.</p>
+<p class="dialog">Inside, he saw a man wearing a Veridian parliament robe.</p>
+<p class="dialog"><span style="color:#a38af2">"Gladias, thank you for coming!"</span>, the senator exclaimed.</p>
+<p class="dialog"><span style="color:#be9b00">"And thank you for seeing me, Senator Verdow!"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Please sit down."</span></p>
+<p class="dialog">A robot slid into the room.</p>
+<p class="dialog"><span style="color:#26a9f1">"jie mo kai tu jie hei ja ma?"</span>, the robot asked.</p>
+<p class="dialog">Gladias briefly stared in surprise.</p>
+<p class="dialog">Verdow laughed.</p>
+<p class="dialog"><span style="color:#a38af2">"I adjusted the settings to make it do that a few months ago. Just a little something as a reminder that other countries exist and that they matter."</span></p>
+<p class="dialog">Verdow tapped a few buttons on the robot's screen, and turned the screen toward Gladias.</p>
+<p class="dialog">The screen was in Dzegoban. Gladias's eyes wandered around with confusion.</p>
+<p class="dialog"><span style="color:#a38af2">"Oh, if you want water, that's 'ja'. And if you want tea, that's 'kai ja'. Literally 'plant water'."</span></p>
+<p class="dialog">Gladias clicked on 'kai ja'. If he's going to be in Dzego for a few months, might as well get acclimated and start drinking some tea - and knowing the local word for it. The robot beeped, signaling acceptance of the order, and began to quietly glide away from them. The room door briefly opened, and the robot exited the room.</p>
+<p class="dialog"><span style="color:#be9b00">"So you think I should go to Dzego?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"You're obviously smart. Of course I have no idea what you say in your secret meetings, but judging from everything you said in the hearing, and from your original application to the Order years ago, I think you're a good and smart person. We need people like you to be more active in serving our country. Being a Keeper is nice, but come on, you're only one of over a thousand. I think getting and bringing back some first-hand experience from Dzego could be even more meaningful."</span></p>
+<p class="dialog"><span style="color:#be9b00">"If you think it's a good idea, I'm happy to. But who should I talk to there? That's what I wanted to get your input on."</span></p>
+<p class="dialog">Gladias intentionally omitted any mention of Zei - not out of any desire to hide that indirect connection, but because he wanted to get a fully independent answer from Verdow first.</p>
+<p class="dialog"><span style="color:#a38af2">"Well my strongest connections are with some of their authors and musicians"</span>, he said, gently laughing. <span style="color:#a38af2">"Though I also know a few people in the government there, especially the security and health ministry. I'll send you their contacts, and give them a heads up. I wouldn't stop with them, but I think they can help get you started."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Thanks, that would help a lot!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I only know two people from there, indirectly; my wife met them at a chance meeting in the Economics Institute in Freetown. Zei and Bai, they were in Minpentai."</span></p>
+<p class="dialog">Verdow's eyes opened. <span style="color:#a38af2">"Honestly, you might have a better lead than I do. When you see the Minpentai games in Dzego, the players and the people who train them are clearly top-notch. If I had to find someone to defend me against the Arctics, I'd almost trust them over the actual Dzego army."</span></p>
+<p class="dialog"><span style="color:#a38af2">"How advanced are Zei and Bai? Did they get into any of the championships?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Last thing Seila told me, Zei won the semi-finals, and then they cancelled the finals when Redshire was invaded."</span></p>
+<p class="dialog"><span style="color:#a38af2">"The semi-finals, like municipal level?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"National."</span></p>
+<p class="dialog">Verdow stared with a mix of surprise and joy.</p>
+<p class="dialog"><span style="color:#a38af2">"Your connections are definitely better than mine then. When you come back, you'll have to tell me more about Dzego!"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Anyway, I'll introduce you to the other folks I mentioned so you can see them when you come. It's always good to get more than one perspective."</span></p>
+<p class="dialog">Gladias nodded appreciatively.</p>
+<p class="dialog"><span style="color:#a38af2">"Oh, by the way, speaking of getting more perspectives, one of the Graph Funding stewards is here about to visit me. You want to talk to him too?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"About what?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Oh, his work, how he's feeling about Graph Funding, and of course Dzego."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Sure, why not?"</span></p>
+<hr class="rule">
+<p class="dialog">A few minutes later, the door opened, and another man, wearing a Veridian privacy robe but without the face cover and hood, walked in.</p>
+<p class="dialog"><span style="color:#a38af2">"Belgor, good to see you again!"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Good to see you too, Verdow!"</span></p>
+<p class="dialog"><span style="color:#a38af2">"And meet Gladias, he's a Keeper."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Nice to meet you, Belgor."</span></p>
+<p class="dialog"><span style="color:#ed756b">"And nice to meet you, Gladias!"</span></p>
+<p class="dialog"><span style="color:#a38af2">"So Gladias is thinking of going to Dzego soon. We thought that maybe you should tell him more about Graph Funding, and any advice on what he should do or learn in Dzego."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Sure, happy to. How familiar are you with how Graph Funding works?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Honestly, not very."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Great."</span></p>
+<p class="dialog">He took out his hand device, and pressed some buttons. A diagram opened up on the screen, and he showed it to Gladias.</p>
+<figure class="fig"><img src="../assets/images/chapter-17-fig-01.svg" alt="空气传播疾病的防治措施及占比" title="空气传播疾病的防治措施及占比" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#ed756b">"This is the subgraph for airborne disease resistance. For each node on the graph, the cryptographic network randomly selects a committee, that makes the decision of what weights the edges right below that node get."</span></p>
+<p class="dialog"><span style="color:#ed756b">"So it's secure in the same way the Courts and the Order of Steering are. Having something like that for funding is especially important now, given that the Arctics just did the same attack on Quadratic Funding that Bluewhale did but at ten times the scale - and of course any more traditional style of allocation, they would try to interfere with as well."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Oh you're definitely right. Even the Keepers are getting attacked lately, though with all the secrecy and internal communication barriers, at least for now the system is holding."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Oh is that so? Good to hear. Though I am sad that we don't have a good way to make both of these things more democratic. Listening to citizens' assemblies is good and Heralds are good, but they're not a substitute for actual public accountability."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Anyway, one difference between the Graph Funding design and how the Courts and the Order work is that Graph Funding allows even more specialization. After all, funding allocation is a pretty technical task."</span></p>
+<p class="dialog"><span style="color:#ed756b">"The goal is to try to split up each decision of funding allocation into more manageable pieces. Don't ask 'what percent of all Veridian public funding should go to this study on UVC lamps'. Ask, what percent should go to health, then within health, what percent should go to airborne diseases, and so on."</span></p>
+<p class="dialog"><span style="color:#ed756b">"And if one project benefits two areas: say, some lamp that's somehow useful both for UVC lamps and for defense, then the graph stops being a tree, it becomes a proper directed acyclic graph. One node can have multiple parents, and the funding you get along all paths adds up."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So a committee is responsible for allocating the funding going to each node among its direct children?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Yes."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Can they remove children or make new ones?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Yes, of course. That's how the graph gets made in the first place."</span></p>
+<p class="dialog"><span style="color:#be9b00">"This is fascinating."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I mean, this all hinges completely on how effective these committees are, right? The more you can specialize, the more it might get captured by special interests, and the more you randomize, the more you get decisions made by people who know nothing about what they're deciding?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Of course, that's always the tradeoff."</span></p>
+<p class="dialog"><span style="color:#ed756b">"There's also another tradeoff. It turns out that it's fairly easy to get committees up to the point where they can tell bad projects from good ones, but very hard for them to tell good projects from great ones. So for the lower levels of the graph, there's been a movement lately to just randomize at the top end. If the committee says you're in the top ten percent, you have the same chance of getting in, no matter if you're at ninety one or ninety nine."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So the further someone is above ninety, the more they basically don't have to worry about optimizing for the committee at all, they can just do what feels right."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Exactly. Sometimes you don't actually want accountability, you want to give space for people's intrinsic motivation. The people at the very top may even be smarter than the committee. That's what randomize-above-cutoff does: accountability for those who won't succeed without it, and freedom from incentives for the best - they can convince the committee that their work is good enough with barely any effort at all."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Anyway, here's what it looks like zoomed in at the level of individual projects."</span></p>
+<figure class="fig"><img src="../assets/images/chapter-17-fig-02.svg" alt="紫外线研究项目及其资源分配网络" title="紫外线研究项目及其资源分配网络" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#be9b00">"Is it wise to have these randomly-selected Graph Funding committees making decisions at that level of granularity?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"I'm not sure myself. The nice thing about this design is that it can always evolve without changing the structure. Committees could just decide to give the VNU Materials Science Lab 'ownership' of an entire category, and let them allocate internally. Actually, for the open source social media analysis, we basically did just that, eighty percent is just going to Silverchat."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Bluewhale is unhappy, but, hey, their choice to be so closed and proprietary with everything."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So how does this all connect to Dzego?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Ah, well a lot of this tech does actually make its way over to Dzego, they're starting to take the air filters and ultraviolet lights more seriously - a few of them are getting paranoid that the Arctics might hit them with a deliberately-released pandemic at some point."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Is there any chance that the Arctics could hit them with a pandemic that won't eventually bounce right back to them?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Well, if Arctic anti-pandemic technology shoots far enough ahead of the rest of the world, then yeah, they could release a pandemic that only they can effectively protect only their own people from. That's a big part of why it's so valuable to open-source all this stuff - at least the defensive things. Put the whole world on a more level playing field, so no one is in a position to light a fire and be the only ones with fireproof suits."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Anyway, if you end up going to Dzego, do tell me what you learn about their public health when you get back - I am curious!"</span></p>
+<hr class="rule">
+<p class="dialog">Gladias opened the door to his house, and entered.</p>
+<p class="dialog">Seila and the kids were already eating dinner.</p>
+<p class="dialog"><span style="color:#54a1f9">"Today is your first vote, isn't it?"</span>, Seila asked.</p>
+<p class="dialog"><span style="color:#be9b00">"It is, glad you remembered!"</span></p>
+<p class="dialog"><span style="color:#df74b1">"So are you leaving again this evening?"</span>, Zven asked.</p>
+<p class="dialog"><span style="color:#be9b00">"Oh no, the in-person part was the discussions months ago, and the key registration, I did that right after my meetings at the Parliament."</span></p>
+<p class="dialog"><span style="color:#be9b00">"There were also some discussions happening more recently in our Keeper discussion group online, though that chat automatically cut off seven days before the vote - have a quiet period to make more space for independent thought, the argument goes."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Oof, so the cutoff was after Redshire got annexed. What was that like?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I think everyone who said we should cut military hardware out of the best tiers in the rubric went quiet. Eighteen then proposed a new amendment that increases the tax brackets, pushing up the incentives to open things up even more. I'll probably vote for that."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Glad to hear."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"How did your Parliament meetings go?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Very well. The Senator and the Graph Funding person both seemed quite supportive of me going. Though they said that Zei might be an even better contact to help me with my visit than anyone they knew!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"That actually makes sense, everyone knows the official Dzego government is not where any of the interesting action is happening."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I guess I'll talk to Zei and put you two in touch then!"</span></p>
+<p class="dialog">Gladias, Seila and the kids took a few bites of their food. Soon, the dinner conversation resumed.</p>
+<p class="dialog"><span style="color:#54a1f9">"Febric, Hreda, want to share your news?"</span></p>
+<p class="dialog"><span style="color:#aaa300">"We're going on an exchange trip to Northglade for the winter term!"</span>, Hreda exclaimed proudly.</p>
+<p class="dialog"><span style="color:#be9b00">"Ooh, that's pretty far northeast, almost at the Arctic border"</span>, Gladias replied.</p>
+<p class="dialog"><span style="color:#aaa300">"It's fun, we'll get to ski off mountains wearing a copter and then glide back down!"</span>, Hreda exclaimed. <span style="color:#aaa300">"And it's not like it's right at the border, Northglade is over two hundred kilometers inland. It will be my first time there!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what are you guys doing there?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#aaa300">"Veridia's best math university is there,"</span> Hreda replied. <span style="color:#aaa300">"I'm in the top five percent in math in my class, so I got accepted to attend some special education there."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Same for me,"</span> Febric added. <span style="color:#ce9200">"Though I'm in computer science."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Didn't Lily also want to go to Northglade?"</span></p>
+<p class="dialog">Lily was in the washroom, so she could not answer.</p>
+<p class="dialog"><span style="color:#54a1f9">"Vil said that he will take her in the summer if she gets to seventy-five percent in her exams."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"She prefers summer, she doesn't like the cold as much."</span></p>
+<p class="dialog">Gladias's hand device buzzed.</p>
+<p class="dialog"><span style="color:#be9b00">"Well, voting on the hardware openness rubric started."</span></p>
+<div class="device-view wide-device-view"><b style="font-size:150%">Rubric: openness in hardware</b><hr><table><thead><tr><th>Motion</th><th>Vote</th></tr></thead><tbody><tr><td style="width: 75%">Add after line 3 in Tier 1 and line 3 in Tier 2: <br><br>"Products in military, surveillance and counter-surveillance applications are not eligible for this tier."</td><td style="text-align:center"><button>Yes</button><br/><br/><button>No</button></td></tr><tr><td style="width: 75%">Increase tax brackets from <br><br> 0 / 6 / 12 / 18 / 24 <br><br> to <br><br> 0 / 10 / 20 / 26 / 32</td><td style="text-align:center"><button>Yes</button><br/><br/><button>No</button></td></tr><tr><td style="width: 75%">Change line 4 in Tier 4 and line 4 in Tier 5, from: <br><br> "Use of hardware means to prevent third-party repair." <br><br> To: <br><br> "Use of hardware or software means to prevent third-party repair."</td><td style="text-align:center"><button>Yes</button><br/><br/><button>No</button></td></tr></tbody></table></div>
+<p class="dialog">This felt anti-climactic, Gladias thought. So much ceremony, in-person meetings, debate and work in the months leading up to the vote. And then the vote itself was just ... tapping buttons on a screen.</p>
+<p class="dialog">It was reasonable, Gladias supposed. The way that the cryptography worked, as long as key registration was secure, this part could just be done on his own hardware at home. And even if Delwart did come knocking and demand to stare at him from behind his shoulder for the entire fifteen-longhour voting window, he had no way to prove to him that the key on his device even was the one registered - as opposed to being a distraction while the real voting was done by Mov, Seila or even Zven.</p>
+<p class="dialog">Gladias took one last look at the screen, and nonchalantly pressed: <code>No</code>, <code>Yes</code>, <code>Yes</code>.</p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-16.html">上一章 · 第十六章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-18.html">下一章 · 第十八章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第十七章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

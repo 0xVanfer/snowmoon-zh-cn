@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第三十一章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第三十一章 · Chapter 31 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-30.html">
+  <link rel="next" href="chapter-32.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="31">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第三十一章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第三十一章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 31</p>
+    <p class="chapter-heading__dateline">北林，维里迪亚 · 3725年雨月2日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Northglade, Veridia · 3725 Rainmoon 2</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">泽、白和穆沿着山侧的阶梯慢慢往上走。山的两面都覆着厚雪，阳光从雪面反射过来，刺得他们睁不开眼。雪面之上只看得见松树和带扶手的阶梯——树和扶手露在外面，是因为它们太高，雪盖不住；阶梯本身露着，则是因为有架无人机在定期清雪、撒盐——他们看得见，那无人机就在上方约30米处。</p>
+<p class="dialog">一股强劲的冷风扑面而来。他们继续往上爬。几分钟后，他们登上了山顶的圆形平台。</p>
+<p class="dialog">从那里望去，北林所在的那座岛一览无余。岛宽约20公里——小到这一带最简略、缩放到最小的地图干脆懒得画它，却又大到让人觉得，真到了万不得已的时候，光凭这座岛就足以养活一个文明。泽心想，北林若是一座泽国城市，早该有一套完全自给的应急产业了。</p>
+<p class="dialog">东边是北林的主城区。西面和北面，积雪的丘陵连绵数公里，一条小径缓缓蜿蜒，向森林深处下行。泽往东俯视，看见另一条通上山顶的阶梯，一个年轻人只穿着一件毛衣、戴着一顶轻便兜帽，正往上爬。</p>
+<p class="dialog">等那人快到山顶时，泽认出了一张熟悉的脸。</p>
+<p class="dialog"><span style="color:#df74b1">“德鲁因！”</span>他喊道。</p>
+<p class="dialog">德鲁因抬起头，看见泽，三步并作两步跑完最后20米台阶。</p>
+<p class="dialog">他登上山顶，一把抱住泽，差点把他撞得站不稳。</p>
+<p class="dialog"><span style="color:#e58137">“泽，你还活着，我太高兴了，终于又能见到你了。”</span></p>
+<p class="dialog">德鲁因慢慢松开泽，转向白。</p>
+<p class="dialog"><span style="color:#e58137">“等等，我是不是在哪儿见过你？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我是白。萨祖都的练习赛，你可能见过我在旁边看。”</span></p>
+<p class="dialog"><span style="color:#e58137">“啊，对，我记得你！”</span>德鲁因答道，心里却有点拿不准：自己是真的记得见过她，还是只是在凭空编造一段记忆。</p>
+<p class="dialog"><span style="color:#00bc96">“我是穆。你可别把我和苏搞混了——她还在泽国，跟我完全是两个人。”</span></p>
+<p class="dialog"><span style="color:#e58137">“你好啊，穆。”</span>德鲁因笑了笑。</p>
+<p class="dialog"><span style="color:#df74b1">“那就说吧。到底发生了什么？”</span></p>
+<p class="dialog"><span style="color:#e58137">“这事说来话长。你确定要在这么一座冷飕飕的雪山顶上听？”</span></p>
+<p class="dialog">泽、白和穆立刻一齐点头。</p>
+<p class="dialog"><span style="color:#e58137">“看来你们比我预想的更适合在红郡生活！”</span></p>
+<p class="dialog"><span style="color:#e58137">“好吧，那我开始讲。”</span></p>
+<p class="dialog"><span style="color:#e58137">“那还是葡期的事。他们占领红郡大概两个月后，几个北极军官上门来找我父母谈话。我父母从来不太把北极的威胁当回事，总说我们该对和平更开放一些，多跟他们合作。可入侵一开始，他们一下就变成了北极所作所为的坚定拥护者。红郡有相当大一部分人也是这样。”</span></p>
+<p class="dialog"><span style="color:#e58137">“北极人给了我父母一个职位，想请他们去琉璃冠，给最高领导层当整合顾问——先是整合被占领的红郡人口，然后是北林居民，最后是所有他们将要征服的人。”</span></p>
+<p class="dialog"><span style="color:#e58137">“我做了一个风险很大的决定。我决定‘归化’过去——装作完全拥护北极事业的人，利用我父母的声望，加上我自己那个民本棋冠军的头衔——”</span></p>
+<p class="dialog"><span style="color:#df74b1">“民本棋冠军是我！”</span>泽打趣地插了一句。</p>
+<p class="dialog"><span style="color:#e58137">“那是因为比赛取消了，他们直接把头衔给了你。你从来没赢过我。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“两天前那场战斗，我赢了你！”</span></p>
+<p class="dialog"><span style="color:#e58137">“那首古诗里那句是怎么说的？mi fu zo de tei ka ciu pin——当我战败时，却觉得自己赢了？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你总算开窍了！”</span></p>
+<p class="dialog"><span style="color:#e58137">“总之，我靠父母的声望，加上我身为民本棋<em>半决赛胜出者</em>的身份，一路往上爬。不到两个月，他们就独立摸索出，民本棋是训练现代战争人才的有效方式——”</span></p>
+<p class="dialog"><span style="color:#df74b1">“等等，他们真弄明白了民本棋是干什么用的？”</span></p>
+<p class="dialog"><span style="color:#e58137">“等等……你是说，你们<em>有意</em>把民本棋锦标赛设计成培养防卫人才的？”</span></p>
+<p class="dialog">泽、白和穆立刻点头。</p>
+<p class="dialog"><span style="color:#e58137">“那倒没有。他们绝对没弄明白。他们只是发现，民本棋<em>恰好</em>对这个用途有效。于是不到三个月，他们就把我提成了最高指挥官之一。”</span></p>
+<p class="dialog"><span style="color:#e58137">“其实北极人挺好摆布的，你知道吧。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“怎么说？”</span></p>
+<p class="dialog"><span style="color:#e58137">“他们那一整套意识形态完全不看重立场，只看重能力。在他们眼里，顶尖人才是可以互换的。人不过是机器人，薪水开高一点就能被重新分配。他们压根没有‘人各有各的动机、各做各的十万个梦’这回事，也分不清谁的心是跟你一起跳的，谁只是在装。所以你只要喊对口号，让他们相信你是顶尖人才，他们就会……信任你。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“哇。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我……倒不觉得意外。”</span>白补了一句。<span style="color:#ed756b">“我只是庆幸，这盘棋你下得比谁都好。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“那北极帝国最<em>有意思</em>的地方是什么？”</span>穆轻声问。<span style="color:#00bc96">“我们能从他们身上学到什么？”</span></p>
+<p class="dialog"><span style="color:#e58137">“他们的技术进步是真的，而且很惊人。他们给北林居民做的那些治疗只是一个样本。他们相信自己已经弄明白了怎么让人多活十年，而且还在加速。”</span></p>
+<p class="dialog"><span style="color:#e58137">“琉璃冠是我见过最迷人的城市之一，它的美很独特。走在城里，就像住在一颗巨大的冰晶里。最高的塔离地一公里，地下洞窟深不见底。”</span></p>
+<p class="dialog"><span style="color:#e58137">“有些墙边甚至种着一排排松树。这本身就是一项了不起的工程：用基因工程让植物更耐寒，再加上地下供暖和巧妙设计的反射墙，把周围环境弄得更暖。”</span></p>
+<p class="dialog"><span style="color:#e58137">“冬天，琉璃冠有一个半月的极夜，见不到太阳。那时整座城市就被白与蓝的人造光裹住。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“听你这口气，像是想回去了！”</span></p>
+<p class="dialog"><span style="color:#e58137">“其实我想要的是别的。北极人把这些技术造出来，我觉得是好事——真要让我关掉一样，那就是超级病毒的研究。但危险的地方在于，他们造出来的一切都自己留着，不让别人受益。就连给北林人一点，也得按他们的规矩来——你来我们的诊所，你没资格知道我们在你身上做了什么；你要是不想变回原来的样子，就得一次又一次地回我们诊所来。”</span></p>
+<p class="dialog"><span style="color:#e58137">“科学技术本该把世界连在一起，结果却让一个群体变成越来越大的威胁，让世界其余部分越来越害怕。”</span></p>
+<p class="dialog"><span style="color:#e58137">“但多亏了你们，我们——我们指的是全人类——现在缴获了他们一大堆技术。有些是他们带进北林的；成堆的军用装备散落在埃莱纳森林各处；还有一批在塔尔杜尔岛上，那是北极的核心领土，上面住着几万人。”</span></p>
+<p class="dialog"><span style="color:#e58137">“所以我们下一步该做的，是尽可能说服他们中的更多人自愿站出来，自愿分享知识和专长，把整个世界至少拉到北极人自己独享的那条技术前沿上。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“开源——不只是一个好主意，这是铁律。”</span>泽答道。</p>
+<p class="dialog"><span style="color:#e58137">“正是。让整个世界在这方面更像维里迪亚一点。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“然后我们可以把他们的策略反过来用。让塔尔杜尔的人看到，在我们的生活方式下，他们能有更多安宁、更多和平、更多真正的自由，同时还能拥有强大的技术。也许通过他们，我们能说服更多北极人站到我们这边来。”</span></p>
+<p class="dialog">谈话停了下来。这回德鲁因绕着山顶走了一圈，欣赏北林的景色。</p>
+<p class="dialog">大约10分钟后，穆又开口了。</p>
+<p class="dialog"><span style="color:#00bc96">“德鲁因，我有个坏消息。”</span></p>
+<p class="dialog"><span style="color:#e58137">“什么消息？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“自由城防卫队报告说，红郡的北极驻军已经增加到三倍。他们用我们两天前那场战斗里发现的招数，拿早就在红郡的那些无人机试了几次破坏行动，但现在大多都失败了。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“他们现在认为，我们基本没有可能夺回红郡了。”</span></p>
+<p class="dialog">德鲁因叹了口气。他眼里满是深重的悲伤。</p>
+<p class="dialog"><span style="color:#00bc96">“塔芬德尔建议我们来点硬的。封死塔尔杜尔与北极其余领土之间的边界，然后提出一笔交易：想回北极帝国的人，我们放他们回去；作为交换，红郡想离开的人，也允许他们离开。他们留着红郡，我们留着塔尔杜尔。然后在维里迪亚找一个美丽的地方，建一个新的红郡。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“干脆把这里和塔尔杜尔之间那个半岛给他们不好吗？就是从北岸东端垂出去的那个。那边土地很美。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“我觉得那该由他们自己决定。”</span></p>
+<p class="dialog">德鲁因点了点头。<span style="color:#e58137">“塔芬德尔大概是对的。这已经是我们能拿到的最好结果了。”</span></p>
+<p class="dialog">谈话又一次停下。四个人一起望向东方，看雪花轻轻落在北林镇的每一栋建筑上，渐渐积起厚厚一层。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯和塞拉穿过北林大梅港入口处那道巨大的石门。闸机已被砸烂、掀倒在地，好让人们自由进出，管理人员那时候似乎也狠不下心去执行什么签证规定。两名大梅港保安穿着紫灰两色的制服，只是看着人流进出，也只能退而求其次：保证不出偷盗和暴力事件。</p>
+<p class="dialog">塞拉的手表震了一下。她抬起手看了看。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>扬</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">[5张图片]</span></td><td>45904</td></tr></tbody></table></div>
+<p class="dialog">她点了进去，看了看那些照片。前三张是自由城的人们在街头和公园里庆祝。</p>
+<p class="dialog">第四张像是在停车场里办的一场露天公开演唱会。背景里是一座巨大的厂房，侧面醒目地挂着伊查拉的标志——这是自由城如今有名的防务公司之一。</p>
+<p class="dialog">最后一张是扬本人的自拍，跟他合影的像是那家防务公司的一位经理。</p>
+<p class="dialog"><span style="color:#be9b00">“你要去自由城看扬吗？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“其实我在想，你走之后我在这儿再待个五天左右，让他过来。他一直想来看看维里迪亚。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“应该这样。”</span>格拉迪亚斯温和地说。</p>
+<p class="dialog">他们沿街往前走了约100米，然后下到一条隧道里。又走了约200米，他们右转，登上一段阶梯。阶梯尽头有一扇门。</p>
+<p class="dialog">格拉迪亚斯准备拿手表去碰门边的绿色圆圈，可还没碰上，门自己开了。</p>
+<p class="dialog"><span style="color:#23ba7d">“爸爸！”</span>莉莉喊着跑向格拉迪亚斯，抱住了他。</p>
+<p class="dialog"><span style="color:#be9b00">“莉莉！你没事，我太高兴了。”</span></p>
+<p class="dialog">费布里克和赫雷达从另一个房间出来，冲上前抱住格拉迪亚斯和塞拉。</p>
+<p class="dialog"><span style="color:#54a1f9">“你们能聚在一起，我太高兴了。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“对不起，妈妈。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“别道歉。过去这一年，我们每个人都犯了很多错。现在我们都熬过来了；真需要的话，再难也能熬过去。我们是一家人。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“兹文在吗？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“哦，兹文、维尔和黛雅明天早上到！”</span></p>
+<p class="dialog"><span style="color:#aaa300">“太好了！我特别想见到妈妈！”</span>赫雷达叫道。</p>
+<p class="dialog"><span style="color:#be9b00">“大梅港待你们怎么样？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#aaa300">“其实还挺好玩的。”</span>赫雷达答道。<span style="color:#aaa300">“他们组织教育、娱乐、公共活动都很有一套，想尽办法让人开心。他们还说动了北极人，允许无人机运食物进来，所以除了地方小、封得严实，其他都还好。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“我们在这儿出于好奇吃过几次北极食物”</span>费布里克接话。<span style="color:#ce9200">“他们弄出了十来种物质，尝起来像糖，却一点热量都没有。还有些蛋白制品，味道像鱼和肉。还不错！他们的口号是：想要什么口味都行，营养配比也随你需要。”</span></p>
+<p class="dialog">塞拉默默低下头。她还是不太习惯承认：北极人的做法有时确实有可取之处，也能从中学到东西。</p>
+<p class="dialog"><span style="color:#be9b00">“要不我请几位新朋友过来，”</span>格拉迪亚斯插话道，<span style="color:#be9b00">“让他们给我们露一手，尝尝正经做出来的泽国菜该是什么味道？”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“好耶！”</span>莉莉喊道。</p>
+<p class="dialog">费布里克和赫雷达也迫不及待地点头。</p>
+<p class="dialog"><span style="color:#be9b00">“那我就请他们今晚来。今天下午我还得再出去一趟。山顶上要为登和阵亡的将士举行一场军葬。之后我们一起下来，好好吃一顿。”</span></p>
+<p class="dialog">莉莉、费布里克和赫雷达兴奋地点头。</p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-30.html">上一章 · 第三十章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-32.html">下一章 · 第三十二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Zei, Bai and Mu slowly walked up the staircase on the side of the mountain. The mountain was fully covered with snow on both sides, and the sunlight reflected off the snow into their eyes. Only pine trees and the staircase with its handrails were visible above the snow - the trees and the handrails because they were too high for the snow to fully cover them, and the staircase itself because it was being regularly plowed and salted by a drone that they could see about thirty meters further above them.</p>
+<p class="dialog">A strong, cold wind blasted into their faces. They continued climbing. Several minutes later, they reached the circular platform at the top of the mountain.</p>
+<p class="dialog">From there, they could see a full view of the island on which Northglade was located. It was about twenty kilometers wide - small enough that the most simplified and highly zoomed out maps of the region did not even bother showing it, but at the same time large enough that it seemed like if it really had to, that island alone would be large enough to sustain a civilization. If Northglade had been a Dzego city, Zei thought, it would have a fully self-sufficient emergency industry already.</p>
+<p class="dialog">To their east, they could see the main city of Northglade. To the west and north, they saw snowy hills for kilometers on end, and a path gently twisting as it descended deeper into the forest. Looking downward to the east, Zei could see another staircase leading up to the summit, and a young man wearing only a sweater and a light hood climbing up.</p>
+<p class="dialog">As he neared the top of the summit, Zei could recognize a familiar face.</p>
+<p class="dialog"><span style="color:#df74b1">"Deluin!"</span>, he shouted.</p>
+<p class="dialog">Deluin raised his head up, saw Zei, and ran up the last twenty meters of the staircase.</p>
+<p class="dialog">He reached the top, and almost threw Zei off balance as he threw himself into his arms for a hug.</p>
+<p class="dialog"><span style="color:#e58137">"I'm so happy you're still alive, Zei, and that I can finally see you again."</span></p>
+<p class="dialog">Deluin slowly let go of Zei and turned toward Bai.</p>
+<p class="dialog"><span style="color:#e58137">"Wait, do I recognize you?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"I'm Bai. You might have seen me watching some of the practice games in Sadzu Du."</span></p>
+<p class="dialog"><span style="color:#e58137">"Ah yes, I remember you!"</span>, Deluin replied, somewhat unsure if he was genuinely recollecting a memory of seeing her or simply confabulating one.</p>
+<p class="dialog"><span style="color:#00bc96">"And I'm Mu. Don't you dare mix me up with Su - she's still back in Dzego, she's a completely different person from me."</span></p>
+<p class="dialog"><span style="color:#e58137">"Nice to meet you, Mu"</span>, Deluin replied, gently laughing.</p>
+<p class="dialog"><span style="color:#df74b1">"So tell me. What happened?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Well, this is a long story. Are you sure you want it told at the top of a cold snowy mountain?"</span></p>
+<p class="dialog">Zei, Bai and Mu all immediately nodded in unison.</p>
+<p class="dialog"><span style="color:#e58137">"I see you're more fit to live in Redshire than I might have expected!"</span></p>
+<p class="dialog"><span style="color:#e58137">"Okay fine, I'll start."</span></p>
+<p class="dialog"><span style="color:#e58137">"Back in Grapetime, about two months after they occupied Redshire, some Arctic officers came to our house, to talk with my parents. My parents were never particularly worried about the Arctic threat, saying we should be more open to peace and cooperating with them. But once the invasion happened, they quickly flipped to just being full supporters of what the Arctics were doing. Quite a large chunk of the Redshire population did."</span></p>
+<p class="dialog"><span style="color:#e58137">"The Arctics offered them a position. They said that they should come to Glasscrown, and advise the top leadership on integration - first of the captured Redshire population, then of Northglade residents and eventually of everyone else that they would conquer."</span></p>
+<p class="dialog"><span style="color:#e58137">"I made a big risky decision. I decided I would 'go native' - pretend to be a full-on supporter of the Arctic cause, try to use my parents' reputation together with my own status as a Minpentai champion-"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I'm the Minpentai champion!"</span>, Zei playfully interrupted.</p>
+<p class="dialog"><span style="color:#e58137">"Only because the game was cancelled and they gave you the title. You never beat me."</span></p>
+<p class="dialog"><span style="color:#df74b1">"I beat you in the battle two days ago!"</span></p>
+<p class="dialog"><span style="color:#e58137">"What was that line from that old poem? mi fu zo de tei ka ciu pin - when I am defeated, I feel like I won?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Now you get it!"</span></p>
+<p class="dialog"><span style="color:#e58137">"Anyway, I used my parents' reputation and my status as a Minpentai <em>semifinals winner</em> to climb up the hierarchy myself. Within two months they figured out independently that Minpentai was an effective way to train people for modern warfare-"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Wait, they figured out what Minpentai is for?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Wait ... you mean you guys <em>intentionally</em> designed the Minpentai tournaments to train people for defense?"</span></p>
+<p class="dialog">Zei, Bai and Mu immediately nodded.</p>
+<p class="dialog"><span style="color:#e58137">"Then no, they definitely did not figure that out. They just figured out that Minpentai <em>happened</em> to be effective for that purpose. And so within three months they put me as one of their top commanders."</span></p>
+<p class="dialog"><span style="color:#e58137">"The Arctics are actually quite easy to play, you know."</span></p>
+<p class="dialog"><span style="color:#df74b1">"What do you mean?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Their entire ideology completely de-values alignment, and only values competence. They see top talent as being fungible. People as bots that can just be reallocated by pointing a higher salary at them. They don't really have much of a theory of people having their own motivations, dreaming their own hundred thousand dreams, and how to tell when someone's heart beats together with yours and when they are just pretending. And so if you just say the right slogans, and convince them that you're top talent, they just ... trust you."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Wow."</span></p>
+<p class="dialog"><span style="color:#ed756b">"I'm ... actually not surprised"</span>, Bai added. <span style="color:#ed756b">"I'm just glad that you managed to play the game better than any of the others did."</span></p>
+<p class="dialog"><span style="color:#00bc96">"So what are the most <em>interesting</em> things about the Arctic Empire?"</span>, Mu quietly asked. <span style="color:#00bc96">"What can we learn from them?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Their advancements in technology are real, and they are amazing. The medical treatments that they gave to the residents in Northglade are only a sample. They believe that they have already figured out how to make people live a decade longer, and that they're only accelerating."</span></p>
+<p class="dialog"><span style="color:#e58137">"Glasscrown is one of the most fascinating cities I've ever seen. It's beautiful in its own way. It makes you feel like you're living inside of a giant ice crystal. Its tallest tower is a kilometer above ground, and its caverns stretch deep underground."</span></p>
+<p class="dialog"><span style="color:#e58137">"They even have rows of pine trees alongside some of the walls. That itself is an impressive feat of engineering: genetic engineering to help the plants better tolerate cold, together with underground heating and cleverly shaped reflective walls to make their environment warmer."</span></p>
+<p class="dialog"><span style="color:#e58137">"In the winter, Glasscrown has a month and a half of polar night with no sun. Then, the whole city gets enveloped with the glow of white and blue artificial light."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Now you sound like you want to go back!"</span></p>
+<p class="dialog"><span style="color:#e58137">"Actually, I want something else. I think it's good that the Arctics have built all of this technology - though if I could shut one of the things down, it would be the research on superviruses. But what's dangerous is how they keep everything they make for themselves and don't let anyone else benefit. Even when they gave some of it to the Northgladers, it was on their own terms - you come to our health clinics, you don't get to learn what we are doing to your body, and if you don't want to go back to how you were before, you have to keep coming back to our clinics again and again."</span></p>
+<p class="dialog"><span style="color:#e58137">"Instead of science and technology bringing the world together, it's turning one group into a bigger and bigger threat that the rest of the world has to fear more and more."</span></p>
+<p class="dialog"><span style="color:#e58137">"But thanks to you, we - we as in all of humanity - have now captured a big pile of their technology. Some that they brought into Northglade. Piles of their military equipment scattered around Elenar Forest. And a bunch on the island of Thaldur, core Arctic territory that has tens of thousands of people living on it."</span></p>
+<p class="dialog"><span style="color:#e58137">"So our next step should be to convince as many of them as we can to volunteer, and share their knowledge and expertise voluntarily, and bring the whole world up to at least the frontier that the Arctics have created to keep for themselves."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Open source - it's not just a good idea, it's the law"</span>, Zei replied.</p>
+<p class="dialog"><span style="color:#e58137">"Exactly. Make the whole world a little bit more like Veridia in that way."</span></p>
+<p class="dialog"><span style="color:#df74b1">"And then we can play their strategy in reverse. Show the people in Thaldur that they have more calm, more peace and more actual freedom under our way of life, at the same time as having powerful technology. Then perhaps through them, we can convince even more Arctics to join our side."</span></p>
+<p class="dialog">The conversation paused. Deluin took his turn to walk all around the top of the mountain and enjoy the view of Northglade.</p>
+<p class="dialog">About ten minutes later, Mu spoke up again.</p>
+<p class="dialog"><span style="color:#00bc96">"I got some bad news, Deluin."</span></p>
+<p class="dialog"><span style="color:#e58137">"What is it?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Freetown defense corps are reporting that the Arctic garrison in Redshire has tripled. They tried some sabotage operations with their drones already on Redshire using the tricks that we discovered during the battle two days ago, but they are mostly failing now."</span></p>
+<p class="dialog"><span style="color:#00bc96">"They now think that there is basically no chance of us getting Redshire back."</span></p>
+<p class="dialog">Deluin sighed. An expression of deep sadness filled his eyes.</p>
+<p class="dialog"><span style="color:#00bc96">"Tafindel is recommending that we play a little bit of hardball. Close the borders between Thaldur and the rest of Arctic territory. And then offer a deal. We let anyone who wants to go back to the Arctic Empire go back, and in exchange anyone in Redshire who wants to leave is allowed to leave. They keep Redshire, we keep Thaldur. And then find a beautiful place in Veridia to make a new Redshire."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Why not just give them the peninsula between here and Thaldur, the one dangling off the eastern end of Northshore? Very beautiful land there."</span></p>
+<p class="dialog"><span style="color:#00bc96">"I think that should be up to them to decide."</span></p>
+<p class="dialog">Deluin nodded. <span style="color:#e58137">"Tafindel is probably right. It's as good an outcome as we're going to get."</span></p>
+<p class="dialog">The conversation paused once again. All four of them looked toward the east, and enjoyed the view of snowflakes gently falling on every building in the town of Northglade and covering it with thick snow.</p>
+<hr class="rule">
+<p class="dialog">Gladias and Seila walked through the large stone gates at the entrance to the Greater Plum Harbor in Northglade. The turnstile gates had been smashed and thrown to the ground to let people freely move in and out, and the administrative staff did not seem to have the heart to enforce any visa rules at that particular time. Two Greater Plum Harbor security guards, wearing purple and grey attire, simply watched the crowds move in and out, and resigned themselves to meeting the fallback objective of preventing any theft and violence.</p>
+<p class="dialog">Seila's watch buzzed. She raised up her hand, and took a look.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Jahn</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#78b249">[5 images]</span></td><td>45904</td></tr></tbody></table></div>
+<p class="dialog">She clicked, and took a look at the pictures. The first three were pictures of people in Freetown in its streets and parks celebrating.</p>
+<p class="dialog">The fourth appeared to be an open public concert hosted in a parking lot. In the background was a giant factory building, on the side of which there was a prominently displayed logo of Ichara - one of the now famous Freetown defense companies.</p>
+<p class="dialog">The last was a picture of Jahn himself taking a selfie with what appeared to be one of the managers who worked at the defense company.</p>
+<p class="dialog"><span style="color:#be9b00">"Are you going to go to Freetown and see Jahn?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Actually I was thinking to stay in Northglade another five days or so after you leave, and let him come here. He's always wanted to come see Veridia."</span></p>
+<p class="dialog"><span style="color:#be9b00">"You should"</span>, Gladias replied gently.</p>
+<p class="dialog">They walked forward along the street for about a hundred meters, and then descended down into a tunnel. About two hundred meters later, they turned right and walked up a staircase. At the end of the staircase, there was a door.</p>
+<p class="dialog">Gladias prepared to tap his watch against the green circle on the side of the door, but before he could do so, the door opened on its own.</p>
+<p class="dialog"><span style="color:#23ba7d">"Dad!"</span>, Lily yelled as she ran up to Gladias and hugged him.</p>
+<p class="dialog"><span style="color:#be9b00">"Lily! I'm so happy you're safe."</span></p>
+<p class="dialog">Febric and Hreda emerged from another room, and rushed to embrace Gladias and Seila.</p>
+<p class="dialog"><span style="color:#54a1f9">"I'm so glad that you are all here together."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"I'm sorry, Mom."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Don't be. We all made lots of mistakes this past year. We've gotten through it now, and if we need to, we can get through even more. We're a family."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"Is Zven here?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Oh, Zven, Vil and Daia are coming tomorrow morning!"</span></p>
+<p class="dialog"><span style="color:#aaa300">"Amazing! I'm so excited to see Mom!"</span>, Hreda exclaimed.</p>
+<p class="dialog"><span style="color:#be9b00">"So how has the Greater Plum Harbor been treating you?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#aaa300">"It's been actually quite fun."</span>, Hreda replied. <span style="color:#aaa300">"They did a very good job of organizing education, entertainment, public activities, all kinds of things to keep people happy. They convinced the Arctics to allow food to get droned in, so aside from being a small enclosed space it's been fine."</span></p>
+<p class="dialog"><span style="color:#ce9200">"We had Arctic food out of curiosity a few times here"</span>, Febric added. <span style="color:#ce9200">"They've figured out like a dozen substances that taste like sugar but don't have any calories. They also have protein contraptions that taste like fish and meat. It's not bad! Whatever taste you want with whatever nutrition profile you need, the slogan goes."</span></p>
+<p class="dialog">Seila lowered her face quietly. She was still not entirely used to having to admit that the Arctic ways of doing things sometimes did actually have upsides and they could learn from them.</p>
+<p class="dialog"><span style="color:#be9b00">"How about I invite some of our new friends"</span>, Gladias interjected, <span style="color:#be9b00">"and they can show us what actual properly cooked Dzego food is like?"</span></p>
+<p class="dialog"><span style="color:#23ba7d">"Yay!"</span>, Lily shouted.</p>
+<p class="dialog">Febric and Hreda also nodded eagerly.</p>
+<p class="dialog"><span style="color:#be9b00">"Then I'll ask them to come tonight. I have to go out again this afternoon. There's a military funeral for Den and our fallen soldiers at the top of the mountain. Then we can come back down together and enjoy a nice meal."</span></p>
+<p class="dialog">Lily, Febric and Hreda nodded their heads with excitement.</p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-30.html">上一章 · 第三十章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-32.html">下一章 · 第三十二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第三十一章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

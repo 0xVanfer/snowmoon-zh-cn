@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第六章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第六章 · Chapter 6 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-05.html">
+  <link rel="next" href="chapter-07.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="6">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第六章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第六章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 6</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年雨月12日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Rainmoon 12</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯低着头，慢慢朝自家门口走，好让带兜帽的隐私袍顺带挡住冷雨。门前那一小块地方有片小檐遮着。走到门前，他才慢慢摘下兜帽，从小桌上拿起一个餐盒——泽国餐车的10号，老样子。然后他抬手，把手表贴向门边一个发着绿光的圆圈。</p>
+<p class="dialog">门开了。格拉迪亚斯叹了口气，走进去，任门在身后合上。他沿楼梯下到地下室，把餐盒放在桌上。灯亮了，一段模拟自然声响的柔和背景音渐渐响了起来，身后另一扇门自动关上。</p>
+<p class="dialog">格拉迪亚斯脱下隐私袍，颈带还戴着，把袍子扔到椅背上晾着，然后坐上另一把宽大柔软的椅子，椅背向后倾了大约四十五度。</p>
+<p class="dialog">手表震了一下：本地网络认过它的身份，允许它接入了。</p>
+<p class="dialog">他微微张嘴，通过颈带低声下了一道指令：接通莫夫。</p>
+<p class="dialog">几乎立刻，莫夫就接了。</p>
+<p class="dialog"><span style="color:#00bc96">“你那边安全吗？”</span>，莫夫问。</p>
+<p class="dialog"><span style="color:#be9b00">“我是对着喉震颈带低声说的，你的声音通过耳机进来。我们待在一栋上了锁、隔音良好的房子里，这间地下室是密封的，门和墙都贴着隔信箔。外面下着真雨，里面放着假雨声。这样够安全了吗？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“这年头，谁知道呢。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“行啊，你要想的话，我可以把假雨声换成一片人声嘈杂，让人声更难被剥离出来，<em>再</em>戴上耳机。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“不用了，就这样吧。你这套布置已经比大多数人强了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我今天就提交路线选择。我要当掌则人。”</span></p>
+<p class="dialog">静了几嘀嗒。</p>
+<p class="dialog"><span style="color:#00bc96">“什么时候定的？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“几天前。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“至少过去一整年，你都铁了心要当监审官。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“真正能带来改变的权力在掌则人手里。评则本身比——”</span></p>
+<p class="dialog"><span style="color:#00bc96">“是他吧？那位神秘的绅士，德尔瓦特？”</span></p>
+<p class="dialog">又静了几嘀嗒。</p>
+<p class="dialog"><span style="color:#00bc96">“塞拉知道吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“当然知道，我两天前就告诉她了。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“在我之前。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那当然，她是我——”</span></p>
+<p class="dialog"><span style="color:#00bc96">“可你还是没告诉她……你为什么改主意，对吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你查到的那些东西，就不能直接告诉我吗？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“好吧，行。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“还记得我上次跟你说的吧——德尔瓦特一散会，我就跟了上去，结果他直接走到大梅港另一家毫不相干的茶馆，50分钟后在那儿又见了一拨人。他从另一道门出去，我就在那儿把人跟丢了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，我记得。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“你猜怎么着，这事还没完。我往那两个地方各挑了个不起眼的角落，扔进去一只侦察蝠——两只都被揪了出来，没戏。可接下来三天，我特意来回跑这两个点。前两天两边都安安静静。到第三天，我又看见德尔瓦特了。他每天都换一件新隐私袍，鞋垫重新随机化，步态和身高都跟着变，可他有个弱点，让我认出了他。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“什么弱点？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“他的举止。他四下张望的次数比常人少得多，整个人只盯着自己要去的方向。我牺牲过几只侦察蝠，故意弄出干扰的响声。大多数人至少会偏一下头；德尔瓦特不会。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“我就这么着又把他找着了——他正从一家茶馆走向下一家。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“这么说他一直在见人？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“对。也许他想劝去当掌则人的，不止你一个。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那我们怎么办？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“眼下看，只有一条路：先顺着德尔瓦特说的走，同时多留个心眼。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“总之，你该歇歇了。记住，明天我们还要去公民大会。”</span></p>
+<p class="dialog">格拉迪亚斯挂断了通话。他拿出手持终端，接着研究掌则人的治理结构。</p>
+<figure class="fig"><img src="../assets/images/chapter-06-fig-01.svg" alt="随机选出评则掌则人并分配至讨论组。" title="随机选出评则掌则人并分配至讨论组。" loading="lazy" decoding="async"></figure>
+<p class="dialog">格拉迪亚斯记下：结构跟监审官类似，只是更大——监审官是三组、每组三人，掌则人是三组、每组七人。合议庭不属于掌舵会，但他记得也很像：先是两两成对、各自分开评议，然后才投票；另有一人专管破平局，五人意见取中位数定案。掌则人小组比合议庭和监审官小组人多，这说得通：一条评则比任何一次单独裁决都重要。合议庭人少也说得通：五名法官只负责一轮，而且总能上诉。</p>
+<p class="dialog">格拉迪亚斯在几个界面之间来回切换，翻看这一轮计划评估的评则清单：</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>评则名称</th><th>摘要</th></tr></thead><tbody><tr><td style="width: 5%">5</td><td style="width: 20%">实体空间的应急准备</td><td>设有安全庇护所、耐用应急物资、完全或部分脱离电网的，适用较低税率档；建筑设计不安全或脆弱的，适用较高税率档。</td></tr><tr><td style="width: 5%">6</td><td style="width: 20%">硬件开放度</td><td>尊重用户维修权、公开可用的原理图、设计及其他源文件、遵循开放标准的，适用较低税率档；故意制造不兼容、限制可改造性及相关反竞争做法的，适用较高税率档。</td></tr><tr><td style="width: 5%">7</td><td style="width: 20%">室内空气洁净</td><td>税率与实测的平均空气质量指标成比例——二氧化碳、PM2.5 及其他主流指标。计算平均时，人员在室时间更长的时段权重更高。适用于容纳超过20人的场所。</td></tr></tbody></table></div>
+<p class="dialog">格拉迪亚斯继续往下翻掌则人的文档。大约30分钟后，他累了，往后靠进椅子里。他让翡翠根据自己到现在看过的内容出一套测验题，帮他复习。翡翠应了一声，开始在后台干活。</p>
+<p class="dialog">然后他放下手持终端，攒了点力气从椅子上挪到床上，睡着了。</p>
+<p class="scene-break">3724年雨月13日</p>
+<p class="dialog">格拉迪亚斯出了门，穿着隐私袍，没戴面罩，也没上兜帽。他向右转，沿街往前走。</p>
+<p class="dialog">街道两侧是一排排跟他家一样的房子。人行道两边种着树，投下荫来。大多数房子是几种大同小异的默认样式，米色、浅蓝、灰色，看上去都是最近20年里盖的。</p>
+<p class="dialog">不过大约每十栋里就有一栋带点怪花样。格拉迪亚斯路过的第一栋，阳台造得像科幻片里的飞船。第二栋压根不是标准住宅，而是三栋小房子，一看就是集装箱改的。它们<em>看起来</em>倒像是他会住的地方，格拉迪亚斯想，他甚至喜欢看它们，可它们一出现，这片街区就再也谈不上整齐了。</p>
+<p class="dialog">第三栋侧面开了家咖啡馆。几个人站在外头喝茶。格拉迪亚斯想起塞拉几年前的一篇博客。在英格尔沃，这种事绝不可能被允许，他想——住宅区就是用来住人的。代价是：在英格尔沃，你要是住错了地方，去最近的咖啡馆得走一公里半。而在这儿，他没打算找，走了不到三百米就撞见一家。</p>
+<p class="dialog">最后，格拉迪亚斯到了目的地：一个就在第一个路口拐角处的小型社区与活动中心。他看见有人陆续进来，有走路的，也有几辆出租车在楼旁街上减速停下。他向右转，跟所有人一样从同一个入口进去。</p>
+<p class="dialog"><span style="color:#be9b00">“莫夫，你在这儿！”</span>他喊了一声——那声音同时低得只有颈带收得到，又冲得让颈带把它当成喊叫。</p>
+<p class="dialog"><span style="color:#00bc96">“啊，见到你真好，格拉迪亚斯！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“今天大会的主题是什么？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“在讨论我们想要更多什么样的公共空间，好给面对面社交多造些机会。他们担心这种机会越来越少了——现在大家不只在银聊和蓝鲸上聊，还跟翡翠和别的 AI 聊。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“有道理。”</span></p>
+<p class="dialog">他们听见一声哨响。其他参与者开始往其中一间会议室里走。格拉迪亚斯和莫夫跟了上去。</p>
+<p class="dialog">屋里摆着五张桌子，每张配十把椅子，前方是台区，立着一个供单人发言的讲台。格拉迪亚斯和莫夫一进去，就感到一阵微风——吊扇往下送风，同时把从外面抽进来的新风补上。格拉迪亚斯抬头，还看见天花板上似乎洒下淡淡的紫光。八成是远紫外消毒灯，他想。</p>
+<p class="dialog">他们挑了一张桌子坐下。</p>
+<p class="dialog">一个年纪偏大的姑娘在格拉迪亚斯旁边坐下，做了自我介绍。</p>
+<p class="dialog"><span style="color:#00b5d6">“你好，我叫佩莱。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我叫格拉迪亚斯。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“很高兴认识你。”</span></p>
+<p class="dialog">大约半分钟后，一个男人走上讲台，隐私袍没上兜帽，也没戴面罩。他顿了顿，开口说话。</p>
+<p class="dialog"><span style="color:#ec7383">“欢迎大家！”</span></p>
+<p class="dialog">屋里立刻安静下来。</p>
+<p class="dialog"><span style="color:#ec7383">“第一次来这个大会的，欢迎你们，也谢谢你们到场。我叫阿拉盖尔，做宣谕使七年了。这是本学期大会的第四场，主题是怎么改善维里迪亚的公共空间，让面对面社交更顺畅。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“不管你是新来的，<em>还是</em>一直都在的，都非常感谢你们出席。”</span></p>
+<p class="dialog">格拉迪亚斯用眼角瞥见佩莱取出一副颈带戴上，转向他，开始低声说话。片刻之后，他的手表震了。手表判断出佩莱想问他什么，自动开了一条通话频道。</p>
+<p class="dialog"><span style="color:#00b5d6">“再跟我说一遍，宣谕使到底是干什么的？”</span>，格拉迪亚斯从耳机里听到她问。</p>
+<p class="dialog">格拉迪亚斯还没想好怎么答，莫夫已经接上了话。</p>
+<p class="dialog"><span style="color:#00bc96">“宣谕使是掌舵会成员——掌则人或者监审官——每年被随机抽中退休，去当个类似大使的角色，促进掌舵会和公众之间的相互理解。我记得图谱资助的成员或者合议庭法官也能当宣谕使。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“目的是给出一点透明度。掌则人和监审官都很封闭，这是为了不被操纵，可他们也不想让人误会，进而怀疑整套制度。所以宣谕使充当桥梁。他们会把自己的思路、当年怎么做的事全摊开讲——但只在自己已经没有权力之后，这样就没人能影响他们。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“那所有宣谕使都要主持大会吗？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“看各人选择。有人演讲，有人写书，有人帮忙组织大会。最不爱跟人打交道的，就只写书，或者在银聊上管几个子论坛。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“你要是想弄清自己对加入掌舵会有没有兴趣，找宣谕使聊聊也很合适。”</span>莫夫补了一句。</p>
+<p class="dialog"><span style="color:#00bc96">“你想加入吗？”</span>他又问，随即赶紧打住——他意识到自己差点犯了大忌：在一个陌生人面前暴露了自己掌舵会成员的身份。</p>
+<p class="dialog"><span style="color:#00b5d6">“不了，我已经定了。我要读化学。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“不错！”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“我朋友觉得我不会喜欢，还得拼死拼活。可我喜欢这种挑战。”</span></p>
+<p class="dialog">他们把注意力转回讲台。</p>
+<p class="dialog"><span style="color:#ec7383">“好，我想请每桌的人轮流讲讲：你在哪个公共空间待过，在那里有过什么让你喜欢的体验。我们做半个长时。我会到各桌转转，有问题尽管问。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“开始吧！”</span></p>
+<p class="dialog">阿拉盖尔不再说话，慢慢走下讲台，往房间一侧走去。</p>
+<p class="dialog">格拉迪亚斯这桌，一个中年女人轻轻举手。其他人点头，把第一个发言的机会让给她。</p>
+<p class="dialog"><span style="color:#8d92f9">“我很喜欢加拉纳尔广场，就是卡利马尔边上那个，往南大概一公里。我总去那儿喝茶吃东西，看鸟看树。那地方真好。树好，茶好，荫也好，还总有有意思的人过来聊两句。”</span></p>
+<p class="dialog">格拉迪亚斯插话进来。</p>
+<p class="dialog"><span style="color:#be9b00">“我喜欢它旁边还挨着个游乐场。孩子小的时候，我们一家常去，大人喝茶，放孩子们自己去玩。”</span></p>
+<p class="dialog">那女人和另外几个人点头。</p>
+<p class="dialog"><span style="color:#00b5d6">“那儿还有个小图书馆和科学博物馆！”</span>佩莱补了一句。</p>
+<p class="dialog">她刚说完，他们就听见脚步声。阿拉盖尔走了过来，站在他们旁边。</p>
+<p class="dialog"><span style="color:#00b5d6">“阿拉盖尔，”</span>佩莱问，<span style="color:#00b5d6">“这些大会的结果，最后到底怎么变成实际的改变？”</span></p>
+<p class="dialog"><span style="color:#ec7383">“好问题。很多人都在看这些大会在做什么。掌则人讨论税则评则时会查大会的结果，琢磨他们想激励房产的哪些特征。”</span></p>
+<p class="dialog"><span style="color:#ec7383">“有时候掌则人也会悄悄直接来参加大会。谁知道呢，说不定这会儿就有一位掌则人或者见习官坐在桌边。”</span>他用开玩笑的语气补了一句。</p>
+<p class="dialog">阿拉盖尔停了片刻，又开口，补了最后一句。</p>
+<p class="dialog"><span style="color:#ec7383">“还有图谱资助的成员，以及所有参与二次方资助的人。这是个很值得看的信号。”</span></p>
+<p class="dialog">就在这时，格拉迪亚斯的手表震了，屋里每个人的手表同时震了起来。</p>
+<p class="dialog">格拉迪亚斯看了眼手表。房间空气过滤器里的传感器检测到了某种流感病毒。</p>
+<p class="dialog">几乎立刻，吊扇转得更快，紫光也更亮了。屋里大约一半人从口袋里掏出口罩戴上，有布面的，也有弹性体呼吸器。另一半什么也没做，只是看着。还有很多人戴上颈带，打算接下来的对话都靠它低声说——万一自己就是病人呢：病人不大声说话，传播就少。整个过程显得自然而自动，每个人似乎都尊重别人的选择。</p>
+<p class="dialog">另一个女人开口了。她通过颈带低声说话，可在格拉迪亚斯听来，耳机里传出的声音清楚自然，就像她当面在说一样。</p>
+<p class="dialog"><span style="color:#a38af2">“往西再走一公里左右，有个差不多的广场，塔帕亚广场。设施也类似——能坐下，能喝茶，旁边有店。可那边的游乐场简陋得多，我儿子说坐着都不舒服。而且我总觉得那儿没加拉纳尔热闹。所以也许游乐场真的很要紧。”</span></p>
+<p class="dialog"><span style="color:#00b5d6">“塔帕亚的图书馆也是一个样。书要么是些无聊的商业书，要么是没人看得懂的外文——不是古贝尔帕基语，就是哈拉格米尔来的什么东西。”</span></p>
+<p class="dialog">莫夫又接了话。</p>
+<p class="dialog"><span style="color:#00bc96">“啊，我知道那边怎么回事。有条评则奖励底层活跃使用，可很多人钻空子——塞进去些理论上达标、实际没人想用的东西。我猜塔帕亚的经营者觉得自己的主要客群不喜欢身边有小孩。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“那条评则真该改改了……”</span></p>
+<p class="dialog">佩莱和另一个女人都点头。</p>
+<p class="dialog">莫夫往后一靠，对话继续。别人接着互相问答时，格拉迪亚斯和莫夫都在心里记着：大家说出的偏好里，共同点在哪里。后台的翡翠也在记。</p>
+<hr class="rule">
+<p class="dialog">离开大会、跟莫夫道过别后不久，格拉迪亚斯来到一家餐厅。门在他面前打开。他走进去，坐下。一台机器人滑到他跟前，给他看菜单。他按了几个键，点了水和一份沙拉。</p>
+<p class="dialog">他环顾餐厅。另外有四位客人坐着，都靠窗看景——两位单独坐，一组两人。</p>
+<p class="dialog">单独坐的两人里，一个戴着某种耳塞和颈圈，每分钟大约两次，张嘴动上几嘀嗒。格拉迪亚斯想，那不是通话，就是某种 AI 辅助辅导。另一个单独坐的人似乎什么也没做，纯粹在看风景。坐一起的那对都是女人，看样子三十几岁，正在聊天。隔着距离格拉迪亚斯能听清几个词——说的是她们儿子快要比的翔球赛。</p>
+<p class="dialog">几分钟后，一个还没完全成年的少年走进来。格拉迪亚斯一眼认出了他：费布里克。</p>
+<p class="dialog"><span style="color:#ce9200">“格拉德叔叔，在这儿碰到你真好！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“费布里克！”</span></p>
+<p class="dialog">格拉迪亚斯张开手臂要抱他。费布里克抱了上来。</p>
+<p class="dialog"><span style="color:#be9b00">“上学去？”</span></p>
+<p class="dialog"><span style="color:#ce9200">“对，去学校。还有两天就考试了！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“有把握吗？”</span></p>
+<p class="dialog"><span style="color:#ce9200">“我觉得有！今天考树，昨天我凭记忆从零写了两棵不同的有界深度树，还有基于哈希的前缀树。真弄懂了以后，太好玩了！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“维尔和黛雅把你们照顾得好吗？”</span></p>
+<p class="dialog"><span style="color:#ce9200">“他们特别好。跟以前一样，特别上心。天天给我们做好吃的。而且爸给我买了个新算力盒！”</span></p>
+<p class="dialog">一个服务员把一杯茶递给费布里克，杯子带着密封盖。</p>
+<p class="dialog"><span style="color:#be9b00">“我来付。”</span>格拉迪亚斯喊了一声。<span style="color:#be9b00">“快去上学吧，考试加油！”</span></p>
+<p class="dialog"><span style="color:#ce9200">“我想你，格拉德叔叔！”</span></p>
+<p class="dialog">费布里克跑出餐厅，左转，转眼就不见了。</p>
+<p class="dialog">几分钟后，格拉迪亚斯的水和沙拉到了。他慢慢吃完，走到柜台前付账。</p>
+<p class="dialog">桌面一个绿色圆圈的轮廓亮了起来。格拉迪亚斯把手表贴上去。</p>
+<p class="dialog">轮廓变红了。</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: red; margin: -20px; border-radius: 10px; padding: 10px"><table><thead><tr><th>支付失败。</th></tr></thead><tbody><tr><td>余额不足。</td></tr></tbody></table></div></div>
+<p class="dialog">格拉迪亚斯迅速翻了翻手持终端里的几个钱包，才想起自己忘了给自己转钱。他的钱大部分只有两条取用途径：要么在家取，要么万不得已时走社交恢复——六把密钥由预先选定的家人和朋友保管，凑齐其中四把联署即可。这些人彼此都不知道别的恢复人是谁。</p>
+<p class="dialog">他飞快地想办法。他让翡翠以他的信誉为抵押借一笔钱。手持终端花了一嘀嗒收集作废符、生成零知识证明，然后显示在格拉迪亚斯的手表上供他确认。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th colspan="2">信誉担保借款申请</th></tr></thead><tbody><tr><td>工作经历：助教。<br><br>教授和5名学生给出好评。</td><td>作废符：<br><br>0x18f4...60c5</td></tr><tr><td>申请借款：</td><td>2773齐普币</td></tr></tbody></table><button>提交</button></div>
+<p class="dialog">唯一会公开可见的信息，只有作废符和借到的金额。作废符是一段伪随机哈希，由他工作的公开评语以一种确定性、但不可关联的方式生成。它会被发布到密码学网络上，防止同一份信誉被拿去抵押两次。证明会确认这个作废符有效、它所代表的信誉足以借出这笔钱，此外什么也不透露。格拉迪亚斯的姓名对任何人都不可见。</p>
+<p class="dialog">格拉迪亚斯点下“提交”，交易飞进密码学网络。两嘀嗒后，交易确认，2773齐普币出现在他的钱包里。</p>
+<p class="dialog">格拉迪亚斯又贴了一次手表。</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: red; margin: -20px; border-radius: 10px; padding: 10px"><table><thead><tr><th>支付成功。</th></tr></thead><tbody><tr><td>基础价</td><td>10.5齐普币</td></tr><tr><td>税额</td><td>1.1齐普币</td></tr><tr><td>合计</td><td>11.6齐普币</td></tr></tbody></table></div></div>
+<p class="dialog">在维里迪亚，乃至世界大部分地方，连销售税的支付都是零知识的。只有格拉迪亚斯和餐厅知道刚有一笔10.5齐普币的订单。销售税会实时、自动地送进政府。整套制度的执行不靠审计表格，而靠随机抽查——稽查的人上门点单，核实餐厅每次请求付款时用的都是纳税类交易。</p>
+<p class="dialog">格拉迪亚斯谢过服务员，慢慢走出餐厅。</p>
+<hr class="rule">
+<p class="dialog">出了餐厅，格拉迪亚斯继续沿街走，又走了几百米后向右转。经过几户人家，小路无缝融进一片森林。再走几百米，两侧开始出现用大石块砌成的房子。</p>
+<p class="dialog">这条路穿过卡利马尔区，格拉迪亚斯以前走过很多次。</p>
+<p class="dialog">他继续走，穿过空中步道，进了隧道，来到那个 Y 字形路口。这一次，贴着埃菲里昂勋爵那篇告示的海报不见了。他停了一会儿，然后——也许是他这辈子第二次——在路口向左转。他继续往前走。</p>
+<p class="dialog">小路很快回到地面。它从几条高速公路下面蜿蜒穿过，但一路上都有树遮着——<em>尤其</em>是公路在头顶的时候。</p>
+<p class="dialog">高速公路底面的涂鸦，还有底下的脏东西，感觉都比平时多。格拉迪亚斯说不准是最近打扫得不够勤，还是就这条路因为什么缘故没怎么维护。</p>
+<p class="dialog">不久，路开始向上弯，接成山侧一段笔直的露天阶梯，高200米。这地方格拉迪亚斯只来过一次：被授为见习官那次。</p>
+<p class="dialog">他爬了大约10分钟。这一通爬，加上身上的隐私袍，让他热得几乎要出汗——尽管外头很冷。终于到了顶。小路又变成隧道。隧道很快变成阶梯，爬完两段楼梯后，天光重新出现。格拉迪亚斯此刻站在一座塔顶层的空地上，四周是石墙。他能看见头顶的天空。身旁是一个绿色圆圈，比平时更大、更亮。塔边缘的座位上坐着十名掌舵会成员，全都穿着隐私袍。</p>
+<p class="dialog">格拉迪亚斯把手表贴向圆圈。墙上各处此前他没注意到的灯亮了起来，是一种独特的绿色。</p>
+<p class="dialog">几乎立刻，一名掌舵会成员开口了。</p>
+<p class="dialog"><span style="color:#00b9c3">“欢迎，见习官。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你们可以叫我——”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“我们不该知道。保证这套程序落到正确的档案上，是密码学的事。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那我猜，你们可以按我证明里那个作废符的数字来叫我。”</span></p>
+<p class="dialog">几名掌舵会成员的身子不自在地绷了一下。他们没料到这场本该庄重、基本全程无声的程序里，会有人这样接话。但也有几个人往前倾了倾，像是乐见一点变化。</p>
+<p class="dialog"><span style="color:#00b9c3">“好吧，372ef。你做好选择了吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“做好了。”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“什么选择？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我申请成为掌则人。”</span></p>
+<p class="dialog">静了几嘀嗒。</p>
+<p class="dialog"><span style="color:#00b9c3">“372ef，你可以再把手持终端贴一次圆圈，确认你的决定。”</span></p>
+<p class="dialog">格拉迪亚斯把手持终端贴向圆圈。</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: green; margin: -20px; border-radius: 10px; padding: 10px"><table><tbody><tr><td>申请已确认。</td></tr></tbody></table></div></div>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-05.html">上一章 · 第五章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-07.html">下一章 · 第七章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias walked slowly toward the door of his house, keeping his head down so that his privacy robe with its hood could double as shielding from the cold rain. A small roof covered the area right in front of the doorstep. Once he got to the doorstep, he slowly took off his hood. He picked up a food box - the usual number ten from the Dzego food truck - from a small table. He then tapped his watch against a glowing green circle beside the door.</p>
+<p class="dialog">The door opened. Gladias sighed, entered, and let the door close behind him. He went down a set of stairs to the basement, and put the food box down on a table. The lights turned on, a gentle background noise simulating sounds from nature slowly ramped up, and another door automatically closed behind him.</p>
+<p class="dialog">Gladias took off his privacy robe, though keeping his neck band on, and threw the privacy robe onto the back of a chair to dry off. He sat down on another large soft chair that inclined back about forty-five degrees.</p>
+<p class="dialog">His watch buzzed as his local network authenticated it and let it connect.</p>
+<p class="dialog">He opened his mouth slightly and whispered an instruction through his neck band to open a call with Mov.</p>
+<p class="dialog">Almost immediately, Mov picked up.</p>
+<p class="dialog"><span style="color:#00bc96">"Are you in a secure location?"</span>, Mov asked.</p>
+<p class="dialog"><span style="color:#be9b00">"I'm whispering into a subvocalization neck band, and your audio is coming in to me by earpiece. We're inside a sealed basement room, the doors and the walls covered with anti-transmission foil, inside of a locked and well-insulated house. There's real rain outside, and the sound of fake rain inside. Secure enough for you?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"These days you never know."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, if you want I can change the fake rain to a crowd babble so it's even harder to strip, <em>and</em> put on headphones."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Fine, no need. Your setup is better than most as it is."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I'm submitting my track decision today. I'm going to become a Keeper."</span></p>
+<p class="dialog">For a few ticks, there was silence.</p>
+<p class="dialog"><span style="color:#00bc96">"When did you decide?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"A few days ago."</span></p>
+<p class="dialog"><span style="color:#00bc96">"You've been set on becoming a Sentinel for at least the past year."</span></p>
+<p class="dialog"><span style="color:#be9b00">"The Keeper role is where the real ability to make change lies. The rubrics themselves are more important than-"</span></p>
+<p class="dialog"><span style="color:#00bc96">"It was him, wasn't it? The mysterious gentleman, Delwart?"</span></p>
+<p class="dialog">For a few ticks, silence again.</p>
+<p class="dialog"><span style="color:#00bc96">"Does Seila know?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Of course she does, I told her two days ago."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Before me."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well of course, she's my-"</span></p>
+<p class="dialog"><span style="color:#00bc96">"But you still haven't told her ... why you changed your mind, have you?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Can you just tell me what you learned from your snooping already?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Okay fine."</span></p>
+<p class="dialog"><span style="color:#00bc96">"So remember what I told you last time - when Delwart left the meeting, I followed him, and it turned out that he just walked over to some totally different tea shop in GPH, and he had another meeting there fifty minutes later. He left through some different door, so I lost track of him there."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yeah I remember."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Well guess what, the story goes further. So I threw my surveillance bat into an innocuous spot in both places - both of those got caught, no luck there. But I also made a point to re-visit both spots back and forth the next three days. Both spots kept quiet for two days. But on the third day, I caught sight of Delwart again. He always wears a new privacy robe every day, he re-randomizes his insoles to change his gait and his height, but he has one weakness that let me catch him."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What is it?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"His behavior. He looks around much less than the average person, he feels really focused on where he's going. I sacrificed a surveillance bat a couple of times to make distracting noises. Most people turn their heads at least a little bit; Delwart does not."</span></p>
+<p class="dialog"><span style="color:#00bc96">"And so that's how I managed to find him again, walking from one tea shop to the next."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So he's having these meetings this whole time?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Yep. Maybe you're not the only person he's trying to convince to become a Keeper."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what do we do?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"It seems like there's only one thing we can do right now. Go along with what Delwart says, and keep our eyes open."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Anyway, you should get some rest. Remember, we have that citizens' assembly to go to tomorrow."</span></p>
+<p class="dialog">Gladias ended the call. He took out his hand device, and returned to studying the Keeper governance structure.</p>
+<figure class="fig"><img src="../assets/images/chapter-06-fig-01.svg" alt="随机选出评则掌则人并分配至讨论组。" title="随机选出评则掌则人并分配至讨论组。" loading="lazy" decoding="async"></figure>
+<p class="dialog">Similar to the Sentinels, Gladias noted, but bigger: Sentinels were three groups of three, Keepers were three groups of seven. Courts were not part of the Order, but they were also similar, he remembered: two pairs of two separately deliberating before they cast their votes, plus one as a tiebreaker, the median of their five views determining the judgement. The Keeper groups having more people than Courts and Sentinel panels made sense: a rubric mattered more than any one single decision. The Courts being smaller made sense too: five judges were just for one round and you can always appeal.</p>
+<p class="dialog">Gladias slid back and forth between various screens, and scrolled through the current rubric set planned for evaluation:</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>Rubric title</th><th>Summary</th></tr></thead><tbody><tr><td style="width: 5%">5</td><td style="width: 20%">Emergency preparedness in physical spaces</td><td>Reduced tax bracket for presence of secure shelters, durable emergency supplies, full or partial grid-independence. Increased tax bracket for unsafe or fragile building design.</td></tr><tr><td style="width: 5%">6</td><td style="width: 20%">Openness in hardware</td><td>Reduced tax bracket for respecting user right to repair, publishing usable schematics, designs and other sources, and following open standards. Increased tax bracket for deliberate incompatibility, restricting modifiability and related anti-competitive practices.</td></tr><tr><td style="width: 5%">7</td><td style="width: 20%">Clean indoor air</td><td>Tax bracket proportional to observed average air quality indicators - CO2, PM2.5 and other mainstream measures. Average gives higher weight to higher-occupancy time periods. Applies to spaces that host more than 20 people.</td></tr></tbody></table></div>
+<p class="dialog">Gladias kept scrolling through the Keeper documentation. After about thirty minutes, he laid back on the chair, tired. He asked Emerald to come up with a quiz related to the information he viewed so far to help him study. Emerald acknowledged, and began working in the background.</p>
+<p class="dialog">He then put down his hand device, mustered the energy to get off the chair and onto his bed, and went to sleep.</p>
+<p class="scene-break">3724 Rainmoon 13</p>
+<p class="dialog">Gladias exited his house, wearing a privacy robe without putting on the face cover or hood. He turned right, and began walking down the street.</p>
+<p class="dialog">On both sides of the street, there were rows of houses just like his. Trees lined both sidewalks to provide shade. Most of the houses had one of a few similar default styles, with beige and light blue and grey colors, and appeared to have been constructed within the last twenty years.</p>
+<p class="dialog">About one in ten houses, however, had some form of quirk to it. The first that Gladias passed by had a balcony that looked like a futuristic spaceship. The second did not have a regular house at all, and instead featured three smaller houses that were clearly refurbished shipping containers. They <em>looked like</em> something that he would live in, Gladias thought, and he even enjoyed looking at them, but they made it impossible to perceive the neighborhood as being uniform.</p>
+<p class="dialog">The third was a house with a coffee shop on the side. Several people were standing outside and drinking tea. Gladias remembered one of Seila's blogs from years ago. In Inglewore they would never allow this, he thought - housing districts were for housing. The cost: in Inglewore, if you lived in the wrong place, you had to walk one and a half kilometers to get to the nearest coffee shop. Here, he had just walked to one within three hundred meters without even intending to.</p>
+<p class="dialog">Finally, Gladias arrived at his destination: a small community and event center that was located at the first street corner. He saw others coming in, some walking, and a few taxis slowing down and stopping on the street beside the building. He turned right, and went through the same entrance that everyone else was going through.</p>
+<p class="dialog"><span style="color:#be9b00">"Mov, there you are!"</span>, he exclaimed, speaking in a voice that was simultaneously silent so that only his neck band could pick it up, and aggressive so that his neck band interpreted it as shouting.</p>
+<p class="dialog"><span style="color:#00bc96">"Ah good to see you Gladias!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what is the topic of the assembly today?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"They're discussing what kinds of public spaces we want to have more of, trying to create more opportunities for in-person social interaction. They're worried we're not getting enough of that now that everyone is talking now just on Silverchat and Bluewhale but also to Emerald and the other AIs."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Makes sense."</span></p>
+<p class="dialog">They heard a whistle. The other participants started walking into one of the meeting rooms. Gladias and Mov both followed them.</p>
+<p class="dialog">Inside the room, there were five tables, each with ten chairs, and a stage area at the front with a podium for one person to speak. As soon as Gladias and Mov entered, they could feel a gentle breeze as ceiling-mounted fans pushed air downwards and replaced it with new fresh air sucked in from the outside. When Gladias looked upwards, he also saw what appeared to be faint violet lights shining down from the ceiling. Must be far-UVC disinfection lights, he thought.</p>
+<p class="dialog">They picked one of the tables, and sat down.</p>
+<p class="dialog">An older teenage girl sat down beside Gladias, and introduced herself.</p>
+<p class="dialog"><span style="color:#00b5d6">"Hi, I'm Pelae."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I'm Gladias."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"Nice to meet you."</span></p>
+<p class="dialog">About half a minute later, a man wearing a privacy robe without the hood or face cover walked up to the podium. After pausing for a moment, he began to speak.</p>
+<p class="dialog"><span style="color:#ec7383">"Welcome everyone!"</span></p>
+<p class="dialog">The room quickly went silent.</p>
+<p class="dialog"><span style="color:#ec7383">"For those who are new to this assembly, welcome and thank you for coming. I'm Alagael, I've been a Herald for seven years. This is the fourth session of this semester's assembly, the topic is how we can improve Veridia's public spaces to support better in-person social interaction."</span></p>
+<p class="dialog"><span style="color:#ec7383">"And for those who are new <em>and</em> those who have been with us the whole time, thank you very much for attending."</span></p>
+<p class="dialog">Out of the corner of his eye, Gladias saw Pelae take out and put on a neck band, turn towards him, and start whispering. A few moments later, his watch buzzed. It had registered that Pelae was trying to ask him something, and opened a conversation channel.</p>
+<p class="dialog"><span style="color:#00b5d6">"Remind me, what do Heralds do?"</span>, Gladias heard her ask through his earpiece.</p>
+<p class="dialog">Before Gladias could formulate a response, Mov had already begun to cover it.</p>
+<p class="dialog"><span style="color:#00bc96">"Heralds are Order members - Keepers or Sentinels - that get randomly selected each year to retire, to be a sort of ambassador helping to create better understanding between the Order and the public. I think Graph Funding members or judges can become Heralds too."</span></p>
+<p class="dialog"><span style="color:#00bc96">"The goal is to provide some transparency. Keepers and Sentinels are very private to protect themselves from manipulation, but they don't want people to get the wrong ideas and start distrusting the whole thing. So Heralds act as a bridge. They're very transparent about how they think and how they did their work - but only after they no longer have any power, so there's no risk from anyone influencing them."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"So do all Heralds run assemblies?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"It's up to each person's choice. Some give speeches, others write books, others help organize assemblies. The most antisocial ones just write books or moderate sub-forums on Silverchat."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Heralds are also good people to talk to if you want to figure out if you're interested in joining the Order"</span>, Mov added.</p>
+<p class="dialog"><span style="color:#00bc96">"Do you want to join?"</span>, he added, and then bit his tongue, realizing that he had come uncomfortably close to committing the faux pas of revealing to a stranger his status as an Order member.</p>
+<p class="dialog"><span style="color:#00b5d6">"Nah, I've already decided. I'm going into chemistry."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Nice!"</span></p>
+<p class="dialog"><span style="color:#00b5d6">"My friends think I won't enjoy it and I'll have to work really hard. But I like the challenge."</span></p>
+<p class="dialog">They turned their attention back to the podium.</p>
+<p class="dialog"><span style="color:#ec7383">"Alright, so I want everyone at each table to take turns, and share a positive experience you've had of a public space that you've spent time in that you appreciate. We'll do this for half a longhour. I will go around the tables, I'm happy to answer any questions."</span></p>
+<p class="dialog"><span style="color:#ec7383">"Let's begin!"</span></p>
+<p class="dialog">Alagael stopped speaking, and slowly walked off the podium toward the side of the room.</p>
+<p class="dialog">At the table that Gladias was sitting at, a middle-aged woman softly raised her hand. The others nodded, offering her the chance to speak first.</p>
+<p class="dialog"><span style="color:#8d92f9">"I really appreciate Galanar Square, the one that's on the border of Kalimar about a kilometer south of here. I always go there to drink tea and have food and look at the birds and trees. It's such a nice space. Good trees, good tea, good shade, there's always interesting people to talk to coming by."</span></p>
+<p class="dialog">Gladias jumped in to the conversation.</p>
+<p class="dialog"><span style="color:#be9b00">"I like how there's also a playground right beside it. My family used to go there a lot when our children were younger, we would drink tea, and leave the kids to go and play."</span></p>
+<p class="dialog">The woman and several others nodded.</p>
+<p class="dialog"><span style="color:#00b5d6">"There's also a mini library and science museum there!"</span>, Pelae added.</p>
+<p class="dialog">As soon as she finished, they heard footsteps. Alagael had walked by and was standing over them.</p>
+<p class="dialog"><span style="color:#00b5d6">"Alagael"</span>, Pelae asked, <span style="color:#00b5d6">"how do the results of these assemblies actually turn into outcomes?"</span></p>
+<p class="dialog"><span style="color:#ec7383">"Good question. Lots of people watch what the assemblies are doing. Keepers check the results when they're debating their tax rubrics, figuring out what features of these properties they want to incentivize."</span></p>
+<p class="dialog"><span style="color:#ec7383">"Sometimes Keepers quietly join the assemblies directly. Who knows, maybe there's even a Keeper or an Acolyte sitting at the table right now"</span>, he added in a joking tone.</p>
+<p class="dialog">For a few moments Alagael paused, and then opened his mouth again to say one last thing.</p>
+<p class="dialog"><span style="color:#ec7383">"Also Graph Funding members, and anyone participating in quadratic funding. It's a good signal to watch."</span></p>
+<p class="dialog">At that moment, Gladias's watch buzzed, and the watches of everyone in the room buzzed at the same time.</p>
+<p class="dialog">Gladias checked his watch. Some flu virus had been detected by the sensors inside the air filters in the room.</p>
+<p class="dialog">Almost immediately, the ceiling fans became faster and the violet lights brighter. About half of the participants in the room took out masks, some cloth and some elastomeric respirators, from their pockets and put them on. The other half simply did nothing and watched. Many participants also put on neck bands, intending to whisper through them for the rest of the conversation, just in case they were the ones that were sick - it reduces transmission if a sick person does not speak loudly. The process seemed natural and automatic, and everyone seemed to respect each other's choices.</p>
+<p class="dialog">Another woman spoke up. She was whispering through her neck band, but to Gladias her voice felt just as clear and natural through his earpiece as if she had been speaking directly.</p>
+<p class="dialog"><span style="color:#a38af2">"There's a similar square about a kilometer further west, Tapaia Square. It has similar things - you can sit down, drink tea, there are shops nearby. But the playground is much more basic, my son says it's not even comfortable. And I always get the feeling that that one is less lively than Galanar. So maybe the playground really matters."</span></p>
+<p class="dialog"><span style="color:#00b5d6">"Tapaia's library is also like that. All the books are either some boring business books, or things in foreign languages nobody understands, either Old Belpakian or something from Haragmir."</span></p>
+<p class="dialog">Mov jumped back into the conversation.</p>
+<p class="dialog"><span style="color:#00bc96">"Ah yeah, I know what's going on there. There's a rubric that incentivizes ground-floor active use, but a lot of people are gaming the system - putting things in that theoretically qualify but that nobody actually wants to use. I suspect whoever runs Tapaia thinks that their main customer base doesn't like being around kids."</span></p>
+<p class="dialog"><span style="color:#00bc96">"That rubric really needs to be adjusted..."</span></p>
+<p class="dialog">Pelae and the other woman both nodded.</p>
+<p class="dialog">Mov sat back, and the conversation continued. As the others continued to answer each other's questions, Gladias and Mov both mentally took notes on what the common threads were in the preferences that people were expressing. In the background, Emerald was taking notes as well.</p>
+<hr class="rule">
+<p class="dialog">Soon after leaving the assembly and saying goodbye to Mov, Gladias arrived at a restaurant. The door opened in front of him. He walked in, and then sat down. A robot slid up to him, and showed him a menu. He pressed a few buttons, ordering water and a salad.</p>
+<p class="dialog">He looked around the restaurant. Four others were sitting down, all beside the window to enjoy the view - two people alone, and one group of two.</p>
+<p class="dialog">One of the two people sitting alone was wearing some kind of earbuds and a neck collar, and about twice a minute he moved his mouth for a few ticks. It was either a conversation, Gladias thought, or some kind of AI-assisted tutoring. The other person sitting alone did not seem to be doing anything, and was simply enjoying the view. The pair sitting together were both women, seemingly in their thirties, and were having a conversation. Gladias could make out some of their words from a distance - something about their sons' upcoming Helisport game.</p>
+<p class="dialog">After a couple of minutes, a teenage boy, not quite an adult, walked in. Gladias recognized him instantly: Febric.</p>
+<p class="dialog"><span style="color:#ce9200">"Uncle Glad, good to see you here!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Febric!"</span></p>
+<p class="dialog">Gladias reached out his arms for a hug. Febric obliged.</p>
+<p class="dialog"><span style="color:#be9b00">"You on your way to school?"</span></p>
+<p class="dialog"><span style="color:#ce9200">"Yep, off to school. Exams are in two days!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"You feeling confident?"</span></p>
+<p class="dialog"><span style="color:#ce9200">"I think so! We're doing the trees exam today, I coded two different kinds of bounded-depth trees from scratch from memory yesterday, as well as the hash-based trie. Once you actually understand it, it's so fun!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Are Vil and Daia taking good care of you guys?"</span></p>
+<p class="dialog"><span style="color:#ce9200">"Oh they're amazing. Really caring, as always. They cook really good food for us every day. And Dad bought me a new compute box!"</span></p>
+<p class="dialog">A waiter handed Febric a tea in a cup with a sealed lid.</p>
+<p class="dialog"><span style="color:#be9b00">"I'll pay for it"</span>, Gladias called out. <span style="color:#be9b00">"You should get to school, good luck!"</span></p>
+<p class="dialog"><span style="color:#ce9200">"I miss you, Uncle Glad!"</span></p>
+<p class="dialog">Febric ran out of the restaurant, turned left, and disappeared from view.</p>
+<p class="dialog">A few minutes later, Gladias's water and salad arrived. Gladias slowly ate, and then walked up to the counter to pay.</p>
+<p class="dialog">The outline on a green circle on the tabletop lit up. Gladias tapped his watch against it.</p>
+<p class="dialog">The outline turned red.</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: red; margin: -20px; border-radius: 10px; padding: 10px"><table><thead><tr><th>Payment declined.</th></tr></thead><tbody><tr><td>Not enough funds.</td></tr></tbody></table></div></div>
+<p class="dialog">Gladias quickly scanned through the wallets in his hand device, and realized that he had forgotten to send himself funds. The bulk of his money was only accessible either from home, or, if absolutely necessary, through social recovery via combined signatures from four of six keys held by pre-selected family members and friends, none of whom knew who the other recoverers were.</p>
+<p class="dialog">He thought quickly. He asked Emerald to take out a loan collateralized by his reputation. His hand device spent a tick collecting nullifiers and generating a zero-knowledge proof, and displayed it on Gladias's watch for review.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th colspan="2">Reputation-backed loan request</th></tr></thead><tbody><tr><td>Work history: teaching assistant. <br><br> Positive review from the professor and 5 students.</td><td>Nullifier: <br><br>0x18f4...60c5</td></tr><tr><td>Requested loan:</td><td>2773 zipcoins</td></tr></tbody></table><button>Submit</button></div>
+<p class="dialog">The only information that would be publicly visible was the nullifier and the amount borrowed. The nullifier was a pseudorandom hash generated in a deterministic but unlinkable way from the public reviews of his work. It would get published to the cryptographic network, preventing the same reputation from being used to collateralize a loan twice. The proof would confirm that the nullifier was valid and the reputation it was representing was sufficient to take out those funds, and reveal nothing else. Gladias's name would not be visible to anyone.</p>
+<p class="dialog">Gladias tapped "Submit", and the transaction flew off into the cryptographic network. Two ticks later, it confirmed and the 2773 zipcoins appeared in his wallet.</p>
+<p class="dialog">Gladias tapped his watch again.</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: red; margin: -20px; border-radius: 10px; padding: 10px"><table><thead><tr><th>Payment succeeded.</th></tr></thead><tbody><tr><td>Base</td><td>10.5 zc</td></tr><tr><td>Tax</td><td>1.1 zc</td></tr><tr><td>Total</td><td>11.6 zc</td></tr></tbody></table></div></div>
+<p class="dialog">In Veridia, and across much of the world, even the sales tax payments were zero-knowledge. Only Gladias and the restaurant knew that a 10.5 zipcoin order had been made. The sales tax was sent to the government in real time, automatically. The whole scheme was enforced not by auditing spreadsheets, but by random inspection - people coming to order, and verifying that a tax-paying transaction type was used any time that the restaurant requested payment.</p>
+<p class="dialog">Gladias thanked the waiter, and slowly walked out of the restaurant.</p>
+<hr class="rule">
+<p class="dialog">After leaving the restaurant, Gladias continued walking along the street, and after another few hundred meters turned right. After passing by a few houses, the path melted seamlessly into a forest. After a few hundred meters more, a series of houses made out of large stone bricks began to appear on both sides.</p>
+<p class="dialog">Gladias had taken this road through the Kalimar district many times before.</p>
+<p class="dialog">He kept walking, went across the sky bridge, and into the tunnel. He got to the Y-shaped intersection. This time, the poster with Lord Ephelion's message was gone. After stopping for a moment, for what might have been only the second time in his life, Gladias turned left at the intersection. He kept walking forward.</p>
+<p class="dialog">The path soon went back above ground. It snaked under a few highways, though covered by trees the whole time - <em>especially</em> when the highways were overhead.</p>
+<p class="dialog">The amount of graffiti on the bottom of the highways, as well as the amount of dirt under them, felt like more than usual. Gladias wasn't sure if the cleaning was less effective recently, or if it was simply this route that was less well-maintained for whatever reason.</p>
+<p class="dialog">Soon, the road began to curve up, and transitioned into a straight, two-hundred-meter-tall outdoor staircase on the side of the mountain. Gladias had only been here once before: when he was inducted as an Acolyte.</p>
+<p class="dialog">For about ten minutes, Gladias climbed the stairs. The intensity of the exertion, together with the privacy robe, made Gladias feel warm and almost sweaty, despite the outdoor cold. Finally, he made it to the top. The path once again turned into a tunnel. The tunnel soon turned into stairs, and finally after climbing two flights of stairs, open daylight appeared once again. Gladias was now standing in the center of an open area on the top floor of a tower, surrounded by stone walls. He could see the sky above him. Beside him, there was a green circle, larger and glowing more brightly than usual. Sitting on seats around the edge of the tower, there were ten Order members, all wearing privacy robes.</p>
+<p class="dialog">Gladias tapped his watch against the circle. Various lights along the walls, lights that he did not notice before, lit up in a unique green shade.</p>
+<p class="dialog">Almost immediately, an Order member spoke.</p>
+<p class="dialog"><span style="color:#00b9c3">"Welcome, Acolyte."</span></p>
+<p class="dialog"><span style="color:#be9b00">"You can call me-"</span></p>
+<p class="dialog"><span style="color:#00b9c3">"We're not supposed to know, it's the cryptography's job to make sure this procedure gets applied to the correct profile."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Then I guess you can call me by whatever the digits of the nullifier in my proof are."</span></p>
+<p class="dialog">A few Order members' bodies tensed up somewhat uncomfortably. They were not expecting this style of engagement for what was supposed to be a solemn and mostly silent procedure. But a few others leaned forward, seeming to welcome the variety.</p>
+<p class="dialog"><span style="color:#00b9c3">"Very well, three-seven-two-eff. Have you made your choice?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I have."</span></p>
+<p class="dialog"><span style="color:#00b9c3">"And that choice is?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I am applying to become a Keeper."</span></p>
+<p class="dialog">For a few ticks, silence.</p>
+<p class="dialog"><span style="color:#00b9c3">"Three-seven-two-eff, you may tap your hand device against the circle once again to confirm your decision."</span></p>
+<p class="dialog">Gladias tapped his hand device against the circle.</p>
+<div class="device-view narrow-device-view"><div style="border-style: solid; border-color: green; margin: -20px; border-radius: 10px; padding: 10px"><table><tbody><tr><td>Request confirmed.</td></tr></tbody></table></div></div>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-05.html">上一章 · 第五章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-07.html">下一章 · 第七章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第六章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

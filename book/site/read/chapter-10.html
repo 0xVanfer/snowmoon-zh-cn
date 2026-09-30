@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第十章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第十章 · Chapter 10 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-09.html">
+  <link rel="next" href="chapter-11.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="10">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第十章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第十章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 10</p>
+    <p class="chapter-heading__dateline">自由城，联合城邦 · 3724年风月24日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Freetown, United Cities · 3724 Windmoon 24</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">扬的出租车停在自由城经济研究所门口，他在这里做研究员。他下了车，走进大楼，用手持终端碰了一下闸机付费进楼。</p>
+<p class="dialog">他余光瞥见，入场费比之前高了10%。</p>
+<p class="dialog">他走向餐厅区，看见大多数桌子都满了。只有一张桌子还有空位，而且已经有个女人坐在那儿。</p>
+<p class="dialog"><span style="color:#78b249">“这儿能坐吗？”</span>扬问。</p>
+<p class="dialog"><span style="color:#8d92f9">“当然。”</span></p>
+<p class="dialog">扬坐了下来。</p>
+<p class="dialog"><span style="color:#78b249">“我叫扬。”</span>他主动说。</p>
+<p class="dialog"><span style="color:#8d92f9">“我叫乌塔库。我来自贝尔帕基，在研究所读博士。”</span></p>
+<p class="dialog">一个机器人滑到扬身边，递上菜单。</p>
+<p class="dialog">扬很快扫了一遍，点了一份蔬菜配鱼，还有一杯水。</p>
+<p class="dialog">他发现这里的价格也比以前高了。</p>
+<p class="dialog"><span style="color:#78b249">“哇，现在什么都涨价了。”</span></p>
+<p class="dialog"><span style="color:#8d92f9">“你没看新闻？”</span></p>
+<p class="dialog"><span style="color:#78b249">“从哈普顿开完会回来就没看。”</span></p>
+<p class="dialog"><span style="color:#8d92f9">“嗯，可这消息在哈普顿也该传开了。到处都在说要提高国防预算。”</span></p>
+<p class="dialog"><span style="color:#78b249">“北极恐慌？”</span></p>
+<p class="dialog"><span style="color:#8d92f9">“对，他们的无人机活动越来越频繁。可奇怪的是，不少政客对此完全无动于衷。真正当回事的，好像只有红郡和它周边几个城邦。”</span></p>
+<p class="dialog"><span style="color:#8d92f9">“嗯，还有自由城，不知怎么就也算上了。”</span></p>
+<p class="dialog"><span style="color:#78b249">“为什么是我们？我们这么上心，我倒挺高兴，可联合城邦里差不多有一半离红郡比我们近，他们才该更担心！”</span></p>
+<p class="dialog"><span style="color:#8d92f9">“嗯，德文维尔是当真的——毕竟德文维尔议会有12%的席位是红郡选的。可德普莱西、翁达克、因伯，一点都不上心。”</span></p>
+<p class="dialog"><span style="color:#8d92f9">“是挺怪的。别忘了，按宪法，这里的政府只能收基础土地税，再加上从自有自然资源资产上收的一点租金，不能多收。所以认真对待这个问题的根本不是政府，而是那些巨型企业。”</span></p>
+<p class="dialog">机器人回来了，端着扬的饭菜和水。扬接过那盘食物放到桌上，又拿起水杯，立刻喝了一口。</p>
+<p class="dialog"><span style="color:#8d92f9">“他们现在把营收的3%捐给国防，甚至还串通起来惩罚不捐的公司。莫格纳本来不愿意出钱——他们说了些腐败之类的话，不过大家都觉得他们只是抠门——结果那些充电站厂商联合起来，威胁说除非莫格纳也加入，否则就把莫格纳的车挡在他们的充电网之外，那可是自由城90%的充电站。昨天莫格纳认了。”</span></p>
+<p class="dialog"><span style="color:#78b249">“这……够狠。要是放在平时，哪个行业敢这么干，自由城得有一半人反过来串通对付他们，说不定还会出钱扶5家新公司跟他们打对台。”</span></p>
+<p class="dialog"><span style="color:#8d92f9">“平时是这样。可你也知道，现在时势不同了。”</span></p>
+<p class="scene-break">梅尔丹，维里迪亚</p>
+<p class="dialog"><span style="color:#54a1f9">“要去参加你的第一次掌则人会议了？”</span>塞拉问格拉迪亚斯。</p>
+<p class="dialog"><span style="color:#be9b00">“我的头两场掌则人会议，连着开。第一场是公开活动与演出中的文化价值——其实就是当年我给恐结打分的那条评则。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“哦，那场活动中的文化价值，要讨论什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我在群里说过，我觉得这条评则是在把大家往一味平淡上引，只求不冒犯任何人。没想到还有几个人赞成。这次我想使劲推一把，把这点改掉。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“Veridia ba ‘fun’ gie！”</span>，塞拉开玩笑道。</p>
+<p class="dialog"><span style="color:#be9b00">“该换掉的不是那个‘gie’吗？‘fau’只是‘再’的意思。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“啊，对。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“不过没错。维里迪亚会重新有意思起来。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“那第二场呢？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“硬件开放度评则。议题是要不要修改它，把军用和监控产品豁免出去。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“嗯？那有什么利弊？”</span></p>
+<p class="dialog">格拉迪亚斯仔细斟酌着该怎么说。他犹豫了一下要不要提德尔瓦特，最后还是决定不提。</p>
+<p class="dialog"><span style="color:#be9b00">“这个嘛，”</span>他开口道，<span style="color:#be9b00">“有些掌则人认为我们该从资助战争里抽身——那是负和博弈，双方都有更好的炸弹和战斗无人机，结果还是一样，只是炸掉的东西更多、受伤的人更多。”</span></p>
+<p class="dialog">他对自己这番话很满意。他隐隐觉得，塞拉对任何可能伤到泽国的事都很敏感，会求他采取对泽国最有利的立场。他绷紧了神经，等着塞拉的下一个问题。</p>
+<p class="dialog"><span style="color:#54a1f9">“可是资助……那不是更多属于图谱资助那边的问题吗？”</span></p>
+<p class="dialog">格拉迪亚斯在心里松了口气。</p>
+<p class="dialog"><span style="color:#be9b00">“别忘了，我们也造武器，还有监控产品。而评则会左右我们把多少看家本领留给自己。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“原来是这样……”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“那好吧，开完会记得告诉我怎么样！”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯沿走廊走下去，进了一处庭院。那里排着一列隔间，装着厚实的滑动门。他照吩咐走到最右边那间。</p>
+<p class="dialog">他把隔板拉开。这要费不小的力气。他立刻看出，这间隔间比大梅港那些蒙布的隔间正规得多。隔板拉开的过程中，他能看清它的内部结构：里层是一层隔信箔，接着是若干层隔音材料，还有几层他认不出来。</p>
+<p class="dialog">这时他还注意到，隔间外侧四面都持续发出低沉的嗡鸣。他明白过来：这是白噪声，用来进一步掩盖穿过隔音墙的一切声音。如果噪声是40分贝，而墙足够好，能把声音衰减50分贝，那它就能盖住里面高达90分贝的声音——想留安全余量的话，也许70分贝。这足以完全盖住任何交谈。</p>
+<p class="dialog">隔板完全拉开后，格拉迪亚斯朝隔间里看去。一张桌子从门口附近一直伸到对面的墙，两侧各有一条长凳。</p>
+<p class="dialog">里面已经坐了5个人，都穿着隐私袍。</p>
+<p class="dialog"><span style="color:#7499fb">“欢迎！你一定就是四号。”</span>其中一人大声说道。</p>
+<p class="dialog"><span style="color:#be9b00">“正是。”</span></p>
+<p class="dialog"><span style="color:#7499fb">“在这个圈子里我是二十号，三年级。我们有两个二年级——不过十一号还没到——两个三年级，另外两个一年级，现在再加上你。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“很高兴认识各位。”</span></p>
+<p class="dialog">格拉迪亚斯在二十号旁边的长凳上坐下。二十号的手持终端开着，格拉迪亚斯能看到他在翻最近的审计——那些审计评估各家企业在文化价值评则上的状况，以及由此作出的裁定。</p>
+<p class="dialog">过了一会儿，又一个掌则人走了进来。他回身把隔板拉上，坐了下来。</p>
+<p class="dialog"><span style="color:#54a1f9">“那么，文化价值评则。”</span>另一个三年级开口道。</p>
+<p class="dialog"><span style="color:#00b9c3">“是<em>活动与演出中的</em>文化价值评则，”</span>那个一年级——一号——纠正道。<span style="color:#00b9c3">“我们不碰社交媒体和其他线上内容，那是另一条评则。我们也不碰建筑和公共广告牌，那些归美学税管。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“大家都知道，在这儿不用显摆。”</span>那个三年级回了一句，语气里带着玩笑的分寸，既想点明又不愿得罪一号。</p>
+<p class="dialog"><span style="color:#54a1f9">“我们想怎么进行？也许该先就我们要解决的问题达成共识？”</span></p>
+<p class="dialog"><span style="color:#db8916">“先过几个例子吧。”</span>一个此前没开口的二年级说。</p>
+<p class="dialog">格拉迪亚斯看到了插话的机会。</p>
+<p class="dialog"><span style="color:#be9b00">“你们怎么看恐结？”</span></p>
+<p class="dialog"><span style="color:#db8916">“什么意思？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“上次审计，他们的税被提到了第4档。”</span></p>
+<p class="dialog">格拉迪亚斯开始念评则。</p>
+<p class="dialog"><span style="color:#be9b00">“内容较弱地提倡以下一项或更多：暴力、违法行为、使用不推荐物质、赌博或高风险投资、过度炫富、糟糕的冲突处理方式、宗教或族群仇恨。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我们觉得恐结犯了提倡暴力、违法行为或仇恨这一条吗？”</span></p>
+<p class="dialog"><span style="color:#db8916">“他们上一首歌写的就是毁城、剥人皮。凭什么不算？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我们真觉得那些词会让人想在现实里剥谁的皮吗？那只是一首歌。我记得几年前游戏也闹过这一出，最后科学界给出的结论是：游戏可能略微增加几种攻击性行为，但没有证据表明它们真的会导致暴力。”</span></p>
+<p class="dialog"><span style="color:#db8916">“我也记得。不过我的理解是，证据给出的结论比这更严厉。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“要不要把那些研究翻出来，一起过一遍？”</span></p>
+<p class="dialog">另外几个掌则人点了点头。他们开始对着手持终端低声下指令。</p>
+<p class="dialog">格拉迪亚斯趁势接着往下说。</p>
+<p class="dialog"><span style="color:#be9b00">“可就算抛开这些不谈，我们真想让维里迪亚变成这样一个社会吗——创作者时时刻刻得操心这个，歌、游戏、电影全都变得无聊苍白？”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“他们不必时时刻刻操心。这正是维里迪亚这套监管体系的意义。我们不是禁掉他们，只是把他们的税调高一点，而不是调低一点。他们本来就有十件事要操着中等程度的心——粉丝喜欢什么、什么会得罪或不会得罪赞助企业，等等——这些事不会压垮他们，但确实有影响。我们只是请他们多想一件事：公共利益。”</span></p>
+<p class="dialog">格拉迪亚斯决定换个角度再试。</p>
+<p class="dialog"><span style="color:#be9b00">“其实总的来说，我挺喜欢这条评则。北林科学中心让孩子们能在那儿了解化学、生物和火箭，是那么好的一个地方，因此得到奖励，我觉得很好。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“可暴力是生活的一部分。人类最初不过是一群为香蕉打架的猴子。我们还住在森林和洞穴里的时候，我们的男人每四个就有一个死于他人之手。学校里逼我们研读背诵的史诗里有暴力。每一部《大典》里的英雄都干过暴力的事。我不认为我们该让维里迪亚人完全回避人性中如此核心的一部分。如果我们让公共媒体永远处处避开暴力，那人们关于暴力的<em>所有</em>观念就只能来自互联网的阴暗角落——那些地方可收不到税——那只会更糟。”</span></p>
+<p class="dialog"><span style="color:#7499fb">“有研究试着量化过这个吗？”</span>二十号插了一句。</p>
+<p class="dialog"><span style="color:#be9b00">“我不知道这件事<em>能不能</em>用研究量化。”</span>格拉迪亚斯回答。</p>
+<p class="dialog">另一个三年级又开口了。</p>
+<p class="dialog"><span style="color:#54a1f9">“这样很好。我感觉我们已经提出了几个重要问题，不只是科学层面的，还有我们底层的目标和价值。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我觉得该把当年那些游戏研究重读一遍。另外，也该看看维里迪亚民众怎么看这件事。能让翡翠做一份广泛聆听报告吗？听听过去一年人们在蓝鲸或银聊上是怎么说恐结的。”</span></p>
+<p class="dialog"><span style="color:#db8916">“我不觉得社交媒体上的言论，就一定是判断什么对人有益的可靠依据。”</span>十一号插话道。</p>
+<p class="dialog"><span style="color:#54a1f9">“好，不过我们现在就花点时间读一读吧。”</span></p>
+<p class="dialog">格拉迪亚斯点头。另外几个掌则人也跟着点头。</p>
+<p class="dialog"><span style="color:#54a1f9">“稍等一分钟。蓝鲸从来都只让人用他们自己的界面看站内消息，我有几个绕过去的办法。”</span></p>
+<p class="dialog">差不多正好1分钟后，每个掌则人的手持终端上都弹出一个新窗口，实时显示翡翠的思考过程——它正在抓取并摘记蓝鲸和银聊上人们关于暴力与恐结的言论。</p>
+<p class="dialog">掌则人们都开始紧盯着自己的手持终端——有人读电子游戏的研究，有人看翡翠思考。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯站在外面，小口喝着一杯温水。他的第一场掌则人会议开了75分钟，已经结束，他正在用这25分钟的休息时间。</p>
+<p class="dialog">他的手表震了一下。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>个人提醒</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00b5d6">下一场掌则人会议5分钟后开始</span></td><td>39500</td></tr></tbody></table></div>
+<p class="dialog">该走了。</p>
+<p class="dialog">格拉迪亚斯拐过弯，走完最后几步，来到隔间前。</p>
+<p class="dialog">他很快到了，拉开隔板。</p>
+<p class="dialog">里面已经坐着两个掌则人，一边一个。两人都穿着隐私袍，兜帽和面罩都还戴着。</p>
+<p class="dialog"><span style="color:#be9b00">“两位好！”</span></p>
+<p class="dialog"><span style="color:#db8916">“你好！我是十八号。你是几号？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我是六号。”</span></p>
+<p class="dialog"><span style="color:#00bbad">“我是九号。”</span></p>
+<p class="dialog">十八号想了片刻，然后站起身。</p>
+<p class="dialog"><span style="color:#db8916">“等等，趁别人还没来，你们能不能都再站起来一下？”</span></p>
+<p class="dialog">格拉迪亚斯和九号都站了起来，暂时走出隔间，开着门从外面往里看。</p>
+<p class="dialog"><span style="color:#db8916">“好，我们看看。”</span></p>
+<p class="dialog">十八号把手持终端切到另一种模式，开始在屋里四处挥动。他又取出一架无人机，在手持终端上按了几个键。无人机开始贴着屋子边缘飞，桌子上面和下面都转了一圈。</p>
+<p class="dialog">十八号和九号默默看着扫描，又有两个掌则人到了，悄悄站到他们身边。</p>
+<p class="dialog"><span style="color:#db8916">“嗯，没有东西在发射信号，热成像也没探到任何通电的电子设备。”</span></p>
+<p class="dialog">1分钟后，无人机突然在桌子远端的正中上方响了一声。</p>
+<p class="dialog">十八号拿着手持终端扑到那个位置，开始仔细查看、戳弄桌面。过了一会儿，他得意地站起来，手里举着一个针状装置，尖端有个几毫米宽的圆头。</p>
+<p class="dialog"><span style="color:#be9b00">“那是什么？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#db8916">“窃听装置。桌面上有个小凸起，它就藏在那底下。要把这种东西插进去，事后还能把桌面补得这么好，肯定得有相当的手艺。”</span>十八号答道。</p>
+<p class="dialog"><span style="color:#be9b00">“哇。”</span></p>
+<p class="dialog">九号走上前，看了一眼那个装置。</p>
+<p class="dialog"><span style="color:#00bbad">“我怀疑这东西不是冲着我们来的，”</span>他说。<span style="color:#00bbad">“干这种事的人，通常是想拿到企业即将公布的决策消息，再据此在金融市场上交易。目标一般是那些没那么小心的小企业。掌舵会在这上面相当安全。我们这个掌则人小组只是三个讨论组之一，就算你真偷听到，也只拿到三分之一的视角。何况我们全都通过颈带说话，声音是以数字方式在我们之间传递的。”</span></p>
+<p class="dialog"><span style="color:#db8916">“其实这个还带了摄像头。它能读你的嘴唇和颈部动作，所以说不定还是够它辨认出一些词，尤其如果你是新手的话。”</span></p>
+<p class="dialog"><span style="color:#00bbad">“你怎么知道？”</span></p>
+<p class="dialog"><span style="color:#db8916">“无人机就是靠这个发现的——红外光在摄像头镜片上反射。我的手持终端也用非线性结检测器捕捉到了，可要是无人机没告诉我该往哪儿看，我很可能就漏掉了。”</span></p>
+<p class="dialog">最后两个掌则人到了。</p>
+<p class="dialog">十八号走出去，说明了情况，大家一起看了那个窃听装置。几个掌则人用手持终端扫了它。看完之后，十八号把窃听装置掰成两半。</p>
+<p class="dialog">十八号带着大家走到几米外另一间空着的隔间，拉开隔间的门。</p>
+<p class="dialog">他花了两分钟检查新隔间里有没有窃听器，同样动用了自己的手持终端和无人机。检查完，他打了个手势，7个掌则人一起进去，在长凳上坐下。</p>
+<p class="dialog">刚到的掌则人里有一个清了清嗓子，像是准备发言。</p>
+<p class="dialog"><span style="color:#7499fb">“不如直接进入正题？”</span>那位掌则人开口道。</p>
+<p class="dialog"><span style="color:#be9b00">“好啊！”</span>格拉迪亚斯答道。</p>
+<p class="dialog"><span style="color:#7499fb">“我们要谈的是开放度评则，以及怎么为军用硬件调整它。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，材料我读过。”</span></p>
+<p class="dialog"><span style="color:#7499fb">“另外，我跟那边的零号聊过几次。他的主张是干脆把军用硬件完全豁免。理由让他自己讲。”</span></p>
+<p class="dialog">零号听到自己的编号，立刻抬起头。</p>
+<p class="dialog"><span style="color:#df74b1">“通常来说，开放硬件是好事，因为别人可以在上面继续做东西，大家都能受益，对吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“对。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“可你想想军用领域会怎样。所有人都有更好的武器，对世界其实并没有净收益。如果所有人的剑都好一倍，盾也都好一倍，两者正好抵消。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“如果所有人的剑都好一倍，盾却不变，那任何一场战争里双方的优势照样相互抵消，只是受伤的人更多。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“可如果所有人的盾都好一倍，剑不变，那不是好事吗？”</span></p>
+<p class="dialog"><span style="color:#00bbad">“也许吧，”</span>九号插话。<span style="color:#00bbad">“可实际上比这还要复杂。万一打的是一场消耗战呢？大家都加强防御，受伤的人数不变，只是拖得更久？又或者防御增强反而削弱了威慑，于是战争更多？”</span></p>
+<p class="dialog">格拉迪亚斯很意外：这套说法和德尔瓦特最近对他讲过的一番话像得出奇。</p>
+<p class="dialog"><span style="color:#00bbad">“说到底，博弈树太混乱了，我们根本无法可靠地确定任何事。所以我认为我们该置身事外，改为对所有军用硬件——开放的也好，不开放的也好——都提高掌舵税，推着人们去做更有用、对人类更友善、也更有意思的东西。”</span></p>
+<p class="dialog">一个三年级插话：</p>
+<p class="dialog"><span style="color:#54a1f9">“我不认为我们什么都无法确定。看看联合城邦。它们彼此独立了几百年，还琢磨出共治这样的机制，让彼此更愿意合作，而不是干脆并成一大团——而它们能做到这些，很明显，很大程度上要归功于脚下这片大陆有那么多山脉和半岛。所以，如果大家都加强防御，就会有更多人保住自己的自由和主权。这一点我相当有信心。”</span></p>
+<p class="dialog">十八号又举起手。其他人转向他，他开口了。</p>
+<p class="dialog"><span style="color:#db8916">“我不认为我们可以把局势当成一个黑箱来看。看看我们现在的位置：北极帝国的技术最先进，我们第二。在军事技术上，泽国和联合城邦最为落后。”</span></p>
+<p class="dialog"><span style="color:#db8916">“所以我们公开任何与军事相关的开源成果，对北极人毫无好处，对我们则略有好处，因为我们自己造起来更容易。”</span></p>
+<p class="dialog"><span style="color:#db8916">“但对泽国来说，那是生命线。顶尖技术上，他们没法自己搞专有研发，却很擅长照着开源方案制造和改进。20年前，我们把编程语言和形式化验证做到了这样的程度：设备代码里基本不再有能让外人从外部夺取控制权的严重错误。正因为这些东西是开放的，泽国人才得以采用这些技术，更有效地防住北极的破坏活动。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“可我们真想玩这个游戏吗，”</span>零号接着说，<span style="color:#df74b1">“对自己‘谁是好人、谁是坏人’的判断这么有信心？计算机安全是防御性的，那没问题。可我们下一项发明出来的技术可能是进攻性的。那我们岂不是只会让所有人的军备竞赛进一步加速？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我甚至不太相信北极人有那么大的威胁。没错，他们现在在联合城邦北部晃悠的无人机更多了，但我不觉得意图是攻击。我认为他们只是想用实力震住我们，好让我们向往他们的意识形态。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“<em>你</em>觉得我们该更接受他们的意识形态吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我觉得该保持开放的心态。只是别忘了，泽国人也肯定在试图操纵我们。”</span></p>
+<p class="dialog">讨论安静了片刻。格拉迪亚斯没有急着开口。他还想先弄清别人是怎么想的，再形成自己的看法。</p>
+<p class="dialog"><span style="color:#7499fb">“大家先各自再想想。这事我们还会继续谈，后面还有几场讨论，最后一场在4个月后。而真正的表决要等到6个月后。”</span></p>
+<p class="scene-break">帕佛盖都，泽国</p>
+<p class="dialog">白和泽一起坐在院子里的一张桌旁，两人都盯着各自的手持终端。</p>
+<p class="dialog"><span style="color:#ed756b">“芬这次不来？”</span>白问。</p>
+<p class="dialog"><span style="color:#df74b1">“不来，”</span>泽答道，语气里的失望很明显。<span style="color:#df74b1">“他在忙班孙培的事。”</span></p>
+<p class="dialog">手持终端震了一下。轮到他们的干预回合了。泽摆下几架滑翔机和几艘载符飞船。几百个回合过去了。</p>
+<p class="dialog">突然，那艘飞船撞上石阵、正要反射出去的一瞬，白的滑翔机从侧面撞了上来。飞船炸开，化作一片滑翔机风暴。</p>
+<p class="dialog"><span style="color:#df74b1">“什么？”</span>泽喊了出来。</p>
+<p class="dialog"><span style="color:#ed756b">“抓到你了。我在那条路线上留了一个符记，正好落在你看不见的位置。所以你的飞船边缘一过来，我就看到了。”</span></p>
+<p class="dialog">泽闷哼一声。那已经是他挽救这盘棋的最后一搏。白的滑翔机又涌进来，把他西南角仅剩的两个符记也撕碎了。</p>
+<p class="dialog">泽点了认输按钮。</p>
+<p class="dialog"><span style="color:#df74b1">“这盘下得好。”</span>泽说。语气还不算完全真心，但已经比以往任何一盘输给白之后都要真诚。</p>
+<p class="dialog"><span style="color:#df74b1">“你知道，全国赛上我需要你帮忙。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“乐意。只要你……”</span></p>
+<p class="dialog"><span style="color:#df74b1">“嗯，我知道，你现在想去维里迪亚看看。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“总之，谢谢你那次锦标赛里把你的思路讲给我听。让我想了很多。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那当然。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“你当然乐意回味当初打败我的那一刻，就像我刚才赢你这一盘也很痛快。”</span></p>
+<p class="dialog">泽叹了口气。</p>
+<p class="dialog"><span style="color:#df74b1">“总之我得走了。昆高培的评议员登又叫我去见他。”</span></p>
+<hr class="rule">
+<p class="dialog">泽走进那间长屋，立刻看见登和穆坐在对面。</p>
+<p class="dialog"><span style="color:#e58137">“谢谢你来。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“应该的。您推荐的那些基于哈希的签名我都看过了。那套构造很有意思，尤其是那些无状态的树套树结构。”</span></p>
+<p class="dialog"><span style="color:#e58137">“你现在明白了吗？当初我看你下民本棋的风格，就知道你在这上面会有出息。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我想我明白！”</span></p>
+<p class="dialog"><span style="color:#e58137">“你真是了不起。不到一个月就把密码学讲座的三分之一赶完了，前两次测验还都拿了满分。我想不出有谁做得比你更好。”</span></p>
+<p class="dialog">听到这句夸奖，泽眼里闪过一丝满足的光。</p>
+<p class="dialog"><span style="color:#e58137">“泽，你知道我为什么叫你来吗？”</span></p>
+<p class="dialog">这时，泽想到了登这句话可能的一层意思，脸上那点高兴瞬间变成不安。</p>
+<p class="dialog"><span style="color:#df74b1">“您是要劝我全职做这个吗？比如，放弃民本棋全国赛？”</span></p>
+<p class="dialog">穆笑了。<span style="color:#00bc96">“看来我猜错了——这一层你还是没懂。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“嗯？”</span></p>
+<p class="dialog"><span style="color:#00bc96">“你想过没有，民本棋为什么这么郑重、有这么多仪式、祭司要进地牢待上好几天，还有那么多经费？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“它是一项运动。很多国家的运动都很受重视，经费也很充足。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“智力运动可不算。这类运动的观众不够多，光靠广告、国家荣誉这些名目，撑不起这么多经费。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那到底是为什么？”</span></p>
+<p class="dialog">穆往前倾了倾身。</p>
+<p class="dialog"><span style="color:#00bc96">“因为民本棋不只是一项运动。”</span></p>
+<p class="dialog">泽怔住了。</p>
+<p class="dialog"><span style="color:#00bc96">“它是军事训练。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“这项运动存在的全部意义，也是我们如此支持它的原因，就是培养下一代的防卫者。”</span></p>
+<p class="dialog"><span style="color:#e58137">“我们需要能在压力下快速思考、从战略层面思考的人。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“既要能与敌人较量，也要能与盟友合作，哪怕是跟自己合不来的盟友。”</span></p>
+<p class="dialog"><span style="color:#e58137">“能理解战场的人——从战斗本身，上到大战略、资源与后勤，下到侦察、保密与诡计，直到最根本的熵。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“能应对规则突然变化的人。”</span></p>
+<p class="dialog"><span style="color:#e58137">“既能事无巨细地管控，也能定下一个计划、放它自己展开的人。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“还有能用上最新技术——包括 AI——又懂得它的局限、能绕开这些局限的人。”</span></p>
+<p class="dialog">这些领悟一下子全涌上泽的心头。他起初想问一个很基本的问题：为什么要把这事伪装成一项棋类运动，为什么不干脆建一支常规军队、照常规办法征兵？可这个念头刚一成形，他就已经知道答案：北极人会把全部精力用来针对任何那样的东西。民本棋之所以安全，只因为它伪装成一项纯粹的运动。但泽知道，即便如此，这层伪装也不可能永远安全。</p>
+<p class="dialog"><span style="color:#df74b1">“为什么现在告诉我这些？”</span></p>
+<p class="dialog"><span style="color:#e58137">“因为我们现在既让你在密码学上用功，<em>又</em>让你继续打全国赛——总得给你<em>某个</em>理由。要是不告诉你，你可能会起疑，最后自己琢磨出来，然后干出蠢事，比如兴奋地把自己的发现嚷给十来个人听。”</span></p>
+<p class="dialog">泽点点头。</p>
+<p class="dialog"><span style="color:#df74b1">“我不会告诉任何人。连芬也不说。”</span></p>
+<p class="dialog">登和穆点了点头。</p>
+<p class="dialog"><span style="color:#00bc96">“等全国赛到了，你会需要一个熟悉你风格的陪练。”</span></p>
+<p class="dialog">谁都没说出那个名字。也不必说。</p>
+<p class="dialog"><span style="color:#e58137">“谢谢你的支持。”</span>登答道。</p>
+<p class="dialog"><span style="color:#00bc96">“Dze go ba fau gie”</span>，穆补充道。</p>
+<p class="dialog"><span style="color:#df74b1">“Dze go ba fau gie。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-09.html">上一章 · 第九章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-11.html">下一章 · 第十一章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Jahn's taxi pulled up at the Freetown Economics Institute, where he worked as a researcher, and he got out of the car. He entered the building, and tapped his hand device to pay to get through the turnstile.</p>
+<p class="dialog">Out of the corner of his eye, he noticed that the entrance price was ten percent higher than before.</p>
+<p class="dialog">He walked to the restaurant section, and saw most tables full. Only one table had empty space, and there was already a woman sitting there.</p>
+<p class="dialog"><span style="color:#78b249">"Can I sit down here?"</span>, Jahn asked.</p>
+<p class="dialog"><span style="color:#8d92f9">"Of course."</span></p>
+<p class="dialog">Jahn sat down.</p>
+<p class="dialog"><span style="color:#78b249">"I'm Jahn"</span>, he offered.</p>
+<p class="dialog"><span style="color:#8d92f9">"I'm Utaku. I'm from Belpaki, I'm doing my doctorate program here at the Institute."</span></p>
+<p class="dialog">A robot slid up to Jahn, offering a menu.</p>
+<p class="dialog">Jahn quickly scanned through, and ordered a dish with vegetables and fish, and a glass of water.</p>
+<p class="dialog">He noticed that there too, the prices were higher than before.</p>
+<p class="dialog"><span style="color:#78b249">"Wow, the prices are all up now."</span></p>
+<p class="dialog"><span style="color:#8d92f9">"Haven't you been following the news?"</span></p>
+<p class="dialog"><span style="color:#78b249">"Not since I got back from a meeting in Hapton."</span></p>
+<p class="dialog"><span style="color:#8d92f9">"Huh, well it should be news in Hapton too. Everyone's been talking about raising their defense budgets."</span></p>
+<p class="dialog"><span style="color:#78b249">"Arctic scare?"</span></p>
+<p class="dialog"><span style="color:#8d92f9">"Yeah, their drone activity has been going up. Though there's surprisingly many politicians who seem totally nonchalant about it. Only Redshire and its neighbors seem to be really taking it seriously."</span></p>
+<p class="dialog"><span style="color:#8d92f9">"Well, somehow, also Freetown."</span></p>
+<p class="dialog"><span style="color:#78b249">"Why us? I'm glad we are, but like half the United Cities are closer to Redshire than we are, they should be worrying more!"</span></p>
+<p class="dialog"><span style="color:#8d92f9">"Well, Devanvil is taking it seriously - after all, Redshire chooses twelve percent of the seats in Devanvil's parliament. But yeah, Deplexi, Ondak, Imber, not at all."</span></p>
+<p class="dialog"><span style="color:#8d92f9">"It is weird. Remember, the government here is constitutionally banned from collecting more than the basic land tax and some rent from its natural resource holdings. So it's not even the government that's taking the problem seriously, it's the megacorps."</span></p>
+<p class="dialog">The robot came back, carrying Jahn's food and water. Jahn picked up the plate of food and put it onto the table. He then picked up the glass of water, and immediately took a sip.</p>
+<p class="dialog"><span style="color:#8d92f9">"They're now donating three percent of their revenues to defense, and even colluding to punish companies that don't. Mogna was unwilling to contribute to defense - they said something about corruption, though everyone thought they were just being cheap - and then the charging station makers came together and threatened to lock out Mogna's cars from their grid, ninety percent of charging stations across Freetown, unless they joined in. Yesterday Mogna folded."</span></p>
+<p class="dialog"><span style="color:#78b249">"That's ... harsh. If any industry tried that in normal times, they'd get half of Freetown counter-colluding, maybe funding five new competitors against them."</span></p>
+<p class="dialog"><span style="color:#8d92f9">"Normally yes. But hey, times are different now."</span></p>
+<p class="scene-break">Meldan, Veridia</p>
+<p class="dialog"><span style="color:#54a1f9">"You off to your first Keeper meeting?"</span>, Seila asked Gladias.</p>
+<p class="dialog"><span style="color:#be9b00">"My first two Keeper meetings, back to back. First one is on cultural values in public events and performances - actually the exact one that I judged Dreadknot on way back then."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Oh, what's the topic for cultural values in events going to be?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"In the chat I mentioned how I thought the rubric was encouraging people to be too bland to not offend anyone. Surprisingly, a couple others agreed. I think I'll try to make a big push to fix that."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Veridia ba 'fun' gie!"</span>, Seila joked.</p>
+<p class="dialog"><span style="color:#be9b00">"Isn't it the 'gie' that you're supposed to replace? 'fau' just means 'again'."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Aaah right."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But yes. Veridia will be fun again."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What about the second one?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"The hardware openness rubric. The topic is whether or not to modify it to exempt military and surveillance products."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Huh, what are the tradeoffs of that?"</span></p>
+<p class="dialog">Gladias thought carefully about how to phrase this. He thought for a moment about whether or not he should mention Delwart, but then decided against it.</p>
+<p class="dialog"><span style="color:#be9b00">"Well"</span>, he began, <span style="color:#be9b00">"some of the Keepers think we should be staying out of funding war - it's a negative-sum game, if both sides have better bombs and battle drones, the result is the same, just more things get blown up and more people get hurt."</span></p>
+<p class="dialog">He was pleased with himself. He had a feeling that Seila might be sensitive about anything that could hurt Dzego, and would plead for him to take whatever position benefited Dzego the most. He braced himself, preparing for Seila's next question.</p>
+<p class="dialog"><span style="color:#54a1f9">"But, funding ... isn't that more of an issue on the Graph Funding side?"</span></p>
+<p class="dialog">Gladias internally sighed with relief.</p>
+<p class="dialog"><span style="color:#be9b00">"Well remember, we make some weapons too. Also surveillance products. And the rubrics influence how much of the secret sauce we keep to ourselves."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I see..."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Well, tell me how the meetings go!"</span></p>
+<hr class="rule">
+<p class="dialog">Gladias walked down a hallway, and entered a courtyard. He found a series of booths with thick sliding doors. He went to the rightmost one, as he had been instructed.</p>
+<p class="dialog">He slid the barrier open. It took a significant effort for him to do so. He could tell immediately that this was a much more proper booth than the cloth-covered booths from the Greater Plum Harbor. As the barrier was opening, he could see its internal structure: a layer of anti-transmission foil on the inside, followed by layers of soundproofing, and other layers he could not recognize.</p>
+<p class="dialog">At that moment, he also noticed a constant humming sound that was being emitted from the outside of the booth on all sides. White noise to further mask anything that makes it through the soundproof walls, he realized. If the noise is at forty decibels and the walls are good enough to attenuate sound by fifty, then it can mask up to ninety decibels coming from the inside - perhaps seventy if you want a safety margin. That's enough to completely mask any conversation.</p>
+<p class="dialog">After fully opening the barrier, Gladias looked inside the booth. There was a table stretching from near the entrance to the opposite wall, and a long bench on each side.</p>
+<p class="dialog">There were five others already sitting down, all wearing privacy robes.</p>
+<p class="dialog"><span style="color:#7499fb">"Welcome! You must be number Four"</span>, one of them exclaimed.</p>
+<p class="dialog"><span style="color:#be9b00">"Indeed I am."</span></p>
+<p class="dialog"><span style="color:#7499fb">"I'm number Twenty in this circle, a third-year. We have two second-years - though Eleven has not arrived yet - two third-years, two other first-years, and now also you."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Glad to meet you all."</span></p>
+<p class="dialog">Gladias sat down on the bench beside Twenty. Twenty had his hand device open, and Gladias could see him scrolling through recent audits measuring various businesses' statuses on the cultural values rubric, and the resulting decisions.</p>
+<p class="dialog">A few moments later, another Keeper walked in. He slid the barrier shut behind him, and sat down.</p>
+<p class="dialog"><span style="color:#54a1f9">"So, cultural values rubric"</span>, the other third-year began.</p>
+<p class="dialog"><span style="color:#00b9c3">"Cultural values <em>in events and performances</em> rubric"</span>, the first-year, One, corrected. <span style="color:#00b9c3">"We're not doing social media or other online things, that's a different rubric. And we're not doing architecture and public billboards, that goes into the aesthetics taxes."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"We all know that, you don't have to show off here"</span>, the third-year replied, with a joking tone calibrated to try to make the point without offending One.</p>
+<p class="dialog"><span style="color:#54a1f9">"How do we want to do this? Maybe we should first come to a common understanding of what the problems we're trying to solve are?"</span></p>
+<p class="dialog"><span style="color:#db8916">"Let's go through some examples"</span>, a second year who had not yet spoken up replied.</p>
+<p class="dialog">Gladias saw his chance to intervene.</p>
+<p class="dialog"><span style="color:#be9b00">"How do you guys feel about Dreadknot?"</span></p>
+<p class="dialog"><span style="color:#db8916">"What do you mean?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Their taxes got bumped up to tier 4 in the last audit."</span></p>
+<p class="dialog">Gladias began to read from the rubric.</p>
+<p class="dialog"><span style="color:#be9b00">"Content weakly promotes one or more of the following: violence, lawless behavior, use of anti-recommended substances, gambling or risky investment, excessive display of wealth, poor conflict resolution practices, religious or ethnic hatred."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do we think Dreadknot is guilty of promoting violence, lawless behavior or hatred?"</span></p>
+<p class="dialog"><span style="color:#db8916">"Their last song was about destroying cities and flaying people's flesh. Why not?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do we really think that those words are going to make anyone want to flay anyone's flesh in real life? It's a song. I remember we went through this with games a few years ago, and the science ended up saying that they can slightly increase a few aggressive behaviors but there's no evidence that they actually lead to violence."</span></p>
+<p class="dialog"><span style="color:#db8916">"I remember that too. And my read was that the conclusion of the evidence was harsher than that."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Do we want to dig up and go through those studies together?"</span></p>
+<p class="dialog">A few other Keepers nodded. They started whispering instructions at their hand devices.</p>
+<p class="dialog">Gladias took the opportunity to continue.</p>
+<p class="dialog"><span style="color:#be9b00">"But even aside from all that, do we really want Veridia to be a society where the artists have to constantly worry about this and all the songs, and the games, and the movies, become boring and pale?"</span></p>
+<p class="dialog"><span style="color:#00b9c3">"They don't have to constantly worry. That's the whole point of Veridia's system of regulation. We're not banning them. We're just setting their taxes slightly higher instead of slightly lower. So along with the ten things that they have to worry about a medium amount already, like what their fans will like, what might or might not offend their corporate sponsors, and so on - things that won't break them, but still make a difference - we ask them to think about one extra concern: the public interest."</span></p>
+<p class="dialog">Gladias decided to pursue another line of argument.</p>
+<p class="dialog"><span style="color:#be9b00">"I actually like this rubric in general. I think it's great that the Northglade Science Center is getting rewarded for being such a wonderful place for kids to learn about chemistry and biology and rockets."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But violence is part of life. The human race started out as monkeys fighting over bananas. When we were still living in forests and caves, a quarter of our men died because someone else killed them. The epic poems they make us study and memorize in schools have violence. Every hero of every Great Book did something violent. I don't think we should be discouraging Veridians completely from engaging with such a central part of our human nature. If we steer the public media away from violence everywhere and always, people will get <em>all</em> their ideas about violence from the dark corners of the internet, where nobody gets taxed, and that will be even worse."</span></p>
+<p class="dialog"><span style="color:#7499fb">"Are there any studies that try to measure this?"</span>, Twenty interjected.</p>
+<p class="dialog"><span style="color:#be9b00">"I don't know if you <em>can</em> measure this with studies"</span>, Gladias replied.</p>
+<p class="dialog">The other third-year again began to speak.</p>
+<p class="dialog"><span style="color:#54a1f9">"This is good, I feel like we've already surfaced some important questions about not just the science, but also our underlying goals and values."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I think we should re-read the studies from back then about games. But also, we should see what the Veridian people think about this. Can we get Emerald to do a broad listen report on what people have been saying about Dreadknot on Bluewhale or Silverchat in the past year?"</span></p>
+<p class="dialog"><span style="color:#db8916">"I don't think what people say on social media is necessarily a good guide to what's good for people"</span>, Eleven interjected.</p>
+<p class="dialog"><span style="color:#54a1f9">"Okay, but let's take some time right now to read."</span></p>
+<p class="dialog">Gladias nodded. A few other Keepers nodded after him.</p>
+<p class="dialog"><span style="color:#54a1f9">"Just give me a minute. Bluewhale always resists letting you read messages on their platform in any way other than their interface, I have a few hacks to get around that."</span></p>
+<p class="dialog">Almost exactly a minute later, a new window appeared on each Keeper's hand device, showing Emerald think in real time as it fetched and took notes on what people were saying about violence and Dreadknot on Bluewhale and Silverchat.</p>
+<p class="dialog">The Keepers all began staring intently at their hand devices - some reading the video game studies, others watching Emerald think.</p>
+<hr class="rule">
+<p class="dialog">Gladias was standing outside, and sipping a cup of warm water. His first Keeper meeting, seventy-five minutes long, had finished, and he was taking the twenty-five minute break.</p>
+<p class="dialog">His watch buzzed.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Personal reminders</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00b5d6">Next Keeper meeting starts in five minutes.</span></td><td>39500</td></tr></tbody></table></div>
+<p class="dialog">It was time to go.</p>
+<p class="dialog">Gladias turned the corner and walked the last few steps toward the booth.</p>
+<p class="dialog">He soon arrived, and slid the barrier open.</p>
+<p class="dialog">There were two other Keepers already sitting inside, one on each side. Both were wearing privacy robes, with their hoods and face coverings still on.</p>
+<p class="dialog"><span style="color:#be9b00">"Hello to you both!"</span></p>
+<p class="dialog"><span style="color:#db8916">"Hello! I'm Eighteen. Which number are you?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I'm Six."</span></p>
+<p class="dialog"><span style="color:#00bbad">"And I'm Nine."</span></p>
+<p class="dialog">Eighteen thought for a few moments, and then stood up.</p>
+<p class="dialog"><span style="color:#db8916">"Wait, before anyone else comes here, would you all mind standing up again?"</span></p>
+<p class="dialog">Gladias and Nine both stood up, and briefly exited the booth and looked in from the outside, with the door open.</p>
+<p class="dialog"><span style="color:#db8916">"Alright, let's take a look."</span></p>
+<p class="dialog">Eighteen switched his hand device to a different mode, and began waving it around the room. He also took out a drone, and pressed a few buttons on his hand device. The drone began flying around the room near the edges, both above and below the table.</p>
+<p class="dialog">Eighteen and Nine watched silently as Eighteen did his scan, and two more Keepers arrived and quietly joined them.</p>
+<p class="dialog"><span style="color:#db8916">"Hmm, nothing transmitting, not picking up any powered electronics with thermal either."</span></p>
+<p class="dialog">A minute later, the drone beeped unexpectedly just above the middle of the table at the far end.</p>
+<p class="dialog">Eighteen jumped to that position with his hand device, and started looking and poking at the table intensely. A few moments later, he stood up triumphantly holding up in his hand a needle-like device, with a bulb a few millimeters wide at its tip.</p>
+<p class="dialog"><span style="color:#be9b00">"What is that?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#db8916">"Spying device. There was a small bump on the table, and this was under it. Definitely takes some skill to insert one of these and then fix up the table this well afterward."</span>, Eighteen replied.</p>
+<p class="dialog"><span style="color:#be9b00">"Wow."</span></p>
+<p class="dialog">Nine stepped forward and looked at the device briefly.</p>
+<p class="dialog"><span style="color:#00bbad">"I doubt it was meant against us"</span>, he said. <span style="color:#00bbad">"Normally, the goal of people who do this is to get information about upcoming business decisions, and trade based on that in the financial markets. Usually, smaller businesses who are less careful. The Order is quite safe against this. Our Keeper group is only one of three discussion groups, so even if you do overhear us all you're only getting one third of the perspective. And we're all speaking through our neck bands so the sound is going between us digitally."</span></p>
+<p class="dialog"><span style="color:#db8916">"Actually this one had a camera. It can read your lips and your neck, so there might still be enough information to pick up some words, especially if you're a beginner."</span></p>
+<p class="dialog"><span style="color:#00bbad">"How do you know?"</span></p>
+<p class="dialog"><span style="color:#db8916">"That's how the drone detected it, infrared light reflected off the camera lens. My hand device caught it too with the nonlinear junction detector, but I may well have missed it if the drone did not tell me where to look."</span></p>
+<p class="dialog">The last two Keepers arrived.</p>
+<p class="dialog">Eighteen stepped out, explained the situation, and the group looked at the listening device together. A few Keepers scanned it with their hand devices. When they were done, Eighteen snapped the listening device in half.</p>
+<p class="dialog">Eighteen led the group to another open booth a few meters away, and slid the booth door open.</p>
+<p class="dialog">He spent two minutes checking the new booth for bugs, again using both his own hand device and his drone. Once he was done, he motioned with his hand, and all seven Keepers entered and sat down on the benches.</p>
+<p class="dialog">One of the newly-arrived Keepers cleared his throat, as though preparing to speak.</p>
+<p class="dialog"><span style="color:#7499fb">"Maybe let's get to business?"</span>, the Keeper asked.</p>
+<p class="dialog"><span style="color:#be9b00">"Sure!"</span>, Gladias replied.</p>
+<p class="dialog"><span style="color:#7499fb">"So we're supposed to be talking about the openness rubric, and how to adjust it for military hardware."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yep, I read the docs."</span></p>
+<p class="dialog"><span style="color:#7499fb">"And I've had some conversations with Zero over there. His argument is that we should just exempt military hardware completely. I'll let him explain why."</span></p>
+<p class="dialog">Zero heard his number, and quickly raised his head.</p>
+<p class="dialog"><span style="color:#df74b1">"So normally, open hardware is good, because other people can build on it, and everyone benefits, right?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Right."</span></p>
+<p class="dialog"><span style="color:#df74b1">"But think about what happens with anything military. There isn't actually a net benefit to the world from everyone having better weapons. If everyone has twice as good swords and twice as good shields, the two cancel out."</span></p>
+<p class="dialog"><span style="color:#df74b1">"If everyone has twice as good swords but shields stay the same, then the benefits to the two sides in any war still cancel out, but more people get hurt."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But if everyone has twice as good shields but swords stay the same, isn't that good?"</span></p>
+<p class="dialog"><span style="color:#00bbad">"Well, maybe"</span>, Nine interjected. <span style="color:#00bbad">"But actually it's even more complicated than that. What if it's a war of attrition, so if everyone has more defense, the same number of people get hurt, it just takes longer? Or what if increasing defense reduces deterrence, so more wars happen?"</span></p>
+<p class="dialog">Gladias was surprised: the argument was eerily similar to an argument that Delwart had expressed to him recently.</p>
+<p class="dialog"><span style="color:#00bbad">"Basically, the game tree is just so chaotic that we can't reliably be sure of anything at all. So I think we should just stay out. And instead just increase Steering taxes on all military hardware, open or not, push people to make more useful and pro-human and fun things instead."</span></p>
+<p class="dialog">A third-year interjected:</p>
+<p class="dialog"><span style="color:#54a1f9">"I don't think it's true that we can't be sure of anything. Look at the United Cities. I think it's pretty clear that a big reason they all managed to stay independent from each other for centuries, and figured out things like co-governance to nudge each other to cooperate better without just turning into one big blob, is that they have so many mountains and peninsulas on their continent. So if everyone has more defense, more people can keep their freedom and sovereignty. I think we can be quite confident of that."</span></p>
+<p class="dialog">Eighteen raised his hand again. The others turned to him, and he began to speak.</p>
+<p class="dialog"><span style="color:#db8916">"I don't think we can look at the situation like it's a black box like that. Let's look at where we are now. The Arctic Empire's technology is the most advanced. Ours is second. On military tech, Dzego and the United Cities are furthest behind."</span></p>
+<p class="dialog"><span style="color:#db8916">"And so when we release open-source military-relevant anything, it doesn't benefit the Arctics at all, and it's marginally good for us because it makes it easier for us to make more."</span></p>
+<p class="dialog"><span style="color:#db8916">"But for Dzego, it's a lifeline. They're not set up to invent their own proprietary stuff at the top end, but they're really good at building and adapting from open-source plans. Twenty years ago, when we got our programming languages and formal verification to the point where our devices basically stopped having critical errors in their code that could let someone take it over from the outside, the fact that it was open allowed the Dzegojan to adopt those techniques, and protect themselves much better from Arctic sabotage."</span></p>
+<p class="dialog"><span style="color:#df74b1">"But do we really want to play this game"</span>, Zero continued, <span style="color:#df74b1">"being so confident in our view of who's good and who's bad? Computer security was defensive, fine. But the next technology we invent might be offensive. Won't we just accelerate the arms race even more for everyone?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I'm not even that convinced the Arctics are that big a threat. Sure, they're waving more drones around the northern United Cities now, but I don't think the intention is to attack, I think they're just trying to impress us with their power so we become attracted to their ideology."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do <em>you</em> think we should be more receptive to their ideology?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I think we should keep an open mind. Just remember, the Dzegojan are definitely trying to manipulate us too."</span></p>
+<p class="dialog">For a few moments, the discussion went quiet. Gladias let it rest. He was still trying to understand how everyone else was thinking before forming his own views.</p>
+<p class="dialog"><span style="color:#7499fb">"Let's all think about this more on our own. We'll keep talking about this, we still have a few more discussions, the last one is in four months. And then the actual vote is only in six months."</span></p>
+<p class="scene-break">Pafogai Du, Dzego</p>
+<p class="dialog">Bai and Zei sat together at a courtyard table, both staring at their hand devices.</p>
+<p class="dialog"><span style="color:#ed756b">"Fin not joining us this time?"</span>, Bai asked.</p>
+<p class="dialog"><span style="color:#df74b1">"No"</span>, Zei replied with a strong hint of disappointment. <span style="color:#df74b1">"He's busy with the Bansunpei."</span></p>
+<p class="dialog">The hand devices buzzed. It was their intervention turn. Zei arranged a few gliders and symbol-carrying spaceships. A few hundred turns passed.</p>
+<p class="dialog">Suddenly, as the spaceship hit a rock formation and was in the process of reflecting, gliders from Bai hit it. The spaceship exploded into a storm of gliders.</p>
+<p class="dialog"><span style="color:#df74b1">"What?"</span>, Zei shouted.</p>
+<p class="dialog"><span style="color:#ed756b">"Caught you, I had a symbol along the path, right in the position where you could not see it. So I could see the edge of your spaceship coming."</span></p>
+<p class="dialog">Zei groaned. That had been his last-ditch attempt to rescue the game. More gliders from Bai came in, and shredded through both of his remaining symbols in the southwest corner.</p>
+<p class="dialog">Zei clicked a button to resign.</p>
+<p class="dialog"><span style="color:#df74b1">"Good game"</span>, Zei said, not yet with total sincerity, but with more sincerity than he had in any game where he had lost to Bai before.</p>
+<p class="dialog"><span style="color:#df74b1">"You know, I am going to need your help in the nationals."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Happy to. As long as..."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Yes, I know, you want to visit Veridia now."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Anyway, thanks for explaining your thought process in that championship game. Really made me think."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Of course."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Of course you enjoy reliving the moment you defeated me, just like I enjoyed beating you right now."</span></p>
+<p class="dialog">Zei sighed.</p>
+<p class="dialog"><span style="color:#df74b1">"Anyway, I have to go. The Kungaupei councilor, Den, is asking to see me again."</span></p>
+<hr class="rule">
+<p class="dialog">Zei entered the long room, and immediately saw Den and Mu sitting on the other side.</p>
+<p class="dialog"><span style="color:#e58137">"Thank you for coming."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Of course. I went through the hash-based signatures you recommended. It's a really fun set of constructions, especially the stateless tree-of-tree-based ones."</span></p>
+<p class="dialog"><span style="color:#e58137">"Do you see why, when I looked at your style of Minpentai, I knew that you would do well in this?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I think so!"</span></p>
+<p class="dialog"><span style="color:#e58137">"You are truly amazing. You've rushed through a third of the cryptography lectures in less than a month, and got a perfect score on both of the first two tests. I can't think of anyone who did better."</span></p>
+<p class="dialog">Zei's eyes gleamed with satisfaction at receiving the compliment.</p>
+<p class="dialog"><span style="color:#e58137">"Zei, do you know why I called you in?"</span></p>
+<p class="dialog">At this point, Zei realized one possible implication of Den's words, and his cheerful facial expression suddenly dropped into a fearful one.</p>
+<p class="dialog"><span style="color:#df74b1">"Are you going to convince me to go into this full-time? Like, abandon the Minpentai nationals?"</span></p>
+<p class="dialog">Mu laughed. <span style="color:#00bc96">"So I guess my hunch was wrong - this part, you still don't get."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Huh?"</span></p>
+<p class="dialog"><span style="color:#00bc96">"Have you ever thought about why the Minpentai game is so serious, so much ceremony, the priests going into the dungeon for days, and so well-funded?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"It's a sport. Sports are taken seriously and well-funded in many countries."</span></p>
+<p class="dialog"><span style="color:#00bc96">"Not sports of the mind. Their audience isn't large enough to fund it just based on advertising and national prestige and all those other reasons."</span></p>
+<p class="dialog"><span style="color:#df74b1">"So why then?"</span></p>
+<p class="dialog">Mu leaned forward.</p>
+<p class="dialog"><span style="color:#00bc96">"It's because Minpentai isn't just a sport."</span></p>
+<p class="dialog">Zei stared.</p>
+<p class="dialog"><span style="color:#00bc96">"It's military training."</span></p>
+<p class="dialog"><span style="color:#00bc96">"The whole point of the sport, and why we support it so much, is to raise the next generation of defenders."</span></p>
+<p class="dialog"><span style="color:#e58137">"We need people who can think quickly, and think strategically under pressure."</span></p>
+<p class="dialog"><span style="color:#00bc96">"People who can compete with their foes, but also cooperate with their allies, even allies that they do not personally get along with."</span></p>
+<p class="dialog"><span style="color:#e58137">"People who can understand a battlefield, including the battle itself, all the way up to grand strategy and resources and logistics, and all the way down to the level of surveillance and secrecy and trickery, and ultimately entropy itself."</span></p>
+<p class="dialog"><span style="color:#00bc96">"People who can deal with suddenly changing rules."</span></p>
+<p class="dialog"><span style="color:#e58137">"People who are able to micromanage, but are also able to set a plan in motion and watch it unfold."</span></p>
+<p class="dialog"><span style="color:#00bc96">"And people who can work with the latest technology - including AI - but also understand and work around its limits."</span></p>
+<p class="dialog">The realizations hit Zei all at once. At first, he had wanted to ask a basic question: why pretend it's a game, why not just have a regular military with regular recruitment? But as soon as he put together the question, he already knew the answer: the Arctics would put all their energy into targeting anything like that. Minpentai was only safe because it pretended to be just a game. But even then, Zei knew, the ruse could not be safe forever.</p>
+<p class="dialog"><span style="color:#df74b1">"Why are you telling me this now?"</span></p>
+<p class="dialog"><span style="color:#e58137">"Because we have to give you <em>some</em> reason why we're now telling you to work hard on cryptography <em>and</em> continue to the nationals. If we didn't tell you, you might get suspicious, eventually figure it out for yourself, and then do something stupid, like excitedly blurting out your discovery to a dozen other people."</span></p>
+<p class="dialog">Zei nodded.</p>
+<p class="dialog"><span style="color:#df74b1">"I won't tell anyone. Not even Fin."</span></p>
+<p class="dialog">Den and Mu nodded.</p>
+<p class="dialog"><span style="color:#00bc96">"And when the nationals come, you'll want a sparring partner who knows your style."</span></p>
+<p class="dialog">No one said a name. No one had to.</p>
+<p class="dialog"><span style="color:#e58137">"We appreciate your support"</span>, Den replied.</p>
+<p class="dialog"><span style="color:#00bc96">"Dze go ba fau gie"</span>, Mu added.</p>
+<p class="dialog"><span style="color:#df74b1">"Dze go ba fau gie."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-09.html">上一章 · 第九章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-11.html">下一章 · 第十一章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第十章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

@@ -60,7 +60,35 @@
   {
    "id": "c07-s0009",
    "role": "div",
-   "text": "<c st=\"font-size:200%\">🙁<sup><sup>2</sup></sup></c> <c st=\"font-size:200%\">🙁<sup><sup></sup></sup></c> <c st=\"font-size:200%\">😐<sup><sup></sup></sup></c> <c st=\"font-size:200%\">😊<sup><sup></sup></sup></c> <c st=\"font-size:200%\">😊<sup><sup>2</sup></sup></c>",
+   "text": "🙁<sup><sup>2</sup></sup>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0009#2",
+   "role": "div",
+   "text": "🙁<sup><sup></sup></sup>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0009#3",
+   "role": "div",
+   "text": "😐<sup><sup></sup></sup>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0009#4",
+   "role": "div",
+   "text": "😊<sup><sup></sup></sup>",
+   "locked": false,
+   "note": ""
+  },
+  {
+   "id": "c07-s0009#5",
+   "role": "div",
+   "text": "😊<sup><sup>2</sup></sup>",
    "locked": false,
    "note": ""
   },

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第十八章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第十八章 · Chapter 18 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-17.html">
+  <link rel="next" href="chapter-19.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="18">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第十八章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第十八章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 18</p>
+    <p class="chapter-heading__dateline">帕佛盖都，泽国 · 3724年果月18日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Pafogai Du, Dzego · 3724 Fruitmoon 18</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯走出空港，穿过一道密封的出口，门一开，直通一辆黑色大轿车的车厢。</p>
+<p class="dialog">泽和白都已经坐在车里：泽坐的是背朝车头的座位，白坐在他对面，面朝前方。</p>
+<p class="dialog"><span style="color:#be9b00">“你们一定就是泽和白吧。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“正是我们！”</span>白回答。</p>
+<p class="dialog"><span style="color:#be9b00">“总算见到你们了，我很高兴。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我们也是。”</span></p>
+<p class="dialog">格拉迪亚斯在泽左边坐下。</p>
+<p class="dialog">车门关上，车开始加速。</p>
+<p class="dialog">格拉迪亚斯朝右看，越过泽，望向车的右窗。</p>
+<p class="dialog">车驶出空港，很快经过一连串店铺。</p>
+<p class="dialog">格拉迪亚斯立刻觉出不对：车一动，窗上的景象就跟着移，可他挪动身子时，画面却毫无反应。</p>
+<p class="dialog"><span style="color:#be9b00">“那是真窗户吗？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#df74b1">“也可以是。”</span>泽回答。<span style="color:#df74b1">“但现在安保规程升级了，黑色轿车的设置也改了。车窗不能直接透光，因为就算调暗，玻璃也是双向透的——外面拿一台好相机就能看出我们坐在里面。所以现在用的是仿真窗，靠摄像头把外面的景象拍进来。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“车里只有一个人的时候，效果其实很好，它还会追踪视线，画面调得更自然。可现在我们是两个人，它挑中了我。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯。”</span></p>
+<p class="dialog">格拉迪亚斯改从左窗往外看。他几次调整姿势试了试。颜色和景深都有些不太自然，除此之外却正常得让人意外。他继续看，仔细留意窗外的一切。</p>
+<p class="dialog">许多店铺的侧面都画着卡通动物，气泡框里用泽国语写着各种话，格拉迪亚斯一句也看不懂。</p>
+<p class="dialog">每间铺子里摆的货，格拉迪亚斯都能匆匆瞥见：手持终端、算力盒、灯、无人机、传感器。</p>
+<p class="dialog">一家卖算力盒的店，招牌上写着“MIN KUI”。</p>
+<p class="dialog">一家卖灯的店，招牌上写着“GUI SAU”，那些灯大多做成细长圆柱形。</p>
+<p class="dialog">但让他意外的是，开着门的店似乎只有寥寥几家。</p>
+<p class="dialog">楼都只有一两层，通向地下的楼梯却很多。</p>
+<p class="dialog">街上有人，但比他往常在维里迪亚见到的人要少——尽管帕佛盖都的密度明显高过他的家乡。</p>
+<p class="dialog"><span style="color:#df74b1">“hun fe bin jin zo de jan li gi”</span>泽念出了声。</p>
+<p class="dialog"><span style="color:#be9b00">“嗯？”</span>格拉迪亚斯应道。</p>
+<p class="dialog"><span style="color:#df74b1">“啊，抱歉。戴颈带的人真多，我随口说说。”</span></p>
+<p class="dialog">格拉迪亚斯还注意到，路面上有大量一模一样的黑色轿车。</p>
+<p class="dialog"><span style="color:#be9b00">“帕佛盖都人人都坐这种黑色轿车吗？这是为了隐私？”</span>他问。</p>
+<p class="dialog"><span style="color:#df74b1">“仔细想想，倒也不是。这车我们早就有了，但这么多人开始用，还是很新的事。几天前，路上还不到现在的一半。”</span></p>
+<p class="dialog">三人继续默不作声地坐车前行。</p>
+<p class="dialog">几分钟后，车驶进一条隧道。走到中途，它减速停下。格拉迪亚斯感到轻轻一震，听到些机械的声响，车身似乎朝各个方向移动：先向上，再横移，然后向下。他透过车窗往外看，什么也看不见。大约半分钟后，这一套动作结束，车又像是重新加速向前。</p>
+<p class="dialog"><span style="color:#be9b00">“我们刚刚……换车了？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“换的是车厢。系统等十辆车到齐，把车厢随机互换，然后各自再开出去。守在出口的人，谁也不知道我们在哪一辆里。像混网，只不过换的是人。”</span></p>
+<p class="dialog">不到一分钟，车出了隧道。很快，帕佛盖都南边的山体金字塔进入视野。</p>
+<p class="dialog"><span style="color:#be9b00">“那……真是座了不起的建筑，”</span>格拉迪亚斯说。</p>
+<p class="dialog"><span style="color:#df74b1">“嘿，人人都这么说。其实这座金字塔是我们从一座现成的山里凿出来的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“还是很了不起！这样大概也更安全，要是内部有九成、甚至九成九都是实心岩石的话。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“九十六点七。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那空着的只有三十分之一？普通建筑要是10%实心，那这座的容量就等于一个每边都只有三分之一的普通建筑？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“答对了！”</span></p>
+<p class="dialog"><span style="color:#df74b1">“也许你说得对，是该惊叹一下。它<em>确实</em>是全泽国这类建筑里最大的一座。”</span></p>
+<p class="dialog">车开始减速，很快就停下。车门打开，门外直接就是酒店。</p>
+<p class="dialog"><span style="color:#df74b1">“这就是你住的酒店，格拉迪亚斯！”</span></p>
+<p class="dialog">格拉迪亚斯站起身，提着包下了车。</p>
+<p class="dialog"><span style="color:#be9b00">“那接下来怎么安排？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“先休息一个长时，我们再回这儿找你，接着聊。”</span></p>
+<p class="dialog">格拉迪亚斯走进酒店，把手表往最近的一个绿色圆圈上一贴。</p>
+<div class="device-view narrow-device-view"><table><tbody><tr><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">sen hen zi li die fe 100<br/>zo lia kin<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">man dun li jie hu<b style="font-size: 150%; color: #8f8">✓</b></div></center></td></tr></tbody></table><b>cau tie zen<br>ci fan zi li 448</b></div>
+<p class="dialog">手表震了一下。他拿到了房间钥匙。</p>
+<p class="dialog">格拉迪亚斯环顾四周。他发现泽说得没错，这里<em>几乎所有人</em>都已经戴上了颈带。</p>
+<p class="dialog">格拉迪亚斯走进电梯。电梯门合上。门再开时，他走出去，进了自己的房间。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯从酒店大门出来，朝外看。他只休息了四十分钟，再过六十分钟，泽和白就该等他了。他打算出去走走，至少亲眼看看帕佛盖都的这一片。</p>
+<p class="dialog">他转过身，看见了酒店的地址：檀凯街1565号。</p>
+<p class="dialog">他向右拐，开始往前走。</p>
+<p class="dialog">几乎立刻，手表就朝他闪出一连串警告，“未知”的数量到了两位数。他想着这不过是自己的维里迪亚手表认不得泽国的电子设备，决定不理这些警告，继续往前走。</p>
+<p class="dialog">他过了马路。一辆黑色轿车从他身边驶过，随即减速停下。一个男人从旁边的店里走出来，抱着一个大箱子，把箱子放在车旁的地上。</p>
+<p class="dialog">车门打开，司机走下车，也把一个大箱子放在地上，大小一模一样。她接着打开箱子的顶盖。</p>
+<p class="dialog">隔着几米看过去，格拉迪亚斯能看到箱子最上面一排摆着约三十个更小的白盒子。</p>
+<p class="dialog">司机取出一只装着最上面一排货的托盘，放到台阶上。店里的男人掏出手持终端，似乎在同时扫描所有白盒子上的二维码。</p>
+<p class="dialog">司机又取出第二排的托盘，叠在第一只托盘上。店里的男人再扫一遍。</p>
+<p class="dialog">这样又重复了五次。接着，司机打开男人的大箱子，也一排一排地扫过去。</p>
+<p class="dialog">每扫完一排，她就把托盘放进自己的箱子。最后，她把箱子搬回车里，开走了。</p>
+<p class="dialog"><span style="color:#be9b00">“这是在干什么？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#00bc96">“送货。”</span>那人回答。<span style="color:#00bc96">“高安全级的。”</span></p>
+<p class="dialog">那人把台阶上的托盘都装进自己的箱子，抱起箱子匆匆回到店里，锁上了门。</p>
+<p class="dialog">格拉迪亚斯明白了，这就是实物投递混网——泽跟他讲过一次。每件物品都要经过几个承运人之手，没有哪一个人同时知道起点和终点。想破坏某一个人的设备，就必然要破坏<em>所有人</em>的设备——而真这么干，很快就会落网。</p>
+<p class="dialog">格拉迪亚斯继续走。他在十七街向右拐，正前方就能看见帕佛盖都那座巨大的山体金字塔，而通往它的坡道，再过两条街就开始了。</p>
+<p class="dialog">这条街上，开门的店铺多了许多。几乎每家店窗子上方都挂着招牌，一半做得精致专业，另一半是用霓虹灯临时手工拼出来的。他看见一家花店，顾客还不少。再往前大约二十米，是一家服装店。外面的海报还在推销夹克，但透过窗子往里看，店里大约一半的空间已经被匆匆添置的隐私袍占去。再往前约二十米，是一道没有招牌的楼梯通往地下室，两个十几岁的男孩和一个女孩正往下走。</p>
+<p class="dialog">楼梯口上方，格拉迪亚斯看到一块招牌。上面画着可爱的卡通动物在摆弄电子器件和化学实验器材，背景是绿树和蓝天。招牌正中，是一句泽国语的箴言：</p>
+<center><div class="dz-card" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span style="white-space:nowrap"><span class="dz-script">pa jan</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">li</span> <span style="white-space:nowrap"><span class="dz-script">sun</span></span></span> <span style="font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;">zo</span></span></div><div class="dz-line" style="margin:3px 0;padding-left:0ch"><span style="white-space:nowrap"><span class="dz-script">zai gau</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">fe</span> <span style="white-space:nowrap"><span class="dz-script">pa jan</span></span></span></div><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span style="white-space:nowrap"><span class="dz-script">go</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">li</span> <span style="white-space:nowrap"><span class="dz-script">sun</span></span></span> <span style="font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;">zo</span></span></div><div class="dz-line" style="margin:3px 0;padding-left:0ch"><span style="white-space:nowrap"><span class="dz-script">bai gau</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">fe</span> <span style="white-space:nowrap"><span class="dz-script">go</span></span></span></div></div></center>
+<p class="dialog">他琢磨这些字是什么意思。</p>
+<p class="dialog">他在心里记下一笔：既然来了，那256个泽国语词根，得真的开始学了。</p>
+<p class="dialog">再往前约二十米，他又看到一道楼梯，通向一家像是开在地下的茶馆。入口和楼梯的装饰风格，让格拉迪亚斯想起小时候看过的泽国中世纪的图画。</p>
+<p class="dialog">又过不久，格拉迪亚斯走到下一条街：津戈街。此前人行道上树荫很密，密到他一度看不见前方高耸的巨大金字塔。到了这个路口，树暂时断开，他又能看见它了。他看见许多人沿着通往入口的斜坡道上来下去，多数人穿着隐私袍。他不知道他们在做什么。</p>
+<p class="dialog">他过了马路，继续往前走，到了下一条街：宰贡街。这是山丘开始前的最后一条街。他又过了马路，开始沿坡往上走。</p>
+<p class="dialog">大约五分钟后，格拉迪亚斯已经站得够高，俯瞰着帕佛盖都，几乎能看见所有建筑的屋顶。从高处看，这座城市是混凝土屋顶和绿树的混合——比自由城绿得多，却仍远不如维里迪亚绿。</p>
+<p class="dialog">他注意到旁边有块大石头，便坐上去，看起了风景。</p>
+<p class="dialog">几分钟后，他开始往回下山。</p>
+<p class="dialog">他回到宰贡街，向左拐，沿着城市边缘一直走到最西端。一条绿树覆盖的漂亮小路似乎环绕着整座城市，他很是喜欢。他看见许多人在小路上散步、跑步。走到城西边缘的零街时，小路转向北。</p>
+<p class="dialog">他继续沿小路往北走了两条街，回到檀凯街，然后重新穿回城里，一路向东，回到了酒店。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯走进酒店，立刻向左拐进大堂餐厅。虽然他早到了十分钟，泽和白已经坐在一张桌边，正看着一台手持终端。白抬起头，朝他挥手。</p>
+<p class="dialog">格拉迪亚斯走到他们桌边坐下。</p>
+<p class="dialog"><span style="color:#be9b00">“在看什么？”</span>他问。</p>
+<p class="dialog">白把屏幕转给他看。</p>
+<div class="device-view wide-device-view"><blockquote><p>他选了人迹更少的那条路，为众人开出一条道来。</p><pre style="color:#fff">jan jo san sia ci pa jan li san sia te bia pin hu fe lo shun ci fi mu jan li san sia fe fi mu san sia te shun zo bia pin fe jan</pre></blockquote></div>
+<p class="dialog"><span style="color:#ed756b">“你知道这是什么意思吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“第一行是维里迪亚人写的。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“没错。那后面的呢？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“还不知道。我只认得五个泽国语词根，”</span>格拉迪亚斯笑了。</p>
+<p class="dialog"><span style="color:#ed756b">“已经是这门语言的2%了”</span>白回答。</p>
+<p class="dialog"><span style="color:#ed756b">“人应当做梦。一个人做梦，便不怕痛苦。十万个人做十万个梦，痛苦就会怕他们。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“这是一首古诗。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“这意思跟我们那句差得不太远。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“没错。只不过你们是在开辟道路，而我们在这儿，是为了活命在拼。”</span></p>
+<p class="dialog">她话音刚落，泽和白就一起转头，朝另一个正跑向桌边的人挥手。</p>
+<p class="dialog">泽立刻认出了他，把剩下的那把椅子拉出来，让他坐下。</p>
+<p class="dialog"><span style="color:#df74b1">“格拉迪亚斯，这位是芬。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“幸会，芬。塞拉跟我提过，泽说了你不少好话。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“我也很高兴认识你，格拉迪亚斯。泽带来的人，就是我的朋友。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我倒只是高兴，终于能亲眼看看泽国了。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“芬，你那边最近怎么样？”</span>白插话道。<span style="color:#ed756b">“我们差不多有半个月没见着你了。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“这么久没理你们，我真的很抱歉。不过谢谢你问这个问题——因为我总算能给出一个配得上它的答案了。”</span></p>
+<p class="dialog">格拉迪亚斯、泽和白都转头盯着芬。</p>
+<p class="dialog"><span style="color:#ce9200">“你们可能一直奇怪，”</span>芬开口，<span style="color:#ce9200">“我们为什么要在班孙培上花这么多力气。优化泽国语、优化度量单位，搞这一切到底有什么意义——泽国明明还有那么多急需的事：教育、国防、经济发展，样样都缺。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“我自己也疑惑了好些年。直到红郡遭袭那天，我在班孙培的会上，才终于找到了答案。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“答案是什么？”</span>泽问。</p>
+<p class="dialog"><span style="color:#ce9200">“泽国语就是协调训练。”</span></p>
+<p class="dialog">泽和白都张大了嘴。</p>
+<p class="dialog"><span style="color:#ce9200">“想想看，我们每发布一版新的泽国语，到底是在做什么。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“首先，我们拿许多不同的版本做 A/B 测试。我们鼓励不同的人去试不同的方案，再把各自的体验反馈回来。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“这保证了两件事。第一，保证整个过程里有公众反馈，所以最终成品参考的，是真人开始照着做时，哪些做法真的行得通。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“第二，公众反馈，加上最终结果是许多人在许多维度、许多选项之间选出来的——这两点能让人更容易接受结果。没有人会觉得意外。对其中某一部分有异议的人，几乎总认识某个更喜欢它的人，至少也能听听对方的看法。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“班孙培有意从各行各业招人——你要是招来一个组织里谁都不认识的人，还能拿到<em>奖励</em>。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“所以红郡遭袭那天，班孙培在线召开会议，做了一个前所未有的决定：至少暂时把泽国语第九版搁置。只放出几项谈了一年多的基础高亮改动，仅此而已。”</span></p>
+<p class="dialog">泽松了一口气，叹息声清晰可闻。</p>
+<p class="dialog">格拉迪亚斯能理解。过去一个月，谁的日子都不好过——这时候让全国人都去学一门语言的新版本，实在不是好时机。</p>
+<p class="dialog"><span style="color:#ce9200">“他们转而决定用完全相同的一套机制，只是情况特殊、时间又紧，所以公众参与更少、保密更多，用这套机制来协调泽国全国另一整套完全不同的变化。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“你们看见了吗，现在多了多少人戴颈带、用颈带讲话？多了多少人穿隐私袍？多了多少人坐黑色轿车来往？多了多少人在网上下单、走实物投递混网，不再去实体店。而比这些重要十倍的，是你们看不见的：更多敏感会议干脆搬到了线上，所有在互联网上做事的人，用的工具也安全得多。蓝鲸通讯几乎在一夜之间从泽国消失了。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“三天前，这些都还没有发生。班孙培转而做的，只是把它那套新的隐私与安全建议，从那个渠道发了出去——关注它的人本来都在那儿等着泽国语第九版的消息。全国大约5%的人同时看到了这份建议。他们很意外，但读懂了理由，也尊重做决定的人。这些人里大多数已经在至少一件要紧的事上改变了行为，而哪怕只有2.5%，也足以掀起一股如今正席卷整个泽国的潮流。”</span></p>
+<p class="dialog">芬越说越兴奋，接着往下讲。</p>
+<p class="dialog"><span style="color:#ce9200">“北极人总在讲一个人的智力分，讲社会该由分数最高的人来治理。维里迪亚有几位学者说，情商分也该被认真对待——可除了让人点头称是，他们从来没能让大家真的做点什么。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“但他们完全漏掉了第三类：协调分。协调分不是一个人的属性，而是整个共同体的属性。它是一个共同体做集体决策的能力：在零和竞争与正和合作之间选择后者——哪怕合作对个人有风险；也是从一个不良均衡跳进更好均衡的能力。”</span></p>
+<p class="dialog"><span style="color:#ce9200">“北极人以为，这种事只能靠一个人人叩拜的强势领袖来做。但我们泽国人说不。我们说‘gie fe kiu kai ci bin hu’——扎根，无首。如今我们的根已经扎下；我们泽国人八次改进、完善自己的语言，没有自上而下的强制，也没有首领。现在，我们就要凭这样一个无首之身去迎战北极人。而我们一定会赢。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-17.html">上一章 · 第十七章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-19.html">下一章 · 第十九章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias exited the air harbor, stepping through a sealed opening that opened immediately into a large black car.</p>
+<p class="dialog">Zei and Bai were both already sitting inside, Zei on a backward-facing seat and Bai facing him on a forward-facing seat.</p>
+<p class="dialog"><span style="color:#be9b00">"You must be Zei and Bai."</span></p>
+<p class="dialog"><span style="color:#ed756b">"We are indeed!"</span>, Bai replied.</p>
+<p class="dialog"><span style="color:#be9b00">"Well, I'm glad to finally meet."</span></p>
+<p class="dialog"><span style="color:#df74b1">"As are we."</span></p>
+<p class="dialog">Gladias sat down to the left of Zei.</p>
+<p class="dialog">The door closed, and the car began to accelerate.</p>
+<p class="dialog">Gladias stared to the right, looking past Zei to the right-side window of the car.</p>
+<p class="dialog">The car exited the air harbor, and soon began passing by a series of stores.</p>
+<p class="dialog">Gladias immediately noticed that something was off: the view on the window shifted as the car moved, but it did not respond to Gladias himself shifting his body position.</p>
+<p class="dialog"><span style="color:#be9b00">"Is that a real window?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#df74b1">"It can be"</span>, Zei replied. <span style="color:#df74b1">"But we have heightened security protocols now, and the black cars changed their settings. Can't let light pass through windows directly, because that would be bi-directional even if it was dimmed - a good camera could see that we're inside. So it's a simulated window now, picking up the view with cameras."</span></p>
+<p class="dialog"><span style="color:#df74b1">"It actually works well when there's one person, because it tracks your eyes too so it adjusts to look more natural. But now there's two of us, and it's picking me."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Huh."</span></p>
+<p class="dialog">Gladias looked through the left window instead. He adjusted his body a few times to test it. The colors and the depth seemed somewhat unnatural, but otherwise it looked surprisingly normal. He continued looking, paying close attention to everything that he saw outside.</p>
+<p class="dialog">Many of the stores had cartoon animals on the sides, with speech bubbles saying various things in Dzegoban that Gladias could not understand at all.</p>
+<p class="dialog">Gladias could briefly see the products inside each of the stores: hand devices, compute boxes, lamps, drones, sensors.</p>
+<p class="dialog">"MIN KUI", a sign on a store selling compute boxes read.</p>
+<p class="dialog">"GUI SAU", a sign on a store selling lamps, most of them in the shapes of long cylinders, read.</p>
+<p class="dialog">But to his surprise, only a few of the stores seemed to be open.</p>
+<p class="dialog">The buildings were all one or two storeys tall, with many stairways leading underground.</p>
+<p class="dialog">There were people outside, though fewer than Gladias was used to seeing in Veridia - despite the visibly greater density of Pafogai Du compared to his own hometown.</p>
+<p class="dialog"><span style="color:#df74b1">"hun fe bin jin zo de jan li gi"</span>, Zei wondered aloud.</p>
+<p class="dialog"><span style="color:#be9b00">"Huh?"</span>, Gladias replied.</p>
+<p class="dialog"><span style="color:#df74b1">"Ah, sorry. So many people wearing neck bands, I was just saying."</span></p>
+<p class="dialog">Gladias also noticed a large number of identical black cars on the roads.</p>
+<p class="dialog"><span style="color:#be9b00">"Does everyone in Pafogai Du use this kind of black car? Is this a privacy thing?"</span>, he asked.</p>
+<p class="dialog"><span style="color:#df74b1">"Now that I think about it, no. We've had them for a while, but having this many people use them is quite new. Just a few days ago, there were barely half as many."</span></p>
+<p class="dialog">They continued riding silently.</p>
+<p class="dialog">A few minutes later, the car descended into a tunnel. Midway through, it slowed and then came to a stop. Gladias could feel a gentle bump, some mechanical noises, and what seemed to be the car shifting in all directions: up, sideways and then down. He looked out through the window, but could see nothing. And about half a minute later, the procedure ended, and the car appeared to be accelerating forward again.</p>
+<p class="dialog"><span style="color:#be9b00">"Did we just ... swap cars?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Swapped cabins. The system waits for ten cars to come, swaps the cabins around randomly, and then everyone drives back out. No one watching the exits knows which one we're in. Like a mixnet, but for people."</span></p>
+<p class="dialog">Less than a minute later, they exited the tunnel. Soon, the mountain pyramid in the south of Pafogai Du came into view.</p>
+<p class="dialog"><span style="color:#be9b00">"That ... is an impressive structure"</span>, Gladias said.</p>
+<p class="dialog"><span style="color:#df74b1">"Heh, everyone says that. Actually we carved it out of a pre-existing mountain."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Still impressive! Probably more secure that way too, if ninety or ninety-nine percent of the inside is solid rock."</span></p>
+<p class="dialog"><span style="color:#df74b1">"It's ninety-six point seven."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So one over thirty open space? If a normal building is ten percent solid, that makes it equivalent in capacity to a normal building three times smaller in each dimension?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"You got it!"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Maybe you're right we should be impressed. It <em>is</em> the largest one of these in all of Dzego."</span></p>
+<p class="dialog">The car began to slow down, and soon it came to a stop. The car door opened, directly into the hotel.</p>
+<p class="dialog"><span style="color:#df74b1">"This is your hotel, Gladias!"</span></p>
+<p class="dialog">Gladias stood up, and stepped out of the car with his bag.</p>
+<p class="dialog"><span style="color:#be9b00">"So what's the plan?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Take a longhour to rest, we'll meet you back here and chat more."</span></p>
+<p class="dialog">Gladias walked into the hotel, and tapped his watch onto the nearest green circle.</p>
+<div class="device-view narrow-device-view"><table><tbody><tr><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">sen hen zi li die fe 100<br/>zo lia kin<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">man dun li jie hu<b style="font-size: 150%; color: #8f8">✓</b></div></center></td></tr></tbody></table><b>cau tie zen <br> ci fan zi li 448</b></div>
+<p class="dialog">His watch buzzed. He had his room key.</p>
+<p class="dialog">Gladias looked around. Zei was right, he realized. <em>Almost everyone</em> was already wearing neck bands here.</p>
+<p class="dialog">Gladias walked into the elevator. The elevator door closed. When it opened again, Gladias stepped out, and walked into his room.</p>
+<hr class="rule">
+<p class="dialog">Gladias stepped out of the front door of the hotel, and looked outside. He had only taken forty minutes to rest; he had another sixty left before Zei and Bai would be expecting him. He figured that he would go on a walk, and take a look around at least this one piece of Pafogai Du himself.</p>
+<p class="dialog">He turned around. He saw the hotel address: 1565 Tan Kai.</p>
+<p class="dialog">He turned right, and began walking.</p>
+<p class="dialog">Almost immediately, his watch began flashing warnings at him, "unknown" counts in the double digits. Figuring that this was just his Veridian watch not being up to date on Dzego electronics, he decided to ignore the warnings, and continued his walk.</p>
+<p class="dialog">He crossed the street. He saw a black car pass by him, and then almost immediately slow to a stop. A man walked out from a nearby shop, holding a large box. He put the large box down on the ground beside the car.</p>
+<p class="dialog">The door of the car opened, and the driver stepped outside, putting her own large box down on the ground, identical in size. She proceeded to open the top of the box.</p>
+<p class="dialog">Looking at the box from a few meters away, Gladias could see about thirty much smaller white boxes on the top row inside.</p>
+<p class="dialog">The driver took out a tray containing the top row, and put it on the ground, on a staircase. The man from the store took out a hand device, and seemed to scan the two-dimensional codes on all the white boxes simultaneously.</p>
+<p class="dialog">The driver then took out a tray containing the second topmost row, and put it on top of the first tray. The man from the store scanned again.</p>
+<p class="dialog">This repeated five more times. Then, the driver opened up the man's large box, and scanned it row by row as well.</p>
+<p class="dialog">After scanning each row, she put the tray into her own box. And finally, she took the box back into her car and drove away.</p>
+<p class="dialog"><span style="color:#be9b00">"What's going on?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#00bc96">"Shipping"</span>, the man replied. <span style="color:#00bc96">"High security."</span></p>
+<p class="dialog">The man finished putting the trays on the staircase into his own box, picked up the box, hurried back inside his shop and locked the door.</p>
+<p class="dialog">A mixnet for physical objects, Gladias realized - Zei had told him about it once. Each object would pass through several carriers, and no single person knew both the source and the destination. There was no way to sabotage one person's device without sabotaging <em>everyone's</em> device - and if you did that, you would quickly get caught.</p>
+<p class="dialog">Gladias kept walking. He turned right on 17th street, and could see Pafogai Du's giant mountain pyramid in front of him, and the pathway leading up to it starting after only two more streets.</p>
+<p class="dialog">On this street, Gladias could see far more shops that were open. Almost every shop had a sign above the window advertising it, about half the time polished and professional and the other half the time improvised and hand-made from neon lights. He saw a flower shop, still bustling with customers. About twenty meters after that, a clothing shop. The posters on the outside still advertised jackets, but looking through the window inside, he could see that about half the space was now taken up by hastily-added privacy robes. About twenty meters after that, an unmarked staircase leading to a basement, with two teenage boys and one girl climbing down.</p>
+<p class="dialog">At the top of the staircase, Gladias saw a sign. There were pictures of cute cartoon animals playing with electronic gadgets and chemistry lab equipment, with a backdrop of green trees and blue skies. In the middle of the sign, he saw a motto in Dzegoban:</p>
+<center><div class="dz-card" style="font-family:'TeX Gyre Chorus',cursive;font-size:17px;line-height:1.55"><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span style="white-space:nowrap"><span class="dz-script">pa jan</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">li</span> <span style="white-space:nowrap"><span class="dz-script">sun</span></span></span> <span style="font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;">zo</span></span></div><div class="dz-line" style="margin:3px 0;padding-left:0ch"><span style="white-space:nowrap"><span class="dz-script">zai gau</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">fe</span> <span style="white-space:nowrap"><span class="dz-script">pa jan</span></span></span></div><div class="dz-line" style="margin:3px 0;padding-left:2ch"><span style="background:rgba(255,255,255,0.110);border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone"><span style="white-space:nowrap"><span class="dz-script">go</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">li</span> <span style="white-space:nowrap"><span class="dz-script">sun</span></span></span> <span style="font-family:'Courier New','Liberation Mono',monospace;color:#9fd8c9;font-size:80%;letter-spacing:0.6px;font-style:italic;">zo</span></span></div><div class="dz-line" style="margin:3px 0;padding-left:0ch"><span style="white-space:nowrap"><span class="dz-script">bai gau</span></span> <span style="white-space:nowrap"><span style="font-family:'Courier New','Liberation Mono',monospace;color:#8fd6ff;font-size:80%;letter-spacing:0.6px;font-style:italic;font-weight:bold;">fe</span> <span style="white-space:nowrap"><span class="dz-script">go</span></span></span></div></div></center>
+<p class="dialog">He wondered what the words meant.</p>
+<p class="dialog">He made a mental note to himself: gotta actually learn those 256 Dzegoban roots now that I'm here.</p>
+<p class="dialog">About twenty meters after that, he saw another staircase, leading down to what seemed like an underground tea shop. The entrance and the staircase were decorated in a style that reminded Gladias of depictions he had seen as a child of Dzego's medieval era.</p>
+<p class="dialog">And soon after that, Gladias arrived at the next street: Zin Go. The sidewalk had had good tree cover, enough so that he had lost sight of the giant pyramid towering in front of him. Here, the street intersection temporarily interrupted the trees, and he could see the pyramid once again. He saw many people going up and down the inclined walkway leading up to the entrance. The majority of them were wearing privacy robes. He wondered what they were up to.</p>
+<p class="dialog">He crossed the street, and continued walking until he got to the next street: Dzai Gun. This was the last street before the hill began. He crossed the street again, and began to walk up the incline.</p>
+<p class="dialog">About five minutes later, Gladias was high enough that he was now towering over Pafogai Du, and could see the roofs of nearly all of the buildings. From the top, the city was a mix of concrete roofs and green trees - much more green than Freetown, but still much less green than Veridia.</p>
+<p class="dialog">He noticed a large rock nearby. He sat down on it, and enjoyed the view.</p>
+<p class="dialog">A few minutes later, he began to walk back down.</p>
+<p class="dialog">He got to Dzai Gun street, and turned left, walking along the edge of the city until the westernmost point. He was pleased by the beautiful path covered with trees that seemed to surrounding the whole perimeter of the city. He saw many people walking and running along it. When he reached 0th street, on the west edge of the city, the path turned north.</p>
+<p class="dialog">He continued following the path, walking north two streets back to Tan Kai, and then crossed back into the city, heading east until he got back to his hotel.</p>
+<hr class="rule">
+<p class="dialog">Gladias entered the hotel, and immediately turned left to enter the lobby restaurant. Even though he was ten minutes early, he saw Zei and Bai already sitting down at a table, looking at a hand device. Bai looked up, and waved at him.</p>
+<p class="dialog">Gladias headed over to their table, and sat down.</p>
+<p class="dialog"><span style="color:#be9b00">"What are you looking at?"</span>, he asked.</p>
+<p class="dialog">Bai showed him the screen.</p>
+<div class="device-view wide-device-view"><blockquote><p>He took the path less traveled, and that blazed a trail for all.</p><pre style="color:#fff">jan jo san sia ci pa jan li san sia te bia pin hu fe lo shun ci fi mu jan li san sia fe fi mu san sia te shun zo bia pin fe jan</pre></blockquote></div>
+<p class="dialog"><span style="color:#ed756b">"Do you know what it means?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, that first line is from a Veridian."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Indeed. And the rest?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Not yet. I only know like five Dzegoban roots"</span>, Gladias laughed.</p>
+<p class="dialog"><span style="color:#ed756b">"Two percent of the language already"</span>, Bai replied.</p>
+<p class="dialog"><span style="color:#ed756b">"People should dream. If one person dreams, they will not fear pain. If a hundred thousand people dream a hundred thousand dreams, pain will fear them."</span></p>
+<p class="dialog"><span style="color:#ed756b">"It's an old poem."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Not too different a message from ours."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Indeed. Although you're blazing trails, and we're fighting here to survive."</span></p>
+<p class="dialog">Immediately after she finished speaking, Zei and Bai both turned to wave at someone else who was running up to the table.</p>
+<p class="dialog">Zei immediately recognized him, and slid out the remaining chair for him to sit down.</p>
+<p class="dialog"><span style="color:#df74b1">"Gladias, meet Fin."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Nice to meet you, Fin. Seila mentioned all the good things that Zei had said about you."</span></p>
+<p class="dialog"><span style="color:#ce9200">"And nice to meet you too, Gladias. Anyone Zei brings is a friend to me."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well I'm just happy to finally get to see Dzego with my own eyes."</span></p>
+<p class="dialog"><span style="color:#ed756b">"So what's been up in your world, Fin?"</span>, Bai interjected. <span style="color:#ed756b">"I think this is the first time we've seen you in almost half a month."</span></p>
+<p class="dialog"><span style="color:#ce9200">"I'm really sorry I've been ignoring you guys for so long. But thank you for asking the question - because finally, I think I can give a worthy answer."</span></p>
+<p class="dialog">Gladias, Zei and Bai all turned to stare at Fin.</p>
+<p class="dialog"><span style="color:#ce9200">"You might have been wondering"</span>, Fin began, <span style="color:#ce9200">"why we spend so much effort on the Bansunpei. What's the point of optimizing Dzegoban, optimizing the measurement units, all of this, when there's so much else that Dzego desperately needs - education, defense, economic development, all of it."</span></p>
+<p class="dialog"><span style="color:#ce9200">"And for quite a few years, I've been wondering this myself. And it's not until my Bansunpei meeting the day Redshire was attacked that I finally got the answer."</span></p>
+<p class="dialog"><span style="color:#df74b1">"What is the answer?"</span>, Zei asked.</p>
+<p class="dialog"><span style="color:#ce9200">"Dzegoban is coordination training."</span></p>
+<p class="dialog">Zei and Bai both opened their mouths.</p>
+<p class="dialog"><span style="color:#ce9200">"Think about what we're doing each time we release a new iteration of Dzegoban."</span></p>
+<p class="dialog"><span style="color:#ce9200">"First, we A/B test many different versions of it. We motivate different people to try different things, and report back on their experiences."</span></p>
+<p class="dialog"><span style="color:#ce9200">"This ensures two things. First, it ensures that there's public feedback into the process, so the final product is informed by what behaviors actually work when you get real human beings to try to start doing them."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Second, the public feedback, and the fact that the final outcome is a result of many people choosing between many different options across different dimensions, helps people accept the outcome. It takes no one by surprise. Anyone who disagrees with some part of it almost always knows someone who likes it more, and can at least hear their perspective."</span></p>
+<p class="dialog"><span style="color:#ce9200">"The Bansunpei intentionally seeks out members from all walks of life - you actually get <em>bonuses</em> for recruiting someone whom no one else in the organization knows."</span></p>
+<p class="dialog"><span style="color:#ce9200">"And so on the day Redshire was attacked, the Bansunpei digitally convened, and made an unprecedented decision. At least for the time being, they were putting Dzegoban version nine on hold. Releasing a few basic highlighting changes that had been agreed upon for over a year, but that's it."</span></p>
+<p class="dialog">Zei audibly sighed with relief.</p>
+<p class="dialog">Gladias could understand. The last month had been intense for everyone - hardly a good time to get everyone across the country to learn a whole new version of their language.</p>
+<p class="dialog"><span style="color:#ce9200">"Instead, they decided to use the exact same machinery, though with less public participation and more secrecy because of the unique circumstances and the time constraint, to coordinate a totally different set of changes across Dzego."</span></p>
+<p class="dialog"><span style="color:#ce9200">"Have you seen how many more people are wearing and having conversations through neck bands now? Or wearing privacy robes? Or going between places in black cars? Or buying products online, through the physical-delivery mixnets, instead of going to stores. And ten times more meaningful than any of that is what you don't see - more of the sensitive meetings are just going online, and everyone doing things on the internet is using much more secure tools too. Bluewhale Messenger has almost disappeared from Dzego overnight."</span></p>
+<p class="dialog"><span style="color:#ce9200">"None of that was happening three days ago. Instead, the Bansunpei just released its new privacy and security recommendations, through the channel where all the people who follow them were expecting news about Dzegoban version nine. About five percent of the population saw the recommendations at the same time. They were surprised, but they read and understood the reasoning, and respected the people who made the decisions. The majority of those people have already changed their behavior in at least one major way, and even that two and a half percent was already enough to start a trend that's now sweeping across all of Dzego."</span></p>
+<p class="dialog">Fin grew even more excited, and he continued.</p>
+<p class="dialog"><span style="color:#ce9200">"The Arctics talk a lot about a person's Intelligence Score, and how society should be run by those whose score is the highest. A few Veridian academics say that we should take Emotional Intelligence Scores seriously as well - though they always have a hard time getting people to actually do anything beyond just nodding along to that statement."</span></p>
+<p class="dialog"><span style="color:#ce9200">"But there's a third category that they are completely missing. The Coordination Score. A Coordination Score is not a property of a person - it's a property of an entire community. It's a community's ability to make collective decisions, to choose positive-sum, even if personally risky, cooperation over zero-sum competition, and to jump out of bad equilibria into better ones."</span></p>
+<p class="dialog"><span style="color:#ce9200">"This is what the Arctics think can only be done with a strong leader that everyone bows down to. But we Dzegojan say NO. We say 'gie fe kiu kai ci bin hu' - grow roots, no head. And now we've grown our roots, and we Dzegojan, who have improved and perfected our language eight times with no top-down coercion and no head, are going to take on the Arctics with no head. And we are going to WIN."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-17.html">上一章 · 第十七章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-19.html">下一章 · 第十九章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第十八章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

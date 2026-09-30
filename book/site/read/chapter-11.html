@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第十一章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第十一章 · Chapter 11 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-10.html">
+  <link rel="next" href="chapter-12.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="11">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第十一章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第十一章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 11</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年花期15日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Bloomtime 15</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">塞拉、黛雅和维尔一起站在一片大草地上，附近还有不少别的家庭。</p>
+<p class="dialog">黛雅远远望见格拉迪亚斯正走过来，便朝他挥手。格拉迪亚斯看到了，脸上带着笑，加快脚步朝他们走来。</p>
+<p class="dialog"><span style="color:#e58137">“在这儿见到你真好！”</span>黛雅高声说。</p>
+<p class="dialog"><span style="color:#be9b00">“我儿子第一场真正的翔球比赛，我怎么能缺席。”</span>格拉迪亚斯答道。</p>
+<p class="dialog"><span style="color:#e58137">“那你最近怎么样？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，掌舵会的事一大堆。你也知道，这些不能拿到公开场合说。不过进展挺顺！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你呢？”</span></p>
+<p class="dialog">维尔开口了。</p>
+<p class="dialog"><span style="color:#a38af2">“嗯，就是起诉分歧资本那桩官司，材料一大堆。这两个月占了我很大一块时间。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“再跟我说说，那案子是怎么回事？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“啊，抱歉，我一直不想拿这些琐事烦你们，我知道你们手上已经堆了一大摊事。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“别这样，维尔，你的生活对我们很重要。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“嗯，你还记得半年前吧，跃升破产，我丢了工作。一个月后，另一个员工联系上我，我才从他那儿知道真正发生了什么。你看，官方说法本来是——”</span></p>
+<p class="dialog"><span style="color:#be9b00">“这事我在新闻里看到过。跃升当时撑不下去了，为了最后一搏，他们在金融市场上押了一把大的：买进某个地区房价的衍生品——而那个地区，他们本来正要宣布去开通业务。可这招没奏效——在意的人不够多，接着又赶上运气差，房价下跌，整件事就崩了。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“正是。但我打听到的是这样：跃升之所以能在这么小的市场上押下这么大的注、又不至于承受离谱的滑点，唯一的原因是有一家对冲基金——分歧资本——接了赌注的另一边。而分歧资本的主要股东早就悄悄用极低的价钱买下了跃升的多数股权。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“如果那个地区的房价涨了，跃升赚，分歧资本亏，对他们来说净额是零。如果房价跌了——事实也是如此——跃升亏，分歧资本赚，净额还是零。而不对称的地方在这儿：跃升一旦亏了——他们也确实亏了——就会宣布破产，这样年终奖不用发，员工一年的遣散费也省了。所以他们是踩着我们的背，给自己白送了一份期权。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“我们发现这件事之后就起诉了——所有员工一起，以集体诉讼的方式。打得很艰难；分歧资本甚至吓住了一些媒体，让他们不敢报道。不过我觉得到现在为止，法官看穿了他们的花招。所以我还挺乐观的。”</span></p>
+<p class="dialog">一声响亮的哨声传来，他们转头朝那个方向看去。</p>
+<p class="dialog">是教练。一辆大卡车已经开到了草地中央。</p>
+<p class="dialog"><span style="color:#93ab2c">“翔球比赛五分钟后就开始了！”</span>教练喊道。</p>
+<p class="dialog">教练按下一个按钮，卡车后门缓缓打开，以底部的铰链为轴向后翻。几个嘀嗒之后，它变成了一道斜坡。</p>
+<p class="dialog">几台个人飞行器自动从车里滚了出来。它们只是些简单的椅子，顶上装着旋翼，四周有一圈护罩。</p>
+<p class="dialog">一群十到十二岁的孩子朝卡车跑去，一半穿黄衫，一半穿紫衫。穿黄衫的孩子里就有兹文。他们抓过自己的飞行器，开始系上束带，把自己固定在座位里。</p>
+<p class="dialog">教练走进卡车，很快抱着一个小得多的箱子出来。他打开箱子，四架鲜红色的无人机弹了出来，飞上天空——它们形如几厘米宽的圆球，顶上装着柔软的羽毛状旋翼。</p>
+<p class="dialog"><span style="color:#93ab2c">“欢迎来到今天的翔球比赛。”</span>教练说。<span style="color:#93ab2c">“今天咱们打一场限定赛，只用红球。抓到红球就把它带回来交给我，你们队得一分。先拿满六分的队获胜。”</span></p>
+<p class="dialog">这时十个孩子都已经绑进了各自的个人飞行器，旋翼开始转动——转速刚好足以抵消大约四分之三的地球引力。孩子们兴奋地四处跑动，有人跳起来，升到离地约两米，又轻轻滑回地面。</p>
+<p class="dialog"><span style="color:#93ab2c">“都知道该怎么打吧？”</span>教练问。</p>
+<p class="dialog">“知道！”许多孩子齐声喊道。</p>
+<p class="dialog"><span style="color:#93ab2c">“那么比赛开始，五……四……三……二……一……起飞！”</span></p>
+<p class="dialog">个人飞行器升上了天空。</p>
+<p class="dialog"><span style="color:#be9b00">“说真的，学校到现在还办这个，我挺吃惊的。”</span>格拉迪亚斯对塞拉说。<span style="color:#be9b00">“这玩意儿要是今天才发明出来，他们肯定会说太危险了。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“它发明出来还不到十年呢。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“在泽国。”</span></p>
+<p class="dialog">兹文看见了一个红球，开始朝它飞过去。过了一会儿，两个穿紫衫的孩子也看到了那个红球，紧跟着他追了上去。</p>
+<p class="dialog">红球突然向左改变了方向。</p>
+<p class="dialog">兹文和另外两个孩子也跟着左转。兹文飞行器的旋翼护罩撞上了另一个孩子飞行器的旋翼护罩，两台飞行器轻轻弹开，没有出事。</p>
+<p class="dialog">兹文想让飞行器飞得更高。他稍稍落在了刚才撞到的那个孩子后面，而第三个孩子向前飞，很快就到了他正下方。气流把兹文往下吸，没多久他的脚就弹到了那台飞行器旋翼顶上的格栅上。</p>
+<p class="dialog">兹文赶紧跳开，他和那个孩子一起往下翻滚了几米，才稳住身形，各自朝不同方向飞走。</p>
+<p class="dialog"><span style="color:#be9b00">“这些东西上的 AI 现在是真厉害了。”</span>格拉迪亚斯低声说。</p>
+<p class="dialog">红球又突然改变方向，这次是向上。兹文立刻把旋翼开到最大功率，向上爬升。刚才被他撞到的那个孩子还在他下面几米，另一个孩子没能及时注意到红球变向，于是兹文抢到了前面。</p>
+<p class="dialog">兹文看着红球越来越近，又近了一些。现在它只在他前方一米。</p>
+<p class="dialog">红球突然关掉旋翼，开始下坠。兹文反应很快，就在球落到他脚边高度时把它踢了上去，同时把飞行器往前挪。他伸出手，把红球抓在了掌心里。</p>
+<p class="dialog">然后他把飞行器对准教练的方向飞去。旋翼慢了下来——但没有完全停。等他降到安全上限——每嘀嗒五米——旋翼才重新加速；这个速度，相当于从不到两米高的地方摔到地面时的速度。教练看着兹文落地，伸出手接过他递来的红球。</p>
+<p class="dialog"><span style="color:#93ab2c">“本场比赛第一个接到球的是兹文，黄队得第一分！”</span></p>
+<p class="dialog">他再次把红球放了出去。红球飞快地射向前方，方向与兹文站的位置正好相反。</p>
+<p class="dialog">兹文重新飞上天空，继续寻找更多的红球。</p>
+<p class="dialog"><span style="color:#be9b00">“赫雷达、莉莉和费布里克最近怎么样？”</span>格拉迪亚斯问黛雅。塞拉听到了这个问题，微微把头转向他们，想听答案。</p>
+<p class="dialog"><span style="color:#e58137">“赫雷达去北林参加数学竞赛了。我们一直在想办法让莉莉对艺术多上点心，不过到现在也没什么成效。”</span></p>
+<p class="dialog"><span style="color:#e58137">“我还跟兹文聊了一会儿，他给我看了他的作业。我挺意外的。我看他们给他出的算术题，好像比费布里克当年同年龄做的……稍微浅一点？”</span></p>
+<p class="dialog"><span style="color:#93ab2c">“多穆斯接得漂亮！”</span>教练喊道。<span style="color:#93ab2c">“盖尔也接得漂亮！紫队两分。”</span></p>
+<p class="dialog">塞拉加入了这个话题。</p>
+<p class="dialog"><span style="color:#54a1f9">“嗯，格拉德，你可是——”</span>她收住了话头，猛然想起，哪怕只是点明“掌则人”三个字也不合规矩——<span style="color:#54a1f9">“你现在是掌舵会的人了。掌舵会能做点什么，让维里迪亚的教育更好一些？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你也知道，学校不归掌舵会管，公立学校由教育委员会运营，人员出自议会。不过一直有人在琢磨，想多支持一些私立学校——用图谱资助去支持，再设计些评则，给他们合适的激励。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“也许你该在掌则人会议上推一推这件事？”</span>塞拉答道，对着手表低声说——她把手表当颈带用。她想，与其每句话都得小心斟酌、免得说漏格拉迪亚斯的身份，不如干脆私下聊。</p>
+<p class="dialog">德尔瓦特会支持的，格拉迪亚斯想。不过要是私立学校<em>不</em>附带任何评则上的细微引导，他会更支持。</p>
+<p class="dialog"><span style="color:#93ab2c">“兹文又接得漂亮！黄队得第二分。”</span></p>
+<p class="dialog">格拉迪亚斯和塞拉的注意力回到比赛上。天上有三组孩子，每组三人，各自追着一个球，都以为那是不同的红球。兹文独自飞着，没有试图加入任何一组。看上去他只是在天上漫游，眼睛不停扫着地平线，想找出第四个红球可能在哪里。</p>
+<p class="dialog">有个孩子从天上栽了下来，好在旋翼的 AI 自动减缓了下坠。他落到地面，几个嘀嗒后又站起来，重新飞回天上。</p>
+<p class="dialog">一分钟后，一个孩子落在教练身边，把红球交给了他。</p>
+<p class="dialog"><span style="color:#93ab2c">“盖尔又接得漂亮！紫队得第三分。”</span></p>
+<p class="dialog">红球重新飞上天，盖尔和另外两个跟他一起追球的孩子又一次追了上去。</p>
+<p class="dialog">又过了两分钟。另一个孩子落在教练身边。</p>
+<p class="dialog"><span style="color:#93ab2c">“德拉接得漂亮！黄队得第三分。”</span></p>
+<p class="dialog">再过一分钟，又有两个孩子几乎同时落地：</p>
+<p class="dialog"><span style="color:#93ab2c">“普拉特接得漂亮！黄队得第四分。”</span></p>
+<p class="dialog"><span style="color:#93ab2c">“梅尼也接得漂亮！紫队得第四分。”</span></p>
+<p class="dialog">兹文继续独自寻找第四个红球——别的孩子似乎已经彻底忘了它还存在。</p>
+<p class="dialog"><span style="color:#93ab2c">“埃加多接得漂亮！紫队得第五分。”</span></p>
+<p class="dialog"><span style="color:#93ab2c">“德拉又接得漂亮！黄队得第五分。”</span></p>
+<p class="dialog">他开始往更低处飞。</p>
+<p class="dialog">格拉迪亚斯和塞拉看到盖尔甩开两个对手冲到前面，正准备接球。红球就在他前方一米。</p>
+<p class="dialog">盖尔伸出手，准备抓住它。</p>
+<p class="dialog">就在这时，另一个孩子突然撞上了他，他向右偏出好几米。那个孩子想趁机去抓红球，可红球迅速掉转方向往后飞，正好从两人中间穿过。盖尔和那个孩子在球掠过时都伸手去抓，却都没抓到。</p>
+<p class="dialog">盖尔先重新看到了红球，迅速朝它飞去。他的两个对手随后跟上，但至少落后十米。</p>
+<p class="dialog">盖尔和红球一起升高，他离红球越来越近。五米。四米。三米。</p>
+<p class="dialog">与此同时，兹文不知怎么忽然朝地面落去，照例由飞行器的 AI 减缓了坠势。</p>
+<p class="dialog">高空之中，盖尔远远高于其他选手，得意地举起手，攥紧的拳头里握着那个红球。</p>
+<p class="dialog">观众里不少人欢呼起来。盖尔绕开跟在身后的另外两个学生，开始以每嘀嗒五米的最大速度往回下降。</p>
+<p class="dialog">忽然，格拉迪亚斯和塞拉的目光转向兹文。他已经从飞行器里出来，正朝教练跑去。</p>
+<p class="dialog">盖尔还在大约三十米的高空时，兹文摊开手，把他在草地上找到的第四个红球交给了教练——那球的旋翼已经坏了。</p>
+<p class="dialog"><span style="color:#93ab2c">“还有，兹文接得漂亮。黄队得第六分。黄队赢下比赛！”</span></p>
+<p class="dialog">格拉迪亚斯松了口气。</p>
+<p class="dialog">塞拉为兹文满脸自豪。</p>
+<p class="dialog"><span style="color:#54a1f9">“他选了人迹更少的那条路，”</span>她轻声念道，引的是一位维里迪亚老作家的话，<span style="color:#54a1f9">“为众人开出一条道来。”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯拉开隔板，走进隔间，又把隔板拉上。</p>
+<p class="dialog">另外三个掌则人已经在了。还有三个人，格拉迪亚斯想，一定还在路上。</p>
+<p class="dialog">这是格拉迪亚斯被分到的第三个掌则人小组，议题是空气质量。在这里，分配给他的编号是二号。</p>
+<p class="dialog">格拉迪亚斯立刻掏出手表，对着颈带低声说话，查询当前房间的空气质量。</p>
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%" colspan="2">空气</td></tr><tr><td style="font-size:150%">CO<sub>2</sub></td><td style="font-size:150%; color: yellow">906</td></tr><tr><td style="font-size:150%">PM2.5</td><td style="font-size:150%; color: #8f8">4.4</td></tr></table><table><tr><td style="font-size:150%" colspan="2">设备</td></tr><tr><td style="font-size:150%; color: #8f8">已证 ✓</td><td style="font-size:150%; color: #8f8">16</td></tr><tr><td style="font-size:150%; color: #fc8">未知？</td><td style="font-size:150%; color: #8f8">0</td></tr></table></div>
+<p class="dialog"><span style="color:#be9b00">“才四个人，怎么就906了？”</span>他问。<span style="color:#be9b00">“过滤器工作得很好，不过我猜他们还没想好怎么给这种保密隔间做通风？”</span></p>
+<p class="dialog"><span style="color:#7499fb">“是啊，基本上所有人都远不达标。我们一直在说，这个档位的税得全面上调。”</span></p>
+<p class="dialog">格拉迪亚斯手表上的 CO<sub>2</sub> 读数刷新了，现在是918。</p>
+<p class="dialog"><span style="color:#00b9c3">“我觉得人们自己会想到办法的。”</span>另一位掌则人答道。<span style="color:#00b9c3">“问题只在于技术要足够开放、足够容易铺开。过去十年，我们每两年就把这类过滤器的成本压低一半。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“可我觉得我们得更用力推一把。”</span>格拉迪亚斯答道。</p>
+<p class="dialog"><span style="color:#be9b00">“室内空气质量税的评则现在是怎么规定的？”</span></p>
+<p class="dialog"><span style="color:#7499fb">“它是土地税的一个组成部分。空气质量完美就是零，有人的房间平均读数超过一千，每年就多收0.33%。装了过滤器或者紫外线灯，限值会放宽。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“才0.33%？就为了理论上完美和糟到极点之间的差别？”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“每年按土地价值的0.33%来收。对很多企业来说，这差不多是他们收入的六分之一。”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“土地税里要算的东西太多了。公共美学。无障碍——既包括对残障人士友好，<em>也</em>包括让人能自由穿过你的地块、不被围栏挡在外面。盖楼占地块的比例。底层活跃使用——不过这一项有争议，有人觉得干脆并进美学里算了。应急准备。消防安全。条目太多，实在塞不下。”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“再说了，维里迪亚人哪有那么爱生病。看看我们一个月前做的那份广泛聆听报告，室内空气传播疾病防治根本排不进维里迪亚人最关心的前十项。”</span></p>
+<p class="dialog"><span style="color:#7499fb">“底层活跃使用不只是美学问题，它还能提升步行友好度、缓解拥堵——”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“行吧，不过我觉得那些目标该直接去管。”</span></p>
+<p class="dialog"><span style="color:#7499fb">“总之，那不是我们这条评则该管的事。空气质量才是。你漏掉了尾部风险。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“什么尾部风险？”</span>格拉迪亚斯插话道。</p>
+<p class="dialog"><span style="color:#7499fb">“超级大流行病。比如北极人故意放出来的那种。”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“有任何证据表明他们在搞这类东西吗？”</span></p>
+<p class="dialog"><span style="color:#7499fb">“他们那个社会封闭得不行。能证明北极人知道维里迪亚还存在的证据，我们唯一拿得出来的，就是得没完没了地听埃菲里昂勋爵布道。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那么摆在桌上的方案有哪些？”</span></p>
+<p class="dialog"><span style="color:#7499fb">“把上限提高到0.66%。然后去说服各个资助机构——图谱资助、二次方资助、议会拨款——让他们多支持开源的——”</span></p>
+<p class="dialog">另一位掌则人插话：</p>
+<p class="dialog"><span style="color:#db8916">“二次方资助？那一轮现在乱成一团。有人放出一个程序，你下载到设备上，证明自己给某个研究社交媒体极化的项目捐过款——其实那个项目也不怎么样——就能拿到奖励。你捐10个齐普币，能拿回20个；算上封顶配捐，项目方到手100个。参加的人很多。结果昨天蓝鲸有个内部人士爆料，说那些事全是他们干的。”</span></p>
+<p class="dialog"><span style="color:#7499fb">“蓝鲸？可他们图什么？那个项目又不是他们控制的。”</span></p>
+<p class="dialog"><span style="color:#db8916">“钱流到哪儿都无所谓。哪怕那项目是雇伊普塔克的人来挖坑再填回去，他们照样会干。他们的目标就是把所有跟开放平台沾边的项目的资金抽干。把开放生态饿死，封闭生态自然就赢了。”</span></p>
+<p class="dialog"><span style="color:#7499fb">“行，那就还是走图谱资助。通过我们的渠道向图谱资助那边建议，让他们多支持开源的空气过滤、清洁、污水扫描之类的技术，全都算上。”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“连污水扫描也要？你还想再把大家的隐私砸得更碎？万一北极人黑进来，把那些数据全拿走，他们就能查出谁住在哪儿——哪怕人搬了家也一样——还能查出每个人什么时候健康、什么时候生病？”</span></p>
+<p class="dialog"><span style="color:#7499fb">“不是你自己一直说，没有证据表明北极人真在搞那种疯狂勾当吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“难道没有某种密码学办法，能让我们从扫描结果里拿到需要的数据，又不必把原始明文数据集中收集到任何一个地方？”</span></p>
+<p class="dialog"><span style="color:#00b9c3">“行啊，你要是能找到个天才把这种办法想出来，记得告诉我们。”</span></p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯下了巴士，拉了拉隐私袍前襟面罩的系带。脸还遮着，但横过鼻梁的那条束带不再勒得那么紧了。病毒防护弱了一些——巴士里那种异常拥挤的室内空间已经离开，他也用不着防得那么严——不过舒服多了，呼吸也顺畅。他动身走回家。</p>
+<p class="dialog">他路过几个月前撞见费布里克的那家餐厅。餐厅外墙上有一则广告。广告左边是海德菲尔的吉祥物，穿着品牌经典的黄绿配色，怀里抱着一个小孩，用后背挡住一股泥浆似的绿色水流。广告右边写着：</p>
+<blockquote><p>重水，其氢原子被带中子的同位素氘所取代，已知在大剂量下具有毒性。</p><p>我们研究过竞争对手的水，发现其中平均含百万分之145的重水。</p><p>我们的水取自维里迪亚新鲜的北方寒冰，勇敢地从距北极边境仅三十公里处开采而来，其中只含百万分之132的重水。</p><p>因此，我们的水比竞争对手的毒性低10%。只有我们在乎你的健康，没有别人。海德菲尔想治愈你、保护你。我们的竞争对手觉得你就该淹死在污泥里，死掉算了。</p><p>相信海德菲尔。今天就买海德菲尔。</p></blockquote>
+<p class="dialog">格拉迪亚斯笑了。他继续往前走。</p>
+<p class="dialog">忽然，有人从背后一把抱住他。</p>
+<p class="dialog">格拉迪亚斯转过身。</p>
+<p class="dialog"><span style="color:#be9b00">“塞拉！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“总算在你回家的路上堵到你了。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你后来这一天过得怎么样？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我把那篇写自由城城市经济的文章写完了。已经发到网上，你去看看。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“哦，我很期待。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“扬最近跟我讲了点八卦，说那边的人对北极越来越发怵，很多事都在变。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“维里迪亚人对北极这一整摊事怎么就这么……满不在乎？你有什么说法吗？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“大概是北极人在这里对大家的生活没什么实际影响吧？他们不过时不时发些蠢兮兮的布道，大家出于好奇看看听听。”</span></p>
+<p class="dialog">格拉迪亚斯闷哼了一声。</p>
+<p class="dialog"><span style="color:#be9b00">“就算在掌则人内部，这情形也很怪。年纪大一些的似乎明白出了问题。可新进来的……不是全部，但很多人觉得我们干脆别管？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“奇怪的是，自由城的那些大公司好像对这种……让人变蠢的东西更免疫。基本上只有他们那座城市在认真对待这个问题——除了红郡，还有一些城市通过共治、由红郡议会部分管理。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我觉得最要紧的是，新一批掌则人对掌舵会体系、二次方资助、图谱资助，还有政府到底能不能办成事，全都抱着怀疑。”</span></p>
+<p class="dialog">塞拉叹了口气。</p>
+<p class="dialog">他们继续往前走。几分钟后，两人到了家门口。格拉迪亚斯把手表贴上那个圆圈，门开了。他们走了进去。</p>
+<p class="dialog">塞拉打开了自己的手持终端。</p>
+<p class="dialog"><span style="color:#54a1f9">“泽国餐车一分钟后到。还是老样子吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，你怎么知道的？”</span></p>
+<p class="dialog">塞拉笑了。</p>
+<p class="dialog">塞拉点了几个按钮，下了单。</p>
+<p class="dialog">家门还没关上，塞拉就已经看见餐车从几百米外朝他们开来。两人就在门口等着。</p>
+<p class="dialog">塞拉出门，直接从餐车上取了餐。她走回屋里，随手把门关上。</p>
+<p class="dialog">她把食物放到桌上，立刻拆开。</p>
+<p class="dialog">两人坐下，打开餐盒，开始吃饭。</p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-10.html">上一章 · 第十章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-12.html">下一章 · 第十二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Seila, Daia and Vil were standing together in a large grass field, with many other families nearby.</p>
+<p class="dialog">From a distance, Daia caught sight of Gladias approaching. She waved at him. Gladias noticed, and with a smile on his face walked toward them more quickly.</p>
+<p class="dialog"><span style="color:#e58137">"Happy to see you here!"</span>, Daia exclaimed.</p>
+<p class="dialog"><span style="color:#be9b00">"Well I can't miss my son's first real Helisport game"</span>, Gladias answered.</p>
+<p class="dialog"><span style="color:#e58137">"So how have you been?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, lots of Order business. Can't talk about it publicly, you know. Going well though!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"How about you?"</span></p>
+<p class="dialog">Vil started to speak.</p>
+<p class="dialog"><span style="color:#a38af2">"Well, lots of documents for the lawsuit against Divergent. It's been taking up a big part of my time for the last two months."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Remind me, what happened there?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Ah sorry, I've been trying not to burden you guys with the details, I know you have so much on your plate already."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Come on, Vil, your life is important to us."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Well, remember about half a year ago I lost my job at Jump because they went bankrupt. A month later, another one of the employees reached out to me, and I learned from him what really happened. See, the official story had been-"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I remember this in the news. Jump was struggling, and as a last-ditch effort to save themselves, they made a risky bet on the financial markets, buying a derivative on property prices in a region that they were about to announce they would start serving. But it didn't work - not enough people cared, then they got unlucky and prices went down, so the whole thing collapsed."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Exactly. But here's what I learned. The only reason why Jump was able to make such a large bet on a niche market without insane slippage is that a hedge fund - Divergent - had taken the other side of the bet. And the primary owners of Divergent had quietly bought a majority share in Jump for very cheap."</span></p>
+<p class="dialog"><span style="color:#a38af2">"If housing prices in that region had gone up, Jump would have gained, Divergent would have lost, for them it would have been a net zero. And if housing prices went down - which they did - Jump loses, and Divergent gains, also a net zero. But here's the asymmetry: if Jump loses - which they did - then Jump declares bankruptcy, and so they get out of paying end-of-year bonuses plus a year of severance for their employees. So they gave themselves a free option on our backs."</span></p>
+<p class="dialog"><span style="color:#a38af2">"When we found out about this, we sued - all the employees together sued, as a class action. It's been tough; Divergent even managed to intimidate some media sites into not covering it. But I feel like so far the judges are seeing through their tricks. So I'm optimistic."</span></p>
+<p class="dialog">They heard a loud whistle, and turned to face the direction that the sound came from.</p>
+<p class="dialog">It was the instructor. A large truck had been moved into the center of the grass field.</p>
+<p class="dialog"><span style="color:#93ab2c">"Helisport game starting in five minutes!"</span>, the instructor yelled.</p>
+<p class="dialog">The instructor pressed a button, and the back door of the truck began to open gently, tilting backward on its bottom hinge. After a few ticks, it had turned into a ramp.</p>
+<p class="dialog">Some personal copters, simple chairs with rotor blades on top surrounded by shielding, automatically rolled out of the truck.</p>
+<p class="dialog">Some children, around ten to twelve years old, ran toward the truck, half wearing yellow shirts and the other half wearing purple shirts. Among those wearing yellow shirts was Zven. They grabbed their copters and began strapping into them.</p>
+<p class="dialog">The instructor walked into the truck, and soon came out with a much smaller box. He opened the box, and four bright red drones, shaped like balls a few centimeters wide with soft feather-like rotors on top, sprang out and flew into the sky.</p>
+<p class="dialog"><span style="color:#93ab2c">"Welcome to today's Helisport game"</span>, the instructor said. <span style="color:#93ab2c">"Today we're going to do a limited game, playing only with redballs. If you catch a redball, bring it back to me, and your team gets one point. First team to get to six points wins."</span></p>
+<p class="dialog">By this point all ten children had strapped into their personal copters, and the rotor blades were beginning to spin - just enough to overcome about three quarters of the earth's gravity. The kids ran around excitedly, and some jumped, reaching about two meters off the ground before gently gliding back down.</p>
+<p class="dialog"><span style="color:#93ab2c">"Everyone know what to do?"</span>, the instructor asked.</p>
+<p class="dialog">"Yes!", many kids shouted in unison.</p>
+<p class="dialog"><span style="color:#93ab2c">"Then we will begin the game in five ... four ... three ... two ... one ... blast off!"</span></p>
+<p class="dialog">The personal copters flew into the air.</p>
+<p class="dialog"><span style="color:#be9b00">"You know, I'm surprised they still do this in schools"</span>, Gladias said to Seila. <span style="color:#be9b00">"If this were invented today, they would definitely say it's too dangerous."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"It was only invented less than ten years ago."</span></p>
+<p class="dialog"><span style="color:#be9b00">"In Dzego."</span></p>
+<p class="dialog">Zven caught sight of a redball, and began flying toward it. A few moments after, two kids wearing purple shirts also saw the redball, and began to chase it right behind him.</p>
+<p class="dialog">The redball suddenly shifted direction to the left.</p>
+<p class="dialog">Zven and the other kids also turned left. Zven's copter's rotor shield bumped into the rotor shield of one of the other kids' copters, and the two bounced harmlessly off each other.</p>
+<p class="dialog">Zven aimed his copter to fly higher. He fell slightly behind the kid he had just bumped into, while the third kid flew forward, and was soon directly under him. The air sucked Zven down, and soon his feet bounced into the grid on top of the other copter's rotors.</p>
+<p class="dialog">Zven jumped off quickly, and he and the other kid both tumbled down a few meters before they stabilized and flew off in separate directions.</p>
+<p class="dialog"><span style="color:#be9b00">"The AI on these things is getting really good now"</span>, Gladias murmured.</p>
+<p class="dialog">The redball suddenly changed direction again, this time going upwards. Zven immediately set his rotor to full power and climbed upward. The kid he had just bumped into was still a few meters below him, and the other kid did not notice the redball's change of direction in time, and so Zven was ahead.</p>
+<p class="dialog">Zven saw the redball get closer, and then closer again. Now it was only one meter in front of him.</p>
+<p class="dialog">The redball suddenly turned off its rotors, and began to drop. Thinking quickly, Zven kicked the ball back up just as it dropped to the level of his feet, and moved his copter forward. He stretched out his hand, and caught the redball in his palm.</p>
+<p class="dialog">He then aimed the copter to fly toward the instructor. The rotor slowed down - though it did not stop completely. It sped back up when Zven's altitude was decreasing at the safe maximum of five meters per tick - the speed that you would hit the ground after a fall from a height of slightly under two meters. The instructor watched Zven land, and stretched out his hand to receive the redball that Zven handed over.</p>
+<p class="dialog"><span style="color:#93ab2c">"First catch of the game by Zven, first point for team yellow!"</span></p>
+<p class="dialog">He let the redball fly once again. It quickly shot forward, in the opposite direction from where Zven was standing.</p>
+<p class="dialog">Zven flew back up, and continued his search for more redballs.</p>
+<p class="dialog"><span style="color:#be9b00">"How are Hreda, Lily and Febric doing?"</span>, Gladias asked Daia. Seila heard the question, and turned her head toward them slightly to hear the answer.</p>
+<p class="dialog"><span style="color:#e58137">"Hreda is off in Northglade doing a math competition. We've been trying to get Lily more interested in art, though that hasn't been really successful so far."</span></p>
+<p class="dialog"><span style="color:#e58137">"I also talked to Zven for a bit and he showed me his homework. I was surprised. I saw the questions they were giving him for arithmetic, and they seemed just slightly ... less advanced than what Febric got at his age?"</span></p>
+<p class="dialog"><span style="color:#93ab2c">"Nice catch by Dommus!"</span>, the instructor shouted. <span style="color:#93ab2c">"And nice catch for Gale! Two points for team purple"</span></p>
+<p class="dialog">Seila joined into the conversation.</p>
+<p class="dialog"><span style="color:#54a1f9">"Well, Glad, you're a -"</span> she stopped herself, briefly remembering that it would be improper even to specify Keeper - <span style="color:#54a1f9">"an Order member now. Anything the Order can do to make Veridia's education better?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"You know the schools aren't Order business, the public ones are run by the education committee, staffed by parliament. Though there have been people thinking about trying to support more private ones, support them out of Graph Funding, figure out some rubrics to give them the right incentives."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Maybe you should try pushing for that in your Keeper meetings?"</span>, Seila replied, whispering into her watch as a substitute for a neck band. Better to just have this conversation privately than have to choose each word carefully to avoid giving out Gladias's position, she thought.</p>
+<p class="dialog">Delwart would be supportive, Gladias thought. Though he would be even more supportive of private schools with <em>no</em> rubric micro-nudging attached.</p>
+<p class="dialog"><span style="color:#93ab2c">"Another nice catch by Zven! Second point for team yellow."</span></p>
+<p class="dialog">Gladias and Seila's attention went back to the game. There were three groups of three kids each in the sky, each group chasing what they assumed must be a different redball. Zven flew up alone, and did not try to join any of the groups. Instead, he seemed to simply wander the sky, his eyes constantly watching the horizon to try to find where the fourth redball might be.</p>
+<p class="dialog">One of the kids tumbled out of the sky, though the rotor's AI automatically broke his fall. He hit the ground, and then a few ticks later stood back up and went back into the sky.</p>
+<p class="dialog">A minute later, a kid landed beside the instructor, and handed him a redball.</p>
+<p class="dialog"><span style="color:#93ab2c">"Another nice catch by Gale! Third point for team purple."</span></p>
+<p class="dialog">The redball flew back into the sky, and both Gale and the other two kids who were chasing the redball with him once again flew after it.</p>
+<p class="dialog">Two more minutes passed. Another kid landed beside the instructor.</p>
+<p class="dialog"><span style="color:#93ab2c">"Nice catch by Dela! Third point for team yellow."</span></p>
+<p class="dialog">One more minute later, two more kids landed at around the same time:</p>
+<p class="dialog"><span style="color:#93ab2c">"Nice catch by Plat! Fourth point for team yellow."</span></p>
+<p class="dialog"><span style="color:#93ab2c">"And a nice catch by Meny! Fourth point for team purple."</span></p>
+<p class="dialog">Zven continued his solitary quest to search for the fourth redball, which all the other kids seemed to have completely forgotten the existence of.</p>
+<p class="dialog"><span style="color:#93ab2c">"Nice catch by Egardo! Fifth point for team purple."</span></p>
+<p class="dialog"><span style="color:#93ab2c">"Another nice catch by Dela! Fifth point for team yellow."</span></p>
+<p class="dialog">He began to fly closer to the ground.</p>
+<p class="dialog">Gladias and Seila saw Gale shooting ahead of his two competitors, getting ready to catch the redball. It was only one meter in front of him.</p>
+<p class="dialog">Gale's hand stretched out. He prepared to grab hold of it.</p>
+<p class="dialog">Then, suddenly, another kid bumped into him, and he veered several meters to the right. That kid attempted to grab the redball instead, but it quickly flipped direction and flew backwards, right in between the two of them. Gale and the other kid both attempted to grab it with their hands as it passed by, but both missed.</p>
+<p class="dialog">Gale regained sight of the redball first, and quickly flew towards it. His two competitors soon followed, though they were at least ten meters behind.</p>
+<p class="dialog">Gale and the redball both gained altitude, and Gale began to get closer to the redball. Five meters. Four meters. Three meters.</p>
+<p class="dialog">Meanwhile, out of nowhere, Zven seemed to fall to the ground, the fall broken as usual by the copter's AI.</p>
+<p class="dialog">High in the sky, far above the other players, Gale raised his hand triumphantly, holding the redball inside a clenched fist.</p>
+<p class="dialog">Many in the audience cheered. Gale maneuvered around the other two students who were following him, and began to drop back down at the maximum speed of five meters per tick.</p>
+<p class="dialog">Suddenly, Gladias and Seila's eyes shifted toward Zven. He had gotten out of his copter, and was running toward the instructor.</p>
+<p class="dialog">When Gale was still about thirty meters in the air, Zven opened up his hand and gave the instructor the fourth redball, with broken rotors, that he had found on the ground.</p>
+<p class="dialog"><span style="color:#93ab2c">"And, nice catch by Zven. Sixth point for team yellow. Team yellow wins the game!"</span></p>
+<p class="dialog">Gladias sighed with relief.</p>
+<p class="dialog">Seila beamed with pride for Zven.</p>
+<p class="dialog"><span style="color:#54a1f9">"He took the path less traveled"</span>, she quietly recited, quoting an old Veridian author, <span style="color:#54a1f9">"and that blazed a trail for all."</span></p>
+<hr class="rule">
+<p class="dialog">Gladias slid the barrier open, entered the booth, and slid the barrier shut again.</p>
+<p class="dialog">Three other Keepers were already there. The other three, Gladias thought, must still be on their way.</p>
+<p class="dialog">This was the third circle of Keepers that Gladias was assigned to, and the topic was air quality. Here, his assigned number was two.</p>
+<p class="dialog">Gladias immediately took out his watch, and whispered into his neck band to check the air quality of the current room.</p>
+<div class="device-view narrow-device-view"><table><tr><td style="font-size:150%" colspan="2">Air</td></tr><tr><td style="font-size:150%">CO<sub>2</sub></td><td style="font-size:150%; color: yellow">906</td></tr><tr><td style="font-size:150%">PM2.5</td><td style="font-size:150%; color: #8f8">4.4</td></tr></table><table><tr><td style="font-size:150%" colspan="2">Devices</td></tr><tr><td style="font-size:150%; color: #8f8">Attested ✓</td><td style="font-size:150%; color: #8f8">16</td></tr><tr><td style="font-size:150%; color: #fc8">Unknown ?</td><td style="font-size:150%; color: #8f8">0</td></tr></table></div>
+<p class="dialog"><span style="color:#be9b00">"How are we already at 906 with just four people here?"</span>, he asked. <span style="color:#be9b00">"Filters are working great, but I guess they haven't yet figured out how to give these secure booths any ventilation?"</span></p>
+<p class="dialog"><span style="color:#7499fb">"Yeah, pretty much everyone is really behind standards. We've been saying that we really have to increase the taxes on this bracket across the board."</span></p>
+<p class="dialog">The CO<sub>2</sub> reading on Gladias's watch refreshed. It now showed 918.</p>
+<p class="dialog"><span style="color:#00b9c3">"I think people will figure this out on their own"</span>, another Keeper replied. <span style="color:#00b9c3">"It's just a matter of the technology being open and deployable enough. We've been making these filters twice as cheap every two years for the past decade."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well I feel like we have to push harder"</span>, Gladias replied.</p>
+<p class="dialog"><span style="color:#be9b00">"What do the indoor air quality tax rubrics say now?"</span></p>
+<p class="dialog"><span style="color:#7499fb">"It's a land tax component. Zero if your air quality is perfect, an extra third of a percent per year if the average occupied room reads worse than a thousand. The limits get adjusted up if you have filters or UVC."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Only a third of a percent? For the difference between theoretically perfect and abysmally bad?"</span></p>
+<p class="dialog"><span style="color:#00b9c3">"A third of a percent of the land value, per year. For many businesses, that's like a sixth of their revenue."</span></p>
+<p class="dialog"><span style="color:#00b9c3">"There's so many things that go into land tax. Public aesthetics. Accessibility - both the kind that's about being friendly to disabled people, <em>and</em> the kind that's about letting people walk across your land freely and not fencing it off. What percent of the lot you're building on. Ground-floor active use, though that one is controversial and some people think it should just be folded into aesthetics. Emergency preparedness. Fire safety. There's just not enough space for everything."</span></p>
+<p class="dialog"><span style="color:#00b9c3">"And come on, Veridians are not that sick. If you look at the broad listen report we ran a month ago, indoor airborne disease resistance is just not one of Veridians' top ten concerns."</span></p>
+<p class="dialog"><span style="color:#7499fb">"The ground-floor active use isn't just about aesthetics, it also contributes to walkability, reduces congestion-"</span></p>
+<p class="dialog"><span style="color:#00b9c3">"Fine, though I think we should just target those things directly."</span></p>
+<p class="dialog"><span style="color:#7499fb">"Anyway, that's not our rubric to decide. Air quality is. You're missing the tail risk."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What tail risk?"</span>, Gladias interjected.</p>
+<p class="dialog"><span style="color:#7499fb">"Super-pandemics. Like, deliberately released by the Arctics."</span></p>
+<p class="dialog"><span style="color:#00b9c3">"Is there any evidence of them working on anything like that?"</span></p>
+<p class="dialog"><span style="color:#7499fb">"They're a super opaque society, the only evidence we have that the Arctics even know Veridia exists is that we have to listen to Lord Ephelion giving his sermons all the time."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So what are the possible plans on the table?"</span></p>
+<p class="dialog"><span style="color:#7499fb">"Increase the maximum to two thirds of a percent. And then make the case to the funding organs - Graph Funding, Quadratic Funding, parliament allocations - that they should support more open-"</span></p>
+<p class="dialog">Another Keeper interjected:</p>
+<p class="dialog"><span style="color:#db8916">"Quadratic funding? That round is a mess right now. Someone released a program you can download onto your device and prove that you donated to a particular project researching social media polarization - actually not a very good one - and get a reward. You donate ten zipcoins and get back twenty, they get a hundred including the bounded matching. Lots of people participated. And then yesterday some insider at Bluewhale blew the whistle, apparently that was all their doing."</span></p>
+<p class="dialog"><span style="color:#7499fb">"Bluewhale? But why would they do that? They don't even control the project that was getting that funding."</span></p>
+<p class="dialog"><span style="color:#db8916">"It doesn't matter where it goes, if it was hiring people from Iptak to come dig holes and then fill them back up again they would still have done it. Their goal is to drain funding from anything that interfaces with open platforms. Starve the open ecosystem, the closed one wins by default."</span></p>
+<p class="dialog"><span style="color:#7499fb">"Fine, we'll stick to Graph Funding. Go through our channels to suggest to the Graph Funding people that they support more open source tech for air filtering, cleaning, wastewater scanning, all of it."</span></p>
+<p class="dialog"><span style="color:#00b9c3">"Wastewater scanning too? You want to break everyone's privacy even more? What if the Arctics hack in and take all that data, and then they'll find out who lives where even if they move homes, and when each person is healthy or sick?"</span></p>
+<p class="dialog"><span style="color:#7499fb">"I thought you were the one who keeps saying there's no evidence the Arctics are actually doing those kinds of crazy things?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Isn't there some cryptographic way to get the data we want out of the scans, without ever collecting the data itself in cleartext in any one place?"</span></p>
+<p class="dialog"><span style="color:#00b9c3">"Well, if you can find a genius who can figure out something like that, let us know."</span></p>
+<hr class="rule">
+<p class="dialog">Gladias got off the autobus, and pulled on the strap on his privacy robe's front face covering. His face was still covered, but the belt between the areas above and below his nose was now no longer tight. Less virus protection - outside the unusually crowded indoor space that was the autobus, he no longer needed it - but more comfortable and easier to breathe. He began to walk back home.</p>
+<p class="dialog">He passed by the same restaurant where he had bumped into Febric months earlier. On the restaurant's outer wall, he saw an advertisement. On the left side of the advertisement, there was a Hydrafill mascot, clothed in Hydrafill's classic yellow and green colors, hugging a small child, and using his back to shield the child from a jet of sludge-like green-colored water. On the right side of the advertisement, there was the text:</p>
+<blockquote><p>Heavy water, with its atoms of hydrogen replaced by the neutron-bearing isotope deuterium, is known to be toxic in large doses.</p><p>We studied our competitors' water, and found that on average, it contains 145 parts per million heavy water.</p><p>Our water comes from fresh Veridian NORTHERN ICE, bravely extracted only thirty kilometers away from the Arctic border, and it contains 132 parts per million heavy water.</p><p>Hence, our water is TEN PERCENT LESS TOXIC than our competitors. Only WE care about your health. Nobody else does. Hydrafill wants to heal and protect you. Our competitors think you deserve to drown in sludge and die.</p><p>Trust Hydrafill. Buy Hydrafill today.</p></blockquote>
+<p class="dialog">Gladias smiled. He kept walking.</p>
+<p class="dialog">Suddenly, someone grabbed and hugged him from behind.</p>
+<p class="dialog">Gladias turned around.</p>
+<p class="dialog"><span style="color:#be9b00">"Seila!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Finally caught you on your way home."</span></p>
+<p class="dialog"><span style="color:#be9b00">"How was the rest of your day?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Finished up my post on urban economics in Freetown. It's online, you should go see it."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Ooh, I'm excited."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Jahn gave me some gossip recently, about how a lot of things are changing now that people there are getting more spooked about the Arctics."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Do you have any theories about why people in Veridia seem so... nonchalant about the whole Arctic situation?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I guess the Arctics don't really affect people's lives here much? They just publish their stupid sermons from time to time and people watch and listen out of curiosity."</span></p>
+<p class="dialog">Gladias groaned.</p>
+<p class="dialog"><span style="color:#be9b00">"Even inside the Keepers, the situation is so strange. The older ones seem to understand there's a problem. But the newer ones ... not all, but many of them think we should just not care?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What's weird is that the corporates in Freetown seem more resistant to ... whatever is causing that stupidity. They're basically the only city taking the problem seriously - except for Redshire, and the cities partially run by Redshire's parliament through co-governance."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I guess more than anything, the newer Keepers seem suspicious of Steering and Quadratic Funding and Graph Funding and government being able to do much of anything in general."</span></p>
+<p class="dialog">Seila sighed.</p>
+<p class="dialog">They continued walking. After a few minutes, they arrived at the door to their house. Gladias put his watch against the circle, and the door opened. They walked in.</p>
+<p class="dialog">Seila opened up her hand device.</p>
+<p class="dialog"><span style="color:#54a1f9">"Dzego food truck in one minute. The usual I assume?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yep, how did you know?"</span></p>
+<p class="dialog">Seila laughed.</p>
+<p class="dialog">Seila clicked a few buttons, and ordered.</p>
+<p class="dialog">The door to the house was not yet closed, and Seila could already see the food truck coming towards them from a few hundred meters away. They both waited for the food truck to arrive.</p>
+<p class="dialog">Seila went out, and picked up the food directly from the food truck. She walked back into the house, and closed the door behind her.</p>
+<p class="dialog">She put the food on the table, and immediately unpacked it.</p>
+<p class="dialog">They both sat down, opened their food boxes, and began to eat.</p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-10.html">上一章 · 第十章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-12.html">下一章 · 第十二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第十一章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

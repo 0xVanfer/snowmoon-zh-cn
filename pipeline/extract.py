@@ -46,6 +46,9 @@ LEAF_ROLES = {
 
 CONLANG_FONT_RE = re.compile(r"TeX Gyre Chorus", re.I)
 CONLANG_TEXT_RE = re.compile(r"^[a-z][a-z\s&nbsp;]*$")
+# 布局容器：flex/grid 的子元素各自是独立布局项，绝不能把子元素拍平成一个文本节点
+# （典型：投票/拖动条的 `display:flex; justify-content:space-between` 刻度行）。
+LAYOUT_RE = re.compile(r"display\s*:\s*(?:flex|grid)|justify-content", re.I)
 
 # HTMLParser 把标签/属性名统一转小写；SVG 是 XML，必须还原大小写，否则 viewBox / clipPath 失效。
 SVG_TAG_CASE = {
@@ -173,6 +176,24 @@ class Extractor:
         self.segs.append({"id": sid, "role": role, "text": markup, "locked": locked, "note": note})
         return f"{{{{S:{sid}}}}}"
 
+    def seg_in(self, role: str, markup: str, ctx: list | None,
+               locked: bool = False, note: str = "") -> str:
+        """在布局容器内部创建片段。
+
+        ctx = [已用数量, 基准 id]。容器内的第一个片段占用一个正常的自增序号作为基准 id，
+        第 2..n 个片段用 `基准id#k`；容器外的片段编号完全不受影响，
+        已有译文的 id 不会漂移。基准 id 在第一个片段出现时才占用，空容器不占号。
+        """
+        if ctx is None:
+            return self.new_seg(role, markup, locked=locked, note=note)
+        if ctx[1] is None:
+            self.sn += 1
+            ctx[1] = f"{self.pad}-s{self.sn:04d}"
+        ctx[0] += 1
+        sid = ctx[1] if ctx[0] == 1 else f"{ctx[1]}#{ctx[0]}"
+        self.segs.append({"id": sid, "role": role, "text": markup, "locked": locked, "note": note})
+        return f"{{{{S:{sid}}}}}"
+
     def new_block_id(self) -> str:
         self.bn += 1
         return f"{self.pad}-b{self.bn:04d}"
@@ -222,14 +243,21 @@ class Extractor:
         return False
 
     # ---------- 结构 ----------
-    def render(self, node: Node, segs_here: list[str]) -> str:
-        """把一个结构节点渲染成骨架 HTML，叶子容器转成片段。"""
+    def render(self, node: Node, segs_here: list[str], ctx: list | None = None) -> str:
+        """把一个结构节点渲染成骨架 HTML，叶子容器转成片段。
+
+        ctx 非空表示当前位于某个布局容器（flex/grid）内部，片段用子编号。
+        """
         if node.tag in VOID:
             return f"<{node.tag}{attr_str(node.attrs)}>" if node.tag != "br" else "<br/>"
         if node.tag in ("script", "style", "nav"):
             return ""
         if node.tag in ("input",):
             return f"<input{attr_str({k: v for k, v in node.attrs.items() if k in ('type', 'style')})}>"
+        # 布局容器（flex/grid）：子元素必须逐个保留，否则 space-between 之类会失效
+        if not has_block_child(node) and LAYOUT_RE.search(
+                node.attrs.get("style", "") + " " + node.attrs.get("class", "")):
+            return self.render_layout_items(node, segs_here, [0, None])
         # 叶子容器 -> 单片段
         if not has_block_child(node) and node.tag in LEAF_ROLES or (
             not has_block_child(node) and node.tag == "div"
@@ -240,8 +268,8 @@ class Extractor:
             roles = LEAF_ROLES.get(node.tag)
             role = roles or ("div" if "dz-card" in node.cls() else "div")
             locked = self.is_locked(node)
-            seg = self.new_seg(role, markup, locked=locked,
-                               note="conlang" if locked else "")
+            seg = self.seg_in(role, markup, ctx, locked=locked,
+                              note="conlang" if locked else "")
             segs_here.append(seg)
             return f"<{node.tag}{attr_str(self.out_attrs(node))}>{seg}</{node.tag}>"
         # 结构节点：递归
@@ -250,16 +278,49 @@ class Extractor:
             if isinstance(c, str):
                 t = c.strip()
                 if t:
-                    seg = self.new_seg("div", esc_text(re.sub(r"\s+", " ", t)))
+                    seg = self.seg_in("div", esc_text(re.sub(r"\s+", " ", t)), ctx)
                     segs_here.append(seg)
                     inner.append(seg)
             else:
-                inner.append(self.render(c, segs_here))
+                inner.append(self.render(c, segs_here, ctx))
         body = "".join(x for x in inner if x)
         if body == "":
             return ""
         if node.tag == "br":
             return "<br/>"
+        return f"<{node.tag}{attr_str(self.out_attrs(node))}>{body}</{node.tag}>"
+
+    def render_layout_items(self, node: Node, segs_here: list[str], ctx: list) -> str:
+        """渲染布局容器的直接子元素：每个子元素保持为独立元素（独立布局项），
+        其内部文字用受限 mini-markup 表示，成为一个片段。"""
+        parts: list[str] = []
+        for c in node.children:
+            if isinstance(c, str):
+                if c.strip() == "":
+                    # 原文元素之间有空白；flex 会忽略它，但 Markdown 等非 flex 场景需要它分隔
+                    parts.append(" ")
+                    continue
+                seg = self.seg_in("div", esc_text(re.sub(r"\s+", " ", c)).strip(), ctx)
+                segs_here.append(seg)
+                parts.append(seg)
+                continue
+            if c.tag in ("script", "style", "nav"):
+                continue
+            if c.tag in VOID or has_block_child(c):
+                parts.append(self.render(c, segs_here, ctx))
+                continue
+            inner = self.inline_markup(c)
+            attrs = attr_str(self.out_attrs(c))
+            if inner == "":
+                parts.append(f"<{c.tag}{attrs}></{c.tag}>")  # 空项也要保留，否则项数不对
+                continue
+            locked = self.is_locked(c)
+            seg = self.seg_in("div", inner, ctx, locked=locked, note="conlang" if locked else "")
+            segs_here.append(seg)
+            parts.append(f"<{c.tag}{attrs}>{seg}</{c.tag}>")
+        body = "".join(p for p in parts if p)
+        if body == "":
+            return ""
         return f"<{node.tag}{attr_str(self.out_attrs(node))}>{body}</{node.tag}>"
 
     @staticmethod

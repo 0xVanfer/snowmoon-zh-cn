@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第一章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第一章 · Chapter 1 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="../toc.html">
+  <link rel="next" href="chapter-02.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="1">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第一章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第一章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 1</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年雪月3日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Snowmoon 3</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">格拉迪亚斯沿着一条步道往前走，两侧高树参天。树后是一排排大块石砖砌成的房屋，中世纪风格，却干净得不像古迹——不见杂物，地面无灰，也没有真正的中世纪建筑历经千年会有的那种斑驳破败。有几栋房子挂着小小的招牌，兜售衣服、鲜花或吃食。每一栋都像是毫无缝隙地融进了周围零落的树叶、草木之间。</p>
+<p class="dialog">他环顾四周，吸了一口气，停下脚步享受了片刻。草木繁密，四下安静，他几乎忘了自己正身处维里迪亚首都梅尔丹的卡利马尔区。</p>
+<p class="dialog">忽然，一架小无人机从他头顶飞过。格拉迪亚斯下意识看了一眼手表，几乎同时，一个绿色的对勾亮了起来。还没等他完全反应过来，手表已经跑完一轮零知识认证协议，并收到一份密码学认证：这架无人机是玩具，它的导航算法带有一道安全限制，未经许可，绝不会靠人近于5分米。手表只知道这架无人机不构成威胁——别的什么都不知道。</p>
+<p class="dialog">无人机飞走了，继续沿着一条向左岔开的人行道上方飞行。有那么一瞬间，格拉迪亚斯瞥见了它的模样：一个小圆球，三面装着羽毛似的旋翼。而紧接着，一个小男孩跳起来，在它还在半空时一把抓住。</p>
+<p class="dialog"><span style="color:#ed756b">“我得五分！”</span>男孩兴奋地喊。</p>
+<p class="dialog">格拉迪亚斯把心思收回来，继续安静地打量四周。刚才接住圆球的男孩来自一个有4个孩子的家庭，较小的两个各骑着一辆三轮车。</p>
+<p class="dialog">在另一条向右岔开的人行道上，格拉迪亚斯看见一位老奶奶带着个小孩。两人走近一张长椅、像是要停下时，原本坐在椅上的夫妻先站了起来让座。老奶奶道了谢，带着孩子坐下。</p>
+<p class="dialog">而这一路上，一直有个音频节目在他耳边响着。那是运行在格拉迪亚斯手持终端上的本地 AI“翡翠”，正在讲解空气传播病毒的细微机理，以及如何估算在疫情中改动一栋楼的通风或密度会怎样影响全市总病例数。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯往前走，房屋渐渐让位给浓密的绿色灌木。灌木一过，步道开始缓缓上行，随后既平顺又突然地变成一座空中步道，横跨在一条繁忙道路的上方；他脚下驶过许多轿车、巴士和几辆无人配送车。一阵凉风吹在脸上。</p>
+<p class="dialog"><span style="color:#be9b00">“暂停，我想看看风景”</span>，格拉迪亚斯对翡翠说。他习惯性地把这句话说得极轻，只有喉部肌肉在动，嘴唇没发出一点声音。紧裹在他脖子上的丝质颈带把这句话完整地收了下来。</p>
+<p class="dialog">他在空中步道中段停下，向左转身，望向远处。脚下那条繁忙的道路向前延伸约2公里，然后向右拐去。再往远处，是一座覆满树木的山。山坡下半部有几处公寓楼高高探出树冠，约15层，外形装饰得像放大的中世纪城堡塔楼，只是侧面的窗户多得多。</p>
+<p class="dialog">格拉迪亚斯又把脸转向左边，最后看了一眼那片自然。维里迪亚的自然真美，他想。随后他转向右边——道路穿过空中步道继续向前，那里的建筑密度高得多。今天，他的工作是对人的世界发表意见。</p>
+<p class="dialog">格拉迪亚斯重新迈步，走下空中步道。左侧是一排5层公寓楼，中间夹着步道和卖各种货品的小店。步道和人行道都被高大的绿树遮住了阳光。</p>
+<p class="dialog">右侧立着一道高大的隔音墙，漆成绿蓝两色，藏在又一排更密的高树后面，几乎看不见。</p>
+<p class="dialog">沿着隔音墙走了没多远，他的手持终端震了一下。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>表决对象：巴德拉街1103号</th></tr></thead><tbody><tr><td>翡翠 AI 摘要：5层公寓楼，蓝灰色</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span>-5</span> <span>0</span> <span>5</span> </div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
+<p class="dialog">格拉迪亚斯立刻明白要做什么。作为维里迪亚公民，他被密码学抽签随机选中，要对自己有多喜欢这栋建筑投上一票。</p>
+<p class="dialog">他记得，少年时的维里迪亚公民课讲过：投票的目的是确定每栋建筑要缴的公共美学税——它是综合土地税的主要组成部分。开发商对此极为在意。在维里迪亚，把楼盖得让公众喜欢，不只是炫技的机会——它还能赚钱。</p>
+<p class="dialog">格拉迪亚斯打量着那栋楼，蓝灰色的巴德拉街1103号。它看着还算合群，和同一条街上的其他楼差别不大。风格现代，但耐看，完全不像他在自由城这类地方的照片里见惯的那种毫无生气的方形混凝土楼。楼两侧都有步道，步道上方都覆着树——和附近其他楼一样。</p>
+<p class="dialog">这可不容易，格拉迪亚斯想。为了找点参照，他挥了一下手持终端，调出附近<em>其他</em>几栋楼缴的土地税率。先看该由他投票的那栋。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th colspan="2">巴德拉街1103号</th></tr></thead><tbody><tr><td>基础土地税：</td><td>1.00%</td></tr><tr><td>美学税：</td><td>0.18%</td></tr><tr><td>其他评则税：</td><td>0.33%</td></tr><tr><td>土地税合计：</td><td>1.51%</td></tr></tbody></table></div>
+<p class="dialog">接着他转向左边，用手持终端对准最先找到的几栋确实不一样的建筑放大：一栋的风格是木石混搭，一栋屋顶上有花园，还有第三栋更小却更显贵气，外形像八面体，地块四周绕着一圈布置精巧的方形花园，每个角上都立着一棵红叶满枝的枫树。三栋缴的美学税都明显低于巴德拉街1103号，其中一栋甚至略微为负。</p>
+<p class="dialog">他又放大远处一栋几乎看不清的楼。这么远的距离，街道两旁密密的树很巧妙地把楼挡了起来，但手持终端还是轻松锁定，下载了特写图和各项税率。</p>
+<p class="dialog">那栋楼是一家航空公司的总部。公司灵机一动，把办公楼盖成了飞机的样子。建筑本身很有冲击力，他想，可要是每天早上都得从它旁边走过，他肯定要讨点补偿。</p>
+<p class="dialog">他查了查它的税。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th colspan="2">清丘大道980号</th></tr></thead><tbody><tr><td>基础土地税：</td><td>1.00%</td></tr><tr><td>美学税：</td><td>0.59%</td></tr><tr><td>其他评则税：</td><td>0.30%</td></tr><tr><td>土地税合计：</td><td>1.89%</td></tr></tbody></table></div>
+<p class="dialog">活该，格拉迪亚斯想。不过他倒也乐见维里迪亚的制度让口味与他如此不同的人也能自我表达，哪怕得为此付出代价。</p>
+<p class="dialog">格拉迪亚斯的思绪回到正事上。他要投的是眼前这栋蓝灰色建筑。他又看了一眼界面。</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>表决对象：巴德拉街1103号</th></tr></thead><tbody><tr><td>翡翠 AI 摘要：5层公寓楼，蓝灰色</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span>-5</span> <span>0</span> <span>5</span> </div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
+<p class="dialog">他记起，这是二次方投票。他所有的票都会被自动平移、拉伸或压缩，使全部票的平均值为零、票数平方的平均值为一。所以给每一项都投赞成、每一项都投反对，或者每一项都投到极端，都没有意义。最好的做法——<em>数学上可证的最好</em>——是不只按你觉得对的<em>方向</em>投，还要按你觉得合适的<em>力度</em>投，不多不少。</p>
+<p class="dialog">格拉迪亚斯犹豫起来。各栋楼拿到的美学税看上去……已经挺公道了？也许那栋飞机楼被罚得有点<em>太</em>重。允许这样一栋楼立着，不只是尊重人们在自己土地上自作主张的自由，也给梅尔丹带来了真正的多样性。何况那片本来就是商务区，有一栋也无妨。</p>
+<p class="dialog">接着他提醒自己：他投的不是那栋飞机楼，而是巴德拉街1103号。</p>
+<p class="dialog">对，他想。该怎么投？赞成还是反对？</p>
+<p class="dialog">想了一会儿，他最终凭直觉定了下来，把滑块只往右推了一点点。</p>
+<p class="dialog">他按下“选择”。</p>
+<p class="dialog">这不过是热身，他想——他身为维里迪亚公民，碰巧在即将以掌舵会见习官身份投出更重要的那一票之前，被随机抽中投了一次美学票。那一票很难投。而他马上要投的这一票会难得多——而且在那里，系统是要记分的。</p>
+<p class="dialog">他继续往前走，一分钟后到了隔音墙上的一处缺口：他要去的那场演唱会的入口。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯把手持终端凑近入口闸门上一个泛着绿光的圆圈。他稍等片刻，手持终端生成了一份密码学证明，闸门里嵌着的机器随即完成了验证。</p>
+<p class="dialog"><span style="color:#00bc96">“已验证，欢迎”</span>，机器说。</p>
+<p class="dialog">闸门只知道有人持有效且未使用过的凭证到来——仅此而已。</p>
+<p class="dialog">格拉迪亚斯穿过闸门，朝演唱会主场地走去。</p>
+<p class="dialog">他看见少数观众穿着和他一样的维里迪亚标志性隐私袍。那是一种宽松的深紫色长袍，从罩住头的兜帽一直盖到脚踝。脚踝以下，穿隐私袍的人一律配同款深紫色的鞋。</p>
+<p class="dialog">其他观众大多穿着简单的 T 恤，要么纯色，要么印着他们喜欢乐队的口号。</p>
+<p class="dialog">有些人目标明确、步子利落，跟格拉迪亚斯一样。有人在跳舞。有人在聊天。还有人平静地往前走，只想被动地享受演出。</p>
+<p class="dialog">格拉迪亚斯走进一片开阔的空地，四周是高高的隔音墙——就是他先前见过的那道墙，只不过这回是从里侧看。</p>
+<p class="dialog">噪声越来越响，格拉迪亚斯挤过人群。他拉紧隐私袍面罩前方的一根带子，把那条横在鼻梁上、隔开鼻子上下两边的密封带勒紧。几分钟前听的那档空气传播病毒节目，已经让他留了心，注意别生病。</p>
+<p class="dialog">他很快到了舞台一带，清楚地听见了恐结乐队主唱粗粝的嗓音。</p>
+<blockquote>我们怀着满腔怒火迎向他们<p>用闪亮的钢铁与飞镖剥下他们的皮肉</p></blockquote>
+<p class="dialog">格拉迪亚斯又掏出了手持终端。</p>
+<p class="dialog">来这场演唱会的大多数人，是为了享受音乐、和朋友聚聚。对格拉迪亚斯来说，这绝对不是他<em>理想</em>的娱乐——他偏爱柔和温吞得多的音乐——但他也谈不上<em>讨厌</em>。最主要的是，他以人类学的眼光觉得这场演唱会有意思：借此探看那些他平时几乎不会打交道的人的趣味与情绪。</p>
+<p class="dialog">但说到底，格拉迪亚斯来这场演唱会另有目的。他点开手持终端上的评则：</p>
+<div class="device-view wide-device-view"><h3>基本摘要</h3><table><thead><tr><th>档</th><th>标准</th><th>税率</th></tr></thead><tbody><tr><td>1</td><td><ul><li>内容强烈提倡以下两项或更多：个人成长、科学与技术教育、善待他人、健康的家庭关系、良好的冲突处理方式、公民责任</li><li>不满足第4、5档的任何标准</li></ul></td><td>0%</td></tr><tr><td>2</td><td><ul><li>内容较弱地提倡以下一项或更多：个人成长、科学与技术教育、善待他人、健康的家庭关系、良好的冲突处理方式、公民责任</li><li>不满足第4、5档的任何标准</li></ul></td><td>10%</td></tr><tr><td>3</td><td><ul><li>内容不满足第4、5档的任何标准</li></ul></td><td>20%</td></tr><tr><td>4</td><td><ul><li>内容较弱地提倡以下一项或更多：暴力、违法行为、使用不推荐物质、赌博或高风险投资、过度炫富、糟糕的冲突处理方式、宗教或族群仇恨</li></ul></td><td>30%</td></tr><tr><td>5</td><td><ul><li>内容强烈提倡以下两项或更多：暴力、违法行为、使用不推荐物质、赌博或高风险投资、过度炫富、糟糕的冲突处理方式、宗教或族群仇恨</li></ul></td><td>40%</td></tr></tbody></table><div><b>来自维里迪亚国家级二次方资助与图谱资助的收益，税率提高至2.5倍</b></div><br/><div><button>查看相关先例</button><button>返回</button></div></div>
+<p class="dialog">在维里迪亚，真正被严格<em>禁止</em>的事极少。恐结要是愿意，完全可以让所有歌翻来覆去地喊“北极皇帝万岁”和“但愿所有政府官员都痛苦地被杀”，也不会被封杀或抓去坐牢。但维里迪亚<em>确实</em>有的，是一整套繁复的税收与补贴体系，由掌舵会这个与政府有关联却去中心化的集体维护。</p>
+<p class="dialog">这个集体里，掌则人负责就税则评则投票，决定各项税目怎么定。另一部分是监审官，负责审计一家家企业，每次审计都给某家企业在某条评则上定一个位置。格拉迪亚斯是见习官：正在受训的掌舵会成员。</p>
+<p class="dialog">而今天，格拉迪亚斯的任务是评定恐结在“公开演出的社会影响”这条税则评则上的位置。</p>
+<blockquote>城市在夜色中燃烧的浓烟<p>目之所及，我们不留一处可藏身</p></blockquote>
+<p class="dialog">格拉迪亚斯点下“查看相关先例”，翻了一遍。他按下侧面的一个按钮，右上角弹出一个小窗：“翡翠聆听模式已开启”。他没有说话，只是让翡翠听恐结唱歌。可听了5分钟，也只跳出寥寥几条相关先例。</p>
+<p class="dialog">格拉迪亚斯把模式切到“分析”，又让它听了5分钟。翡翠列出了一些听上去还算合理的结论，但格拉迪亚斯看得出它并不可靠。这类音乐的源数据太少，翡翠 AI 给不出好答案；而什么时候该听翡翠的、什么时候该多信自己的直觉，归根结底是他的分内事。这一次，靠直觉。</p>
+<p class="dialog">好吧，这歌确实很暴力。</p>
+<p class="dialog">可另一方面，一百多年的维里迪亚公民课传统把<em>鼓吹</em>暴力和仅仅为娱乐<em>展示</em>暴力区分开来。格拉迪亚斯看得见也听得见，观众在跳舞、欢呼、享受音乐。他们像是在找乐子，而不是被仇恨鼓动起来要对付谁。</p>
+<p class="dialog">但翻到<em>另一只手的另一面</em>，格拉迪亚斯知道，近来的监审官不像以前那么在意这条区分，他们似乎把更温和、更柔软的社会本身当成了目的。</p>
+<p class="dialog">格拉迪亚斯不太确定，这究竟是当初制定这条评则的掌则人的本意，还是对社会真正正确的选择。再过几个月，他就是正式监审官，能自主决定的余地更大。但现在，他决定的自由有限：系统在记分。</p>
+<p class="dialog">格拉迪亚斯低头看向手持终端。</p>
+<figure class="fig"><img src="../assets/images/chapter-01-fig-01.svg" alt="预测分数的变化及其与90分基准的对比。" title="预测分数的变化及其与90分基准的对比。" loading="lazy" decoding="async"></figure>
+<p class="dialog">见习官做出的审计，有10%会被监审官重做一遍。见习官的分数，反映的就是这部分投票与监审官判断吻合到什么程度。今天，格拉迪亚斯的分数是92。只要保持在90以上，他就能入选，成为监审官——或者，如果他改了主意，也可以当掌则人。但分数哪怕掉3分，他的职业生涯就至少要再搁置一年。</p>
+<p class="dialog">屏幕其余部分满是聊天消息。这项审计分配了9名见习官，分成3组，每组3人。同组另外两名成员意见不一。一个坚持第3档——算是不偏不倚的判断——另一个更严，要求第4档。</p>
+<p class="dialog">格拉迪亚斯叹了口气。另外两组大概也在这么想。简单起见，假设其他每个见习官都在第3档和第4档之间抛硬币，那么按二项式公式，另外6人也恰好平分的概率是六选三——20——除以64，约31%。可要是其他人的票<em>不是</em>抛硬币……唉，精确算太难了，但肯定更低，就当20%吧。也就是说，有20%到30%的概率，他这一票会明显影响恐结明年的税率。哦，太好了。真正的责任。</p>
+<p class="dialog">格拉迪亚斯又环视了一圈人群。第一首歌结束，他听到他们在欢呼。他忽然生出一股勇气。他愿意冒那10%的风险，让自己的预测分数受损。不再多想，他按下第3档。</p>
+<p class="dialog">有那么一瞬间，他为自己的决定感到骄傲。</p>
+<p class="dialog"><span style="color:#00b5d6">“喂，各位，这儿有个掌舵会的人！”</span>，他身后有人喊。</p>
+<hr class="rule">
+<p class="dialog">格拉迪亚斯浑身一僵。脑子还没跟上，眼睛已经扫过全场，找到了最近的出口。</p>
+<p class="dialog">他立刻明白发生了什么。掌舵会的安全，尤其是防收买、防影响，全靠成员的身份隐秘。掌舵会严禁成员泄露自己的任务。为了让成员把保密当回事，掌舵会刻意设计了一套游戏，让他们时刻绷紧神经。任何人都可以接入管理掌舵会运作的去中心化密码学网络，押上一小笔保证金，提交一个猜测：某个成员的任务是什么。猜中了，那名成员的薪水会被扣，猜中者分走一半作为奖励。</p>
+<p class="dialog">他还没来得及再作反应，附近另一个也穿隐私袍的男人突然拔腿，朝右侧的消防出口跑去。10米内的所有人纷纷掏出手持终端对准他录像。格拉迪亚斯也立刻明白了这边是怎么回事：诱饵。某个路人出于好心把注意力引到自己身上，给他争取脱身的机会。</p>
+<p class="dialog">格拉迪亚斯转过身，打算跑。可还没迈出一步，他就看见正前方一个高大魁梧的男人，手持终端直直对着他的脸。</p>
+<p class="dialog">格拉迪亚斯僵住了。起初他以为自己完了，脑子里飞快过了一遍各种可能，想找一条出路。最后，那个爱思考的哲学家格拉迪亚斯让了位，换成了另一个格拉迪亚斯——更有想象力，也更促狭，一个从初中课间之后就没再醒过的家伙。</p>
+<p class="dialog">格拉迪亚斯朝右边看去。</p>
+<p class="dialog"><span style="color:#be9b00">“等等，那是北极皇帝的新檄文吗？”</span>，他问。</p>
+<p class="dialog">男人一愣，顺着他的目光看过去。就在那一瞬，格拉迪亚斯从他手臂上夺过手持终端，猛地转身。</p>
+<p class="dialog"><span style="color:#be9b00">“删除上一个长时内所有音频、图片和视频。重启。”</span></p>
+<p class="dialog">他撒腿就跑。几个嘀嗒之后，终端应道，<span style="color:#e58137">“已删除4个文件”</span>，并短暂显示出几张照片和视频的缩略图。右下角那张正是格拉迪亚斯的脸。屏幕随即黑了。</p>
+<p class="dialog">格拉迪亚斯把手持终端抛向空中，指望追他的人更舍不得自己那台终端，先回头去捡，而不来追他。他继续往前跑。</p>
+<p class="dialog">鞋子拖慢了他的脚步——鞋跟很高，好让他的身高和其他穿袍者齐平；鞋底又故意做得凹凸不平，让步态毫无规律——尽管如此，格拉迪亚斯还是很快跑到了出口。人群正被别的骚动分了神，似乎没注意到他。</p>
+<p class="dialog">他出了演唱会场馆，跳上一辆本地巴士。</p>
+<hr class="rule">
+<p class="dialog">巴士上几乎空着。左边还有两个人，都穿着隐私袍；是男是女、是老是少，他看不出来。右边是个穿普通衣服、背着书包的少年，像是放学回家。</p>
+<p class="dialog">他的目光落到车厢内壁的广告上。</p>
+<p class="dialog">第一张广告是海报，提醒维里迪亚人终身学习的重要。海报左边是一间教室，一个孩子、一位中年妇女和一位更年长的男人一起读着课本；右边写着：</p>
+<blockquote><p>学校教育到20岁为止。教育是每个维里迪亚人一生的责任与义务。</p><p>今天就来了解由维里迪亚图谱资助补贴的各年龄段教育项目。</p></blockquote>
+<p class="dialog">第二张广告是海德菲尔，一个卖水和各类饮料的品牌。在维里迪亚掌舵税的温和推动下，过去20年里它已经几乎完全无糖。</p>
+<p class="dialog">广告左边是经典的黄绿配色海德菲尔瓶子，右边写着：</p>
+<blockquote><p>海德菲尔</p><p>我们的饮品自豪地不含2,000多种已知毒物和不推荐物质。</p></blockquote>
+<p class="dialog">格拉迪亚斯笑了。</p>
+<p class="dialog">他真希望当初被抽中投票的是海德菲尔这张广告，而不是那栋蓝灰色的楼。他清楚，投这一张，他会把滑块几乎一路推到最右边。</p>
+<p class="dialog">这世上需要多一点好玩的东西。</p>
+<hr class="rule">
+<p class="dialog">15分钟后，格拉迪亚斯下了巴士。沿街走了一小段，他到了家门口，推门进去。</p>
+<p class="dialog"><span style="color:#be9b00">“塞拉，你在家吗？”</span>他喊。</p>
+<p class="dialog"><span style="color:#54a1f9">“正写博客呢”</span>，她答道，从房间里出来迎他。</p>
+<p class="dialog"><span style="color:#54a1f9">“那，晚饭想吃什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“嗯，泽国餐车7分钟后到，再吃那个怎么样？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“行啊！你还是10号？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“对！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“好，那我这次要13号。”</span></p>
+<p class="dialog">塞拉掏出手持终端，开始下单。</p>
+<p class="dialog">楼梯上传来咚咚的脚步声。</p>
+<p class="dialog"><span style="color:#df74b1">“爸爸回来了！”</span>小儿子兹文喊着，一步三级地跳下楼梯，跑过来抱住格拉迪亚斯，他也顺着孩子回抱了一下。</p>
+<p class="dialog">年纪大些的少年费布里克下楼慢得多，一只手拿着手持终端，线缆连着他另一只手里更大的算力盒。</p>
+<p class="dialog"><span style="color:#be9b00">“我们订泽国餐车，你们想吃什么？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#ce9200">“4号！”</span>费布里克答道。</p>
+<p class="dialog"><span style="color:#df74b1">“5号，我赢啦！”</span>兹文喊。</p>
+<p class="dialog"><span style="color:#be9b00">“莉莉和赫雷达呢？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“莉莉在卫生间。赫雷达课后数论班，还得一个长时才回来。拜托，你又不是不知道她每次都点9号。”</span></p>
+<p class="dialog">卫生间的门开了，莉莉慢慢走出来，眼睛盯着地面。</p>
+<p class="dialog">塞拉叹了口气。<span style="color:#54a1f9">“怎么了？”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“历史考试60分。随便吧……”</span></p>
+<p class="dialog">塞拉转过身，搂住莉莉。<span style="color:#54a1f9">“不是每样都擅长也没关系的”</span>，她轻声说。</p>
+<p class="dialog">莉莉把脸扭得更开，避开塞拉和家人。她跑过去，坐到沙发上。</p>
+<p class="dialog">塞拉叹了口气，给莉莉点了8号。</p>
+<p class="dialog">塞拉点下确认。格拉迪亚斯、塞拉、兹文和费布里克围着桌子坐下等。</p>
+<p class="dialog">沙发上，莉莉掏出手持终端，专注地盯着屏幕飞快点击，全副心思都放在某个格拉迪亚斯和塞拉始终看不明白的游戏上。</p>
+<p class="dialog">这是格拉迪亚斯和塞拉与孩子们倒数第四顿晚饭——兹文和莉莉是他们亲生的，费布里克和赫雷达则来自他们的共同家庭，维尔叔叔和黛雅婶婶那边。再过4天，维尔叔叔和黛雅婶婶就要来接走4个孩子，照顾他们接下来的半年。</p>
+<p class="dialog">格拉迪亚斯叹了口气。他会想孩子们的。但同时，他也盼着这半年的自由。</p>
+<p class="dialog"><span style="color:#df74b1">“我们还要去维尔叔叔家住半年吗？”</span>兹文问。</p>
+<p class="dialog"><span style="color:#54a1f9">“当然啦！”</span>塞拉答道。</p>
+<p class="dialog"><span style="color:#df74b1">“耶，我最喜欢维尔叔叔了！”</span></p>
+<p class="dialog"><span style="color:#ce9200">“对我来说，维尔就是<em>爸爸</em>！”</span>费布里克特意强调。他又想了想。<span style="color:#ce9200">“格拉德叔叔、塞拉婶婶，我也爱你们！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我也爱你。”</span></p>
+<p class="dialog">门铃响了。格拉迪亚斯走到门口开门，接过一大袋餐盒。他把袋子放在桌上，取出印着各自号码的餐盒分给每个人。格拉迪亚斯、塞拉、费布里克和兹文都开始吃。</p>
+<p class="dialog"><span style="color:#be9b00">“维尔来了以后有什么打算？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#54a1f9">“我打算去自由城待一两个月，见见扬，说不定写篇关于联合城邦的博客。我读了太多关于他们共治的东西，现在真想看看那些说法落到地上究竟怎么连起来。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“不错！我打算去森林里多走几趟长路，跟本地 AI 一起深挖环境和生物评则。要当上监审官，我还得再做4次审计！”</span></p>
+<p class="dialog">格拉迪亚斯和塞拉继续吃。莉莉悄悄走到桌边，也打开了自己的餐盒。</p>
+<p class="dialog">就在这时，格拉迪亚斯的手持终端震了一下。他掏出来，跳出一条通知。</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">我在演唱会上看见你了，我知道你在掌舵会。</span></td><td>60259</td></tr></tbody></table></div>
+<p class="dialog">又过了几个嘀嗒，来了第二条：</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">别担心，我不打算举报你去领赏金。不过，我有个请求想请你帮忙。</span></td><td>60266</td></tr></tbody></table></div>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="../toc.html">返回目录</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-02.html">下一章 · 第二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Gladias was walking along a foot path, with tall trees towering on both sides. A series of houses made out of large stone bricks lay behind the trees on both sides, medieval in style but without any of the junk, dust on the ground, or other imperfections that a real medieval structure would have had a thousand years earlier. A few of the houses featured small signs advertising clothing, flowers or food available for sale. Each house seemed to meld seamlessly into the scattered leaves, plants and trees that surrounded it.</p>
+<p class="dialog">He looked around, breathed in and briefly stopped to enjoy the nature, dense enough and quiet enough that he almost forgot that he was in the middle of the Kalimar district of Meldan, the capital city of Veridia.</p>
+<p class="dialog">Suddenly, a small drone flew over his head. Gladias instinctively checked his watch. Almost immediately, a green checkmark lit up. Even before he could fully process what had happened, his watch had engaged in a zero-knowledge authentication protocol, and received a cryptographic attestation verifying that the drone was a toy, and its navigation algorithm had a safety override that would prevent it from coming within five decimeters of a human without permission. His watch had learned that the drone was not a threat - and nothing else.</p>
+<p class="dialog">The drone flew off, and continued above a sidewalk branching off to the left. For a moment, Gladias could briefly see its shape: a small ball, with feather-like rotors on three sides. And the very next moment, a young boy jumped up, and grabbed it with his hand while it was still in the sky.</p>
+<p class="dialog"><span style="color:#ed756b">"Five points for me!"</span>, the boy shouted excitedly.</p>
+<p class="dialog">Gladias let his attention wander back to peacefully observing his surroundings. The boy who had just caught the ball was part of a family with four children, the younger two each riding a tricycle.</p>
+<p class="dialog">On another sidewalk branching off to the right, Gladias could see a grandmother with a small child. As they approached a bench and seemed to stop, a couple that was already sitting on the bench pre-emptively stood up to offer their seats. The grandmother thanked them, and sat down with her child.</p>
+<p class="dialog">And playing into Gladias's ear this whole time, there was an audio program from Emerald, the local AI running from Gladias's hand device, explaining the nuances of airborne virus transmission and how to calculate how much a given change to a building's ventilation or density might affect total city-wide cases in an epidemic.</p>
+<hr class="rule">
+<p class="dialog">As Gladias walked forward, the houses soon gave way to thick green shrubbery. As soon as the shrubbery cleared, the foot path started gently curving upward. Smoothly, and suddenly, the path transitioned into a sky bridge above a busy road, with many cars and autobuses and a few autonomous delivery vehicles passing beneath him. A chilly breeze blew into his face.</p>
+<p class="dialog"><span style="color:#be9b00">"Pause, I want to enjoy the view"</span>, Gladias said to Emerald, out of habit whispering the sentence so softly that only his throat muscles moved and no sound at all left his lips. The silken cloth band tightly covering Gladias's neck picked it up perfectly.</p>
+<p class="dialog">He stopped in the middle of the sky bridge, turned to his left side, and looked forward. The busy road beneath him continued for about two kilometers, and then turned rightward. Beyond that point, he could see a mountain covered with trees. A few apartment buildings about fifteen storeys tall, decorated and shaped like over-sized medieval castle towers though with far more windows on the sides, poked up high above the trees in several places on the lower half of the mountain slope.</p>
+<p class="dialog">Gladias turned his face left once again, and took one last look at the natural world. The nature in Veridia is beautiful, he thought. He then turned his face to the right, where the road continued past the sky bridge with a much higher density of buildings. Today, his job was to offer opinions on the human world.</p>
+<p class="dialog">Gladias began to walk forward once more, and stepped off the sky bridge. On the left side, there was now a row of five-storey apartment buildings, interspersed with walking paths and small shops selling various kinds of goods. Both the walking paths and the sidewalk were protected from the sun by tall green trees.</p>
+<p class="dialog">On the right side, there was now a tall soundproof barrier, painted with green and blue colors, barely visible behind another even thicker row of tall trees.</p>
+<p class="dialog">Shortly after he began walking beside the soundproof barrier, his hand device buzzed.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>Vote on: Badra St #1103</th></tr></thead><tbody><tr><td>Emerald AI summary: Five-storey apartment building. Blue-grey colored.</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span>-5</span> <span>0</span> <span>5</span> </div></td></tr><tr><td><button>Select</button></td></tr></tbody></table></div>
+<p class="dialog">Gladias immediately knew what he was being asked to do. As a citizen of Veridia, he had been randomly selected by cryptographic sortition to vote on how much he liked the building.</p>
+<p class="dialog">The goal of the voting, Gladias remembered from the Veridian civics lessons of his youth, was to determine the public aesthetics tax - a major component of the composite land tax - that each building would have to pay. Developers paid a lot of attention to this. In Veridia, making buildings that the public found appealing was not just a chance to show off their craft - it was profitable.</p>
+<p class="dialog">Gladias looked at the building, the blue-grey colored Badra St #1103. The structure seemed in-character, not too different from the other buildings on the same street. The style was modern, but tasteful, nothing like the soulless rectangular concrete buildings that he was accustomed to seeing in pictures of places like Freetown. It had footpaths on both sides, and both footpaths were covered by trees - just like the other buildings nearby.</p>
+<p class="dialog">This was hard, Gladias realized. To get some inspiration, he waved his hand device, and took a look at the land tax rates that some of the <em>other</em> nearby buildings were paying. First, the building that he was supposed to vote on.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th colspan="2">Badra St #1103</th></tr></thead><tbody><tr><td>Base land tax:</td><td>1.00%</td></tr><tr><td>Aesthetics tax:</td><td>0.18%</td></tr><tr><td>Other rubric taxes:</td><td>0.33%</td></tr><tr><td>Total land tax:</td><td>1.51%</td></tr></tbody></table></div>
+<p class="dialog">He then turned to his left, and zoomed his hand device in to point at the first few genuinely different buildings he could find: one building made with an architectural style mixing wood and stone, another with a garden on the roof, and a third, smaller but more luxurious looking, that was shaped like an octahedron, and had a beautifully arranged square garden along the perimeter of the territory with a maple tree brimming with red leaves at each corner. All three paid aesthetics taxes significantly lower than Badra St #1103, and one was even slightly negative.</p>
+<p class="dialog">He then zoomed in to another building that he could barely make out in the distance. At this distance, the trees thickly lining the streets cleverly covered it up, but his hand device easily locked on to it and downloaded both a close-up image and the tax percentages.</p>
+<p class="dialog">The building itself was a corporate headquarters for an aviation company. The company had had the bright idea to make their office look like an aeroplane. It was impressive architecture, he thought, but he would certainly demand some compensation if he had to walk by it every morning.</p>
+<p class="dialog">He checked its taxes.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th colspan="2">Clearhill Ave #980</th></tr></thead><tbody><tr><td>Base land tax:</td><td>1.00%</td></tr><tr><td>Aesthetics tax:</td><td>0.59%</td></tr><tr><td>Other rubric taxes:</td><td>0.30%</td></tr><tr><td>Total land tax:</td><td>1.89%</td></tr></tbody></table></div>
+<p class="dialog">Well deserved, Gladias thought. Though he was glad that Veridia's institutions let people with tastes that were so different from his express themselves, even if they had to pay for the privilege.</p>
+<p class="dialog">Gladias's mind snapped back to his task. He was voting on the blue and grey building right in front of him. He took a look at the interface again.</p>
+<div class="device-view narrow-device-view"><table><thead><tr><th>Vote on: Badra St #1103</th></tr></thead><tbody><tr><td>Emerald AI summary: Five-storey apartment building. Blue-grey colored.</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span>-5</span> <span>0</span> <span>5</span> </div></td></tr><tr><td><button>Select</button></td></tr></tbody></table></div>
+<p class="dialog">This was quadratic voting, he remembered. All his votes would be automatically shifted, stretched or squeezed so that the total average of the votes becomes zero, and the average of the squares of the votes becomes one. So there was no point in voting up on everything, down on everything, or overly extreme on everything. It was best, <em>mathematically provably best</em>, to vote not just the <em>direction</em> you felt right, but also with the <em>strength</em> you felt right - not more, not less.</p>
+<p class="dialog">Gladias's mind struggled. The aesthetics taxes given to each building seemed ... already fair? Maybe the aeroplane building was perhaps being treated a little <em>too</em> harshly. Allowing such a building to stand is not just a concession to people's freedom to do their own thing on their own land, it also brought genuine variety to Meldan. Maybe it's okay to have in what was already a corporate district.</p>
+<p class="dialog">Then he reminded himself that he was not voting on the aeroplane building, he was voting on Badra St #1103.</p>
+<p class="dialog">Right, he thought. What decision to make? Support or oppose?</p>
+<p class="dialog">After thinking for a moment, he finally decided by raw instinct, and pushed the slider only a slight amount toward the right.</p>
+<p class="dialog">He hit "Select".</p>
+<p class="dialog">That was just a warmup, he thought - a random fluke that he had been assigned an aesthetics vote as a Veridian citizen right before one of his more consequential votes as an Acolyte in the Order of Steering. That vote had been hard. The vote that he was about to do would be far more challenging - and there, the system would be keeping score.</p>
+<p class="dialog">He continued walking, and after a minute he arrived at an opening in the soundproof barrier: the entrance to the concert that he was attending.</p>
+<hr class="rule">
+<p class="dialog">Gladias held his hand device near a circle with a glowing green outline on the entrance gate. He waited briefly as his hand device produced a cryptographic proof, and then a machine embedded in the entrance gate verified it.</p>
+<p class="dialog"><span style="color:#00bc96">"Verified, welcome"</span>, the machine said.</p>
+<p class="dialog">The gate learned that someone holding a valid and unused credential had arrived - and nothing else.</p>
+<p class="dialog">Gladias passed through the gate, and headed toward the main concert area.</p>
+<p class="dialog">He could see a few of the attendees wearing the same signature Veridian Privacy Robe that he was wearing. This was a loose-fitting dark purple dress that covered the full body from the hood covering the wearer's head down to the ankles. Below the ankles, privacy robe wearers all wore shoes of the same dark purple color.</p>
+<p class="dialog">The other attendees were mostly wearing simple shirts, either plain colored or featuring slogans of their favorite bands.</p>
+<p class="dialog">Some were moving forward with clear intent and efficiency, just like Gladias. Others were dancing. Others were chatting with each other. And still others were walking forward calmly, simply trying to passively enjoy the show.</p>
+<p class="dialog">Gladias emerged into a large open field surrounded by a high soundproof barrier - the same barrier that Gladias saw before, but from the inside.</p>
+<p class="dialog">Gladias pushed through the crowd, as the noise became louder. He pulled on a strap on his privacy robe's front face cover, tightening a belt that separated the area below his nose from the area above his nose. The program on airborne virus transmission that he had been listening to only minutes earlier had primed him to take care to not get sick.</p>
+<p class="dialog">He soon got to the concert stage area, and was able to clearly hear the gnarly voice of Dreadknot's lead singer.</p>
+<blockquote>WE MEET THEM WITH OUR FURY IN OUR HEARTS<p>AND FLAY THEIR FLESH WITH SHINING STEEL AND DARTS</p></blockquote>
+<p class="dialog">Gladias took out his hand device again.</p>
+<p class="dialog">Most people attending the concert were there to enjoy the music and hang out with their friends. For Gladias, this was certainly not his <em>ideal</em> entertainment - his preferred music was of a much softer and gentler variety - but he did not <em>dislike</em> it either. More than anything else, he found the concert interesting in an anthropological way, exploring the interests and emotions of people he would otherwise have little interaction with.</p>
+<p class="dialog">But ultimately, Gladias was at the concert for quite a different purpose. Gladias checked the rubric on his hand device:</p>
+<div class="device-view wide-device-view"><h3>Basic summary</h3><table><thead><tr><th>Tier</th><th>Criteria</th><th>Tax rate</th></tr></thead><tbody><tr><td>1</td><td><ul><li>Content strongly promotes two or more of the following: personal development, scientific and technical education, kindness toward others, healthy family relationships, good conflict resolution practices, civic duty</li><li>Does not meet any Tier 4-5 criteria</li></ul></td><td>0%</td></tr><tr><td>2</td><td><ul><li>Content weakly promotes one or more of the following: personal development, scientific and technical education, kindness toward others, healthy family relationships, good conflict resolution practices, civic duty</li><li>Does not meet any Tier 4-5 criteria</li></ul></td><td>10%</td></tr><tr><td>3</td><td><ul><li>Content does not meet any Tier 4-5 criteria</li></ul></td><td>20%</td></tr><tr><td>4</td><td><ul><li>Content weakly promotes one or more of the following: violence, lawless behavior, use of anti-recommended substances, gambling or risky investment, excessive display of wealth, poor conflict resolution practices, religious or ethnic hatred</li></ul></td><td>30%</td></tr><tr><td>5</td><td><ul><li>Content strongly promotes two or more of the following: violence, lawless behavior, use of anti-recommended substances, gambling or risky investment, excessive display of wealth, poor conflict resolution practices, religious or ethnic hatred</li></ul></td><td>40%</td></tr></tbody></table><div><b>Tax rates increased by 2.5x on proceeds from Veridian national Quadratic Funding and Graph Funding.</b></div><br/><div><button>View relevant precedents</button><button>Back</button></div></div>
+<p class="dialog">In Veridia, very few things are strictly <em>banned</em>. If Dreadknot wanted to, they could have all their songs repeatedly shouting "Hail the Arctic Emperor" and "we hope all government officials get painfully murdered" over and over again, and they would never be shut down or go to jail. But what Veridia <em>does</em> have is intricate systems of taxes and subsidies, maintained by a government-linked but decentralized collective called the Order of Steering.</p>
+<p class="dialog">One part of this collective, the Keepers, voted on tax rubrics that determined what the taxes are. Another part, the Sentinels, audited individual businesses, each audit assigning a particular business a position on a particular rubric. Gladias was an Acolyte: an Order member in training.</p>
+<p class="dialog">And today, Gladias's task was to evaluate Dreadknot's position on the tax rubric for social impact of public performances.</p>
+<blockquote>THE SMOKE OF CITIES BURNING IN THE NIGHT<p>WE LEAVE NO PLACE TO HIDE FOR ALL IN SIGHT</p></blockquote>
+<p class="dialog">Gladias clicked "View relevant precedents", and scrolled through them. He pressed a side button. A small popup appeared on the top right: "Emerald listening mode active". He did not speak; instead, he simply let Emerald listen to Dreadknot sing. But even after five minutes of listening, only a few relevant precedents showed up.</p>
+<p class="dialog">Gladias switched the mode to "analysis" and kept it listening for another five minutes. Emerald listed some conclusions that sounded reasonable, but Gladias could tell it was unreliable. There was just not enough source data on this kind of music for the Emerald AI to give good answers, and ultimately, it was Gladias's job to figure out when to defer to Emerald and when to let his own instinct have more of a say. Here, instinct it was.</p>
+<p class="dialog">Well, the song was definitely violent.</p>
+<p class="dialog">But on the other hand, over a century of Veridian civics lore made a distinction between <em>advocating</em> violence, and merely <em>showcasing</em> it for entertainment value. Gladias could see and hear the audience dancing, cheering and enjoying the music. They seemed to be having fun, not rising up in hatred against anyone.</p>
+<p class="dialog">But on the <em>other</em> other hand, Gladias knew that Sentinels in recent times paid less attention to that distinction than before, and seemed to value a softer and gentler society almost as an end in itself.</p>
+<p class="dialog">Gladias was not quite sure if this was what the Keepers who created that rubric intended, or if it was the right call for society. In a few months, he would be a Sentinel in full standing, and would have more leeway to decide. But for now, his freedom to decide was limited: the system was keeping score.</p>
+<p class="dialog">Gladias looked down at his hand device.</p>
+<figure class="fig"><img src="../assets/images/chapter-01-fig-01.svg" alt="预测分数的变化及其与90分基准的对比。" title="预测分数的变化及其与90分基准的对比。" loading="lazy" decoding="async"></figure>
+<p class="dialog">Ten percent of the time, any audit made by Acolytes would be repeated by Sentinels. An Acolyte's score reflected how well that portion of their votes predicted the Sentinels' judgements. Today, Gladias's score was ninety two. If it stayed above ninety, he would get in and become a Sentinel - or, if he changed his mind, a Keeper. But if his score dropped by even three points, his career would be on hold for at least another year.</p>
+<p class="dialog">The rest of the screen was filled with chat messages. There were nine Acolytes assigned to this audit, split into three groups of three. The other two members of his group could not agree. One was insisting on Tier 3 - a sort of neutral judgement - and the other was harsher, demanding Tier 4.</p>
+<p class="dialog">Gladias sighed. The other two groups were probably thinking the same way. If we simplify and say every other Acolyte was a coin-flip between Tier 3 and Tier 4, then by the binomial formula, the probability the other six would also be evenly split was six choose three - 20 - divided by 64, or about thirty-one percent. Now if the other Acolytes' votes were <em>not</em> coin-flips ... eh, calculating that exactly is too hard, but it's definitely lower, let's just say twenty percent. A twenty or thirty percent chance his vote would significantly affect Dreadknot's tax rate for the next year. Oh great. Actual responsibility.</p>
+<p class="dialog">Gladias looked around once more at the crowd. The first song finished, and he heard them cheering. He felt a burst of courage. He would take the ten percent chance of a hit to his prediction score. Without thinking further, he pressed Tier 3.</p>
+<p class="dialog">For a brief moment, he felt proud of his decision.</p>
+<p class="dialog"><span style="color:#00b5d6">"HEY EVERYONE, IT'S AN ORDER MEMBER!"</span>, someone behind him yelled.</p>
+<hr class="rule">
+<p class="dialog">Gladias's body froze in shock for a moment. Before his mind could catch up, his eyes had already scanned the venue, and discovered the nearest exit.</p>
+<p class="dialog">He immediately understood what had happened. The security of the Order, particularly preventing influence and bribery, rests on the privacy of its members. Order members are strictly forbidden to reveal their assigned task. To make sure that Order members take their privacy seriously, they were kept on their toes by a sort of deliberately engineered game. Anyone can connect to the decentralized cryptographic network that manages the Order's operations, and send in a guess about what a particular Order member's assigned task is, along with a small deposit. If their guess is correct, the Order member's salary is docked, and the discoverer gets half as a reward.</p>
+<p class="dialog">Before he could react any further, another man nearby, also wearing a privacy robe, broke and ran toward the fire exit on the right. Everyone within ten meters took out their hand devices and pointed them at him, recording video. Gladias immediately understood what had happened here too: a decoy. Some member of the public altruistically diverting attention to himself, to give Gladias a chance to escape.</p>
+<p class="dialog">Gladias turned around, intending to run. But before he could take a step, he saw right in front of him a large burly man, pointing a hand device straight at his face.</p>
+<p class="dialog">Gladias froze. At first, he thought that he was done for. His mind raced through the possibilities, looking for any possible way out. Finally, Gladias the thoughtful philosopher gave way to a different Gladias, more imaginative and mischievous - a Gladias that had not been awake since recess in middle school.</p>
+<p class="dialog">Gladias looked toward the right.</p>
+<p class="dialog"><span style="color:#be9b00">"Wait, is that a new screed from the Arctic Emperor?"</span>, he asked.</p>
+<p class="dialog">The man, confused, looked to where Gladias was looking. At that moment, Gladias snatched the man's hand device from his arm, and suddenly turned around.</p>
+<p class="dialog"><span style="color:#be9b00">"Delete all audio, images and video from the last longhour. Reboot."</span></p>
+<p class="dialog">He began to run. A few ticks later, the device responded, <span style="color:#e58137">"4 files deleted"</span>, and briefly showed screenshots of some photos and videos. The one on the bottom right was of Gladias's face. The screen turned black.</p>
+<p class="dialog">Gladias threw the hand device up into the air, hoping that his pursuer would choose not losing his device over chasing him. He continued running.</p>
+<p class="dialog">Despite being slowed down by his shoes, which had high heels to raise his height to the same level as other robe wearers and deliberately uneven soles to randomize his gait, Gladias managed to quickly reach the exit. Distracted by the rest of the commotion, the crowd seemed not to notice.</p>
+<p class="dialog">He exited the concert venue, and hopped onto a local autobus.</p>
+<hr class="rule">
+<p class="dialog">The autobus was nearly empty. To his left, Gladias saw two other people, both wearing privacy robes. Were they male, female, young or old, he could not tell. To his right, he saw a teenager wearing ordinary clothes and a backpack, who seemed to be coming home from school.</p>
+<p class="dialog">His eyes wandered to the advertisements on the inside walls of the autobus.</p>
+<p class="dialog">The first advertisement was a poster reminding Veridians of the importance of lifelong learning. On the left side of the poster was a picture of a classroom with a child, a middle-aged woman, and a much older man, all reading textbooks together. On the right side of the poster was the text:</p>
+<blockquote><p>School lasts until age 20. Education is every Veridian's responsibility and duty for a lifetime.</p><p>Learn about Veridian Graph Funding-subsidized education programs for all ages today.</p></blockquote>
+<p class="dialog">The second advertisement was for Hydrafill, a brand selling water and various kinds of drinks. Nudged gently by Veridian Steering taxes, they had over the last twenty years become almost completely sugar free.</p>
+<p class="dialog">On the left side of the advertisement, was the classic yellow and green colored Hydrafill bottle. On the right side of the advertisement was the text:</p>
+<blockquote><p>Hydrafill</p><p>Our drinks are proudly free of over 2,000 known poisons and anti-recommended substances.</p></blockquote>
+<p class="dialog">Gladias smiled.</p>
+<p class="dialog">He wished that it had been the Hydrafill advertisement that he had been selected to vote on, and not the blue and grey building. He would have slid the slider almost all the way to the right for this one, he knew.</p>
+<p class="dialog">We need more fun in the world.</p>
+<hr class="rule">
+<p class="dialog">Fifteen minutes later, Gladias stepped off the autobus. After a short walk along a street, he arrived at his house. He opened the door.</p>
+<p class="dialog"><span style="color:#be9b00">"Are you home, Seila?"</span>, he shouted.</p>
+<p class="dialog"><span style="color:#54a1f9">"Was just writing up my blog post"</span>, she replied, and came out of her room to greet Gladias.</p>
+<p class="dialog"><span style="color:#54a1f9">"So, what do we want for dinner?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Well, the Dzego food truck is coming in seven minutes, how about we have that again?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Sure! I assume the number ten for you again?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Yep!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Okay, I'll have the number thirteen this time."</span></p>
+<p class="dialog">Seila took out her hand device, and began to place the order.</p>
+<p class="dialog">They heard loud footsteps coming down the stairs.</p>
+<p class="dialog"><span style="color:#df74b1">"Dad is home!"</span>, the younger boy, Zven, shouted. Zven jumped down the stairs three steps at a time, and ran up to hug Gladias, who obliged.</p>
+<p class="dialog">The older teenage boy, Febric, walked down more slowly, carrying his hand device in one hand, attached by a cable to a larger compute box in the other.</p>
+<p class="dialog"><span style="color:#be9b00">"We're ordering from the Dzego food truck. What do you guys want?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#ce9200">"Number four!"</span>, Febric answered.</p>
+<p class="dialog"><span style="color:#df74b1">"Number five, I win!"</span>, Zven shouted.</p>
+<p class="dialog"><span style="color:#be9b00">"What about Lily and Hreda?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Lily's in the bathroom. Hreda will be back from after-school number theory in a longhour. Come on, you know she always gets the number nine."</span></p>
+<p class="dialog">The bathroom door opened, and Lily slowly walked out, her eyes looking to the ground.</p>
+<p class="dialog">Seila sighed. <span style="color:#54a1f9">"What happened?"</span></p>
+<p class="dialog"><span style="color:#23ba7d">"Sixty percent on the history exam. Whatever..."</span></p>
+<p class="dialog">Seila turned, and put her arms around Lily. <span style="color:#54a1f9">"It's okay to not be good at everything"</span>, she said softly.</p>
+<p class="dialog">Lily turned her face further away from Seila and the family. She ran forward, and sat down on the couch.</p>
+<p class="dialog">Seila sighed, and ordered Lily the number eight.</p>
+<p class="dialog">Seila clicked order. Gladias, Seila, Zven and Febric sat at the table and waited.</p>
+<p class="dialog">On the couch, Lily took out her hand device, and began intently watching and quickly tapping on the screen, devoting all her attention to some game that Gladias and Seila could never make out.</p>
+<p class="dialog">This was Gladias and Seila's fourth last dinner with the kids - of whom Zven and Lily were theirs, and Febric and Hreda were from their co-family, Uncle Vil and Aunt Daia. In four days, Uncle Vil and Aunt Daia were going to come and pick all four kids up, and take care of them for the next half of the year.</p>
+<p class="dialog">Gladias sighed. He would miss the kids. But at the same time, he was looking forward to the six months of freedom.</p>
+<p class="dialog"><span style="color:#df74b1">"Are we still going to stay with Uncle Vil for six months?"</span>, Zven asked.</p>
+<p class="dialog"><span style="color:#54a1f9">"Of course!"</span>, Seila replied.</p>
+<p class="dialog"><span style="color:#df74b1">"Yay, I love Uncle Vil!"</span></p>
+<p class="dialog"><span style="color:#ce9200">"For me Vil is <em>Dad</em>!"</span>, Febric made a point of reminding. He thought for a moment longer. <span style="color:#ce9200">"Uncle Glad and Aunt Seila, I love you both too!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"And I love you."</span></p>
+<p class="dialog">A doorbell rang. Gladias walked to the door, opened the door, and got a bag full of food boxes. He set the bag on the table, and took out and gave each person the food box with their number on it. Gladias, Seila, Febric and Zven all started eating.</p>
+<p class="dialog"><span style="color:#be9b00">"Any plans once Vil is here?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#54a1f9">"I'm going to visit Freetown for a month or two, see Jahn, maybe figure out some blog post to write on the United Cities. I've spent so much time reading about their co-governance, actually looking forward to seeing more how it all connects to what's on the ground."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Nice! I'm going to go on some long walks in the forest and take a deep dive with the bot on the environment and biology rubrics. Still have four more audits to do before I can become a Sentinel!"</span></p>
+<p class="dialog">Gladias and Seila both resumed eating. Quietly, Lily walked up to the table, and began to open her food box as well.</p>
+<p class="dialog">At that moment, Gladias's hand device buzzed. He took it out. A single notification popped up.</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Anonymous<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">Rep score ≥ 200 Verified<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">I saw you at the concert, I know that you are in the Order.</span></td><td>60259</td></tr></tbody></table></div>
+<p class="dialog">And a few ticks later, another:</p>
+<div class="device-view wide-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Anonymous<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">Rep score ≥ 200 Verified<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">Don't worry, I'm not intending to report you for the bounty. But I do have a request that I would like to make.</span></td><td>60266</td></tr></tbody></table></div>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-02.html">下一章 · 第二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第一章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

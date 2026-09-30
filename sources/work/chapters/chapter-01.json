@@ -147,11 +147,13 @@
   {
    "id": "c01-b0019",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c01-s0019}}</th></tr></thead><tbody><tr><td>{{S:c01-s0020}}</td></tr><tr><td><input type=\"range\" style=\"width:100%\"><div style=\"display: flex; justify-content: space-between; width:100%\">{{S:c01-s0021}}</div></td></tr><tr><td><button>{{S:c01-s0022}}</button></td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c01-s0019}}</th></tr></thead><tbody><tr><td>{{S:c01-s0020}}</td></tr><tr><td><input type=\"range\" style=\"width:100%\"><div style=\"display: flex; justify-content: space-between; width:100%\"> <span>{{S:c01-s0021}}</span> <span>{{S:c01-s0021#2}}</span> <span>{{S:c01-s0021#3}}</span> </div></td></tr><tr><td><button>{{S:c01-s0022}}</button></td></tr></tbody></table></div>",
    "segs": [
     "{{S:c01-s0019}}",
     "{{S:c01-s0020}}",
     "{{S:c01-s0021}}",
+    "{{S:c01-s0021#2}}",
+    "{{S:c01-s0021#3}}",
     "{{S:c01-s0022}}"
    ]
   },
@@ -270,11 +272,13 @@
   {
    "id": "c01-b0032",
    "kind": "panel",
-   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c01-s0051}}</th></tr></thead><tbody><tr><td>{{S:c01-s0052}}</td></tr><tr><td><input type=\"range\" style=\"width:100%\"><div style=\"display: flex; justify-content: space-between; width:100%\">{{S:c01-s0053}}</div></td></tr><tr><td><button>{{S:c01-s0054}}</button></td></tr></tbody></table></div>",
+   "skeleton": "<div class=\"device-view narrow-device-view\"><table><thead><tr><th>{{S:c01-s0051}}</th></tr></thead><tbody><tr><td>{{S:c01-s0052}}</td></tr><tr><td><input type=\"range\" style=\"width:100%\"><div style=\"display: flex; justify-content: space-between; width:100%\"> <span>{{S:c01-s0053}}</span> <span>{{S:c01-s0053#2}}</span> <span>{{S:c01-s0053#3}}</span> </div></td></tr><tr><td><button>{{S:c01-s0054}}</button></td></tr></tbody></table></div>",
    "segs": [
     "{{S:c01-s0051}}",
     "{{S:c01-s0052}}",
     "{{S:c01-s0053}}",
+    "{{S:c01-s0053#2}}",
+    "{{S:c01-s0053#3}}",
     "{{S:c01-s0054}}"
    ]
   },

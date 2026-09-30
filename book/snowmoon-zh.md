@@ -82,7 +82,7 @@
 
 沿着隔音墙走了没多远，他的手持终端震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>表决对象：巴德拉街1103号</th></tr></thead><tbody><tr><td>翡翠 AI 摘要：5层公寓楼，蓝灰色</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%">-5 0 5</div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>表决对象：巴德拉街1103号</th></tr></thead><tbody><tr><td>翡翠 AI 摘要：5层公寓楼，蓝灰色</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span>-5</span> <span>0</span> <span>5</span> </div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
 
 格拉迪亚斯立刻明白要做什么。作为维里迪亚公民，他被密码学抽签随机选中，要对自己有多喜欢这栋建筑投上一票。
 
@@ -108,7 +108,7 @@
 
 格拉迪亚斯的思绪回到正事上。他要投的是眼前这栋蓝灰色建筑。他又看了一眼界面。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>表决对象：巴德拉街1103号</th></tr></thead><tbody><tr><td>翡翠 AI 摘要：5层公寓楼，蓝灰色</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%">-5 0 5</div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>表决对象：巴德拉街1103号</th></tr></thead><tbody><tr><td>翡翠 AI 摘要：5层公寓楼，蓝灰色</td></tr><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span>-5</span> <span>0</span> <span>5</span> </div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
 
 他记起，这是二次方投票。他所有的票都会被自动平移、拉伸或压缩，使全部票的平均值为零、票数平方的平均值为一。所以给每一项都投赞成、每一项都投反对，或者每一项都投到极端，都没有意义。最好的做法——*数学上可证的最好*——是不只按你觉得对的*方向*投，还要按你觉得合适的*力度*投，不多不少。
 
@@ -1762,7 +1762,7 @@
 
 机器人屏幕切换成了投票界面。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>mo da cu ja li hen ma?</th></tr></thead><tbody><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"><span style="font-size:200%">🙁<sup><sup>2</sup></sup></span><span style="font-size:200%">🙁<sup><sup></sup></sup></span><span style="font-size:200%">😐<sup><sup></sup></sup></span><span style="font-size:200%">😊<sup><sup></sup></sup></span><span style="font-size:200%">😊<sup><sup>2</sup></sup></span></div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>mo da cu ja li hen ma?</th></tr></thead><tbody><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span style="font-size:200%">🙁<sup><sup>2</sup></sup></span> <span style="font-size:200%">🙁<sup><sup></sup></sup></span> <span style="font-size:200%">😐<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup>2</sup></sup></span> </div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
 
 泽想了一会儿，把滑块往右推到大约四分之三的位置。
 

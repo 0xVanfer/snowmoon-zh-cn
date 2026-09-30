@@ -10,7 +10,7 @@
 
 机器人屏幕切换成了投票界面。
 
-<div class="device-view wide-device-view"><table><thead><tr><th>mo da cu ja li hen ma?</th></tr></thead><tbody><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"><span style="font-size:200%">🙁<sup><sup>2</sup></sup></span><span style="font-size:200%">🙁<sup><sup></sup></sup></span><span style="font-size:200%">😐<sup><sup></sup></sup></span><span style="font-size:200%">😊<sup><sup></sup></sup></span><span style="font-size:200%">😊<sup><sup>2</sup></sup></span></div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>mo da cu ja li hen ma?</th></tr></thead><tbody><tr><td><input type="range" style="width:100%"><div style="display: flex; justify-content: space-between; width:100%"> <span style="font-size:200%">🙁<sup><sup>2</sup></sup></span> <span style="font-size:200%">🙁<sup><sup></sup></sup></span> <span style="font-size:200%">😐<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup></sup></sup></span> <span style="font-size:200%">😊<sup><sup>2</sup></sup></span> </div></td></tr><tr><td><button>选择</button></td></tr></tbody></table></div>
 
 泽想了一会儿，把滑块往右推到大约四分之三的位置。
 

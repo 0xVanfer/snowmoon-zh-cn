@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第二十一章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第二十一章 · Chapter 21 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-20.html">
+  <link rel="next" href="chapter-22.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="21">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第二十一章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第二十一章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 21</p>
+    <p class="chapter-heading__dateline">梅尔丹，维里迪亚 · 3724年雾期20日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Meldan, Veridia · 3724 Mistime 20</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">塞拉、维尔、黛雅、莉莉和兹文围坐在塞拉家的餐桌旁，等着晚饭送到。</p>
+<p class="dialog"><span style="color:#54a1f9">“谢谢你们过来陪我们”</span>塞拉轻声说。<span style="color:#54a1f9">“这对我真的很重要。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“费布里克和赫雷达那边有新消息吗？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“几天前我刚给他们又寄了些齐普币，当日常开销。他们只能在大梅港里尽量照常过日子。学校都满了，不过另一个难民以前是数学老师，我们正雇她私下给两个孩子和另外几个孩子上点课。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“有没有消息说，什么时候能有办法让他们回来？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“还是没有。事到如今，我都有点怀疑，北极人所谓的‘重新统一所有人’，其实就是把维里迪亚剩下的地方也一并打下来。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“至少他们是安全的。”</span></p>
+<p class="dialog">塞拉叹了口气。</p>
+<p class="dialog"><span style="color:#54a1f9">“你告分歧资本的官司怎么样了？”</span></p>
+<p class="dialog">这次轮到维尔叹气。</p>
+<p class="dialog"><span style="color:#a38af2">“几个月前一审我们赢了。可他们上诉了。于是又抽选了一整批完全不同的法官来审，一个月前他们也判我们胜诉。可就在几天前，我们才知道他们又上诉了。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“他们能一直这么干下去？再上诉一次，再抽签换来五个法官，你就得从头说服一遍，一直折腾到你累得撑不住，只好放弃，拿四分之一的钱和解？”</span></p>
+<p class="dialog"><span style="color:#a38af2">“还好不会。维里迪亚的普通法有规定，法官可以判定一桩案子属于恶意诉讼，要求提交方额外赔给对方一大笔钱作为惩罚。轻率的上诉常常会撞上这一条。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“你看，他们最新那份上诉材料里有几段跃升内部监控系统的新影像。当然原本都是加密的，但有个前员工有访问权限，把东西交了出来。他们从中找到一些能让我们这边某些人难堪的视频和消息，就据此声称这次上诉有正当理由。可那些视频其实跟本案毫无关系。我希望这轮法官能比上一轮更快看穿分歧资本在玩什么。我们在答辩状里指控他们是恶意上诉，运气好的话，这事很快就能了结。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“这些对冲基金还真是够狠的。”</span></p>
+<p class="dialog"><span style="color:#a38af2">“要是审判不匿名、不随机抽选、每轮也不分成两个半组，他们肯定也能想办法去威胁或贿赂法官。”</span></p>
+<p class="dialog">这时，莉莉冲进了房间。</p>
+<p class="dialog"><span style="color:#23ba7d">“维尔叔叔、黛雅婶婶、妈妈！我上次公民课测验考了81分！”</span></p>
+<p class="dialog"><span style="color:#e58137">“恭喜你，莉莉！”</span>黛雅答道。</p>
+<p class="dialog"><span style="color:#a38af2">“搁平时我该说，这下北林那趟算是你挣到手了。”</span>维尔补了一句。<span style="color:#a38af2">“不过嘛……”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“要是过几个月安全了，格拉迪亚斯也不需要我，我就带你去联合城邦的别处玩。也许去马布利”</span>塞拉提议道。</p>
+<p class="dialog">门铃响了。别人还没反应过来，兹文已经跑到门口去取餐。</p>
+<p class="dialog">兹文打开门，从一个机器人手里接过两个袋子，又关上门。他把饭拎回餐桌，马上开始拆包。他、塞拉、黛雅、维尔和莉莉各自找到装着自己那份饭的盒子，五个人吃了起来。</p>
+<p class="dialog"><span style="color:#e58137">“兹文，你在学校过得怎么样？”</span>黛雅问。</p>
+<p class="dialog"><span style="color:#df74b1">“我们队昨天又赢了一场翔球比赛！”</span>兹文兴奋地回答。</p>
+<p class="dialog"><span style="color:#df74b1">“一个月前物理考试我还拿了95分。老师都夸我了。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“太厉害了”</span>塞拉答道。</p>
+<p class="dialog"><span style="color:#df74b1">“对了，前几天他还私下带我去了一个车库，给我看了一个迷你火箭。他让我看了看里面，还让我按按钮把它发射出去。太好玩了！”</span></p>
+<p class="dialog"><span style="color:#df74b1">“我长大了要造火箭！然后我要坐进去飞。说不定哪天我还能飞到月亮上去！”</span></p>
+<p class="dialog"><span style="color:#a38af2">“看来以后不用我带你出去冒险了！”</span>维尔补上一句。</p>
+<p class="dialog">黛雅继续挨个问桌边一家人的近况。</p>
+<p class="dialog"><span style="color:#e58137">“塞拉，你还有什么新鲜事吗？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“除了费布里克和赫雷达，我基本上一直在想最近跟掌舵会其他成员开的那些会，一刻都没停过。”</span></p>
+<p class="dialog"><span style="color:#e58137">“能多说点吗？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“具体的不行。但总的说来，感觉有一股势力在非常协调地试图操纵掌舵会：他们对不同的人说不同的话，针对每个人的具体处境分别下手；侦察能力惊人；而且他们的目的看起来根本不是什么商业利益。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“是北极人吗？”</span>兹文脱口而出，兴奋得像个侦探小说里破解了谜团的英雄。</p>
+<p class="dialog">饭桌上一片沉默。</p>
+<hr class="rule">
+<p class="dialog">塞拉坐在自家地下室的椅子上，盯着手里的手持终端。</p>
+<p class="dialog">快啊，她想。格拉迪亚斯随时该醒了。</p>
+<p class="dialog">她第五次一掌拍在自己脸上，为自己先前的盲目感到羞愧。格拉迪亚斯瞒着她开了半年的秘密会议，她却什么都没问，只当一切都在他掌控之中——凡是他自己搞不定的，他那个神神秘秘的朋友莫夫也能搞定。</p>
+<p class="dialog">可事实证明，格拉迪亚斯和莫夫从头到尾都被这个人耍得团团转。等他最初那层伪装——一个关心和平与自由的善心人——被戳破之后，他们<em>又</em>上了一次当，被他另一张面具骗了过去：他假装自己是银聊的人。</p>
+<p class="dialog">塞拉自己一天之内就看穿了银聊这个幌子——说实话，她几分钟内就起了疑。但她没有及时追下去。她曾想过可能是北极人，又把念头打消了——德尔瓦特说的话，没有一句像她从埃菲里昂勋爵嘴里听到的东西。北极人怎么会说和平与自由的好话？可现在全貌终于拼合起来了。排除掉所有不可能之后，剩下的东西无论多么难以置信，都一定是真相。</p>
+<p class="dialog">她的手表震了一下。是格拉迪亚斯。</p>
+<p class="dialog">她立刻拨了过去。</p>
+<p class="dialog"><span style="color:#be9b00">“塞拉！我好想你。你怎么样？”</span></p>
+<p class="dialog">起初，她想尖叫。</p>
+<p class="dialog"><span style="color:#54a1f9">“格拉迪亚斯，你这个白痴！你知道自己干了什么吗？！！！！”</span></p>
+<p class="dialog">起初是一阵沉默。</p>
+<p class="dialog"><span style="color:#be9b00">“怎么了，塞拉？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“德尔瓦特。”</span></p>
+<p class="dialog">又是一阵沉默。</p>
+<p class="dialog"><span style="color:#be9b00">“我明白了。莫夫把情况都告诉你了吗？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“莫夫也是个白痴。你信他，就是白痴加白痴。没错，他都告诉我了，格拉迪亚斯。可德尔瓦特的谎话我几乎一眼就看穿了，还是我拉着莫夫出去查的。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你查到了什么？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“他根本不是在给银聊做事，你这个天真到极点的白痴！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“什么？”</span></p>
+<p class="dialog">又是一阵沉默，这回是塞拉这边没出声，她在琢磨下一句该说什么。</p>
+<p class="dialog"><span style="color:#be9b00">“你都知道些什么？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我们找到了德尔瓦特接触过的另外两个掌则人。其中一个负责环境传感器数据留存的评则。德尔瓦特找上他的方式，和找上你一模一样。他劝那人不用费劲去推动在安全或环境数据采集上加强隐私保护。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“然后我们又找到了另一个。她负责教育方面的评则。德尔瓦特对<em>她</em>说，要取消那些让私立学校开设正规维里迪亚公民课的激励措施。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“最后，为了确认，我们找到了一个掌则人，他负责的正是银聊最该在意的那条评则——社交媒体开放度与互操作性。而德尔瓦特也好、别人也好，压根没找过他们中的任何一个。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“可是……莫夫不是偷听到德尔瓦特跟一个银聊的人说话吗？那是怎么回事？是不是另有别人也想腐蚀银聊？说服他们把有利于自己立场的内容往上推？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“不，你这个白痴。那是德尔瓦特演出来的。想想吧，他的侦察能力比莫夫强得多，肯定早就察觉到莫夫在跟踪他，于是某天故意埋下那颗种子，好让自己的掩护说法更可信。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“那么……”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“想想我们现在知道的德尔瓦特的目标。你以为他在乎自由——可他在推动无限制监控的时候就不在乎了。你以为他反战，可他对第二个掌则人根本没提过这事。后来你又以为他在乎银聊——可银聊最该在意的那条评则，他压根没钻进负责它的掌则人小组！”</span></p>
+<p class="dialog"><span style="color:#be9b00">“掌则人分成三个讨论组，彼此不通气。他本来随时都能进另外两组。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“关键在于证据优势”</span>塞拉厉声说。<span style="color:#54a1f9">“记得那个概率更新公式吗，赫雷达冲我们吼过好多遍。单独一条证据，也许只能让几率比放大两三倍。可当三个互相独立的因素都指向同一个方向时，乘起来就是让几率比放大8到27倍。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“好，那你觉得德尔瓦特真正的动机是什么？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“他是北极人。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“什么？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“这实在难以置信。他跟我说过的每一句话，都不像是埃菲里昂勋爵会说的。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“格拉迪亚斯……你怎么能天真到这个地步？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“埃菲里昂和德尔瓦特不是知识分子，他们是宣传家。他们要的不是寻找并分享自己认为的真相，而是调整话语环境——无论是一个人的，还是一整个国家的——好让这环境顺着自己的利益走。把旁观者变成朋友，把敌人变成旁观者。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“埃菲里昂的目标是煽动维里迪亚国内的人加入北极事业。所以他公开讲的，是北极事业的一个版本，专门让维里迪亚那些聪明却病态扭曲的人觉得有吸引力。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“德尔瓦特的目标是瓦解掌舵会。他知道自己没法让掌舵会亲北极，但他<em>能</em>做的，是让它失效。所以对他来说，更好的话术就是时而讲自由、时而讲和平、时而讲点别的，看评则和他谈话的对象而定。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“你为什么这么肯定？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“证据优势。我们把它一条条列出来。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“德尔瓦特的目标是什么？不是他嘴上说的目标，而是从他的行动里能看出来的目标。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“第一：削减对开源防御硬件的支持。自由得1分，和平得1分，北极得1分，银聊得0分。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“第二：推动无限制监控。自由倒扣1分，和平得0分，北极得1分，银聊得0分。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“第三：推动维里迪亚的学校不再教人们维里迪亚公民课。德尔瓦特的原话是：‘人们应该自己看到维里迪亚有多好，从而学会爱它。’自由得1分，和平得0分，北极得1分，银聊得0分。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“第四：没有参与社交媒体开放度与互操作性这条评则。行，掌则人分三组，这一条可以乘二分之一。自由得0分，和平得0分，北极得0分，银聊倒扣半分。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“第五：他身份暴露之后，把你打发去了泽国。你也许会说，那是个好建议，维里迪亚应该多向泽国学习。可那不是唯一的解释。另一种解释是，他想把你支开，支到半个世界之外，这样等你起了疑心，也搅不了他的局！两种都可能。所以每种可能性各得1分。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“第六：他的侦察能力，超过任何一家公司，更远远超过什么理想主义者的非营利组织。理想主义的自由派或和平派倒扣1分，银聊得0分，北极得1分。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“加起来：北极5分，自由2分，和平2分，银聊半分。如果你说那是个也关心自由的银聊人，那也才正半分。我甚至会把最后那条关于侦察能力的分数乘二，那样北极就是6分，其他任何解释都是0分或半分。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“再看看他是怎么得手的，格拉迪亚斯。他搞定了你，再通过你搞定了某个讨论组的三分之一。军队、议会、媒体平台——他和他的同伙一路直穿而过。他唯一撬不开的门，是找不到钥匙的那些：掌舵会、合议庭、图谱资助。隐私不是奢侈品，我们能站在这儿，全靠它。”</span></p>
+<p class="dialog">塞拉不说了。格拉迪亚斯沉默了好一会儿。</p>
+<p class="dialog"><span style="color:#be9b00">“对不起，塞拉。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“对不起，我没有足够信任你，没让你参与进来。我爱你。我本该信任并尊重的，不只是你的心，还有你的头脑。”</span></p>
+<p class="dialog">又是一阵沉默。</p>
+<p class="dialog"><span style="color:#be9b00">“那我们怎么办？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“德尔瓦特说你到了泽国也派不上用场，我希望他错了——希望你在那边经历这么多冒险，能拿出点惊人的东西来。我在这边哭，因为我们的孩子困在北极人包围的飞地里，同时还得替你收拾烂摊子。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我想我现在很了解他们的军队了。或者说，他们的影子军队。泽国官方军队和我们的一样被渗透了，政府其余部分也一样。可他们基本上把民本棋锦标赛办成了一种秘密的军队训练场，从头到尾都在赌：将来真正决定胜负的战争会是无人机战争——比起翔球，它更像民本棋。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我一直在尽力说服他们，下一场战斗会发生在维里迪亚，而不是泽国——我们的技术和工业领先，对他们是个潜在威胁，我们却完全没在防御上动过脑筋——还说他们若想自救，就得先过来帮我们。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“很好。为了孩子，为了维里迪亚，也为了你自己，我希望你真的有办法让这件事成真。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“说服泽国人只是第一步。我们还得说服维里迪亚人接受他们。而且不是掌则人，是议会。就是那个议会的小组委员会，以11比10勉强接纳你当掌则人——尽管他们毫无正当理由把你想得那么坏，除非他们能未卜先知，早就看出你有多天真——我对此深表怀疑。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我知道。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“你有什么主意能做到这件事吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“没有。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我可以试着想出办法。但你必须信任我。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我会的，我保证。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“不再有秘密了，好吗？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“好。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“我保证。”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-20.html">上一章 · 第二十章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-22.html">下一章 · 第二十二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Seila, Vil, Daia, Lily and Zven were all seated around the table in Seila's house, waiting for dinner to arrive.</p>
+<p class="dialog"><span style="color:#54a1f9">"Thank you guys for coming and keeping us company"</span>, Seila said softly. <span style="color:#54a1f9">"It really means a lot to me."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Any more news from Febric and Hreda?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I just sent them some more zipcoins for their personal expenses a few days ago. They're just living the life they can inside Greater Plum Harbor. The schools are full, but one of the other refugees was a math teacher, and we're hiring her to informally give them and a few other kids some lessons."</span></p>
+<p class="dialog"><span style="color:#a38af2">"No word on when there will be any way for them to get back here?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Still none. At this point I'm starting to suspect that the Arctics' plan to reunify everyone is to just invade the rest of Veridia too."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Well at least they're safe."</span></p>
+<p class="dialog">Seila sighed.</p>
+<p class="dialog"><span style="color:#54a1f9">"How is your lawsuit against Divergent going?"</span></p>
+<p class="dialog">This time Vil sighed.</p>
+<p class="dialog"><span style="color:#a38af2">"We won in the original trial a few months ago. But then they appealed. So a whole different group of judges got selected to hear the case, and a month ago they ruled in our favor too. But only a few days ago, we learned that they're appealing a second time."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Can they just keep on doing that forever? Do another appeal, another five judges get sortitioned in, you have to convince them all over again, and keep doing that until you're too tired to keep going and then you give up and settle for like a quarter of the money?"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Fortunately no, there are Veridian common law rules where judges can rule a case to be in bad faith, and require the submitter to give the other side a bunch of extra money as a penalty. That often happens to frivolous appeals."</span></p>
+<p class="dialog"><span style="color:#a38af2">"Here, their latest appeal document has some new footage from Jump's internal monitoring systems. Of course it was all encrypted, but some former employee had access and handed it over. They found some video and messages that make some of us look bad. So they're arguing it's a genuine appeal because of that. But really the video says nothing that's actually relevant to the case. I'm hoping these judges can see through what Divergent is doing more quickly than the previous round's judges did. We're accusing them of making a bad-faith appeal in our defense statement, with luck that should close things quickly."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"These hedge funds really are mean, aren't they."</span></p>
+<p class="dialog"><span style="color:#a38af2">"If judging wasn't anonymized, randomly selected and split into two and a half groups each round, I'm sure they would find a way to threaten or bribe the judges too."</span></p>
+<p class="dialog">At that point, Lily rushed into the room.</p>
+<p class="dialog"><span style="color:#23ba7d">"Uncle Vil, Aunt Daia, Mom! I got eighty one percent on my latest civics test!"</span></p>
+<p class="dialog"><span style="color:#e58137">"Congratulations, Lily!"</span>, Daia replied.</p>
+<p class="dialog"><span style="color:#a38af2">"Normally I would say, now you've earned your trip to Northglade."</span>, Vil added. <span style="color:#a38af2">"But, well..."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"If it's safe in a few months and Gladias doesn't need me, I'll take you somewhere in the United Cities instead. Maybe Mabuli"</span>, Seila offered.</p>
+<p class="dialog">The doorbell rang. Before anyone else could react, Zven ran to the door to get the food.</p>
+<p class="dialog">Zven opened the door, picked up two bags from a robot, and closed the door. Zven brought the food back to the table, and immediately began unpacking. He, Seila, Daia, Vil and Lily each found the boxes with their own meals, and the five of them began eating.</p>
+<p class="dialog"><span style="color:#e58137">"How was your time in school been, Zven?"</span>, Daia asked.</p>
+<p class="dialog"><span style="color:#df74b1">"My team won another Helisport game yesterday!"</span>, Zven replied excitedly.</p>
+<p class="dialog"><span style="color:#df74b1">"I also got ninety five on a physics exam a month ago. My teacher is really impressed."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"That's amazing"</span>, Seila replied.</p>
+<p class="dialog"><span style="color:#df74b1">"So a few days ago he took me out privately to a garage, and showed me a mini rocket. He let me take a look inside, and then press the button to let it blast off. It was so fun!"</span></p>
+<p class="dialog"><span style="color:#df74b1">"I want to build a rocket when I grow up! And then I want to fly in it. Maybe I'll even be able to go to the moon one day!"</span></p>
+<p class="dialog"><span style="color:#a38af2">"Sounds like you won't need me to take you on any adventures!"</span>, Vil added.</p>
+<p class="dialog">Daia continued asking the family table for status updates.</p>
+<p class="dialog"><span style="color:#e58137">"So what else is new for you, Seila?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Well aside from Febric and Hreda, I've basically been thinking nonstop about those meetings with the other Order members I had recently."</span></p>
+<p class="dialog"><span style="color:#e58137">"Are you able to say more?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Not the specifics. But in general, it feels like there's a really coordinated effort to try to manipulate the Order, they're saying different things to different people to manipulate each person based on their exact position, they have amazing spying powers, and their objectives don't even seem to be anything commercial."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Is it the Arctics?"</span>, Zven blurted out, with the excitement of a hero in a detective novel solving a mystery.</p>
+<p class="dialog">The table went silent.</p>
+<hr class="rule">
+<p class="dialog">Seila was sitting in the chair in her basement, and was staring at her hand device.</p>
+<p class="dialog">Come on, she thought. Gladias should be awake any minute now.</p>
+<p class="dialog">She hit her palm against her face for a fifth time, ashamed at how blind she had been. Gladias had been having these secret meetings for half a year, and she had not asked anything, assuming that he had things under control - and that anything Gladias could not figure out himself, his shadowy friend Mov could.</p>
+<p class="dialog">But as it turned out, Gladias and Mov had been successfully hoodwinked by this man the whole time. And when his original pretense - that he was just a kindly man who cared about peace and freedom - fell through, they then got hoodwinked <em>again</em> by his mask, his pretense that he was from Silverchat.</p>
+<p class="dialog">Seila herself had seen through the Silverchat ruse within a day - really, she had felt doubts within minutes. But she had not gone further quickly enough. She had entertained the thought that it might be the Arctics, but she had dismissed it - none of Delwart's lines seemed anything like anything she had ever heard from Lord Ephelion. Why would an Arctic say anything nice about peace and freedom? But now the picture had all come together. When you have eliminated the impossible, whatever remains, how improbable, must be the truth.</p>
+<p class="dialog">Her watch buzzed. It was Gladias.</p>
+<p class="dialog">She immediately called.</p>
+<p class="dialog"><span style="color:#be9b00">"Seila! I miss you so much. How are you?"</span></p>
+<p class="dialog">At first, she wanted to scream.</p>
+<p class="dialog"><span style="color:#54a1f9">"Gladias, you idiot! Do you know what you've done?!!!!"</span></p>
+<p class="dialog">At first, silence.</p>
+<p class="dialog"><span style="color:#be9b00">"What's wrong, Seila?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Delwart."</span></p>
+<p class="dialog">Silence again.</p>
+<p class="dialog"><span style="color:#be9b00">"I see. Did Mov catch you up?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Mov was an idiot too. And you're a double idiot for trusting him. Yes, he did catch me up, Gladias. But I saw through Delwart's lies almost immediately, and I dragged Mov out to do some sleuthing myself."</span></p>
+<p class="dialog"><span style="color:#be9b00">"What did you find?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"He's not working for Silverchat, you incredibly naive idiot!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"What?"</span></p>
+<p class="dialog">Silence again, this time from Seila's side, as she figured out the next thing she would say.</p>
+<p class="dialog"><span style="color:#be9b00">"What do you know?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"We tracked down two of the other Keepers that Delwart talked to. One of them was on a rubric for data retention in environmental sensors. Delwart tracked him down, the same way he tracked you down. And he was telling him to not bother pushing for more privacy preservation in any of the security or environmental the data collection."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"We then tracked down another. She was on a rubric for education. Delwart was telling <em>her</em> to remove the incentives for private schools to have proper Veridian civics education."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"And then finally, just to confirm, we found a Keeper who was on the rubric that Silverchat should care the most about - social media openness and interoperability - and neither Delwart nor anyone else had tracked down any of them at all."</span></p>
+<p class="dialog"><span style="color:#be9b00">"But ... Mov overheard Delwart talking to a Silverchat person, how did that happen? Is this someone else trying to corrupt Silverchat too? Convince them to up-boost some content favoring whatever their position is?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"No, you idiot. Delwart faked that. Come on, his spying ability is much better than Mov's, at some point he must have caught on to the fact that Mov was following him, and one day he planted that seed on purpose, to make his cover story more believable."</span></p>
+<p class="dialog"><span style="color:#be9b00">"So..."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Think about what we now know about Delwart's goals. You thought he cares about freedom - but not when he's pushing for unrestricted surveillance. You thought he is anti-war, but he never mentioned that to the second Keeper at all. And then eventually you thought he cares about Silverchat - but he never found his way at all into the Keeper group that was working on the rubric that Silverchat would care about the most!"</span></p>
+<p class="dialog"><span style="color:#be9b00">"There's three Keeper groups, they don't talk to each other. He could always have gotten into the other two."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"IT'S ABOUT THE PREPONDERANCE OF EVIDENCE"</span>, Seila snapped. <span style="color:#54a1f9">"Remember the probability update formula, Hreda has shouted it at us many times. Each individual unit of evidence might only shift the odds ratio by a factor of two or three. But when there's three independent factors that all point in the same direction, that multiplies up to shifting the odds ratio a factor of eight to twenty seven."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Okay, so what do you think Delwart's real motives are?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"He's an Arctic."</span></p>
+<p class="dialog"><span style="color:#be9b00">"WHAT?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"That's really hard to believe. Nothing he has ever said to me sounds anything like Lord Ephelion."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Gladias... how can you be so naive?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Ephelion and Delwart are not intellectuals, they are propagandists. Their goal is not to seek and share what they think is the truth. Their goal is to adjust the discourse environment, either of one person or of a whole country, so suit their interests. To turn bystanders into friends, and enemies into bystanders."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Ephelion's goal is to inspire people inside Veridia to join the Arctic cause. So he's openly saying a version of the Arctic cause that some smart, but sick and twisted, people in Veridia will find appealing."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Delwart's goal is to break down the Order. He knows he can't make the Order pro-Arctic, but what he <em>can</em> do is make it ineffective. And so it's a better message for him to be sometimes pro-freedom, sometimes pro-peace, sometimes whatever else, depending on the rubric and the person he's talking to."</span></p>
+<p class="dialog"><span style="color:#be9b00">"Why are you so certain?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"PREPONDERANCE OF EVIDENCE. Let's list it all."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What are Delwart's goals? Not the goals he says he has, but the goals that are visible from his actions?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"One: reduce support for open source defense hardware. One point for freedom, one point for peace, one point for Arctics, zero points for Silverchat."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Two: push for unrestricted surveillance. One point against freedom, zero points for peace, one point for Arctics, zero points for Silverchat."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Three: push for Veridian schools to not teach people Veridian civics. Delwart specifically said: 'people should learn to love Veridia by seeing how great it is on their own'. One point for freedom, zero points for peace, one point for Arctics, zero points for Silverchat."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Four: not participate in the social media openness and interoperability rubric. Fine, there's three Keeper groups, we can multiply this one by half. Zero points for freedom, zero points for peace, zero points for Arctics, minus half a point for Silverchat."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Five: once he blew his cover, he sent you off to Dzego. You might say, that's a good suggestion, Veridia should learn from Dzego more. But that's not the only interpretation. The other interpretation is that he wanted you out of the way, halfway across the world so that once you got suspicious, you would not interfere with any of his plans! Both are possible. So one point for every possibility."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Six: his spying capabilities, beyond any corporation, far beyond some nonprofit group of idealists. Minus one point for an idealistic freedom lover or a peace lover, zero points for Silverchat, one point for Arctics."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Sum it up. Arctics five, freedom two, peace two, Silverchat one half. And if you say it's a Silverchat person who also cares about freedom, then, well, we're at plus one half. I'd even multiply the last point, about spying capabilities by two, then you get six points for Arctics and zero or a half for any of the other explanations."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"And notice what it took, Gladias. He got to you, and through you he got to one third of one discussion group. The military, the parliament, media platforms - he and his friends walked straight through all of them. The only doors that he couldn't break were the ones whose keys he couldn't find: the Order, the Courts, the graph funding. Privacy isn't a luxury, it's why we're still here."</span></p>
+<p class="dialog">Seila stopped talking. For a few moments, Gladias stayed silent.</p>
+<p class="dialog"><span style="color:#be9b00">"I'm sorry, Seila."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I'm sorry I didn't trust you enough to involve you in this. I love you. I should have trusted and respected not just your heart, but also your mind."</span></p>
+<p class="dialog">Silence again.</p>
+<p class="dialog"><span style="color:#be9b00">"So what do we do?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I hope that Delwart was wrong that you would be useless in Dzego, and you have something amazing to show from all the adventures you've been having there while I've been crying because our kids are stuck in an enclave surrounded by Arctics and trying to clean up your mess."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I think I understand their military well now. Or rather, their shadow military. The official Dzego military is as compromised as ours, and the same situation for the rest of the government. But they've basically built up their Minpentai championship as a sort of secret army training ground, making the bet this whole time that the war that will matter will be a drone war - more similar to Minpentai than to anything like Helisport."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I've been doing my best to convince them that the next battle will be in Veridia, not Dzego - we're ahead on technology and industry that might be a threat to them, but behind on thinking at all about defense - and that if they want to save themselves, they need to come help us over here first."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Good. I hope for the kids' sake, and for Veridia's, and for yours, that you're actually going to have a plan to make that happen."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Convincing the Dzegojan is only half the battle. We also have to convince the Veridians to accept them. And not the Keepers, the parliament. The same parliament whose subcommittee just barely accepted you as a Keeper, eleven to ten, despite having no valid reason to think anything negatively of you - unless they had some magic foresight about how naive you are, which I doubt."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I know."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Do you have any idea how we can do that?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"I do not."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I can try to figure this out. But you will have to trust me."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I will, I promise."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"No more secrets, okay?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Okay."</span></p>
+<p class="dialog"><span style="color:#be9b00">"I promise."</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-20.html">上一章 · 第二十章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-22.html">下一章 · 第二十二章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第二十一章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="paper"
+      data-lang-mode="zh"
+      data-dual-layout="columns"
+      data-active-pane="zh"
+      data-page-mode="scroll"
+      data-ui="visible"
+      data-font="serif"
+      style="--reader-size:20px; --reader-leading:1.8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="《雪月》非官方中文译本 · 第五章。支持中文、英文与双语对照阅读。原作 Snowmoon，作者 Vitalik Buterin。">
+  <meta name="color-scheme" content="light dark">
+  <title>第五章 · Chapter 5 — 雪月 Snowmoon</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="home" href="../index.html">
+  <link rel="contents" href="../toc.html">
+  <link rel="prev" href="chapter-04.html">
+  <link rel="next" href="chapter-06.html">
+  <script src="../assets/reader.js" defer></script>
+<link rel="stylesheet" href="../assets/overrides.css">
+</head>
+<body class="reader-page" data-page="read" data-chapter="5">
+  <a class="skip-link" href="#reader-main">跳到正文</a>
+
+  <!-- [集成修正] 第 3 段 CSS 是按「长/短两套按钮文案」写的（.reader-control__label / .reader-control__short，
+       ≤767px 只显示短文案），但原来的模板里按钮只有一串纯文本，窄屏放不下就横向溢出。
+       这里按 CSS 的预期补上两组文案。#btn-lang 的文案由 JS 负责，不能包 span。 -->
+  <header id="topbar" class="reader-topbar">
+    <nav class="reader-topbar__navigation" aria-label="阅读导航">
+      <a class="reader-brand" href="../index.html" aria-label="雪月，返回主页">
+        雪月 <span lang="en">Snowmoon</span>
+      </a>
+      <span class="reader-topbar__chapter">第五章</span>
+      <a class="reader-control reader-control--toc" href="../toc.html"><span class="reader-control__label">目录页</span><span class="reader-control__short">目录</span></a>
+      <button id="btn-drawer"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="drawer"
+              aria-expanded="false"><span class="reader-control__label">章节目录</span><span class="reader-control__short">章节</span></button>
+      <button id="btn-lang"
+              class="js-only"
+              type="button"
+              aria-label="语言：中文；切换至 English">中文</button>
+      <button id="btn-settings"
+              class="js-only reader-control"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="settings-panel"
+              aria-expanded="false"><span class="reader-control__label">阅读设置</span><span class="reader-control__short">设置</span></button>
+    </nav>
+  </header>
+
+  <div class="reader-progress-track" aria-hidden="true">
+    <div id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <header class="chapter-heading" aria-labelledby="chapter-heading-title">
+    <p class="chapter-heading__eyebrow">雪月 · 非官方中文译本</p>
+    <h1 id="chapter-heading-title">第五章</h1>
+    <p class="chapter-heading__english" lang="en">Chapter 5</p>
+    <p class="chapter-heading__dateline">自由城，联合城邦 · 3724年雨月11日</p>
+    <p class="chapter-heading__dateline chapter-heading__dateline--en" lang="en">Freetown, United Cities · 3724 Rainmoon 11</p>
+  </header>
+
+  <div id="lang-tabs"
+       class="language-tabs"
+       role="tablist"
+       aria-label="对照阅读语言"
+       aria-orientation="horizontal">
+    <button id="tab-zh"
+            type="button"
+            role="tab"
+            data-tab-lang="zh"
+            aria-controls="pane-zh"
+            aria-selected="true"
+            tabindex="0">中文</button>
+    <button id="tab-en"
+            type="button"
+            role="tab"
+            data-tab-lang="en"
+            aria-controls="pane-en"
+            aria-selected="false"
+            tabindex="-1"
+            lang="en">English</button>
+  </div>
+
+  <noscript>
+    <p class="reader-notice">
+      当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
+      正文与章节链接仍可正常使用。
+    </p>
+  </noscript>
+
+  <!-- [集成修正] 原来这里还套了一层 <div class="reader">，导致两栏不是 #reader-main 的直接子元素，
+       分栏用的 grid-template-columns / grid-column 全部落空（两栏变成上下堆叠）。已去掉该层。 -->
+  <main id="reader-main" tabindex="-1" aria-label="章节正文">
+      <section id="pane-zh"
+               class="reader-pane reader-pane--zh"
+               data-lang="zh"
+               lang="zh-CN"
+               aria-label="中文译文"
+               tabindex="0">
+        <div id="viewport-zh" class="reader-viewport">
+          <div id="flow-zh" class="reader-flow">
+            <div class="chapter-content" data-lang="zh">
+              <p class="dialog">泽从空港的大门走出来，回身把门扶住。</p>
+<p class="dialog"><span style="color:#df74b1">“妈，快点！”</span>他喊道。</p>
+<p class="dialog">泽的母亲敏快步跟上，从门里走了出来。白跟在后面，手里拎着一个购物袋。</p>
+<p class="dialog">三人顺着指示牌走到出租车候车点，把行李塞进后备箱，拉开车门坐了进去。</p>
+<p class="dialog"><span style="color:#ed756b">“欢迎来到自由城，你们俩！”</span>白大声说。</p>
+<p class="dialog"><span style="color:#00bc96">“能来真好。”</span>敏回答。<span style="color:#00bc96">“其实这是我头一回出国。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“那这地方跟红郡比怎么样？我看你到现在哪儿都去过了。”</span>敏接着问。</p>
+<p class="dialog"><span style="color:#ed756b">“哦，我觉得红郡更好看。可惜北极的无人机一闹，那边整整五天航班全取消了。”</span></p>
+<p class="dialog"><span style="color:#00bc96">“那真是太糟了。不过到目前为止，我觉得自由城棒极了！也就是说，等我哪天真去成红郡，兴致不会被提前耗掉，到时候对红郡的那股兴奋劲儿，还能跟现在对自由城一样足！”</span></p>
+<p class="dialog">车里安静下来，三人各自望着出租车窗外。车沿着一条高速路开，路边的楼各式各样——有的矮，有的高；有的石头砌的，有的水泥浇的，有的玻璃配钢架；有的好看，有的难看。有些盖到一半就停了工，像是被废弃了。当中还夹着几处确实讨人喜欢的地方：小公园，长椅，树栽得整整齐齐，人在里面待着，会觉得整座城市的其余部分都不存在。</p>
+<p class="dialog">头顶嗡嗡地飞过几架小型飞行器，有的载着单个乘客，有的运着货——多半是给那些有钱又急得不行的人送吃的。</p>
+<p class="dialog">远处有一片区域明显比别处体面，四周围着一道高高的灰、紫两色相间的墙。坐在右侧的白和泽都把目光转了过去。</p>
+<p class="dialog"><span style="color:#ed756b">“大概是本地的大梅港。”</span>白琢磨着说。</p>
+<p class="dialog">出租车拐下高速路，出了匝道，接着沿一条街往前开，绕过了好几个环岛。</p>
+<p class="dialog">有那么几分钟，路上的人和楼里的陈设，看着都比泽国任何地方阔气得多。忽然，车从一座高架桥下穿过，桥那边的房子一下子破旧了不少，餐馆和店铺也更简陋，外面骑摩托车的人多了起来。</p>
+<p class="dialog">出租车一条街一条街地穿过自由城，泽、白和敏一路看下去，躲在这只安全的茧里打量四周。</p>
+<p class="dialog">又开了五分钟，出租车一拐，驶进一个车库。车停稳，车门打开。</p>
+<p class="dialog"><span style="color:#00bc96">“谢谢！”</span>敏喊道，打开后备箱。三人取了行李，走进酒店。</p>
+<p class="dialog">泽把手表拍到一根一米高的柱子顶上，那里有个绿色圆圈，正中间写着“办理入住”。</p>
+<p class="dialog">过了一个嘀嗒，圆圈响了一声。</p>
+<div class="device-view narrow-device-view"><table><tbody><tr><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 100已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">支付成功<b style="font-size: 150%; color: #8f8">✓</b></div></center></td></tr></tbody></table><b>已入住。您的房间号：714、715、716。</b></div>
+<p class="dialog">泽、白和敏的手表同时震了一下，确认了各自的房门钥匙。</p>
+<hr class="rule">
+<p class="dialog">把行李放进房间、冲了个澡之后，泽走出电梯，重新回到酒店大堂。白已经在那儿了，正望着窗外。</p>
+<p class="dialog"><span style="color:#df74b1">“妈说她得睡一觉，我们出去逛逛吧。”</span>泽提议。</p>
+<p class="dialog">白点点头。两人走出酒店，进了自由城的户外天地。</p>
+<p class="dialog"><span style="color:#ed756b">“话说回来，你为什么答应跟我一起来？”</span>白问。</p>
+<p class="dialog"><span style="color:#df74b1">“嗯，这显然是我在很长一段时间内成本最低的一次出国机会。”</span>泽回答。</p>
+<p class="dialog"><span style="color:#df74b1">“半决赛我们俩都赢得很轻松——我的对手根本没料到下到四千回合会突然改规则——我看你赢得还更快。所以决赛就是我和你。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“所以这是个独一无二的局面。换成平时，这就是个囚徒困境：我们谁都不能歇下来享受点什么，因为只要一方歇了，另一方就会在大赛前猛补，占到便宜。但这次不一样——因为我们可以一起歇，就能确定谁也没在偷偷干别的。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“而且剩余很可观——我和妈这辈子都是头一回出国。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“那你又为什么答应带上我？”</span></p>
+<p class="dialog"><span style="color:#ed756b">“这么一想，差不多是一样的。只是没用那套博弈论去算。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“不过对我来说，你所谓的‘剩余’，就是跟你待在一起。”</span></p>
+<p class="dialog">泽哼了一声。</p>
+<hr class="rule">
+<p class="dialog">泽和白来到一栋楼前，它比周围明显更大、也更气派。</p>
+<p class="dialog">招牌上写着“自由城经济研究所”。</p>
+<p class="dialog">研究所名字的正下方列着一张入场费价目表，票价由一个二元函数决定：随你在里面停留时间的平方根递增，随你的学术与智识信誉分升高而递减。</p>
+<p class="dialog">学术与智识信誉分很难挣。那种可以零知识抵押、用来换贷款或者办酒店入住的信誉分，来得容易；只有赖过账、或者把酒店房间砸过好几回，才会变难。学术与智识信誉分就不一样了，得真做点扎实的活儿才行。</p>
+<p class="dialog">入口设了闸机，上面亮着绿色圆圈。泽和白用手持终端一碰，走了进去。</p>
+<p class="dialog">楼里是一整条螺旋状的坡道，绕了好几圈。沿着外墙走的话，几乎感觉不出坡度——周长大约三百米，绕一圈才升高四米。</p>
+<p class="dialog">正中间是电梯和楼梯，留给想快点上下的人。</p>
+<p class="dialog">泽和白慢悠悠地沿坡道走，不久看见一家餐馆。一男一女坐在那儿，喝着茶，吃一盘蔬菜配米饭。旁边有块大屏幕，正在放一场讲解联合城邦共治制度的讲座。</p>
+<figure class="fig"><img src="../assets/images/chapter-05-fig-01.svg" alt="城市之间的双向连接及权重示意图" title="城市之间的双向连接及权重示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#23ba7d">“两座城市建立共治关系后，各自选出对方议会中的一定比例席位。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“这个比例出自事先商定的数字。按人口与 GDP 的几何平均来算，较大的一方按商定比例选出较小城市议会中的席位；较小的一方在较大城市议会中的比例，则等于商定比例除以两城规模之比的平方根。”</span></p>
+<p class="dialog"><span style="color:#23ba7d">“你也许会问，为什么是平方根？因为事实证明，较大的参与方持有较大份额的治理权时，那份效用会超线性地大于小份额的效用——”</span></p>
+<p class="dialog">泽不再听了，任脑子自己转，试着从最基本的原理把这套数学推出来。</p>
+<p class="dialog">白朝桌边那两人走去。</p>
+<p class="dialog">泽还在算那套数学，跟着白走。两人一路走，直到几乎站到了那对正在吃饭的人跟前。</p>
+<p class="dialog"><span style="color:#df74b1">“你们好，两位忙吗？”</span>泽有点局促地冒出一句。</p>
+<p class="dialog"><span style="color:#54a1f9">“啊，不忙，一点都不忙。”</span>那女人回答。</p>
+<p class="dialog"><span style="color:#54a1f9">“来，跟我们坐吧，我是游客，最喜欢遇见本地人，好多了解了解这地方。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“啊，我们也是游客，从泽国来的。”</span>泽回答。<span style="color:#df74b1">“我叫泽。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“我是白。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我叫塞拉。”</span>那女人回答。<span style="color:#54a1f9">“这位是我的……朋友，扬。”</span></p>
+<p class="dialog">泽和白坐了下来。</p>
+<p class="dialog"><span style="color:#ed756b">“那你们是从哪儿来的？”</span>白转头问。</p>
+<p class="dialog"><span style="color:#54a1f9">“维里迪亚。”</span>塞拉回答。</p>
+<p class="dialog"><span style="color:#78b249">“我其实就是本地人。”</span>扬补了一句。</p>
+<p class="dialog"><span style="color:#ed756b">“那你们来这儿是做什么的？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我是写博客的，主要写经济和文化。我和丈夫刚带完这一轮孩子，孩子现在在共同家长那边，所以我们俩都算是在休假——”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“嗯，也不算真休假，还是在工作。就是一边旅行一边看看。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“那自由城到现在感觉怎么样？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“有些方面确实自由。有些方面就不一定了。”</span></p>
+<p class="dialog"><span style="color:#78b249">“这里穿隐私袍的人比维里迪亚和泽国都少，那是因为大家都开车出门，有意思的事基本都发生在那些封闭的院落里。”</span></p>
+<p class="dialog"><span style="color:#78b249">“泽国怎么样？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“老样子。读书，下民本棋。我还在琢磨以后是搞物理还是搞密码学。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“跟他说说你胳膊的事。”</span>白低声说，声音却大到另外三人都听得见。</p>
+<p class="dialog"><span style="color:#df74b1">“哦对，前阵子我们教室被炸，我胳膊断了。”</span></p>
+<p class="dialog">塞拉和扬都愣住了——先是被这条消息本身，接着又被泽讲这件事时那副满不在乎的样子。</p>
+<p class="dialog"><span style="color:#78b249">“袭击越来越厉害了吗？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“他们开始更多地冲教室来。还听说越来越多的监控无人机被偷运进来。”</span></p>
+<p class="dialog"><span style="color:#78b249">“那泽国是不是也打算搞一套自己的反监控网络，好跟上形势？”</span></p>
+<p class="dialog"><span style="color:#df74b1">“问题在于，北极人在各个机构里都有间谍。所以反监控网络要是看得太多，就成了他们自己的武器。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“所以我们才一直在啃密码学。每台监控摄像头都跑一套算法，只在情况可疑时才吐出数据；每次吐数据就往密码学网络发一个哈希，这样我们就能追踪这种事发生的频率；再加上一整套硬件认证和随机红外扫描，确保摄像头跑的程序确实是它声称的那个。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“甚至有条规矩：任何人都可以去把公共场所的摄像头拧开，自己检查。还有些俱乐部专门干这个，把报告发到网上。这套东西相当先进。我真希望自己能弄懂这些加密、证明和认证背后的数学到底是怎么回事。”</span></p>
+<p class="dialog"><span style="color:#ed756b">“得了吧，我们整个去中心化大学分部都知道你是热力学的高手，比老师还强。你完全可以洗点转去密码学，把这些全搞明白。”</span></p>
+<p class="dialog"><span style="color:#df74b1">“你<em>是</em>存心让我没法专心准备民本棋决赛吧？”</span></p>
+<p class="dialog">一个机器人滑到他们桌边，屏幕上是一份菜单。</p>
+<p class="dialog">白和泽凑过去看菜单，轮流按了几下按钮，要了茶，还点了份蔬菜饭，跟塞拉和扬吃的那种差不多。</p>
+<p class="dialog"><span style="color:#78b249">“这场军备竞赛占掉你们多少时间？”</span>扬问。</p>
+<p class="dialog"><span style="color:#ed756b">“占多少时间？我们有百分之几的人是全职干这个的；对其他人来说，除了学会怎么保命，这本来不该算我们的活儿。至于占掉我们多少快乐、多少精神、多少魂——那是另一个问题。”</span></p>
+<p class="dialog">扬和塞拉叹了口气。</p>
+<p class="dialog">几分钟后，机器人端着饮料回来；再过几分钟，又送来了饭。他们吃着，时而说些轻松的话题，听泽和白讲泽国文化的种种细节——民本棋、泽国语、人们盼着国家崛起的那股心气——时而只是沉默。那块屏幕还在讲共治，还在放各种图表和数学公式，这时已经没人再看了。</p>
+<hr class="rule">
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">［正在呼叫］</span></td><td>58130</td></tr></tbody></table></div>
+<p class="dialog">塞拉点了点手表。</p>
+<p class="dialog">她勉强辨认出格拉迪亚斯的脸。</p>
+<p class="dialog"><span style="color:#be9b00">“在自由城过得怎么样？”</span>格拉迪亚斯问。</p>
+<p class="dialog"><span style="color:#54a1f9">“刚跟扬吃了午饭，然后来了两个泽国的可爱孩子。”</span></p>
+<p class="dialog"><span style="color:#be9b00">“他们怎么样？”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“他们特别好。不过北极人对他们做的事太让人难过了——两个里头有一个最近胳膊受了伤。”</span></p>
+<p class="dialog">塞拉决定换个话题。</p>
+<p class="dialog"><span style="color:#54a1f9">“你最近怎么样？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“挺好。”</span></p>
+<p class="dialog">他顿了顿。</p>
+<p class="dialog"><span style="color:#be9b00">“我在琢磨一件事。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“什么事？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“最近有人跟我提了个建议——不要去当监审官，改当掌则人。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“诶！”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“你觉得呢？”</span></p>
+<p class="dialog">格拉迪亚斯停了几秒，明显是在斟酌怎么回答。</p>
+<p class="dialog"><span style="color:#be9b00">“对维里迪亚来说，这更重要——真正把评则本身定对。而且我觉得这份工作会更有意思。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“我的第一反应是，我其实支持这个决定。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“你知道吗，那两个孩子走了以后，这五十来分钟我一直在想泽国。后来扬也很快去开会了。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“他们从我们的图谱资助里获益不少，对吧？”</span></p>
+<p class="dialog"><span style="color:#be9b00">“确实如此。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“可评则呢？评则有没有以任何方式鼓励企业把自家任何一款产品做得对泽国更有用？”</span></p>
+<p class="dialog">格拉迪亚斯想了一会儿。<span style="color:#be9b00">“没有吧，至少我想不出哪条。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“那也许你就该去当掌则人。这可以算你的一个项目！想办法制定或调整评则，让它更好地支持泽国。”</span></p>
+<p class="dialog">塞拉停了一下。</p>
+<p class="dialog">格拉迪亚斯瞪大眼睛，愣愣地看着她。</p>
+<p class="dialog"><span style="color:#54a1f9">“对，就当掌则人，肯定没错。这是最正确的选择。”</span></p>
+<p class="dialog"><span style="color:#54a1f9">“会很有意思的。俗话说，Dze go ba fau gie！”</span></p>
+            </div>
+
+            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
+              <a id="nav-prev" class="chapter-navigation__prev" href="chapter-04.html">上一章 · 第四章</a>
+              <a id="nav-toc" class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a id="nav-next" class="chapter-navigation__next" href="chapter-06.html">下一章 · 第六章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="pane-en"
+               class="reader-pane reader-pane--en"
+               data-lang="en"
+               lang="en"
+               aria-label="英文原文"
+               tabindex="0">
+        <div id="viewport-en" class="reader-viewport">
+          <div id="flow-en" class="reader-flow">
+            <div class="chapter-content" data-lang="en">
+              <p class="dialog">Zei walked out through the door of the air harbor, and held the door open behind him.</p>
+<p class="dialog"><span style="color:#df74b1">"Come on, Mom!"</span>, he shouted.</p>
+<p class="dialog">Zei's mother, Min, hurried forward and came out through the door. Bai followed along behind, carrying a shopping bag.</p>
+<p class="dialog">The three of them followed the signs to the taxi stand, and immediately put their luggage into the taxi's luggage trunk, and opened the doors to get in.</p>
+<p class="dialog"><span style="color:#ed756b">"Welcome to Freetown, you both!"</span>, Bai exclaimed.</p>
+<p class="dialog"><span style="color:#00bc96">"Glad to be here"</span>, Min replied. <span style="color:#00bc96">"Actually my first time abroad."</span></p>
+<p class="dialog"><span style="color:#00bc96">"So how does this compare to Redshire, since I see you've been everywhere by now?"</span>, Min followed up.</p>
+<p class="dialog"><span style="color:#ed756b">"Oh I think Redshire is nicer. Was a shame that the Arctic drones made them cancel all the flights for the past five days."</span></p>
+<p class="dialog"><span style="color:#00bc96">"That really was too bad. But so far I think Freetown is great! So that means whenever I make it to Redshire I won't be spoiled, and I'll feel just as excited about Redshire then as I am about Freetown now!"</span></p>
+<p class="dialog">The conversation quieted down, and the three of them stared out the windows of their taxi. They were driving along a highway, and there were buildings of all shapes and sizes - some short, some tall, some stone, some concrete, some glass and steel, some beautiful, some ugly. Some halfway under construction, seemingly abandoned. And among them a few genuinely charming places, small parks with benches and carefully arranged trees to make the rest of the city seem invisible to someone inside.</p>
+<p class="dialog">A few small copters buzzed in the sky overhead, some carrying individual passengers and others carrying goods - most likely food for the wealthy and extremely impatient.</p>
+<p class="dialog">In the distance, there was one area that seemed noticeably nicer than the others, that was surrounded by a high grey and purple colored wall. Bai and Zei, sitting on the right, both turned their attention toward it.</p>
+<p class="dialog"><span style="color:#ed756b">"Probably the local Greater Plum Harbor"</span>, Bai mused.</p>
+<p class="dialog">The taxi swerved off the highway to take an exit. It then continued driving along a street, winding through several roundabouts.</p>
+<p class="dialog">For a few minutes, the people and the insides of the buildings looked considerably richer than anything in Dzego. Suddenly, they passed under a highway, and on the other side the structures looked significantly more run-down, the restaurants and stores more basic, and more people outside were driving motorcycles.</p>
+<p class="dialog">As they passed through Freetown street by street, Zei, Bai and Min continued looking, observing the surroundings from inside their safe cocoon.</p>
+<p class="dialog">After five more minutes of driving, the taxi turned, and drove into a garage. It stopped, and the door opened.</p>
+<p class="dialog"><span style="color:#00bc96">"Thank you!"</span>, Min shouted, and opened the trunk. The three of them took their luggage, and entered the hotel.</p>
+<p class="dialog">Zei slapped his watch against a green circle on top of a one meter tall pole, which was labeled "Check in" in the center.</p>
+<p class="dialog">After one tick, the circle beeped.</p>
+<div class="device-view narrow-device-view"><table><tbody><tr><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">Rep score ≥ 100 Verified<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td><center><div style="border: 1px solid; border-radius: 5px; padding: 5px">Payment successful<b style="font-size: 150%; color: #8f8">✓</b></div></center></td></tr></tbody></table><b>Checked in. Your room numbers are: 714, 715, 716.</b></div>
+<p class="dialog">Zei, Bai and Min's watches all buzzed in unison, confirming their room keys.</p>
+<hr class="rule">
+<p class="dialog">Having put his luggage into his room and taken a shower, Zei stepped out of the elevator and once again entered the hotel lobby. Bai was already there, looking outside a window.</p>
+<p class="dialog"><span style="color:#df74b1">"Mom said she needs to sleep, we should go explore"</span>, Zei suggested.</p>
+<p class="dialog">Bai nodded. The two exited the hotel, and entered Freetown's great outdoors.</p>
+<p class="dialog"><span style="color:#ed756b">"So why did you agree to come with me anyway?"</span>, Bai asked.</p>
+<p class="dialog"><span style="color:#df74b1">"Well it was obviously the lowest-cost opportunity I would have to go abroad for a long time"</span>, Zei replied.</p>
+<p class="dialog"><span style="color:#df74b1">"We both won our games in the semi-finals easily - my opponent was just not prepared for the sudden rule change four thousand turns in - and I saw you won even faster. So the finals are between me and you."</span></p>
+<p class="dialog"><span style="color:#df74b1">"And so it's a unique situation. Normally, there's a prisoner's dilemma: neither of us can take a break and enjoy anything, because if either of us does, the other will cram harder right before the big game and gain an advantage. But this time, that's not true - because we can both take a break together, so we're sure that neither of us is doing anything else."</span></p>
+<p class="dialog"><span style="color:#df74b1">"And the surplus is high - both Mom and I get to go abroad for the first time in our lives."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Now why did you agree to take me?"</span></p>
+<p class="dialog"><span style="color:#ed756b">"Pretty much the same, now that I think about it. Just without the game theory math."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Though for me what you call the surplus is spending time with you."</span></p>
+<p class="dialog">Zei groaned.</p>
+<hr class="rule">
+<p class="dialog">Zei and Bai arrived at a building that looked noticeably larger and nicer than its surroundings.</p>
+<p class="dialog">"Freetown Economics Institute", a sign read.</p>
+<p class="dialog">Right below the name of the institute, the sign listed a schedule of admission fees, featuring a formula that was a function of two variables: increasing with the square root of how much time you spend inside, and decreasing the higher your academic or intellectual reputation score rises.</p>
+<p class="dialog">Academic and intellectual reputation score was difficult to get. The kind of reputation you could zero-knowledge-collateralize to get loans or check into hotels, that was easy to get; it was only hard if you had failed to pay back loans or trashed hotel rooms multiple times. Academic and intellectual reputation, on the other hand, required doing serious work.</p>
+<p class="dialog">There was an entrance gate with turnstiles and glowing green circles. Zei and Bai tapped their hand devices, and walked through.</p>
+<p class="dialog">The inside of the building was a single spiral-shaped sloped floor that looped around several times. If one walked along the outside wall, the slope was barely noticeable - a circumference of perhaps three hundred meters that one could walk around to climb four meters.</p>
+<p class="dialog">In the middle, there were elevators and staircases, for those who wanted to go up or down faster.</p>
+<p class="dialog">Zei and Bai leisurely walked along the floor, and soon saw a restaurant. Two people, a woman and a man, were sitting, drinking tea and eating a dish with vegetables and rice. There was a large screen, at that moment playing a lecture explaining the United Cities' co-governance system.</p>
+<figure class="fig"><img src="../assets/images/chapter-05-fig-01.svg" alt="城市之间的双向连接及权重示意图" title="城市之间的双向连接及权重示意图" loading="lazy" decoding="async"></figure>
+<p class="dialog"><span style="color:#23ba7d">"When two cities are in a co-governance relationship, they each elect a percentage of the other's parliament."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"The percentage is based on a pre-agreed number. Whichever city is larger, as computed by a geometric average of population and GDP, elects that pre-agreed share of the smaller city's parliament. Whichever city is smaller elects a share of the larger city's parliament equal to the pre-agreed share, divided by the square root of the ratio in the two cities' sizes."</span></p>
+<p class="dialog"><span style="color:#23ba7d">"You might ask, why square root? Well, it turns out that the utility of a large share of governance, held by a larger participant, is superlinearly larger than the utility of a smaller share-"</span></p>
+<p class="dialog">Zei stopped listening, and let his mind ponder, trying to work out the math from first principles.</p>
+<p class="dialog">Bai started walking toward the two people sitting at the table.</p>
+<p class="dialog">Zei, still thinking about the math, followed Bai. They kept walking until they were almost standing over the eaters.</p>
+<p class="dialog"><span style="color:#df74b1">"Hi, are you guys busy?"</span>, he blurted out awkwardly.</p>
+<p class="dialog"><span style="color:#54a1f9">"Ah no, not at all"</span>, the woman answered.</p>
+<p class="dialog"><span style="color:#54a1f9">"Please come sit down with us, I'm a tourist, always happy to meet locals and understand this place better."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Ah, we're also tourists. From Dzego"</span>, Zei replied. <span style="color:#df74b1">"I'm Zei."</span></p>
+<p class="dialog"><span style="color:#ed756b">"And I'm Bai."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"I'm Seila"</span>, the woman replied. <span style="color:#54a1f9">"And this is my ... friend, Jahn."</span></p>
+<p class="dialog">Zei and Bai sat down.</p>
+<p class="dialog"><span style="color:#ed756b">"So where are you from?"</span>, Bai turned to ask.</p>
+<p class="dialog"><span style="color:#54a1f9">"Veridia"</span>, Seila responded.</p>
+<p class="dialog"><span style="color:#78b249">"And I'm actually a local"</span>, Jahn added.</p>
+<p class="dialog"><span style="color:#ed756b">"So what brings you here?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Well, I'm a blogger, I focus on economics and culture. My husband's and my turn to take care of our children just finished, they're with our co-parents now, so we're both taking a break -"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Well, not really a break, still working. But traveling and exploring."</span></p>
+<p class="dialog"><span style="color:#ed756b">"So how has Freetown been so far?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Well, free in some ways. Not always in others."</span></p>
+<p class="dialog"><span style="color:#78b249">"You don't see as many privacy robes here as in Veridia or Dzego, but that's because people just go around in cars, all the interesting stuff tends to happen in these enclosed compounds."</span></p>
+<p class="dialog"><span style="color:#78b249">"How is Dzego?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Same old. Studying, playing Minpentai. I'm trying to figure out if I'm going into physics or cryptography."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Tell him about your arm"</span>, Bai whispered, loudly enough that all three of the others could hear.</p>
+<p class="dialog"><span style="color:#df74b1">"Oh yeah, my arm broke when our classroom got bombed a while back."</span></p>
+<p class="dialog">Seila and Jahn froze in surprise - first at the revelation, and then once again at Zei's total nonchalance in relating the news.</p>
+<p class="dialog"><span style="color:#78b249">"Are the attacks getting worse?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"They're starting to go after classrooms more. Have also been hearing about more and more surveillance drones getting snuck in."</span></p>
+<p class="dialog"><span style="color:#78b249">"So is Dzego going to, like, add its own counter-surveillance network to keep up?"</span></p>
+<p class="dialog"><span style="color:#df74b1">"Well, the problem is, the Arctics got spies inside all the agencies, so if the counter-surveillance network can see too much, then it becomes their own weapon."</span></p>
+<p class="dialog"><span style="color:#df74b1">"That's why we've been trying to figure out the cryptography. Each surveillance camera running an algorithm, revealing data only in those cases where it's suspicious, posting a hash to a cryptographic network every time it reveals so we can track how often it's happening, and then a whole system of hardware attestations and randomized infrared scanning to make sure that the cameras are actually running the code that they say they are."</span></p>
+<p class="dialog"><span style="color:#df74b1">"There's even a rule that anyone can go and unscrew any camera in public and inspect it themselves. There's entire clubs that do it and publish their reports online. It's pretty advanced stuff. I wish I could understand how all the math behind these encryptions and proofs and attestations works."</span></p>
+<p class="dialog"><span style="color:#ed756b">"Come on, our whole DU chapter knows you're a hotshot at understanding thermodynamics, even better than the teacher. You can totally re-spec to cryptography and figure this all out."</span></p>
+<p class="dialog"><span style="color:#df74b1">"Are you <em>trying</em> to distract me from focusing on the Minpentai finals?"</span></p>
+<p class="dialog">A robot slid up to them, with a menu on its screen.</p>
+<p class="dialog">Bai and Zei started looking, and clicked buttons in turn to order some tea, as well as a similar rice and vegetables dish to what Seila and Jahn were eating.</p>
+<p class="dialog"><span style="color:#78b249">"How much of your time is this whole arms race taking up?"</span>, Jahn asked.</p>
+<p class="dialog"><span style="color:#ed756b">"Of our time? Well, a few percent of us are full-time on it, for the rest, it's not supposed to be our job, beyond keeping up with how to stay safe. Of our happiness, our spirits, our souls? That's a different question."</span></p>
+<p class="dialog">Jahn and Seila sighed.</p>
+<p class="dialog">A few minutes later, the robot came back with their drinks, and a few minutes after that the robot came back again with their food. They ate, at times engaging in light conversation learning more nuances of Dzego culture - Minpentai, the Dzegoban language, the people's strong will to see the nation rise - and at times silently. The screen, continuing to explain co-governance and show various diagrams and mathematical formulas, now went entirely unnoticed.</p>
+<hr class="rule">
+<div class="device-view narrow-device-view"><table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead><tbody><tr><td style="width: 25%"><center>Gladias</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">[now calling]</span></td><td>58130</td></tr></tbody></table></div>
+<p class="dialog">Seila tapped on the watch.</p>
+<p class="dialog">She could make out Gladias's face.</p>
+<p class="dialog"><span style="color:#be9b00">"How is your time in Freetown?"</span>, Gladias asked.</p>
+<p class="dialog"><span style="color:#54a1f9">"Just had lunch with Jahn, and then these lovely kids from Dzego came by."</span></p>
+<p class="dialog"><span style="color:#be9b00">"How were they?"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"They were wonderful. Though it's so sad what the Arctics are doing to them - one of the two got his arm injured recently."</span></p>
+<p class="dialog">Seila decided to change the subject.</p>
+<p class="dialog"><span style="color:#54a1f9">"How have you been?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Good."</span></p>
+<p class="dialog">He paused.</p>
+<p class="dialog"><span style="color:#be9b00">"I'm pondering something."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What is it?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Someone suggested to me recently - that instead of going for being a Sentinel, I should be a Keeper instead."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Huh!"</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What do you think about that?"</span></p>
+<p class="dialog">Gladias visibly paused for a few moments, to ponder his answer.</p>
+<p class="dialog"><span style="color:#be9b00">"It's the more important thing for Veridia, to really make sure that the rubrics themselves are set right. And I feel like the work will be more interesting."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Well my first instinct is that I actually support the decision."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"You know, I've been thinking about Dzego for these past fifty minutes or so after those kids left, and then Jahn had to go for a meeting soon after."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"They benefit a lot from our Graph Funding, right?"</span></p>
+<p class="dialog"><span style="color:#be9b00">"Indeed they do."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"What about the rubrics though? Do the rubrics encourage companies to make any of their products more helpful to Dzego in any way?"</span></p>
+<p class="dialog">Gladias thought for a few moments. <span style="color:#be9b00">"Not really, at least I can't think of anything."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"Well maybe you should become a Keeper. And this could be one of your projects! Figure out how to make or adjust the rubrics to support Dzego better."</span></p>
+<p class="dialog">Seila paused for a moment.</p>
+<p class="dialog">Gladias stared in response, his eyes wide open.</p>
+<p class="dialog"><span style="color:#54a1f9">"Yeah become a Keeper definitely. It's exactly the right choice."</span></p>
+<p class="dialog"><span style="color:#54a1f9">"It'll be fun. As they say, Dze go ba fau gie!"</span></p>
+            </div>
+
+            <nav class="chapter-navigation"
+                 aria-label="英文正文章末导航"
+                 lang="zh-CN">
+              <a class="chapter-navigation__prev" href="chapter-04.html">上一章 · 第四章</a>
+              <a class="chapter-navigation__toc" href="../toc.html">返回目录</a>
+              <a class="chapter-navigation__next" href="chapter-06.html">下一章 · 第六章</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer id="bottombar" class="reader-bottombar js-only" aria-label="翻屏与阅读进度">
+    <!-- [集成修正] 分页模式用「页」、滚动模式用「屏」，文案随 data-page-mode 切换 -->
+    <button id="btn-prev-screen" type="button" aria-label="上一屏或上一页"><span class="flip-label" data-mode="scroll">上一屏</span><span class="flip-label" data-mode="paged">上一页</span></button>
+    <span id="page-indicator" role="status" aria-live="off" aria-atomic="true">本章 0%</span>
+    <button id="btn-next-screen" type="button" aria-label="下一屏或下一页"><span class="flip-label" data-mode="scroll">下一屏</span><span class="flip-label" data-mode="paged">下一页</span></button>
+  </footer>
+
+  <aside id="drawer"
+         class="reader-dialog reader-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="目录"
+         aria-labelledby="drawer-title"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="drawer-title">章节目录</h2>
+      <button id="drawer-close" type="button" aria-label="关闭章节目录">关闭</button>
+    </header>
+    <div class="reader-dialog__body">
+      <p class="drawer-current">正在阅读：第五章</p>
+      <p class="drawer-summary">全书 32 章 · <a href="../toc.html">打开完整目录</a></p>
+      <ol id="drawer-toc" class="toc-list toc-list--drawer">
+        <li data-chapter="1"><a class="chapter-link" href="chapter-01.html"><span class="chapter-title-zh">第一章</span><span class="chapter-title-en" lang="en">Chapter 1</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月3日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="2"><a class="chapter-link" href="chapter-02.html"><span class="chapter-title-zh">第二章</span><span class="chapter-title-en" lang="en">Chapter 2</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="3"><a class="chapter-link" href="chapter-03.html"><span class="chapter-title-zh">第三章</span><span class="chapter-title-en" lang="en">Chapter 3</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雪月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="4"><a class="chapter-link" href="chapter-04.html"><span class="chapter-title-zh">第四章</span><span class="chapter-title-en" lang="en">Chapter 4</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雪月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="5"><a class="chapter-link" href="chapter-05.html"><span class="chapter-title-zh">第五章</span><span class="chapter-title-en" lang="en">Chapter 5</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雨月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="6"><a class="chapter-link" href="chapter-06.html"><span class="chapter-title-zh">第六章</span><span class="chapter-title-en" lang="en">Chapter 6</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月12日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="7"><a class="chapter-link" href="chapter-07.html"><span class="chapter-title-zh">第七章</span><span class="chapter-title-en" lang="en">Chapter 7</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月23日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="8"><a class="chapter-link" href="chapter-08.html"><span class="chapter-title-zh">第八章</span><span class="chapter-title-en" lang="en">Chapter 8</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雨月26日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="9"><a class="chapter-link" href="chapter-09.html"><span class="chapter-title-zh">第九章</span><span class="chapter-title-en" lang="en">Chapter 9</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雨月28日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="10"><a class="chapter-link" href="chapter-10.html"><span class="chapter-title-zh">第十章</span><span class="chapter-title-en" lang="en">Chapter 10</span><span class="chapter-dateline">自由城，联合城邦 · 3724年风月24日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="11"><a class="chapter-link" href="chapter-11.html"><span class="chapter-title-zh">第十一章</span><span class="chapter-title-en" lang="en">Chapter 11</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年花期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="12"><a class="chapter-link" href="chapter-12.html"><span class="chapter-title-zh">第十二章</span><span class="chapter-title-en" lang="en">Chapter 12</span><span class="chapter-dateline">萨祖都，泽国 · 3724年草期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="13"><a class="chapter-link" href="chapter-13.html"><span class="chapter-title-zh">第十三章</span><span class="chapter-title-en" lang="en">Chapter 13</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年获月8日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="14"><a class="chapter-link" href="chapter-14.html"><span class="chapter-title-zh">第十四章</span><span class="chapter-title-en" lang="en">Chapter 14</span><span class="chapter-dateline">萨祖都，泽国 · 3724年火月10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="15"><a class="chapter-link" href="chapter-15.html"><span class="chapter-title-zh">第十五章</span><span class="chapter-title-en" lang="en">Chapter 15</span><span class="chapter-dateline">自由城，联合城邦 · 3724年火月17日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="16"><a class="chapter-link" href="chapter-16.html"><span class="chapter-title-zh">第十六章</span><span class="chapter-title-en" lang="en">Chapter 16</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年火月25日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="17"><a class="chapter-link" href="chapter-17.html"><span class="chapter-title-zh">第十七章</span><span class="chapter-title-en" lang="en">Chapter 17</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年果月11日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="18"><a class="chapter-link" href="chapter-18.html"><span class="chapter-title-zh">第十八章</span><span class="chapter-title-en" lang="en">Chapter 18</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年果月18日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="19"><a class="chapter-link" href="chapter-19.html"><span class="chapter-title-zh">第十九章</span><span class="chapter-title-en" lang="en">Chapter 19</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年葡期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="20"><a class="chapter-link" href="chapter-20.html"><span class="chapter-title-zh">第二十章</span><span class="chapter-title-en" lang="en">Chapter 20</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期10日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="21"><a class="chapter-link" href="chapter-21.html"><span class="chapter-title-zh">第二十一章</span><span class="chapter-title-en" lang="en">Chapter 21</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年雾期20日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="22"><a class="chapter-link" href="chapter-22.html"><span class="chapter-title-zh">第二十二章</span><span class="chapter-title-en" lang="en">Chapter 22</span><span class="chapter-dateline">自由城，联合城邦 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="23"><a class="chapter-link" href="chapter-23.html"><span class="chapter-title-zh">第二十三章</span><span class="chapter-title-en" lang="en">Chapter 23</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期22日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="24"><a class="chapter-link" href="chapter-24.html"><span class="chapter-title-zh">第二十四章</span><span class="chapter-title-en" lang="en">Chapter 24</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年雾期27日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="25"><a class="chapter-link" href="chapter-25.html"><span class="chapter-title-zh">第二十五章</span><span class="chapter-title-en" lang="en">Chapter 25</span><span class="chapter-dateline">帕佛盖都，泽国 · 3724年霜期1日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="26"><a class="chapter-link" href="chapter-26.html"><span class="chapter-title-zh">第二十六章</span><span class="chapter-title-en" lang="en">Chapter 26</span><span class="chapter-dateline">维里迪亚 · 3724年霜期5日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="27"><a class="chapter-link" href="chapter-27.html"><span class="chapter-title-zh">第二十七章</span><span class="chapter-title-en" lang="en">Chapter 27</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期7日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="28"><a class="chapter-link" href="chapter-28.html"><span class="chapter-title-zh">第二十八章</span><span class="chapter-title-en" lang="en">Chapter 28</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3724年霜期15日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="29"><a class="chapter-link" href="chapter-29.html"><span class="chapter-title-zh">第二十九章</span><span class="chapter-title-en" lang="en">Chapter 29</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月29日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="30"><a class="chapter-link" href="chapter-30.html"><span class="chapter-title-zh">第三十章</span><span class="chapter-title-en" lang="en">Chapter 30</span><span class="chapter-dateline">埃莱纳森林，维里迪亚 · 3725年雪月30日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="31"><a class="chapter-link" href="chapter-31.html"><span class="chapter-title-zh">第三十一章</span><span class="chapter-title-en" lang="en">Chapter 31</span><span class="chapter-dateline">北林，维里迪亚 · 3725年雨月2日</span><span class="chapter-status"></span></a></li>
+<li data-chapter="32"><a class="chapter-link" href="chapter-32.html"><span class="chapter-title-zh">第三十二章</span><span class="chapter-title-en" lang="en">Chapter 32</span><span class="chapter-dateline">梅尔丹，维里迪亚 · 3725年雨月12日</span><span class="chapter-status"></span></a></li>
+      </ol>
+    </div>
+    <footer class="reader-dialog__footer">
+      <a href="../index.html">返回主页</a>
+    </footer>
+  </aside>
+
+  <aside id="settings-panel"
+         class="reader-dialog reader-settings"
+         role="dialog"
+         aria-modal="true"
+         aria-label="阅读设置"
+         aria-labelledby="settings-title"
+         aria-describedby="settings-note"
+         tabindex="-1"
+         hidden>
+    <header class="reader-dialog__header">
+      <h2 id="settings-title">阅读设置</h2>
+      <button id="settings-close" type="button" aria-label="关闭阅读设置">关闭</button>
+    </header>
+
+    <div class="reader-dialog__body">
+      <p id="settings-note" class="settings-note">
+        设置即时生效，并尽可能保存在当前浏览器中。
+      </p>
+
+      <fieldset class="setting-group">
+        <legend>字号</legend>
+        <div class="setting-options">
+          <button type="button" data-set="size" data-value="16" aria-pressed="false" aria-label="字号，小，16像素">小 · 16</button>
+          <button type="button" data-set="size" data-value="18" aria-pressed="false" aria-label="字号，较小，18像素">较小 · 18</button>
+          <button type="button" data-set="size" data-value="20" aria-pressed="true" aria-label="字号，标准，20像素">标准 · 20</button>
+          <button type="button" data-set="size" data-value="22" aria-pressed="false" aria-label="字号，较大，22像素">较大 · 22</button>
+          <button type="button" data-set="size" data-value="24" aria-pressed="false" aria-label="字号，大，24像素">大 · 24</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>行距</legend>
+        <div class="setting-options">
+          <button type="button" data-set="leading" data-value="1.7" aria-pressed="false">紧凑 · 1.7</button>
+          <button type="button" data-set="leading" data-value="1.8" aria-pressed="true">标准 · 1.8</button>
+          <button type="button" data-set="leading" data-value="1.9" aria-pressed="false">宽松 · 1.9</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>字体</legend>
+        <div class="setting-options">
+          <button type="button" data-set="font" data-value="serif" aria-pressed="true">宋体</button>
+          <button type="button" data-set="font" data-value="sans" aria-pressed="false">黑体</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>主题</legend>
+        <div class="setting-options">
+          <button type="button" data-set="theme" data-value="paper" aria-pressed="true">羊皮纸</button>
+          <button type="button" data-set="theme" data-value="light" aria-pressed="false">浅色</button>
+          <button type="button" data-set="theme" data-value="dark" aria-pressed="false">深色</button>
+          <button type="button" data-set="theme" data-value="night" aria-pressed="false">夜间护眼</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group">
+        <legend>翻页</legend>
+        <div class="setting-options">
+          <button type="button" data-set="mode" data-value="scroll" aria-pressed="true">上下滚动</button>
+          <button type="button" data-set="mode" data-value="paged" aria-pressed="false">左右翻页</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="language-help">
+        <legend>语言</legend>
+        <div class="setting-options">
+          <button type="button" data-set="lang" data-value="zh" aria-pressed="true">中文</button>
+          <button type="button" data-set="lang" data-value="en" aria-pressed="false"><span lang="en">English</span><span class="sr-only">，英文原文</span></button>
+          <button type="button" data-set="lang" data-value="dual" aria-pressed="false">对照</button>
+        </div>
+        <p id="language-help" class="setting-help">
+          对照模式按可用空间自动选择左右分栏或双标签页；分栏时英文在左，中文在右。
+        </p>
+      </fieldset>
+
+      <fieldset class="setting-group" aria-describedby="sync-help">
+        <legend>同步滚动</legend>
+        <div class="setting-options">
+          <button type="button" data-set="sync" data-value="off" aria-pressed="true">关闭</button>
+          <button type="button" data-set="sync" data-value="on" aria-pressed="false">开启</button>
+        </div>
+        <p id="sync-help" class="setting-help">
+          对照模式下按阅读百分比同步两种语言的位置，不逐段对齐；分页时按页码比例同步。
+        </p>
+      </fieldset>
+
+      <section class="reader-shortcuts" aria-labelledby="shortcuts-title">
+        <h3 id="shortcuts-title">阅读操作</h3>
+        <p>点击正文左侧或右侧翻屏，点击中部显隐菜单。链接、控件、选中文字及终端内部滚动区域不触发翻屏。</p>
+        <dl>
+          <div>
+            <dt><kbd>←</kbd> / <kbd>→</kbd></dt>
+            <dd>上一屏 / 下一屏；到章首或章末继续按可切换章节</dd>
+          </div>
+          <div>
+            <dt><kbd>↑</kbd> / <kbd>↓</kbd></dt>
+            <dd>滚动当前阅读栏</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>关闭面板，或显隐菜单</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>切换主题</dd>
+          </div>
+          <div>
+            <dt><kbd>D</kbd></dt>
+            <dd>切换中文、英文与对照模式</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </aside>
+
+  <div id="scrim" class="reader-scrim" aria-hidden="true" hidden></div>
+</body>
+</html>
