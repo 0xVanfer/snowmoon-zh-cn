@@ -318,8 +318,6 @@ def build() -> None:
             HOME_HREF="../index.html", TOC_HREF="../toc.html",
             PREV_HREF=f"chapter-{prev_of(ch, chapters):02d}.html" if prev_of(ch, chapters) else "../toc.html",
             NEXT_HREF=f"chapter-{next_of(ch, chapters):02d}.html" if next_of(ch, chapters) else "../toc.html",
-            PREV_LABEL=f"上一章 · 第{cn_num(prev_of(ch, chapters))}章" if prev_of(ch, chapters) else "返回目录",
-            NEXT_LABEL=f"下一章 · 第{cn_num(next_of(ch, chapters))}章" if next_of(ch, chapters) else "返回目录",
             # 底栏「上一章 / 下一章」：首章没有上一章、末章没有下一章，直接用 hidden 收起
             PREV_CH_HREF=f"chapter-{prev_of(ch, chapters):02d}.html" if prev_of(ch, chapters) else "",
             NEXT_CH_HREF=f"chapter-{next_of(ch, chapters):02d}.html" if next_of(ch, chapters) else "",
@@ -340,8 +338,6 @@ def build() -> None:
         pages.append((ch, inject_overrides(fill(tpl, values, f"read/chapter-{ch:02d}.html"),
                                         "../assets/")))
 
-    # ---- 落盘阶段：到这里所有校验都已经过了 ----
-    OUT.mkdir(parents=True, exist_ok=True)
     first = chapters[0]
     # ---- 主页 / 目录页：同样在**计划阶段**渲染完 ----
     # [P1] 原来这两页在落盘阶段才 fill()，占位符缺失会发生在 assets 已拷贝、

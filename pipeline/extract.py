@@ -17,7 +17,6 @@
 """
 from __future__ import annotations
 
-import html
 import json
 import re
 import sys
@@ -33,8 +32,6 @@ VOID = {
     "path", "rect", "line", "circle", "polygon", "polyline", "ellipse",
     "use", "stop", "animate", "animateTransform", "set",
 }
-# 内联（非块级）标签白名单：保留在可译片段内部
-INLINE = {"span", "b", "strong", "i", "em", "sup", "sub", "code", "a", "br", "u", "small", "mark", "abbr"}
 # 块级标签：递归进入结构
 BLOCK = {"p", "div", "table", "thead", "tbody", "tfoot", "tr", "td", "th",
          "ul", "ol", "li", "blockquote", "center", "h1", "h2", "h3", "h4", "h5", "h6",
@@ -441,8 +438,6 @@ class Extractor:
         body = "".join(x for x in inner if x)
         if body == "":
             return ""
-        if node.tag == "br":
-            return "<br/>"
         return f"<{node.tag}{attr_str(self.out_attrs(node))}>{body}</{node.tag}>"
 
     def render_layout_items(self, node: Node, segs_here: list[str], ctx: list) -> str:
@@ -491,8 +486,6 @@ class Extractor:
         out: list[dict] = []
         for node in page.children:
             if isinstance(node, str):
-                continue
-            if not isinstance(node, Node):
                 continue
             if node.tag in ("script", "style", "nav", "button"):
                 continue

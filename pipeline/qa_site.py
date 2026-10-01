@@ -61,17 +61,18 @@ ZH_FILE_RE = re.compile(r"chapter-(\d+)\.zh\.json$")
 CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 
 # 结构契约：reader.js 真正查询、CSS 真正选择、跳转链接真正指向的 id。
-# 改名 = 双语两栏 / 翻页 / 面板 / 章末跳转整条链路静默失效，而页面不报错：
+# 改名 = 双语两栏 / 翻页 / 面板 / 章首章末跳章整条链路静默失效，而页面不报错：
 #   reader.js:357 `if (!main) return;` —— #reader-main 一改名，第 2 段整个布局与翻页就没了；
-#   reader.js:1197 章边界跳转靠 #nav-prev/#nav-next；reader.js:45 的 skip-link 指向 #reader-main；
+#   章首/章末继续按「上一屏 / 下一屏」时跨章，reader.js 取的是 <link rel="prev|next">，
+#   删掉这两行会让「翻到最后一页再按下一屏」静默失效；
 #   style.css/overrides.css 的无 JS 降级按 html:not([data-js]) #pane-zh / #lang-tabs 选。
 CHAPTER_IDS = (
     "reader-main", "pane-zh", "pane-en",          # 双语两栏与排版
     "topbar", "bottombar", "progress-bar", "page-indicator",  # 顶栏/底栏/进度
     "lang-tabs",                                   # 对照标签页
-    "nav-prev", "nav-next", "nav-toc",             # 章首/章末跳转
     "drawer", "drawer-toc", "settings-panel", "scrim",  # 目录抽屉与设置面板
     "btn-drawer", "btn-lang", "btn-settings", "btn-prev-screen", "btn-next-screen",
+    "btn-prev-chapter", "btn-next-chapter",       # 底栏跳章
 )
 # 主页/目录页上 reader.js 也按 id 取的元素
 PAGE_IDS = {"index.html": ("continue-reading",), "toc.html": ("toc-list", "toc-progress")}
@@ -328,6 +329,14 @@ def main() -> None:
         for cid in CHAPTER_IDS:
             if f'id="{cid}"' not in text:
                 problems.append(f"chapter-{ch:02d}: 缺少 id=\"{cid}\"（reader.js 会按它取元素）")
+        # 章末那排可见导航已删，跨章跳转只剩 <link rel="prev|next"> 这一个载体：
+        # reader.js 到章首/章末继续按「上一屏 / 下一屏」时全靠它。少了它，
+        # 「翻到最后一页再按下一屏」会静默变成什么都没发生，而页面不报错。
+        for rel in ("prev", "next"):
+            if not re.search(rf'<link rel="{rel}" href="[^"]+"\s*/?>', text):
+                problems.append(
+                    f"chapter-{ch:02d}: 缺少非空的 <link rel=\"{rel}\">"
+                    "（章首/章末翻屏的跨章跳转靠它）")
         problems.extend(anchor_problems(f"read/chapter-{ch:02d}.html", text))
     for name, text in (("index.html", index), ("toc.html", toc)):
         for cid in PAGE_IDS[name]:

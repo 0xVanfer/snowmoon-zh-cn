@@ -591,7 +591,9 @@
   }, { passive: true });
 
   function navigate(direction) {
-    var link = S.qs(direction > 0 ? '#nav-next' : '#nav-prev');
+    // 章首/章末换章走 <link rel="prev|next">（首章 prev、末章 next 回落到目录页）；
+    // 原来取的是章末那排已删除的 #nav-prev/#nav-next，可见入口是底栏那对按钮。
+    var link = document.querySelector(direction > 0 ? 'link[rel="next"]' : 'link[rel="prev"]');
     if (link && link.getAttribute('href')) window.location.assign(link.href);
   }
   S.step = function (direction) {
@@ -742,7 +744,9 @@
   // 于是同一段里的句子各占一行，颜色、加粗、虚构语言等内联样式都原样保留；
   // 切回「常规」时把这些 span 删掉即可，正文 DOM 与构建产物保持一致。
   var SENTENCE_END = /[^。！？…!?]*[。！？…!?]+[”’」』）)\]】]*/g;
-  var PARAGRAPH_SKIP = '.scene-break, .dateline, .chapter-title';
+  // .dateline / .chapter-title 曾在这里：章标题与卷首日期由 .chapter-heading 渲染，
+  // render_blocks 不会再放进正文流（kind=title / dateline-open 被跳过），两个选择器永远匹配不到。
+  var PARAGRAPH_SKIP = '.scene-break';
   var PARAGRAPH_SKIP_INSIDE = '.device-view, figure, table, .dz-card, .pagination-table-scroll';
 
   function addSentenceGaps(p) {
@@ -1212,7 +1216,9 @@
       var next = m.page + delta;
       if (next < 0 || next >= m.pages) {
         persist();
-        var link = document.getElementById(delta < 0 ? 'nav-prev' : 'nav-next');
+        // 翻到本章第一页还想再退、或翻到最后一页还想再进：整页换章。
+        // 目标取自 <link rel="prev|next">，与第 2 段 navigate 同一来源。
+        var link = document.querySelector(delta < 0 ? 'link[rel="prev"]' : 'link[rel="next"]');
         if (link && link.getAttribute('href')) location.assign(link.href);
         return;
       }

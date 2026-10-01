@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="{{ASSET_PREFIX}}style.css">
   <link rel="home" href="{{HOME_HREF}}">
   <link rel="contents" href="{{TOC_HREF}}">
+  <!-- 章首/章末继续按「上一屏 / 下一屏」时靠这两行换章（首章 prev、末章 next 回落目录页）。
+       章末那排可见的「上一章 / 返回目录 / 下一章」已按用户要求删除，跳章入口只剩底栏那对按钮。 -->
   <link rel="prev" href="{{PREV_HREF}}">
   <link rel="next" href="{{NEXT_HREF}}">
   <script src="{{ASSET_PREFIX}}reader.js" defer></script>
@@ -92,7 +94,7 @@
   <noscript>
     <p class="reader-notice">
       当前为中文滚动阅读。阅读设置、进度记忆和双语切换需要 JavaScript；
-      正文与章节链接仍可正常使用。
+      正文与顶栏的「目录页」链接仍可正常使用。
     </p>
   </noscript>
 
@@ -110,12 +112,6 @@
             <div class="chapter-content" data-lang="zh">
               {{CONTENT_ZH}}
             </div>
-
-            <nav id="chapter-nav" class="chapter-navigation" aria-label="中文正文章末导航">
-              <a id="nav-prev" class="chapter-navigation__prev" href="{{PREV_HREF}}">{{PREV_LABEL}}</a>
-              <a id="nav-toc" class="chapter-navigation__toc" href="{{TOC_HREF}}">返回目录</a>
-              <a id="nav-next" class="chapter-navigation__next" href="{{NEXT_HREF}}">{{NEXT_LABEL}}</a>
-            </nav>
           </div>
         </div>
       </section>
@@ -131,14 +127,6 @@
             <div class="chapter-content" data-lang="en">
               {{CONTENT_EN}}
             </div>
-
-            <nav class="chapter-navigation"
-                 aria-label="英文正文章末导航"
-                 lang="zh-CN">
-              <a class="chapter-navigation__prev" href="{{PREV_HREF}}">{{PREV_LABEL}}</a>
-              <a class="chapter-navigation__toc" href="{{TOC_HREF}}">返回目录</a>
-              <a class="chapter-navigation__next" href="{{NEXT_HREF}}">{{NEXT_LABEL}}</a>
-            </nav>
           </div>
         </div>
       </section>

@@ -39,7 +39,8 @@
 - 点击区域：正文区左 1/3 = 上一屏/上一页，右 1/3 = 下一屏/下一页，中间 1/3 = 显隐菜单。
 - 翻页模式两种，可切换并记忆：①上下滚动（默认）②左右翻页（分页，CSS 多列或分屏实现，
   到本章末页再按下一页自动进入下一章）。分页模式要处理「高于一页的图片/表格」不炸版。
-- 上/下一章按钮在滚动到章末时也要自然出现（章末导航块，含「返回目录」）。
+- 章末不要再放「上一章 / 返回目录 / 下一章」导航块：底栏那对按钮已经承担跳章，章末再放一排是重复。
+  跳章仍要保留（到本章末页再按下一页自动进入下一章），用 `<link rel="prev|next">` 携带目标即可。
 - 键盘：`←/→` 翻页或翻章、`↑/↓` 滚动、`Esc` 关菜单/抽屉、`t` 切主题、`d` 切语言模式。
 - 进度记忆（localStorage）：记录 章号、滚动位置/页码、字号、主题、语言模式、翻页模式；
   再次进入该章恢复位置，主页显示「继续阅读 第X章」。
@@ -103,8 +104,7 @@ assets/images/*.svg
 | --- | --- |
 | `{{ASSET_PREFIX}}` | 相对本页的资源前缀，如 `assets/` 或 `../assets/`。写链接时必须形如 `{{ASSET_PREFIX}}style.css` |
 | `{{HOME_HREF}}` `{{TOC_HREF}}` | 主页/目录的相对链接 |
-| `{{PREV_HREF}}` `{{NEXT_HREF}}` | 上一章/下一章链接（首章上一章指向 `toc.html`，末章下一章指向 `toc.html`） |
-| `{{PREV_LABEL}}` `{{NEXT_LABEL}}` | 上一章/下一章的按钮文案（如「上一章 · 第X章」） |
+| `{{PREV_HREF}}` `{{NEXT_HREF}}` | 上一章/下一章链接（首章上一章指向 `toc.html`，末章下一章指向 `toc.html`），只放在 `<link rel="prev">` / `<link rel="next">` 上供 JS 跨章跳转使用 |
 | `{{PREV_CH_HREF}}` `{{NEXT_CH_HREF}}` | 底栏「上一章/下一章」链接；首章的上一章、末章的下一章填空串 |
 | `{{PREV_CH_HIDDEN}}` `{{NEXT_CH_HIDDEN}}` | 首章/末章对应一侧填 ` hidden`（带前导空格）把该按钮收起 |
 | `{{REPO_URL}}` | `https://github.com/0xVanfer/snowmoon-zh-cn` |
@@ -133,16 +133,16 @@ assets/images/*.svg
 | --- | --- |
 | `index.html` | `ASSET_PREFIX` `BUILD_DATE` `CHAPTER_COUNT` `CONTACT_EMAIL` `HOME_HREF` `NEXT_HREF` `REPO_URL` `SITE_TITLE` `SITE_URL` `TOC_HREF` `TOTAL_WORDS` `UPSTREAM_URL` |
 | `toc.html` | `index.html` 那一组去掉 `SITE_TITLE`，加上 `TOC_ITEMS` |
-| `chapter.html` | `ASSET_PREFIX` `CHAPTER_COUNT` `CHAPTER_DATELINE_EN` `CHAPTER_DATELINE_ZH` `CHAPTER_NO` `CHAPTER_TITLE_EN` `CHAPTER_TITLE_ZH` `CONTENT_EN` `CONTENT_ZH` `HOME_HREF` `NEXT_CH_HIDDEN` `NEXT_CH_HREF` `NEXT_HREF` `NEXT_LABEL` `PREV_CH_HIDDEN` `PREV_CH_HREF` `PREV_HREF` `PREV_LABEL` `TOC_HREF` `TOC_ITEMS` |
+| `chapter.html` | `ASSET_PREFIX` `CHAPTER_COUNT` `CHAPTER_DATELINE_EN` `CHAPTER_DATELINE_ZH` `CHAPTER_NO` `CHAPTER_TITLE_EN` `CHAPTER_TITLE_ZH` `CONTENT_EN` `CONTENT_ZH` `HOME_HREF` `NEXT_CH_HIDDEN` `NEXT_CH_HREF` `NEXT_HREF` `PREV_CH_HIDDEN` `PREV_CH_HREF` `PREV_HREF` `TOC_HREF` `TOC_ITEMS` |
 
 章页的「上一章/下一章」用 `{{NEXT_HREF}}` / `{{PREV_HREF}}`（首末章自动落到 `../toc.html`），
 **不要把章节号或文件名写死在模板里**——章数与首章都是构建期算出来的。
 
-正文里会用到的元素/类（构建脚本产出，请你给它们写样式）：
+正文里会用到的元素/类（构建脚本产出，请你给它们写样式）。
+**章标题与卷首日期不在正文流里**——它们由模板的 `.chapter-heading` 渲染，
+所以这里不要再出现 `.chapter-title` / `.dateline`，给它们写样式等于写死规则：
 
 ```html
-<h2 class="chapter-title">第一章</h2>
-<p class="dateline">梅尔丹，维里迪亚 · 3724年雪月3日</p>
 <p>正文段落（首行缩进 2em）</p>
 <p class="dialog railed" style="color:#e08a5a">&#8220;对白&#8221;</p>   <!-- 颜色代表说话人 -->
 <hr class="rule">
@@ -187,13 +187,6 @@ justify-content: space-between; width:100%"` 的刻度行（**各刻度是独立
     <section data-lang="zh" id="pane-zh">{{CONTENT_ZH}}</section>
     <section data-lang="en" id="pane-en">{{CONTENT_EN}}</section>
   </main>
-
-  <!-- 章末导航：上一章 / 目录 / 下一章 -->
-  <nav id="chapter-nav">
-    <a id="nav-prev" href="{{PREV_HREF}}">{{PREV_LABEL}}</a>
-    <a id="nav-toc" href="{{TOC_HREF}}">目录</a>
-    <a id="nav-next" href="{{NEXT_HREF}}">{{NEXT_LABEL}}</a>
-  </nav>
 
   <!-- 底栏：三段式 —— 上一章 / 翻屏与进度 / 下一章 -->
   <footer id="bottombar">

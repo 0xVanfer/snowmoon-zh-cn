@@ -405,31 +405,6 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
   font-weight: 700;
 }
 
-/* --- 章末导航：三枚胶囊，窄屏改为整行堆叠，避免挤压换行 --- */
-#chapter-nav,
-.chapter-navigation { gap: 12px; margin-block: 40px; }
-#chapter-nav a, .chapter-navigation a {
-  justify-content: center;
-  min-height: 42px;
-  padding: 9px 18px;
-  border: 1px solid var(--control-border);
-  border-radius: var(--pill-radius);
-  background: var(--surface);
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  transition: border-color .16s ease, background-color .16s ease, color .16s ease,
-    box-shadow .16s ease;
-}
-#nav-prev { justify-self: start; }
-#nav-toc { justify-self: center; }
-#nav-next { justify-self: end; justify-content: center; text-align: center; }
-@media (hover: hover) {
-  #chapter-nav a:hover,
-  .chapter-navigation a:hover { border-color: var(--accent); color: var(--accent); box-shadow: var(--ring); }
-}
-
 /* --- 主页 / 目录页的按钮与卡片 --- */
 .button {
   min-height: 46px;
@@ -511,16 +486,12 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
     font-size: 12.5px;
   }
   #page-indicator { min-width: 4.5em; font-size: 12px; }
-  #chapter-nav,
-.chapter-navigation { grid-template-columns: minmax(0, 1fr); gap: 8px; }
-  #chapter-nav a, .chapter-navigation a { width: 100%; }
-  #nav-prev, #nav-toc, #nav-next { justify-self: stretch; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   #topbar .reader-control, #topbar #btn-lang, #bottombar .reader-bar-button,
   .setting-options button, .reader-dialog__header button, #lang-tabs button,
-  #chapter-nav a, .chapter-navigation a, .button, .chapter-link, #drawer-toc a {
+  .button, .chapter-link, #drawer-toc a {
     transition: none;
   }
   #topbar .reader-control:active, #topbar #btn-lang:active,
@@ -540,8 +511,7 @@ html[data-paragraph="webnovel"] #pane-zh .chapter-content .sentence-gap {
 html[data-paragraph="webnovel"] #pane-zh .chapter-content > p + p { margin-top: .52em; }
 html[data-paragraph="webnovel"] #pane-zh .chapter-content .dialog { padding-block: 0; }
 html[data-paragraph="webnovel"] #pane-zh .chapter-content .dialog.railed { padding-inline-start: 14px; }
-html[data-paragraph="webnovel"] #pane-zh .chapter-content .scene-break,
-html[data-paragraph="webnovel"] #pane-zh .chapter-content .dateline { margin-block: 16px; }
+html[data-paragraph="webnovel"] #pane-zh .chapter-content .scene-break { margin-block: 16px; }
 
 /* ==========================================================================================
    用户请求 ③：移动端拖拽（触摸滚动）

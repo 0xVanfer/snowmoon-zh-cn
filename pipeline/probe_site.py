@@ -21,7 +21,6 @@ import tempfile
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from render_site_previews import (ACTIONS, CHROME, FRAMED, PRESETS, chrome_flags,  # noqa: E402
                                   stage, window_args)
@@ -129,7 +128,10 @@ window.addEventListener('load', function(){
         });
       })(),
       heading: box('.chapter-heading'),
-      navZh: box('#chapter-nav'), flowZhBox: box('#flow-zh'),
+      // 末块：分页模式下用来断言「正文铺满了所有列」。
+      // 原来量的是章末导航，读者要求删掉那排导航后改锚在正文最后一块上——
+      // 它守的是同一个回归（.chapter-content height:100% 让正文只占第 1 列）。
+      lastContentZh: box('#pane-zh .chapter-content > *:last-child'), flowZhBox: box('#flow-zh'),
       bottomBarTop: (function () {
         var b = document.getElementById('bottombar');
         return b ? Math.round(b.getBoundingClientRect().top) : null;
@@ -310,7 +312,6 @@ def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
     target = page
     if frame:
         fw, fh = frame
-        rel = page.relative_to(page.parents[len(page.parents) - 1]).as_posix()
         # 站点根目录下的相对路径（read/chapter-01.html 等）
         site_root = page.parent
         while site_root.name != "site":
@@ -481,14 +482,17 @@ def check(pid: str, d: dict) -> list[str]:
         f = d["flowZh"] or {}
         need(f.get("sh", 0) <= f.get("ch", 0) + 12,
              f"分页模式下正文纵向溢出（scrollHeight {f.get('sh')} > clientHeight {f.get('ch')}）")
-        # 章末导航必须落在最后一列（分页模式），不能出现在正文中间
+        # 正文必须铺到最后一列（分页模式）。定高多列容器里给 .chapter-content 写
+        # `height: 100%` 会让「一列高」恰好等于正文块高度，正文只占第 1 列、其余列空着。
+        # 这里用「正文最后一块落在第几列」来判，而不是章末导航的位置（那排导航已删）。
         m = re.search(r"第\s*(\d+)\s*/\s*(\d+)", d["indicator"])
-        nav, flow = d.get("navZh"), d.get("flowZhBox")
-        if m and nav and flow and int(m.group(2)) > 2:
+        last, flow = d.get("lastContentZh"), d.get("flowZhBox")
+        if m and last and flow and int(m.group(2)) > 2:
             step = flow["w"] + 32
-            col = round((nav["x"] - flow["x"]) / step)
+            col = round((last["x"] - flow["x"]) / step)
             need(col >= int(m.group(2)) - 2,
-                 f"章末导航没在最后一页：在第 {col + 1} 列 / 共 {m.group(2)} 页（nav x={nav['x']}, flow x={flow['x']}）")
+                 f"正文没铺到最后一页：末块在第 {col + 1} 列 / 共 {m.group(2)} 页"
+                 f"（x={last['x']}, flow x={flow['x']}）")
     if pid == "read-sync-scroll":
         need(d["syncEn"] > 100, f"开启同步滚动后英文栏未跟随（en.scrollTop={d['syncEn']}）")
         a, b = d["syncZh"], d["syncEn"]

@@ -749,7 +749,6 @@ h1.page-heading {
   white-space: nowrap;
   color: var(--muted);
 }
-.reader-topbar__actions { display: flex; align-items: center; gap: 4px; }
 #topbar a, #topbar button {
   display: inline-flex;
   min-width: 44px;
@@ -832,17 +831,11 @@ html[data-ui="hidden"] #page-indicator {
   font: 700 32px/1.25 var(--font-serif);
   text-wrap: balance;
 }
-.chapter-heading__en, .chapter-heading__dateline {
+.chapter-heading__dateline {
   margin: 8px 0 0;
   color: var(--muted);
   font: 15px/1.5 var(--font-sans);
 }
-html[data-lang-mode="en"] .chapter-heading [data-lang="zh"] { display: none; }
-html[data-lang-mode="en"] .chapter-heading__en {
-  color: var(--text);
-  font-size: 24px;
-}
-html[data-lang-mode="zh"] .chapter-heading__en { color: var(--muted); }
 #reader-main {
   position: relative;
   box-sizing: border-box;
@@ -927,24 +920,6 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
   color: var(--accent);
   font-weight: 700;
 }
-#chapter-nav,
-.chapter-navigation {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: center;
-  gap: 16px;
-  box-sizing: border-box;
-  width: calc(100% - 80px);
-  max-width: 48rem;
-  margin: 48px auto;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  font: 15px/1.5 var(--font-sans);
-}
-#chapter-nav a,
-.chapter-navigation a { display: flex; align-items: center; min-height: 44px; }
-#nav-toc { justify-content: center; }
-#nav-next { justify-content: flex-end; text-align: right; }
 #drawer, #settings-panel {
   position: fixed;
   z-index: 60;
@@ -1040,15 +1015,12 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
 }
 @media (max-width: 767px) {
   #topbar { gap: 8px; padding-inline: 20px; font-size: 14px; }
-  .reader-topbar__actions { gap: 0; }
   .reader-control__label { display: none; }
   .reader-control__short { display: inline; }
   .chapter-heading { margin-block: 32px 24px; }
-  .chapter-heading, #reader-main, #chapter-nav, .chapter-navigation { width: calc(100% - 40px); }
+  .chapter-heading, #reader-main { width: calc(100% - 40px); }
   .chapter-heading h1 { font-size: 26px; }
   #bottombar { gap: 8px; }
-  #chapter-nav,
-  .chapter-navigation { gap: 8px; font-size: 14px; }
   #drawer, #settings-panel {
     inset: auto 0 0;
     width: 100%;
@@ -1079,15 +1051,6 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
   overflow-wrap: break-word;
   text-spacing-trim: trim-start;
 }
-.chapter-content .chapter-title {
-  margin: 0 0 24px;
-  font-size: 1.6em;
-  font-weight: 600;
-  line-height: 1.25;
-  text-align: center;
-  text-indent: 0;
-  break-after: avoid;
-}
 .chapter-content p {
   margin: 0;
   text-indent: 2em;
@@ -1100,16 +1063,11 @@ html[data-active-pane="en"] #lang-tabs [data-tab-lang="en"] {
   orphans: 2;
   widows: 2;
 }
-.chapter-content .dateline,
 .chapter-content .scene-break {
   margin: 24px 0;
   color: var(--muted);
   text-align: center;
   text-indent: 0;
-}
-.chapter-content .dateline {
-  margin-top: 0;
-  font-size: 0.85em;
 }
 .chapter-content hr.rule {
   width: 32%;
@@ -1331,7 +1289,6 @@ html[data-page-mode="paged"] .reader-viewport::-webkit-scrollbar {
 }
 /* 内部终端仍保留滚动提示，不隐藏其滚动条。 */
 @media (max-width: 767px) {
-  .chapter-content .chapter-title { font-size: 1.45em; }
   .chapter-content blockquote { padding-inline: 12px; }
   .chapter-content figure.fig { padding: 4px; }
   .device-view { padding: 12px; }
@@ -1379,7 +1336,7 @@ html:not([data-js]) #reader-main .dz-card { max-height: none; }
 
 @media print {
   html, html body { height: auto; overflow: visible; background: none; color: black; }
-  #topbar, #bottombar, #progress-bar, #lang-tabs, #chapter-nav, .chapter-navigation,
+  #topbar, #bottombar, #progress-bar, #lang-tabs,
   #drawer, #settings-panel, #scrim, .skip-link,
   body.reader-page button, body.reader-page input,
   body.reader-page select, body.reader-page textarea { display: none !important; }
@@ -1433,5 +1390,4 @@ html:not([data-js]) #reader-main .dz-card { max-height: none; }
   html #reader-main figure.fig img { max-height: none !important; }
   .device-view thead { background: none; color: black; }
   .device-view th, .device-view td { border-color: currentColor; }
-  .chapter-content .chapter-title { break-after: avoid; }
 }

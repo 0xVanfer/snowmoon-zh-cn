@@ -86,7 +86,7 @@ def mini_to_md(text: str, escape: bool = True) -> str:
     for m in TAG_RE.finditer(text):
         out.append(text_out(text[pos:m.start()]))
         pos = m.end()
-        closing, name, attrs, selfclose = m.groups()
+        closing, name, attrs, _ = m.groups()
         if name not in KNOWN_TAGS:
             raise SystemExit(
                 f"mini-markup 出现非法标签 <{name}>（片段只允许 "
@@ -167,7 +167,6 @@ def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/")
     missing = sorted(ids - set(segs))
     if missing:
         raise SystemExit(f"chapter-{ch:02d}: 骨架引用的片段在译文中缺失 {missing[:4]}")
-    captions: dict[str, str] = {}
     # [P1] 缺清单原本 exit 0 并把图注退化成占位串，而 build_site 对同一缺失直接抛
     # SystemExit —— 三个产物互相矛盾。清单是图注与 alt 的唯一来源，缺了就必须停住。
     if not FIG_MANIFEST.exists():
@@ -176,7 +175,7 @@ def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/")
             f"没有它就只能生成「插图 chapter-NN-fig-MM」这类占位串。"
             f"请先跑 make_figures.py apply。")
     man = json.loads(FIG_MANIFEST.read_text(encoding="utf-8"))
-    captions = {k: v.get("caption", "") for k, v in man.items()}
+    captions: dict[str, str] = {k: v.get("caption", "") for k, v in man.items()}
     parts: list[str] = []
     for blk in data["blocks"]:
         kind = blk.get("kind")

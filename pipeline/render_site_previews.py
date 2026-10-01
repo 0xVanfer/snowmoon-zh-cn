@@ -27,10 +27,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "book" / "site"
 OUT = ROOT / "sources" / "work" / "site-previews"
+
+
 def chrome_path() -> str:
     """定位 Chrome：环境变量 CHROME 优先，其次 macOS 默认位置、常见替代路径，
     最后是 Playwright 缓存里的 headless_shell（见 chrome_flags 的说明）。"""
-    import shutil
     env = os.environ.get("CHROME") or os.environ.get("CHROME_PATH")
     if env:
         return env
@@ -84,10 +85,6 @@ def chrome_flags() -> list[str]:
     flags += shlex.split(os.environ.get("CHROME_EXTRA_ARGS", ""))
     return flags
 
-PRESET_SCRIPT = """<script>
-try{localStorage.setItem("snowmoon.reader.v1", JSON.stringify(%s));}catch(e){}
-</script>
-"""
 
 # id: (页面相对路径, 视口宽, 视口高, localStorage 预设, 截图后额外等待毫秒)
 PRESETS: dict[str, tuple] = {
