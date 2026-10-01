@@ -130,6 +130,7 @@ python3 pipeline/verify_extract.py            # 抽取自检
 python3 pipeline/build_conlang_vocab.py       # 泽国语词表（validate/merge 都依赖它，必须先跑）
 python3 pipeline/validate_translation.py      # 译文自检
 python3 pipeline/merge_terms.py               # 合并新术语 + 生成 docs/glossary.md（有冲突则 exit 1）
+python3 pipeline/normalize_zh.py --self-check # 只跑术语表加载期自检，不改译文（可当闸门用，CI 调它）
 python3 pipeline/normalize_zh.py              # 术语/空格/标点统一
 #  读者复核（3 视角，任务书见 pipeline/prompts/review-reader.md）
 python3 pipeline/collect_reviews.py --todo    # 汇总问题清单

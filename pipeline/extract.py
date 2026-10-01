@@ -630,8 +630,16 @@ def process(chapter: int) -> dict:
             "locked": sum(1 for s in ex.segs if s["locked"]), "figures": len(ex.figures)}
 
 
+def discover_chapters() -> list[int]:
+    """章号由磁盘上真实存在的上游 HTML 决定，而不是写死的 1..32。"""
+    return sorted({int(m.group(1))
+                   for m in (re.fullmatch(r"chapter-(\d+)\.html", p.name)
+                             for p in SRC.glob("chapter-*.html"))
+                   if m})
+
+
 def main() -> None:
-    todo = [int(x) for x in sys.argv[1:]] or list(range(1, 33))
+    todo = [int(x) for x in sys.argv[1:]] or discover_chapters()
     total = {"blocks": 0, "segs": 0, "locked": 0, "figures": 0}
     for ch in todo:
         r = process(ch)

@@ -135,8 +135,16 @@ def regions_of(a: str, b: str, width: int = 40) -> list[tuple[int, int]]:
     return [(s, e) for s, e in merged]
 
 
+def discover_chapters() -> list[int]:
+    """章号由磁盘上真实存在的上游 HTML 决定，而不是写死的 1..32。"""
+    return sorted({int(m.group(1))
+                   for m in (re.fullmatch(r"chapter-(\d+)\.html", p.name)
+                             for p in SRC.glob("chapter-*.html"))
+                   if m})
+
+
 def main() -> None:
-    todo = [int(x) for x in sys.argv[1:]] or list(range(1, 33))
+    todo = [int(x) for x in sys.argv[1:]] or discover_chapters()
     if not SRC.exists():
         print("sources/en/html 不存在（上游原文不入库），跳过抽取还原比对")
         return

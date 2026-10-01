@@ -215,12 +215,14 @@ def is_placeholder_caption(text: str) -> bool:
     """「插图」「插图 chapter-04-fig-01」是 build_site/build_markdown 缺图注时的兜底串。
 
     那种串说明「图注没了」，不能当成有效图注；真正的中文图注一定含汉字。
+    裸「插图」（连标识都没有）同样是占位串——原先的正则要求后面必须跟标识，
+    于是 `is_placeholder_caption("插图")` 恒为 False，这条检查对最常见的退化形态形同虚设。
     """
     s = (text or "").strip()
     if not s:
         return True
-    m = re.fullmatch(r"插图[\s:：]+(\S+)", s)
-    return bool(m) and not CJK_RE.search(m.group(1))
+    m = re.fullmatch(r"插图(?:[\s:：]+(\S+))?", s)
+    return bool(m) and not (m.group(1) and CJK_RE.search(m.group(1)))
 
 
 def figures_of(text: str) -> list[tuple[str, str, str]]:

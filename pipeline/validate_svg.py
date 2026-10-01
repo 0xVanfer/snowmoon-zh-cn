@@ -36,6 +36,7 @@ ALLOW_LATIN = {"AI", "API", "GPH", "DU", "VNU", "GUI", "XOR", "TAU", "SHI", "GEI
 #   根 <svg transform="translate(9999,9999)"> → 整幅图移出画布渲染成空白
 #   <g transform="translate(0,-3000)">         → 同上
 #   全部 <path d="M0 0"> / fill=#ff0000       → 图形消失、配色全变
+#   <rect style="transform:translate(9999,9999)"> → 内联 style 里的几何一律放行
 GEOMETRY_ATTRS = (
     "transform", "opacity", "fill", "fill-opacity", "fill-rule", "stroke", "stroke-width",
     "stroke-opacity", "stroke-dasharray", "stroke-linecap", "stroke-linejoin",
@@ -44,6 +45,7 @@ GEOMETRY_ATTRS = (
     "font-weight", "display", "visibility", "clip-path", "mask", "offset-x", "offset-y",
     "stop-color", "stop-opacity", "gradientUnits", "gradientTransform", "patternUnits",
     "marker-end", "marker-start", "letter-spacing", "word-spacing", "text-decoration",
+    "style",
 )
 # font-size / font-family 不在上表：<text> 循环里对它们另有专门规则
 # （font-size 允许 ±20%，中文字形宽窄不同，模型会为「彼得斯维尔」把 10 调成 9）。

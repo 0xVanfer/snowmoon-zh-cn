@@ -44,7 +44,6 @@ UPSTREAM_URL = "https://vitalik.eth.limo/snowmoon/"
 CONTACT_EMAIL = "vanfer@vanfer.tech"
 SITE_TITLE = "雪月 Snowmoon · 中文版"
 TOTAL_WORDS = "约 14.6 万"
-CHAPTERS = list(range(1, 33))
 
 PH_RE = re.compile(r"\{\{([A-Z][A-Z0-9_]*)\}\}")
 
@@ -159,7 +158,7 @@ def discover_chapters() -> list[int]:
     [P1] 此前是写死的 `range(1, 33)`：第 33 章即使有了骨架和译文也会被静默丢弃，
     而六道闸门无一报警。章号应当由磁盘上真实存在的东西决定。
     """
-    found = set(CHAPTERS)
+    found: set[int] = set()
     found.update(int(re.search(r"chapter-(\d+)\.json$", p.name).group(1))
                  for p in CHAP_DIR.glob("chapter-*.json") if re.search(r"chapter-(\d+)\.json$", p.name))
     found.update(int(re.search(r"chapter-(\d+)\.zh\.json$", p.name).group(1))

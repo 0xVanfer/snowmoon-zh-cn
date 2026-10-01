@@ -36,6 +36,10 @@ jobs:
           python3 pipeline/verify_extract.py   # 上游原文不入库，缺失时自动跳过
           # 术语表是唯一事实源：与译文冲突或有未合并的新术语都必须让发布停下
           python3 pipeline/merge_terms.py --check
+          # 术语表加载期自检。别名前缀冲突的检查只挂在 load_aliases() 上，
+          # 而 normalize_zh 是改写工具不是闸门，CI 不会调它——不给这个入口，
+          # 一条会静默吃掉前缀的 alias 可以长期潜伏到有人手动跑 normalize_zh 才炸。
+          python3 pipeline/normalize_zh.py --self-check
           # 成品体检
           python3 pipeline/qa_book.py
           python3 pipeline/qa_site.py

@@ -199,13 +199,45 @@ def fix_segment(text: str, alias: dict[str, str], fixups: list | None = None) ->
     return "".join(parts)
 
 
+def discover_chapters() -> list[int]:
+    """章号由磁盘上真实存在的译文决定。
+
+    [P1] 此前写死 `range(1, 33)`：新增第 33 章的译文后，不带参数运行 normalize_zh
+    会「无译文，跳过」地把它晾在一边，而其余脚本早已改用 discover_chapters。
+    """
+    return sorted({int(m.group(1))
+                   for m in (re.fullmatch(r"chapter-(\d+)\.zh\.json", p.name)
+                             for p in ZH.glob("chapter-*.zh.json"))
+                   if m})
+
+
+def self_check() -> None:
+    """只跑加载期自检，不改任何译文。
+
+    别名前缀冲突的检查挂在 load_aliases() 上，只有 normalize_zh 被人手动跑起来时才会触发；
+    而 normalize_zh 是**改写工具**而不是闸门，CI 不会调用它——于是术语表里
+    一条会静默吃掉前缀的 alias 可以长期潜伏，直到某次有人手动跑 normalize_zh 才炸。
+    给出这个入口，CI 就能把这条检查变成常设闸门。
+    """
+    alias = load_aliases()
+    fixups = load_fixups()
+    print(f"术语表自检通过：{len(alias)} 条别名、{len(fixups)} 章 fixups，无前缀冲突")
+
+
 def main() -> None:
+    args = sys.argv[1:]
+    if "--self-check" in args:
+        rest = [a for a in args if a != "--self-check"]
+        if rest:
+            raise SystemExit(f"--self-check 不接受章节号：{rest!r}")
+        self_check()
+        return
     todo = []
-    for x in sys.argv[1:]:
+    for x in args:
         if not x.isdigit():
             raise SystemExit(f"章节号必须是数字：{x!r}")
         todo.append(int(x))
-    todo = todo or list(range(1, 33))
+    todo = todo or discover_chapters()
     alias = load_aliases()
     fixups_all = load_fixups()
     BACKUP.mkdir(parents=True, exist_ok=True)
