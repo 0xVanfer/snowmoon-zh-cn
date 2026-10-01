@@ -47,6 +47,16 @@ ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "sources" / "work" / "cache" / "vision"
 ENV_FILE = ROOT / ".vision.env"
 
+# 凭据形状：网关回显的 key 未必等于本地那把（子 key / 已轮换的旧 key），
+# 落盘前一律按形状兜底抹掉。宁可多抹一点，也不能让它跟着 out.jsonl 进仓库。
+SECRET_SHAPE_RE = re.compile(
+    r"\b(?:sk|pk|rk|ak)-[A-Za-z0-9_\-]{8,}"      # 常见厂商前缀
+    r"|\bgh[pousr]_[A-Za-z0-9]{16,}"            # GitHub 令牌
+    r"|\bxox[baprs]-[A-Za-z0-9-]{10,}"          # Slack 令牌
+    r"|\bAIza[A-Za-z0-9_\-]{20,}"               # Google API Key
+    r"|\bBearer\s+[A-Za-z0-9._\-]{16,}"         # 认证头
+)
+
 _env_loaded = False
 
 
@@ -106,18 +116,26 @@ def api_key() -> str:
 
 
 def _redact(text: str) -> str:
-    """抹掉错误文本里的端点 URL 与主机名。
+    """抹掉错误文本里的端点 URL、主机名与**凭据本身**。
 
-    `urllib` 的异常文本自带请求 URL，网关的错误 body 也常回显 URL；这些字符串会随
-    `--batch` 的结果文件落盘，一旦跟着提交就等于把网关地址写进了开源仓库。
+    `urllib` 的异常文本自带请求 URL，网关的错误 body 也常回显 URL；更糟的是认证失败时
+    往往把 key 原文带回来（`invalid api key: sk-…`）。这些字符串会随 `--batch` 的结果
+    文件落盘、再被 make_figures.py 复制进 manifest.json，一旦跟着提交就等于把网关地址
+    与凭据写进了开源仓库——所以凭据形状和端点一样要抹。
     """
     url = os.environ.get("VISION_API_URL", "").strip()
-    if not url:
-        return text
-    text = text.replace(url, "<endpoint>")
-    host = urllib.parse.urlsplit(url).netloc
-    if host:
-        text = text.replace(host, "<endpoint>")
+    if url:
+        text = text.replace(url, "<endpoint>")
+        host = urllib.parse.urlsplit(url).netloc
+        if host:
+            text = text.replace(host, "<endpoint>")
+    # 先抹环境变量里的真实 key（最准），再兜住没进环境变量、只出现在错误 body 里的形状
+    for name in ("VISION_API_KEY", "VISION_TOKEN"):
+        secret = os.environ.get(name, "").strip()
+        if secret:
+            text = text.replace(secret, "<credential>")
+    # 网关回显的 key 未必等于本地那把（子 key / 已轮换的旧 key），按形状兜底
+    text = SECRET_SHAPE_RE.sub("<credential>", text)
     return text
 
 
@@ -137,7 +155,8 @@ def _post(payload: dict, timeout: int = 600) -> dict:
         headers={
             "Content-Type": "application/json",
             "Authorization": f"Bearer {api_key()}",
-            # 网关在 Cloudflare 后面：默认的 Python-urllib UA 会被 1010 拦截
+            # 网关在 CDN 后面：默认的 Python-urllib UA 会被边缘防护拦截
+            # （注意：本文件也在隐私闸门的扫描范围内，注释里不要写任何非白名单主机名）
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
             "Accept": "application/json",

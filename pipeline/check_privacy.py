@@ -31,8 +31,12 @@
      e. 代码 / 配置文件里出现版本化路径（`/v1/…`）——即便主机在白名单上也算硬编码端点，
         「模型调用端点只允许经环境变量注入」这条不因主机公开而破例（散文里的版本化路径
         不判，见「刻意放过的」）。
-  3. 本地 `.privacy-terms`（不入库，一行一个子串，`#` 起头为注释）里列出的词。
-     CI 上该文件不存在则这一层为空，脚本对此**不做任何额外声称**。
+  3. provider 命名——分两层：
+     a. **内置形状规则**（入库，任何 clone 都生效，不含任何具体 provider 名）：
+        网关 / 边缘防护把自家支持文档 URL、错误码回显进 error 字段的形态；
+     b. 本机 `.privacy-terms`（不入库，一行一个子串，`#` 起头为注释）里的自定义词条。
+        该文件按设计不入库，缺席时只是少了一层本机词条（基础层仍生效），
+        脚本会往 stderr 提示；`--require-terms` 可让缺席直接 exit 2，供本机自查。
 
 刻意放过的（避免误报淹没真泄漏，见 P1-11 的假阳性）：
 
@@ -51,8 +55,9 @@
   只出现在散文里、又不带凭据与配置绑定，这一版仍放过。
 
 用法: python3 pipeline/check_privacy.py
+      python3 pipeline/check_privacy.py --require-terms   # CI 用：词表缺席即 exit 2
       # 有命中则打印「文件:行号: 来源: 原因」并退出 1
-退出码: 0 通过 / 1 有命中 / 2 读不到 git 索引内容（fail-closed）
+退出码: 0 通过 / 1 有命中 / 2 读不到 git 索引内容，或 --require-terms 下词表缺席（fail-closed）
 """
 from __future__ import annotations
 
@@ -64,6 +69,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 LOCAL_TERMS = ROOT / ".privacy-terms"
+
+# [P0] 规则 3 的**基础层**：入库、任何 clone 都生效。
+# 原来这一层完全依赖不入库的 .privacy-terms，于是 CI 与其他贡献者处恒为空 ——
+# 唯一能抓「provider 命名」的一层只在作者本机跑过，而脚本照样打印「通过」。
+# 这里按**形状**（不是具体名字，避免闸门自身成为泄漏源）覆盖外部错误体的典型形态：
+# 网关/边缘防护的服务端错误会把自家支持文档 URL 与错误码回显进 error 字段。
+BUILTIN_TERM_PATTERNS = (
+    # 边缘防护 / API 网关的支持文档 URL（错误体回显的形态）
+    re.compile(r"\b[a-z0-9-]+\.(?:com|net|org|dev|io)/support/troubleshooting\b"),
+    # 「HTTP <码>: {json…」后面跟着的支持文档链接
+    re.compile(r'"(?:type|url|documentation)"\s*:\s*"https?://[^"]+/support/'),
+    # 错误体里常见的厂商错误码字段
+    re.compile(r'"(?:error_?code|error_?type)"\s*:\s*"\d{6,}"'),
+)
 
 MAX_BYTES = 8 * 1024 * 1024          # 单份内容上限，超过按不可扫处理
 SKIP_MODES = {"160000"}              # 160000 = 子模块 gitlink（内容不在本仓库索引里）
@@ -309,11 +328,23 @@ def local_terms() -> list[str]:
     return terms
 
 
+def builtin_term_hit(line: str) -> str | None:
+    """内置词表层：按形状匹配，不含任何具体 provider 名。"""
+    for pattern in BUILTIN_TERM_PATTERNS:
+        if pattern.search(line):
+            return f"命中内置形状规则 {pattern.pattern!r}"
+    return None
+
+
 def show(path: str) -> str:
     return path.encode("utf-8", "replace").decode("utf-8")
 
 
 def main() -> int:
+    # [P0] 规则 3 的基础层已改为**内置形状规则**（BUILTIN_TERM_PATTERNS），入库、
+    # 任何 clone 都生效；.privacy-terms 降级为本机追加词条。--require-terms 用于
+    # 自查「本机词表是否还在」，CI 不必带（基础层已经恒定生效）。
+    require_terms = "--require-terms" in sys.argv[1:]
     try:
         entries, unmerged = index_entries()
         blobs = read_blobs([oid for _, _, oid in entries])
@@ -342,6 +373,9 @@ def main() -> int:
             for lineno, line in enumerate(text.splitlines(), 1):
                 why = why_for_line(line, is_code)
                 if why is None:
+                    # 规则 3：内置形状层先跑（任何 clone 都生效），本机词表再补
+                    why = builtin_term_hit(line)
+                if why is None:
                     why = next((f"命中 .privacy-terms 词条「{t}」" for t in terms if t in line),
                                None)
                 if why:
@@ -358,10 +392,23 @@ def main() -> int:
         return 1
 
     note = f"，含 {unmerged} 个未合并路径的全部 stage" if unmerged else ""
+    # [P0] 规则 3 的基础层已内置入库，任何 clone 都会跑；.privacy-terms 只是本机追加。
+    # --require-terms 保留给「本机确实该有词表却丢了」的自查：它要求本机词表存在。
+    if not terms:
+        msg = (f"本机未找到 {LOCAL_TERMS.name}：规则 3 的**基础层仍已生效**"
+               f"（内置形状规则 {len(BUILTIN_TERM_PATTERNS)} 条），"
+               f"缺的是本机自定义词条")
+        if require_terms:
+            print(f"隐私闸门未通过：{msg}。请提供该文件，或去掉 --require-terms。",
+                  file=sys.stderr)
+            return 2
+        print(f"提示：{msg}。", file=sys.stderr)
     print(f"隐私闸门通过：{len(seen_paths)} 个受跟踪路径{note}，"
           f"索引内容与工作区内容共逐行扫描 {scanned} 份文本，"
           f"跳过 {skipped} 份（二进制 / 超 {MAX_BYTES // 1048576} MiB / 工作区缺失）；"
-          f"规则 = 凭据字面量、端点与主机形状、代码非白名单主机、.privacy-terms 词条 {len(terms)} 条")
+          f"规则 = 凭据字面量、端点与主机形状、代码非白名单主机、"
+          f"provider 命名内置形状 {len(BUILTIN_TERM_PATTERNS)} 条"
+          + (f"、.privacy-terms 词条 {len(terms)} 条" if terms else "（本机词表缺席）"))
     return 0
 
 
