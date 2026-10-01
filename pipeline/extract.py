@@ -47,6 +47,23 @@ LEAF_ROLES = {
     "li": "li", "td": "cell", "th": "th", "button": "button",
     "pre": "pre", "blockquote": "quote", "center": "center", "b": "b",
 }
+# HTML 的「可选结束标签」：这些开始标签本身就隐含关闭同类已开元素。
+# [P0] 上游第 3 章的投票表少写了一个 `</td>`，按钮格被嵌进上一格、整行少一列；
+# 浏览器在下一个 <td> 处会自动补关，我们此前照抄了嵌套结构，
+# 重新抽取就会让「不可变骨架」与译文对不上（ids 与标签序列校验全绿也拦不住）。
+# 只收表格/列表/定义列表这几类——块级元素隐含关闭 <p> 那条规则上游未触发，
+# 少加一条就少一份改动风险，等真出问题再加。
+IMPLIED_END = {
+    "li": {"li"},
+    "dt": {"dt", "dd"},
+    "dd": {"dt", "dd"},
+    "tr": {"td", "th", "tr"},
+    "td": {"td", "th"},
+    "th": {"td", "th"},
+    "thead": {"td", "th", "tr"},
+    "tbody": {"td", "th", "tr", "thead"},
+    "tfoot": {"td", "th", "tr", "thead", "tbody"},
+}
 
 CONLANG_FONT_RE = re.compile(r"TeX Gyre Chorus", re.I)
 CONLANG_TEXT_RE = re.compile(r"^[a-z][a-z\s&nbsp;]*$")
@@ -189,8 +206,56 @@ class DomBuilder(HTMLParser):
         self.root = Node("#root")
         self.stack = [self.root]
 
+    def in_foreign(self) -> bool:
+        """当前是否位于 <svg> 之内、且不在 <foreignObject> 之内。
+
+        <foreignObject> 是 SVG 规范里合法嵌 HTML 的容器，它内部的 div/p/td 不算「泄漏」；
+        其余位置的 HTML 标签一律说明上游 <svg> 没闭合，正文被卷进了图里。
+        """
+        for n in reversed(self.stack):
+            if n.tag == "foreignobject":
+                return False
+            if n.tag == "svg":
+                return True
+        return False
+
+    def break_out_of_svg(self) -> None:
+        """退出 foreign content：连同 <svg> 一起弹出栈。
+
+        对应 HTML 标准的 breakout：<svg> 没闭合时，后续 HTML 开始/结束标签会让解析器
+        退回 HTML 内容模式。此前这里靠「遇到下一个同名结束标签时顺带把 svg 弹掉」——
+        纯属标签顺序的运气（第 30 章两个 <svg> 未闭合，恰好后面跟的是 </div> 才没出事）。
+        顺序一变（比如 </svg> 缺席而下一段是 <p>），整段正文就会变成图里的内容、
+        同时丢掉全部片段 id，而抽取照常 exit 0。
+        """
+        for i in range(len(self.stack) - 1, 0, -1):
+            if self.stack[i].tag == "svg":
+                del self.stack[i:]
+                return
+
+    def close_implied(self, tag: str) -> None:
+        """补上 HTML 的「可选结束标签」：开始标签本身隐含关闭同类已开元素。
+
+        上游第 3 章少写了一个 `</td>`，按钮格被嵌进上一格，整行少一列；
+        浏览器会在下一个 <td> 处自动补关，我们此前照抄了嵌套结构。
+        """
+        implied = IMPLIED_END.get(tag)
+        if not implied:
+            return
+        for i in range(len(self.stack) - 1, 0, -1):
+            t = self.stack[i].tag
+            if t in implied:
+                del self.stack[i:]
+                return
+            if t in ("table", "ul", "ol", "dl", "body", "#root"):
+                return  # 走到表格/列表外层就没有可补的了
+
     def handle_starttag(self, tag, attrs):
         tag = tag.lower()
+        if tag in HTML_ONLY_TAGS and self.in_foreign():
+            self.break_out_of_svg()
+        else:
+            self.close_implied(tag)
         node = Node(tag, {k.lower(): (v if v is not None else "") for k, v in attrs}, self.stack[-1])
         self.stack[-1].children.append(node)
         if tag not in VOID:
@@ -198,6 +263,8 @@ class DomBuilder(HTMLParser):
 
     def handle_startendtag(self, tag, attrs):
         tag = tag.lower()
+        if tag in HTML_ONLY_TAGS and self.in_foreign():
+            self.break_out_of_svg()
         node = Node(tag, {k.lower(): (v if v is not None else "") for k, v in attrs}, self.stack[-1])
         self.stack[-1].children.append(node)
 
@@ -205,6 +272,8 @@ class DomBuilder(HTMLParser):
         tag = tag.lower()
         if tag in VOID:
             return
+        if tag in HTML_ONLY_TAGS and self.in_foreign():
+            self.break_out_of_svg()
         for i in range(len(self.stack) - 1, 0, -1):
             if self.stack[i].tag == tag:
                 del self.stack[i:]

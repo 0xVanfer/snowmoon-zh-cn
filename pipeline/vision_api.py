@@ -23,6 +23,7 @@
   * 支持单条与 JSONL 批处理两种模式。
 
 用法:
+    python3 pipeline/vision_api.py --check                       # 预检配置齐备（不发请求）
     python3 pipeline/vision_api.py --prompt-file p.txt --out out.svg
     python3 pipeline/vision_api.py --prompt "..." --print
     python3 pipeline/vision_api.py --batch jobs.jsonl --out results.jsonl
@@ -241,8 +242,58 @@ def call(prompt: str, system: str = "", model: str | None = None,
     raise RuntimeError(f"视觉模型调用失败：{_redact(last)}")
 
 
+def check() -> int:
+    """预检：只验配置完备性，**不发任何模型请求**（因此免费、可当 CI 闸门用）。
+
+    为什么需要它：端点/模型/凭据全靠环境变量注入，缺一项时批处理会在跑到一半才抛
+    「缺少 VISION_MODEL」——那时任务文件已经生成、缓存目录已经建好，操作者却以为自己
+    只差最后一步。`--check` 把这件事提前到一条命令，并且一次性列出缺哪几项。
+
+    注意它**只验配置、不验连通性**：真要验端点可达就得发请求，那会产生计费且依赖网络。
+    端点写错（比如路径少了 /chat/completions）只有真正调用才会暴露。
+    """
+    problems: list[str] = []
+    _load_env_file()          # 幂等；.vision.env 优先于已存在的同名环境变量
+    src = ENV_FILE.name if ENV_FILE.exists() else "环境变量"
+    for name in ("VISION_API_URL", "VISION_MODEL"):
+        if not os.environ.get(name, "").strip():
+            problems.append(f"缺少 {name}")
+    url = os.environ.get("VISION_API_URL", "").strip()
+    if url:
+        parts = urllib.parse.urlsplit(url)
+        if parts.scheme not in ("http", "https"):
+            problems.append(f"VISION_API_URL 的协议是 {parts.scheme or '(空)'}，应为 http/https")
+        if not parts.netloc:
+            problems.append("VISION_API_URL 没有主机名")
+        if not parts.path or parts.path == "/":
+            problems.append("VISION_API_URL 看起来只有主机、没有接口路径"
+                            "（应指向完整的 chat/completions 端点）")
+    try:
+        api_key()
+    except SystemExit as e:
+        problems.append(str(e))
+
+    model = os.environ.get("VISION_MODEL", "").strip()
+    if problems:
+        print("视觉模型链路未就绪：", file=sys.stderr)
+        for p in problems:
+            print(f"  - {p}", file=sys.stderr)
+        print(f"\n配置方式：把以下变量写进仓库根目录的 {ENV_FILE.name}（该文件已 gitignore，"
+              f"同名环境变量优先），或直接 export。当前读取来源：{src}。", file=sys.stderr)
+        print("详见 docs/pipeline.md §3。仓库里不保存任何端点与 provider 命名。", file=sys.stderr)
+        return 1
+    print(f"视觉模型链路已就绪（配置来源：{src}）")
+    print(f"  模型名：{model}")
+    print(f"  端点：{_redact(url)}        # 输出里始终抹掉端点，避免随日志进仓库")
+    print("  凭据：已配置（不回显）")
+    print("  注意：本检查不验连通性；真正调用仍可能因端点路径或网络失败。")
+    return 0
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--check", action="store_true",
+                    help="预检端点/模型/凭据是否齐备，不发模型请求（可当闸门用）")
     ap.add_argument("--prompt")
     ap.add_argument("--prompt-file")
     ap.add_argument("--system", default="")
@@ -255,6 +306,9 @@ def main() -> None:
     ap.add_argument("--batch", help="JSONL：每行 {id, prompt, system?, max_tokens?}")
     ap.add_argument("--concurrency", type=int, default=4, help="批处理并发数")
     args = ap.parse_args()
+
+    if args.check:
+        sys.exit(check())
 
     if args.batch:
         jobs = []

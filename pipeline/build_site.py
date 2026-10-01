@@ -13,10 +13,12 @@
     book/site/index.html
     book/site/toc.html
     book/site/read/chapter-NN.html
-    book/site/assets/{style.css,reader.js,overrides.css,images/*.svg}
+    book/site/assets/{style.css,reader.js,overrides.css,images/*.svg,images-en/*.svg}
 
 不变量：
   * 目录条目与「全书 N 章」一律取自**实际有译文的章节**，不是模板常量；
+  * 插图按语言分流：中文栏 `images/`（重绘版），英文栏 `images-en/`（上游原图），
+    两份同名成对，缺原图即停——绝不让英文栏退回中文重绘图；
   * 陈旧的逐章页面与插图会被清理，撤下的章节不会继续发布（CI 直接部署 book/site）。
 """
 from __future__ import annotations
@@ -36,6 +38,7 @@ from build_markdown import CHAP_DIR, FIG_MANIFEST, ZH_DIR, cn_num  # noqa: E402
 SRC_DIR = Path(__file__).resolve().parent / "site"   #视觉模型设计的前端源文件
 SEG_DIR = ROOT / "sources" / "work" / "segments"
 IMG_DIR = ROOT / "book" / "images"
+FIG_SRC = ROOT / "sources" / "work" / "figures"   # 英文原图（抽取自上游 HTML，英文栏用）
 OUT = ROOT / "book" / "site"
 
 REPO_URL = "https://github.com/0xVanfer/snowmoon-zh-cn"
@@ -108,14 +111,38 @@ def check_sync(ch: int, *seg_maps: dict[str, str]) -> None:
                 f"（译文与骨架不同步）")
 
 
+FIG_NAME_RE = re.compile(r"chapter-(\d+)-fig-(\d+)\.svg$")
+
+
+def english_alt(filename: str) -> str:
+    """英文栏插图的 alt：**只陈述可核验的事实**，不臆造描述。
+
+    英文原图没有配套的英文图注——`manifest.json` 里的 CAPTION 是重绘时由模型一并产出的
+    中文图注（56/56 含汉字）。凭空补一句英文描述就是自撰内容，与 docs/pipeline.md §7
+    「自拟标题即增译内容」冲突，所以这里只说明这是第几章第几幅的英文原图。
+    要真正可用的英文图注，应让视觉模型在重绘时同时产出（manifest 增加 caption_en 字段）。
+    """
+    m = FIG_NAME_RE.fullmatch(filename)
+    label = (f"Chapter {int(m.group(1))}, figure {int(m.group(2))} "
+             f"(original English illustration)" if m else "Original English illustration")
+    return html.escape(label, quote=True)
+
+
 def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
-                  prefix: str, zh: bool = False) -> str:
+                  prefix: str, zh: bool = False,
+                  figdir: str = "images", figalt=None) -> str:
     """把一章的结构骨架 + 指定语言的片段渲染成正文 HTML。
 
     章标题与开篇日期由模板的 `.chapter-heading` 统一渲染（中英各一行，随语言模式收敛），
     正文流里不再重复一遍；章节中段的场景分隔（scene-break）照旧保留。
 
     [用户请求] `zh=True` 时 `<e>`/`<i>` 渲染成加粗而不是斜体（中文不用斜体）。
+
+    [P0] 插图**必须按语言分流**：此前 zh/en 两栏共用 `images/` 与同一份中文图注，
+    于是英文原文那栏里，英文正文旁边配的是中文重绘图——对照模式读者拿不到原图，
+    56 张里有 30 张含英文标注，读者看到的是与周围英文正文对不上的中文标签。
+    英文栏改指 `images-en/`（抽取自上游 HTML 的原图），中文栏仍指 `images/`。
+    `figalt` 缺省时按「章-图」生成英文事实型 alt（见 english_alt）。
     """
     data = load_json(CHAP_DIR / f"chapter-{ch:02d}.json")
     out: list[str] = []
@@ -132,9 +159,9 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
             out.append('<hr class="rule">')
         elif kind == "figure":
             for f in blk.get("figures", []):
-                cap = captions.get(f[:-4], "")
-                alt = html.escape(cap or f"插图 {f[:-4]}", quote=True)
-                out.append(f'<figure class="fig"><img src="{prefix}images/{f}" alt="{alt}"'
+                alt = (figalt(f) if figalt is not None
+                       else html.escape(captions.get(f[:-4], "") or f"插图 {f[:-4]}", quote=True))
+                out.append(f'<figure class="fig"><img src="{prefix}{figdir}/{f}" alt="{alt}"'
                            f' title="{alt}" loading="lazy" decoding="async"></figure>')
             if blk.get("skeleton"):
                 out.append(expand(blk["skeleton"], segs, zh))
@@ -304,8 +331,10 @@ def build() -> None:
             CHAPTER_TITLE_EN=f"Chapter {ch}",
             CHAPTER_DATELINE_ZH=html.escape(datelines[ch], quote=True),
             CHAPTER_DATELINE_EN=html.escape(datelines_en[ch], quote=True),
-            CONTENT_ZH=render_blocks(ch, zh_segs, captions, "../assets/", zh=True),
-            CONTENT_EN=render_blocks(ch, en_segs, captions, "../assets/", zh=False),
+            CONTENT_ZH=render_blocks(ch, zh_segs, captions, "../assets/", zh=True,
+                                     figdir="images"),
+            CONTENT_EN=render_blocks(ch, en_segs, captions, "../assets/", zh=False,
+                                     figdir="images-en", figalt=english_alt),
         )
         tpl = (SRC_DIR / "chapter.html").read_text(encoding="utf-8")
         pages.append((ch, inject_overrides(fill(tpl, values, f"read/chapter-{ch:02d}.html"),
@@ -344,6 +373,21 @@ def build() -> None:
         published.add(svg.name)
     # 清理陈旧的已发布插图
     for old in (assets / "images").glob("*.svg"):
+        if old.name not in published:
+            old.unlink()
+    # 英文栏用上游原图（抽取自 sources/en/html 的 SVG，与中文重绘版分开存放）。
+    # 以前英文栏复用 images/，导致英文正文旁边配的是中文图；两份必须同名成对，
+    # 否则英文栏会出现 404——所以这里按「中文版集合」逐一配对，缺一个就停住。
+    (assets / "images-en").mkdir(parents=True, exist_ok=True)
+    for svg in sorted((assets / "images").glob("*.svg")):
+        orig = FIG_SRC / svg.name
+        if not orig.exists():
+            raise SystemExit(
+                f"缺少英文原图 {orig.relative_to(ROOT)}：英文栏要用上游原图，"
+                f"不能拿中文重绘版顶替（会退回「英文原文栏配中文图」的老问题）。"
+                f"请先跑 extract.py。")
+        shutil.copy2(orig, assets / "images-en" / svg.name)
+    for old in (assets / "images-en").glob("*.svg"):
         if old.name not in published:
             old.unlink()
     (OUT / ".nojekyll").write_text("", encoding="utf-8")

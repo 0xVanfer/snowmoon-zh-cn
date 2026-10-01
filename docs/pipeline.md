@@ -22,6 +22,8 @@ book/chapters/chapter-NN.md  逐章 Markdown
 book/snowmoon-zh.md          全书单文件 Markdown（插图引用 images/）
 book/site/                   多页阅读站点（含中英对照，见 §5）
 book/images/*.svg            中文插图（视觉模型重绘）
+book/site/assets/images/     站点中文栏插图（= book/images/ 的副本）
+book/site/assets/images-en/  站点**英文栏**插图（= sources/work/figures/ 的上游原图）
 ```
 
 设计要点：**结构与文字彻底分离**。抽取阶段把 HTML 拆成「骨架 + 片段」两层，翻译只改片段文字，
@@ -38,9 +40,18 @@ book/images/*.svg            中文插图（视觉模型重绘）
   独立布局项（`space-between` 靠项数分位），因此不拍平成一条文本，而是逐个保留元素、各自成一条片段。
   容器内第一条片段占用正常自增编号，其余用 `基准id#2`、`#3`…，所以容器外的片段编号与既有译文 id 完全不动。
 - SVG 是 XML：HTMLParser 会把 `viewBox`/`clipPath` 等转小写，脚本按映射表还原大小写。
+- **上游有未闭合标签，按浏览器的规则补关**（`IMPLIED_END` + foreign content breakout）：
+  - 第 3 章的投票表少一个 `</td>`，按钮格被嵌进上一格、整行少一列——`<td>` 开始标签会补关上一格；
+    不补，重跑抽取就会让「不可变骨架」与既有译文对不上。
+  - 第 30 章两个 `<svg>` 没有 `</svg>`。此前之所以没出事，纯属运气：栈弹到**下一个同名结束标签**时
+    顺带把 `svg` 弹掉，而那两处后面恰好跟的是 `</div>`。顺序一变（下一段是 `<p>`），整段正文会
+    变成图里的内容并丢掉全部片段 id，而抽取照常 exit 0。现在 HTML-only 标签在 `<svg>` 外一律触发
+    breakout，显式收口；`<foreignObject>` 内的 HTML 仍属合法，不受影响。
 - `verify_extract.py` 做还原比对：把抽取值回填成纯文本，与原文纯文本逐章 diff（排除 SVG 内部文字），
-  两类有意差异（dateline 的 `·` 分隔号、字符实体归一化）已在两侧对齐，当前 31 章 OK；
-  第 30 章因上游有未闭合的 `<svg>`，校验器报 WARN 并跳过该章（该章插图由 `validate_svg.py` 单独校验）。
+  两类有意差异（dateline 的 `·` 分隔号、字符实体归一化）已在两侧对齐，**32 章全部 OK**。
+  剥离 `<svg>` 时未闭合的那个也按同一条 breakout 规则收尾（**在文本层独立实现**，不与 `extract.py`
+  共用代码，否则共同错误会互相抵消）。第 30 章的未闭合是**上游缺陷**，会打 WARN 留痕，但该章
+  **照常参与比对**——判据是「比对结果有没有差异」而不是「有没有比对过」。
   `verify_extract.py` 有退出码：有差异即 exit 1，可以当闸门用。
 
 ## 2. 翻译
@@ -62,9 +73,13 @@ book/images/*.svg            中文插图（视觉模型重绘）
 - `make_figures.py build` 为每张图生成任务：术语表子集 + 该图前后段落的原文/译文 + 原始 SVG 源码，
   提示词见 [prompts/svg-zh.md](prompts/svg-zh.md)；要求模型输出「CAPTION 行 + 完整 SVG」。
 - 调用器 `vision_api.py`：端点、模型名、凭据一律由环境变量注入（`VISION_API_URL` /
-  `VISION_MODEL` / `VISION_API_KEY`，或本地 gitignored 的 `.vision.env`；详见该脚本 docstring），
+  `VISION_MODEL` / `VISION_API_KEY`（或 `VISION_API_KEY_FILE` + `VISION_API_KEY_NAME`），
+  或本地 gitignored 的 `.vision.env`；详见该脚本 docstring），
   **仓库里不保存任何网关地址与 provider 命名**；带磁盘缓存（可断点续跑）、并发、失败重试、
   `max_tokens` 自适应降档，报错文本落盘前会先抹掉端点 URL。
+  `python3 pipeline/vision_api.py --check` 是**预检**：只验端点/模型/凭据是否齐备与 URL 形态，
+  不发任何模型请求（免费、可当闸门用），缺项时一次列全。缺配置时批处理要跑到一半才抛错，
+  预检把这件事提前到一条命令。注意它**不验连通性**，端点路径写错只有真调用才会暴露。
 - `validate_svg.py` 校验等价性：根属性、元素标签序列、`<text>` 数量与位置/锚点/颜色、
   font-size ±20%、数字与虚构语言必须原样、其余文字必须含中文且不残留英文单词。
 - 泽国语罗马字靠 `build_conlang_vocab.py` 自动建表（locked 片段 + Chorus 字体 span + 纯小写短词），
@@ -94,7 +109,15 @@ book/images/*.svg            中文插图（视觉模型重绘）
 - `build_site.py`：把同一份骨架渲染成**多页阅读站点**（主页 `index.html`、目录 `toc.html`、
   逐章 `read/chapter-NN.html`，产物在 `book/site/`）。每一章同时注入中文与英文两份正文，
   分别放在 `data-lang="zh"` / `data-lang="en"` 的正文栏里，由前端决定分栏还是标签页。
-  所需的插图会复制到 `book/site/assets/images/`。
+- **插图按语言分流**（`render_blocks` 的 `figdir` / `figalt` 参数）：
+  中文栏 `assets/images/`（重绘版 + 中文图注），英文栏 `assets/images-en/`（**上游原图**）。
+  此前两栏共用 `images/` 与同一份中文图注，于是英文原文那栏里，英文正文旁边配的是中文重绘图——
+  56 张里 30 张含英文标注，对照模式读者看到的是与周围英文正文对不上的中文标签。
+  两份同名成对，缺任一张即 `SystemExit`，绝不让英文栏退回中文图。
+  英文栏的 `alt` 只陈述事实（`Chapter N, figure M (original English illustration)`）——
+  英文原图没有配套英文图注（`manifest.json` 的 `CAPTION` 是重绘时产出的中文图注），
+  凭空补一句英文描述就是自撰内容（见 §7「自拟标题即增译内容」）。要可用的英文图注，
+  应让视觉模型在重绘时一并产出（manifest 增加 `caption_en` 字段）。
 - 前端（HTML 模板 + `style.css` + `reader.js`）由 **视觉模型** 设计，源文件在 `pipeline/site/`，
   任务书见 `pipeline/prompts/design-reader-site.md`；`build_site.py` 只做占位符替换，
   不参与视觉设计。占位符契约（`{{CONTENT_ZH}}`、`{{TOC_ITEMS}}`、`{{REPO_URL}}`、
@@ -107,11 +130,14 @@ book/images/*.svg            中文插图（视觉模型重绘）
 - 色彩可用性：原文用颜色区分说话人。阅读页除了保留颜色，还给纯对话段落加了同色左侧色条作为
   非颜色线索，并在主页说明「颜色仅作辅助」。
 - `qa_book.py`：书级体检（章节数、插图引用与存在性、占位符残留、中文标点/空格体例）。
-- `qa_site.py`：站点结构体检（页面齐全、占位符清空、双语两栏在位、站内链接与插图可解析，
+- `qa_site.py`：站点结构体检（页面齐全、占位符清空、双语两栏在位、站内链接与插图可解析、
+  **英文栏必须真的引用 `images-en/` 且原图与中文版一一对应**、
   以及**布局容器（flex/grid）子项与原文逐项一致**、**结构元素计数（table/tr/td/th/
   blockquote/li、终端面板、插图）不得减少**、**中文栏长度不得塌陷**、**assets 与
   pipeline/site 同步**——见 [lessons.md](lessons.md) 第 6 节。上游原文不入库时，
   依赖它的三项检查会自动跳过并提示。
+  图注对账只对**中文栏**做：`manifest.json` 是中文图注的事实源，英文栏用的是原图 + 英文 alt，
+  拿 manifest 去比英文 alt 会永远报「不符」。
 
 ## 5.1 部署
 
@@ -136,6 +162,7 @@ python3 pipeline/normalize_zh.py              # 术语/空格/标点统一
 python3 pipeline/collect_reviews.py --todo    # 汇总问题清单
 #  改稿（任务书见 pipeline/prompts/apply-review.md）
 python3 pipeline/make_figures.py build        # 插图任务（含图前正文上下文）
+python3 pipeline/vision_api.py --check         # 预检端点/模型/凭据（不发请求；缺配置时先补 .vision.env）
 python3 pipeline/vision_api.py --batch sources/work/jobs/figures.jsonl \
     --out sources/work/jobs/figures.out.jsonl --concurrency 6
 python3 pipeline/make_figures.py apply        # 校验 + 落盘 book/images

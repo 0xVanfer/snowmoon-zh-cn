@@ -23,7 +23,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from extract import slice_document_page  # noqa: E402
+from extract import slice_document_page, HTML_ONLY_TAGS  # noqa: E402
+
+# 「只属于 HTML、绝不该出现在 <svg> 内部」的标签集合。复用 extract 的常量是为了让两边
+# 对「什么算 breakout 点」保持同一份口径（切片函数已经是共用的）；共享的是**规格常量**，
+# 不是判定算法——算法在下面 strip_elements 里独立实现，避免共同错误互相抵消。
+# 已核对：56 张插图内不含任何 HTML-only 标签，所以按此规则收尾不会误伤图内元素。
+HTML_ONLY_TOKEN_RE = re.compile(
+    r"</?(?:" + "|".join(sorted(HTML_ONLY_TAGS)) + r")\b", re.I)
 
 WORK = ROOT / "sources" / "work"
 SRC = ROOT / "sources" / "en" / "html"
@@ -48,9 +55,11 @@ def norm(s: str) -> str:
 def strip_elements(text: str, tag: str) -> tuple[str, int]:
     """剥离标签配平的 <tag>…</tag>，返回 (结果, 未配平个数)。
 
-    第 30 章上游有未闭合的 <svg>：正则非贪婪匹配会从它一路吃到后面某个 </svg>，
+    第 30 章上游有两个未闭合的 <svg>：正则非贪婪匹配会从它一路吃到后面某个 </svg>，
     把中间整段正文一并删掉，于是校验器自己制造出「原文缺失」。这里只删配平的，
-    未配平的报出来交给上层，而不是悄悄污染比对结果。
+    未配平的按 HTML 的 breakout 规则收尾——到下一个「只属于 HTML 的标签」为止
+    （与 extract.py 的 in_foreign/break_out_of_svg 同一条规则，但在文本层**独立**实现：
+    校验器与被校验对象共用实现会把共同错误抵消），并把个数报给上层留痕。
     """
     out: list[str] = []
     i = 0
@@ -72,8 +81,13 @@ def strip_elements(text: str, tag: str) -> tuple[str, int]:
             j = t.end()
         if depth:
             unbalanced += 1
-            out.append(text[m.start():])
-            break
+            # 未闭合的 <svg> 按 breakout 规则收尾：连同它内部的内容一起**丢弃**
+            # （剥离就是剥离——留着会让图里的 <text> 图注混进原文，制造假的 MISSING）。
+            nxt = HTML_ONLY_TOKEN_RE.search(text, m.end())
+            if not nxt:
+                break
+            i = nxt.start()
+            continue
         i = j
     return "".join(out), unbalanced
 
@@ -149,19 +163,20 @@ def main() -> None:
         print("sources/en/html 不存在（上游原文不入库），跳过抽取还原比对")
         return
     bad = 0
-    skipped = 0
+    warned = 0
     for ch in todo:
         a, unbalanced = original_text(ch)
         if unbalanced:
             # [P0] 此前这里 continue 却不计入 bad，脚本照常 exit 0 —— 「本章从未比对过」
-            # 被印成了一条无害的 WARN。按 extract.py 的泄漏守卫，未闭合的 <svg> 正是
-            # 「正文被吞进插图」的形态，而那正是本脚本要拦的那类静默丢字。跳过必须留痕
-            # 并计入失败，否则它就成了整条闸门里唯一看不见的洞。
-            print(f"WARN ch{ch:02d}: 上游有 {unbalanced} 个未配平的 <svg>，本章**未做**还原比对"
-                  f"（插图已由 validate_svg.py 单独校验）——该章视为未通过", file=sys.stderr)
-            bad += 1
-            skipped += 1
-            continue
+            # 被印成了一条无害的 WARN；后来改成一计入失败，又让第 30 章永远无法被比对。
+            # 两条路都不对：真正的问题是「校验器自己没法安全地切这一章」。
+            # 现在 strip_elements 已按 breakout 规则收尾，切得掉了，所以本章照常比对——
+            # 上游缺 </svg> 是**上游的缺陷**，要留痕；但抽取侧已按 HTML 规则正确收口，
+            # 若它真的吞了正文，比对会立刻报 missing。判据从「有没有比对过」换成
+            # 「比对结果有没有差异」，这一章才真的进入了闸门覆盖范围。
+            print(f"WARN ch{ch:02d}: 上游有 {unbalanced} 个未闭合的 <svg>（上游缺 </svg>）；"
+                  f"抽取侧按 HTML breakout 规则已收口，本章**照常**做还原比对", file=sys.stderr)
+            warned += 1
         b = extracted_text(ch)
         missing = regions_of(a, b)
         extra = regions_of(b, a)
@@ -174,8 +189,9 @@ def main() -> None:
             print(f"    MISSING …{a[max(0, s - 20):e + 20]}…")
         for s, e in extra[:5]:
             print(f"    EXTRA   …{b[max(0, s - 20):e + 20]}…")
-    if skipped:
-        print(f"其中 {skipped} 章因上游 <svg> 未配平而**未做**比对（已计入失败）", file=sys.stderr)
+    if warned:
+        print(f"其中 {warned} 章上游 <svg> 未闭合（已按 breakout 规则处理并完成比对）",
+              file=sys.stderr)
     print("chapters with differences:", bad)
     # 这个脚本必须能失败：否则它只是一份日志，不是一道闸门
     sys.exit(1 if bad else 0)

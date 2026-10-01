@@ -45,6 +45,11 @@
 - 源码文件在文件头标注 `SPDX-License-Identifier: GPL-3.0-only`（Python 脚本已标注）。
 - 上游英文原文快照 `sources/en/html/` 仅本地保留，未随仓库分发：`.gitignore` 已忽略 `sources/en/`
   （`git ls-files sources/en` 为空），复现时按上表来源自行获取。
+- **插图两套并存**：中文栏用的是本项目重绘的 `book/images/*.svg`（演绎作品），
+  英文栏用的是抽取自上游 HTML 的**原图** `sources/work/figures/*.svg`，构建时复制到
+  `book/site/assets/images-en/`。原图是上游作品的一部分，同样按 **GPL-3.0-only** 随站点发布，
+  未附加任何额外限制；原图文件早已作为 `sources/work/figures/` 随仓库提供，
+  本次只是把它也接进了站点英文栏。
 
 ## 来源与取得日期
 

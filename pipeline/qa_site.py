@@ -472,6 +472,29 @@ def main() -> None:
     unused = sorted(imgs - set(refs))
     if unused:
         problems.append(f"有插图未被任何页面引用：{unused[:4]}")
+
+    # 9.2 英文栏必须用**上游原图**，且与中文版一一对应。
+    #     此前英文栏复用 assets/images，于是英文正文旁边配的是中文重绘图；
+    #     而 check 9/9.1 只认 images/ 这一条路径，对英文栏完全失明。
+    #     `images/` 的正则不会命中 `images-en/`（中间多一个连字符），所以这里单独收一遍。
+    imgs_en = {p.name for p in (SITE / "assets" / "images-en").glob("*.svg")}
+    refs_en: Counter = Counter()
+    for text in pages.values():
+        refs_en.update(re.findall(r"images-en/([A-Za-z0-9._-]+\.svg)", text))
+    if not imgs_en:
+        problems.append("assets/images-en 不存在：英文栏没有原图，会退回中文重绘图")
+    missing_en = sorted(set(refs_en) - imgs_en)
+    if missing_en:
+        problems.append(f"英文栏引用了不存在的原图：{missing_en[:4]}")
+    lost_en = sorted(imgs - imgs_en)
+    if lost_en:
+        problems.append(f"assets/images-en 少了 {len(lost_en)} 张英文原图：{lost_en[:4]}")
+    stale_en = sorted(imgs_en - imgs)
+    if stale_en:
+        problems.append(f"assets/images-en 有已撤下的陈旧原图（仍会被发布）：{stale_en[:4]}")
+    if not refs_en and refs:
+        problems.append("没有任何页面引用 images-en/：英文栏可能仍在用中文重绘图")
+
     # 9.1 alt 与图注：全站删光 alt、全站删光图注、alt 退化成「插图」三种都要被抓到。
     #     build_site.render_blocks 目前把图注写进 alt/title、不输出 <figcaption>，
     #     所以「有图注」按 <figcaption> 或 alt/title 任一存在且非占位串来判。
@@ -486,7 +509,9 @@ def main() -> None:
                     problems.append(f"{where}: alt 退化成占位串「{alt}」（真图注缺失）")
                 if is_placeholder_caption(cap or alt):
                     problems.append(f"{where}: 没有图注（figcaption 与 alt/title 均为空或占位串）")
-                if manifest and src in manifest:
+                # manifest 是**中文**图注的事实源；英文栏用原图 + 英文 alt，不该拿它对账，
+                # 否则英文栏永远报「alt 与图注事实源不符」。
+                if lang == "zh" and manifest and src in manifest:
                     want_cap = manifest[src]
                     if want_cap.strip() and alt != want_cap:
                         problems.append(f"{where}: alt 与图注事实源不符（manifest：{want_cap!r}）")

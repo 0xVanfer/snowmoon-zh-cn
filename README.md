@@ -23,7 +23,7 @@
 
 顶部一排按钮，中文读者基本不用配置：
 
-- **中英对照**：「中文 / English / 对照」一键切换。对照模式左右分栏，两边同步滚动，随时核对原文。
+- **中英对照**：「中文 / English / 对照」一键切换。对照模式左右分栏，两边同步滚动，随时核对原文。英文那栏的插图是**原图**（英文标注），中文那栏是重绘的插图版，图文对得上。
 - **两种读法**：滚动（像网页一样往下读）或翻页（一屏一页）。
 - **接着上次读**：读到的位置和已读章节记在你自己浏览器里，关掉再打开还是那一页。
 - **看着舒服**：羊皮纸 / 浅色 / 深色 / 夜间护眼四种底色，宋体 / 黑体，五档字号，段落可选「常规段落」或「一句一行」。
@@ -94,8 +94,9 @@ python3 pipeline/validate_translation.py
 # 3) 术语与体例统一（依赖 pipeline/build_conlang_vocab.py 生成的泽国语词表）
 python3 pipeline/build_conlang_vocab.py
 python3 pipeline/merge_terms.py && python3 pipeline/normalize_zh.py
-# 4) 插图中文化（需要 harness 环境中的视觉模型凭据）
+# 4) 插图中文化（需要 harness 环境中的视觉模型凭据；--check 先预检，不发请求）
 python3 pipeline/make_figures.py build
+python3 pipeline/vision_api.py --check
 python3 pipeline/vision_api.py --batch sources/work/jobs/figures.jsonl \
     --out sources/work/jobs/figures.out.jsonl --concurrency 6
 python3 pipeline/make_figures.py apply
