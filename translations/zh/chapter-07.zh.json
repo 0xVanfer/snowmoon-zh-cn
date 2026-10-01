@@ -23,7 +23,7 @@
   },
   {
    "id": "c07-s0006",
-   "text": "<c st=\"color:oklch(0.7 0.15 240)\">\"mo da cu ja li hen ma?\"</c>，它问道。“吃的喝的还好吗？”"
+   "text": "<c st=\"color:oklch(0.7 0.15 240)\">“mo da cu ja li hen ma?”</c>，它问道。“吃的喝的还好吗？”"
   },
   {
    "id": "c07-s0007",
@@ -223,7 +223,7 @@
   },
   {
    "id": "c07-s0052",
-   "text": "穆举起杯子。<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“为我们的未来，”</c>她说。<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">\"Dze go ba fau gie.\"</c>"
+   "text": "穆举起杯子。<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“为我们的未来，”</c>她说。<c st=\"color:oklch(0.7 0.15 173.33333333333331)\">“Dze go ba fau gie.”</c>"
   },
   {
    "id": "c07-s0053",
@@ -231,7 +231,7 @@
   },
   {
    "id": "c07-s0054",
-   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">\"Dze go ba fau gie.\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 346.66666666666663)\">“Dze go ba fau gie.”</c>"
   },
   {
    "id": "c07-s0055",
@@ -243,7 +243,7 @@
   },
   {
    "id": "c07-s0057",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI FA\"</c>，响亮的自动语音播报道。50嘀嗒后开始。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“MU GU GEI FA”</c>，响亮的自动语音播报道。50嘀嗒后开始。"
   },
   {
    "id": "c07-s0058",
@@ -251,7 +251,7 @@
   },
   {
    "id": "c07-s0059",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI FA\"</c>。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“LE MU GEI FA”</c>。"
   },
   {
    "id": "c07-s0060",
@@ -259,7 +259,7 @@
   },
   {
    "id": "c07-s0061",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU GEI FA\"</c>。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“PA GU GEI FA”</c>。"
   },
   {
    "id": "c07-s0062",
@@ -295,7 +295,7 @@
   },
   {
    "id": "c07-s0070",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI TAU FA\"</c>，响亮的自动语音炸响。战斗将在50嘀嗒后开始。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“MU GU GEI TAU FA”</c>，响亮的自动语音炸响。战斗将在50嘀嗒后开始。"
   },
   {
    "id": "c07-s0071",
@@ -307,7 +307,7 @@
   },
   {
    "id": "c07-s0073",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI TAU FA\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“LE MU GEI TAU FA”</c>"
   },
   {
    "id": "c07-s0074",
@@ -315,7 +315,7 @@
   },
   {
    "id": "c07-s0075",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU……\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“PA GU……”</c>"
   },
   {
    "id": "c07-s0076",
@@ -323,7 +323,7 @@
   },
   {
    "id": "c07-s0077",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"SO …… BI …… ZE …… HA ……\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“SO …… BI …… ZE …… HA ……”</c>"
   },
   {
    "id": "c07-s0078",
@@ -331,7 +331,7 @@
   },
   {
    "id": "c07-s0079",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU …… FO ……\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“MU …… FO ……”</c>"
   },
   {
    "id": "c07-s0080",
@@ -343,7 +343,7 @@
   },
   {
    "id": "c07-s0082",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"SHI …… LE …… PA …… TAU FA\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“SHI …… LE …… PA …… TAU FA”</c>"
   },
   {
    "id": "c07-s0083",
@@ -603,7 +603,7 @@
   },
   {
    "en": "symbol",
-   "zh": "符",
+   "zh": "符记",
    "kind": "term",
    "note": "民本棋的得分标志物，双方以剩余符数计分（十七比二十二即符数）"
   },
@@ -639,7 +639,7 @@
   },
   {
    "en": "rock formation",
-   "zh": "岩石",
+   "zh": "石阵",
    "kind": "term",
    "note": "棋盘上预置的固定结构，可用于反弹滑翔机"
   },

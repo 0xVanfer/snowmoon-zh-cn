@@ -3,336 +3,454 @@
   "status": "ok",
   "caption": "格拉迪亚斯与莫夫的位置及移动方向",
   "errors": [],
-  "chars": 761
+  "chars": 761,
+  "published": true,
+  "source": "model"
  },
  "chapter-02-fig-02": {
   "status": "ok",
   "caption": "双室容器内粒子及其运动方向示意图",
   "errors": [],
-  "chars": 3166
+  "chars": 3166,
+  "published": true,
+  "source": "model"
  },
  "chapter-02-fig-01": {
   "status": "ok",
   "caption": "两个容器中粒子运动幅度与数值范围的对比",
   "errors": [],
-  "chars": 3783
+  "chars": 3783,
+  "published": true,
+  "source": "model"
  },
  "chapter-01-fig-01": {
   "status": "ok",
   "caption": "预测分数的变化及其与90分基准的对比。",
   "errors": [],
-  "chars": 8388
+  "chars": 8388,
+  "published": true,
+  "source": "model"
  },
  "chapter-04-fig-04": {
   "status": "ok",
   "caption": "四类不同符号的数据点分布示意图",
   "errors": [],
-  "chars": 2895
+  "chars": 2895,
+  "published": true,
+  "source": "model"
  },
  "chapter-04-fig-05": {
   "status": "ok",
   "caption": "圆点、方块与三角形在平面上的分布。",
   "errors": [],
-  "chars": 1786
+  "chars": 1786,
+  "published": true,
+  "source": "model"
  },
  "chapter-04-fig-02": {
   "status": "ok",
   "caption": "杯、叶、牛、鱼的泽国语词汇图解",
   "errors": [],
-  "chars": 6935
+  "chars": 6935,
+  "published": true,
+  "source": "model"
  },
  "chapter-07-fig-01": {
   "status": "ok",
   "caption": "浅蓝圆点与紫色方块分布在蓝紫色背景上。",
   "errors": [],
-  "chars": 1834
+  "chars": 1834,
+  "published": true,
+  "source": "model"
  },
  "chapter-07-fig-02": {
   "status": "ok",
   "caption": "圆点与方块在平面上的分布。",
   "errors": [],
-  "chars": 2108
+  "chars": 2108,
+  "published": true,
+  "source": "model"
  },
  "chapter-05-fig-01": {
   "status": "ok",
   "caption": "城市之间的双向连接及权重示意图",
   "errors": [],
-  "chars": 12046
+  "chars": 12046,
+  "published": true,
+  "source": "model"
  },
  "chapter-06-fig-01": {
   "status": "ok",
   "caption": "随机选出评则掌则人并分配至讨论组。",
   "errors": [],
-  "chars": 6947
+  "chars": 6947,
+  "published": true,
+  "source": "model"
  },
  "chapter-07-fig-04": {
   "status": "ok",
   "caption": "圆点与方块在平面上的分布。",
   "errors": [],
-  "chars": 1111
+  "chars": 1111,
+  "published": true,
+  "source": "model"
  },
  "chapter-07-fig-03": {
   "status": "ok",
   "caption": "圆点与方块在平面上的分布",
   "errors": [],
-  "chars": 1448
+  "chars": 1448,
+  "published": true,
+  "source": "model"
  },
  "chapter-08-fig-01": {
   "status": "ok",
   "caption": "格拉迪亚斯的接纳投票分布",
   "errors": [],
-  "chars": 1860
+  "chars": 1860,
+  "published": true,
+  "source": "model"
  },
  "chapter-08-fig-02": {
   "status": "ok",
   "caption": "格拉迪亚斯的接纳投票示意图",
   "errors": [],
-  "chars": 1941
+  "chars": 1941,
+  "published": true,
+  "source": "model"
  },
  "chapter-12-fig-02": {
   "status": "ok",
   "caption": "六边形内上方分布圆点，下方分布方块。",
   "errors": [],
-  "chars": 875
+  "chars": 875,
+  "published": true,
+  "source": "model"
  },
  "chapter-14-fig-01": {
   "status": "ok",
   "caption": "三种颜色与形状的标记分布在蓝色背景上。",
   "errors": [],
-  "chars": 1338
+  "chars": 1338,
+  "published": true,
+  "source": "model"
  },
  "chapter-09-fig-01": {
   "status": "ok",
   "caption": "四台计算机与多层节点的网络连接示意图。",
   "errors": [],
-  "chars": 6087
+  "chars": 6087,
+  "published": true,
+  "source": "model"
  },
  "chapter-14-fig-03": {
   "status": "ok",
   "caption": "蓝紫背景上分布着圆点、方块和倒三角。",
   "errors": [],
-  "chars": 620
+  "chars": 620,
+  "published": true,
+  "source": "model"
  },
  "chapter-14-fig-02": {
   "status": "ok",
   "caption": "深蓝背景上分布着圆点、方块和倒三角。",
   "errors": [],
-  "chars": 765
+  "chars": 765,
+  "published": true,
+  "source": "model"
  },
  "chapter-12-fig-01": {
   "status": "ok",
   "caption": "多层网络中的交叉连接与跳跃连接示意图",
   "errors": [],
-  "chars": 7607
+  "chars": 7607,
+  "published": true,
+  "source": "model"
  },
  "chapter-14-fig-04": {
   "status": "ok",
   "caption": "深蓝背景上的三角形、方块与圆点分布",
   "errors": [],
-  "chars": 530
+  "chars": 530,
+  "published": true,
+  "source": "model"
  },
  "chapter-19-fig-01": {
   "status": "ok",
   "caption": "信封图标，表示邮件或消息。",
   "errors": [],
-  "chars": 307
+  "chars": 307,
+  "published": true,
+  "source": "model"
  },
  "chapter-14-fig-05": {
   "status": "ok",
   "caption": "四格图标展示杯子、叶片、牛头和鱼。",
   "errors": [],
-  "chars": 5156
+  "chars": 5156,
+  "published": true,
+  "source": "model"
  },
  "chapter-22-fig-01": {
   "status": "ok",
   "caption": "蓝底上的七个圆点与红色方块虚线标记。",
   "errors": [],
-  "chars": 614
+  "chars": 614,
+  "published": true,
+  "source": "model"
  },
  "chapter-22-fig-02": {
   "status": "ok",
   "caption": "七个浅蓝点与红色方块及虚线的位置示意图",
   "errors": [],
-  "chars": 614
+  "chars": 614,
+  "published": true,
+  "source": "model"
  },
  "chapter-17-fig-02": {
   "status": "ok",
   "caption": "紫外线研究项目及其资源分配网络",
   "errors": [],
-  "chars": 8796
+  "chars": 8796,
+  "published": true,
+  "source": "model"
  },
  "chapter-22-fig-03": {
   "status": "ok",
   "caption": "多个节点的圆形覆盖范围及位置标记",
   "errors": [],
-  "chars": 1414
+  "chars": 1414,
+  "published": true,
+  "source": "model"
  },
  "chapter-22-fig-04": {
   "status": "ok",
   "caption": "七个节点的虚线圆范围与彩色标记",
   "errors": [],
-  "chars": 1227
+  "chars": 1227,
+  "published": true,
+  "source": "model"
  },
  "chapter-22-fig-05": {
   "status": "ok",
   "caption": "多个圆形覆盖区域与位置标记示意图",
   "errors": [],
-  "chars": 1768
+  "chars": 1768,
+  "published": true,
+  "source": "model"
  },
  "chapter-17-fig-01": {
   "status": "ok",
   "caption": "空气传播疾病的防治措施及占比",
   "errors": [],
-  "chars": 16030
+  "chars": 16030,
+  "published": true,
+  "source": "model"
  },
  "chapter-22-fig-06": {
   "status": "ok",
   "caption": "多个虚线圆形范围与标记点的分布",
   "errors": [],
-  "chars": 1818
+  "chars": 1818,
+  "published": true,
+  "source": "model"
  },
  "chapter-19-fig-02": {
   "status": "ok",
   "caption": "各十六进制标识对应的百分比对比。",
   "errors": [],
-  "chars": 2472
+  "chars": 2472,
+  "published": true,
+  "source": "model"
  },
  "chapter-25-fig-01": {
   "status": "ok",
   "caption": "四个虚线格中蓝色圆圈的数量与排列对比",
   "errors": [],
-  "chars": 1521
+  "chars": 1521,
+  "published": true,
+  "source": "model"
  },
  "chapter-25-fig-03": {
   "status": "ok",
   "caption": "四个虚线格中不同数量的蓝色圆圈排列",
   "errors": [],
-  "chars": 1421
+  "chars": 1421,
+  "published": true,
+  "source": "model"
  },
  "chapter-25-fig-02": {
   "status": "ok",
   "caption": "四个虚线格展示不同数量与排列的蓝色圆圈。",
   "errors": [],
-  "chars": 1483
+  "chars": 1483,
+  "published": true,
+  "source": "model"
  },
  "chapter-25-fig-05": {
   "status": "ok",
   "caption": "四个虚线格内分别排列不同数量的蓝色圆圈",
   "errors": [],
-  "chars": 930
+  "chars": 930,
+  "published": true,
+  "source": "model"
  },
  "chapter-26-fig-01": {
   "status": "ok",
   "caption": "蓝色背景上的圆点、虚线与几何图形",
   "errors": [],
-  "chars": 639
+  "chars": 639,
+  "published": true,
+  "source": "model"
  },
  "chapter-25-fig-04": {
   "status": "ok",
   "caption": "四个虚线格中分别排列着2、4、7、12个蓝色圆圈",
   "errors": [],
-  "chars": 1312
+  "chars": 1312,
+  "published": true,
+  "source": "model"
  },
  "chapter-25-fig-06": {
   "status": "ok",
   "caption": "四个虚线格中，右侧两框各有一个蓝色圆圈。",
   "errors": [],
-  "chars": 498
+  "chars": 498,
+  "published": true,
+  "source": "model"
  },
  "chapter-26-fig-03": {
   "status": "ok",
   "caption": "点位、虚线与勾叉标记示意图",
   "errors": [],
-  "chars": 940
+  "chars": 940,
+  "published": true,
+  "source": "model"
  },
  "chapter-26-fig-04": {
   "status": "ok",
   "caption": "两个点的虚线指引与勾选标记示意图",
   "errors": [],
-  "chars": 805
+  "chars": 805,
+  "published": true,
+  "source": "model"
  },
  "chapter-27-fig-01": {
   "status": "ok",
   "caption": "公众对维里迪亚军方的信心分布。",
   "errors": [],
-  "chars": 4914
+  "chars": 4914,
+  "published": true,
+  "source": "model"
  },
  "chapter-26-fig-02": {
   "status": "ok",
   "caption": "点阵、虚线连接与红色叉号标记示意图",
   "errors": [],
-  "chars": 1676
+  "chars": 1676,
+  "published": true,
+  "source": "model"
  },
  "chapter-27-fig-02": {
   "status": "ok",
   "caption": "维里迪亚军方领导人选的民意分布。",
   "errors": [],
-  "chars": 5732
+  "chars": 5732,
+  "published": true,
+  "source": "model"
  },
  "chapter-29-fig-01": {
   "status": "ok",
   "caption": "北林周边各编队的位置与行动路线",
   "errors": [],
-  "chars": 2217
+  "chars": 2217,
+  "published": true,
+  "source": "model"
  },
  "chapter-29-fig-02": {
   "status": "ok",
   "caption": "北林周边地点与虚线路线示意图",
   "errors": [],
-  "chars": 1572
+  "chars": 1572,
+  "published": true,
+  "source": "model"
  },
  "chapter-29-fig-04": {
   "status": "ok",
   "caption": "两组不同颜色的散点分布示意图",
   "errors": [],
-  "chars": 889
+  "chars": 889,
+  "published": true,
+  "source": "model"
  },
  "chapter-27-fig-03": {
   "status": "ok",
   "caption": "北岸关联人群对维里迪亚军方领导者的偏好",
   "errors": [],
-  "chars": 5851
+  "chars": 5851,
+  "published": true,
+  "source": "model"
  },
  "chapter-29-fig-03": {
   "status": "ok",
   "caption": "红色与浅蓝色散点的分布示意图",
   "errors": [],
-  "chars": 888
+  "chars": 888,
+  "published": true,
+  "source": "model"
  },
  "chapter-29-fig-05": {
   "status": "ok",
   "caption": "北林及周边地点与路线示意图",
   "errors": [],
-  "chars": 1564
+  "chars": 1564,
+  "published": true,
+  "source": "model"
  },
  "chapter-29-fig-06": {
   "status": "ok",
   "caption": "北林及周边地点分布示意图",
   "errors": [],
-  "chars": 1577
+  "chars": 1577,
+  "published": true,
+  "source": "model"
  },
  "chapter-30-fig-02": {
   "status": "ok",
   "caption": "北林及周边地点分布示意图",
   "errors": [],
-  "chars": 1899
+  "chars": 1899,
+  "published": true,
+  "source": "model"
  },
  "chapter-30-fig-01": {
   "status": "ok",
   "caption": "北林及周边地点分布示意图",
   "errors": [],
-  "chars": 2185
+  "chars": 2185,
+  "published": true,
+  "source": "model"
  },
  "chapter-04-fig-01": {
   "status": "ok",
   "caption": "泽的手持终端上正播放着民本棋对局动画。",
   "chars": 39069,
-  "note": "图中无可译文字（仅泽国语罗马字或纯图形），按原样保留，未做字形替换"
+  "published": true,
+  "source": "as-is",
+  "last_error": "HTTP 524（视觉模型调用超时，4 次）",
+  "last_error_resolved": "按原样保留：原图无可译文字（纯动画图形 / 泽国语罗马字），未做中文重绘",
+  "note": "图中无可译文字（仅泽国语罗马字或纯图形），按原样保留，未做字形替换（按原样保留：原图无可译文字（纯动画图形 / 泽国语罗马字），未做中文重绘）",
+  "last_error_at": "figures.out.jsonl"
  },
  "chapter-04-fig-03": {
   "status": "ok",
   "caption": "用户在点餐终端点击“kai”，再选择沙拉图片。",
   "chars": 27548,
-  "note": "图中无可译文字（仅泽国语罗马字或纯图形），按原样保留，未做字形替换"
+  "published": true,
+  "source": "as-is",
+  "last_error": "HTTP 524（视觉模型调用超时，4 次）",
+  "last_error_resolved": "按原样保留：原图无可译文字（纯动画图形 / 泽国语罗马字），未做中文重绘",
+  "note": "图中无可译文字（仅泽国语罗马字或纯图形），按原样保留，未做字形替换（按原样保留：原图无可译文字（纯动画图形 / 泽国语罗马字），未做中文重绘）",
+  "last_error_at": "figures.out.jsonl"
  }
 }

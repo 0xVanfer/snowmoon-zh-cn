@@ -733,7 +733,7 @@
   },
   {
    "en": "prediction score",
-   "zh": "预测分",
+   "zh": "预测分数",
    "kind": "term",
    "note": "见习官的考核指标，以百分位排名"
   },

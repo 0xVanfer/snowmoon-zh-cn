@@ -591,7 +591,7 @@
   },
   {
    "id": "c12-s0148",
-   "text": "一个响亮的自动语音播报——这次听着更偏女声：<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI FA\"</c>。50嘀嗒后开始。"
+   "text": "一个响亮的自动语音播报——这次听着更偏女声：<c st=\"color:oklch(0.7 0.15 160)\">“MU GU GEI FA”</c>。50嘀嗒后开始。"
   },
   {
    "id": "c12-s0149",
@@ -599,7 +599,7 @@
   },
   {
    "id": "c12-s0150",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE MU GEI FA\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“LE MU GEI FA”</c>"
   },
   {
    "id": "c12-s0151",
@@ -607,7 +607,7 @@
   },
   {
    "id": "c12-s0152",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU GEI FA\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“PA GU GEI FA”</c>"
   },
   {
    "id": "c12-s0153",
@@ -635,7 +635,7 @@
   },
   {
    "id": "c12-s0159",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"LE FI SHI GEI TAU FA\"</c>，响亮的自动语音喊道。战斗将在2,000嘀嗒后开始。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“LE FI SHI GEI TAU FA”</c>，响亮的自动语音喊道。战斗将在2,000嘀嗒后开始。"
   },
   {
    "id": "c12-s0160",
@@ -651,7 +651,7 @@
   },
   {
    "id": "c12-s0163",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA MU GU GU GEI TAU FA.\"</c>战斗将在1,500嘀嗒后开始。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“PA MU GU GU GEI TAU FA.”</c>战斗将在1,500嘀嗒后开始。"
   },
   {
    "id": "c12-s0164",
@@ -663,7 +663,7 @@
   },
   {
    "id": "c12-s0166",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"FI SHI GEI TAU FA.\"</c>战斗将在1,000嘀嗒后开始。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“FI SHI GEI TAU FA.”</c>战斗将在1,000嘀嗒后开始。"
   },
   {
    "id": "c12-s0167",
@@ -703,7 +703,7 @@
   },
   {
    "id": "c12-s0176",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU FI LE GEI TAU FA.\"</c>战斗将在500嘀嗒后开始。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“MU FI LE GEI TAU FA.”</c>战斗将在500嘀嗒后开始。"
   },
   {
    "id": "c12-s0177",
@@ -743,7 +743,7 @@
   },
   {
    "id": "c12-s0186",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"FI LE GEI TAU FA.\"</c>战斗将在100嘀嗒后开始。"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“FI LE GEI TAU FA.”</c>战斗将在100嘀嗒后开始。"
   },
   {
    "id": "c12-s0187",
@@ -751,7 +751,7 @@
   },
   {
    "id": "c12-s0188",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"MU GU GEI TAU FA.\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“MU GU GEI TAU FA.”</c>"
   },
   {
    "id": "c12-s0189",
@@ -767,11 +767,11 @@
   },
   {
    "id": "c12-s0192",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……”</c>"
   },
   {
    "id": "c12-s0193",
-   "text": "<c st=\"color:oklch(0.7 0.15 160)\">\"TAU FA.\"</c>"
+   "text": "<c st=\"color:oklch(0.7 0.15 160)\">“TAU FA.”</c>"
   },
   {
    "id": "c12-s0194",
