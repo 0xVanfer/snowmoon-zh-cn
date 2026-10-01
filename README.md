@@ -81,6 +81,7 @@ git clone https://github.com/0xVanfer/snowmoon-zh-cn.git
 | 读成品 | 现代浏览器，无需构建 |
 | 译制流水线 | Python 3.11+（仅标准库），`python3 pipeline/*.py` |
 | 文字翻译 | DeepSeek Harness + DeepSeek V4.1 Flash（subagent 逐章翻译） |
+| 多轮审计修复 | 使用 Minimax M3.1 |
 | 前端设计与插图重绘 |视觉模型（`pipeline/vision_api.py`） |
 | 插图与站点截图校验 | Google Chrome（headless） |
 | 站点托管 | GitHub Pages（推送 `main` 自动构建发布） |
