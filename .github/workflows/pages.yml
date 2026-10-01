@@ -46,6 +46,9 @@ jobs:
       # 交互探针：唯一能抓住「作用域错误」这类缺陷的闸门。
       # 翻页模式曾经因为 reader.js 里两行跨作用域引用而 100% 不可用，
       # 六道静态闸门全部放行 —— node --check 也查不出（那是作用域问题，不是语法问题）。
+      # 本机 29/29 通过（macOS + Playwright headless_shell + --single-process，
+      # 见 docs/lessons.md §10）。仍不阻断发布：无头环境偶发虚拟时间抖动，
+      # 探针自带一次重跑兜底，但重跑也失败时无法区分是回归还是环境。
       - name: 交互探针（需要 Chrome）
         if: ${{ always() }}
         continue-on-error: true

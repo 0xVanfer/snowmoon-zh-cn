@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import shlex
 import shutil
 import signal
 import subprocess
@@ -27,7 +28,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "book" / "site"
 OUT = ROOT / "sources" / "work" / "site-previews"
 def chrome_path() -> str:
-    """定位 Chrome：环境变量 CHROME 优先，其次 macOS 默认位置与常见替代路径。"""
+    """定位 Chrome：环境变量 CHROME 优先，其次 macOS 默认位置、常见替代路径，
+    最后是 Playwright 缓存里的 headless_shell（见 chrome_flags 的说明）。"""
     import shutil
     env = os.environ.get("CHROME") or os.environ.get("CHROME_PATH")
     if env:
@@ -45,9 +47,42 @@ def chrome_path() -> str:
     found = shutil.which("google-chrome") or shutil.which("chromium") or shutil.which("chrome")
     if found:
         return found
+    # Playwright 下载的 headless shell 是独立二进制，自带 headless 模式，
+    # 不依赖系统装了 Chrome。版本号会随 Playwright 升级变化，所以用通配。
+    cache = Path.home() / "Library" / "Caches" / "ms-playwright"
+    for pattern in ("chromium_headless_shell-*/chrome-mac/headless_shell",
+                     "chromium_headless_shell-*/chrome-mac/chrome-headless-shell",
+                     "chromium_headless_shell-*/chrome-linux/headless_shell"):
+        hits = sorted(cache.glob(pattern), reverse=True)
+        if hits:
+            return str(hits[0])
     raise SystemExit("找不到 Chrome：请设置环境变量 CHROME=<可执行文件路径>（headless 渲染需要它）")
 
 CHROME = chrome_path()
+
+
+def is_headless_shell(path: str) -> bool:
+    """Playwright 的 headless_shell 是独立二进制，自带 headless 模式。
+
+    对它再传 `--headless=new` 会被当成未知开关，行为也不受支持。
+    """
+    return "headless_shell" in Path(path).name or "headless-shell" in Path(path).name
+
+
+def chrome_flags() -> list[str]:
+    """所有 Chrome 调用的公共 flag（截图与几何探针共用，免得两处各写一份跑偏）。
+
+    某些受限沙箱禁止进程向 Mach bootstrap 注册服务，Chrome 会在
+    `mach_port_rendezvous_mac.cc` / `base/mac/mac_util.mm` 直接 FATAL 退出（exit 133，
+    `bootstrap_check_in ...: Permission denied (1100)`）。`--single-process` 不走
+    zygote 与 rendezvous，实测可以绕开。但单进程模式本身不够稳，不该无条件打开——
+    因此只从环境变量 `CHROME_EXTRA_ARGS` 追加，默认什么都不加。
+    """
+    flags = [] if is_headless_shell(CHROME) else ["--headless=new"]
+    flags += ["--disable-gpu", "--no-sandbox", "--no-first-run",
+              "--no-default-browser-check", "--disable-extensions", "--hide-scrollbars"]
+    flags += shlex.split(os.environ.get("CHROME_EXTRA_ARGS", ""))
+    return flags
 
 PRESET_SCRIPT = """<script>
 try{localStorage.setItem("snowmoon.reader.v1", JSON.stringify(%s));}catch(e){}
@@ -83,6 +118,12 @@ PRESETS: dict[str, tuple] = {
                            {"settings": {"theme": "paper", "lang": "dual"}}, 400),
     "read-wide-paged-next": ("read/chapter-01.html", 1440, 900,
                              {"settings": {"theme": "paper", "lang": "zh", "mode": "paged"}}, 500),
+    # §3.2 回归：双语标签页切到英文栏（该栏从未分列过）后按「下一屏」。
+    # 若 api.step 取消 rAF 后不补排版，英文栏 m.pages 还是初值 1，
+    # next>=pages 恒真 → 读者被直接踢到下一章；paged 视口又是 overflow:hidden，
+    # 没排版的栏既翻不动也滚不动，卡死。
+    "read-paged-tab-next": ("read/chapter-01.html", 390, 844,
+                            {"settings": {"theme": "paper", "lang": "dual", "mode": "paged"}}, 500),
     "read-wide-settings": ("read/chapter-01.html", 1440, 900,
                            {"settings": {"theme": "paper", "lang": "dual"}}, 400),
     "read-scroll-next": ("read/chapter-01.html", 1440, 900,
@@ -151,6 +192,13 @@ ACTIONS = {
                              "document.querySelector('#btn-next-screen').click();"),
     "read-wide-settings": "document.getElementById('btn-settings').click();",
     "read-scroll-next": "document.querySelector('#btn-next-screen').click();",
+    # 切栏与按「下一屏」必须在**同一个 tick** 内完成，中间不能等：
+    # 切栏会经 MutationObserver 排一次异步 layout，等它跑完英文栏就已经分列好了，
+    # api.step 里那个「当前栏还没排版」的分支根本走不到。
+    # 真实读者在标签页上连点两下的手势正是这样——两个事件落在同一帧里。
+    "read-paged-tab-next": (
+        "document.querySelector('#tab-en').click();"
+        "var b=document.getElementById('btn-next-screen');if(b)b.click();"),
     # 反复滚几次：分栏判定是异步的，第一次滚动可能还没进入「分栏 + 同步」状态。
     # 另需手动补一次 scroll 事件：无头 + --virtual-time-budget 下，嵌套滚动容器（正文栏）
     # 的 scroll 事件经常排进队列却轮不到一次渲染帧去派发，探针会误判成「同步滚动没生效」。
@@ -245,8 +293,7 @@ def shoot(page: Path, png: Path, w: int, h: int, wait_ms: int) -> bool:
     if png.exists():
         png.unlink()
     with tempfile.TemporaryDirectory() as prof:
-        cmd = [CHROME, "--headless=new", "--disable-gpu", "--no-sandbox", "--no-first-run",
-               "--no-default-browser-check", "--disable-extensions", "--hide-scrollbars",
+        cmd = [CHROME, *chrome_flags(),
                f"--user-data-dir={prof}", *window_args(w, h),
                f"--screenshot={png}", f"--virtual-time-budget={2500 + wait_ms}",
                f"file://{page}"]

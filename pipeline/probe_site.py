@@ -23,8 +23,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from render_site_previews import (ACTIONS, CHROME, FRAMED, PRESETS, stage,  # noqa: E402
-                                  window_args)
+from render_site_previews import (ACTIONS, CHROME, FRAMED, PRESETS, chrome_flags,  # noqa: E402
+                                  stage, window_args)
 
 PROBE = """
 <script>
@@ -253,7 +253,9 @@ window.addEventListener('load', function(){
 # 测量前的额外等待（毫秒）：图多的章节、需要等 rAF 的动作用更长的等待
 ACTIONS_WAIT = {"read-sync-scroll": 1500, "read-progress-save": 1400,
                 "read-wide-paged": 900, "read-paged-figures": 900,
-                "read-wide-paged-next": 900, "read-narrow-tab-en": 600}
+                "read-wide-paged-next": 900, "read-narrow-tab-en": 600,
+                # 切栏 + 按下一屏之后要等两轮排版（英文栏的 layoutPages）
+                "read-paged-tab-next": 2500}
 
 
 # 测量前轮询的「就绪条件」（按预设 id）：等异步结果（如进度落盘）出现再测量
@@ -264,6 +266,11 @@ WAIT_FOR = {
         "return !!(c.zh && c.zh.y > 100); } catch (e) { return false; } })()"),
     # 手机框先 390px 再拉宽到 1600px：等它自己恢复分栏
     "read-dual-recover": "document.documentElement.dataset.dualLayout === 'columns'",
+    # 等英文栏真的分列出多页（总页数 > 1）再测；分页模式下页码指示才是「第 x / y 页」
+    "read-paged-tab-next": (
+        "(function(){var m=/(\\d+)\\s*\\/\\s*(\\d+)/.exec("
+        "(document.getElementById('page-indicator')||{}).textContent||'');"
+        "return !!m && Number(m[2])>1;})()"),
 }
 
 # 需要「先窄后宽」的预设：pid -> 拉宽后的 iframe 宽度（回归测试「窄屏样式卡住回不去分栏」）
@@ -299,6 +306,7 @@ def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
               .replace("__WAIT_FOR__", wait_for).replace("__VIEW_H__", str(h)))
     raw = re.sub(r'<script id="probe-script">.*?</script>', '', raw, flags=re.S)
     page.write_text(raw.replace("</body>", script + "</body>"), encoding="utf-8")
+
     target = page
     if frame:
         fw, fh = frame
@@ -320,10 +328,10 @@ def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
     # Chrome 打印完 DOM 后不会自己退出（和截图一样会挂住），所以把 stdout 写到文件里轮询。
     with tempfile.TemporaryDirectory() as prof:
         dom_p = Path(prof) / "dom.html"
-        cmd = [CHROME, "--headless=new", "--disable-gpu", "--no-sandbox", "--no-first-run",
-               "--no-default-browser-check", "--disable-extensions", "--hide-scrollbars",
+        cmd = [CHROME, *chrome_flags(),
                f"--user-data-dir={prof}/p", *window_args(w, h),
-               "--virtual-time-budget=9000", "--dump-dom", f"file://{target}"]
+               f"--virtual-time-budget={9000}",
+               "--dump-dom", f"file://{target}"]
         with dom_p.open("wb") as fh:
             proc = subprocess.Popen(cmd, stdout=fh, stderr=subprocess.DEVNULL, start_new_session=True)
             deadline = time.time() + 45
@@ -344,7 +352,12 @@ def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
         dom = dom_p.read_text(encoding="utf-8", errors="replace")
     m = re.search(r'<pre id="probe-json">(.*?)</pre>', dom, re.S)
     if not m:
-        raise RuntimeError(f"探针没跑出来（DOM {len(dom)} 字节）")
+        ch = re.search(r'data-chapter="(\d+)"', dom)
+        raise RuntimeError(
+            f"探针没跑出来（DOM {len(dom)} 字节"
+            + (f"，当前页面是第 {ch.group(1)} 章" if ch else "")
+            + "）。页面若已被导航到别的章节，说明被测的交互把读者带走了——"
+              "这是断言失败的表现形式之一，不是环境问题。")
     return json.loads(htmlmod.unescape(m.group(1)).replace("&nbsp;", " "))
 
 
@@ -408,7 +421,9 @@ def check(pid: str, d: dict) -> list[str]:
             else:
                 need(vis_zh != vis_en, f"标签页模式只应显示一栏（zh={vis_zh}, en={vis_en}）")
                 need(d["langTabs"]["w"] > 1, "标签页模式标签条应可见")
-        if d["mode"] == "paged":
+        if d["mode"] == "paged" and not pid.startswith("read-paged-tab"):
+            # read-paged-tab-* 是「切到英文栏之后」的场景，中文栏本就不可见，
+            # 那两项通用断言对它不成立；它自己的断言在下面单独写。
             need(vis_zh, "分页模式中文栏不可见")
             f = d["flowZh"] or {}
             cols = f.get("sw", 0) / max(1, f.get("cw", 1))
@@ -549,6 +564,19 @@ def check(pid: str, d: dict) -> list[str]:
              f"滚动后没有把位置写进 localStorage：{rec}（进度条 {d['progress']}，指示 {d['indicator']}）")
     if pid == "read-scroll-next":
         need(d["scrollY"] > 50, f"滚动模式点「下一屏」后没有滚动：scrollY={d['scrollY']}")
+    if pid == "read-paged-tab-next":
+        # §3.2 回归的唯一防线：删掉 api.step 里的 relayout 分支后，
+        # 英文栏 m.pages 停在初值 1，next>=pages 恒真 → 读者被踢到下一章。
+        need(d["chapter"] == "1",
+             f"切到未分列的英文栏再按「下一屏」，不该被踢到下一章：chapter={d['chapter']!r}")
+        m = re.search(r"第\s*(\d+)\s*/\s*(\d+)", d["indicator"])
+        need(bool(m), f"英文栏分页后页码指示应存在：{d['indicator']!r}")
+        if m:
+            need(int(m.group(2)) >= 2,
+                 f"英文栏必须已分列出多页（总页数应 >1）：{d['indicator']!r}")
+        fe = d["flowEn"] or {}
+        need(fe.get("tf", "none") not in ("none", ""),
+             f"英文栏应有分列位移：transform={fe.get('tf')!r}")
     if not pid.startswith("home"):
         need(not d["bodyOverflowX"], f"页面出现横向溢出（scrollWidth {d['docW']} > clientWidth {d['clientW']}）")
     return bad

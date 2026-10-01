@@ -168,3 +168,25 @@
 - **不可删除的沙箱会伪装成「文件没变」**。本机 `/tmp` 拒绝 `unlink`/`rename`，
   「删掉一张插图看闸门是否报警」只能改成「复制时排除该文件」。
   测完要核对 `git status --short`，确认造出来的确实是目标状态（本轮靠它确认了 `MM` 索引态）。
+
+## 10. 无头探针（2026-10-01）
+
+- **「探针跑不起来」和「探针没覆盖到」长得一模一样**。`probe_site.py` 曾长期 0/28，
+  原因是受限沙箱禁止进程向 Mach bootstrap 注册服务
+  （`bootstrap_check_in ... Permission denied (1100)` → `mac_util.mm` / `mach_port_rendezvous_mac.cc` FATAL，exit 133）。
+  当时只记了「本机跑不了、CI 里 continue-on-error」，于是翻页模式、跳章排版
+  这些只能靠静态作用域检查——**而「无法验证」和「验证通过」在报告里长得一样**。
+  绕法：换 Playwright 缓存里的 `headless_shell`（独立二进制，自带 headless，
+  不能再传 `--headless=new`），加 `--single-process` 绕开 zygote 与 rendezvous。
+  两者都做成 `chrome_path()` 的候选与 `CHROME_EXTRA_ARGS` 环境变量，
+  默认什么都不加——单进程模式不够稳，不该无条件打开。
+- **判据里写了 `if m:` 之后，后面的 `m.group(1)` 就成了定时炸弹**。
+  新写的跳章断言里 `need(bool(m), ...)` 只记录不抛异常，下一行 `int(m.group(1))`
+  在 `m` 为 None 时抛 AttributeError，把本该清晰的断言失败变成「断言执行出错」。
+  探针的 `check()` 里任何「上一条断言的产物」都要重新判空。
+- **跨章是整页跳转，探针会跟着一起卸载**。`api.step` 跳章走 `location.assign(nav-next.href)`，
+  源页注入的探针随导航消失，`--dump-dom` 只能看到新章。做法是给目标章也注入一份探针
+  （动作不再重放、就绪条件不再轮询）。附带地，`--virtual-time-budget` 必须加大：
+  跳转后探针要重新 load 并再等一轮（600ms + 轮询 + wait），预算不够只会 dump 出半截 DOM，
+  报成「探针没跑出来」——一个看起来像环境问题的失败，其实是超时。
+
