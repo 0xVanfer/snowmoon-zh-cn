@@ -52,23 +52,39 @@ CONLANG_FONT_RE = re.compile(r"TeX Gyre Chorus", re.I)
 CONLANG_TEXT_RE = re.compile(r"^[a-z][a-z\s&nbsp;]*$")
 # 泽国语词表（由 build_conlang_vocab.py 生成）。用于识别「没有 dz-line / Chorus 字体标记」
 # 的虚构语言片段——这类文字散落在普通 <p>/<td> 里，只靠标签无从判断，必须靠词表。
+# [P0] 词表缺失 / 损坏时此前只把 CONLANG_VOCAB 置空、不留任何痕迹：词表识别**整体**
+# 静默失效，散落在普通段落里的虚构语言会被当成待译英文送去翻译，而 extract 照常
+# exit 0。这里把「为什么是空的」记下来，交给 main() 决定要不要硬失败。
 CONLANG_VOCAB: set[str] = set()
+CONLANG_VOCAB_PROBLEM: str | None = None
 _cv = ROOT / "sources" / "work" / "conlang_vocab.json"
-if _cv.exists():
+if not _cv.exists():
+    CONLANG_VOCAB_PROBLEM = f"缺少词表 {_cv.relative_to(ROOT)}（先跑 build_conlang_vocab.py）"
+else:
     try:
         CONLANG_VOCAB = {w.lower() for w in json.loads(_cv.read_text(encoding="utf-8"))}
-    except (json.JSONDecodeError, TypeError, ValueError):
-        CONLANG_VOCAB = set()
+    except (json.JSONDecodeError, TypeError, ValueError) as exc:
+        CONLANG_VOCAB_PROBLEM = f"词表 {_cv.relative_to(ROOT)} 解析失败: {exc}"
 # 布局容器：flex/grid 的子元素各自是独立布局项，绝不能把子元素拍平成一个文本节点
 # （典型：投票/拖动条的 `display:flex; justify-content:space-between` 刻度行）。
 LAYOUT_RE = re.compile(r"display\s*:\s*(?:flex|grid)|justify-content", re.I)
 
 # 只出现在页面结构里、绝不该出现在 <svg> 内部的 HTML 标签。
 # 出现即说明上游有未闭合的 <svg>，把后续兄弟节点吞进了图里（见 docs/lessons.md）。
+# [P0] 行内标签此前整类缺席：被吞掉的段落若只用 <b>/<i>/<a>/<code> 排版，这张守卫
+# 完全看不见——该段正文变成 0 片段、全文进 .svg，而 extract 照常 exit 0。
+# SVG 里合法的标签只有 svg 自身那一族（text/tspan/path/g/…），这些 HTML 标签一律不算。
 HTML_ONLY_TAGS = {
     "p", "div", "span", "table", "thead", "tbody", "tfoot", "tr", "td", "th",
     "figure", "figcaption", "blockquote", "center", "ul", "ol", "li",
     "h1", "h2", "h3", "h4", "h5", "h6", "section", "article", "button", "pre",
+    # 行内 / 文本级：同样绝不该出现在 <svg> 内部
+    "b", "strong", "i", "em", "u", "s", "strike", "a", "code", "kbd", "samp",
+    "var", "small", "big", "sub", "sup", "abbr", "cite", "q", "mark", "time",
+    "label", "legend", "fieldset", "form", "input", "select", "option",
+    "textarea", "dl", "dt", "dd", "details", "summary", "main", "header",
+    "footer", "nav", "aside", "hr", "br", "wbr", "font", "caption", "col",
+    "colgroup", "video", "audio", "iframe", "canvas", "noscript", "picture",
 }
 
 
@@ -639,7 +655,19 @@ def discover_chapters() -> list[int]:
 
 
 def main() -> None:
+    # [P0] 上游原文不在时此前只跑一个空循环、打印全零 TOTAL 并 exit 0 ——
+    # 「什么也没抽」被印成了「抽取成功」。verify_extract.py 对同一情况有显式处理。
+    if not SRC.exists():
+        raise SystemExit(f"缺少上游原文目录 {SRC.relative_to(ROOT)}：无从抽取。"
+                         f"先放置 sources/en/html/chapter-N.html 再运行本脚本。")
     todo = [int(x) for x in sys.argv[1:]] or discover_chapters()
+    # [P0] 词表缺席 = 虚构语言识别整体失效，必须在这里停住而不是让缺标记的泽国语
+    # 被当成待译英文。--allow-missing-vocab 供「只想重跑部分章且知道后果」时显式放行。
+    if CONLANG_VOCAB_PROBLEM and "--allow-missing-vocab" not in sys.argv[1:]:
+        raise SystemExit(f"{CONLANG_VOCAB_PROBLEM}：泽国语识别会整体失效，"
+                         f"散落在普通段落里的虚构语言会被当成待译英文。")
+    if not todo:
+        raise SystemExit(f"{SRC.relative_to(ROOT)} 下没有 chapter-N.html，没有可抽取的章节")
     total = {"blocks": 0, "segs": 0, "locked": 0, "figures": 0}
     for ch in todo:
         r = process(ch)

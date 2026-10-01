@@ -137,6 +137,47 @@ def has_cjk(s: str) -> bool:
     return bool(re.search(r"[\u3400-\u9fff]", s))
 
 
+# [P0] font-size 换算。真实产物里字号写在两个地方：<text font-size="15"> 与
+# <tspan font-size="0.72em">（上标数字），而此前只读 <text> 自身、且 em/px/% 一律
+# 静默跳过 —— 「±20%」这条规则因此在真图上从未生效。
+_FONT_UNIT_SCALE = {"": 1.0, "px": 1.0, "em": 1.0, "rem": 1.0}
+FONT_SIZE_RE = re.compile(r"^\s*([0-9]*\.?[0-9]+)\s*(px|em|rem|%)?\s*$")
+
+
+def _parse_font_size(raw: str | None) -> float | None:
+    """把一个 font-size 属性值换算成「相对父级 em 的倍数」。
+
+    px / em / rem 视作同一量纲（em 相对自身、px 相对当前字号，SVG 里 `font-size=15`
+    与 `font-size=15px` 含义相同）；`%` 相对父级字号，折算成 0.01 倍。
+    返回 None 表示该值无法解析——由调用方报错，不静默放过。
+    """
+    if raw is None:
+        return None
+    m = FONT_SIZE_RE.match(raw)
+    if not m:
+        return None
+    value, unit = float(m.group(1)), (m.group(2) or "")
+    if unit == "%":
+        return value / 100.0
+    return value * _FONT_UNIT_SCALE.get(unit, 1.0)
+
+
+def font_size_of(el: ET.Element) -> float | None:
+    """取 <text> 的有效字号：自身没有就回落到第一个 <tspan> 的。
+
+    两侧用同一函数，原图与中文图的比较才有意义（一方写 <text font-size>、另一方
+    写 <tspan font-size> 是常见且可接受的改写，不该因此报「变化过大」）。
+    tspan 的 em 相对 <text> 的字号；<text> 自己没写字号时按 1.0 为基准。
+    """
+    own = _parse_font_size(el.get("font-size"))
+    for child in el:
+        if strip_ns(child.tag) == "tspan":
+            nested = _parse_font_size(child.get("font-size"))
+            if nested is not None:
+                return nested * (own if own is not None else 1.0)
+    return own
+
+
 def validate(src_path: Path, zh_path: Path) -> list[str]:
     errs: list[str] = []
     try:
@@ -192,12 +233,18 @@ def validate(src_path: Path, zh_path: Path) -> list[str]:
             if (ea.get(attr) or "") != (eb.get(attr) or ""):
                 errs.append(f'text "{ea.text}": 属性 {attr} 变化 '
                             f'{ea.get(attr)!r} → {eb.get(attr)!r}')
-        try:
-            fs_a, fs_b = float(ea.get("font-size") or 0), float(eb.get("font-size") or 0)
-            if fs_a and abs(fs_b - fs_a) / fs_a > 0.2:
-                errs.append(f'text "{ea.text}": font-size 变化过大 {fs_a} → {fs_b}')
-        except ValueError:
-            pass
+        fs_a = font_size_of(ea)
+        fs_b = font_size_of(eb)
+        if fs_a is None or fs_b is None:
+            # [P0] 此前这里是 `except ValueError: pass`：`0.72em` / `15px` / `120%`
+            # 全部静默跳过，于是「font-size ±20%」在真图上从未生效——真图的字号恰恰
+            # 写在 <tspan> 上（见 book/images/chapter-02-fig-01.svg）。单位无法换算
+            # 属于异常形态，必须报出来，不能当作通过。
+            if (ea.get("font-size") or eb.get("font-size")):
+                errs.append(f'text "{ea.text}": font-size 无法换算 '
+                            f'{ea.get("font-size")!r} → {eb.get("font-size")!r}')
+        elif fs_a and abs(fs_b - fs_a) / fs_a > 0.2:
+            errs.append(f'text "{ea.text}": font-size 变化过大 {fs_a:g} → {fs_b:g}')
         ta = "".join(ea.itertext()).strip()
         tb = "".join(eb.itertext()).strip()
         if is_numberish(ta) or is_conlang(ta):

@@ -237,9 +237,17 @@ def apply_results(results: Path) -> None:
                     continue
         gap = sorted(want - seen)
         if gap:
-            print(f"警告：结果文件缺少 {len(gap)} 个任务的结果：{gap[:6]}")
-    (FIG_DIR / "manifest.json").write_text(
+            # [P0] 此前只打印警告、不计入 fail、不影响退出码：out.jsonl 被截断（进程被杀、
+            # 断点续跑中断）时，缺失的那几张会以**旧内容**静默发布，alt/图注还是上一轮的。
+            # 「这一批没跑完」必须有机器可读的信号。
+            fail += len(gap)
+            print(f"警告：结果文件缺少 {len(gap)} 个任务的结果：{gap[:6]}", file=sys.stderr)
+    # [P0] manifest 原本在整个循环结束后才写一次：中途被 kill 会出现「新图已在盘上、
+    # manifest 还是上一轮的 caption/chars/status」这种撕裂状态。先写临时文件再原子替换。
+    _manifest_tmp = FIG_DIR / "manifest.json.tmp"
+    _manifest_tmp.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+    _manifest_tmp.replace(FIG_DIR / "manifest.json")
     print(f"生成 {ok} 张合格中文插图，{fail} 张待修")
     # [P1] apply 永远退出 0：同一个三步流程里调用器（vision_api）会失败、落盘器不会，
     # 于是「这一批没跑完」这件事没有任何机器可读的信号。

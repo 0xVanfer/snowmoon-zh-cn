@@ -76,10 +76,26 @@ def main() -> None:
         print(f"缺失/失败：{missing}", file=sys.stderr)
         print("未写入任何文件（缺一个即全部不写）", file=sys.stderr)
         sys.exit(1)
+    # 全有或全无：**写前**已确认（缺一个就一个都不写），但**写入本身**也要原子：
+    # 此前是逐个 write_text 覆盖，写完 style.css 再写 reader.js 时若进程被杀 / 抛错，
+    # 留下的正是上面注释要避免的「新 CSS + 旧 JS」混合态。先全部落到 .tmp，
+    # 再逐个 rename（同一文件系统内 rename 是原子的）。
+    staged: list[tuple[Path, Path]] = []
+    try:
+        for fname in FILES:
+            body = payloads[fname]
+            tmp = SITE / f".{fname}.tmp"
+            tmp.write_text(body, encoding="utf-8")
+            staged.append((tmp, SITE / fname))
+    except OSError as exc:
+        for tmp, _ in staged:
+            tmp.unlink(missing_ok=True)
+        raise SystemExit(f"写入临时文件失败，已回滚、未改动任何目标文件：{exc}")
+    for tmp, dst in staged:
+        tmp.replace(dst)
     for fname in FILES:
-        body = payloads[fname]
-        (SITE / fname).write_text(body, encoding="utf-8")
-        print(f"{'+'.join(FILES[fname])} -> pipeline/site/{fname}  ({len(body)} 字符)")
+        print(f"{'+'.join(FILES[fname])} -> pipeline/site/{fname}  "
+              f"({len(payloads[fname])} 字符)")
 
 
 if __name__ == "__main__":

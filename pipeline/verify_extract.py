@@ -149,11 +149,18 @@ def main() -> None:
         print("sources/en/html 不存在（上游原文不入库），跳过抽取还原比对")
         return
     bad = 0
+    skipped = 0
     for ch in todo:
         a, unbalanced = original_text(ch)
         if unbalanced:
-            print(f"WARN ch{ch:02d}: 上游有 {unbalanced} 个未配平的 <svg>，本章跳过还原比对"
-                  f"（插图已由 validate_svg.py 单独校验）")
+            # [P0] 此前这里 continue 却不计入 bad，脚本照常 exit 0 —— 「本章从未比对过」
+            # 被印成了一条无害的 WARN。按 extract.py 的泄漏守卫，未闭合的 <svg> 正是
+            # 「正文被吞进插图」的形态，而那正是本脚本要拦的那类静默丢字。跳过必须留痕
+            # 并计入失败，否则它就成了整条闸门里唯一看不见的洞。
+            print(f"WARN ch{ch:02d}: 上游有 {unbalanced} 个未配平的 <svg>，本章**未做**还原比对"
+                  f"（插图已由 validate_svg.py 单独校验）——该章视为未通过", file=sys.stderr)
+            bad += 1
+            skipped += 1
             continue
         b = extracted_text(ch)
         missing = regions_of(a, b)
@@ -167,6 +174,8 @@ def main() -> None:
             print(f"    MISSING …{a[max(0, s - 20):e + 20]}…")
         for s, e in extra[:5]:
             print(f"    EXTRA   …{b[max(0, s - 20):e + 20]}…")
+    if skipped:
+        print(f"其中 {skipped} 章因上游 <svg> 未配平而**未做**比对（已计入失败）", file=sys.stderr)
     print("chapters with differences:", bad)
     # 这个脚本必须能失败：否则它只是一份日志，不是一道闸门
     sys.exit(1 if bad else 0)

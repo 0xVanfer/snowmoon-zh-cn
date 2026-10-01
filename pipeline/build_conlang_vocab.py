@@ -27,6 +27,22 @@ OUT = ROOT / "sources" / "work" / "conlang_vocab.json"
 
 # 泽国语音节上限。PA/SO 这类播报词与 bau/dzu 一样短；超过 4 字母基本是英语。
 SYLLABLE_MAX = 4
+
+# [P0] 与英语常用词同形的音节不能进词表。词表在 validate_svg.py / validate_translation.py
+# 里是**免译白名单**：命中即「判定为泽国语、只需原样保留」，不再要求译成中文。
+# 而 locked 片段里混着大量真实英语（"ten min" = 10 分钟、"can" / "no" / "she" …），
+# 此前对它们跑 `[a-z]+` 全量收割，实测 167 词里有 95 词与常用英文词典同形 ——
+# 将来任何含 min/can/no 的英文图标签都会被当成「泽国语原样保留」而放行。
+# 与 extract.py 的 ENGLISH_LOOKALIKE 保持同源，避免两处停用词表各说各话。
+ENGLISH_STOPWORDS = {
+    "a", "am", "an", "and", "are", "as", "at", "be", "but", "by", "can", "die", "do",
+    "for", "from", "go", "had", "has", "he", "her", "hi", "him", "his", "if", "in",
+    "is", "it", "me", "min", "my", "no", "not", "of", "on", "or", "our", "out", "she",
+    "so", "ten", "than", "that", "the", "them", "then", "they", "this", "to", "up",
+    "us", "was", "we", "who", "why", "with", "you", "sun", "see", "all", "any", "new",
+    "now", "one", "two", "man", "men", "may", "own", "say", "old", "day", "way",
+    "get", "let", "put", "run", "set", "try", "use", "win", "yes", "yet", "ask", "big",
+}
 # 播报体判据之一：整条去标签正文里的罗马字必须全是大写。
 # 「WHAT?」「JUST IN:」也满足，靠下面「多数词已是已知音节」这条排除。
 # 刻意**不**依赖 st="color:oklch(...)"：c27-s0114（… HUI ZIU FA!）根本没有 <c> 标签。
@@ -46,13 +62,21 @@ def _plain(text: str) -> str:
 def locked_syllables() -> set[str]:
     """来源 1 + 2：可靠种子词表。"""
     syl: set[str] = set()
+
+    def harvest(text: str) -> None:
+        for w in re.findall(r"[a-z]+", _plain(text)):
+            # [P0] 同形英语词一律不入表（见 ENGLISH_STOPWORDS 的说明）
+            if w in ENGLISH_STOPWORDS:
+                continue
+            syl.add(w)
+
     for s in _segments():
         if s.get("locked"):
-            syl.update(re.findall(r"[a-z]+", _plain(s["text"])))
+            harvest(s["text"])
     for f in sorted(SRC.glob("chapter-*.html")):
         for m in re.finditer(r'<span style="[^"]*Chorus[^"]*">([^<]*)</span>',
                              f.read_text(encoding="utf-8")):
-            syl.update(re.findall(r"[a-z]+", m.group(1)))
+            harvest(m.group(1))
     return syl
 
 
