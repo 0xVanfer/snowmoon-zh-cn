@@ -4,7 +4,7 @@
 
 格拉迪亚斯沿街走着，手表震了一下。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">［5张图片］</span></td><td>34125</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>塞拉</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#54a1f9">[5张图片]</span></td><td>34125</td></tr></tbody></table></div>
 
 他打开手持终端，想把图片看得清楚些。
 
@@ -66,7 +66,7 @@
 
 <span style="color:#54a1f9">“掌舵会成员是由一套精密的——”</span>
 
-<span style="color:#00bc96">“掌舵会的事，稍后再议；先请注意秩序。轮到埃菲里昂发言了。”</span>主持人插话道。
+<span style="color:#00bc96">“请注意秩序。轮到埃菲里昂发言了。”</span>主持人插话道。
 
 <span style="color:#db8916">“所以，你要是真想改善一个社会，而且是奔着长期、持久的好处去的，那就别去盯那些循环的东西，也别给这个轮子加速。你要做的是把最大的特征向量做大，去影响那个一千年来一直在自我复利的东西——那条只要出现好的东西，就会稳稳生出更多好东西的向量。其余的，就让它顺着自然规律去吧。”</span>
 
@@ -160,7 +160,7 @@
 
 <span style="color:#ec7383">“你最近一次希望自己能投上一票的是什么？”</span>
 
-<span style="color:#be9b00">“海德菲尔的一块广告牌。就是讲他们的饮料不含两千多种毒物和不推荐物质的那块。”</span>
+<span style="color:#be9b00">“海德菲尔的一块广告牌。就是讲他们的饮料不含2,000多种毒物和不推荐物质的那块。”</span>
 
 <span style="color:#ec7383">“为什么？”</span>
 
@@ -212,7 +212,7 @@
 
 格拉迪亚斯懒得让翡翠规划去维尔家的路线。路他自己认得，也不算远。他动身步行，脑子里多半是担心莉莉的状态，还有一丝懊恼——也许比他愿意承认的还重：他刚尝到的得意这么快就被不安取代了，那感觉像是撞上了一个他完全不知道怎么解的问题。
 
-<span style="color:#be9b00">“我这就来”</span>，格拉迪亚斯对着颈带低声说——又一次，不是那一刻他有多想藏住隐私，只是到这时候他已经习惯了小声说话。<span style="color:#be9b00">“给我点我常点的那份吃食。我刚从准入听证会出来，会饿。”</span>
+<span style="color:#be9b00">“我这就来”</span>，格拉迪亚斯对着颈带低声说——又一次，不是那一刻他有多想藏住隐私，只是到这时候他已经习惯了小声说话。<span style="color:#be9b00">“给我点我常点的那份。我刚从准入听证会出来，会饿。”</span>
 
 <div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 15%"><center>维尔</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#a38af2">你至少被录取了吧？</span></td><td>45501</td></tr></tbody></table></div>
 
@@ -252,7 +252,7 @@
 
 格拉迪亚斯的手表响了。
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">［请求通话］</span></td><td>59063</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>莫夫</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#00bc96">[请求通话]</span></td><td>59063</td></tr></tbody></table></div>
 
 他接通了。
 
@@ -272,7 +272,7 @@
 
 <span style="color:#00bc96">“对。所以从今天起，我手上再没有正式的权力了。”</span>
 
-<span style="color:#be9b00">“你打算当宣谕使做什么？我想不出你真去主持那些大会或者发表演讲之类的样子。你就打算去银聊上做个分区版主？”</span>
+<span style="color:#be9b00">“你打算当宣谕使做什么？我想不出你真去主持那些大会或者发表演讲之类的样子。你就打算去银聊上做个子版主？”</span>
 
 <span style="color:#00bc96">“你太了解我了。不过还有一点，我会有更多时间帮你。”</span>
 

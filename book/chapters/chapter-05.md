@@ -176,7 +176,7 @@
 
 ---
 
-<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">［正在呼叫］</span></td><td>58130</td></tr></tbody></table></div>
+<div class="device-view narrow-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>格拉迪亚斯</center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#be9b00">[正在呼叫]</span></td><td>58130</td></tr></tbody></table></div>
 
 塞拉点了点手表。
 
@@ -208,7 +208,7 @@
 
 <span style="color:#54a1f9">“你觉得呢？”</span>
 
-格拉迪亚斯停了几秒，明显是在斟酌怎么回答。
+格拉迪亚斯停了一会儿，明显是在斟酌怎么回答。
 
 <span style="color:#be9b00">“对维里迪亚来说，这更重要——真正把评则本身定对。而且我觉得这份工作会更有意思。”</span>
 

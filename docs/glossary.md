@@ -346,6 +346,7 @@
 | drone fleet | 无人机机队 | term | 维里迪亚军方的无人机作战集群 |
 | drone pilot | 无人机飞手 | term | 操控无人机的人员，维里迪亚军方有一千多名 |
 | drone swarm | 蜂群 | term | 北极无人机集群攻击的一波，正文简称「蜂群」 |
+| Dzego food truck item number | 餐车餐品编号 | term | 泽国餐车上的餐品编号（Number Ten / Number Eight / …），正文用阿拉伯数字写作「10号」「8号」；与掌则人小组内的编号称呼（四号／二十号／一号／二号，汉字）不是同一指称，两者不可混用 |
 | Dzegoban | 泽国语 | term | 泽国的语言文字体系；涉及正字法时亦译「泽国文」 |
 | Dzegoban version nine | 泽国语第九版 | term | 班孙培推行的泽国语第九版；参术语表 conlang 条 po so dze go ban de sia |
 | egalitarianism | 平等主义 | term | 埃菲里昂檄文标题中的核心词 |
@@ -381,7 +382,7 @@
 | gross economic output | 经济总产出 | term | 辩论中讨论的核心指标 |
 | Ground Law | 根本法 | term | 维里迪亚宪法性法律；第 14 条要求军方必须保卫国家（第 26 章亦出现第 21 条） |
 | ground-floor active use | 底层活跃使用 | term | 评则名：奖励临街底层铺面被真正使用，而非为达标而凑数 |
-| Group North / Group Center / Group South / Group Naval | 北集群／中集群／南集群／海上集群 | term | 维里迪亚—昆高培联军的四路作战集群；army group 通译「集群」 |
+| Group North / Group Center / Group South / Group Naval | 北方编队／中央编队／南方编队／海军编队 | term | 维里迪亚—昆高培联军的四路作战编队；army group 一并通译「编队」；与正文及第 29 章插图一致 |
 | hardware attestation | 硬件认证 | term | 证明设备确实运行其声称代码的机制 |
 | hardware openness rubric | 硬件开放度评则 | term | 掌则会评则之一；openness tax rubric → 开放度税评则 |
 | hash | 哈希 | term |  |
@@ -448,7 +449,7 @@
 | openness in hardware | 硬件开放度 | term | 第 6 章评则名；第 3 章见「硬件与软件开放度评则」 |
 | Other rubric taxes | 其他评则税 | term | 设备面板标签 |
 | Pafogai Du Minpentai games | 帕佛盖都民本棋赛 | term | 白过去参加并获第二名的市级民本棋赛事 |
-| Payment declined. | 支付被拒。 | term |  |
+| Payment declined. | 支付失败。 | term | 支付面板提示；与 Payment succeeded. → 支付成功。 成对使用 |
 | Payment succeeded. | 支付成功。 | term | 支付面板提示；对应术语表 Payment successful → 支付成功 |
 | Payment successful | 支付成功 | term |  |
 | permutation | 置换 | term | 一一对应的可逆变换 |
@@ -520,7 +521,7 @@
 | social media openness and interoperability | 社交媒体开放度与互操作性 | term | 与术语表 Lectoby「社媒开放度评则」配套的评则全称 |
 | social media openness and interoperability rubric | 社交媒体开放度与互操作性评则 | term | 莱克托比所属的评则组 |
 | social recovery | 社交恢复 | term | 钱包找回机制；模式语境作「社交恢复模式」 |
-| social recovery mode | 社会恢复模式 | term | 钱包由多位联系人共同签名恢复的模式 |
+| social recovery mode | 社交恢复模式 | term | 钱包由多位联系人共同签名恢复的模式；与 social recovery → 社交恢复 同族 |
 | societal cohesion | 社会凝聚力 | term | 埃菲里昂所称「软性」指标之一 |
 | sound conversation devices | 声音交谈装置 | term | 泽国语字面义，实指电话 |
 | spaceship | 飞船 | term | 民本棋棋子，大型慢速滑翔机，用于远距离投放符记 |
@@ -602,7 +603,7 @@
 | kai ja | 茶 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国语，字面「植物水」 |
 | mi cin pin fe lo kin do | mi cin pin fe lo kin do | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）格拉迪亚斯用泽国语向登致意；据下文推断为问候语（很高兴见到你之意） |
 | MIN KUI | MIN KUI | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）帕佛盖都算力盒店铺招牌，泽国语罗马字 |
-| MU GU GEI FA | 五十提克 | conlang | 倒计时播报（理解参考：五十嘀嗒） |
+| MU GU GEI FA | 五十嘀嗒 | conlang | 泽国语开赛倒计时播报（LE MU GEI FA＝二十五嘀嗒，PA GU GEI FA＝最后一嘀嗒，TAU FA＝开始）。正文保留罗马字原样；「嘀嗒」是时间单位译名，正文「几个嘀嗒」「25嘀嗒后」即此词。 |
 | po so dze go ban de sia | 泽国语第九版的构想 | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）班孙培小册子书名；正文保留泽国语罗马字，破折号后为中文释义 |
 | sen hen zi li die fe / zo lia kin / man dun li jie hu / cau tie zen / ci fan zi li | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）泽国酒店入住面板，第 12、18 章同款；紧随其后的叙述给出中文释义（信誉分、付款、批准、房号） |
 | zan / tie / tei | （保留罗马字） | conlang | （虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）手表面板表头，泽国语罗马字，与第 2 章 TEI 同例，界面原样保留 |

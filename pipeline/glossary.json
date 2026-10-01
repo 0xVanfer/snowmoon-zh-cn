@@ -2060,6 +2060,13 @@
    "from": "chapter-23.zh"
   },
   {
+   "en": "Dzego food truck item number",
+   "zh": "餐车餐品编号",
+   "kind": "term",
+   "note": "泽国餐车上的餐品编号（Number Ten / Number Eight / …），正文用阿拉伯数字写作「10号」「8号」；与掌则人小组内的编号称呼（四号／二十号／一号／二号，汉字）不是同一指称，两者不可混用",
+   "from": "chapter-06.zh"
+  },
+  {
    "en": "Dzegoban",
    "zh": "泽国语",
    "kind": "term",
@@ -2302,9 +2309,9 @@
   },
   {
    "en": "Group North / Group Center / Group South / Group Naval",
-   "zh": "北集群／中集群／南集群／海上集群",
+   "zh": "北方编队／中央编队／南方编队／海军编队",
    "kind": "term",
-   "note": "维里迪亚—昆高培联军的四路作战集群；army group 通译「集群」",
+   "note": "维里迪亚—昆高培联军的四路作战编队；army group 一并通译「编队」；与正文及第 29 章插图一致",
    "from": "chapter-29.zh"
   },
   {
@@ -2764,9 +2771,10 @@
   },
   {
    "en": "Payment declined.",
-   "zh": "支付被拒。",
+   "zh": "支付失败。",
    "kind": "term",
-   "note": ""
+   "note": "支付面板提示；与 Payment succeeded. → 支付成功。 成对使用",
+   "from": "chapter-06.zh"
   },
   {
    "en": "Payment succeeded.",
@@ -3258,9 +3266,9 @@
   },
   {
    "en": "social recovery mode",
-   "zh": "社会恢复模式",
+   "zh": "社交恢复模式",
    "kind": "term",
-   "note": "钱包由多位联系人共同签名恢复的模式",
+   "note": "钱包由多位联系人共同签名恢复的模式；与 social recovery → 社交恢复 同族",
    "from": "chapter-16.zh"
   },
   {

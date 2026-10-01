@@ -57,7 +57,7 @@ book/site/assets/images-en/  站点**英文栏**插图（= sources/work/figures/
 ## 2. 翻译
 
 - 翻译单位是「片段」：一个 `<p>`／表格单元格／按钮／列表项 = 一条，全章 96–218 条（全书 4 808 条）。
-- 由 DeepSeek Harness 的 subagent 逐章执行，任务书是 [prompts/translate.md](prompts/translate.md)，
+- 由 DeepSeek Harness 的 subagent 逐章执行，任务书是 [prompts/translate.md](../pipeline/prompts/translate.md)，
   术语以 [glossary.json](../pipeline/glossary.json) 为唯一事实源。
 - 译文只允许出现白名单标签；`locked` 片段必须逐字照抄。
 - `validate_translation.py` 校验：id 序列、locked 完整性、标签序列（含属性）、残留占位符/英文/尖括号。
@@ -71,7 +71,7 @@ book/site/assets/images-en/  站点**英文栏**插图（= sources/work/figures/
 插图共 56 张，其中 30 张含英文标注、26 张为纯图形。全部经视觉模型重绘：
 
 - `make_figures.py build` 为每张图生成任务：术语表子集 + 该图前后段落的原文/译文 + 原始 SVG 源码，
-  提示词见 [prompts/svg-zh.md](prompts/svg-zh.md)；要求模型输出「CAPTION 行 + 完整 SVG」。
+  提示词见 [prompts/svg-zh.md](../pipeline/prompts/svg-zh.md)；要求模型输出「CAPTION 行 + 完整 SVG」。
 - 调用器 `vision_api.py`：端点、模型名、凭据一律由环境变量注入（`VISION_API_URL` /
   `VISION_MODEL` / `VISION_API_KEY`（或 `VISION_API_KEY_FILE` + `VISION_API_KEY_NAME`），
   或本地 gitignored 的 `.vision.env`；详见该脚本 docstring），
@@ -95,7 +95,7 @@ book/site/assets/images-en/  站点**英文栏**插图（= sources/work/figures/
   数字与单位体例、标点、面板文案、locked 虚构语言）。
 - **规模**：3 视角 × 32 章 = 96 份报告（`reviews/chapter-NN.<lens>.<reviewer>.json`），
   共 987 条意见（high 49 / medium 436 / low 502）；提出者不修稿，只写报告。
-- **落实**：改稿者按 [prompts/apply-review.md](prompts/apply-review.md) 逐条判断，采纳的用脚本按 `id` 改
+- **落实**：改稿者按 [prompts/apply-review.md](../pipeline/prompts/apply-review.md) 逐条判断，采纳的用脚本按 `id` 改
   `segments[].text`，驳回的写明理由（风格偏好、理解偏差、或落实对象其实是术语表），
   分别记入 `reviews/chapter-NN.applied.json`（第一轮）与 `applied2.json`（第二轮）。
 - **分工**：跨章与术语表层的问题由主进程处理——`glossary.json` 的 `aliases`（异体译名统一）+

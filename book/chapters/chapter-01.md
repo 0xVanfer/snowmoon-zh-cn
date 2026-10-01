@@ -90,7 +90,7 @@
 
 他看见少数观众穿着和他一样的维里迪亚标志性隐私袍。那是一种宽松的深紫色长袍，从罩住头的兜帽一直盖到脚踝。脚踝以下，穿隐私袍的人一律配同款深紫色的鞋。
 
-其他观众大多穿着简单的 T 恤，要么纯色，要么印着他们喜欢乐队的口号。
+其他观众大多穿着简单的衬衫，要么纯色，要么印着他们喜欢乐队的口号。
 
 有些人目标明确、步子利落，跟格拉迪亚斯一样。有人在跳舞。有人在聊天。还有人平静地往前走，只想被动地享受演出。
 
@@ -126,7 +126,7 @@
 
 可另一方面，一百多年的维里迪亚公民课传统把鼓吹暴力和仅仅为娱乐展示暴力区分开来。格拉迪亚斯看得见也听得见，观众在跳舞、欢呼、享受音乐。他们像是在找乐子，而不是被仇恨鼓动起来要对付谁。
 
-但翻到另一只手的另一面，格拉迪亚斯知道，近来的监审官不像以前那么在意这条区分，他们似乎把更温和、更柔软的社会本身当成了目的。
+不过话说回来，格拉迪亚斯知道，近来的监审官不像以前那么在意这条区分，他们似乎把更温和、更柔软的社会本身当成了目的。
 
 格拉迪亚斯不太确定，这究竟是当初制定这条评则的掌则人的本意，还是对社会真正正确的选择。再过几个月，他就是正式监审官，能自主决定的余地更大。但现在，他决定的自由有限：系统在记分。
 
@@ -278,4 +278,4 @@
 
 又过了几个嘀嗒，来了第二条：
 
-<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">别担心，我不打算举报你去领赏金。不过，我有个请求想请你帮忙。</span></td><td>60266</td></tr></tbody></table></div>
+<div class="device-view wide-device-view"><table><thead><tr><th>来自</th><th></th><th>消息</th><th>时间</th></tr></thead><tbody><tr><td style="width: 25%"><center>匿名<br/><br/><div style="border: 1px solid; border-radius: 5px; padding: 5px">信誉分 ≥ 200已验证<b style="font-size: 150%; color: #8f8">✓</b></div></center></td><td style="width: 6%; text-align:center">→</td><td><span style="color:#ec7383">别担心，我不打算举报你去领赏金。不过，我有个请求。</span></td><td>60266</td></tr></tbody></table></div>

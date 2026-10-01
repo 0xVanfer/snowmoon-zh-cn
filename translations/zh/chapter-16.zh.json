@@ -705,9 +705,9 @@
   },
   {
    "en": "social recovery mode",
-   "zh": "社会恢复模式",
+   "zh": "社交恢复模式",
    "kind": "term",
-   "note": "钱包由多位联系人共同签名恢复的模式"
+   "note": "钱包由多位联系人共同签名恢复的模式；与 social recovery → 社交恢复 同族"
   },
   {
    "en": "life savings wallet",
