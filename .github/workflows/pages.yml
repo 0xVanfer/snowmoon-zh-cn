@@ -34,9 +34,18 @@ jobs:
           python3 pipeline/validate_translation.py
           python3 pipeline/validate_svg.py
           python3 pipeline/verify_extract.py   # 上游原文不入库，缺失时自动跳过
+          # 术语表是唯一事实源：与译文冲突或有未合并的新术语都必须让发布停下
+          python3 pipeline/merge_terms.py --check
           # 成品体检
           python3 pipeline/qa_book.py
           python3 pipeline/qa_site.py
+      # 交互探针：唯一能抓住「作用域错误」这类缺陷的闸门。
+      # 翻页模式曾经因为 reader.js 里两行跨作用域引用而 100% 不可用，
+      # 六道静态闸门全部放行 —— node --check 也查不出（那是作用域问题，不是语法问题）。
+      - name: 交互探针（需要 Chrome）
+        if: ${{ always() }}
+        continue-on-error: true
+        run: python3 pipeline/probe_site.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

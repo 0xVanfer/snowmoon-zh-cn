@@ -28,3 +28,6 @@ sources/work/cache/
 sources/work/backup/
 sources/work/previews/
 sources/work/site-previews/
+
+# 审计报告不入库（AGENTS.md：禁止记录/保留任何审计信息）
+docs/audit-*.md
