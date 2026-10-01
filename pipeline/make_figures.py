@@ -144,6 +144,33 @@ def apply_results(results: Path) -> None:
     manifest = {}
     if (FIG_DIR / "manifest.json").exists():
         manifest = json.loads((FIG_DIR / "manifest.json").read_text(encoding="utf-8"))
+
+    def degrade(name: str, status: str, **extra) -> None:
+        """失败时**只降级状态，保留旧条目的 caption/chars/last_error**。
+
+        [P0] 原实现整条覆盖 manifest[name]，`caption` 键直接消失。
+        再跑一次 build_site，缺失的 caption 会被兜底成「插图 chapter-04-fig-01」——
+        「想修图」这个操作先毁掉了它唯一的人类可读信息，而且全程绿灯。
+
+        两条必须守住的规则：
+          1. `extra` 里传来的空值**不许**覆盖旧值。invalid 分支解析出的 caption
+             可能就是空的（模型没输出 CAPTION 行），那正是最需要保住旧值的场合。
+          2. `published` 描述的是「这张图当前是否在 book/images 里并且会被发布」，
+             不是「本轮调用成功」。降级时旧文件仍然在盘上、仍然会被部署，
+             写 published=False 是一条与事实相反的记录。
+        """
+        old = manifest.get(name) or {}
+        entry = {k: v for k, v in old.items()
+                 if k not in ("status", "error", "errors", "last_error")}
+        for k, v in extra.items():
+            if v in (None, "", [], {}) and old.get(k) not in (None, "", [], {}):
+                continue          # 新值是空的，保留旧值
+            entry[k] = v
+        entry["status"] = status
+        # 本轮未产出合格图，但旧图仍在盘上、仍会被发布 —— 如实记录，不写反。
+        entry["published"] = (BOOK_IMG / f"{name}.svg").exists()
+        manifest[name] = entry
+
     ok = fail = 0
     seen: set[str] = set()
     for lineno, line in enumerate(results.read_text(encoding="utf-8").splitlines(), 1):
@@ -163,8 +190,7 @@ def apply_results(results: Path) -> None:
         src_svg = FIG_DIR / f"{name}.svg"
         if not rec.get("ok"):
             fail += 1
-            manifest[name] = {"status": "error", "error": str(rec.get("error", ""))[:300],
-                              "published": False}
+            degrade(name, "error", last_error=str(rec.get("error", ""))[:300])
             print(f"FAIL {name}: {str(rec.get('error', ''))[:120]}")
             continue
         text = rec.get("text") or ""
@@ -173,14 +199,12 @@ def apply_results(results: Path) -> None:
         svg = extract_svg(text)
         if not svg:
             fail += 1
-            manifest[name] = {"status": "error", "error": "输出中没有标签配平的 <svg>",
-                              "published": False}
+            degrade(name, "error", last_error="输出中没有标签配平的 <svg>")
             print(f"FAIL {name}: 无完整 SVG")
             continue
         if not src_svg.exists():
             fail += 1
-            manifest[name] = {"status": "error", "error": f"缺少原图 {src_svg.name}",
-                              "published": False}
+            degrade(name, "error", last_error=f"缺少原图 {src_svg.name}")
             print(f"FAIL {name}: 缺少原图")
             continue
         # 先写到临时文件校验，通过了才替换正式产物
@@ -190,14 +214,16 @@ def apply_results(results: Path) -> None:
         if errs:
             tmp.unlink()
             fail += 1
-            manifest[name] = {"status": "invalid", "caption": caption, "errors": errs[:8],
-                              "chars": len(svg), "published": False}
+            degrade(name, "invalid", caption=caption, errors=errs[:8], chars=len(svg))
             print(f"INVALID {name}: {errs[0][:140]}")
             continue
         tmp.replace(BOOK_IMG / f"{name}.svg")
         ok += 1
+        old = manifest.get(name) or {}
         manifest[name] = {"status": "ok", "caption": caption, "errors": [],
-                          "chars": len(svg), "published": True}
+                          "chars": len(svg), "published": True,
+                          # 发布来源指纹：让人工发布与模型产物在 schema 上可区分
+                          "source": old.get("source", "model")}
         print(f"OK {name}  caption={caption}")
 
     jobs_file = JOB_DIR / "figures.jsonl"
@@ -215,6 +241,11 @@ def apply_results(results: Path) -> None:
     (FIG_DIR / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"生成 {ok} 张合格中文插图，{fail} 张待修")
+    # [P1] apply 永远退出 0：同一个三步流程里调用器（vision_api）会失败、落盘器不会，
+    # 于是「这一批没跑完」这件事没有任何机器可读的信号。
+    if fail:
+        raise SystemExit(f"{fail} 张插图未通过校验或调用失败，manifest 已记为 invalid/error；"
+                         f"旧图保持不动。修好后重跑 apply。")
 
 
 def main() -> None:

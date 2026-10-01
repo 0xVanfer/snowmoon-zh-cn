@@ -142,6 +142,20 @@ def clean_ws(s: str) -> str:
     return s.strip()
 
 
+def discover_chapters() -> list[int]:
+    """全部可能有译文的章号（骨架 ∪ 译文）。
+
+    [P1] 原本是两处独立的 `range(1, 33)`：第 33 章即便有了骨架和译文也会被静默丢弃。
+    """
+    found = set()
+    for pat, rx in ((CHAP_DIR, r"chapter-(\d+)\.json$"), (ZH_DIR, r"chapter-(\d+)\.zh\.json$")):
+        for p in pat.glob("chapter-*.json"):
+            m = re.search(rx, p.name)
+            if m:
+                found.add(int(m.group(1)))
+    return sorted(found)
+
+
 def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/") -> str | None:
     cf = CHAP_DIR / f"chapter-{ch:02d}.json"
     if not cf.exists():
@@ -154,9 +168,15 @@ def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/")
     if missing:
         raise SystemExit(f"chapter-{ch:02d}: 骨架引用的片段在译文中缺失 {missing[:4]}")
     captions: dict[str, str] = {}
-    if FIG_MANIFEST.exists():
-        man = json.loads(FIG_MANIFEST.read_text(encoding="utf-8"))
-        captions = {k: v.get("caption", "") for k, v in man.items()}
+    # [P1] 缺清单原本 exit 0 并把图注退化成占位串，而 build_site 对同一缺失直接抛
+    # SystemExit —— 三个产物互相矛盾。清单是图注与 alt 的唯一来源，缺了就必须停住。
+    if not FIG_MANIFEST.exists():
+        raise SystemExit(
+            f"缺少插图清单 {FIG_MANIFEST.relative_to(ROOT)}："
+            f"没有它就只能生成「插图 chapter-NN-fig-MM」这类占位串。"
+            f"请先跑 make_figures.py apply。")
+    man = json.loads(FIG_MANIFEST.read_text(encoding="utf-8"))
+    captions = {k: v.get("caption", "") for k, v in man.items()}
     parts: list[str] = []
     for blk in data["blocks"]:
         kind = blk.get("kind")
@@ -212,9 +232,14 @@ FRONT = """# 雪月 Snowmoon · 中文版
 
 
 def main() -> None:
-    todo = sorted({int(x) for x in sys.argv[1:]}) or list(range(1, 33))
-    BOOK_CH.mkdir(parents=True, exist_ok=True)
-    wrote = 0
+    all_chapters = discover_chapters()
+    todo = sorted({int(x) for x in sys.argv[1:]}) or all_chapters
+
+    # ---- 计划阶段：先把每一章渲染成字符串，**全部成功**才开始写盘 ----
+    # [P1] 原来是在校验循环里边渲染边写：第 12 章缺片段而 exit 1 时，
+    # 前 11 章的 .md 已经落盘，工作区留下半新半旧的产物。
+    # 与 build_site 的 plan/emit 一致：先全部渲染成功，再统一写。
+    pages: list[tuple[int, str]] = []
     for ch in todo:
         segs = load_segs(ch)
         if not segs:
@@ -224,11 +249,18 @@ def main() -> None:
         if md is None:
             print(f"skip ch{ch:02d}（无骨架）")
             continue
-        (BOOK_CH / f"chapter-{ch:02d}.md").write_text(md + "\n", encoding="utf-8")
-        wrote += 1
+        pages.append((ch, md + "\n"))
 
     # 全书单文件：始终用「全部可用译文」重建，定向参数不影响它
-    available = [ch for ch in range(1, 33)
+    # [P1] 缺骨架曾经只 print 一句「skip（无骨架）」就 exit 0，把整本书静默截成 31 章，
+    # 而 build_site 对同一缺失直接抛 FileNotFoundError —— 三个产物互相矛盾。
+    # 译文在、骨架不在，是「半成品」而不是「这一章不存在」，必须停住。
+    no_skeleton = [ch for ch in all_chapters
+                   if load_segs(ch) and not (CHAP_DIR / f"chapter-{ch:02d}.json").exists()]
+    if no_skeleton:
+        raise SystemExit(
+            f"以下章有译文但缺少骨架，拒绝组装（否则整本书会被静默截短）：{no_skeleton}")
+    available = [ch for ch in all_chapters
                  if (CHAP_DIR / f"chapter-{ch:02d}.json").exists() and load_segs(ch)]
     if not available:
         raise SystemExit("没有任何可用译文，未生成全书 Markdown")
@@ -236,8 +268,13 @@ def main() -> None:
     book = FRONT + "\n".join(toc) + "\n\n"
     for ch in available:
         book += "\n\n---\n\n" + build_chapter(ch, load_segs(ch), "images/") + "\n"
+
+    # ---- 落盘阶段：到这里所有校验都已经过了 ----
+    BOOK_CH.mkdir(parents=True, exist_ok=True)
+    for ch, md in pages:
+        (BOOK_CH / f"chapter-{ch:02d}.md").write_text(md, encoding="utf-8")
     (BOOK / "snowmoon-zh.md").write_text(book, encoding="utf-8")
-    print(f"组装完成：逐章 {wrote} 个文件 + 全书 {len(available)} 章 → book/")
+    print(f"组装完成：逐章 {len(pages)} 个文件 + 全书 {len(available)} 章 → book/")
 
 
 if __name__ == "__main__":

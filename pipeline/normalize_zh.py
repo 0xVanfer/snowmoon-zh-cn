@@ -42,9 +42,46 @@ def load_aliases() -> dict[str, str]:
             alias[a] = e["zh"]
     for a, canon in (glos.get("aliases") or {}).items():
         alias[a] = canon
+    # [P0] 加载即自检：一个键是另一个键的前缀且目标值不同，加载顺序就会决定
+    # 「短的吃掉长的剩余部分」，重排一次 JSON 键序就静默改了正文。
+    # 「长键优先」只能保证长的先替，保证不了短的不会继续吃掉后缀。
+    #
+    # 右边界断言能消解**数字型**前缀：短键后面紧跟数字/中文数字/小数点时，
+    # 短规则根本不会在长词内部命中，那一对是安全的：
+    #   百分之二 / 百分之二点五、百分之三 / 百分之三十 → 安全
+    # 剩下的才是隐患——短键会真的在长词内部命中并吃掉前缀：
+    #   掌舵会 / 掌舵会税制、滴答 / 滴答声、掌舵团 / 掌舵会体系
+    # 这类拼接型前缀必须显式报错，改值或合并两条 alias 都行，
+    # 但不能让结果依赖 JSON 键序。
+    keys = sorted(alias)
+    for a in keys:
+        for b in keys:
+            if a == b or not b.startswith(a) or alias[a] == alias[b]:
+                continue
+            if RIGHT_BOUNDARY.match(b[len(a)]):
+                continue  # 数字型前缀：右边界断言拦得住
+            raise SystemExit(
+                f"glossary.json 的 aliases 有前缀冲突：{a!r}→{alias[a]!r} 是 "
+                f"{b!r}→{alias[b]!r} 的前缀，且右边界断言拦不住。替换会先吃掉 "
+                f"{b!r} 的前缀，结果依赖键序。修法：补全 {b!r} 这条、让两者目标值一致，"
+                f"或把 {a!r} 改成带右边界的形态。"
+            )
     # 长键优先：否则「掌舵团」会被较短的「掌舵」先替换掉，
     # 结果依赖术语表 JSON 的键序——重排一次键就静默改了正文。
     return dict(sorted(alias.items(), key=lambda kv: (-len(kv[0]), kv[0])))
+
+
+# T1 替换的右边界：alias 键后面若紧跟「数字/中文数字/小数点」，说明它只匹配了
+# 更长的一个词的前缀（「百分之二」之于「百分之二十五」），此时不得替换。
+RIGHT_BOUNDARY = re.compile(r"[0-9零一二三四五六七八九十百千万亿两廿卅点]")
+
+
+def apply_aliases(t: str, alias: dict[str, str]) -> str:
+    for bad, good in alias.items():
+        if not bad or bad not in t:
+            continue
+        t = re.sub(re.escape(bad) + r"(?![0-9零一二三四五六七八九十百千万亿两廿卅点])", good.replace("\\", "\\\\"), t)
+    return t
 
 
 def load_fixups() -> dict[str, list]:
@@ -62,9 +99,7 @@ def apply_fixups(t: str, rules: list) -> str:
 
 
 def fix_text(t: str, alias: dict[str, str]) -> str:
-    for bad, good in alias.items():
-        if bad and bad in t:
-            t = t.replace(bad, good)
+    t = apply_aliases(t, alias)
     # T6 英文省略号 → 中文省略号（数字区间 0...199 不动）
     t = re.sub(r"(?<!\d)\.{3,}(?!\d)", "……", t)
     t = re.sub(r"(?<=[\u4e00-\u9fff])\.\.(?=[\u4e00-\u9fff])", "……", t)
@@ -108,7 +143,12 @@ def fix_text(t: str, alias: dict[str, str]) -> str:
     t = re.sub(r"(?<=\d)\s+(?=%|℃|°|‰)", "", t)
     # T2b 再次压缩可能产生的新空格
     t = re.sub(r"[ \t]{2,}", " ", t)
-    t = t.strip()
+    # [P1] 原来这里是无条件 t.strip()。规范化是逐「标签之间的文本段」跑的，
+    # 而内联标签（<e> <c> <f> <sub>）两侧的空格是有意义的分隔：
+    # 「叫<e> dzu</e>」→「叫 <e>dzu</e>」后，一段文本的开头/结尾空格被吃掉，
+    # 相邻段之间就少了一个空格。真实语料上 43 个片段会被这样毁掉，
+    # 而唯一的防线是 main() 里「locked 片段整段跳过」——非 locked 的就无声地坏了。
+    # 段内的首尾空格交给 fix_segment 的跨标签补空格逻辑处理，这里不动。
     return t
 
 

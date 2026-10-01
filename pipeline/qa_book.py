@@ -23,6 +23,7 @@ BOOK = ROOT / "book"
 MD = BOOK / "snowmoon-zh.md"
 CHAPTERS = BOOK / "chapters"
 IMAGES = BOOK / "images"
+ZH_DIR = ROOT / "translations" / "zh"
 
 IMG_REF_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 
@@ -42,9 +43,13 @@ def main() -> None:
             problems.append(f"{label}: {n} 处")
 
     # 2) 章节与插图
+    # 章数必须与「实际有译文的章」一致，不能写死 32：
+    # 写死的话，第 33 章一旦建成，构建是对的、这道闸门却会红着挡住发布；
+    # 而删掉一章时它又完全察觉不到。
     chapters = re.findall(r"^# 第(.+?)章$", md, re.M)
-    if len(chapters) != 32:
-        problems.append(f"章数不是 32：{len(chapters)}")
+    expected = len(sorted(ZH_DIR.glob("chapter-*.zh.json")))
+    if len(chapters) != expected:
+        problems.append(f"章数与译文不符：成品 {len(chapters)} 章，译文 {expected} 章")
 
     md_files = [MD] + sorted(CHAPTERS.glob("chapter-*.md"))
     refs: set[str] = set()

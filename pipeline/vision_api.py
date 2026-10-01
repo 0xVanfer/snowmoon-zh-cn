@@ -177,10 +177,17 @@ def call(prompt: str, system: str = "", model: str | None = None,
             if content.strip() and finish != "length":
                 if cache:
                     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-                    cp = cache_path(model, system, prompt, payload["max_tokens"], temperature)
+                    # [P1] 读缓存用调用方的 max_tokens 算键、写缓存用重试中翻倍后的值算键，
+                    # 于是被截断后成功的那次永远命不中原调用的键：每次重跑都重新计费，
+                    # 缓存形同虚设。写缓存必须用**读缓存时用的那个键**。
                     cp.write_text(json.dumps(
                         {"model": model, "tag": tag, "system": system, "prompt": prompt,
-                         "max_tokens": payload["max_tokens"], "response": content,
+                         # 键是按**调用方**的 max_tokens 算的，这里必须记同一个值；
+                         # 记 payload 里翻倍后的值会与文件所在的位置对不上，看着像 bug。
+                         "max_tokens": max_tokens,
+                         # 实际发出的是抬高后的值，单独记，别混为一谈
+                         "max_tokens_used": payload["max_tokens"],
+                         "response": content,
                          "usage": data.get("usage"), "created": int(time.time())},
                         ensure_ascii=False), encoding="utf-8")
                 return content
@@ -242,6 +249,10 @@ def main() -> None:
         out = Path(args.out) if args.out else None
         # 续跑：读出已有的成功结果，重写一份干净的结果文件（顺带丢掉半行损坏），
         # 只跑还没成功的任务。旧实现用 "w" 打开，一启动就把上一轮结果全毁了。
+        # [P0] 光按 id 复用是错的：结果记录里没有提示词/参数指纹，于是改了
+        # prompts/svg-zh.md、改了术语表、或者重新抽取导致源 SVG 变化之后，
+        # **上一轮的成功结果同样被无条件回写**——实测同一批 id、提示词从 V1 改成 V2
+        # 后重跑，HTTP 调用数 = 0，输出仍是 V1 的内容。指纹不同就必须重跑。
         done: dict[str, dict] = {}
         if out and out.exists():
             for line in out.read_text(encoding="utf-8").splitlines():
@@ -253,13 +264,45 @@ def main() -> None:
                     continue
                 if rec.get("id"):
                     done[rec["id"]] = rec
-        pending = [j for j in jobs if j.get("id") not in done]
+        stale = 0
+
+        def fingerprint(job: dict) -> str:
+            # [P1] 必须用**解析后**的 model：job.get("model", args.model) 在模型来自
+            # VISION_MODEL 环境变量时是 None，而 call() 会把它解析成 env 里的模型。
+            # 于是「换了个模型重跑」算出的指纹与上次完全相同，旧结果被无条件复用——
+            # 与 P0-9 同一个失效模式，只是换了个维度。
+            model = job.get("model") or args.model or model_name()
+            payload = json.dumps(
+                {"prompt": job.get("prompt", ""), "system": job.get("system", args.system),
+                 "model": model,
+                 "max_tokens": job.get("max_tokens", args.max_tokens)},
+                ensure_ascii=False, sort_keys=True)
+            return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+        pending = []
+        fp_by_id: dict[str, str] = {}
+        for j in jobs:
+            fp = fingerprint(j)
+            fp_by_id[j.get("id", "")] = fp
+            prev = done.get(j.get("id", ""))
+            if prev and prev.get("fp") == fp:
+                continue          # 指纹一致：复用
+            if prev:
+                stale += 1        # 指纹缺失或已变：必须重跑
+            j["_fp"] = fp
+            pending.append(j)
+        if stale:
+            print(f"续跑：{stale} 个旧结果缺少指纹或提示词/参数已变，将重新调用",
+                  file=sys.stderr)
         if done:
             print(f"续跑：已跳过 {len(jobs) - len(pending)} 个已完成任务", file=sys.stderr)
+        # 回写：只保留指纹仍然有效的旧结果。
+        # 指纹过期的必须丢掉，否则 apply 会读到 V1 的旧内容（文件里出现两个同 id 记录）。
         fh = out.open("w", encoding="utf-8") if out else None
         if fh:
-            for rec in done.values():
-                fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            for rid, rec in done.items():
+                if rec.get("fp") and rec["fp"] == fp_by_id.get(rid):
+                    fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
             fh.flush()
         lock = threading.Lock()
         done_n = [0]
@@ -271,9 +314,11 @@ def main() -> None:
                             model=job.get("model", args.model),
                             max_tokens=job.get("max_tokens", args.max_tokens),
                             cache=not args.no_cache, tag=job.get("id", args.tag))
-                rec = {"id": job.get("id", ""), "ok": True, "text": text}
+                rec = {"id": job.get("id", ""), "ok": True, "text": text,
+                       "fp": job.get("_fp", "")}
             except Exception as e:  # noqa: BLE001
-                rec = {"id": job.get("id", ""), "ok": False, "error": str(e)}
+                rec = {"id": job.get("id", ""), "ok": False, "error": str(e),
+                       "fp": job.get("_fp", "")}
             with lock:
                 done_n[0] += 1
                 if not rec["ok"]:

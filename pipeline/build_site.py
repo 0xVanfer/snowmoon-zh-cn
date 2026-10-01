@@ -153,6 +153,30 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
     return "\n".join(x for x in out if x.strip())
 
 
+def discover_chapters() -> list[int]:
+    """全部可能有译文的章 = 骨架文件 ∪ 译文文件。
+
+    [P1] 此前是写死的 `range(1, 33)`：第 33 章即使有了骨架和译文也会被静默丢弃，
+    而六道闸门无一报警。章号应当由磁盘上真实存在的东西决定。
+    """
+    found = set(CHAPTERS)
+    found.update(int(re.search(r"chapter-(\d+)\.json$", p.name).group(1))
+                 for p in CHAP_DIR.glob("chapter-*.json") if re.search(r"chapter-(\d+)\.json$", p.name))
+    found.update(int(re.search(r"chapter-(\d+)\.zh\.json$", p.name).group(1))
+                 for p in ZH_DIR.glob("chapter-*.zh.json") if re.search(r"chapter-(\d+)\.zh\.json$", p.name))
+    return sorted(found)
+
+
+def prev_of(ch: int, chapters: list[int]) -> int | None:
+    i = chapters.index(ch)
+    return chapters[i - 1] if i > 0 else None
+
+
+def next_of(ch: int, chapters: list[int]) -> int | None:
+    i = chapters.index(ch)
+    return chapters[i + 1] if i + 1 < len(chapters) else None
+
+
 def toc_items(href_prefix: str, chapters: list[int], datelines: dict[int, str]) -> str:
     """目录条目：构建脚本产出，模板只负责放进 <ol> 里。
 
@@ -195,12 +219,19 @@ def fill(template: str, values: dict[str, str], where: str) -> str:
 
 
 def build() -> None:
-    requested = sorted({int(x) for x in sys.argv[1:]}) or CHAPTERS
-    captions = {k: v.get("caption", "") for k, v in
-                load_json(FIG_MANIFEST).items()} if FIG_MANIFEST.exists() else {}
+    all_chapters = discover_chapters()
+    requested = sorted({int(x) for x in sys.argv[1:]}) or all_chapters
+    # [P1] 插图清单缺失曾经静默降级：captions 变成空 dict，112 处 alt + 56 处图注
+    # 全部退化成「插图 chapter-04-fig-01」这类占位串，而六道闸门全绿。
+    # 清单是这些文案的唯一来源，缺了就必须在这里停住。
+    if not FIG_MANIFEST.exists():
+        raise SystemExit(
+            f"缺少插图清单 {FIG_MANIFEST.relative_to(ROOT)}："
+            f"没有它就无法生成图注与 alt，只能退化成占位串。请先跑 make_figures.py apply。")
+    captions = {k: v.get("caption", "") for k, v in load_json(FIG_MANIFEST).items()}
 
     # 实际会发布的章 = 有译文的章。目录、章数、上下章导航全部以它为准。
-    chapters = [ch for ch in CHAPTERS if (ZH_DIR / f"chapter-{ch:02d}.zh.json").exists()]
+    chapters = [ch for ch in all_chapters if (ZH_DIR / f"chapter-{ch:02d}.zh.json").exists()]
     if not chapters:
         raise SystemExit("没有任何译文，未组装站点")
 
@@ -223,6 +254,72 @@ def build() -> None:
                   BUILD_DATE=build_date())
     toc_html = toc_items("read/", chapters, datelines)
 
+    # ---- 计划阶段：先把每一章的正文渲染成字符串，**全部校验通过**才开始写盘 ----
+    # [P1] 旧顺序是「剪图片 → 写 index/toc → 逐章 check_sync → 写章」：
+    # 第 12 章校验失败时，前 11 章已经落盘、index/toc 已经是新的，
+    # 而撤下的章节页还没被删 —— exit 1 的构建仍留下半新半旧的产物并继续被 CI 部署。
+    pages: list[tuple[int, str]] = []
+    for ch in requested:
+        if ch not in chapters:
+            print(f"skip ch{ch:02d}（无译文）")
+            continue
+        zh_segs = segs_of(ZH_DIR / f"chapter-{ch:02d}.zh.json")
+        en_segs = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json", required=False)
+        check_sync(ch, zh_segs, en_segs)
+        values = dict(
+            common, ASSET_PREFIX="../assets/",
+            HOME_HREF="../index.html", TOC_HREF="../toc.html",
+            PREV_HREF=f"chapter-{prev_of(ch, chapters):02d}.html" if prev_of(ch, chapters) else "../toc.html",
+            NEXT_HREF=f"chapter-{next_of(ch, chapters):02d}.html" if next_of(ch, chapters) else "../toc.html",
+            PREV_LABEL=f"上一章 · 第{cn_num(prev_of(ch, chapters))}章" if prev_of(ch, chapters) else "返回目录",
+            NEXT_LABEL=f"下一章 · 第{cn_num(next_of(ch, chapters))}章" if next_of(ch, chapters) else "返回目录",
+            # 底栏「上一章 / 下一章」：首章没有上一章、末章没有下一章，直接用 hidden 收起
+            PREV_CH_HREF=f"chapter-{prev_of(ch, chapters):02d}.html" if prev_of(ch, chapters) else "",
+            NEXT_CH_HREF=f"chapter-{next_of(ch, chapters):02d}.html" if next_of(ch, chapters) else "",
+            PREV_CH_HIDDEN="" if prev_of(ch, chapters) else " hidden",
+            NEXT_CH_HIDDEN="" if next_of(ch, chapters) else " hidden",
+            TOC_ITEMS=toc_items("", chapters, datelines),
+            CHAPTER_NO=str(ch),
+            CHAPTER_TITLE_ZH=html.escape(titles_zh[ch], quote=True),
+            CHAPTER_TITLE_EN=f"Chapter {ch}",
+            CHAPTER_DATELINE_ZH=html.escape(datelines[ch], quote=True),
+            CHAPTER_DATELINE_EN=html.escape(datelines_en[ch], quote=True),
+            CONTENT_ZH=render_blocks(ch, zh_segs, captions, "../assets/", zh=True),
+            CONTENT_EN=render_blocks(ch, en_segs, captions, "../assets/", zh=False),
+        )
+        tpl = (SRC_DIR / "chapter.html").read_text(encoding="utf-8")
+        pages.append((ch, inject_overrides(fill(tpl, values, f"read/chapter-{ch:02d}.html"),
+                                        "../assets/")))
+
+    # ---- 落盘阶段：到这里所有校验都已经过了 ----
+    OUT.mkdir(parents=True, exist_ok=True)
+    first = chapters[0]
+    # ---- 主页 / 目录页：同样在**计划阶段**渲染完 ----
+    # [P1] 原来这两页在落盘阶段才 fill()，占位符缺失会发生在 assets 已拷贝、
+    # .nojekyll 已写、陈旧章页还没剪之后 —— exit 1 的构建仍留下半新半旧的产物。
+    home = (SRC_DIR / "index.html").read_text(encoding="utf-8")
+    index_page = inject_overrides(fill(home, dict(
+        common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
+        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
+        PREV_LABEL="上一章", NEXT_LABEL="开始阅读",
+        TOC_ITEMS=toc_html,
+        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
+        CHAPTER_TITLE_EN=f"Chapter {first}",
+        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
+        CONTENT_ZH="", CONTENT_EN=""), "index.html"), "assets/")
+
+    toc = (SRC_DIR / "toc.html").read_text(encoding="utf-8")
+    toc_page = inject_overrides(fill(toc, dict(
+        common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
+        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
+        PREV_LABEL="上一章", NEXT_LABEL="下一章",
+        TOC_ITEMS=toc_html,
+        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
+        CHAPTER_TITLE_EN=f"Chapter {first}",
+        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
+        CONTENT_ZH="", CONTENT_EN=""), "toc.html"), "assets/")
+
+    # ---- 落盘阶段：到这里所有校验都已经过了 ----
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "read").mkdir(parents=True, exist_ok=True)
     assets = OUT / "assets"
@@ -240,69 +337,12 @@ def build() -> None:
             old.unlink()
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
-    first = chapters[0]
-    # ---- 主页 ----
-    home = (SRC_DIR / "index.html").read_text(encoding="utf-8")
-    (OUT / "index.html").write_text(inject_overrides(fill(home, dict(
-        common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
-        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
-        PREV_LABEL="上一章", NEXT_LABEL="开始阅读",
-        TOC_ITEMS=toc_html,
-        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
-        CHAPTER_TITLE_EN=f"Chapter {first}",
-        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
-        CONTENT_ZH="", CONTENT_EN=""), "index.html"), "assets/"), encoding="utf-8")
+    (OUT / "index.html").write_text(index_page, encoding="utf-8")
+    (OUT / "toc.html").write_text(toc_page, encoding="utf-8")
 
     # ---- 目录页 ----
-    toc = (SRC_DIR / "toc.html").read_text(encoding="utf-8")
-    (OUT / "toc.html").write_text(inject_overrides(fill(toc, dict(
-        common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
-        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
-        PREV_LABEL="上一章", NEXT_LABEL="下一章",
-        TOC_ITEMS=toc_html,
-        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
-        CHAPTER_TITLE_EN=f"Chapter {first}",
-        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
-        CONTENT_ZH="", CONTENT_EN=""), "toc.html"), "assets/"), encoding="utf-8")
-
-    # ---- 逐章正文 ----
-    tpl = (SRC_DIR / "chapter.html").read_text(encoding="utf-8")
-    built: list[int] = []
-    for ch in requested:
-        if ch not in chapters:
-            print(f"skip ch{ch:02d}（无译文）")
-            continue
-        prefix = "../assets/"
-        zh_segs = segs_of(ZH_DIR / f"chapter-{ch:02d}.zh.json")
-        en_segs = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json", required=False)
-        check_sync(ch, zh_segs, en_segs)
-        pos = chapters.index(ch)
-        prev_ch = chapters[pos - 1] if pos > 0 else None
-        next_ch = chapters[pos + 1] if pos + 1 < len(chapters) else None
-        values = dict(
-            common, ASSET_PREFIX=prefix,
-            HOME_HREF="../index.html", TOC_HREF="../toc.html",
-            PREV_HREF=f"chapter-{prev_ch:02d}.html" if prev_ch else "../toc.html",
-            NEXT_HREF=f"chapter-{next_ch:02d}.html" if next_ch else "../toc.html",
-            PREV_LABEL=f"上一章 · 第{cn_num(prev_ch)}章" if prev_ch else "返回目录",
-            NEXT_LABEL=f"下一章 · 第{cn_num(next_ch)}章" if next_ch else "返回目录",
-            # 底栏「上一章 / 下一章」：首章没有上一章、末章没有下一章，直接用 hidden 收起
-            PREV_CH_HREF=f"chapter-{prev_ch:02d}.html" if prev_ch else "",
-            NEXT_CH_HREF=f"chapter-{next_ch:02d}.html" if next_ch else "",
-            PREV_CH_HIDDEN="" if prev_ch else " hidden",
-            NEXT_CH_HIDDEN="" if next_ch else " hidden",
-            TOC_ITEMS=toc_items("", chapters, datelines),
-            CHAPTER_NO=str(ch),
-            CHAPTER_TITLE_ZH=html.escape(titles_zh[ch], quote=True),
-            CHAPTER_TITLE_EN=f"Chapter {ch}",
-            CHAPTER_DATELINE_ZH=html.escape(datelines[ch], quote=True),
-            CHAPTER_DATELINE_EN=html.escape(datelines_en[ch], quote=True),
-            CONTENT_ZH=render_blocks(ch, zh_segs, captions, prefix, zh=True),
-            CONTENT_EN=render_blocks(ch, en_segs, captions, prefix, zh=False),
-        )
-        page = inject_overrides(fill(tpl, values, f"read/chapter-{ch:02d}.html"), prefix)
+    for ch, page in pages:
         (OUT / "read" / f"chapter-{ch:02d}.html").write_text(page, encoding="utf-8")
-        built.append(ch)
 
     # 清理陈旧的逐章页面（撤下的章节不该继续被 CI 发布）
     keep = {f"chapter-{ch:02d}.html" for ch in chapters}
@@ -310,7 +350,7 @@ def build() -> None:
         if old.name not in keep:
             old.unlink()
 
-    print(f"站点已组装：{len(built)} 章 + 主页 + 目录（全书 {len(chapters)} 章）→ {OUT.relative_to(ROOT)}")
+    print(f"站点已组装：{len(pages)} 章 + 主页 + 目录（全书 {len(chapters)} 章）→ {OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

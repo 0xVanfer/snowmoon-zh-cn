@@ -8,6 +8,7 @@
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -20,6 +21,11 @@ DOC = ROOT / "docs" / "glossary.md"
 
 KIND_ORDER = ["person", "place", "org", "tech", "term", "unit", "month", "inflection", "conlang"]
 
+# 泽国语条目的中文值只可能是空或这类占位说明；一旦写出实义中文，它就是普通译文
+CONLANG_ZH_PLACEHOLDER_RE = re.compile(r"^$|^[（(]?\s*(?:保留罗马字|保留原文|音译|不译)[^）)]*[）)]?$")
+# 时间单位译名：读者需要它作读音提示，不算「已翻译成中文」
+SOUND_ONLY_ZH = re.compile(r"^[零一二三四五六七八九十百千万两]*\s*(?:嘀嗒|提克)$")
+
 
 def is_conlang_entry(en: str, zh: str) -> bool:
     """术语表里登记的虚构语言（泽国语罗马字）：只作理解参考，正文必须保留罗马字原样。
@@ -28,7 +34,19 @@ def is_conlang_entry(en: str, zh: str) -> bool:
     No / To / pin / TEI 这些英文词与人名词都与泽国语音节同形，
     一旦把 `No → 反对`（表决按钮）判成虚构语言，就会反过来要求正文保留英文。
     也不认「全大写」——CPU/GUI 这类缩写不是泽国语。
+
+    [P1] `zh` 原本是死参数：已译成中文的英文短语（`she can` → 「她能」）只要词形
+    撞上词表就会被判成虚构语言，并在 docs/glossary.md 里发布成
+    「不得译成中文」——与它自己的中文值直接矛盾。
+    判据很简单：**中文值里出现实义词，一律不是泽国语**。
+    只有「空」或「（保留罗马字）」这类占位说明才算泽国语。
+    `MU GU GEI FA → 五十嘀嗒` 是唯一例外：它由显式 kind 声明（见 main），
+    且「嘀嗒」是本书的时间单位译名，读者需要它作读音提示。
     """
+    zh = (zh or "").strip()
+    if re.search(r"[\u3400-\u9fff]", zh) and not CONLANG_ZH_PLACEHOLDER_RE.match(zh) \
+            and not SOUND_ONLY_ZH.match(zh):
+        return False
     vf = ROOT / "sources" / "work" / "conlang_vocab.json"
     vocab = set(json.loads(vf.read_text(encoding="utf-8"))) if vf.exists() else set()
     words = re.findall(r"[a-zA-Z]+", en)
@@ -37,8 +55,11 @@ def is_conlang_entry(en: str, zh: str) -> bool:
     return all(w.lower() in vocab for w in words)
 
 
-def main() -> None:
-    check_only = "--check" in sys.argv
+def main(argv: list[str] | None = None) -> None:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--check", action="store_true",
+                    help="只报告冲突，不写文件；有冲突或未合并的新术语时退出码非 0")
+    args = ap.parse_args(argv)
     glos = json.loads(GLOSSARY.read_text(encoding="utf-8"))
     have = {e["en"]: e for e in glos["entries"]}
     added, conflicts = [], []
@@ -54,7 +75,9 @@ def main() -> None:
                 continue
             kind = t.get("kind", "term")
             note = t.get("note", "")
-            if is_conlang_entry(en, zh):
+            # 译者显式声明 kind=conlang 是权威信号，不受中文值影响：
+            # `MU GU GEI FA → 五十嘀嗒` 是泽国语播报，但读者需要「嘀嗒」这个读音提示。
+            if kind == "conlang" or is_conlang_entry(en, zh):
                 kind = "conlang"
                 note = "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）" + note
             entry = {"en": en, "zh": zh, "kind": kind, "note": note, "from": f.stem}
@@ -72,8 +95,13 @@ def main() -> None:
             e["kind"] = "conlang"
             if not (e.get("note") or "").startswith("（虚构语言"):
                 e["note"] = "（虚构语言：正文保留罗马字原样，不得译成中文；此条仅供理解）" + (e.get("note") or "")
-    if check_only:
-        if conflicts:
+    if args.check:
+        # [P1] --check 对「有新增术语未合并」原本返回 0：CI 会以为一切正常，
+        # 而术语表其实已经落后于译文。两种未合并都必须让闸门变红。
+        if conflicts or added:
+            if added:
+                print(f"  还有 {len(added)} 条新术语未并入 glossary.json"
+                      f"（跑 merge_terms.py 合并）")
             sys.exit(1)
         return
     glos["entries"].sort(key=lambda e: (KIND_ORDER.index(e["kind"]) if e.get("kind") in KIND_ORDER else 99,
@@ -107,4 +135,6 @@ def render_doc(glos: dict) -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # 未知参数必须报错：此前 `--chek` 会被静默忽略、脚本照常写盘，
+    # 「只想看看有没有冲突」的意图被当成「合并并发布」。
+    main(sys.argv[1:])

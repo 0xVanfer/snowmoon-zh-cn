@@ -490,7 +490,13 @@ class Extractor:
             for svg in svgs:
                 # 上游若有未闭合的 <svg>，HTMLParser 会把后续兄弟节点挂进 svg 里，
                 # 正文会拿不到片段 id 并连带被写进插图文件。这里显式拦下，宁可报错也不静默吞内容。
-                leaked = sorted({d.tag for d in descendants(svg) if d.tag in HTML_ONLY_TAGS})
+                # [P1] 但 <foreignObject> **合法地**包含 HTML（div/p/span/table…）。
+                # 不区分结构的话，一个完全正常的 <svg><foreignObject><div>…</div></foreignObject></svg>
+                # 会被判成「未闭合，吞入了页面元素」，整章抽取直接中止。
+                # 只检查 foreignObject **之外**的 HTML 标签。
+                leaked = sorted({d.tag for d in descendants(svg)
+                                 if d.tag in HTML_ONLY_TAGS
+                                 and not inside_foreign_object(svg, d)})
                 if leaked:
                     raise SystemExit(
                         f"chapter-{self.chapter}: <svg> 未闭合，吞入了页面元素 {leaked}；"
@@ -524,6 +530,29 @@ def descendants(node: Node):
         if isinstance(c, Node):
             yield c
             yield from descendants(c)
+
+
+def inside_foreign_object(svg: Node, target: Node) -> bool:
+    """target 是否位于某个 <foreignObject> 之内。
+
+    <foreignObject> 是 SVG 规范里嵌 HTML 的合法容器，它内部的 div/p/span/table
+    不是「未闭合 <svg> 吞进来的页面元素」，不该被 SVG 泄漏守卫拦下。
+
+    HTMLParser 会把标签名转小写，所以判 `foreignobject`。
+    """
+    def walk(node: Node, inside: bool) -> bool:
+        for c in node.children:
+            if not isinstance(c, Node):
+                continue
+            if c is target:
+                return inside
+            # 进入 foreignobject 即进入「合法 HTML 区」；其内部继续按普通子树走，
+            # 嵌套的 foreignobject 仍是合法区。
+            if walk(c, inside or c.tag == "foreignobject"):
+                return True
+        return False
+
+    return walk(svg, False)
 
 
 def serialize_svg(node: Node) -> str:
