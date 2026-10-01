@@ -83,18 +83,22 @@
     Object.keys(DEFAULTS).forEach(function (key) {
       result.settings[key] = setting(key, source[key]);
     });
-    if (number(raw.last, 1, 32, true)) result.last = raw.last;
+    // [P1] 章数上限原本写死 32：站点有第 33 章时，读档会被截断。
+    // 这里不设上限，只要求是正整数；真正的合法性判断交给各页的 validChapter。
+    if (number(raw.last, 1, Number.MAX_SAFE_INTEGER, true)) result.last = raw.last;
     if (object(raw.chapters)) {
-      for (var i = 1; i <= 32; i += 1) {
-        var entry = raw.chapters[String(i)];
-        if (!object(entry)) continue;
-        result.chapters[String(i)] = {
+      Object.keys(raw.chapters).forEach(function (key) {
+        var n = Number(key);
+        if (!Number.isInteger(n) || n < 1) return;
+        var entry = raw.chapters[key];
+        if (!object(entry)) return;
+        result.chapters[key] = {
           zh: position(entry.zh),
           en: position(entry.en),
           tab: entry.tab === 'en' ? 'en' : 'zh',
           read: entry.read === true
         };
-      }
+      });
     }
     return result;
   }
@@ -103,7 +107,8 @@
   var page = body && body.dataset.page;
   if (['home', 'toc', 'read'].indexOf(page) === -1) page = 'home';
   var chapterValue = Number(body && body.dataset.chapter);
-  var chapter = number(chapterValue, 1, 32, true) ? chapterValue : null;
+  // [P1] 不写死 32：第 33 章起会被判成非法章号，整页降级成非阅读页。
+  var chapter = number(chapterValue, 1, Number.MAX_SAFE_INTEGER, true) ? chapterValue : null;
 
   function save() {
     try {
@@ -889,8 +894,7 @@
     var main = document.getElementById('reader-main');
     var chapter = Number(api.chapter || (document.body.dataset.chapter) ||
       root.dataset.chapter || ((location.pathname.match(/chapter-(\d+)\.html$/) || [])[1]));
-    var validChapter = function (n) { return Number.isInteger(n) && n >= 1 && n <= 32; };
-    var reading = !!main && validChapter(chapter);
+    var reading = !!main && Number.isInteger(chapter) && chapter >= 1;
     var models = [], originals = [], wrappers = [], snapshots = {};
     var ready = false, frame = 0, saveTimer = 0, directoryFrame = 0;
     var initial = true, previousMode = state.settings.mode;
@@ -908,6 +912,20 @@
 
     function finite(n) { return typeof n === 'number' && isFinite(n) ? Math.max(0, n) : 0; }
     function clamp(n) { return Math.max(0, Math.min(1, n)); }
+    // [P1] 原本写死 `n >= 1 && n <= 32`：站点一旦有第 33 章，整页被判成
+    // 「非阅读页」，翻页与进度条全部失效，而没有任何闸门报警。章数上限必须
+    // 来自目录本身（toc.html / 页内目录都有 li[data-chapter]）。
+    var chapterTotal = (function () {
+      var listed = document.querySelectorAll('#toc-list li[data-chapter], #drawer-toc li[data-chapter]');
+      var max = 0;
+      Array.prototype.forEach.call(listed, function (li) {
+        var n = Number(li.dataset.chapter);
+        if (Number.isInteger(n) && n > max) max = n;
+      });
+      var declared = Number(document.documentElement.dataset.chaptersTotal || 0);
+      return Math.max(max, Number.isInteger(declared) ? declared : 0) || 32;
+    }());
+    var validChapter = function (n) { return Number.isInteger(n) && n >= 1 && n <= chapterTotal; };
     function paged() { return state.settings.mode === 'paged'; }
     function visible(m) {
       return m.pane.getClientRects().length > 0 &&
@@ -1021,7 +1039,10 @@
     }
     function layoutPages(m) {
       var bottom = document.getElementById('bottombar');
-      var topbar = S.qs('#topbar');
+      // [P0] 这里原本写 S.qs('#topbar')：S 与 documentBox() 都属于前一段 IIFE 的作用域，
+      // 本段（enhancePages）不可见 → 每次 layoutPages() 抛 ReferenceError，ready 永远置不上 true，
+      // 翻页模式一次都没排版成功过（m.pages 停在初值 1，next>=pages 恒真，「下一页」直接跳章）。
+      var topbar = document.getElementById('topbar');
       var topH = topbar && topbar.offsetHeight ? topbar.offsetHeight : 56;
       var reserve = (bottom ? Math.max(48, bottom.offsetHeight) : 48) + topH;
       // 页高只看视口高度，不看 rect.top——rect.top 随文档滚动变化，
@@ -1041,7 +1062,8 @@
       m.step = width + 32;
       m.pages = Math.max(1, Math.ceil((m.flow.scrollWidth + 32) / m.step));
       // 把正文盒顶端对齐到顶栏下沿（新高度生效后再量一次）
-      var doc = documentBox();
+      // 同上：documentBox() 在本段不可见，内联展开其定义。
+      var doc = document.scrollingElement || document.documentElement;
       var shift = m.viewport.getBoundingClientRect().top - topH;
       if (Math.abs(shift) > 1) doc.scrollTop = Math.max(0, doc.scrollTop + shift);
       m.viewport.scrollTop = 0;
@@ -1132,7 +1154,7 @@
         var count = Object.keys(state.chapters).filter(function (key) {
           return validChapter(Number(key)) && state.chapters[key] && state.chapters[key].read;
         }).length;
-        progress.textContent = '已读 ' + count + ' / 32 章';
+        progress.textContent = '已读 ' + count + ' / ' + chapterTotal + ' 章';
         if (validChapter(Number(state.last))) {
           var link = document.createElement('a');
           link.href = chapterHref(Number(state.last), document.getElementById('toc-list'));
@@ -1176,9 +1198,14 @@
       if (frame) {
         cancelAnimationFrame(frame);
         frame = 0;
-        // 只有在已经完成过一次排版时才允许单纯取消：否则（首屏还没排完就点了翻页）
-        // 会把唯一的排版机会吞掉，页面停在未分列的状态、页码也永远不刷新。
-        if (!ready) relayout();
+        // [回归] 只兜「整章没排过」不够：切到某个从未分列过的栏时 ready 仍为 true，
+        // 而该栏 m.pages 还是初值 1，next>=pages 恒真 → 「下一页」把读者踢到下一章。
+        // paged 下视口是 overflow:hidden，未分列的栏既不能翻也不能滚，读者直接被卡死。
+        // 取消 rAF 后必须无条件补排版（geometryKey 指纹会自动挡掉空转），
+        // 否则会吞掉唯一一次排版机会、留下陈旧几何。
+        var pending = active();
+        if (!ready || !pending || pending.pages <= 1) relayout();
+        else scheduleLayout();
       }
       var m = active(), delta = Number(direction) < 0 ? -1 : 1;
       if (!m) return;
@@ -1207,8 +1234,11 @@
       if (event.target.closest('[data-set]')) scheduleLayout();
     });
     new MutationObserver(function (changes) {
+      // [回归] data-active-pane 原本被当成「非几何变化」，只存档不排版。
+      // 但 geometryKey() 本来就包含「可见栏集合」：zh→en 换了可见栏，几何已经变了，
+      // 新露出的那一栏却从未分列过。必须走 scheduleLayout()，不能只 updateProgress()。
       var geometry = changes.some(function (change) {
-        return change.attributeName !== 'data-active-pane';
+        return change.attributeName === 'data-active-pane';
       });
       if (geometry) scheduleLayout();
       else { updateProgress(); queueSave(); }
