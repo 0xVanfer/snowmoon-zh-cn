@@ -214,11 +214,11 @@
 
 <span style="color:#ed756b">“这次不学民本棋比赛播报员的腔调了？”</span>白回嘴打趣。
 
-<span style="color:#df74b1">"MU GU GEI HUI ZIU FA"</span>，泽用一种夸张的机器人腔调答道，为了逗乐。
+<span style="color:#df74b1">“MU GU GEI HUI ZIU FA”</span>，泽用一种夸张的机器人腔调答道，为了逗乐。
 
 他们围坐在桌旁等着。
 
-<span style="color:#ed756b">"LE MU GEI HUI ZIU FA"</span>，白喊道。
+<span style="color:#ed756b">“LE MU GEI HUI ZIU FA”</span>，白喊道。
 
 <span style="color:#df74b1">“喂！”</span>泽回了一句。
 
@@ -226,7 +226,7 @@
 
 他们继续盯着倒计时。倒计时一跳到十，他们就齐声喊起来：
 
-"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA …… HUI ZIU FA!"
+“PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA …… HUI ZIU FA!”
 
 屏幕分成两半。左边是5条并排的进度条，显示与5个预测机器人进行的5次混淆电路计算的进度。右边是一大片饼图，每一个问题一张。投票很快开始涌进来。
 

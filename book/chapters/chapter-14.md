@@ -66,25 +66,25 @@
 
 <span style="color:#ec7383">“当然，还有今天的规则变动。每个干预回合你能调配的资源减少80%。除此之外，棋场上会有5座神龛：4座分别位于棋盘4条边的正中，一座在正中。每1,000回合，神龛内容发生过的所有变化，都会以异或的形式作用到神龛四角附近的区域，然后神龛会重置为默认的石阵。”</span>
 
-<span style="color:#23ba7d">"FI LE GEI TAU FA."</span>
+<span style="color:#23ba7d">“FI LE GEI TAU FA.”</span>
 
 泽立刻明白了新规则的含义。神龛是唯一违反物质守恒的东西——不过即便如此，在新规则下也没有任何东西会减少熵。异或不保持权重，却是可逆的。所以随着时间推移，棋盘会越来越满，也越来越乱。资源配额减少，意味着干预回合不是用来建造的——而是用来掌舵的。
 
 泽照例布下墙、滑翔机和飞船。不过这次他用了几种不同的设计——一种可操控的载符飞船，是他几个月前做出来的，只要在少数几格上干预，就能改变它的方向。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA."</span>
+<span style="color:#23ba7d">“MU GU GEI TAU FA.”</span>
 
 泽又想出一个办法：他重新摆了摆飞船的位置，让它们在两次干预回合之后正好停在神龛外侧。这样他就能朝恰到好处的方向放出一架滑翔机，把两座神龛变成一座永恒的滑翔机工厂：滑翔机会来回弹跳，每撞一次就崩下岩石，向北喷出更多滑翔机；而每1,000回合，岩石都会重置。
 
-<span style="color:#23ba7d">"PA GU……"</span>
+<span style="color:#23ba7d">“PA GU……”</span>
 
 泽把全部精力都投到滑翔机风暴上，好掩护飞船前往中央、东面和南面；他决定放弃西面。
 
-<span style="color:#23ba7d">"SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……"</span>
+<span style="color:#23ba7d">“SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……”</span>
 
 直到最后一刻，泽都在不断优化自己的结构。
 
-<span style="color:#23ba7d">"TAU FA."</span>
+<span style="color:#23ba7d">“TAU FA.”</span>
 
 飞船和滑翔机动了起来。
 

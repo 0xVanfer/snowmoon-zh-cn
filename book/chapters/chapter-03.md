@@ -104,7 +104,7 @@
 
 文字衬着一幅背景画，画的是机器人在捡垃圾，用的是适合孩子的卡通风格。右下角有一个二维码。格拉迪亚斯出于好奇扫了一下。
 
-<div class="device-view wide-device-view"><h3 style="color:#d4d">大梅港公共活动</h3><table style="width:75%"><tbody><tr><td>环境</td><td><ul><li>清洁行动</li><li>污染监测（水、空气）</li><li>动物福利研究</li></ul><td><button>了解更多</button></td></td></tr><tr><td>健康与医疗</td><td><ul><li>食品、环境与清洁空气改善效果的大规模研究</li><li>健康饮食、运动及其他行为与生活方式研究</li></ul></td><td><button>了解更多</button></td></tr><tr><td>教育</td><td><ul><li>编写面向4至18岁的进阶教育课程</li><li>青少年数学与编程竞赛</li></ul></td><td><button>了解更多</button></td></tr><tr><td>艺术</td><td><ul><li>“美丽城市”研究</li><li>面向公众开放的展览与博物馆</li><li>电影与剧集，去年有3部进入维里迪亚前20</li></ul></td><td><button>了解更多</button></td></tr><tr><td colspan="3"><button>加载更多</button></td></tr></tbody></table><div><b>大梅港的所有研究成果与工具均开源！<br>部分资金来自维里迪亚二次方资助</b></div></div>
+<div class="device-view wide-device-view"><h3 style="color:#d4d">大梅港公共活动</h3><table style="width:75%"><tbody><tr><td>环境</td><td><ul><li>清洁行动</li><li>污染监测（水、空气）</li><li>动物福利研究</li></ul></td><td><button>了解更多</button></td></tr><tr><td>健康与医疗</td><td><ul><li>食品、环境与清洁空气改善效果的大规模研究</li><li>健康饮食、运动及其他行为与生活方式研究</li></ul></td><td><button>了解更多</button></td></tr><tr><td>教育</td><td><ul><li>编写面向4至18岁的进阶教育课程</li><li>青少年数学与编程竞赛</li></ul></td><td><button>了解更多</button></td></tr><tr><td>艺术</td><td><ul><li>“美丽城市”研究</li><li>面向公众开放的展览与博物馆</li><li>电影与剧集，去年有3部进入维里迪亚前20</li></ul></td><td><button>了解更多</button></td></tr><tr><td colspan="3"><button>加载更多</button></td></tr></tbody></table><div><b>大梅港的所有研究成果与工具均开源！<br>部分资金来自维里迪亚二次方资助</b></div></div>
 
 格拉迪亚斯看见两个人坐在长椅上，各自喝着茶，望着那块广告牌，其中一人腿上放着一台手持终端。
 

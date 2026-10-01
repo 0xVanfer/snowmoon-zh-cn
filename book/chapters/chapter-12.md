@@ -278,15 +278,15 @@
 
 无人机嗡嗡作响，围着泽飞，机身约莫手持终端那么大，检查有没有任何作弊设备。这一次，无人机的数量大约是帕佛盖都那场的3倍，形状和大小也更加五花八门。它们嗡嗡地飞了大约20嘀嗒，然后退回了各自的停靠位置。
 
-一个响亮的自动语音播报——这次听着更偏女声：<span style="color:#23ba7d">"MU GU GEI FA"</span>。50嘀嗒后开始。
+一个响亮的自动语音播报——这次听着更偏女声：<span style="color:#23ba7d">“MU GU GEI FA”</span>。50嘀嗒后开始。
 
 泽闭上眼睛，吸气、呼气，尽力让自己平静下来。他知道，这一盘并非决定性的一局：就算输了，他还能在后面的比赛里补回来。可换个角度想，这反而让他更怕：既然有了“输了也没关系”这个借口，他还能不能提起那股劲，把全部注意力和心力都压在棋盘上，去赢下这一局？
 
-<span style="color:#23ba7d">"LE MU GEI FA"</span>
+<span style="color:#23ba7d">“LE MU GEI FA”</span>
 
 泽又睁开了眼睛。
 
-<span style="color:#23ba7d">"PA GU GEI FA"</span>
+<span style="color:#23ba7d">“PA GU GEI FA”</span>
 
 泽耐心等着。
 
@@ -300,7 +300,7 @@
 
 泽的显示屏亮了，他看见面前那张六边形网格。
 
-<span style="color:#23ba7d">"LE FI SHI GEI TAU FA"</span>，响亮的自动语音喊道。战斗将在2,000嘀嗒后开始。
+<span style="color:#23ba7d">“LE FI SHI GEI TAU FA”</span>，响亮的自动语音喊道。战斗将在2,000嘀嗒后开始。
 
 泽先在沙盒里随手乱涂些乱七八糟的东西，看哪些能保持稳定、哪些会变成滑翔机。一分钟内，他就找出了几种滑翔机和几种可以用作墙的静态结构。让他意外的是，跑得最快的滑翔机是朝……正东方向移动的。
 
@@ -308,13 +308,13 @@
 
 他仔细盯着那些滑翔机，想尽快凭直觉弄明白：什么样的形状能在移动时保持自身形状不变。他反复定义了好几轮滑翔机和墙。
 
-<span style="color:#23ba7d">"PA MU GU GU GEI TAU FA."</span>战斗将在1,500嘀嗒后开始。
+<span style="color:#23ba7d">“PA MU GU GU GEI TAU FA.”</span>战斗将在1,500嘀嗒后开始。
 
 泽开始拿形状和他那枚符记类似的图样做实验，看有没有哪个能当滑翔机用。他必须想出点名堂——否则他只能推进得极慢：每到干预回合，就在已有的符记旁边再造一枚新符记。
 
 他意识到，要真正取得突破，就得学会跟石阵打交道。他猜了几种民本棋六边形版本里石阵可能的形状，再一次次观察滑翔机撞上去时的表现。
 
-<span style="color:#23ba7d">"FI SHI GEI TAU FA."</span>战斗将在1,000嘀嗒后开始。
+<span style="color:#23ba7d">“FI SHI GEI TAU FA.”</span>战斗将在1,000嘀嗒后开始。
 
 泽开始冒汗。到现在为止，一无所获。他试过的每一种滑翔机、每一种可能的石阵形状和每一种偏移量，都没能让他复制出自己的符记。
 
@@ -334,7 +334,7 @@
 
 泽拿他看到的那些滑翔机，试了最基础的几种变换：翻转、旋转60度、晚一个时间步发射。全都不奏效。
 
-<span style="color:#23ba7d">"MU FI LE GEI TAU FA."</span>战斗将在500嘀嗒后开始。
+<span style="color:#23ba7d">“MU FI LE GEI TAU FA.”</span>战斗将在500嘀嗒后开始。
 
 泽把每一步都放得更慢，一步步看过去。然后他看破了。每个步骤里，棋盘都会划分成三角形，六边形在各自所在的三角形内部旋转——三角形里填了一个六边形，就顺时针转；填了两个，就逆时针转。
 
@@ -354,11 +354,11 @@
 
 他换了一架滑翔机再试。这一次成了。时间倒退着越过碰撞的那一刻，石阵加符记变成了一块光秃秃的石阵，两架滑翔机倒着飞了出来。
 
-<span style="color:#23ba7d">"FI LE GEI TAU FA."</span>战斗将在100嘀嗒后开始。
+<span style="color:#23ba7d">“FI LE GEI TAU FA.”</span>战斗将在100嘀嗒后开始。
 
 泽迅速用其他几种可能的石阵形状重复同样的实验。他完全没理会那个播报倒计时的声音，一直试到为另外两种最自然的候选形状也各找到了一个方案。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA."</span>
+<span style="color:#23ba7d">“MU GU GEI TAU FA.”</span>
 
 泽飞快地布下符记、墙和滑翔机——它们撞上合适的石阵时就能生成符记。
 
@@ -366,9 +366,9 @@
 
 把棋盘上的基本布局做好之后，他呼出一口气。就在他重新吸气、开始最后一遍打磨结构时，最后的倒计时开始了。
 
-<span style="color:#23ba7d">"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……"</span>
+<span style="color:#23ba7d">“PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……”</span>
 
-<span style="color:#23ba7d">"TAU FA."</span>
+<span style="color:#23ba7d">“TAU FA.”</span>
 
 滑翔机开始飞出。起初，什么也没发生。
 

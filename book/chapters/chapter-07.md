@@ -6,7 +6,7 @@
 
 一个机器人滑到他跟前。
 
-<span style="color:#26a9f1">"mo da cu ja li hen ma?"</span>，它问道。“吃的喝的还好吗？”
+<span style="color:#26a9f1">“mo da cu ja li hen ma?”</span>，它问道。“吃的喝的还好吗？”
 
 机器人屏幕切换成了投票界面。
 
@@ -96,11 +96,11 @@
 
 一个机器人滑过来，端给他们3杯水。泽、白和穆各拿了一杯。
 
-穆举起杯子。<span style="color:#00bc96">“为我们的未来，”</span>她说。<span style="color:#00bc96">"Dze go ba fau gie."</span>
+穆举起杯子。<span style="color:#00bc96">“为我们的未来，”</span>她说。<span style="color:#00bc96">“Dze go ba fau gie.”</span>
 
 泽有点困惑——“Dze go ba fau gie”意思是“泽国将再度崛起”，这是句很美的话，但用在真正的战斗，或者某种工业、教育活动上，似乎都比用在民本棋锦标赛上更合适。可他还是本能地回应了，跟白同时开口。
 
-<span style="color:#df74b1">"Dze go ba fau gie."</span>
+<span style="color:#df74b1">“Dze go ba fau gie.”</span>
 
 3人把水喝了。
 
@@ -108,15 +108,15 @@
 
 ---
 
-<span style="color:#23ba7d">"MU GU GEI FA"</span>，响亮的自动语音播报道。50嘀嗒后开始。
+<span style="color:#23ba7d">“MU GU GEI FA”</span>，响亮的自动语音播报道。50嘀嗒后开始。
 
 泽深吸一口气，再缓缓吐出，最后一次在心里默背自己的棋路。
 
-<span style="color:#23ba7d">"LE MU GEI FA"</span>。
+<span style="color:#23ba7d">“LE MU GEI FA”</span>。
 
 泽用目光扫过观众席。大部分人他几乎看不清，但整体上，他能感觉到的兴奋比前两盘都足。
 
-<span style="color:#23ba7d">"PA GU GEI FA"</span>。
+<span style="color:#23ba7d">“PA GU GEI FA”</span>。
 
 泽又吸了一口气，屏住呼吸，撑过最后剩下的10个嘀嗒，等着那声宣告。
 
@@ -134,31 +134,31 @@
 
 他在旁边另一个标签页里看到了白的 AI 记录；白在做同样的事，而白的 AI 也知道她的风格。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA"</span>，响亮的自动语音炸响。战斗将在50嘀嗒后开始。
+<span style="color:#23ba7d">“MU GU GEI TAU FA”</span>，响亮的自动语音炸响。战斗将在50嘀嗒后开始。
 
 两个 AI 继续优化各自的滑翔机与墙阵型。到这一步，双方的 AI 都开始针对对方记录里的策略设计反制。
 
 泽开始亲手摆下几处结构，一边复制粘贴 AI 已经做好的部分来提速，一边盯着白的记录，看白的 AI 还没有针对哪些策略做出反制。
 
-<span style="color:#23ba7d">"LE MU GEI TAU FA"</span>
+<span style="color:#23ba7d">“LE MU GEI TAU FA”</span>
 
 泽开始亲手布下最后一件重要结构：一艘载符飞船。他的 AI 已经造了4艘，但他想自己单独造一艘，这样白就看不到，而且前面配一道走法不同的移动墙。他给载符飞船定好路线，让它从 AI 已经建好的一面墙上反射出去，然后沿着棋盘中央向上飞。
 
-<span style="color:#23ba7d">"PA GU……"</span>
+<span style="color:#23ba7d">“PA GU……”</span>
 
 快啊，泽心想，把载符飞船造完。
 
-<span style="color:#23ba7d">"SO …… BI …… ZE …… HA ……"</span>
+<span style="color:#23ba7d">“SO …… BI …… ZE …… HA ……”</span>
 
 泽放下最后几格。
 
-<span style="color:#23ba7d">"MU …… FO ……"</span>
+<span style="color:#23ba7d">“MU …… FO ……”</span>
 
 然后……成了。
 
 泽长长地吐出一口气。
 
-<span style="color:#23ba7d">"SHI …… LE …… PA …… TAU FA"</span>
+<span style="color:#23ba7d">“SHI …… LE …… PA …… TAU FA”</span>
 
 滑翔机开始飞起来。泽的载符飞船从东南角出发向西移动。泽能看到的棋盘范围变大了。
 

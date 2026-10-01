@@ -164,15 +164,15 @@
 
 半分钟后，无人机查完了，飞走了。一只托盘从控制台下方滑出来，上面放着几副连着一根长线的眼镜。泽拿起眼镜。他把线从手臂下绕到身后，好让线垂在背后，然后戴上了眼镜。
 
-一个洪亮的机械音再次严肃地宣布：<span style="color:#23ba7d">"MU GU GEI FA"</span>。50嘀嗒后开始。
+一个洪亮的机械音再次严肃地宣布：<span style="color:#23ba7d">“MU GU GEI FA”</span>。50嘀嗒后开始。
 
 泽平静下来，努力把紧张丢到脑后，又在脑中过了一遍战术。墙、滑翔机、石阵、从石阵里榨出可用负熵的技巧、侧翼进攻。虽说每局总会冒出点新规则，但所有战术里最重要的，还是懂得随机应变。
 
-<span style="color:#23ba7d">"LE MU GEI FA"</span>。25嘀嗒后开始。
+<span style="color:#23ba7d">“LE MU GEI FA”</span>。25嘀嗒后开始。
 
 泽短暂地闭上眼，吸了口气。
 
-<span style="color:#23ba7d">"PA GU GEI FA"</span>
+<span style="color:#23ba7d">“PA GU GEI FA”</span>
 
 <span style="color:#ec7383">“欢迎来到第十八届民本棋锦标赛、四分之一决赛的首轮。今晚将接连进行4场比赛。到午夜，我们就会知道谁将晋级半决赛，谁又得另找一门营生。或者明年再加把劲！”</span>
 
@@ -192,13 +192,13 @@
 
 他也开始照做。他在沙盒里试了几种滑翔机与墙的组合，确认能用之后，再把它们部署到棋场上。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA"</span>
+<span style="color:#23ba7d">“MU GU GEI TAU FA”</span>
 
 战斗将在50嘀嗒后开始。
 
 正常情况下，到了这个阶段，选手们会在语音频道里激烈交谈，协调战术。泽和白之间，谁都没说一个字。最接近交流的举动，是泽刻意不把滑翔机瞄向某几处石阵，白领会了暗示，自己去占那几处石阵，同样也留了几处给泽。
 
-<span style="color:#23ba7d">"LE MU GEI TAU FA"</span>
+<span style="color:#23ba7d">“LE MU GEI TAU FA”</span>
 
 25嘀嗒。
 
@@ -206,9 +206,9 @@
 
 没时间瞎猜了，泽想。得专注在棋上。
 
-<span style="color:#23ba7d">"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……"</span>
+<span style="color:#23ba7d">“PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……”</span>
 
-<span style="color:#23ba7d">"TAU FA"</span>
+<span style="color:#23ba7d">“TAU FA”</span>
 
 滑翔机开始飞行。
 

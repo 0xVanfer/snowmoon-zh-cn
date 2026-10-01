@@ -704,7 +704,7 @@
 
 文字衬着一幅背景画，画的是机器人在捡垃圾，用的是适合孩子的卡通风格。右下角有一个二维码。格拉迪亚斯出于好奇扫了一下。
 
-<div class="device-view wide-device-view"><h3 style="color:#d4d">大梅港公共活动</h3><table style="width:75%"><tbody><tr><td>环境</td><td><ul><li>清洁行动</li><li>污染监测（水、空气）</li><li>动物福利研究</li></ul><td><button>了解更多</button></td></td></tr><tr><td>健康与医疗</td><td><ul><li>食品、环境与清洁空气改善效果的大规模研究</li><li>健康饮食、运动及其他行为与生活方式研究</li></ul></td><td><button>了解更多</button></td></tr><tr><td>教育</td><td><ul><li>编写面向4至18岁的进阶教育课程</li><li>青少年数学与编程竞赛</li></ul></td><td><button>了解更多</button></td></tr><tr><td>艺术</td><td><ul><li>“美丽城市”研究</li><li>面向公众开放的展览与博物馆</li><li>电影与剧集，去年有3部进入维里迪亚前20</li></ul></td><td><button>了解更多</button></td></tr><tr><td colspan="3"><button>加载更多</button></td></tr></tbody></table><div><b>大梅港的所有研究成果与工具均开源！<br>部分资金来自维里迪亚二次方资助</b></div></div>
+<div class="device-view wide-device-view"><h3 style="color:#d4d">大梅港公共活动</h3><table style="width:75%"><tbody><tr><td>环境</td><td><ul><li>清洁行动</li><li>污染监测（水、空气）</li><li>动物福利研究</li></ul></td><td><button>了解更多</button></td></tr><tr><td>健康与医疗</td><td><ul><li>食品、环境与清洁空气改善效果的大规模研究</li><li>健康饮食、运动及其他行为与生活方式研究</li></ul></td><td><button>了解更多</button></td></tr><tr><td>教育</td><td><ul><li>编写面向4至18岁的进阶教育课程</li><li>青少年数学与编程竞赛</li></ul></td><td><button>了解更多</button></td></tr><tr><td>艺术</td><td><ul><li>“美丽城市”研究</li><li>面向公众开放的展览与博物馆</li><li>电影与剧集，去年有3部进入维里迪亚前20</li></ul></td><td><button>了解更多</button></td></tr><tr><td colspan="3"><button>加载更多</button></td></tr></tbody></table><div><b>大梅港的所有研究成果与工具均开源！<br>部分资金来自维里迪亚二次方资助</b></div></div>
 
 格拉迪亚斯看见两个人坐在长椅上，各自喝着茶，望着那块广告牌，其中一人腿上放着一台手持终端。
 
@@ -1027,15 +1027,15 @@
 
 半分钟后，无人机查完了，飞走了。一只托盘从控制台下方滑出来，上面放着几副连着一根长线的眼镜。泽拿起眼镜。他把线从手臂下绕到身后，好让线垂在背后，然后戴上了眼镜。
 
-一个洪亮的机械音再次严肃地宣布：<span style="color:#23ba7d">"MU GU GEI FA"</span>。50嘀嗒后开始。
+一个洪亮的机械音再次严肃地宣布：<span style="color:#23ba7d">“MU GU GEI FA”</span>。50嘀嗒后开始。
 
 泽平静下来，努力把紧张丢到脑后，又在脑中过了一遍战术。墙、滑翔机、石阵、从石阵里榨出可用负熵的技巧、侧翼进攻。虽说每局总会冒出点新规则，但所有战术里最重要的，还是懂得随机应变。
 
-<span style="color:#23ba7d">"LE MU GEI FA"</span>。25嘀嗒后开始。
+<span style="color:#23ba7d">“LE MU GEI FA”</span>。25嘀嗒后开始。
 
 泽短暂地闭上眼，吸了口气。
 
-<span style="color:#23ba7d">"PA GU GEI FA"</span>
+<span style="color:#23ba7d">“PA GU GEI FA”</span>
 
 <span style="color:#ec7383">“欢迎来到第十八届民本棋锦标赛、四分之一决赛的首轮。今晚将接连进行4场比赛。到午夜，我们就会知道谁将晋级半决赛，谁又得另找一门营生。或者明年再加把劲！”</span>
 
@@ -1055,13 +1055,13 @@
 
 他也开始照做。他在沙盒里试了几种滑翔机与墙的组合，确认能用之后，再把它们部署到棋场上。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA"</span>
+<span style="color:#23ba7d">“MU GU GEI TAU FA”</span>
 
 战斗将在50嘀嗒后开始。
 
 正常情况下，到了这个阶段，选手们会在语音频道里激烈交谈，协调战术。泽和白之间，谁都没说一个字。最接近交流的举动，是泽刻意不把滑翔机瞄向某几处石阵，白领会了暗示，自己去占那几处石阵，同样也留了几处给泽。
 
-<span style="color:#23ba7d">"LE MU GEI TAU FA"</span>
+<span style="color:#23ba7d">“LE MU GEI TAU FA”</span>
 
 25嘀嗒。
 
@@ -1069,9 +1069,9 @@
 
 没时间瞎猜了，泽想。得专注在棋上。
 
-<span style="color:#23ba7d">"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……"</span>
+<span style="color:#23ba7d">“PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……”</span>
 
-<span style="color:#23ba7d">"TAU FA"</span>
+<span style="color:#23ba7d">“TAU FA”</span>
 
 滑翔机开始飞行。
 
@@ -1758,7 +1758,7 @@
 
 一个机器人滑到他跟前。
 
-<span style="color:#26a9f1">"mo da cu ja li hen ma?"</span>，它问道。“吃的喝的还好吗？”
+<span style="color:#26a9f1">“mo da cu ja li hen ma?”</span>，它问道。“吃的喝的还好吗？”
 
 机器人屏幕切换成了投票界面。
 
@@ -1848,11 +1848,11 @@
 
 一个机器人滑过来，端给他们3杯水。泽、白和穆各拿了一杯。
 
-穆举起杯子。<span style="color:#00bc96">“为我们的未来，”</span>她说。<span style="color:#00bc96">"Dze go ba fau gie."</span>
+穆举起杯子。<span style="color:#00bc96">“为我们的未来，”</span>她说。<span style="color:#00bc96">“Dze go ba fau gie.”</span>
 
 泽有点困惑——“Dze go ba fau gie”意思是“泽国将再度崛起”，这是句很美的话，但用在真正的战斗，或者某种工业、教育活动上，似乎都比用在民本棋锦标赛上更合适。可他还是本能地回应了，跟白同时开口。
 
-<span style="color:#df74b1">"Dze go ba fau gie."</span>
+<span style="color:#df74b1">“Dze go ba fau gie.”</span>
 
 3人把水喝了。
 
@@ -1860,15 +1860,15 @@
 
 ---
 
-<span style="color:#23ba7d">"MU GU GEI FA"</span>，响亮的自动语音播报道。50嘀嗒后开始。
+<span style="color:#23ba7d">“MU GU GEI FA”</span>，响亮的自动语音播报道。50嘀嗒后开始。
 
 泽深吸一口气，再缓缓吐出，最后一次在心里默背自己的棋路。
 
-<span style="color:#23ba7d">"LE MU GEI FA"</span>。
+<span style="color:#23ba7d">“LE MU GEI FA”</span>。
 
 泽用目光扫过观众席。大部分人他几乎看不清，但整体上，他能感觉到的兴奋比前两盘都足。
 
-<span style="color:#23ba7d">"PA GU GEI FA"</span>。
+<span style="color:#23ba7d">“PA GU GEI FA”</span>。
 
 泽又吸了一口气，屏住呼吸，撑过最后剩下的10个嘀嗒，等着那声宣告。
 
@@ -1886,31 +1886,31 @@
 
 他在旁边另一个标签页里看到了白的 AI 记录；白在做同样的事，而白的 AI 也知道她的风格。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA"</span>，响亮的自动语音炸响。战斗将在50嘀嗒后开始。
+<span style="color:#23ba7d">“MU GU GEI TAU FA”</span>，响亮的自动语音炸响。战斗将在50嘀嗒后开始。
 
 两个 AI 继续优化各自的滑翔机与墙阵型。到这一步，双方的 AI 都开始针对对方记录里的策略设计反制。
 
 泽开始亲手摆下几处结构，一边复制粘贴 AI 已经做好的部分来提速，一边盯着白的记录，看白的 AI 还没有针对哪些策略做出反制。
 
-<span style="color:#23ba7d">"LE MU GEI TAU FA"</span>
+<span style="color:#23ba7d">“LE MU GEI TAU FA”</span>
 
 泽开始亲手布下最后一件重要结构：一艘载符飞船。他的 AI 已经造了4艘，但他想自己单独造一艘，这样白就看不到，而且前面配一道走法不同的移动墙。他给载符飞船定好路线，让它从 AI 已经建好的一面墙上反射出去，然后沿着棋盘中央向上飞。
 
-<span style="color:#23ba7d">"PA GU……"</span>
+<span style="color:#23ba7d">“PA GU……”</span>
 
 快啊，泽心想，把载符飞船造完。
 
-<span style="color:#23ba7d">"SO …… BI …… ZE …… HA ……"</span>
+<span style="color:#23ba7d">“SO …… BI …… ZE …… HA ……”</span>
 
 泽放下最后几格。
 
-<span style="color:#23ba7d">"MU …… FO ……"</span>
+<span style="color:#23ba7d">“MU …… FO ……”</span>
 
 然后……成了。
 
 泽长长地吐出一口气。
 
-<span style="color:#23ba7d">"SHI …… LE …… PA …… TAU FA"</span>
+<span style="color:#23ba7d">“SHI …… LE …… PA …… TAU FA”</span>
 
 滑翔机开始飞起来。泽的载符飞船从东南角出发向西移动。泽能看到的棋盘范围变大了。
 
@@ -3100,7 +3100,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 几台个人飞行器自动从车里滚了出来。它们只是些简单的椅子，顶上装着旋翼，四周有一圈护罩。
 
-一群10到12岁的孩子朝卡车跑去，一半穿黄衫，一半穿紫衫。穿黄衫的孩子里就有兹文。他们抓过自己的飞行器，开始系上束带，把自己固定在座位里。
+一群10到12岁的孩子朝卡车跑去，一半穿黄衫，一半穿紫衫。穿黄衫的孩子里就有兹文。他们抓过自己的小型飞行器，开始系上束带，把自己固定在座位里。
 
 教练走进卡车，很快抱着一个小得多的箱子出来。他打开箱子，4架鲜红色的无人机弹了出来，飞上天空——它们形如几厘米宽的圆球，顶上装着柔软的羽毛状旋翼。
 
@@ -3126,9 +3126,9 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 红球突然向左改变了方向。
 
-兹文和另外两个孩子也跟着左转。兹文飞行器的旋翼护罩撞上了另一个孩子飞行器的旋翼护罩，两台飞行器轻轻弹开，没有出事。
+兹文和另外两个孩子也跟着左转。兹文的小型飞行器的旋翼护罩撞上了另一个孩子小型飞行器的旋翼护罩，两台小型飞行器轻轻弹开，没有出事。
 
-兹文想让飞行器飞得更高。他稍稍落在了刚才撞到的那个孩子后面，而第三个孩子向前飞，很快就到了他正下方。气流把兹文往下吸，没多久他的脚就弹到了那台飞行器旋翼顶上的格栅上。
+兹文想让小型飞行器飞得更高。他稍稍落在了刚才撞到的那个孩子后面，而第三个孩子向前飞，很快就到了他正下方。气流把兹文往下吸，没多久他的脚就弹到了那台小型飞行器旋翼顶上的格栅上。
 
 兹文赶紧跳开，他和那个孩子一起往下翻滚了几米，才稳住身形，各自朝不同方向飞走。
 
@@ -3138,9 +3138,9 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 兹文看着红球越来越近，又近了一些。现在它只在他前方一米。
 
-红球突然关掉旋翼，开始下坠。兹文反应很快，就在球落到他脚边高度时把它踢了上去，同时把飞行器往前挪。他伸出手，把红球抓在了掌心里。
+红球突然关掉旋翼，开始下坠。兹文反应很快，就在球落到他脚边高度时把它踢了上去，同时把小型飞行器往前挪。他伸出手，把红球抓在了掌心里。
 
-然后他把飞行器对准教练的方向飞去。旋翼慢了下来——但没有完全停。等他降到安全上限——每嘀嗒5米——旋翼才重新加速；这个速度，相当于从不到两米高的地方摔到地面时的速度。教练看着兹文落地，伸出手接过他递来的红球。
+然后他把小型飞行器对准教练的方向飞去。旋翼慢了下来——但没有完全停。等他降到安全上限——每嘀嗒5米——旋翼才重新加速；这个速度，相当于从不到两米高的地方摔到地面时的速度。教练看着兹文落地，伸出手接过他递来的红球。
 
 <span style="color:#93ab2c">“本场比赛第一个接到球的是兹文，黄队得第一分！”</span>
 
@@ -3158,7 +3158,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 塞拉加入了这个话题。
 
-<span style="color:#54a1f9">“嗯，格拉德，你可是——”</span>她收住了话头，猛然想起，哪怕只是点明“掌则人”3个字也不合规矩——<span style="color:#54a1f9">“你现在是掌舵会的人了。掌舵会能做点什么，让维里迪亚的教育更好一些？”</span>
+<span style="color:#54a1f9">“嗯，格拉德，你可是——”</span>她收住了话头，猛然想起，哪怕只是点明“掌则人”也不合规矩——<span style="color:#54a1f9">“你现在是掌舵会的人了。掌舵会能做点什么，让维里迪亚的教育更好一些？”</span>
 
 <span style="color:#be9b00">“你也知道，学校不归掌舵会管，公立学校由教育委员会运营，人员出自议会。不过一直有人在琢磨，想多支持一些私立学校——用图谱资助去支持，再设计些评则，给他们合适的激励。”</span>
 
@@ -3206,13 +3206,13 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 盖尔和红球一起升高，他离红球越来越近。5米。4米。3米。
 
-与此同时，兹文不知怎么忽然朝地面落去，照例由飞行器的 AI 减缓了坠势。
+与此同时，兹文不知怎么忽然朝地面落去，照例由小型飞行器的 AI 减缓了坠势。
 
 高空之中，盖尔远远高于其他选手，得意地举起手，攥紧的拳头里握着那个红球。
 
 观众里不少人欢呼起来。盖尔绕开跟在身后的另外两个学生，开始以每嘀嗒5米的最大速度往回下降。
 
-忽然，格拉迪亚斯和塞拉的目光转向兹文。他已经从飞行器里出来，正朝教练跑去。
+忽然，格拉迪亚斯和塞拉的目光转向兹文。他已经从小型飞行器里出来，正朝教练跑去。
 
 盖尔还在大约30米的高空时，兹文摊开手，把他在草地上找到的第四个红球交给了教练——那球的旋翼已经坏了。
 
@@ -3637,15 +3637,15 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 无人机嗡嗡作响，围着泽飞，机身约莫手持终端那么大，检查有没有任何作弊设备。这一次，无人机的数量大约是帕佛盖都那场的3倍，形状和大小也更加五花八门。它们嗡嗡地飞了大约20嘀嗒，然后退回了各自的停靠位置。
 
-一个响亮的自动语音播报——这次听着更偏女声：<span style="color:#23ba7d">"MU GU GEI FA"</span>。50嘀嗒后开始。
+一个响亮的自动语音播报——这次听着更偏女声：<span style="color:#23ba7d">“MU GU GEI FA”</span>。50嘀嗒后开始。
 
 泽闭上眼睛，吸气、呼气，尽力让自己平静下来。他知道，这一盘并非决定性的一局：就算输了，他还能在后面的比赛里补回来。可换个角度想，这反而让他更怕：既然有了“输了也没关系”这个借口，他还能不能提起那股劲，把全部注意力和心力都压在棋盘上，去赢下这一局？
 
-<span style="color:#23ba7d">"LE MU GEI FA"</span>
+<span style="color:#23ba7d">“LE MU GEI FA”</span>
 
 泽又睁开了眼睛。
 
-<span style="color:#23ba7d">"PA GU GEI FA"</span>
+<span style="color:#23ba7d">“PA GU GEI FA”</span>
 
 泽耐心等着。
 
@@ -3659,7 +3659,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽的显示屏亮了，他看见面前那张六边形网格。
 
-<span style="color:#23ba7d">"LE FI SHI GEI TAU FA"</span>，响亮的自动语音喊道。战斗将在2,000嘀嗒后开始。
+<span style="color:#23ba7d">“LE FI SHI GEI TAU FA”</span>，响亮的自动语音喊道。战斗将在2,000嘀嗒后开始。
 
 泽先在沙盒里随手乱涂些乱七八糟的东西，看哪些能保持稳定、哪些会变成滑翔机。一分钟内，他就找出了几种滑翔机和几种可以用作墙的静态结构。让他意外的是，跑得最快的滑翔机是朝……正东方向移动的。
 
@@ -3667,13 +3667,13 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 他仔细盯着那些滑翔机，想尽快凭直觉弄明白：什么样的形状能在移动时保持自身形状不变。他反复定义了好几轮滑翔机和墙。
 
-<span style="color:#23ba7d">"PA MU GU GU GEI TAU FA."</span>战斗将在1,500嘀嗒后开始。
+<span style="color:#23ba7d">“PA MU GU GU GEI TAU FA.”</span>战斗将在1,500嘀嗒后开始。
 
 泽开始拿形状和他那枚符记类似的图样做实验，看有没有哪个能当滑翔机用。他必须想出点名堂——否则他只能推进得极慢：每到干预回合，就在已有的符记旁边再造一枚新符记。
 
 他意识到，要真正取得突破，就得学会跟石阵打交道。他猜了几种民本棋六边形版本里石阵可能的形状，再一次次观察滑翔机撞上去时的表现。
 
-<span style="color:#23ba7d">"FI SHI GEI TAU FA."</span>战斗将在1,000嘀嗒后开始。
+<span style="color:#23ba7d">“FI SHI GEI TAU FA.”</span>战斗将在1,000嘀嗒后开始。
 
 泽开始冒汗。到现在为止，一无所获。他试过的每一种滑翔机、每一种可能的石阵形状和每一种偏移量，都没能让他复制出自己的符记。
 
@@ -3693,7 +3693,7 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 泽拿他看到的那些滑翔机，试了最基础的几种变换：翻转、旋转60度、晚一个时间步发射。全都不奏效。
 
-<span style="color:#23ba7d">"MU FI LE GEI TAU FA."</span>战斗将在500嘀嗒后开始。
+<span style="color:#23ba7d">“MU FI LE GEI TAU FA.”</span>战斗将在500嘀嗒后开始。
 
 泽把每一步都放得更慢，一步步看过去。然后他看破了。每个步骤里，棋盘都会划分成三角形，六边形在各自所在的三角形内部旋转——三角形里填了一个六边形，就顺时针转；填了两个，就逆时针转。
 
@@ -3713,11 +3713,11 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 他换了一架滑翔机再试。这一次成了。时间倒退着越过碰撞的那一刻，石阵加符记变成了一块光秃秃的石阵，两架滑翔机倒着飞了出来。
 
-<span style="color:#23ba7d">"FI LE GEI TAU FA."</span>战斗将在100嘀嗒后开始。
+<span style="color:#23ba7d">“FI LE GEI TAU FA.”</span>战斗将在100嘀嗒后开始。
 
 泽迅速用其他几种可能的石阵形状重复同样的实验。他完全没理会那个播报倒计时的声音，一直试到为另外两种最自然的候选形状也各找到了一个方案。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA."</span>
+<span style="color:#23ba7d">“MU GU GEI TAU FA.”</span>
 
 泽飞快地布下符记、墙和滑翔机——它们撞上合适的石阵时就能生成符记。
 
@@ -3725,9 +3725,9 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 把棋盘上的基本布局做好之后，他呼出一口气。就在他重新吸气、开始最后一遍打磨结构时，最后的倒计时开始了。
 
-<span style="color:#23ba7d">"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……"</span>
+<span style="color:#23ba7d">“PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……”</span>
 
-<span style="color:#23ba7d">"TAU FA."</span>
+<span style="color:#23ba7d">“TAU FA.”</span>
 
 滑翔机开始飞出。起初，什么也没发生。
 
@@ -4031,25 +4031,25 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#ec7383">“当然，还有今天的规则变动。每个干预回合你能调配的资源减少80%。除此之外，棋场上会有5座神龛：4座分别位于棋盘4条边的正中，一座在正中。每1,000回合，神龛内容发生过的所有变化，都会以异或的形式作用到神龛四角附近的区域，然后神龛会重置为默认的石阵。”</span>
 
-<span style="color:#23ba7d">"FI LE GEI TAU FA."</span>
+<span style="color:#23ba7d">“FI LE GEI TAU FA.”</span>
 
 泽立刻明白了新规则的含义。神龛是唯一违反物质守恒的东西——不过即便如此，在新规则下也没有任何东西会减少熵。异或不保持权重，却是可逆的。所以随着时间推移，棋盘会越来越满，也越来越乱。资源配额减少，意味着干预回合不是用来建造的——而是用来掌舵的。
 
 泽照例布下墙、滑翔机和飞船。不过这次他用了几种不同的设计——一种可操控的载符飞船，是他几个月前做出来的，只要在少数几格上干预，就能改变它的方向。
 
-<span style="color:#23ba7d">"MU GU GEI TAU FA."</span>
+<span style="color:#23ba7d">“MU GU GEI TAU FA.”</span>
 
 泽又想出一个办法：他重新摆了摆飞船的位置，让它们在两次干预回合之后正好停在神龛外侧。这样他就能朝恰到好处的方向放出一架滑翔机，把两座神龛变成一座永恒的滑翔机工厂：滑翔机会来回弹跳，每撞一次就崩下岩石，向北喷出更多滑翔机；而每1,000回合，岩石都会重置。
 
-<span style="color:#23ba7d">"PA GU……"</span>
+<span style="color:#23ba7d">“PA GU……”</span>
 
 泽把全部精力都投到滑翔机风暴上，好掩护飞船前往中央、东面和南面；他决定放弃西面。
 
-<span style="color:#23ba7d">"SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……"</span>
+<span style="color:#23ba7d">“SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA ……”</span>
 
 直到最后一刻，泽都在不断优化自己的结构。
 
-<span style="color:#23ba7d">"TAU FA."</span>
+<span style="color:#23ba7d">“TAU FA.”</span>
 
 飞船和滑翔机动了起来。
 
@@ -4894,9 +4894,9 @@ AI 开始细致地推演，动手实现那座工厂和那架滑翔机。
 
 <span style="color:#be9b00">“后来我们掌则人的线上讨论组也聊过几次，不过那个群在投票前7天就自动关闭了——理由是要留一段静默期，给独立思考多腾点空间。”</span>
 
-<span style="color:#54a1f9">“唉，那静默期开始时，红郡已经被吞并了。当时大家是什么反应？”</span>
+<span style="color:#54a1f9">“唉，那静默期开始时，红郡已经被吞并了。当时是个什么情形？”</span>
 
-<span style="color:#be9b00">“那些说该把军用硬件从评则最优的几档里剔除的人，我看全都沉默了。后来十八提了一条新修正案，要提高税率档，把开放的激励再往上推。这条我大概会投赞成。”</span>
+<span style="color:#be9b00">“那些说该把军用硬件从评则最优的几档里剔除的人，我看全都沉默了。后来十八号提了一条新修正案，要提高税率档，把开放的激励再往上推。这条我大概会投赞成。”</span>
 
 <span style="color:#54a1f9">“那就好。”</span>
 
@@ -5919,7 +5919,7 @@ ci fi mu jan li san sia
 
 <span style="color:#54a1f9">“这些对冲基金还真是够狠的。”</span>
 
-<span style="color:#a38af2">“要是审判不匿名、不随机抽选、每轮也不分成两个半组，他们肯定也能想办法去威胁或贿赂法官。”</span>
+<span style="color:#a38af2">“要是审判不匿名、不随机抽选、每轮也不分成两组半，他们肯定也能想办法去威胁或贿赂法官。”</span>
 
 这时，莉莉冲进了房间。
 
@@ -7244,7 +7244,7 @@ ci fi mu jan li san sia
 
 眼镜把显示画面直接投进他眼里，泽逐一核对上面的各项数字。
 
-<span style="color:#df74b1">"Fi le gei tau fa"</span>，他模仿着每场民本棋开赛前倒计时播报员的声音，喊了一句。
+<span style="color:#df74b1">“Fi le gei tau fa”</span>，他模仿着每场民本棋开赛前倒计时播报员的声音，喊了一句。
 
 随后，他刻意收拢心神，让自己完全专注于那场即将开始的战斗。
 
@@ -7256,7 +7256,7 @@ ci fi mu jan li san sia
 
 又过了30个嘀嗒。
 
-<span style="color:#df74b1">"mu gu gei tau fa"</span>，他轻声说。50嘀嗒后开战。某种意义上，战斗早就开始了，但他等的那个时刻，是塔芬德尔抓住绳索的时刻。他想，那才是真正考验开始的时候。
+<span style="color:#df74b1">“mu gu gei tau fa”</span>，他轻声说。50嘀嗒后开战。某种意义上，战斗早就开始了，但他等的那个时刻，是塔芬德尔抓住绳索的时刻。他想，那才是真正考验开始的时候。
 
 又过了20个嘀嗒。
 
@@ -7366,7 +7366,7 @@ ci fi mu jan li san sia
 
 ---
 
-格拉迪亚斯拉开隔间的门，走了进去。5名法官已经坐在里面——能把这5个人找出来，莫夫和塞拉出了力，泽国黑进的那些监控摄像头更是帮了大忙。
+格拉迪亚斯拉开隔间的门，走了进去。5名法官已经坐在里面——能把这5个人找出来，莫夫和塞拉出了力，泽国那些被留了后门的监控摄像头更是帮了大忙。
 
 <span style="color:#eb7a52">“那么，你想谈什么？”</span>第一位法官问。
 
@@ -7653,11 +7653,11 @@ ci fi mu jan li san sia
 
 <span style="color:#ed756b">“这次不学民本棋比赛播报员的腔调了？”</span>白回嘴打趣。
 
-<span style="color:#df74b1">"MU GU GEI HUI ZIU FA"</span>，泽用一种夸张的机器人腔调答道，为了逗乐。
+<span style="color:#df74b1">“MU GU GEI HUI ZIU FA”</span>，泽用一种夸张的机器人腔调答道，为了逗乐。
 
 他们围坐在桌旁等着。
 
-<span style="color:#ed756b">"LE MU GEI HUI ZIU FA"</span>，白喊道。
+<span style="color:#ed756b">“LE MU GEI HUI ZIU FA”</span>，白喊道。
 
 <span style="color:#df74b1">“喂！”</span>泽回了一句。
 
@@ -7665,7 +7665,7 @@ ci fi mu jan li san sia
 
 他们继续盯着倒计时。倒计时一跳到十，他们就齐声喊起来：
 
-"PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA …… HUI ZIU FA!"
+“PA GU …… SO …… BI …… ZE …… HA …… MU …… FO …… SHI …… LE …… PA …… HUI ZIU FA!”
 
 屏幕分成两半。左边是5条并排的进度条，显示与5个预测机器人进行的5次混淆电路计算的进度。右边是一大片饼图，每一个问题一张。投票很快开始涌进来。
 
@@ -7820,7 +7820,7 @@ ci fi mu jan li san sia
 
 这次是穆开口。
 
-<span style="color:#00bc96">“别跟他们提我们。我们手上有几个针对北极无人机的漏洞利用，可以给你们。这些漏洞对北极人自己早就过时了——所以就算北极人知道了，反而更好，能让他们放松警惕。但这些漏洞用在两个月前你们从北岸弄回来的那架受损无人机上，会很灵。（译者注：北岸于雾期10日沦陷，至本章的霜期15日约一个月；原文“两个月前”与全书时间线不符，此处照原文译出，存疑。）功劳都算你的。”</span>
+<span style="color:#00bc96">“别跟他们提我们。我们手上有几个针对北极无人机的漏洞利用，可以给你们。这些漏洞对北极人自己早就过时了——所以就算北极人知道了，反而更好，能让他们放松警惕。但这些漏洞用在两个月前你们从北岸弄回来的那架受损无人机上，会很灵。功劳都算你的。”</span>
 
 莱克托又愣住了。他们连那架受损无人机都知道？他们是怎么把维里迪亚渗透得这么……彻底的？如果昆高培能做到这一步，那北极人……
 
@@ -8274,7 +8274,7 @@ ci fi mu jan li san sia
 
 泽的手表震了一下。
 
-<div class="device-view wide-device-view device-view-left"><p>我能看到你们开始跑查询了！不过你们得再小心点——如果我看得到，他们的监审官大概也看得到。这里还有几个代理端点。</p><span style="font-family:monospace; font-size: 75%">c8baa6614d9fba874af5cb90ba7c3d1a53aabaa8facd1e4f5fe46bdeb229a106：3fa5fbd0bc8aa8af8a4842b099dad4e700b5d54edcd4a21c9e272552318d4a55</span><span style="font-family:monospace; font-size: 75%">8d01f119fbdb499f24a298c59c1b83a7f591df97f3b7a9823e313b1bff3872ca：1a5529862c273fefb898acccdfa0bec29d594904b427eaee88b7b1df393fdb0b</span><span style="font-family:monospace; font-size: 75%">44ee73e0355611ad0d975bda2eec43c21e490cb42c61f71bc03b3b4bd7718ad1：bf53236e5d72d2142348d5529275908f995b77791f07a5c818eca0cfc400c1ac</span><span style="font-family:monospace; font-size: 75%">ab7a609ce6f71f55571184cb5d32996a3b5ddd08230ae788f7f65355d5385abe：254804b48ae25417535e6336735d0b66bdd7d20afe77ac687e933d8bd5c24d24</span><span style="font-family:monospace; font-size: 75%">95d40f8a44c6c3f4d32d2a4c7c533f9dd71c5d9ac1020361e9e7f4552967a778：12b152f44f00a1f542f4ac6fbb3aced5144c8a98d813a34dce1cb5abc18c3314</span><span style="font-family:monospace; font-size: 75%">508a323cda2f87b053986f17d0c073a51c9a001b9b9152a393fe06ff4a30072b：eff66952719415cc534e8f1feb06aa044fa468a81c911a14b95f9be93371e528</span><br/><br/><p>另外，再加一批在做别的事的假查询，甚至可以让每次查询同时尝试好几种不同的攻击，这样别人就更难看清它在做什么。</p></div>
+<div class="device-view wide-device-view device-view-left"><p>我能看到你们开始跑查询了！不过你们得再小心点——如果我看得到，他们的哨兵大概也看得到。这里还有几个代理端点。</p><span style="font-family:monospace; font-size: 75%">c8baa6614d9fba874af5cb90ba7c3d1a53aabaa8facd1e4f5fe46bdeb229a106：3fa5fbd0bc8aa8af8a4842b099dad4e700b5d54edcd4a21c9e272552318d4a55</span><span style="font-family:monospace; font-size: 75%">8d01f119fbdb499f24a298c59c1b83a7f591df97f3b7a9823e313b1bff3872ca：1a5529862c273fefb898acccdfa0bec29d594904b427eaee88b7b1df393fdb0b</span><span style="font-family:monospace; font-size: 75%">44ee73e0355611ad0d975bda2eec43c21e490cb42c61f71bc03b3b4bd7718ad1：bf53236e5d72d2142348d5529275908f995b77791f07a5c818eca0cfc400c1ac</span><span style="font-family:monospace; font-size: 75%">ab7a609ce6f71f55571184cb5d32996a3b5ddd08230ae788f7f65355d5385abe：254804b48ae25417535e6336735d0b66bdd7d20afe77ac687e933d8bd5c24d24</span><span style="font-family:monospace; font-size: 75%">95d40f8a44c6c3f4d32d2a4c7c533f9dd71c5d9ac1020361e9e7f4552967a778：12b152f44f00a1f542f4ac6fbb3aced5144c8a98d813a34dce1cb5abc18c3314</span><span style="font-family:monospace; font-size: 75%">508a323cda2f87b053986f17d0c073a51c9a001b9b9152a393fe06ff4a30072b：eff66952719415cc534e8f1feb06aa044fa468a81c911a14b95f9be93371e528</span><br/><br/><p>另外，再加一批在做别的事的假查询，甚至可以让每次查询同时尝试好几种不同的攻击，这样别人就更难看清它在做什么。</p></div>
 
 好建议，泽想。他转了出去。
 
