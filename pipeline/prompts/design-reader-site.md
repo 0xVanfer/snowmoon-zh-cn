@@ -105,8 +105,11 @@ assets/images/*.svg
 | `{{HOME_HREF}}` `{{TOC_HREF}}` | 主页/目录的相对链接 |
 | `{{PREV_HREF}}` `{{NEXT_HREF}}` | 上一章/下一章链接（首章上一章指向 `toc.html`，末章下一章指向 `toc.html`） |
 | `{{PREV_LABEL}}` `{{NEXT_LABEL}}` | 上一章/下一章的按钮文案（如「上一章 · 第X章」） |
+| `{{PREV_CH_HREF}}` `{{NEXT_CH_HREF}}` | 底栏「上一章/下一章」链接；首章的上一章、末章的下一章填空串 |
+| `{{PREV_CH_HIDDEN}}` `{{NEXT_CH_HIDDEN}}` | 首章/末章对应一侧填 ` hidden`（带前导空格）把该按钮收起 |
 | `{{REPO_URL}}` | `https://github.com/0xVanfer/snowmoon-zh-cn` |
 | `{{SITE_URL}}` | `https://snowmoon.vanfer.tech/` |
+| `{{SITE_TITLE}}` | 站点标题，如「雪月 Snowmoon · 中文版」 |
 | `{{UPSTREAM_URL}}` | `https://vitalik.eth.limo/snowmoon/` |
 | `{{CONTACT_EMAIL}}` | `vanfer@vanfer.tech` |
 | `{{CHAPTER_COUNT}}` `{{TOTAL_WORDS}}` `{{BUILD_DATE}}` | 32 / 约 14.6 万 / 构建日期 |
@@ -118,6 +121,22 @@ assets/images/*.svg
 
 正文内容里，`{{CONTENT_ZH}}` 所在元素必须带 `data-lang="zh"`，`{{CONTENT_EN}}` 所在元素必须带
 `data-lang="en"`（其余结构你自由发挥，两者的父/子关系由你决定，但要能被 CSS/JS 选中）。
+
+### 每个模板各自用哪些占位符（`build_site.py` 按页分别校验）
+
+`fill()` 会做**双向**校验：模板里有而脚本没传的会报错，**脚本传了而模板没用的（死键）同样报错**。
+死键是最危险的一类——它意味着「值算好了却没写进产物」，而模板很可能把该值写死成了字面量
+（历史上首页/目录的「开始阅读」就曾被写死成 `chapter-01.html`，首章撤下后变成静默 404）。
+因此各页只接受下列占位符，不要引入表外的名字：
+
+| 模板 | 可用占位符 |
+| --- | --- |
+| `index.html` | `ASSET_PREFIX` `BUILD_DATE` `CHAPTER_COUNT` `CONTACT_EMAIL` `HOME_HREF` `NEXT_HREF` `REPO_URL` `SITE_TITLE` `SITE_URL` `TOC_HREF` `TOTAL_WORDS` `UPSTREAM_URL` |
+| `toc.html` | `index.html` 那一组去掉 `SITE_TITLE`，加上 `TOC_ITEMS` |
+| `chapter.html` | `ASSET_PREFIX` `CHAPTER_COUNT` `CHAPTER_DATELINE_EN` `CHAPTER_DATELINE_ZH` `CHAPTER_NO` `CHAPTER_TITLE_EN` `CHAPTER_TITLE_ZH` `CONTENT_EN` `CONTENT_ZH` `HOME_HREF` `NEXT_CH_HIDDEN` `NEXT_CH_HREF` `NEXT_HREF` `NEXT_LABEL` `PREV_CH_HIDDEN` `PREV_CH_HREF` `PREV_HREF` `PREV_LABEL` `TOC_HREF` `TOC_ITEMS` |
+
+章页的「上一章/下一章」用 `{{NEXT_HREF}}` / `{{PREV_HREF}}`（首末章自动落到 `../toc.html`），
+**不要把章节号或文件名写死在模板里**——章数与首章都是构建期算出来的。
 
 正文里会用到的元素/类（构建脚本产出，请你给它们写样式）：
 

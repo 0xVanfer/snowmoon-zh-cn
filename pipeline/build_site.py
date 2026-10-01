@@ -214,6 +214,15 @@ def fill(template: str, values: dict[str, str], where: str) -> str:
     left = PH_RE.findall(out)
     if left:
         raise SystemExit(f"{where}: 仍有未替换占位符 {sorted(set(left))[:6]}")
+    # [P0] 反向校验：values 里模板根本没用的键 = 死键。
+    # 之前只做单向检查，于是 build_site 明明算好了 NEXT_HREF=首章链接，模板却把它写死成
+    # chapter-01.html —— 首章一旦撤下，构建会删掉该页而首页/目录仍指向它，静默 404，
+    # 而死键本身没人报。死键是「传了但没用上」的唯一现场，必须在这里暴露。
+    unused = sorted(set(values) - set(PH_RE.findall(template)))
+    if unused:
+        raise SystemExit(
+            f"{where}: 传入了模板未使用的占位符 {unused[:8]}"
+            f"（死键：值不会被写进产物，模板可能仍写死了字面量）")
     return out
 
 
@@ -247,10 +256,22 @@ def build() -> None:
         parts_en = [en[i] for i in dl_ids if en.get(i)]
         datelines_en[ch] = " · ".join(parts_en)
 
+    # [P0] 站点级元信息按「模板实际用到什么」显式拆分，而不是一股脑塞给每一页：
+    # fill() 会拒绝死键（全塞进去 = 每页都带一堆用不上的值，正是契约漂移的信号）。
+    # 拆分依据见 design-reader-site.md 的占位符契约表；改模板时要同步这里。
     common = dict(REPO_URL=REPO_URL, SITE_URL=SITE_URL, UPSTREAM_URL=UPSTREAM_URL,
                   CONTACT_EMAIL=CONTACT_EMAIL, SITE_TITLE=SITE_TITLE,
                   CHAPTER_COUNT=str(len(chapters)), TOTAL_WORDS=TOTAL_WORDS,
                   BUILD_DATE=build_date())
+    chapter_common = dict(CHAPTER_COUNT=common["CHAPTER_COUNT"])
+    index_common = dict(CHAPTER_COUNT=common["CHAPTER_COUNT"], BUILD_DATE=common["BUILD_DATE"],
+                        CONTACT_EMAIL=common["CONTACT_EMAIL"], REPO_URL=common["REPO_URL"],
+                        SITE_TITLE=common["SITE_TITLE"], SITE_URL=common["SITE_URL"],
+                        TOTAL_WORDS=common["TOTAL_WORDS"], UPSTREAM_URL=common["UPSTREAM_URL"])
+    toc_common = dict(CHAPTER_COUNT=common["CHAPTER_COUNT"], BUILD_DATE=common["BUILD_DATE"],
+                      CONTACT_EMAIL=common["CONTACT_EMAIL"], REPO_URL=common["REPO_URL"],
+                      SITE_URL=common["SITE_URL"], TOTAL_WORDS=common["TOTAL_WORDS"],
+                      UPSTREAM_URL=common["UPSTREAM_URL"])
     toc_html = toc_items("read/", chapters, datelines)
 
     # ---- 计划阶段：先把每一章的正文渲染成字符串，**全部校验通过**才开始写盘 ----
@@ -266,7 +287,7 @@ def build() -> None:
         en_segs = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json", required=False)
         check_sync(ch, zh_segs, en_segs)
         values = dict(
-            common, ASSET_PREFIX="../assets/",
+            chapter_common, ASSET_PREFIX="../assets/",
             HOME_HREF="../index.html", TOC_HREF="../toc.html",
             PREV_HREF=f"chapter-{prev_of(ch, chapters):02d}.html" if prev_of(ch, chapters) else "../toc.html",
             NEXT_HREF=f"chapter-{next_of(ch, chapters):02d}.html" if next_of(ch, chapters) else "../toc.html",
@@ -298,25 +319,16 @@ def build() -> None:
     # .nojekyll 已写、陈旧章页还没剪之后 —— exit 1 的构建仍留下半新半旧的产物。
     home = (SRC_DIR / "index.html").read_text(encoding="utf-8")
     index_page = inject_overrides(fill(home, dict(
-        common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
-        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
-        PREV_LABEL="上一章", NEXT_LABEL="开始阅读",
-        TOC_ITEMS=toc_html,
-        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
-        CHAPTER_TITLE_EN=f"Chapter {first}",
-        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
-        CONTENT_ZH="", CONTENT_EN=""), "index.html"), "assets/")
+        index_common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
+        # [P0] 首页「开始阅读」取的是「实际第一章」，不是写死的 chapter-01。
+        # 第 1 章撤下时 first 变成 2，旧模板会让首页指向一个已被清理掉的页面。
+        NEXT_HREF=f"read/chapter-{first:02d}.html"), "index.html"), "assets/")
 
     toc = (SRC_DIR / "toc.html").read_text(encoding="utf-8")
     toc_page = inject_overrides(fill(toc, dict(
-        common, ASSET_PREFIX="assets/", HOME_HREF="index.html", TOC_HREF="toc.html",
-        PREV_HREF="toc.html", NEXT_HREF=f"read/chapter-{first:02d}.html",
-        PREV_LABEL="上一章", NEXT_LABEL="下一章",
-        TOC_ITEMS=toc_html,
-        CHAPTER_NO=str(first), CHAPTER_TITLE_ZH=html.escape(titles_zh[first], quote=True),
-        CHAPTER_TITLE_EN=f"Chapter {first}",
-        CHAPTER_DATELINE_ZH=html.escape(datelines[first], quote=True), CHAPTER_DATELINE_EN="",
-        CONTENT_ZH="", CONTENT_EN=""), "toc.html"), "assets/")
+        toc_common, ASSET_PREFIX="assets/", HOME_HREF="index.html",
+        NEXT_HREF=f"read/chapter-{first:02d}.html",
+        TOC_ITEMS=toc_html), "toc.html"), "assets/")
 
     # ---- 落盘阶段：到这里所有校验都已经过了 ----
     OUT.mkdir(parents=True, exist_ok=True)
