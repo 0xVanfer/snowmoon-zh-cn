@@ -548,3 +548,109 @@ html[data-page-mode="scroll"] #pane-en { touch-action: pan-y; }
   font-style: normal;
   font-weight: 700;
 }
+
+/* ==========================================================================================
+   术语卡片（正文点词 → 简要介绍 → 跳完整教程）
+   视觉语言照抄 style.css 的「40 · 译者注气泡」一节：同一套 var(--accent) 强调色、
+   同一套 --surface/--border/--shadow 浮层、同一种「贴词、fixed、越界夹取」的定位契约。
+   差别只有两处：卡片里有链接（所以点卡片内部不关闭），以及卡片更宽、带章号列表。
+   ========================================================================================== */
+
+/* 行内触发点：点一下有反应，但不能抢正文的视线。 */
+.term {
+  border-bottom: 1px dotted var(--accent);
+  border-radius: 2px;
+  cursor: help;
+}
+.term:hover,
+.term:focus-visible {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  outline: none;
+}
+.term[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border-bottom-style: solid;
+}
+
+/* 容器只为「把卡片集中挂一次」，自己不参与布局。
+   与 .tnote-store 同一个坑：**不能**加 hidden / display:none，
+   display:none 会连后代一起隐藏，卡片自己的 hidden=false 也救不回来。 */
+.term-store { display: contents; }
+
+.term-card {
+  position: fixed;
+  z-index: 60;
+  /* min-width 由 reader.js 按「这是术语卡」写入（260px），max-width 在这里封顶，
+     分工是：窄屏不窄于一行、宽屏不超过 30rem。 */
+  max-width: min(30rem, calc(100vw - 2 * var(--space-4)));
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 0.82em;
+  line-height: 1.7;
+  text-align: left;
+  /* 卡片比可用高度还长时（章号多 + 大字号），在卡片内部滚动。max-height 由 reader.js 写入。 */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+.term-card[hidden] { display: none; }
+.term-card p { margin: 0 0 0.5em; text-indent: 0; }
+.term-card p:last-child { margin-bottom: 0; }
+
+.term-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4em;
+}
+.term-card__tier {
+  padding: 0 0.45em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted, var(--text));
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+/* 「第一遍可以跳过」是这张卡最该被看到的一条信息，给它强调色 */
+.term-card__tier--3 {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.term-card__name { font-weight: 700; }
+
+.term-card__name { font-weight: 700; }
+.term-card__prereq { color: var(--muted, var(--text)); }
+.term-card__prereq a,
+.term-card__more { color: var(--accent); }
+.term-card__more {
+  display: inline-block;
+  margin-top: 0.2em;
+  white-space: nowrap;
+}
+
+/* 深链落点：闪一下告诉读者「你到了这里」。
+   用 outline 而不是 background —— 段落可能整段是说话人上色的 span。 */
+.is-deeplink {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+  animation: deep-link-fade 1.6s ease-out;
+}
+@keyframes deep-link-fade {
+  from { outline-color: var(--accent); }
+  to { outline-color: transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .is-deeplink { animation: none; outline-color: var(--accent); }
+}
+
+/* 打印：卡片是屏幕交互，不印；行内点线保留，读者看得出哪里有术语。 */
+@media print {
+  .term { border-bottom: 1px dotted currentColor; }
+  .term-store { display: none; }
+}

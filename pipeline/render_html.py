@@ -23,6 +23,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_markdown import oklch_to_hex  # noqa: E402
+from terms import TIER_LABEL, WEIGHT_LABEL, page_url  # noqa: E402
 
 TAG_RE = re.compile(r"<(/?)([a-z]+)((?:\s[^>]*)?)(/?)>")
 PLACEHOLDER_RE = re.compile(r"\{\{S:([^}]+)\}\}")
@@ -37,6 +38,80 @@ ATTR_VALUE_RE = re.compile(r'(note|href)="([^"]*)"')
 TNOTE_CLASS = "tnote"
 TNOTE_STORE_CLASS = "tnote-store"
 
+# 术语卡片的约定类名（与 .tnote-store 同理，容器零布局）
+TERM_CLASS = "term"
+TERM_STORE_CLASS = "term-store"
+TERM_CARD_CLASS = "term-card"
+
+# 块级锚点：<p id="c22-s0152">。docs/explainer 的 `chapter-NN.md:行号` 引用
+# 靠 build_markdown 产出的行号索引换算到这里，读者点章号 chip 能落到具体那一段。
+FIRST_TAG_RE = re.compile(r"^(\s*<[a-zA-Z][a-zA-Z0-9-]*)")
+HAS_ID_RE = re.compile(r"^(\s*<[a-zA-Z][a-zA-Z0-9-]*)[^>]*\bid=")
+
+
+def inject_anchor(fragment: str, seg_id: str | None) -> str:
+    """给一块产物的**首个标签**加上 id，用于深链定位。
+
+    只处理首个标签、只加属性不改结构：章节页的布局校验会逐项比对正文与骨架的
+    容器子项，任何新增包裹元素都会让「布局容器子项与原文逐项一致」报警。
+    首个标签不是标签（纯文本块）或已有 id 时原样返回——由 validate_terms.py 兜底报错。
+    """
+    if not seg_id or not fragment:
+        return fragment
+    if HAS_ID_RE.match(fragment):
+        return fragment
+    m = FIRST_TAG_RE.match(fragment)
+    if not m:
+        return fragment
+    return f'{m.group(1)} id="{html.escape(seg_id, quote=True)}"' + fragment[m.end():]
+
+
+def term_cards(concepts: list[dict], prereq_index: dict[str, dict] | None = None) -> str:
+    """术语卡片池。结构与 tnote_bubbles 完全一致：正文只留触发点，内容集中挂一次。
+
+    [坑] 容器**不能**加 `hidden` 或任何 display:none —— display:none 会连后代一起
+    隐藏，后代无法覆盖祖先，于是 JS 把 card.hidden 置回 false 也照样看不见
+    （与 .tnote-store 同一个坑，见 tnote_bubbles 的说明）。靠 `display: contents`
+    做到零布局，显示/隐藏完全交给每张卡自己的 hidden。
+
+    [只讲最基础概念] 气泡里**不放**「这个概念在后面哪些章出现、各自什么作用」——
+    那是前后文关系。读者在正文里只需要知道「这个词是什么意思」，剩下的交给完整教程页。
+    早先版本把章号列表放进了气泡，一张卡能到二十多行：手机屏放不下，而**卡内滚动在触屏上
+    并不可靠**（指针从词移向卡就会触发 mouseleave 收卡），于是读者看到的是「下半截被截断、
+    也划不动」。现在改成**从结构上保证装得下**：固定 4 段（概念名 / 定义 / 比喻 / 链接），
+    「先读」最多再占 1 行，单行长度上限由 validate_terms.py 按最窄视口 + 最大字号断言。
+
+    概念在哪些章出现这份数据仍然由 `terms.ref_anchors()` 算出，校验器拿它对账文档里的
+    引用有没有漂移——只是不再渲染进气泡。
+    """
+    if not concepts:
+        return ""
+    prereq_index = prereq_index or {}
+    rows = []
+    for c in concepts:
+        pre = []
+        for pid in c.get("prereq") or []:
+            p = prereq_index.get(pid)
+            if p:
+                pre.append(f'<a href="{html.escape(page_url(p["doc"]), quote=True)}"'
+                           f' target="_blank" rel="noopener">{html.escape(p["zh"])}</a>')
+        prereq_html = (f'<p class="{TERM_CARD_CLASS}__prereq">先读：{"、".join(pre)}</p>'
+                       if pre else '')
+        card = c.get("card") or {}
+        rows.append(
+            f'<div class="{TERM_CARD_CLASS}" id="tc-{html.escape(c["id"], quote=True)}" hidden>'
+            f'<p class="{TERM_CARD_CLASS}__head">'
+            f'<span class="{TERM_CARD_CLASS}__name">{html.escape(c.get("zh", ""))}</span>'
+            f'<span class="{TERM_CARD_CLASS}__tier term-card__tier--{c.get("tier")}">'
+            f'{html.escape(TIER_LABEL.get(c.get("tier"), ""))}</span>'
+            f'</p>'
+            f'<p class="{TERM_CARD_CLASS}__line">{html.escape(card.get("one_liner", ""))}</p>'
+            f'<p class="{TERM_CARD_CLASS}__analogy">{html.escape(card.get("analogy", ""))}</p>'
+            + prereq_html
+            + f'<a class="{TERM_CARD_CLASS}__more" href="{html.escape(page_url(c["doc"]), quote=True)}"'
+              f' target="_blank" rel="noopener">读完整教程 ↗</a>'
+            + '</div>')
+    return f'<div class="{TERM_STORE_CLASS}">{"".join(rows)}</div>'
 
 def tnote_bubbles(notes: dict[str, str]) -> str:
     """把一章的译者注渲染成章尾的气泡池。

@@ -1,6 +1,6 @@
 # Snowmoon 中译术语表
 
-> 本文件由 `pipeline/render_glossary.py`（`merge_terms.py` 内置）从 [`pipeline/glossary.json`](../pipeline/glossary.json) 生成，请勿手工编辑；
+> 本文件由 `pipeline/merge_terms.py` 的 `render_doc()` 从 [`pipeline/glossary.json`](../pipeline/glossary.json) 生成，请勿手工编辑；
 > 修改请改 JSON 后重跑脚本。
 
 ## 命名与翻译政策

@@ -32,8 +32,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from render_html import PLACEHOLDER_RE, expand, mini_to_html, tnote_bubbles  # noqa: E402
+from render_html import (PLACEHOLDER_RE, expand, inject_anchor, mini_to_html,  # noqa: E402
+                         term_cards, tnote_bubbles)
 from build_markdown import CHAP_DIR, FIG_MANIFEST, ZH_DIR, cn_num  # noqa: E402
+from terms import TermMarker, load_concepts  # noqa: E402
 
 SRC_DIR = Path(__file__).resolve().parent / "site"   #视觉模型设计的前端源文件
 SEG_DIR = ROOT / "sources" / "work" / "segments"
@@ -149,7 +151,8 @@ def english_alt(filename: str) -> str:
 
 def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
                   prefix: str, zh: bool = False,
-                  figdir: str = "images", figalt=None) -> str:
+                  figdir: str = "images", figalt=None,
+                  marker=None) -> str:
     """把一章的结构骨架 + 指定语言的片段渲染成正文 HTML。
 
     章标题与开篇日期由模板的 `.chapter-heading` 统一渲染（中英各一行，随语言模式收敛），
@@ -162,18 +165,23 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
     56 张里有 30 张含英文标注，读者看到的是与周围英文正文对不上的中文标签。
     英文栏改指 `images-en/`（抽取自上游 HTML 的原图），中文栏仍指 `images/`。
     `figalt` 缺省时按「章-图」生成英文事实型 alt（见 english_alt）。
+
+    [术语锚点] 块级 `id` **只挂中栏**：与译者注气泡池同一个理由（英文栏保持原书纯净），
+    而且中英两栏若都挂同名 id，同一份 HTML 里就出现重复 id，fragment 定位归属不明。
     """
     data = load_json(CHAP_DIR / f"chapter-{ch:02d}.json")
     out: list[str] = []
     for blk in data["blocks"]:
         kind = blk.get("kind")
+        blk_ids = block_ids(blk)
+        aid = f' id="{blk_ids[0]}"' if (zh and blk_ids) else ""
         if kind in ("title", "dateline-open"):
             continue
         if kind == "scene-break":
-            vals = [segs[i] for i in block_ids(blk) if segs.get(i)]
+            vals = [segs[i] for i in blk_ids if segs.get(i)]
             if not vals:
                 continue
-            out.append(f'<p class="scene-break">{mini_to_html(" · ".join(vals), zh)}</p>')
+            out.append(f'<p{aid} class="scene-break">{mini_to_html(" · ".join(vals), zh)}</p>')
         elif kind == "rule":
             out.append('<hr class="rule">')
         elif kind == "figure":
@@ -183,7 +191,8 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
                 out.append(f'<figure class="fig"><img src="{prefix}{figdir}/{f}" alt="{alt}"'
                            f' title="{alt}" loading="lazy" decoding="async"></figure>')
             if blk.get("skeleton"):
-                out.append(expand(blk["skeleton"], segs, zh))
+                frag = expand(blk["skeleton"], segs, zh)
+                out.append(inject_anchor(frag, blk_ids[0] if zh and blk_ids else None))
         elif kind == "p":
             inner = expand(blk.get("skeleton", ""), segs, zh)
             inner = re.sub(r"^<p>|</p>$", "", inner)
@@ -192,9 +201,14 @@ def render_blocks(ch: int, segs: dict[str, str], captions: dict[str, str],
             m = re.fullmatch(r'<span style="(?:color:)?(#[0-9a-f]{6})">.*</span>[。！？…，]*',
                              inner, re.S)
             rail = f' class="dialog railed" style="color:{m.group(1)}"' if m else ' class="dialog"'
-            out.append(f"<p{rail}>{inner}</p>")
+            # [术语] 顺序要紧：先判 rail、再标注。rail 判定依赖整段被单一 color span
+            # 包住，先插 term span 会多一层嵌套——虽然仍能 fullmatch，但判据变脆。
+            if zh and marker is not None:
+                inner = marker.wrap(inner)
+            out.append(f"<p{aid}{rail}>{inner}</p>")
         else:
-            out.append(expand(blk.get("skeleton", ""), segs, zh))
+            frag = expand(blk.get("skeleton", ""), segs, zh)
+            out.append(inject_anchor(frag, blk_ids[0] if zh and blk_ids else None))
     return "\n".join(x for x in out if x.strip())
 
 
@@ -289,6 +303,17 @@ def build() -> None:
     if not chapters:
         raise SystemExit("没有任何译文，未组装站点")
 
+    # [术语卡片] concepts 为空 = 功能关闭（kill switch）：产物里不出现任何
+    # .term 标注与卡片池，站点与加这个功能之前逐字节一致。
+    concepts = load_concepts()
+    if concepts:
+        missing = [c["doc"] for c in concepts
+                   if not (ROOT / "docs" / "explainer" / c["doc"]).exists()]
+        if missing:
+            raise SystemExit(
+                f"terms.json 指向的科普文档不存在：{missing[:4]}；"
+                f"卡片里的「读完整教程」会变成死链")
+
     titles_zh: dict[int, str] = {}
     datelines: dict[int, str] = {}
     datelines_en: dict[int, str] = {}
@@ -334,6 +359,11 @@ def build() -> None:
         zh_tnotes = tnotes_of(ZH_DIR / f"chapter-{ch:02d}.zh.json")
         en_segs = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json", required=False)
         check_sync(ch, zh_segs, en_segs)
+        # [术语] 每章一个 marker：mark="first" 的「本章只标第一处」跨章必须重置。
+        marker = TermMarker(concepts)
+        content_zh = render_blocks(ch, zh_segs, captions, "../assets/", zh=True,
+                                   figdir="images", marker=marker)
+        content_zh += tnote_bubbles(zh_tnotes) + (marker.cards() if concepts else "")
         values = dict(
             chapter_common, ASSET_PREFIX="../assets/",
             HOME_HREF="../index.html", TOC_HREF="../toc.html",
@@ -350,8 +380,7 @@ def build() -> None:
             CHAPTER_TITLE_EN=f"Chapter {ch}",
             CHAPTER_DATELINE_ZH=html.escape(datelines[ch], quote=True),
             CHAPTER_DATELINE_EN=html.escape(datelines_en[ch], quote=True),
-            CONTENT_ZH=render_blocks(ch, zh_segs, captions, "../assets/", zh=True,
-                                     figdir="images") + tnote_bubbles(zh_tnotes),
+            CONTENT_ZH=content_zh,
             CONTENT_EN=render_blocks(ch, en_segs, captions, "../assets/", zh=False,
                                      figdir="images-en", figalt=english_alt),
         )

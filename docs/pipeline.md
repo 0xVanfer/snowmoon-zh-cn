@@ -138,6 +138,12 @@ book/site/assets/images-en/  站点**英文栏**插图（= sources/work/figures/
   依赖它的三项检查会自动跳过并提示。
   图注对账只对**中文栏**做：`manifest.json` 是中文图注的事实源，英文栏用的是原图 + 英文 alt，
   拿 manifest 去比英文 alt 会永远报「不符」。
+- `validate_terms.py`：术语卡片闸门（43 个概念 ↔ 43 篇科普 ↔ 构建产物三向对账）。
+  **必须排在 `build_site.py` 与 `qa_site.py` 之后**——它校验的是最终产物：正文里有没有真的标出术语、
+  卡片里的章号链接能不能落到真实段落、触发点与卡片是否逐页一一对应。
+  只查 `terms.json` 自洽是不够的，数据自洽但产物里什么都没标出来，是最容易漏过的一种状态。
+  三条无头环境跑不到的行为（深链跳过进度恢复、`applyDeepLink()` 的调用点、断句跳过 `.term`）
+  改用静态守卫检查。详见 [reader-site-design.md](reader-site-design.md) §7.6。
 
 ## 5.1 部署
 

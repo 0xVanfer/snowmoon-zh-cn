@@ -1,0 +1,1615 @@
+{
+ "_comment": "《雪月》概念教程卡片数据。id/no/doc/zh/en/aliases_zh/mark 为实测机械字段（别名经全书命中统计得出，mark=none 表示小说里没有对应词、不参与正文标注）；tier/prereq/card/chapters[].weight|note 为阅读判断字段，由分片全量撰写后合并。校验：python3 pipeline/validate_terms.py 复核修正：prisoners-dilemma 与 zero-positive-negative-sum 由 2 降为 1——囚徒困境与零和博弈是目标读者（聪明的中学生）普遍已知的概念，标成「需要一点基础」会误导。 气泡只讲最基础概念（定义 + 比喻 + 详细链接），不渲染前后文关系，因此 card.forward 已移除；chapters[] 保留（校验器拿它对账文档引用的漂移）。",
+ "version": 1,
+ "concepts": [
+  {
+   "id": "hash-function",
+   "no": 1,
+   "doc": "crypto/01-hash-function.md",
+   "zh": "哈希函数",
+   "en": "Hash Function",
+   "aliases_zh": [
+    "哈希函数",
+    "哈希"
+   ],
+   "mark": "first",
+   "tier": 1,
+   "prereq": [],
+   "card": {
+    "one_liner": "把任意长度的数据压成定长指纹：同样输入永远同样输出，但找不出两份内容不同的数据撞上同一指纹。",
+    "analogy": "像图书馆的书脊标签：一本书压成一行字贴上书脊，你一眼认得出是它，却没法从这行字还原整本书；标签位有限，两本书可能撞上同一个标签。"
+   },
+   "chapters": [
+    {
+     "ch": 3,
+     "weight": "mid",
+     "note": "厂商发布批次指纹，55台里6台无认证"
+    },
+    {
+     "ch": 5,
+     "weight": "mid",
+     "note": "摄像头每次报警发一枚哈希，次数变公开可查"
+    },
+    {
+     "ch": 6,
+     "weight": "mid",
+     "note": "作废符是伪随机哈希，公开却不可关联回评语"
+    },
+    {
+     "ch": 12,
+     "weight": "load",
+     "note": "整堂课讲哈希：保熵置换加顶层截断"
+    },
+    {
+     "ch": 27,
+     "weight": "mid",
+     "note": "把可读代码的哈希上网，改代码得等二十天"
+    }
+   ]
+  },
+  {
+   "id": "entropy",
+   "no": 2,
+   "doc": "crypto/02-entropy.md",
+   "zh": "熵与信息论",
+   "en": "Entropy and Information Theory",
+   "aliases_zh": [
+    "熵",
+    "负熵",
+    "信息论"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "熵是猜中一件事要问多少个是非题：可能性越均匀越难猜，熵就越大，单位是比特。",
+    "analogy": "心里想好一个东西，我只能回答是非题，你用最少的提问次数把它逼出来；可能越均匀，要问的次数越多，熵就越大。"
+   },
+   "chapters": [
+    {
+     "ch": 2,
+     "weight": "load",
+     "note": "泽用信息论熵讲热传导，一堂课踩住两种熵"
+    },
+    {
+     "ch": 12,
+     "weight": "load",
+     "note": "解释哈希核心为何是保熵置换，熵不能被悄悄吃掉"
+    },
+    {
+     "ch": 14,
+     "weight": "load",
+     "note": "新规则全用异或，这是熵不减少的依据"
+    },
+    {
+     "ch": 25,
+     "weight": "mid",
+     "note": "熵只存在于观察者眼中，收束可逆与不可逆"
+    },
+    {
+     "ch": 27,
+     "weight": "air",
+     "note": "熵被说成人类未来的可能性空间"
+    }
+   ]
+  },
+  {
+   "id": "xor-and-nim",
+   "no": 3,
+   "doc": "crypto/03-xor-and-nim.md",
+   "zh": "异或与 Nim 和",
+   "en": "XOR and Nim-Sum",
+   "aliases_zh": [
+    "异或"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "entropy"
+   ],
+   "card": {
+    "one_liner": "异或是逐位比较、相同记0不同记1的运算；把所有数异或起来的和，为0的局面是必败局。",
+    "analogy": "像一块每位一个开关的面板：按一下每位都翻，同一块面板按两次就回到原样；异或就是记下两块面板哪里不一样。"
+   },
+   "chapters": [
+    {
+     "ch": 12,
+     "weight": "mid",
+     "note": "哈希顶层删掉的那部分用异或记在末尾"
+    },
+    {
+     "ch": 14,
+     "weight": "load",
+     "note": "神龛千回合异或改棋盘，熵不减少的根据"
+    },
+    {
+     "ch": 25,
+     "weight": "load",
+     "note": "异或和为零必败，泽据此锁定胜局"
+    }
+   ]
+  },
+  {
+   "id": "zero-knowledge-proof",
+   "no": 4,
+   "doc": "crypto/04-zero-knowledge-proof.md",
+   "zh": "零知识证明",
+   "en": "Zero-Knowledge Proof",
+   "aliases_zh": [
+    "零知识证明",
+    "零知识"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "hash-function"
+   ],
+   "card": {
+    "one_liner": "零知识证明让你向验证者证明某个命题为真，却不泄漏任何关于支撑秘密的信息。",
+    "analogy": "像院里三条路通向密室的金币：验证者随机指一条，你必须三条都走得通；他走进密室拿到金币，才知道你没撒谎，而金币长什么样他事先不知道。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "load",
+     "note": "手表验出这是玩具无人机，别的什么也不知道"
+    },
+    {
+     "ch": 3,
+     "weight": "mid",
+     "note": "设备用零知识证明验厂商批次，无需登记册"
+    },
+    {
+     "ch": 5,
+     "weight": "mid",
+     "note": "信誉分可零知识抵押，换贷款或酒店入住"
+    },
+    {
+     "ch": 6,
+     "weight": "load",
+     "note": "销售税零知识支付，只有买卖双方知道"
+    }
+   ]
+  },
+  {
+   "id": "nullifier-and-zk-collateral",
+   "no": 5,
+   "doc": "crypto/05-nullifier-and-zk-collateral.md",
+   "zh": "作废符与零知识抵押",
+   "en": "Nullifier and Zero-Knowledge Collateral",
+   "aliases_zh": [
+    "作废符",
+    "零知识抵押"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "zero-knowledge-proof"
+   ],
+   "card": {
+    "one_liner": "作废符是公开、确定、一次性的一段哈希，用来回答这份资格是否已被用掉；抵押靠它烧掉一份信誉换钱。",
+    "analogy": "像夜场的纸手环：上面写本场有效和VIP区，不写名字；进场撕掉的一半被收走当公开存根，同一编号出现两次就说明有人在造假。"
+   },
+   "chapters": [
+    {
+     "ch": 5,
+     "weight": "mid",
+     "note": "信誉分可零知识抵押换贷款或酒店入住"
+    },
+    {
+     "ch": 6,
+     "weight": "load",
+     "note": "作废符与金额是仅有的公开信息，烧掉一份信誉"
+    }
+   ]
+  },
+  {
+   "id": "digital-signature",
+   "no": 6,
+   "doc": "crypto/06-digital-signature.md",
+   "zh": "数字签名与公钥基础设施",
+   "en": "Digital Signatures and PKI",
+   "aliases_zh": [
+    "签名"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "hash-function"
+   ],
+   "card": {
+    "one_liner": "数字签名用只有持有人能用的私钥盖章，人人都能用公开的公钥验证，绑定「是他签的」和「内容一字未改」。",
+    "analogy": "像火漆封印：漆还热着说明信没被拆换过，印只有你有所以伪造不了，事后也赖不掉；但火漆从不说信里写了什么。"
+   },
+   "chapters": [
+    {
+     "ch": 3,
+     "weight": "air",
+     "note": "验证通过只是必要条件，没认证的设备也在"
+    },
+    {
+     "ch": 6,
+     "weight": "mid",
+     "note": "六把密钥凑四把联署才能恢复钱包"
+    },
+    {
+     "ch": 9,
+     "weight": "load",
+     "note": "厂商签公钥发上网络，时间戳分辨失窃前后"
+    },
+    {
+     "ch": 15,
+     "weight": "mid",
+     "note": "只有用有效密钥签名的票才算数"
+    },
+    {
+     "ch": 16,
+     "weight": "load",
+     "note": "三把签好还差一个，与全程加密分工"
+    },
+    {
+     "ch": 30,
+     "weight": "air",
+     "note": "公钥当访问密钥用的老做法仍在"
+    }
+   ]
+  },
+  {
+   "id": "modular-arithmetic-and-rsa",
+   "no": 7,
+   "doc": "crypto/07-modular-arithmetic-and-rsa.md",
+   "zh": "模运算、大数分解与 RSA",
+   "en": "Modular Arithmetic, Factoring and RSA",
+   "aliases_zh": [
+    "大数分解",
+    "取模"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "hash-function"
+   ],
+   "card": {
+    "one_liner": "取模是把数轴折回长度n的圈；RSA的加密人人会算，只有知道那个大数分解的人才能反推。",
+    "analogy": "像钟表：三点加十一小时是十四点，看钟却只说两点。取模就是数钟面格子；折痕记在哪，就能展开回原来的数。"
+   },
+   "chapters": [
+    {
+     "ch": 9,
+     "weight": "load",
+     "note": "人物说错RSA直觉，下一段被当场纠正"
+    }
+   ]
+  },
+  {
+   "id": "elliptic-curves-and-pqc",
+   "no": 8,
+   "doc": "crypto/08-elliptic-curves-and-pqc.md",
+   "zh": "椭圆曲线与后量子签名",
+   "en": "Elliptic Curves and Post-Quantum Signatures",
+   "aliases_zh": [
+    "椭圆曲线",
+    "量子计算机",
+    "基于哈希的签名"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "modular-arithmetic-and-rsa"
+   ],
+   "card": {
+    "one_liner": "椭圆曲线密码学押注「曲线上倒推跳了几次很难」，密钥因此能短八倍；后量子签名改押哈希原像难倒推。",
+    "analogy": "像单向轨道上的数台阶：知道跳了几次就能算出站在哪一级，容易；只知道从0到了9，就算不出跳了几次。"
+   },
+   "chapters": [
+    {
+     "ch": 9,
+     "weight": "mid",
+     "note": "人物称椭圆曲线已过时，那是小说设定"
+    },
+    {
+     "ch": 10,
+     "weight": "mid",
+     "note": "人物点名基于哈希的签名与无状态树套树"
+    }
+   ]
+  },
+  {
+   "id": "mixnet",
+   "no": 9,
+   "doc": "crypto/09-mixnet.md",
+   "zh": "混网",
+   "en": "Mixnet",
+   "aliases_zh": [
+    "混网",
+    "掩护流量"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "混网把消息裹上多层加密逐层转发，每层随机选路、攒批、乱序发出，让观察者看不出入站与出站的配对。",
+    "analogy": "像寄匿名信却不信任快递：投进街角邮筒，小贩随机塞进三个新信封交给三个随机中间人，攒够一批再乱序寄出。"
+   },
+   "chapters": [
+    {
+     "ch": 9,
+     "weight": "load",
+     "note": "交易靠混网进网络，三层加密、三个随机节点"
+    },
+    {
+     "ch": 18,
+     "weight": "mid",
+     "note": "车厢互换落地：没人同时知道起点和终点"
+    }
+   ]
+  },
+  {
+   "id": "steganography",
+   "no": 10,
+   "doc": "crypto/10-steganography.md",
+   "zh": "隐写术",
+   "en": "Steganography",
+   "aliases_zh": [
+    "隐写术",
+    "隐写"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "entropy"
+   ],
+   "card": {
+    "one_liner": "隐写术把秘密消息嵌进一份看起来完全正常的数据，让偷看的人连「这里有东西」都不知道。",
+    "analogy": "像藏头诗：不知情的人看到的是一首诗，有密码本的人才看得出每行第一个字连成的一句话。"
+   },
+   "chapters": [
+    {
+     "ch": 15,
+     "weight": "load",
+     "note": "健康数据里嵌消息，德鲁因主张先换笨载体"
+    },
+    {
+     "ch": 19,
+     "weight": "load",
+     "note": "分块内套隐写编码，用电影当密码本"
+    },
+    {
+     "ch": 22,
+     "weight": "mid",
+     "note": "假装通话，旁边音频流听起来随机"
+    },
+    {
+     "ch": 29,
+     "weight": "mid",
+     "note": "翡翠沿同一条隐写信道回信"
+    }
+   ]
+  },
+  {
+   "id": "lm-steganographic-encoding",
+   "no": 11,
+   "doc": "crypto/11-lm-steganographic-encoding.md",
+   "zh": "语言模型隐写编码",
+   "en": "Language-Model Steganographic Encoding",
+   "aliases_zh": [
+    "分桶异或",
+    "伪随机排列"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "steganography",
+    "xor-and-nim"
+   ],
+   "card": {
+    "one_liner": "让语言模型给每一位打自然度分，只翻最不惹眼的位，把消息编码进数据里。",
+    "analogy": "像在几百万像素的画里藏话：画家朋友告诉你哪个像素不显眼，你把位切成一排排桶，每桶只翻最不显眼的那一个。"
+   },
+   "chapters": [
+    {
+     "ch": 15,
+     "weight": "load",
+     "note": "泽给出完整方案：模型打分、分桶异或、密钥定桶"
+    },
+    {
+     "ch": 19,
+     "weight": "mid",
+     "note": "在 10.7 GB 文件里，每块再套一层藏消息"
+    },
+    {
+     "ch": 22,
+     "weight": "mid",
+     "note": "音频版：把能藏的数据量做到最大"
+    }
+   ]
+  },
+  {
+   "id": "garbled-circuits",
+   "no": 12,
+   "doc": "crypto/12-garbled-circuits.md",
+   "zh": "混淆电路与两方计算",
+   "en": "Garbled Circuits & Two-Party Computation",
+   "aliases_zh": [
+    "混淆电路",
+    "两方混淆电路",
+    "混淆协议",
+    "两方计算"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "hash-function"
+   ],
+   "card": {
+    "one_liner": "把程序编译成一堆加密的真值表交给对方求值，双方都看不见对方输入，只公开结果。",
+    "analogy": "像雇人算账却不让他看账本：你备好一张每行都上锁的对照表，只给他该走那一行的钥匙，他只算得出一个数。"
+   },
+   "chapters": [
+    {
+     "ch": 3,
+     "weight": "air",
+     "note": "泽一句轻描淡写：简单到用不上它"
+    },
+    {
+     "ch": 9,
+     "weight": "load",
+     "note": "泽给出定义：把程序藏起来交给别人运行"
+    },
+    {
+     "ch": 15,
+     "weight": "mid",
+     "note": "只有它能在指定条件下解密出哪些票有效"
+    },
+    {
+     "ch": 27,
+     "weight": "mid",
+     "note": "泽点名要可验证版本，并说开销难看"
+    }
+   ]
+  },
+  {
+   "id": "verifiable-garbled-circuits",
+   "no": 13,
+   "doc": "crypto/13-verifiable-garbled-circuits.md",
+   "zh": "可验证混淆电路",
+   "en": "Verifiable Garbled Circuits",
+   "aliases_zh": [
+    "可验证混淆电路",
+    "可验证两方计算"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "garbled-circuits",
+    "zero-knowledge-proof"
+   ],
+   "card": {
+    "one_liner": "在两方计算上再加一层：让对方能独立确认结果没被偷改，且不泄露任何输入。",
+    "analogy": "餐馆账单写着烤鱼 88 元：要么第三方出证明账单没被动过，要么找另一家对账。"
+   },
+   "chapters": [
+    {
+     "ch": 27,
+     "weight": "mid",
+     "note": "用可验证两方计算问榜单机器人，泽点出开销难看"
+    }
+   ]
+  },
+  {
+   "id": "threshold-keys-and-social-recovery",
+   "no": 14,
+   "doc": "crypto/14-threshold-keys-and-social-recovery.md",
+   "zh": "门限密钥与社交恢复",
+   "en": "Threshold Keys & Social Recovery",
+   "aliases_zh": [
+    "社交恢复",
+    "盲化份额"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "digital-signature"
+   ],
+   "card": {
+    "one_liner": "把一把私钥拆成 n 份分散保管，任意 t 份能联署，少于 t 份永远还原不出。",
+    "analogy": "保险箱钥匙被切成六块不规则碎片，单独一块什么都不是，凑齐四块才自动拼回整把。"
+   },
+   "chapters": [
+    {
+     "ch": 6,
+     "weight": "mid",
+     "note": "格拉迪亚斯钱包 4-of-6，家人朋友各持一份"
+    },
+    {
+     "ch": 15,
+     "weight": "load",
+     "note": "投票密钥 5 取 3 登记，份额盲化且不可自证"
+    },
+    {
+     "ch": 16,
+     "weight": "mid",
+     "note": "钱包弹出社交恢复请求，签名进度还差一个"
+    }
+   ]
+  },
+  {
+   "id": "puf-and-attestation",
+   "no": 15,
+   "doc": "crypto/15-puf-and-attestation.md",
+   "zh": "物理不可克隆函数与硬件远程证明",
+   "en": "PUF & Remote Attestation",
+   "aliases_zh": [
+    "物理不可克隆函数",
+    "硬件认证"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "digital-signature"
+   ],
+   "card": {
+    "one_liner": "用芯片制造时的随机瑕疵长出一把复制不了的密钥，设备签名自证跑的正是这段代码。",
+    "analogy": "PUF 是一枚长出来而非印上去的指纹：猜不出、复制不了，但每次摸都是同一串纹路。"
+   },
+   "chapters": [
+    {
+     "ch": 5,
+     "weight": "air",
+     "note": "摄像头靠它确认跑的程序确实是声称的那个"
+    },
+    {
+     "ch": 9,
+     "weight": "load",
+     "note": "登的芯片验证四步：造钥匙、注册、应答、抽查"
+    },
+    {
+     "ch": 20,
+     "weight": "air",
+     "note": "设备方视角：密钥由化学瑕疵在芯片内生成"
+    },
+    {
+     "ch": 24,
+     "weight": "mid",
+     "note": "用途限制靠密码学强制执行，却被行政调整废掉"
+    }
+   ]
+  },
+  {
+   "id": "erasure-coding",
+   "no": 16,
+   "doc": "crypto/16-erasure-coding.md",
+   "zh": "纠删码",
+   "en": "Erasure Coding",
+   "aliases_zh": [
+    "纠删码",
+    "6选5"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "modular-arithmetic-and-rsa"
+   ],
+   "card": {
+    "one_liner": "把一份数据拆成 n 块加冗余，任意 k 块就能完整拼回，代价是体积变成 n/k 倍。",
+    "analogy": "像拼图加备件：你明知会弄丢几块，就多发几块备件，整块丢了也能从剩下的碎片算出来。"
+   },
+   "chapters": [
+    {
+     "ch": 19,
+     "weight": "mid",
+     "note": "6 选 5 纠删码：五块就能重建全部数据"
+    },
+    {
+     "ch": 22,
+     "weight": "mid",
+     "note": "通话背景音里是被纠删码包裹的加密数据"
+    }
+   ]
+  },
+  {
+   "id": "formal-verification",
+   "no": 17,
+   "doc": "crypto/17-formal-verification.md",
+   "zh": "形式化验证",
+   "en": "Formal Verification",
+   "aliases_zh": [
+    "形式化验证"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "把程序该做什么写成数学命题，用机器检查器证明它对所有输入都成立。",
+    "analogy": "要证明每层楼都有消防通道：测试是抽查 100 层，验证是先证明楼层规则，再证明规则推出每层都有。"
+   },
+   "chapters": [
+    {
+     "ch": 5,
+     "weight": "mid",
+     "note": "摄像头的硬件认证与随机红外扫描可被独立验证"
+    },
+    {
+     "ch": 10,
+     "weight": "mid",
+     "note": "编程语言与形式化验证一起做，挡住夺取控制权的错误"
+    },
+    {
+     "ch": 27,
+     "weight": "mid",
+     "note": "端到端证明把保证归约到哈希不被攻破这个前提"
+    },
+    {
+     "ch": 32,
+     "weight": "mid",
+     "note": "声称能传什么写死在硬件里，塞拉承认模型这层例外"
+    }
+   ]
+  },
+  {
+   "id": "cryptographic-sortition",
+   "no": 18,
+   "doc": "crypto/18-cryptographic-sortition.md",
+   "zh": "密码学抽签",
+   "en": "Cryptographic Sortition",
+   "aliases_zh": [
+    "密码学抽签",
+    "抽签"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "hash-function"
+   ],
+   "card": {
+    "one_liner": "用公开可验证的密码学随机数决定谁来做决定，保证没人能事先安排结果。",
+    "analogy": "打牌时洗牌：牌面强弱不决定谁拿到什么，抽签就是那个洗牌动作。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "mid",
+     "note": "连给一栋楼打美学税投票的居民都是抽签选的"
+    },
+    {
+     "ch": 4,
+     "weight": "mid",
+     "note": "祭司分组不用密码学随机，就少一种作弊"
+    },
+    {
+     "ch": 7,
+     "weight": "mid",
+     "note": "掌则人匿名随机抽出，彼此不知道对方是谁"
+    },
+    {
+     "ch": 8,
+     "weight": "air",
+     "note": "维里迪亚俗话：随机之神抽中我当宣谕使"
+    },
+    {
+     "ch": 17,
+     "weight": "mid",
+     "note": "密码学网络随机抽委员会分配图谱边的权重"
+    },
+    {
+     "ch": 21,
+     "weight": "mid",
+     "note": "司法要匿名、随机抽选、分两组半才防得住"
+    },
+    {
+     "ch": 23,
+     "weight": "load",
+     "note": "每条评则抽 21 人，13 票通过、缺席不卡死"
+    }
+   ]
+  },
+  {
+   "id": "anonymity-set-and-side-channel",
+   "no": 19,
+   "doc": "crypto/19-anonymity-set-and-side-channel.md",
+   "zh": "匿名集、不可关联与侧信道",
+   "en": "Anonymity Set, Unlinkability & Side Channels",
+   "aliases_zh": [
+    "匿名集",
+    "不可关联"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "mixnet"
+   ],
+   "card": {
+    "one_liner": "匿名集是观察者认为可能是谁发的候选名单；侧信道是从耗时、功耗这类行为里漏出的信息。",
+    "analogy": "像收到匿名信时心里那份候选名单；你藏数字时猜错会停顿，停顿长短就出卖你猜对几位。"
+   },
+   "chapters": [
+    {
+     "ch": 9,
+     "weight": "mid",
+     "note": "交易经三个随机抽选节点进网，把直接联系拆三段"
+    },
+    {
+     "ch": 13,
+     "weight": "mid",
+     "note": "莫夫自嘲只把匿名集缩小一半；靠墙震动偷听"
+    },
+    {
+     "ch": 18,
+     "weight": "mid",
+     "note": "混网送违禁品，没有一人同时知道起点和终点"
+    },
+    {
+     "ch": 19,
+     "weight": "mid",
+     "note": "在无信号房间干活，用化学方法毁掉设备电路"
+    },
+    {
+     "ch": 20,
+     "weight": "mid",
+     "note": "把无关疾病的数据推迟数天，让他们来不及用"
+    },
+    {
+     "ch": 22,
+     "weight": "mid",
+     "note": "训练数据不外流，芯片存储要毁到 10 厘米以内"
+    },
+    {
+     "ch": 32,
+     "weight": "air",
+     "note": "敲一次键就有几十种泄漏途径，只能少留痕迹"
+    }
+   ]
+  },
+  {
+   "id": "cryptographic-network",
+   "no": 20,
+   "doc": "crypto/20-cryptographic-network.md",
+   "zh": "密码学网络",
+   "en": "The Cryptographic Network",
+   "aliases_zh": [
+    "密码学网络"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "digital-signature",
+    "hash-function"
+   ],
+   "card": {
+    "one_liner": "一条公开可验证、全局一致、可编程的分布式账本，承载支付、信誉、治理和赏金。",
+    "analogy": "像广场上谁都能翻、只能往后写、每页都抄上上页摘要的公共账簿。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "mid",
+     "note": "任何人都能接入它，反收买市场就跑在这条网络上"
+    },
+    {
+     "ch": 3,
+     "weight": "air",
+     "note": "抽签、匿名讨论与投票共用同一条网络"
+    },
+    {
+     "ch": 6,
+     "weight": "mid",
+     "note": "交易飞进网络，两嘀嗒后确认"
+    },
+    {
+     "ch": 15,
+     "weight": "mid",
+     "note": "投票密钥的盲化份额分散登记在这条网络上"
+    },
+    {
+     "ch": 19,
+     "weight": "mid",
+     "note": "链上存储昂贵，几十 GB 走私品只能塞进纠删码"
+    },
+    {
+     "ch": 20,
+     "weight": "mid",
+     "note": "举报赏金：追踪到底的人可以拿一大笔赏金"
+    },
+    {
+     "ch": 21,
+     "weight": "air",
+     "note": "司法被刻意留在链外，不写进合约"
+    },
+    {
+     "ch": 23,
+     "weight": "air",
+     "note": "学术与预测信誉分记在链上，由抽签组审计"
+    },
+    {
+     "ch": 25,
+     "weight": "mid",
+     "note": "塞拉指出法律无法跑成程序，程序要确定可重复"
+    },
+    {
+     "ch": 27,
+     "weight": "load",
+     "note": "规则变更要先公布哈希，再等 20 天才生效"
+    }
+   ]
+  },
+  {
+   "id": "quadratic-funding",
+   "no": 21,
+   "doc": "web3/21-quadratic-funding.md",
+   "zh": "二次方资助",
+   "en": "Quadratic Funding",
+   "aliases_zh": [
+    "二次方资助"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "quadratic-formula-and-geometric-mean"
+   ],
+   "card": {
+    "one_liner": "把配捐池按项目获得的支持来分配：捐款先开根再相加然后整体平方，人多则补贴多。",
+    "analogy": "同样一百块，一百个人各出一块能换到的补贴，远多于一个人出一百块——广撒网的人占便宜。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "mid",
+     "note": "国家级配捐收益过半，他的评则做得好税率反被上调"
+    },
+    {
+     "ch": 3,
+     "weight": "load",
+     "note": "科研预算一半靠它，学者被迫做讨好大众的事好压税"
+    },
+    {
+     "ch": 6,
+     "weight": "mid",
+     "note": "情报把全部资助参与者列成值得看的信号"
+    },
+    {
+     "ch": 17,
+     "weight": "load",
+     "note": "北极人对它发动十倍规模攻击，这是配委员会的理由"
+    }
+   ]
+  },
+  {
+   "id": "quadratic-voting",
+   "no": 22,
+   "doc": "web3/22-quadratic-voting.md",
+   "zh": "二次方投票",
+   "en": "Quadratic Voting",
+   "aliases_zh": [
+    "二次方投票"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "一种投票规则：票值先归一化再按平方加总，让人能表达偏好强度而不只是同意或反对。",
+    "analogy": "一群无所谓的赞成票压不过一个真正在乎的反对票——因为投得越用力，票值越被放大。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "load",
+     "note": "给街区建筑打分：票值被归一化，他只推一点点"
+    },
+    {
+     "ch": 15,
+     "weight": "air",
+     "note": "评则表决沿用它的归一化票值计票"
+    }
+   ]
+  },
+  {
+   "id": "graph-funding-and-dag",
+   "no": 23,
+   "doc": "web3/23-graph-funding-and-dag.md",
+   "zh": "图谱资助与有向无环图",
+   "en": "Graph Funding & the Directed Acyclic Graph",
+   "aliases_zh": [
+    "图谱资助",
+    "有向无环图",
+    "子图"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "quadratic-funding"
+   ],
+   "card": {
+    "one_liner": "把公共资金排成一张有向无环图，每个节点由抽签产生的临时委员会决定它往下分的权重。",
+    "analogy": "像国家财政的科目、款、项：跨科目的东西照样能领钱，不必为它新造一个交叉的上级部门。"
+   },
+   "chapters": [
+    {
+     "ch": 16,
+     "weight": "mid",
+     "note": "被点名为真正重要的杠杆，调税率档比不了它"
+    },
+    {
+     "ch": 17,
+     "weight": "load",
+     "note": "理事摊开子图，讲每节点抽签委员会与无环结构"
+    },
+    {
+     "ch": 24,
+     "weight": "air",
+     "note": "被列为仍在抵抗渗透的三家机构之一"
+    }
+   ]
+  },
+  {
+   "id": "prediction-markets",
+   "no": 24,
+   "doc": "web3/24-prediction-markets.md",
+   "zh": "预测市场、套利与市场操纵",
+   "en": "Prediction Markets, Arbitrage & Manipulation",
+   "aliases_zh": [
+    "预测市场",
+    "银聊预测",
+    "套利",
+    "套利者"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "把还没发生的事做成可买卖的二元合约，合约价格就是一群人给出的概率估计。",
+    "analogy": "结冰的湖面：判断冰够不够厚别问专家，看昨天有几个人走过去；没人走过就测不出厚度。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "mid",
+     "note": "押保证金猜成员任务，猜中者分走一半薪水"
+    },
+    {
+     "ch": 27,
+     "weight": "load",
+     "note": "银聊预测给出两成到五成概率，当场被质疑可被操纵"
+    }
+   ]
+  },
+  {
+   "id": "sybil-and-collusion",
+   "no": 25,
+   "doc": "web3/25-sybil-and-collusion.md",
+   "zh": "女巫攻击与勾结",
+   "en": "Sybil Attack & Collusion",
+   "aliases_zh": [],
+   "mark": "none",
+   "tier": 2,
+   "prereq": [
+    "quadratic-funding",
+    "quadratic-voting"
+   ],
+   "card": {
+    "one_liner": "同一类漏洞：一个人可以扮演很多个身份，或者很多人事先串通，把一人一份放大成多份。",
+    "analogy": "班选班长只要能一次发一百张纸条就能定结果；买票时拉上朋友分摊，价钱立刻砍半。"
+   },
+   "chapters": [
+    {
+     "ch": 11,
+     "weight": "load",
+     "note": "下载程序领奖，捐十枚拿回二十枚，抽干开放平台资金"
+    },
+    {
+     "ch": 15,
+     "weight": "mid",
+     "note": "改用跟密钥分配组三人碰面登记来验身份"
+    },
+    {
+     "ch": 17,
+     "weight": "mid",
+     "note": "同类攻击放大十倍，改用抽签委员会与静默期应对"
+    },
+    {
+     "ch": 27,
+     "weight": "mid",
+     "note": "攻击面从伪造身份转到市场操纵与私有信息"
+    }
+   ]
+  },
+  {
+   "id": "common-knowledge",
+   "no": 26,
+   "doc": "web3/26-common-knowledge.md",
+   "zh": "共同知识",
+   "en": "Common Knowledge",
+   "aliases_zh": [
+    "共同知识"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "所有人知道某件事，而且所有人都知道所有人知道，如此无限往上套，才叫共同知识。",
+    "analogy": "你答应给他对答案，又给他留一份：他不必信你，因为他能证明你做过。钥匙是可验证的记录。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "mid",
+     "note": "公民被抽签选中给建筑投票，表态不可挑选对象"
+    },
+    {
+     "ch": 5,
+     "weight": "air",
+     "note": "有军备竞赛的对话，但书里没用这个概念解释"
+    },
+    {
+     "ch": 8,
+     "weight": "mid",
+     "note": "宣谕使由抽签产生，全国可见才成共同知识"
+    },
+    {
+     "ch": 16,
+     "weight": "mid",
+     "note": "民本棋把三种得分改成相乘，用改规则跳出单盯一项"
+    },
+    {
+     "ch": 24,
+     "weight": "mid",
+     "note": "仍能抵抗的三家机构，决策过程本身就是公开面"
+    },
+    {
+     "ch": 27,
+     "weight": "load",
+     "note": "花钱让民调全国可见，砍预算又怕暴露意图"
+    },
+    {
+     "ch": 32,
+     "weight": "mid",
+     "note": "弱者要隐私强者要透明：把公开面当侦察渠道用"
+    }
+   ]
+  },
+  {
+   "id": "binomial-distribution",
+   "no": 27,
+   "doc": "math/27-binomial-distribution.md",
+   "zh": "二项式分布",
+   "en": "Binomial Distribution",
+   "aliases_zh": [
+    "二项式公式",
+    "二项式"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "n 件互相独立的事各以固定概率成功，恰好 k 件成功的概率是多少。",
+    "analogy": "六个人各抛一次硬币，正好三正三反只有二十种站法，而六十四种结果原本等可能。"
+   },
+   "chapters": [
+    {
+     "ch": 1,
+     "weight": "load",
+     "note": "手推另外六人恰好平分的三成概率，据此赌一把"
+    }
+   ]
+  },
+  {
+   "id": "bayesian-updating",
+   "no": 28,
+   "doc": "math/28-bayesian-updating.md",
+   "zh": "贝叶斯更新与几率比",
+   "en": "Bayesian Updating and Odds Ratios",
+   "aliases_zh": [
+    "概率更新公式",
+    "几率比",
+    "证据优势"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "用新证据修正旧信念的规则：把支持与反对的比值乘上这条证据的似然比。",
+    "analogy": "别问这件事有多可能，要问支持与反对的比分——比分是乘法，可以一条条往上连乘。"
+   },
+   "chapters": [
+    {
+     "ch": 21,
+     "weight": "load",
+     "note": "六条证据逐条加减乘除，算出哪种动机证据优势最大"
+    }
+   ]
+  },
+  {
+   "id": "expectation-and-conflict",
+   "no": 29,
+   "doc": "math/29-expectation-and-conflict.md",
+   "zh": "期望值与利益冲突",
+   "en": "Expectation and Conflict of Interest",
+   "aliases_zh": [],
+   "mark": "none",
+   "tier": 2,
+   "prereq": [
+    "binomial-distribution"
+   ],
+   "card": {
+    "one_liner": "期望是随机取值的加权平均；用平均意义上该有几个，去检验一群人有没有代表性。",
+    "analogy": "骰子的平均值是三点五，可你永远掷不出三点五——平均值不是最可能的那个结果。"
+   },
+   "chapters": [
+    {
+     "ch": 26,
+     "weight": "load",
+     "note": "按该有三名亲属的期望，反过来质疑对方不回避"
+    }
+   ]
+  },
+  {
+   "id": "eigenvectors",
+   "no": 30,
+   "doc": "math/30-eigenvectors.md",
+   "zh": "特征向量",
+   "en": "Eigenvectors",
+   "aliases_zh": [
+    "特征向量"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "quadratic-formula-and-geometric-mean"
+   ],
+   "card": {
+    "one_liner": "在线性变换下方向不变、只被拉伸或压缩的那些向量。",
+    "analogy": "有些方向天生自我放大：往那个方向推一点，它自己长回来；往别的方向推，会衰减回去。"
+   },
+   "chapters": [
+    {
+     "ch": 8,
+     "weight": "load",
+     "note": "埃菲里昂用它包装社会战略：只推会复利的方向"
+    },
+    {
+     "ch": 27,
+     "weight": "load",
+     "note": "熵被永久压缩：未来可能的世界只剩一种"
+    }
+   ]
+  },
+  {
+   "id": "prisoners-dilemma",
+   "no": 31,
+   "doc": "math/31-prisoners-dilemma.md",
+   "zh": "囚徒困境与重复博弈",
+   "en": "Prisoner's Dilemma and Repeated Games",
+   "aliases_zh": [
+    "囚徒困境"
+   ],
+   "mark": "first",
+   "tier": 1,
+   "prereq": [],
+   "card": {
+    "one_liner": "两人各有一条路、理性选择合起来却是最差结果的博弈模型。",
+    "analogy": "两人都想活得最久：不管对方选什么，先认罪都不吃亏，两人理性地认罪反而判得更久。"
+   },
+   "chapters": [
+    {
+     "ch": 5,
+     "weight": "mid",
+     "note": "全国赛期间谁都不敢歇，囚徒困境式互相提防"
+    },
+    {
+     "ch": 18,
+     "weight": "load",
+     "note": "协调分：共同体现为从不良均衡跳进更好均衡"
+    },
+    {
+     "ch": 32,
+     "weight": "load",
+     "note": "泽：重复足够多，合作能被抬到更高层次"
+    }
+   ]
+  },
+  {
+   "id": "zero-positive-negative-sum",
+   "no": 32,
+   "doc": "math/32-zero-positive-negative-sum.md",
+   "zh": "零和、正和与负和",
+   "en": "Zero, Positive and Negative Sum",
+   "aliases_zh": [
+    "零和博弈",
+    "负和博弈",
+    "正和"
+   ],
+   "mark": "first",
+   "tier": 1,
+   "prereq": [
+    "prisoners-dilemma"
+   ],
+   "card": {
+    "one_liner": "按总收益是否守恒给博弈分类：零和守恒、正和可增、负和可变少。",
+    "analogy": "一个湖十条鱼：每人只捕五条，明年还能捕；每人拼命捕，今年多捕五条，明年没得捕。"
+   },
+   "chapters": [
+    {
+     "ch": 10,
+     "weight": "load",
+     "note": "退出资助战争：双方武器更好却炸掉更多"
+    },
+    {
+     "ch": 13,
+     "weight": "mid",
+     "note": "北极威胁是一场零和但不对称的对局"
+    },
+    {
+     "ch": 18,
+     "weight": "load",
+     "note": "协调分：在零和与正和之间选择后者"
+    },
+    {
+     "ch": 20,
+     "weight": "mid",
+     "note": "开源硬件评则：军事是零和，不给税收优惠"
+    }
+   ]
+  },
+  {
+   "id": "price-of-anarchy",
+   "no": 33,
+   "doc": "math/33-price-of-anarchy.md",
+   "zh": "无政府代价",
+   "en": "Price of Anarchy",
+   "aliases_zh": [
+    "无政府代价",
+    "拥堵费"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "prisoners-dilemma"
+   ],
+   "card": {
+    "one_liner": "各自理性最优的总成本，除以统一规划的最优总成本的比值。",
+    "analogy": "堵车时你仍会选对自己最快那条路，哪怕全社会的总时间因此更糟。"
+   },
+   "chapters": [
+    {
+     "ch": 4,
+     "weight": "load",
+     "note": "双人赛不合导致白白损失：泽转向共同目标"
+    },
+    {
+     "ch": 22,
+     "weight": "mid",
+     "note": "出租车计价按外部性收通行费"
+    }
+   ]
+  },
+  {
+   "id": "equilibrium-drift",
+   "no": 34,
+   "doc": "math/34-equilibrium-drift.md",
+   "zh": "均衡漂移与乘法制衡",
+   "en": "Equilibrium Drift and Multiplicative Scoring",
+   "aliases_zh": [
+    "计分规则"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "加法计分逼人只押一项，规则被套利就改，改完再漂移的循环。",
+    "analogy": "绩效考核按项目加分，于是大家全去刷最容易得分那个。"
+   },
+   "chapters": [
+    {
+     "ch": 3,
+     "weight": "mid",
+     "note": "加法计分逼研究者讨好权重高的指标"
+    },
+    {
+     "ch": 16,
+     "weight": "load",
+     "note": "调比例也跳不出只盯一项，改乘法才让打法均衡"
+    },
+    {
+     "ch": 28,
+     "weight": "load",
+     "note": "相乘让三项都得分：外推为人生也须留休息"
+    }
+   ]
+  },
+  {
+   "id": "quadratic-formula-and-geometric-mean",
+   "no": 35,
+   "doc": "math/35-quadratic-formula-and-geometric-mean.md",
+   "zh": "二次方程求根公式与几何平均",
+   "en": "Quadratic Formula and Geometric Mean",
+   "aliases_zh": [
+    "二次方程求根公式",
+    "几何平均"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [],
+   "card": {
+    "one_liner": "求根公式解二次方程；几何平均是乘积的 n 次方根，短板项决定结果。",
+    "analogy": "两门都要及格才算通过：一门满分另一门零分，总分还是零。"
+   },
+   "chapters": [
+    {
+     "ch": 4,
+     "weight": "mid",
+     "note": "求根公式被当作语言里脱离口语的形式部分"
+    },
+    {
+     "ch": 5,
+     "weight": "mid",
+     "note": "两城席位按人口与 GDP 的几何平均分配"
+    },
+    {
+     "ch": 12,
+     "weight": "load",
+     "note": "资格赛两项取几何平均，使提前认输毫无好处"
+    }
+   ]
+  },
+  {
+   "id": "trees-and-tries",
+   "no": 36,
+   "doc": "math/36-trees-and-tries.md",
+   "zh": "树与前缀树",
+   "en": "Trees and Tries",
+   "aliases_zh": [
+    "前缀树",
+    "有界深度树"
+   ],
+   "mark": "first",
+   "tier": 2,
+   "prereq": [
+    "hash-function"
+   ],
+   "card": {
+    "one_liner": "树是任意两节点间只有一条路径的层次结构；前缀树按字符逐层共享公共开头。",
+    "analogy": "树像文件夹层层嵌套；前缀树像自动补全，共享同一批开头字母。"
+   },
+   "chapters": [
+    {
+     "ch": 6,
+     "weight": "air",
+     "note": "学生抱怨连考两天：树与前缀树只是被点名"
+    }
+   ]
+  },
+  {
+   "id": "gradient-descent",
+   "no": 37,
+   "doc": "computing/37-gradient-descent.md",
+   "zh": "梯度下降",
+   "en": "Gradient Descent",
+   "aliases_zh": [
+    "梯度下降"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [],
+   "card": {
+    "one_liner": "只看当前点的局部斜率，反复朝下降最快方向走一步的优化方法。",
+    "analogy": "浓雾里下坡：手里只有高度计，四周各戳一棍，看哪根变暖就往哪走。"
+   },
+   "chapters": [
+    {
+     "ch": 29,
+     "weight": "load",
+     "note": "用梯度下降优化图案，把漏检概率抬到最高"
+    },
+    {
+     "ch": 30,
+     "weight": "mid",
+     "note": "北极端子权重，正因怕对手拿它跑梯度下降"
+    }
+   ]
+  },
+  {
+   "id": "adversarial-patch",
+   "no": 38,
+   "doc": "computing/38-adversarial-patch.md",
+   "zh": "对抗补丁",
+   "en": "Adversarial Patch",
+   "aliases_zh": [
+    "对抗攻击"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "gradient-descent"
+   ],
+   "card": {
+    "one_liner": "印一张显眼图案贴在物体上，让模型把注意力全给它而漏掉真目标。",
+    "analogy": "在照片正中贴一张亮黄贴纸，模型先看贴纸，就看不见它背后是什么。"
+   },
+   "chapters": [
+    {
+     "ch": 22,
+     "weight": "mid",
+     "note": "早期设想：把无人机伪装成敌机甚至动物"
+    },
+    {
+     "ch": 29,
+     "weight": "load",
+     "note": "对模拟器求导，找出最能抬高漏检的图案改动"
+    },
+    {
+     "ch": 30,
+     "weight": "load",
+     "note": "贴满印着狗的纸，把侦测时间反复翻倍"
+    },
+    {
+     "ch": 32,
+     "weight": "air",
+     "note": "分布式免疫系统，不指望单点模型可靠"
+    }
+   ]
+  },
+  {
+   "id": "black-box-query-attack",
+   "no": 39,
+   "doc": "computing/39-black-box-query-attack.md",
+   "zh": "黑盒查询攻击与爬山法",
+   "en": "Zeroth-Order / Extremum Seeking",
+   "aliases_zh": [
+    "标量信号",
+    "正交方向"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "gradient-descent"
+   ],
+   "card": {
+    "one_liner": "只有输入输出、拿不到内部结构时，靠反复试探和取平均找出最优参数。",
+    "analogy": "只有指南针没有地图：同时往四面各推一点，看哪边被推得更高。"
+   },
+   "chapters": [
+    {
+     "ch": 30,
+     "weight": "load",
+     "note": "把二值发现换成侦测时间，爬山累积信号"
+    }
+   ]
+  },
+  {
+   "id": "language-models",
+   "no": 40,
+   "doc": "computing/40-language-models.md",
+   "zh": "语言模型与条件概率",
+   "en": "Language Models",
+   "aliases_zh": [
+    "语言模型"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "entropy"
+   ],
+   "card": {
+    "one_liner": "看着前文猜下一个词的概率模型，也是书里隐写挑安全位的依据。",
+    "analogy": "极博学的完形填空出题人：给一句上文，列出每个候选词的概率。"
+   },
+   "chapters": [
+    {
+     "ch": 15,
+     "weight": "load",
+     "note": "用条件概率挑最接近五成的位翻转藏数据"
+    },
+    {
+     "ch": 19,
+     "weight": "mid",
+     "note": "从文件里恢复出的模型是混淆过的二级混淆"
+    },
+    {
+     "ch": 20,
+     "weight": "mid",
+     "note": "摄像头里判断暴力行为，只在触发时上报"
+    },
+    {
+     "ch": 27,
+     "weight": "mid",
+     "note": "治理细分用模型推断出的性格维度"
+    }
+   ]
+  },
+  {
+   "id": "obfuscation-finetuning-linearity",
+   "no": 41,
+   "doc": "computing/41-obfuscation-finetuning-linearity.md",
+   "zh": "混淆、微调与线性结构",
+   "en": "Obfuscation, Fine-tuning, Linearity",
+   "aliases_zh": [
+    "微调"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [
+    "language-models"
+   ],
+   "card": {
+    "one_liner": "微调改任务、混淆挡偷看、线性结构解释为何参数即知识，三者打包。",
+    "analogy": "机器拆成几百个零件编号打乱装箱：能跑，但不知里面是什么。"
+   },
+   "chapters": [
+    {
+     "ch": 12,
+     "weight": "mid",
+     "note": "对手没腾出手微调，泽碰上的是原装 AI"
+    },
+    {
+     "ch": 19,
+     "weight": "load",
+     "note": "从文件里恢复出二级混淆、只干一件事的模型"
+    },
+    {
+     "ch": 27,
+     "weight": "mid",
+     "note": "大模型内部几乎全是线性的，非线性只占千分之一"
+    },
+    {
+     "ch": 30,
+     "weight": "mid",
+     "note": "保护权重的理由：权重才是知识与能力所在"
+    }
+   ]
+  },
+  {
+   "id": "sandbox-and-rollback",
+   "no": 42,
+   "doc": "computing/42-sandbox-and-rollback.md",
+   "zh": "沙盒与状态回滚",
+   "en": "Sandbox and Rollback",
+   "aliases_zh": [
+    "沙盒",
+    "回滚"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [],
+   "card": {
+    "one_liner": "沙盒、日志式文件系统与回滚配套，让你在不可信的东西上敢试错。",
+    "analogy": "沙盒是围栏，日志是记账小本子，回滚是游戏存档点。"
+   },
+   "chapters": [
+    {
+     "ch": 19,
+     "weight": "load",
+     "note": "程序关沙盒断网套日志，不满意就回滚重来"
+    }
+   ]
+  },
+  {
+   "id": "sim-to-real-gap",
+   "no": 43,
+   "doc": "computing/43-sim-to-real-gap.md",
+   "zh": "模拟器到现实的差距",
+   "en": "Sim-to-Real Gap",
+   "aliases_zh": [
+    "模拟器",
+    "世界模型"
+   ],
+   "mark": "first",
+   "tier": 3,
+   "prereq": [],
+   "card": {
+    "one_liner": "在模拟器里优化出的策略与真实世界目标之间的落差。",
+    "analogy": "你在某款游戏练熟枪法，换一款物理引擎不同的，开局就被打得很惨。"
+   },
+   "chapters": [
+    {
+     "ch": 29,
+     "weight": "load",
+     "note": "反复换参数模拟器，筛出各处都稳健的改动"
+    },
+    {
+     "ch": 30,
+     "weight": "load",
+     "note": "夜间仿真复刻战斗，接口一断战果退回原样"
+    }
+   ]
+  }
+ ]
+}

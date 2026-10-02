@@ -24,6 +24,7 @@ ZH_DIR = ROOT / "translations" / "zh"
 FIG_MANIFEST = ROOT / "sources" / "work" / "figures" / "manifest.json"
 BOOK = ROOT / "book"
 BOOK_CH = BOOK / "chapters"
+LINE_INDEX = ROOT / "pipeline" / "line_index.json"
 
 TAG_RE = re.compile(r"<(/?)([a-z]+)((?:\s[^>]*)?)(/?)>")
 PLACEHOLDER_RE = re.compile(r"\{\{S:([^}]+)\}\}")
@@ -187,6 +188,33 @@ def clean_ws(s: str) -> str:
     return s.strip()
 
 
+def resolve_line_index(text: str, probes: list[tuple[str, str]], ch: int) -> dict[str, tuple[int, int]]:
+    """把每个块的「首行探针」定位到最终文本的行号，得到 {片段 id: (起行, 止行)}。
+
+    [为什么不往正文里插标记]  `docs/explainer/` 里 497 处 `chapter-NN.md:行号`
+    引用是按**当前**行号写死的，而本函数末尾的 `clean_ws()` 会折叠空行并 strip。
+    只要在 parts 里插一行标记，其后所有块的行号全部前移，497 条引用同时错位——
+    而且错位后每一行仍然「存在且非空」，逐条核对也查不出来。
+    所以这里只做只读定位：产物字节一个都不动。
+    """
+    out: dict[str, tuple[int, int]] = {}
+    cursor = 0
+    starts: list[int] = []
+    for seg, probe in probes:
+        pos = text.find(probe, cursor)
+        if pos < 0:
+            raise SystemExit(
+                f"chapter-{ch:02d}: 段落探针在产物里定位不到 {probe[:40]!r}；"
+                f"行号索引会失准，docs/explainer 的 497 处引用将全部错位")
+        starts.append(text.count("\n", 0, pos) + 1)
+        cursor = pos + len(probe)
+    # 块 i 拥有 [starts[i], starts[i+1]-1]；最后一块一直拥有到文末
+    bounds = starts + [text.count("\n") + 2]
+    for i, (seg, _probe) in enumerate(probes):
+        out[seg] = (starts[i], bounds[i + 1])
+    return out
+
+
 def discover_chapters() -> list[int]:
     """全部可能有译文的章号（骨架 ∪ 译文）。
 
@@ -201,7 +229,8 @@ def discover_chapters() -> list[int]:
     return sorted(found)
 
 
-def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/") -> str | None:
+def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/",
+                  line_index: dict[str, tuple[int, int]] | None = None) -> str | None:
     cf = CHAP_DIR / f"chapter-{ch:02d}.json"
     if not cf.exists():
         return None
@@ -222,39 +251,56 @@ def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/")
     man = json.loads(FIG_MANIFEST.read_text(encoding="utf-8"))
     captions: dict[str, str] = {k: v.get("caption", "") for k, v in man.items()}
     parts: list[str] = []
+    probes: list[tuple[str, str]] = []
+
+    def emit(text: str, seg_ids: list[str]) -> None:
+        """追加一块产物；行号索引模式下顺带记下它的首行探针与归属片段。
+
+        产物字符串与改造前**逐字节一致**——探针只用于事后只读定位，不写回正文。
+        """
+        parts.append(text)
+        if line_index is None or not seg_ids:
+            return
+        first = next((ln for ln in text.split("\n") if ln.strip()), "")
+        if first:
+            probes.append((seg_ids[0], first))
+
     for blk in data["blocks"]:
         kind = blk.get("kind")
+        blk_ids = block_ids(blk)
         if kind == "title":
-            parts.append(f"# 第{cn_num(ch)}章\n")
+            emit(f"# 第{cn_num(ch)}章\n", [])
         elif kind in ("dateline-open", "scene-break"):
-            vals = [segs[i] for i in block_ids(blk) if segs.get(i)]
+            vals = [segs[i] for i in blk_ids if segs.get(i)]
             line = " · ".join(vals)
             cls = "dateline" if kind == "dateline-open" else "scene-break"
             if kind == "scene-break":
-                parts.append("---\n")
-            parts.append(f'<p class="{cls}">{mini_to_md(line, escape=False)}</p>\n')
+                emit("---\n", [])
+            emit(f'<p class="{cls}">{mini_to_md(line, escape=False)}</p>\n', blk_ids)
         elif kind == "rule":
-            parts.append("---\n")
+            emit("---\n", [])
         elif kind == "figure":
-            figs = blk.get("figures", [])
-            for f in figs:
+            for f in blk.get("figures", []):
                 name = f[:-4]
                 cap = captions.get(name, "")
                 alt = (cap or f"插图 {name}").replace("]", "］").replace("\n", " ")
-                parts.append(f"![{alt}]({img_prefix}{f})\n")
+                emit(f"![{alt}]({img_prefix}{f})\n", [])
             if blk.get("skeleton"):
-                parts.append(expand(blk["skeleton"], segs, escape=False) + "\n")
+                emit(expand(blk["skeleton"], segs, escape=False) + "\n", blk_ids)
         elif kind in ("p",):
             rendered = expand(blk.get("skeleton", ""), segs, escape=True)
             inner = re.sub(r"^<p>|</p>$", "", rendered)
-            parts.append(inner + "\n")
+            emit(inner + "\n", blk_ids)
         else:
             # panel / center / list / quote 等：骨架本身就是原始 HTML
-            parts.append(expand(blk.get("skeleton", ""), segs, escape=False) + "\n")
+            emit(expand(blk.get("skeleton", ""), segs, escape=False) + "\n", blk_ids)
     # 章末译注：正文里的 <span class="tnote"> 只有 title 兜底，
     # 这里补一份可读的完整注脚，纯文本/不支持悬停的阅读器也能拿到内容。
-    parts.append(tnote_block(_TNOTES))
-    return clean_ws("\n".join(parts))
+    emit(tnote_block(_TNOTES), [])
+    text = clean_ws("\n".join(parts))
+    if line_index is not None:
+        line_index.update(resolve_line_index(text, probes, ch))
+    return text
 
 
 def load_segs(ch: int) -> dict[str, str]:
@@ -320,12 +366,33 @@ def main() -> None:
         _TNOTES.update(load_tnotes(ch))
         book += "\n\n---\n\n" + build_chapter(ch, load_segs(ch), "images/") + "\n"
 
+    # ---- 行号索引：{章: {片段 id: (起行, 止行)}} ----
+    # docs/explainer 的 497 处 `chapter-NN.md:行号` 引用要靠它换算成站点锚点。
+    # 走**全部可用章**而不是 todo：定向重建只给某几章时，索引不能变成残缺的
+    # ——残缺的索引会让 build_site 生成指向不存在段落的链接，而构建照样成功。
+    line_index: dict[int, dict[str, tuple[int, int]]] = {}
+    for ch in available:
+        _TNOTES.clear()
+        _TNOTES.update(load_tnotes(ch))
+        per: dict[str, tuple[int, int]] = {}
+        build_chapter(ch, load_segs(ch), "../images/", line_index=per)
+        line_index[ch] = per
+
     # ---- 落盘阶段：到这里所有校验都已经过了 ----
     BOOK_CH.mkdir(parents=True, exist_ok=True)
     for ch, md in pages:
         (BOOK_CH / f"chapter-{ch:02d}.md").write_text(md, encoding="utf-8")
     (BOOK / "snowmoon-zh.md").write_text(book, encoding="utf-8")
-    print(f"组装完成：逐章 {len(pages)} 个文件 + 全书 {len(available)} 章 → book/")
+    LINE_INDEX.write_text(json.dumps(
+        {"_comment": "行号索引，由 build_markdown.py 生成：{章: {片段 id: [起行, 止行]}}。"
+                     "docs/explainer 的 `chapter-NN.md:行号` 引用靠它换算成站点锚点，"
+                     "请勿手改。",
+         "chapters": {str(ch): {seg: [a, b] for seg, (a, b) in per.items()}
+                      for ch, per in sorted(line_index.items())}},
+        ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"组装完成：逐章 {len(pages)} 个文件 + 全书 {len(available)} 章 → book/"
+          f"；行号索引 {sum(len(p) for p in line_index.values())} 条 → "
+          f"{LINE_INDEX.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

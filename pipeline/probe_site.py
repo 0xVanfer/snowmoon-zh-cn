@@ -235,7 +235,47 @@ window.addEventListener('load', function(){
         return e ? getComputedStyle(e).overscrollBehaviorY : null;
       })(),
       // ---- 滚轮接管（由动作脚本写入）----
-      wheel: window.__wheel || null
+      wheel: window.__wheel || null,
+      // ---- 术语卡片 ----
+      term: (function () {
+        var t = document.querySelector('#pane-zh .term');
+        var open = document.querySelector('.term-card:not([hidden])');
+        var store = document.querySelector('.term-store');
+        return {
+          triggers: document.querySelectorAll('#pane-zh .term').length,
+          cards: document.querySelectorAll('.term-card').length,
+          storeDisplay: store ? getComputedStyle(store).display : null,
+          firstWord: t ? t.textContent : null,
+          openId: open ? open.id : null,
+          openBox: open ? box('#' + open.id) : null,
+          openHidden: open ? open.hidden : null,
+          rows: open ? open.querySelectorAll('p, a').length : 0,
+          moreHref: open ? (function () {
+            var a = open.querySelector('.term-card__more');
+            return a ? a.getAttribute('href') : null;
+          })() : null
+        };
+      })(),
+      // ---- 深链落点：fragment 到位且没被进度记忆覆盖 ----
+      deepLink: (function () {
+        var id = (window.location.hash || '').replace('#', '');
+        var el = id ? document.getElementById(id) : null;
+        return {
+          hash: window.location.hash || null,
+          found: !!el,
+          flash: el ? el.classList.contains('is-deeplink') : null,
+          top: el ? Math.round(el.getBoundingClientRect().top) : null,
+          inViewport: el ? (function () {
+            var r = el.getBoundingClientRect();
+            return r.bottom > 0 && r.top < window.innerHeight;
+          })() : null
+        };
+      })(),
+      // ---- 「一句一行」不能把可点的术语切成两半 ----
+      gapInsideTerm: (function () {
+        var on = document.documentElement.getAttribute('data-paragraph') === 'webnovel';
+        return on ? document.querySelectorAll('.term .sentence-gap').length : -1;
+      })()
     };
     var pre=document.createElement('pre'); pre.id='probe-json';
     pre.textContent=JSON.stringify(out); document.body.appendChild(pre);
@@ -301,7 +341,7 @@ window.addEventListener('message', function (event) {
 
 def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
           frame: tuple[int, int] | None = None, wait_for: str = "true",
-          grow: int | None = None) -> dict:
+          grow: int | None = None, fragment: str = "") -> dict:
     raw = page.read_text(encoding="utf-8")
     script = (PROBE.replace("<script>", '<script id="probe-script">', 1)
               .replace("__ACTION__", action).replace("__ACTION_WAIT__", str(wait))
@@ -318,7 +358,7 @@ def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
             site_root = site_root.parent
         rel = page.relative_to(site_root).as_posix()
         target = site_root / "_probe_frame.html"
-        html = FRAME_PROBE_HTML % (fw, fh, rel)
+        html = FRAME_PROBE_HTML % (fw, fh, rel + fragment)
         if grow:
             # 「先窄后宽」：把手机框里的 iframe 拉宽，逼页面走一次 标签页 → 分栏 的判定
             html = html.replace("</body>", (
@@ -332,7 +372,7 @@ def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
         cmd = [CHROME, *chrome_flags(),
                f"--user-data-dir={prof}/p", *window_args(w, h),
                f"--virtual-time-budget={9000}",
-               "--dump-dom", f"file://{target}"]
+               "--dump-dom", f"file://{target}{fragment}"]
         with dom_p.open("wb") as fh:
             proc = subprocess.Popen(cmd, stdout=fh, stderr=subprocess.DEVNULL, start_new_session=True)
             deadline = time.time() + 45
@@ -551,6 +591,49 @@ def check(pid: str, d: dict) -> list[str]:
         need(d["dual"] == "columns",
              f"窗口由窄变宽后没有恢复分栏（旧实现会卡在标签页样式）：dual={d['dual']}")
         need(vis_zh and vis_en, f"恢复分栏后两栏都应可见（zh={vis_zh}, en={vis_en}）")
+    # ---- 术语卡片 ----
+    if pid.startswith("read-term-"):
+        t = d.get("term") or {}
+        need(t.get("triggers", 0) > 0, f"中文栏没有术语触发点：{t}")
+        need(t.get("cards", 0) > 0, f"没有术语卡片：{t}")
+        # display:contents 是硬约定：容器一旦有了 display:none / hidden，
+        # 卡片自己的 hidden=false 也救不回来（display:none 会连后代一起隐藏）。
+        need(t.get("storeDisplay") == "contents",
+             f".term-store 必须是 display:contents，实际 {t.get('storeDisplay')!r}")
+    if pid in ("read-term-card", "read-term-webnovel"):
+        t = d.get("term") or {}
+        need(t.get("openId"), f"点开术语后没有卡片显示：{t}")
+        box = t.get("openBox") or {}
+        need(box.get("w", 0) > 40 and box.get("h", 0) > 20,
+             f"卡片尺寸异常（可能继承了 display:none）：{box}")
+        need(box.get("w", 0) <= 1440 and box.get("x", 0) >= 0
+             and box.get("x", 0) + box.get("w", 0) <= 1440,
+             f"卡片横向溢出视口：{box}")
+        need(box.get("y", 0) >= 0 and box.get("y", 0) + box.get("h", 0) <= 900,
+             f"卡片纵向溢出视口或压住底栏：{box}")
+        # 气泡只讲最基础概念：不得出现前后文关系（章号列表 / 权重 / 说明 / 后续用途）
+        need((t.get("rows") or 0) <= 5,
+             f"气泡里段落/链接过多，说明混进了前后文关系：{t.get('rows')} 块")
+        href = t.get("moreHref") or ""
+        need(href.startswith("https://github.com/0xVanfer/snowmoon-zh-cn/blob/main/docs/explainer/"),
+             f"「读完整教程」不是生产地址：{href!r}")
+    if pid == "read-term-narrow":
+        t = d.get("term") or {}
+        need(t.get("openId"), f"窄屏点开术语后没有卡片：{t}")
+        box = t.get("openBox") or {}
+        need(box.get("w", 0) > 40, f"窄屏卡片宽度异常：{box}")
+        need(box.get("x", 0) >= -1 and box.get("x", 0) + box.get("w", 0) <= 391,
+             f"窄屏卡片横向溢出：{box}")
+    if pid == "read-term-deeplink":
+        dl = d.get("deepLink") or {}
+        need(dl.get("found"), f"深链锚点在产物里找不到：{dl}")
+        need(dl.get("inViewport"),
+             f"带 #锚点进入后没有落到目标段落（多半被进度记忆覆盖了）：{dl}")
+        need(dl.get("flash"), f"落点没有高亮提示：{dl}")
+    if pid == "read-term-webnovel":
+        # 断句标记落进 .term 内部会把可点的术语切成两半
+        need(d.get("gapInsideTerm") == 0,
+             f"「一句一行」把 .sentence-gap 插进了术语内部：{d.get('gapInsideTerm')} 处")
     if pid == "read-wide-dual":
         h = d["heading"] or {}
         f = d["flowZh"] or {}
@@ -593,11 +676,15 @@ def main() -> None:
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
         for pid, (rel, w, h, preset, _wait) in todo.items():
+            # 预设文件名可带 #锚点（深链预设用），拆出来拼进 file:// URL
+            rel, _, frag = rel.partition("#")
+            fragment = ("#" + frag) if frag else ""
             # 探针自己会执行动作（与测量同一轮），这里不要再注入动作脚本，否则动作会执行两次
             page = stage(tmp, rel, preset)
             try:
                 d = probe(page, w, h, ACTIONS.get(pid, ""), ACTIONS_WAIT.get(pid, 500),
-                          FRAMED.get(pid), WAIT_FOR.get(pid, "true"), FRAME_GROW.get(pid))
+                          FRAMED.get(pid), WAIT_FOR.get(pid, "true"), FRAME_GROW.get(pid),
+                          fragment)
             except Exception as e:  # noqa: BLE001
                 print(f"FAIL {pid}: {e}")
                 failed += 1
@@ -616,7 +703,8 @@ def main() -> None:
                 page2 = stage(tmp, rel, preset)
                 try:
                     d2 = probe(page2, w, h, ACTIONS.get(pid, ""), ACTIONS_WAIT.get(pid, 500),
-                               FRAMED.get(pid), WAIT_FOR.get(pid, "true"), FRAME_GROW.get(pid))
+                               FRAMED.get(pid), WAIT_FOR.get(pid, "true"), FRAME_GROW.get(pid),
+                               fragment)
                     bad2 = check(pid, d2)
                 except Exception:  # noqa: BLE001
                     bad2 = bad

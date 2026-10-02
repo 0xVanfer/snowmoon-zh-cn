@@ -445,7 +445,14 @@
     expected[lang] = y;
     m.box.scrollTop = y;
   }
+  /* [深链] 术语卡片的章号 chip 指向 `chapter-NN.html#cNN-sNNNN`。
+     浏览器自带的 fragment 滚动会被进度记忆覆盖——restoreVisible() 一跑就把
+     localStorage 里的旧位置写回去，读者点「第 6 章」结果落回上次读的地方。
+     所以带锚点进来时整段跳过进度恢复，改成滚到锚点并闪一下。 */
+  var deepLink = null;
+
   function restoreVisible() {
+    if (deepLink) return;
     if (mode() !== 'scroll') return;
     var targets = (language() === 'dual' && layout === 'columns') ? langs : [currentLang()];
     var anchor = null;
@@ -455,6 +462,24 @@
       else if (anchor !== null) writePosition(lang, anchor);   // 新露出的栏对齐到已知位置
     });
   }
+  function applyDeepLink() {
+    var m = /^#(c\d\d-s\d+)$/.exec(window.location.hash || '');
+    if (!m) return;
+    deepLink = m[1];
+    var target = document.getElementById(deepLink);
+    if (!target) return;
+    // 术语与讲解都在中文栏。若当前显示的是英文或对照的英文标签页，
+    // 目标段落是 display:none，scrollIntoView 不会产生任何位移。
+    if (!visible('zh')) patch({ lang: 'zh' });
+    var go = function () {
+      target.scrollIntoView({ block: 'center' });
+      target.classList.add('is-deeplink');
+      window.setTimeout(function () { target.classList.remove('is-deeplink'); }, 1600);
+    };
+    // 等一次排版：语言模式刚切过，正文栏的位置还没定。
+    requestAnimationFrame(function () { requestAnimationFrame(go); });
+  }
+
   function updateTabs() {
     if (!tabs) return;
     var shown = language() === 'dual' && layout === 'tabs';
@@ -754,6 +779,9 @@
     var texts = [], node;
     while ((node = walker.nextNode())) texts.push(node);
     texts.forEach(function (text) {
+      // 术语标注把段落切成了多个文本节点。词本身是完整的概念名、不含句末标点，
+      // 但仍要跳过 .term 内部：真在词里插一个 .sentence-gap 会把可点的词切成两半。
+      if (text.parentElement && text.parentElement.closest('.term')) return;
       var value = text.nodeValue;
       if (!/[。！？…!?]/.test(value)) return;
       var frag = document.createDocumentFragment(), last = 0, match;
@@ -1274,6 +1302,7 @@
       if (document.visibilityState === 'hidden') persist();
     });
     enhanceTranslatorNotes(main);
+    applyDeepLink();
     scheduleLayout();
   }
 
@@ -1282,15 +1311,36 @@
      气泡内容集中挂在章尾的 .tnote-store 里，id 为 tn-<片段id>。
      悬停 / 聚焦开，点按切换（触屏与键盘走这条），Esc 与点外部关闭。
      翻页模式下正文被裁切，气泡因此挂在 body 上用 fixed 定位。 */
+  /* [术语卡片] 译者注气泡与术语卡片是同一套浮层机制，共用下面这份 show/hide/
+     place/reposition。两者只在三处不同：触发点选择器、卡片 id 前缀、以及卡片里
+     含有链接（要允许指针从词移动到卡片上，以及点卡片内部不误判为「点外部」）。
+     合成一个系统而不是各写一份，是为了让 Esc、焦点、滚动重定位这些行为只有一处实现。 */
   function enhanceTranslatorNotes(main) {
     if (!main) return;
-    var triggers = Array.prototype.slice.call(main.querySelectorAll('.tnote[note]'));
+    var triggers = Array.prototype.slice.call(main.querySelectorAll('.tnote[note]'))
+      .concat(Array.prototype.slice.call(main.querySelectorAll('.term[data-term]')));
     if (!triggers.length) return;
     var bubbles = {};
     Array.prototype.forEach.call(document.querySelectorAll('.tnote-bubble'), function (node) {
       bubbles[node.id] = node;
     });
+    var cards = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.term-card'), function (node) {
+      cards[node.id] = node;
+    });
     var open = null, closeTimer = 0, sticky = null;
+
+    // 触发点 → 它对应的浮层。注走 tn-<片段id>，术语走 tc-<概念 id>。
+    function bubbleOf(trigger) {
+      if (!trigger) return null;
+      if (trigger.classList && trigger.classList.contains('term')) {
+        return cards['tc-' + trigger.getAttribute('data-term')] || null;
+      }
+      return bubbles['tn-' + trigger.getAttribute('note')] || null;
+    }
+    function isCard(node) {
+      return !!(node && node.classList && node.classList.contains('term'));
+    }
 
     // 可用竖直区间。[移动端] 不能拿 window.innerHeight 当边界：
     //  * 顶栏 #topbar 与底栏 #bottombar 都是 position: fixed，气泡若压上去会
@@ -1317,11 +1367,12 @@
       return { top: top, bottom: bottom };
     }
 
-    function place(trigger, bubble) {
+    function place(trigger, bubble, minWidth) {
       var r = trigger.getBoundingClientRect();
       // 先显示再量，否则拿不到尺寸
       bubble.hidden = false;
       bubble.style.maxHeight = '';
+      bubble.style.minWidth = minWidth ? minWidth + 'px' : '';
       var box = bubble.getBoundingClientRect();
       var area = safeArea();
       var gap = 8, edge = 10;
@@ -1357,18 +1408,19 @@
     }
 
     function show(trigger) {
-      var bubble = bubbles['tn-' + trigger.getAttribute('note')];
+      var bubble = bubbleOf(trigger);
       if (!bubble) return;
       if (open && open !== trigger) hide();
       window.clearTimeout(closeTimer);
       open = trigger;
       trigger.setAttribute('aria-expanded', 'true');
-      place(trigger, bubble);
+      // 术语卡比注宽得多，给一个下限宽度；窄屏由 place 的夹取逻辑收进视口。
+      place(trigger, bubble, isCard(trigger) ? 260 : 0);
     }
 
     function hide() {
       if (!open) return;
-      var bubble = bubbles['tn-' + open.getAttribute('note')];
+      var bubble = bubbleOf(open);
       open.setAttribute('aria-expanded', 'false');
       if (bubble) bubble.hidden = true;
       open = null;
@@ -1384,7 +1436,7 @@
       cancelAnimationFrame(repositionFrame);
       repositionFrame = requestAnimationFrame(function () {
         if (!open) return;
-        var bubble = bubbles['tn-' + open.getAttribute('note')];
+        var bubble = bubbleOf(open);
         if (!bubble) return;
         var r = open.getBoundingClientRect();
         var area = safeArea();
@@ -1393,12 +1445,12 @@
           hide();
           return;
         }
-        place(open, bubble);
+        place(open, bubble, isCard(open) ? 260 : 0);
       });
     }
 
     triggers.forEach(function (trigger) {
-      var bubble = bubbles['tn-' + trigger.getAttribute('note')];
+      var bubble = bubbleOf(trigger);
       if (!bubble) return;   // 注内容缺失：保持虚线样式但不弹空泡
       trigger.addEventListener('mouseenter', function () { show(trigger); });
       trigger.addEventListener('mouseleave', function () {
@@ -1421,12 +1473,31 @@
           if (open === trigger) hide(); else show(trigger);
         }
       });
+      // 术语卡里有链接，读者要把指针从词移到卡上点章号。
+      // 词上 mouseleave 起了 160ms 关闭定时器，卡上的 mouseenter 把它取消掉。
+      bubble.addEventListener('mouseenter', function () {
+        window.clearTimeout(closeTimer);
+      });
+      bubble.addEventListener('mouseleave', function () {
+        closeTimer = window.setTimeout(hide, 160);
+      });
+      // 点在卡片内部（选文字、准备点链接）不该被当成「点外部」而收起
+      bubble.addEventListener('click', function (event) { event.stopPropagation(); });
     });
 
-    document.addEventListener('click', hide);
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') hide();
+    document.addEventListener('click', function (event) {
+      var bubble = bubbleOf(open);
+      if (bubble && event.target && bubble.contains(event.target)) return;
+      hide();
     });
+    // 捕获阶段处理 Esc：全局那个 Esc 处理器（关面板 / 显隐菜单）注册在更早，
+    // 冒泡阶段会先跑；不抢在前面的话，卡片开着时按 Esc 关掉的是菜单而不是卡片。
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape' || !open) return;
+      event.preventDefault();
+      event.stopPropagation();
+      hide();
+    }, true);
     window.addEventListener('scroll', reposition, true);
     window.addEventListener('resize', reposition);
     window.addEventListener('orientationchange', reposition);

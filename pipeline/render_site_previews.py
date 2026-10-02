@@ -149,6 +149,20 @@ PRESETS: dict[str, tuple] = {
     # 先窄后宽（手机框 390 → 拉宽到 1600）：验证能从标签页恢复分栏
     "read-dual-recover": ("read/chapter-01.html", 390, 844,
                           {"settings": {"theme": "paper", "lang": "dual"}}, 400),
+    # ---- 术语卡片 ----
+    # 正文点词 → 简要介绍卡：卡片必须真的显示出来、落在视口内、带章号与教程链接。
+    "read-term-card": ("read/chapter-03.html", 1440, 900,
+                       {"settings": {"theme": "paper", "lang": "zh"}}, 400),
+    # 手机框：卡片不能溢出屏幕，也不能盖住底栏
+    "read-term-narrow": ("read/chapter-03.html", 390, 844,
+                         {"settings": {"theme": "paper", "lang": "zh"}}, 400),
+    # 深链：章号 chip 指向 chapter-01.html#c01-s0078，验证落点进视口
+    "read-term-deeplink": ("read/chapter-01.html#c01-s0078", 1440, 900,
+                           {"settings": {"theme": "paper", "lang": "zh"}}, 500),
+    # 「一句一行」+ 术语：断句标记不得落进可点的词内部
+    "read-term-webnovel": ("read/chapter-03.html", 1440, 900,
+                           {"settings": {"theme": "paper", "lang": "zh",
+                                         "paragraph": "webnovel"}}, 400),
 }
 
 
@@ -158,6 +172,7 @@ PRESETS: dict[str, tuple] = {
 FRAMED = {
     "home-narrow": (390, 844),
     "toc-narrow": (390, 844),
+    "read-term-narrow": (390, 844),
     "read-narrow-zh": (390, 844),
     "read-narrow-dual": (390, 844),
     "read-narrow-tab-en": (390, 844),
@@ -247,6 +262,15 @@ ACTIONS = {
         "window.__wheel.deepPaneDelta=pane.scrollTop;"
         "window.__wheel.headingTop=Math.round("
         "document.querySelector('.chapter-heading').getBoundingClientRect().top);"),
+    # ---- 术语卡片 ----
+    # 悬停会先开卡，但触屏没有 mouseenter，所以用点按（click 路径）打开。
+    "read-term-card": ("var t=document.querySelector('#pane-zh .term');"
+                       "if(t)t.click();"),
+    "read-term-narrow": ("var t=document.querySelector('#pane-zh .term');"
+                         "if(t)t.click();"),
+    "read-term-deeplink": "window.scrollTo(0, 2400);",   # 制造一个「进度记忆」位置
+    "read-term-webnovel": ("var t=document.querySelector('#pane-zh .term');"
+                           "if(t)t.click();"),
 }
 
 ACTION_SCRIPT = ('<script id="preset-action">window.addEventListener("load",function(){'

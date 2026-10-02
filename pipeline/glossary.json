@@ -1,5 +1,5 @@
 {
- "_comment": "Snowmoon 中译术语表（唯一事实源）。docs/glossary.md 由 pipeline/render_glossary.py 生成，请勿手改文档。",
+ "_comment": "Snowmoon 中译术语表（唯一事实源）。docs/glossary.md 由 pipeline/merge_terms.py 生成，请勿手改文档。",
  "version": 1,
  "policies": [
   "西方（维里迪亚／北极／联合城邦）人名、地名按新华社译名习惯音译；英文中语义透明的复合词（Freetown、Northshore 等）意译。",
