@@ -1391,3 +1391,60 @@ html:not([data-js]) #reader-main .dz-card { max-height: none; }
   .device-view thead { background: none; color: black; }
   .device-view th, .device-view td { border-color: currentColor; }
 }
+
+/* 40 · 译者注气泡
+   被注词带虚线下标（不抢正文视线）；悬停 / 聚焦 / 点按后弹一个贴近该词的浮层。
+   气泡挂在 body 上用 position:fixed —— 翻页模式下正文被裁切也不受影响。 */
+.tnote {
+  border-bottom: 1px dashed var(--accent);
+  cursor: help;
+  border-radius: 2px;
+}
+.tnote:hover,
+.tnote:focus-visible {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  outline: none;
+}
+.tnote[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border-bottom-style: solid;
+}
+
+.tnote-store[hidden] { display: none; }
+
+.tnote-bubble {
+  position: fixed;
+  z-index: 60;
+  max-width: min(30rem, calc(100vw - 2 * var(--space-4)));
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 0.82em;
+  line-height: 1.7;
+  text-align: left;
+}
+.tnote-bubble[hidden] { display: none; }
+.tnote-label {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0 0.4em;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+  vertical-align: 0.05em;
+}
+/* 打印：气泡不该把正文顶开，就在原地展开 */
+@media print {
+  .tnote { border-bottom: none; }
+  .tnote-bubble {
+    position: static;
+    margin: var(--space-2) 0;
+    box-shadow: none;
+  }
+}

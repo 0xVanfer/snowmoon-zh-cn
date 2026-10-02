@@ -12,6 +12,7 @@
 from __future__ import annotations
 
 import json
+import html
 import math
 import re
 import sys
@@ -26,7 +27,32 @@ BOOK_CH = BOOK / "chapters"
 
 TAG_RE = re.compile(r"<(/?)([a-z]+)((?:\s[^>]*)?)(/?)>")
 PLACEHOLDER_RE = re.compile(r"\{\{S:([^}]+)\}\}")
-KNOWN_TAGS = {"br", "c", "f", "b", "i", "e", "code", "a", "sup", "sub", "u", "small", "mark"}
+KNOWN_TAGS = {"br", "c", "f", "b", "i", "e", "code", "a", "sup", "sub", "u", "small", "mark", "tn"}
+
+# 当前章的译者注 {片段id: 注内容}，由 load_tnotes() 在渲染每章前就地替换。
+# mini_to_md 是模块级函数，注内容只能经这里传给 <tn> 的 title 兜底。
+_TNOTES: dict[str, str] = {}
+
+
+def load_tnotes(ch: int) -> dict[str, str]:
+    """读一章的 translator_notes，做成 {id: note}。
+
+    缺 `note` 或 id 不是字符串的条目直接报错：注是要给读者看的，
+    悄悄丢掉一条比构建失败更难发现。
+    """
+    p = ZH_DIR / f"chapter-{ch:02d}.zh.json"
+    if not p.exists():
+        return {}
+    raw = json.loads(p.read_text(encoding="utf-8")).get("translator_notes") or []
+    out: dict[str, str] = {}
+    for item in raw:
+        if not isinstance(item, dict) or not isinstance(item.get("id"), str) \
+                or not isinstance(item.get("note"), str):
+            raise SystemExit(
+                f"chapter-{ch:02d}.zh.json: translator_notes 条目必须是 "
+                f'{{"id": str, "note": str}}，收到 {item!r}')
+        out[item["id"]] = item["note"]
+    return out
 
 
 def cn_num(n: int) -> str:
@@ -117,8 +143,27 @@ def mini_to_md(text: str, escape: bool = True) -> str:
                 out.append("[")
         elif name in ("sup", "sub", "u", "small", "mark"):
             out.append(f"<{name}>" if not closing else f"</{name}>")
+        elif name == "tn":
+            # [译者注] Markdown 产物没有 JS 气泡，改用 title 兜底：多数 Markdown
+            # 阅读器（GitHub、VS Code、Typora）都会把 title 显示成悬停提示。
+            # 章末再补一份完整注脚，保证纯文本读者也读得到。
+            if closing:
+                out.append("</span>")
+            else:
+                nm = re.search(r'note="([^"]*)"', attrs)
+                note = _TNOTES.get(nm.group(1), "") if nm else ""
+                tip = html.escape(f"译注：{note}", quote=True) if note else "译注"
+                out.append(f'<span class="tnote" title="{tip}">')
     out.append(text_out(text[pos:]))
     return "".join(out)
+
+
+def tnote_block(notes: dict[str, str]) -> str:
+    """章末译注块。气泡只在站点里有，纯 Markdown 读者靠这一段。"""
+    if not notes:
+        return ""
+    rows = "\n".join(f"> **译注（{nid}）**　{text}" for nid, text in notes.items())
+    return f"\n### 译注\n\n{rows}\n"
 
 
 def expand(skeleton: str, segs: dict[str, str], escape: bool = True) -> str:
@@ -200,12 +245,15 @@ def build_chapter(ch: int, segs: dict[str, str], img_prefix: str = "../images/")
             if blk.get("skeleton"):
                 parts.append(expand(blk["skeleton"], segs, escape=False) + "\n")
         elif kind in ("p",):
-            html = expand(blk.get("skeleton", ""), segs, escape=True)
-            inner = re.sub(r"^<p>|</p>$", "", html)
+            rendered = expand(blk.get("skeleton", ""), segs, escape=True)
+            inner = re.sub(r"^<p>|</p>$", "", rendered)
             parts.append(inner + "\n")
         else:
             # panel / center / list / quote 等：骨架本身就是原始 HTML
             parts.append(expand(blk.get("skeleton", ""), segs, escape=False) + "\n")
+    # 章末译注：正文里的 <span class="tnote"> 只有 title 兜底，
+    # 这里补一份可读的完整注脚，纯文本/不支持悬停的阅读器也能拿到内容。
+    parts.append(tnote_block(_TNOTES))
     return clean_ws("\n".join(parts))
 
 
@@ -244,6 +292,8 @@ def main() -> None:
         if not segs:
             print(f"skip ch{ch:02d}（无译文）")
             continue
+        _TNOTES.clear()
+        _TNOTES.update(load_tnotes(ch))
         md = build_chapter(ch, segs, "../images/")
         if md is None:
             print(f"skip ch{ch:02d}（无骨架）")
@@ -266,6 +316,8 @@ def main() -> None:
     toc = [f"- [第{cn_num(ch)}章](chapters/chapter-{ch:02d}.md)" for ch in available]
     book = FRONT + "\n".join(toc) + "\n\n"
     for ch in available:
+        _TNOTES.clear()
+        _TNOTES.update(load_tnotes(ch))
         book += "\n\n---\n\n" + build_chapter(ch, load_segs(ch), "images/") + "\n"
 
     # ---- 落盘阶段：到这里所有校验都已经过了 ----

@@ -360,7 +360,7 @@
 | energy drink | 能量饮料 | term | 指挥所机器人送来的饮品 |
 | entropy | 熵 | term | 信息论概念；entropy-preserving → 保熵 |
 | environmental sensor | 环境传感器 | term | 分布在公共场所、涉及数据留存争议的传感设备 |
-| erasure code | 纠删码 | term | five-of-six erasure code → 六分之五的纠删码 |
+| erasure code | 纠删码 | term | five-of-six erasure code → 6选5纠删码 |
 | eternal glider factory | 永恒滑翔机工厂 | term | 可利用神龛反复重置而永不停止的滑翔机工厂 |
 | Executive summary | 摘要 | term |  |
 | exploit | 漏洞利用 | term | 针对无人机等系统的攻击性漏洞利用程序；昆高培交给莱克托对付受损北极无人机 |

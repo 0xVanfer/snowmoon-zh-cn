@@ -28,10 +28,13 @@ ZH = ROOT / "translations" / "zh"
 TAG_RE = re.compile(r"<(/?)([A-Za-z]+)([^>]*?)(/?)>")
 # 整段就是一个 URL：属数据，不属待译文本
 URL_ONLY_RE = re.compile(r"(?:https?://|www\.)[^\s<>]+")
-ALLOWED = {"c", "b", "i", "e", "sup", "sub", "code", "a", "br", "f", "u", "small", "mark"}
+ALLOWED = {"c", "b", "i", "e", "sup", "sub", "code", "a", "br", "f", "u", "small", "mark", "tn"}
 # [用户请求] 中文不用斜体：这些标记在中文译文里一律作废；<e> 允许被 <b> 顶替
 ITALIC = {"e", "i"}
 EMPHASIS = {"e", "i", "b", "em", "strong"}
+# 译文层独有、英文原文没有对应物的标签：译注标记 <tn note="片段id">。
+# 中英标签序列比对时要剔除（见 tag_seq）。
+TRANSLATOR_ONLY = {"tn"}
 # 允许保留的英文 token（界面/技术缩写），以及非泽国语但同样原样保留的短词
 ALLOW_LATIN_WORDS = {"ai", "api", "gui", "llm", "url", "id", "pm", "tei", "tau", "gph", "du", "vnu",
                      "shi", "gei", "xor", "kag", "ziu", "uvc", "fa", "le", "bi", "ze", "ha", "co",
@@ -80,6 +83,11 @@ def tag_seq(s: str, drop_emphasis: bool = False) -> list[str]:
         closing, name, attrs, selfclose = m.groups()
         name = name.lower()
         if drop_emphasis and name in EMPHASIS:
+            continue
+        # <tn> 是**译文层**的标记：英文原文里没有对应物，中英对照时也不出现。
+        # 比对标签序列时必须与 EMPHASIS 一样剔除，否则每加一条译注就报一次
+        # 「标签序列不一致」——那是伪报，不是漏检。
+        if name in TRANSLATOR_ONLY:
             continue
         out.append(f"{'/' if closing else ''}{name}{attrs.strip()}{'/' if selfclose else ''}")
     return out
@@ -156,12 +164,23 @@ def check(chapter: int) -> list[str]:
             if tz != s["text"]:
                 errs.append(f"{sid}: locked 片段被改动（虚构语言必须原样保留）")
             continue
-        # [P0-6] 译者注不得随成品上线。译者备注写在译文 JSON 的 translator_notes 里，
-        # 不进正文 —— 正文里出现「译者注」是直接面向读者的编辑口吻。
+        # [P0-6] 译注要**带标记**进正文，供读者就地看到（<tn note="id">被注词</tn>
+        # → 站点气泡 / Markdown title + 章末注脚），所以这里不再一刀切禁止。
+        # 拦的是另一半：把「译者注」「编者按」这类编辑口吻**裸露**在正文里，
+        # 既没有标记、又不在 translator_notes 登记 —— 那种注读者看不见来源，
+        # 还会随正文一起被检索、被引用，是真正需要挡住的情况。
         for marker in ("译者注", "译注", "編者按", "编者按", "译者按"):
-            if marker in tz:
-                errs.append(f"{sid}: 正文里出现译者注「{marker}」（应记入 translator_notes，"
-                            f"不随成品上线）")
+            if marker in strip_tags(tz):
+                ids = sorted(re.findall(r'<tn\s[^>]*note="([^"]+)"', tz))
+                if ids:
+                    errs.append(
+                        f"{sid}: 正文裸露「{marker}」{ids}。译注的正文措辞只应是"
+                        f"译文本身，编辑口吻记在 translator_notes 里，"
+                        f"由 <tn> 标记引用")
+                else:
+                    errs.append(
+                        f"{sid}: 正文里出现裸露的「{marker}」（应改用 "
+                        f'<tn note="片段id">…</tn> 标记，并在 translator_notes 登记）')
                 break
         st, zt = tag_seq(s["text"], True), tag_seq(tz, True)
         if st != zt:

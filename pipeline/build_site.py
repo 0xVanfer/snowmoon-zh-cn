@@ -32,7 +32,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from render_html import PLACEHOLDER_RE, expand, mini_to_html  # noqa: E402
+from render_html import PLACEHOLDER_RE, expand, mini_to_html, tnote_bubbles  # noqa: E402
 from build_markdown import CHAP_DIR, FIG_MANIFEST, ZH_DIR, cn_num  # noqa: E402
 
 SRC_DIR = Path(__file__).resolve().parent / "site"   #视觉模型设计的前端源文件
@@ -61,6 +61,25 @@ def segs_of(p: Path, required: bool = True) -> dict[str, str]:
             raise SystemExit(f"缺少必需文件 {p.relative_to(ROOT)}")
         return {}
     return {s["id"]: s["text"] for s in load_json(p)["segments"]}
+
+
+def tnotes_of(p: Path) -> dict[str, str]:
+    """读一章的译者注 {片段id: 注内容}，供气泡池使用。
+
+    缺 `note` 或 id 不是字符串直接报错：注是要给读者看的，
+    静默丢掉一条比构建失败更难发现（与 build_markdown.load_tnotes 同判据）。
+    """
+    if not p.exists():
+        return {}
+    out: dict[str, str] = {}
+    for item in load_json(p).get("translator_notes") or []:
+        if not isinstance(item, dict) or not isinstance(item.get("id"), str) \
+                or not isinstance(item.get("note"), str):
+            raise SystemExit(
+                f"{p.relative_to(ROOT)}: translator_notes 条目必须是 "
+                f'{{"id": str, "note": str}}，收到 {item!r}')
+        out[item["id"]] = item["note"]
+    return out
 
 
 def build_date() -> str:
@@ -311,6 +330,8 @@ def build() -> None:
             print(f"skip ch{ch:02d}（无译文）")
             continue
         zh_segs = segs_of(ZH_DIR / f"chapter-{ch:02d}.zh.json")
+        # [译者注] 气泡池只挂中栏：注是译者写给中文读者的，英文栏保持原书纯净。
+        zh_tnotes = tnotes_of(ZH_DIR / f"chapter-{ch:02d}.zh.json")
         en_segs = segs_of(SEG_DIR / f"chapter-{ch:02d}.src.json", required=False)
         check_sync(ch, zh_segs, en_segs)
         values = dict(
@@ -330,7 +351,7 @@ def build() -> None:
             CHAPTER_DATELINE_ZH=html.escape(datelines[ch], quote=True),
             CHAPTER_DATELINE_EN=html.escape(datelines_en[ch], quote=True),
             CONTENT_ZH=render_blocks(ch, zh_segs, captions, "../assets/", zh=True,
-                                     figdir="images"),
+                                     figdir="images") + tnote_bubbles(zh_tnotes),
             CONTENT_EN=render_blocks(ch, en_segs, captions, "../assets/", zh=False,
                                      figdir="images-en", figalt=english_alt),
         )

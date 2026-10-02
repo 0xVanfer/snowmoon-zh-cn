@@ -16,6 +16,7 @@ mini-markup 见 docs/style-guide.md：`<c st>` 上色、`<f>` 虚构语言字体
 """
 from __future__ import annotations
 
+import html
 import re
 import sys
 from pathlib import Path
@@ -27,7 +28,31 @@ TAG_RE = re.compile(r"<(/?)([a-z]+)((?:\s[^>]*)?)(/?)>")
 PLACEHOLDER_RE = re.compile(r"\{\{S:([^}]+)\}\}")
 # 游离的 &（不是合法实体的一部分）才需要转义
 BARE_AMP_RE = re.compile(r"&(?!(?:[A-Za-z][A-Za-z0-9]{1,31}|#\d{1,7}|#[xX][0-9A-Fa-f]{1,6});)")
-KNOWN_TAGS = {"br", "c", "f", "b", "i", "e", "code", "a", "sup", "sub", "u", "small", "mark"}
+# <tn note="cNN-sNNNN">…</tn>：被译者注解释的词。译文专用，英文栏不出现。
+KNOWN_TAGS = {"br", "c", "f", "b", "i", "e", "code", "a", "sup", "sub", "u", "small", "mark", "tn"}
+# <a> 之外唯一带 href/note 之类的标签，其属性值需转义
+ATTR_VALUE_RE = re.compile(r'(note|href)="([^"]*)"')
+
+# 译注气泡的容器类名（build_site 与 style/reader 共用同一约定）
+TNOTE_CLASS = "tnote"
+TNOTE_STORE_CLASS = "tnote-store"
+
+
+def tnote_bubbles(notes: dict[str, str]) -> str:
+    """把一章的译者注渲染成章尾的隐藏气泡池。
+
+    气泡不放在正文流里：正文只留触发点，注的内容集中挂一次，
+    既避免同一段里多个注互相挤位，也方便日后批量增删注。
+    """
+    if not notes:
+        return ""
+    rows = "".join(
+        f'<div class="{TNOTE_CLASS}-bubble" id="tn-{html.escape(nid, quote=True)}">'
+        f'<span class="{TNOTE_CLASS}-label">译注</span>'
+        f'<span class="{TNOTE_CLASS}-body">{html.escape(text)}</span></div>'
+        for nid, text in notes.items()
+    )
+    return f'<div class="{TNOTE_STORE_CLASS}" hidden>{rows}</div>'
 
 
 def esc_visible(s: str) -> str:
@@ -77,6 +102,17 @@ def mini_to_html(text: str, zh: bool = False) -> str:
                 out.append(f'<a href="{url}">')
         elif name in ("sup", "sub", "u", "small", "mark"):
             out.append(f"</{name}>" if closing else f"<{name}>")
+        elif name == "tn":
+            # [译者注] 只在中文栏出现。气泡本体由 build_site 统一挂在章尾，
+            # 这里只给出触发点；tabindex + aria 让键盘和读屏也能用。
+            if closing:
+                out.append("</span>")
+            else:
+                nm = re.search(r'note="([^"]*)"', attrs)
+                note = html.escape(nm.group(1), quote=True) if nm else ""
+                out.append(
+                    f'<span class="tnote" tabindex="0" role="button" note="{note}"'
+                    f' aria-expanded="false">')
     out.append(esc_visible(text[pos:]))
     return "".join(out)
 

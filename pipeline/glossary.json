@@ -2160,7 +2160,7 @@
    "en": "erasure code",
    "zh": "纠删码",
    "kind": "term",
-   "note": "five-of-six erasure code → 六分之五的纠删码",
+   "note": "five-of-six erasure code → 6选5纠删码",
    "from": "chapter-19.zh"
   },
   {

@@ -1273,7 +1273,124 @@
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState === 'hidden') persist();
     });
+    enhanceTranslatorNotes(main);
     scheduleLayout();
+  }
+
+  /* 译者注气泡。
+     正文里是 <span class="tnote" note="cNN-sNNNN">被注词</span>，
+     气泡内容集中挂在章尾的 .tnote-store 里，id 为 tn-<片段id>。
+     悬停 / 聚焦开，点按切换（触屏与键盘走这条），Esc 与点外部关闭。
+     翻页模式下正文被裁切，气泡因此挂在 body 上用 fixed 定位。 */
+  function enhanceTranslatorNotes(main) {
+    if (!main) return;
+    var triggers = Array.prototype.slice.call(main.querySelectorAll('.tnote[note]'));
+    if (!triggers.length) return;
+    var bubbles = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.tnote-bubble'), function (node) {
+      bubbles[node.id] = node;
+    });
+    var open = null, closeTimer = 0, sticky = null;
+
+    function place(trigger, bubble) {
+      var r = trigger.getBoundingClientRect();
+      // 先显示再量，否则拿不到尺寸
+      bubble.hidden = false;
+      var box = bubble.getBoundingClientRect();
+      var gap = 8, edge = 12;
+      var left = Math.min(
+        Math.max(edge, r.left + r.width / 2 - box.width / 2),
+        Math.max(edge, window.innerWidth - box.width - edge)
+      );
+      var top = r.bottom + gap;
+      // 下方放不下就翻到词上方
+      if (top + box.height > window.innerHeight - edge) {
+        top = Math.max(edge, r.top - box.height - gap);
+      }
+      bubble.style.left = Math.round(left) + 'px';
+      bubble.style.top = Math.round(top) + 'px';
+      return true;
+    }
+
+    function show(trigger) {
+      var bubble = bubbles['tn-' + trigger.getAttribute('note')];
+      if (!bubble) return;
+      if (open && open !== trigger) hide();
+      window.clearTimeout(closeTimer);
+      open = trigger;
+      trigger.setAttribute('aria-expanded', 'true');
+      place(trigger, bubble);
+    }
+
+    function hide() {
+      if (!open) return;
+      var bubble = bubbles['tn-' + open.getAttribute('note')];
+      open.setAttribute('aria-expanded', 'false');
+      if (bubble) bubble.hidden = true;
+      open = null;
+    }
+
+    // 滚动 / 改字号 / 翻页后词会移动：气泡是 fixed 定位，不重算就停在旧坐标上。
+    // 这里**重新定位**而不是关闭 —— 点按一个视口外的词时，浏览器会先把它
+    // 滚进视口，那一下 scroll 紧跟着 click/hover，一关就把刚打开的气泡又收走了。
+    // 「词已滚出视口就收掉」的判断也放在这里（下一帧），不能放在 show 当场：
+    // mouseenter 触发时浏览器可能刚开始把词滚进视口，那一刻量到的仍是屏幕外坐标。
+    var repositionFrame = 0;
+    function reposition() {
+      cancelAnimationFrame(repositionFrame);
+      repositionFrame = requestAnimationFrame(function () {
+        if (!open) return;
+        var bubble = bubbles['tn-' + open.getAttribute('note')];
+        if (!bubble) return;
+        var r = open.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight
+            || r.right < 0 || r.left > window.innerWidth) {
+          hide();
+          return;
+        }
+        place(open, bubble);
+      });
+    }
+
+    triggers.forEach(function (trigger) {
+      var bubble = bubbles['tn-' + trigger.getAttribute('note')];
+      if (!bubble) return;   // 注内容缺失：保持虚线样式但不弹空泡
+      trigger.addEventListener('mouseenter', function () { show(trigger); });
+      trigger.addEventListener('mouseleave', function () {
+        closeTimer = window.setTimeout(hide, 160);
+      });
+      trigger.addEventListener('focus', function () { show(trigger); });
+      trigger.addEventListener('blur', hide);
+      trigger.addEventListener('click', function (event) {
+        event.stopPropagation();
+        // 指针本来就在词上时，click 之前必然已经先来过 mouseenter 把气泡打开了。
+        // 若这里还按「切换」处理，点一下就等于「开→立刻关」，词只闪一下就没了。
+        // 所以：只有当上一次是**点按**打开的（触屏没有 mouseleave 可依赖），
+        // 再点一下才收起；其余情况一律显示。
+        if (open === trigger && sticky === trigger) { hide(); sticky = null; }
+        else { sticky = trigger; show(trigger); }
+      });
+      trigger.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          if (open === trigger) hide(); else show(trigger);
+        }
+      });
+    });
+
+    document.addEventListener('click', hide);
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') hide();
+    });
+    window.addEventListener('scroll', reposition, true);
+    window.addEventListener('resize', reposition);
+    new MutationObserver(reposition).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: [
+        'style', 'data-font', 'data-page-mode', 'data-lang-mode', 'data-dual-layout',
+        'data-active-pane', 'data-paragraph'
+      ]
+    });
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', enhancePages);
