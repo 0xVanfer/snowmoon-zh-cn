@@ -27,6 +27,37 @@ from render_site_previews import (ACTIONS, CHROME, FRAMED, PRESETS, chrome_flags
 
 PROBE = """
 <script>
+/* 未捕获错误收集：必须在这段脚本之前注册，reader.js 的初始化错误发生在
+   DOMContentLoaded，而本脚本是内联的、解析期就执行完。
+   跨作用域的死调用（函数定义在一个 IIFE、调用点在另一个）抛的是 ReferenceError，
+   页面其余部分照常工作、探针其余断言照常通过——只有这里能看见它。 */
+window.__errors = [];
+window.addEventListener('error', function (event) {
+  var where = (event.filename || '').split('/').pop();
+  window.__errors.push((event.message || 'Script error.')
+    + (where ? ' @ ' + where + ':' + (event.lineno || 0) : ''));
+});
+window.addEventListener('unhandledrejection', function (event) {
+  window.__errors.push('未处理的 Promise 拒绝: ' + event.reason);
+});
+/* 深链高亮是**瞬时**状态：reader.js 加上 .is-deeplink 后 1600ms 就摘掉。
+   在测量那一刻去读 class，落在窗口内还是窗口外全看无头虚拟时间的快慢——同一个产物
+   时绿时红。改成「有没有闪过」：解析期就装观察者，早于 applyDeepLink() 触发。 */
+window.__flashed = false;
+(function () {
+  var want = (window.location.hash || '').replace('#', '');
+  if (!want) return;
+  new MutationObserver(function (records) {
+    for (var i = 0; i < records.length; i++) {
+      var el = records[i].target;
+      if (el.id === want && el.classList && el.classList.contains('is-deeplink')) {
+        window.__flashed = true;
+        return;
+      }
+    }
+  }).observe(document.documentElement,
+              { attributes: true, subtree: true, attributeFilter: ['class'] });
+})();
 window.addEventListener('load', function(){
   setTimeout(function(){
     // headless 的 --dump-dom 模式下 ResizeObserver 首次回调不保证送达，
@@ -106,6 +137,7 @@ window.addEventListener('load', function(){
       viewHNominal: __VIEW_H__,
       bodyOverflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2,
       actionError: window.__actionError || '',
+      jsErrors: window.__errors || [],
       scrollY: Math.round(window.scrollY || document.documentElement.scrollTop || 0),
       settingsBox: box('#settings-panel'), drawerBox: box('#drawer'),
       settingsLast: box('#settings-panel .setting-group:last-of-type'),
@@ -131,7 +163,17 @@ window.addEventListener('load', function(){
       // 末块：分页模式下用来断言「正文铺满了所有列」。
       // 原来量的是章末导航，读者要求删掉那排导航后改锚在正文最后一块上——
       // 它守的是同一个回归（.chapter-content height:100% 让正文只占第 1 列）。
-      lastContentZh: box('#pane-zh .chapter-content > *:last-child'), flowZhBox: box('#flow-zh'),
+      // 注意不能直接用 `> *:last-child`：术语卡片的 .term-store 是 display:contents，
+      // 自身没有盒子、rect 恒为 0，会顶掉真正的末块，把这条断言变成永远失败。
+      // 术语标注引入后又改回这个锚点时踩过一次，所以这里从后往前找第一个真有盒子的块。
+      lastContentZh: (function () {
+        var kids = document.querySelectorAll('#pane-zh .chapter-content > *');
+        for (var i = kids.length - 1; i >= 0; i--) {
+          var r = kids[i].getBoundingClientRect();
+          if (r.width > 0 || r.height > 0) return box('#pane-zh .chapter-content > *:nth-child(' + (i + 1) + ')');
+        }
+        return null;
+      })(), flowZhBox: box('#flow-zh'),
       bottomBarTop: (function () {
         var b = document.getElementById('bottombar');
         return b ? Math.round(b.getBoundingClientRect().top) : null;
@@ -246,10 +288,17 @@ window.addEventListener('load', function(){
           cards: document.querySelectorAll('.term-card').length,
           storeDisplay: store ? getComputedStyle(store).display : null,
           firstWord: t ? t.textContent : null,
+          // 触控命中区：手机上术语是正文里唯一需要精准点中的元素，
+          // 词本身只有 26px 高、比同屏导航按钮矮一截，滑动中容易点空（见 overrides.css）。
+          hitH: t ? Math.round(t.getBoundingClientRect().height) : null,
+          hitW: t ? Math.round(t.getBoundingClientRect().width) : null,
           openId: open ? open.id : null,
           openBox: open ? box('#' + open.id) : null,
           openHidden: open ? open.hidden : null,
-          rows: open ? open.querySelectorAll('p, a').length : 0,
+          // 段数按卡片**自己的子元素**数，不按 p/a 标签数：
+          // 「先读」那一行里有两个 <a> 时，querySelectorAll('p, a') 会数成两段，
+          // 于是 7 块的卡（其实是设计好的 4 段 + 先读 1 行）被误判成「混进前后文关系」。
+          sections: open ? open.children.length : 0,
           moreHref: open ? (function () {
             var a = open.querySelector('.term-card__more');
             return a ? a.getAttribute('href') : null;
@@ -264,6 +313,7 @@ window.addEventListener('load', function(){
           hash: window.location.hash || null,
           found: !!el,
           flash: el ? el.classList.contains('is-deeplink') : null,
+          flashed: window.__flashed,
           top: el ? Math.round(el.getBoundingClientRect().top) : null,
           inViewport: el ? (function () {
             var r = el.getBoundingClientRect();
@@ -313,6 +363,11 @@ WAIT_FOR = {
         "(function(){var m=/(\\d+)\\s*\\/\\s*(\\d+)/.exec("
         "(document.getElementById('page-indicator')||{}).textContent||'');"
         "return !!m && Number(m[2])>1;})()"),
+    # 深链的落点与高亮挂在 DOMContentLoaded 之后的两个 rAF 上，而无头虚拟时间会让
+    # 测量时刻与它们赛跑：同一个产物时而量在落点前、时而在 1600ms 高亮窗口之后。
+    # 等高亮真的闪过再测，把竞态变成有界等待（等不到仍然判失败）。
+    "read-term-deeplink": "window.__flashed === true",
+    "read-term-deeplink-paged": "window.__flashed === true",
 }
 
 # 需要「先窄后宽」的预设：pid -> 拉宽后的 iframe 宽度（回归测试「窄屏样式卡住回不去分栏」）
@@ -342,6 +397,10 @@ window.addEventListener('message', function (event) {
 def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
           frame: tuple[int, int] | None = None, wait_for: str = "true",
           grow: int | None = None, fragment: str = "") -> dict:
+    # 就绪条件一律按 setTimeout(100ms) 轮询、最多 30 次。
+    # 试过改成按帧轮询（requestAnimationFrame）来躲开虚拟时间的竞态，不行：无头
+    # Chrome 在没有损伤更新时不出帧，循环永远推不动，--virtual-time-budget 到点就把
+    # 页面 dump 掉，表现为「探针没跑出来（DOM N 字节）」。竞态改在产物一侧解决。
     raw = page.read_text(encoding="utf-8")
     script = (PROBE.replace("<script>", '<script id="probe-script">', 1)
               .replace("__ACTION__", action).replace("__ACTION_WAIT__", str(wait))
@@ -370,6 +429,10 @@ def probe(page: Path, w: int, h: int, action: str = "", wait: int = 250,
     with tempfile.TemporaryDirectory() as prof:
         dom_p = Path(prof) / "dom.html"
         cmd = [CHROME, *chrome_flags(),
+               # file:// 下未捕获错误默认被抹成一句 "Script error."，拿不到文件名与行号——
+               # 排「哪个 IIFE 里的调用解析不到」这类问题时，那句话等于没有信息。
+               # 只加在探针这一条命令上（渲染的都是本地测试副本），截图路径不受影响。
+               "--allow-file-access-from-files",
                f"--user-data-dir={prof}/p", *window_args(w, h),
                f"--virtual-time-budget={9000}",
                "--dump-dom", f"file://{target}{fragment}"]
@@ -502,6 +565,10 @@ def check(pid: str, d: dict) -> list[str]:
             need(xs == sorted(xs) and len(set(xs)) == 5, f"表情刻度位置异常：{xs}")
     if d.get("actionError"):
         bad.append(f"交互动作抛错：{d['actionError']}")
+    # 未捕获的脚本错误一律算失败。reader.js 里任何一处 ReferenceError / TypeError 都会让
+    # 对应功能静默失效，而几何断言往往察觉不到：页面照样能渲染，别的断言照样过。
+    for err in d.get("jsErrors") or []:
+        bad.append(f"页面有未捕获的脚本错误：{err}")
     if pid == "read-narrow-tab-en":
         need(d["activePane"] == "en", f"点 English 标签后 activePane 应为 en，实际 {d['activePane']}")
         need(vis_en and not vis_zh, f"切到 English 后只应显示英文栏（zh={vis_zh}, en={vis_en}）")
@@ -611,9 +678,11 @@ def check(pid: str, d: dict) -> list[str]:
              f"卡片横向溢出视口：{box}")
         need(box.get("y", 0) >= 0 and box.get("y", 0) + box.get("h", 0) <= 900,
              f"卡片纵向溢出视口或压住底栏：{box}")
-        # 气泡只讲最基础概念：不得出现前后文关系（章号列表 / 权重 / 说明 / 后续用途）
-        need((t.get("rows") or 0) <= 5,
-             f"气泡里段落/链接过多，说明混进了前后文关系：{t.get('rows')} 块")
+        # 气泡只讲最基础概念：不得出现前后文关系（章号列表 / 权重 / 说明 / 后续用途）。
+        # 上限 5 段 = 设计约定的「固定 4 段（概念名+门槛 / 定义 / 比喻 / 链接）+ 先读 1 行」，
+        # 见 docs/reader-site-design.md §7.3。
+        need((t.get("sections") or 0) <= 5,
+             f"气泡里段落过多，说明混进了前后文关系：{t.get('sections')} 段（上限 5）")
         href = t.get("moreHref") or ""
         need(href.startswith("https://github.com/0xVanfer/snowmoon-zh-cn/blob/main/docs/explainer/"),
              f"「读完整教程」不是生产地址：{href!r}")
@@ -624,12 +693,25 @@ def check(pid: str, d: dict) -> list[str]:
         need(box.get("w", 0) > 40, f"窄屏卡片宽度异常：{box}")
         need(box.get("x", 0) >= -1 and box.get("x", 0) + box.get("w", 0) <= 391,
              f"窄屏卡片横向溢出：{box}")
-    if pid == "read-term-deeplink":
+        # 触屏命中区：词本身只有 26px 高时，滑动中很容易点空（见 overrides.css 的窄屏规则）
+        need((t.get("hitH") or 0) >= 40,
+             f"窄屏术语触控目标偏小：词高 {t.get('hitH')}px（正文行高 ~49px，"
+             f"同屏导航按钮 44px），滑动中容易点空")
+    if pid in ("read-term-deeplink", "read-term-deeplink-paged"):
         dl = d.get("deepLink") or {}
         need(dl.get("found"), f"深链锚点在产物里找不到：{dl}")
-        need(dl.get("inViewport"),
-             f"带 #锚点进入后没有落到目标段落（多半被进度记忆覆盖了）：{dl}")
-        need(dl.get("flash"), f"落点没有高亮提示：{dl}")
+        if pid == "read-term-deeplink":
+            need(dl.get("inViewport"),
+                 f"带 #锚点进入后没有落到目标段落（多半被进度记忆覆盖了）：{dl}")
+        else:
+            # 翻页模式：落点不能靠「滚到段落」，得翻到含该段落的那一页。
+            # 这里只要求「页码指示存在且总页数 > 1」——那正是 layoutPages() 跑过的证据；
+            # 深链若把排版一起跳掉，页数会停在 1。
+            m = re.search(r"第\s*(\d+)\s*/\s*(\d+)", d.get("indicator") or "")
+            need(bool(m) and int(m.group(2)) > 1,
+                 f"深链进入翻页模式后正文没有排版（页码指示 {d.get('indicator')!r}）")
+        # 高亮判「有没有闪过」而不是「此刻还在不在」：它是 1600ms 的瞬时状态。
+        need(dl.get("flashed"), f"落点没有高亮提示：{dl}")
     if pid == "read-term-webnovel":
         # 断句标记落进 .term 内部会把可点的术语切成两半
         need(d.get("gapInsideTerm") == 0,

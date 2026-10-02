@@ -20,28 +20,10 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "sources" / "work" / "figures"
 ZH = ROOT / "book" / "images"
 OUT = ROOT / "sources" / "work" / "previews"
-def chrome_path() -> str:
-    """定位 Chrome：环境变量 CHROME 优先，其次 macOS 默认位置与常见替代路径。"""
-    import shutil
-    env = os.environ.get("CHROME") or os.environ.get("CHROME_PATH")
-    if env:
-        return env
-    candidates = [
-        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-        str(Path.home() / "Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
-        "/usr/bin/google-chrome",
-        "/usr/bin/chromium",
-        "/usr/bin/chromium-browser",
-    ]
-    for c in candidates:
-        if Path(c).exists():
-            return c
-    found = shutil.which("google-chrome") or shutil.which("chromium") or shutil.which("chrome")
-    if found:
-        return found
-    raise SystemExit("找不到 Chrome：请设置环境变量 CHROME=<可执行文件路径>（headless 渲染需要它）")
 
-CHROME = chrome_path()
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+# Chrome 的定位与「本机真能渲染」的验证在 chrome_runtime 一处，与 render_site_previews 共用。
+from chrome_runtime import CHROME, CHROME_EXTRA, can_screenshot, flags_for  # noqa: E402
 
 HTML = """<html><head><meta charset="utf-8"><style>
 body{{margin:0;background:#1b1b22;color:#ddd;font:13px -apple-system,"PingFang SC",sans-serif}}
@@ -69,9 +51,8 @@ def render(name: str) -> bool:
     with tempfile.TemporaryDirectory() as tmp:
         hp = Path(tmp) / "p.html"
         hp.write_text(html, encoding="utf-8")
-        cmd = [CHROME, "--headless=new", "--disable-gpu", "--no-sandbox", "--no-first-run",
-               "--no-default-browser-check", "--disable-extensions",
-               f"--user-data-dir={tmp}/prof", "--hide-scrollbars",
+        cmd = [CHROME, *flags_for(CHROME, CHROME_EXTRA),
+               f"--user-data-dir={tmp}/prof",
                f"--window-size=1200,{win_h}",
                f"--screenshot={png}", "--virtual-time-budget=2500",
                f"file://{hp}"]
@@ -101,6 +82,13 @@ def main() -> None:
     names = sys.argv[1:] or sorted(p.stem for p in SRC.glob("*.svg"))
     if not names:
         raise SystemExit("没有可渲染的插图（sources/work/figures 为空？）")
+    # 先问「这台机器拍不拍得出图」：本机没有可用显示链路时，挨个插图各打一行 FAIL，
+    # 看起来像插图全坏了，实际一张都没渲染过（见 docs/lessons.md 第 10 节）。
+    can, why = can_screenshot()
+    if not can:
+        print(f"本机拍不了截图，已跳过 {len(names)} 张。原因：{why}")
+        print("这是环境限制（headless 浏览器没有可用的显示链路），不是插图有问题。")
+        sys.exit(1)
     ok = 0
     for n in names:
         good = render(n)

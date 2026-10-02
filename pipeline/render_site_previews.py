@@ -29,61 +29,18 @@ SITE = ROOT / "book" / "site"
 OUT = ROOT / "sources" / "work" / "site-previews"
 
 
-def chrome_path() -> str:
-    """定位 Chrome：环境变量 CHROME 优先，其次 macOS 默认位置、常见替代路径，
-    最后是 Playwright 缓存里的 headless_shell（见 chrome_flags 的说明）。"""
-    env = os.environ.get("CHROME") or os.environ.get("CHROME_PATH")
-    if env:
-        return env
-    candidates = [
-        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-        str(Path.home() / "Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
-        "/usr/bin/google-chrome",
-        "/usr/bin/chromium",
-        "/usr/bin/chromium-browser",
-    ]
-    for c in candidates:
-        if Path(c).exists():
-            return c
-    found = shutil.which("google-chrome") or shutil.which("chromium") or shutil.which("chrome")
-    if found:
-        return found
-    # Playwright 下载的 headless shell 是独立二进制，自带 headless 模式，
-    # 不依赖系统装了 Chrome。版本号会随 Playwright 升级变化，所以用通配。
-    cache = Path.home() / "Library" / "Caches" / "ms-playwright"
-    for pattern in ("chromium_headless_shell-*/chrome-mac/headless_shell",
-                     "chromium_headless_shell-*/chrome-mac/chrome-headless-shell",
-                     "chromium_headless_shell-*/chrome-linux/headless_shell"):
-        hits = sorted(cache.glob(pattern), reverse=True)
-        if hits:
-            return str(hits[0])
-    raise SystemExit("找不到 Chrome：请设置环境变量 CHROME=<可执行文件路径>（headless 渲染需要它）")
-
-CHROME = chrome_path()
-
-
-def is_headless_shell(path: str) -> bool:
-    """Playwright 的 headless_shell 是独立二进制，自带 headless 模式。
-
-    对它再传 `--headless=new` 会被当成未知开关，行为也不受支持。
-    """
-    return "headless_shell" in Path(path).name or "headless-shell" in Path(path).name
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+# Chrome 的定位与「本机真能渲染」的验证在 chrome_runtime 一处，两边共用，免得跑偏。
+from chrome_runtime import CHROME, CHROME_EXTRA, can_screenshot, flags_for  # noqa: E402
 
 
 def chrome_flags() -> list[str]:
     """所有 Chrome 调用的公共 flag（截图与几何探针共用，免得两处各写一份跑偏）。
 
-    某些受限沙箱禁止进程向 Mach bootstrap 注册服务，Chrome 会在
-    `mach_port_rendezvous_mac.cc` / `base/mac/mac_util.mm` 直接 FATAL 退出（exit 133，
-    `bootstrap_check_in ...: Permission denied (1100)`）。`--single-process` 不走
-    zygote 与 rendezvous，实测可以绕开。但单进程模式本身不够稳，不该无条件打开——
-    因此只从环境变量 `CHROME_EXTRA_ARGS` 追加，默认什么都不加。
+    顺序：烟测判定确实需要的额外 flag（见 chrome_runtime.flags_for）→ 用户显式的
+    `CHROME_EXTRA_ARGS`。可执行文件本身的挑选与验证见 chrome_runtime.resolve()。
     """
-    flags = [] if is_headless_shell(CHROME) else ["--headless=new"]
-    flags += ["--disable-gpu", "--no-sandbox", "--no-first-run",
-              "--no-default-browser-check", "--disable-extensions", "--hide-scrollbars"]
-    flags += shlex.split(os.environ.get("CHROME_EXTRA_ARGS", ""))
-    return flags
+    return flags_for(CHROME, CHROME_EXTRA)
 
 
 # id: (页面相对路径, 视口宽, 视口高, localStorage 预设, 截图后额外等待毫秒)
@@ -156,9 +113,20 @@ PRESETS: dict[str, tuple] = {
     # 手机框：卡片不能溢出屏幕，也不能盖住底栏
     "read-term-narrow": ("read/chapter-03.html", 390, 844,
                          {"settings": {"theme": "paper", "lang": "zh"}}, 400),
-    # 深链：章号 chip 指向 chapter-01.html#c01-s0078，验证落点进视口
+    # 深链：章号 chip 指向 chapter-01.html#c01-s0078，验证落点进视口。
+    # 「进度记忆」必须预置在 localStorage 里（加载前就存在），不能在动作里 scrollTo 制造：
+    # 那样等于先把页面滚离锚点再断言「锚点赢了」，测的是探针自己造成的状态。
+    # 正确姿势是：带着旧进度 + 锚点一起加载，锚点必须赢（见 reader-site-design.md §7.4）。
     "read-term-deeplink": ("read/chapter-01.html#c01-s0078", 1440, 900,
-                           {"settings": {"theme": "paper", "lang": "zh"}}, 500),
+                           {"settings": {"theme": "paper", "lang": "zh"},
+                            "chapters": {"1": {"zh": {"y": 2400, "p": 0.2},
+                                                "read": True}}}, 500),
+    # 同一个深链，但读者当时在翻页模式。深链要跳过的只是**位置写回**，
+    # 排版照做——把 layoutPages() 一起跳掉的话，这一页正文会完全不排版。
+    "read-term-deeplink-paged": ("read/chapter-01.html#c01-s0078", 1440, 900,
+                                 {"settings": {"theme": "paper", "lang": "zh", "mode": "paged"},
+                                  "chapters": {"1": {"zh": {"y": 2400, "p": 0.2},
+                                                      "read": True}}}, 900),
     # 「一句一行」+ 术语：断句标记不得落进可点的词内部
     "read-term-webnovel": ("read/chapter-03.html", 1440, 900,
                            {"settings": {"theme": "paper", "lang": "zh",
@@ -264,13 +232,16 @@ ACTIONS = {
         "document.querySelector('.chapter-heading').getBoundingClientRect().top);"),
     # ---- 术语卡片 ----
     # 悬停会先开卡，但触屏没有 mouseenter，所以用点按（click 路径）打开。
+    # 先把词滚进视口再点：读者只能点看得见的词，直接 click() 一个在首屏之外的词，
+    # 测的是「卡片被定位到屏幕外」这种读者永远遇不到的状态（宽屏卡片挂在屏幕外、
+    # 窄屏则被 reposition() 当场收掉），断言会失败但产品并没有坏。
     "read-term-card": ("var t=document.querySelector('#pane-zh .term');"
-                       "if(t)t.click();"),
+                       "if(t){t.scrollIntoView({block:'center'});t.click();}"),
     "read-term-narrow": ("var t=document.querySelector('#pane-zh .term');"
-                         "if(t)t.click();"),
-    "read-term-deeplink": "window.scrollTo(0, 2400);",   # 制造一个「进度记忆」位置
+                         "if(t){t.scrollIntoView({block:'center'});t.click();}"),
+    "read-term-deeplink": "",   # 「进度记忆」已由预设写进 localStorage，见 PRESETS 的注释
     "read-term-webnovel": ("var t=document.querySelector('#pane-zh .term');"
-                           "if(t)t.click();"),
+                           "if(t){t.scrollIntoView({block:'center'});t.click();}"),
 }
 
 ACTION_SCRIPT = ('<script id="preset-action">window.addEventListener("load",function(){'
@@ -347,6 +318,18 @@ def main() -> None:
     want = sys.argv[1:]
     todo = {k: v for k, v in PRESETS.items()
             if (not want or k in want) and k not in SKIP_SHOTS}
+    if not todo:
+        raise SystemExit("没有匹配的预设")
+    # 先问「这台机器拍不拍得出图」，再决定要不要一张张试。
+    # 否则本机没有可用显示链路时，这里会打出 N 行 FAIL——看起来像页面全坏了，
+    # 实际一个字都没渲染过（见 docs/lessons.md 第 10 节）。
+    can, why = can_screenshot()
+    if not can:
+        print(f"本机拍不了截图，已跳过 {len(todo)} 个预设。原因：{why}")
+        print("这是环境限制（headless 浏览器没有可用的显示链路），不是页面渲染失败。")
+        print("几何与交互的正确性由 probe_site.py 负责，它不需要截图。")
+        print("要出图：在有显示链路的环境跑本脚本，或改用 Playwright/Puppeteer 截图。")
+        sys.exit(1)
     ok = 0
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
@@ -362,8 +345,6 @@ def main() -> None:
                 good = shoot(page, png, w, h, wait)
             ok += good
             print(("OK  " if good else "FAIL") + f" {pid:<18} {rel} {w}x{h}", flush=True)
-    if not todo:
-        raise SystemExit("没有匹配的预设")
     print(f"截图 {ok}/{len(todo)} → sources/work/site-previews/")
     sys.exit(1 if ok != len(todo) else 0)
 
