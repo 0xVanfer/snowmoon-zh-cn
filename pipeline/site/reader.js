@@ -1292,21 +1292,65 @@
     });
     var open = null, closeTimer = 0, sticky = null;
 
+    // 可用竖直区间。[移动端] 不能拿 window.innerHeight 当边界：
+    //  * 顶栏 #topbar 与底栏 #bottombar 都是 position: fixed，气泡若压上去会
+    //    盖住「目录/设置/翻页」这些按钮（气泡 z-index 更高，会画在栏上面）。
+    //  * 手机浏览器的地址栏会收缩：layout viewport 比 visual viewport 高，
+    //    按 innerHeight 算「放得下」，实际有一截在地址栏底下看不见。
+    // 所以先量 visualViewport，再把两条固定栏从区间里挖掉。
+    // 栏高不写死：顶栏在 data-ui="hidden" 时会滑走，用测量天然跟随。
+    function safeArea() {
+      var vv = window.visualViewport;
+      var top = vv ? vv.offsetTop : 0;
+      var bottom = top + (vv ? vv.height : window.innerHeight);
+      ['#topbar', '#bottombar'].forEach(function (sel) {
+        var el = document.querySelector(sel);
+        if (!el || !el.getClientRects().length) return;   // 隐藏 / 未渲染
+        var r = el.getBoundingClientRect();
+        if (r.height <= 0) return;
+        if (r.top <= top + 1) top = Math.max(top, r.bottom);
+        if (r.bottom >= bottom - 1) bottom = Math.min(bottom, r.top);
+      });
+      if (bottom - top < 80) {          // 区间被挤没了（极端窄屏），退回整屏
+        top = 0; bottom = window.innerHeight;
+      }
+      return { top: top, bottom: bottom };
+    }
+
     function place(trigger, bubble) {
       var r = trigger.getBoundingClientRect();
       // 先显示再量，否则拿不到尺寸
       bubble.hidden = false;
+      bubble.style.maxHeight = '';
       var box = bubble.getBoundingClientRect();
-      var gap = 8, edge = 12;
+      var area = safeArea();
+      var gap = 8, edge = 10;
+      var avail = area.bottom - area.top - 2 * edge;
+
+      // 注比可用高度还长时，内部滚动，而不是溢出屏幕（手机上很常见）
+      if (box.height > avail) {
+        bubble.style.maxHeight = Math.max(120, Math.floor(avail)) + 'px';
+        box = bubble.getBoundingClientRect();
+      }
+
       var left = Math.min(
         Math.max(edge, r.left + r.width / 2 - box.width / 2),
         Math.max(edge, window.innerWidth - box.width - edge)
       );
-      var top = r.bottom + gap;
-      // 下方放不下就翻到词上方
-      if (top + box.height > window.innerHeight - edge) {
-        top = Math.max(edge, r.top - box.height - gap);
+
+      // 优先放在词下方；下方不够就翻到上方；两边都不够就夹回可用区间内
+      var below = r.bottom + gap;
+      var above = r.top - box.height - gap;
+      var top;
+      if (below + box.height <= area.bottom - edge) {
+        top = below;
+      } else if (above >= area.top + edge) {
+        top = above;
+      } else {
+        top = Math.min(Math.max(below, area.top + edge),
+                       Math.max(area.top + edge, area.bottom - box.height - edge));
       }
+
       bubble.style.left = Math.round(left) + 'px';
       bubble.style.top = Math.round(top) + 'px';
       return true;
@@ -1343,7 +1387,8 @@
         var bubble = bubbles['tn-' + open.getAttribute('note')];
         if (!bubble) return;
         var r = open.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > window.innerHeight
+        var area = safeArea();
+        if (r.bottom < area.top || r.top > area.bottom
             || r.right < 0 || r.left > window.innerWidth) {
           hide();
           return;
@@ -1384,6 +1429,13 @@
     });
     window.addEventListener('scroll', reposition, true);
     window.addEventListener('resize', reposition);
+    window.addEventListener('orientationchange', reposition);
+    // [移动端] 地址栏收缩/展开只改 visualViewport，不一定触发 window.resize；
+    // 漏掉它的话气泡会停在旧坐标，看起来就是「位置不对」。
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', reposition);
+      window.visualViewport.addEventListener('scroll', reposition);
+    }
     new MutationObserver(reposition).observe(document.documentElement, {
       attributes: true,
       attributeFilter: [

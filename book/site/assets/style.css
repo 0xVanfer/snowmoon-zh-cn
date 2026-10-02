@@ -1429,6 +1429,11 @@ html:not([data-js]) #reader-main .dz-card { max-height: none; }
   font-size: 0.82em;
   line-height: 1.7;
   text-align: left;
+  /* 注比可用高度还长时（手机小屏 + 大字号），在气泡内部滚动，
+     而不是让气泡溢出屏幕。max-height 由 reader.js 按实测可用高度写入。 */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .tnote-bubble[hidden] { display: none; }
 .tnote-label {
