@@ -282,7 +282,11 @@
     DEFAULTS: DEFAULTS, state: state, save: save, applySettings: applySettings,
     patch: patch, on: on, emit: emit, qs: qs, qsa: qsa, getPane: getPane,
     page: page, chapter: chapter, toggleUI: toggleUI,
-    openPanel: openPanel, closePanel: closePanel, overlay: null
+    openPanel: openPanel, closePanel: closePanel, overlay: null,
+    // [深链] 当前这一页是不是靠 #cNN-sNNNN 进来的。非空时整段跳过进度恢复——
+    // 不只是本模块的 restoreVisible()，还包括进度/存档模块 relayout() 里那次
+    // 位置写回（见 docs/reader-site-design.md §7.4）。
+    deepLink: null
   };
 
   Object.keys(triggers).forEach(function (id) {
@@ -465,7 +469,7 @@
   function applyDeepLink() {
     var m = /^#(c\d\d-s\d+)$/.exec(window.location.hash || '');
     if (!m) return;
-    deepLink = m[1];
+    deepLink = S.deepLink = m[1];
     var target = document.getElementById(deepLink);
     if (!target) return;
     // 术语与讲解都在中文栏。若当前显示的是英文或对照的英文标签页，
@@ -476,7 +480,12 @@
       target.classList.add('is-deeplink');
       window.setTimeout(function () { target.classList.remove('is-deeplink'); }, 1600);
     };
-    // 等一次排版：语言模式刚切过，正文栏的位置还没定。
+    /* 先同步落一次位，再等两帧校正。
+       原来只等两帧：落点与高亮全押在 rAF 上，而 rAF 不保证及时到（无头虚拟时间下干脆
+       不出帧，慢设备上也会明显滞后）——表现是「点了章号 chip，页面先在旧位置停一下才跳」。
+       同步那一次在多数情况下就是最终位置（正文已排好），两帧后那次负责图片/表格
+       撑开高度后的纠偏。校正时重新加上高亮：高度变了，落点会偏。 */
+    go();
     requestAnimationFrame(function () { requestAnimationFrame(go); });
   }
 
@@ -914,6 +923,10 @@
   applyParagraphStyle();
   capture();
   measureLayout();
+  /* [深链] 入口在本 IIFE 末尾就地调用，不跨 IIFE 调：applyDeepLink 定义在这里，
+     而进度/存档模块（下一个 IIFE）也要用到它设置好的 api.deepLink。
+     早于它自己的 relayout() 执行，所以首次排版就不会把位置写回旧进度。 */
+  applyDeepLink();
 }());
 (function () {
   'use strict';
@@ -1133,12 +1146,21 @@
       }
       layoutKey = key;
       if (originals.length) resetStyles();
+      // [深链] 带 #cNN-sNNNN 进来时只跳过**位置写回**，不跳过排版。
+      // 这一段的排版（表格分列、图片加载、字体就绪）会被反复触发，每次都
+      // restoreScroll()/displayPage() 就把读者从落点拽回上次读的地方，深链等于失效。
+      // 但 layoutPages() 是分页模式的排版本身，跳过它会让深链进来的翻页页正文不排版。
+      // 落点滚到位后由 updateProgress() 重新取样，读者这次的落点就成了新的进度。
+      // 见 docs/reader-site-design.md §7.4。
+      var deep = api.deepLink;
       models.filter(visible).forEach(function (m) {
         var saved = snapshots[m.lang];
         if (paged()) {
           layoutPages(m);
+          if (deep) return;
           displayPage(m, first ? saved.page : saved.p * (m.pages - 1));
         } else {
+          if (deep) return;
           restoreScroll(m, saved, first && previousMode === mode);
         }
       });
@@ -1302,7 +1324,6 @@
       if (document.visibilityState === 'hidden') persist();
     });
     enhanceTranslatorNotes(main);
-    applyDeepLink();
     scheduleLayout();
   }
 

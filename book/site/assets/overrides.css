@@ -562,6 +562,14 @@ html[data-page-mode="scroll"] #pane-en { touch-action: pan-y; }
   border-radius: 2px;
   cursor: help;
 }
+/* [手机] 术语是正文里唯一需要「精准点中」的元素，却比同屏导航按钮矮一截：
+   390px 视口下实测词高只有 26px（底栏按钮 44px、中英标签 32px），滑动中很容易点空。
+   行内元素的上下 padding **不影响行盒高度**，所以这里只把命中区撑大，
+   正文的行距与段落节奏一点都不变。8px + 8px 之后约 42px，仍在行盒之内，
+   不会抢到相邻行的点击。 */
+@media (max-width: 700px) {
+  .term { padding-top: 8px; padding-bottom: 8px; }
+}
 .term:hover,
 .term:focus-visible {
   background: color-mix(in srgb, var(--accent) 10%, transparent);

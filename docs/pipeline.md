@@ -178,9 +178,23 @@ python3 pipeline/build_site.py                # 组装阅读站点
 python3 pipeline/qa_book.py                   # 书级体检
 python3 pipeline/qa_site.py                   # 站点结构体检
 python3 pipeline/check_privacy.py             # 隐私闸门：端点/凭据/provider 命名不得进仓库
-python3 pipeline/probe_site.py                # 站点几何/交互探针（headless Chrome）
-python3 pipeline/render_site_previews.py      # 各视口截图，供人工/视觉模型复核
+python3 pipeline/probe_site.py                # 站点几何/交互探针（headless Chrome，33 个预设）
+python3 pipeline/render_site_previews.py      # 各视口截图，供人工/视觉模型复核（本机需有显示链路）
 ```
+
+`probe_site.py` / `render_site_previews.py` / `render_previews.py` 共用 `pipeline/chrome_runtime.py`：
+它**逐个候选真跑一次 `--dump-dom`** 来挑浏览器，而不是「文件存在就选」——受限沙箱里系统 Chrome
+常常存在却一启动就 FATAL，按存在性挑会让整套探针 0/N 全红，而那不是页面坏了。
+挑不出来就在导入期 `SystemExit` 并逐条说明原因。截图另有一道能力自检：
+本机没有可用显示链路时（`CVDisplayLinkCreateWithCGDisplay failed`，`--screenshot` 返回 0 却只写
+0 字节 PNG）直接说明并退出，不会逐张打出 FAIL。细节见 [lessons.md](lessons.md)
+「本轮（全局审计）新增的坑」一节。
+
+探针本身还有一条覆盖面很大的断言：**页面有任何未捕获脚本错误即判失败**。
+几何断言察觉不到 `ReferenceError`——页面照样渲染、别的断言照样过，
+而对应功能已经死了（本轮就靠它抓到深链入口的跨作用域调用）。
+`file://` 下默认会把错误抹成一句 `Script error.`，所以探针这一条命令额外带
+`--allow-file-access-from-files`，好让报告里带得上文件名与行号。
 
 README 给读者看的两张截图（`assets/readme/reader-dual.png`、`assets/readme/reader-mobile.png`）
 同样出自 `render_site_previews.py` 的 `read-wide-dual` / `read-narrow-zh` 预设，

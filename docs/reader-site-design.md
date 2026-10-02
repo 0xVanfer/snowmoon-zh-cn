@@ -253,6 +253,15 @@
 写回去，读者点「第 6 章」落回上次读的地方。所以 `reader.js` 里带 `#cNN-sNNNN` 进入时整段跳过进度恢复，
 改成滚到锚点并闪一下（`.is-deeplink`）。
 
+两处都要跳过，缺一不可：分栏模块的 `restoreVisible()`，以及进度/存档模块 `relayout()` 里
+按 `snapshots` 写回位置那次。后者由图片加载、字体就绪、表格分列反复触发，每次都会把读者从落点
+拽回旧进度。`api.deepLink` 是两边唯一的联络方式，入口 `applyDeepLink()` 就地调用、
+不跨 IIFE——早年的写法把调用点放在另一个 IIFE 里，运行时报 `ReferenceError`，
+`enhancePages()` 当场中断，深链**从来没生效过**，而浏览器自带的 fragment 滚动把症状掩盖住了。
+
+落位先同步做一次、再等两帧校正：只等 rAF 的话，慢设备上会「先停在旧位置一下才跳」，
+无头环境里则可能永远等不到那一帧。
+
 ### 7.5 定位与数据来源
 
 - `build_markdown.py` 额外产出 `pipeline/line_index.json`（{章: {片段 id: [起行, 止行]}}，4150 条），

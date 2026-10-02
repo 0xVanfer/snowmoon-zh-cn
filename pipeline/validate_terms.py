@@ -293,6 +293,13 @@ else:
             for url in links:
                 if not url.startswith("https://github.com/0xVanfer/snowmoon-zh-cn/blob/main/docs/explainer/"):
                     fail(f"{p.name}: 教程链接不是生产地址：{url}")
+                    continue
+                # 链接指向的是**仓库里的一个真实文件**：改了目录名或挪了文件，
+                # 链接形状照样合法，读者点进去却是 GitHub 的 404。
+                # 所以要把 URL 里的仓库相对路径取出来，在本地核对它真的存在。
+                rel_path = url.split("/blob/main/", 1)[1]
+                if not (ROOT / rel_path).exists():
+                    fail(f"{p.name}: 教程链接指向仓库里不存在的文件：{rel_path}")
         # 卡片池容器绝不能带 hidden/display:none（会把后代一起藏掉）
         m = re.search(r'<div class="term-store"[^>]*>', text)
         if m and ("hidden" in m.group(0) or "display:none" in m.group(0).replace(" ", "")):
@@ -314,9 +321,26 @@ else:
         if "if (deepLink) return;" not in js:
             fail("reader.js: restoreVisible() 没有跳过深链场景，"
                  "点章号 chip 会被进度记忆覆盖、落回上次读的位置")
-        if "applyDeepLink();" not in js:
-            fail("reader.js: enhancePages() 里没有调用 applyDeepLink()，"
-                 "#cNN-sNNNN 深链不会生效（函数定义了但没人叫，照样是静默失效）")
+        # 「有没有调用 applyDeepLink()」不能只 grep 这几个字。
+        # 曾经就栽在这里：定义在一个 IIFE、调用点在另一个 IIFE，那行 `applyDeepLink();`
+        # 一直在文件里、静态检查一路绿灯，而运行时是一个 ReferenceError——深链从来没生效过。
+        # 现在按作用域查：定义之后到调用点之间不允许再出现 IIFE 收尾。
+        # 收尾在本文件里一律写作 `}());`（`}` + `()` + `)` + `;`），别只写前三个字符。
+        IIFE_END = r"\}\s*\(\s*\)\s*\)\s*;"
+        m_def = re.search(r"function applyDeepLink\s*\(", js)
+        if not m_def:
+            fail("reader.js: 没有 applyDeepLink() 的定义，"
+                 "#cNN-sNNNN 深链不会生效")
+        else:
+            rest = js[m_def.end():]
+            m_call = re.search(r"[\w.]*\bapplyDeepLink\s*\(\s*\)\s*;", rest)
+            if not m_call:
+                fail("reader.js: applyDeepLink() 定义了却没有调用点，"
+                     "#cNN-sNNNN 深链静默失效")
+            elif re.search(IIFE_END, rest[:m_call.start()]):
+                fail("reader.js: applyDeepLink() 的调用点跨到了另一个 IIFE，"
+                     "运行时会抛 ReferenceError、深链静默失效"
+                     "（探针的未捕获错误断言会抓到）")
         if "closest('.term')" not in js:
             fail("reader.js: addSentenceGaps() 没有跳过 .term 内部，"
                  "「一句一行」会把可点的术语切成两半")
