@@ -39,20 +39,25 @@ TNOTE_STORE_CLASS = "tnote-store"
 
 
 def tnote_bubbles(notes: dict[str, str]) -> str:
-    """把一章的译者注渲染成章尾的隐藏气泡池。
+    """把一章的译者注渲染成章尾的气泡池。
 
     气泡不放在正文流里：正文只留触发点，注的内容集中挂一次，
     既避免同一段里多个注互相挤位，也方便日后批量增删注。
+
+    [坑] 容器**不能**加 `hidden`（或任何 display:none）。`display:none` 会连
+    所有后代一起隐藏，后代无法覆盖祖先 —— 于是 reader.js 把 bubble.hidden 置回
+    false 也照样看不见。容器靠 `.tnote-store { display: contents }` 做到零布局，
+    显示/隐藏完全交给每个气泡自己的 `hidden`。
     """
     if not notes:
         return ""
     rows = "".join(
-        f'<div class="{TNOTE_CLASS}-bubble" id="tn-{html.escape(nid, quote=True)}">'
+        f'<div class="{TNOTE_CLASS}-bubble" id="tn-{html.escape(nid, quote=True)}" hidden>'
         f'<span class="{TNOTE_CLASS}-label">译注</span>'
         f'<span class="{TNOTE_CLASS}-body">{html.escape(text)}</span></div>'
         for nid, text in notes.items()
     )
-    return f'<div class="{TNOTE_STORE_CLASS}" hidden>{rows}</div>'
+    return f'<div class="{TNOTE_STORE_CLASS}">{rows}</div>'
 
 
 def esc_visible(s: str) -> str:

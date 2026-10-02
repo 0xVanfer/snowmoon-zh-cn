@@ -554,6 +554,37 @@ def main() -> None:
         if f'href="read/chapter-{ch:02d}.html"' not in toc:
             problems.append(f"toc.html 缺少第 {ch} 章链接")
 
+    # 译者注气泡：标记与气泡必须成对，且容器**不能**带 hidden。
+    # [回归] 容器一旦带上 hidden（display:none），会把所有后代一起隐藏 ——
+    # 后代自己的 hidden=false 救不回来，于是 reader.js 把气泡显示出来也没用，
+    # 页面上永远看不见。这种 bug 静态检查看不出来，只能在这里钉住。
+    import re as _re
+    store_re = _re.compile(r'<div class="tnote-store"([^>]*)>')
+    bubble_id_re = _re.compile(r'<div class="tnote-bubble" id="tn-([^"]+)"')
+    trigger_re = _re.compile(r'<span class="tnote"[^>]*note="([^"]+)"')
+    for ch in published:
+        page = (SITE / "read" / f"chapter-{ch:02d}.html").read_text(encoding="utf-8")
+        zh = pane_text(page, "zh")
+        en = pane_text(page, "en")
+        for attrs in store_re.findall(page):
+            if "hidden" in attrs:
+                problems.append(
+                    f"read/chapter-{ch:02d}.html: .tnote-store 带 hidden —— "
+                    f"display:none 会连气泡一起隐藏，气泡永远看不见")
+        ids = set(bubble_id_re.findall(page))
+        marks = set(trigger_re.findall(page))
+        for mid in sorted(marks - ids):
+            problems.append(
+                f"read/chapter-{ch:02d}.html: 译注标记 note={mid} 没有对应的气泡"
+                f"（translator_notes 缺该条，或气泡没生成）")
+        for iid in sorted(ids - marks):
+            problems.append(
+                f"read/chapter-{ch:02d}.html: 气泡 tn-{iid} 没有被任何 <tn> 标记引用")
+        if marks and en and set(trigger_re.findall(en)):
+            problems.append(
+                f"read/chapter-{ch:02d}.html: 英文栏出现了译注标记 —— "
+                f"译注只服务中文读者，英文栏应保持原书")
+
     if problems:
         print(f"发现 {len(problems)} 处问题：")
         for p in problems:

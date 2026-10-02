@@ -1410,7 +1410,10 @@ html:not([data-js]) #reader-main .dz-card { max-height: none; }
   border-bottom-style: solid;
 }
 
-.tnote-store[hidden] { display: none; }
+/* 容器只为「把气泡集中挂一次」，自己不参与布局。
+   注意**不能**用 hidden / display:none 藏这个容器：display:none 会连所有后代
+   一起隐藏，气泡自己的 hidden=false 也救不回来。显示与否由每个气泡自己管。 */
+.tnote-store { display: contents; }
 
 .tnote-bubble {
   position: fixed;
